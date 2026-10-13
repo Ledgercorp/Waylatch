@@ -15,7 +15,7 @@ Private preparation is complete for the demonstrated purchase. Public publicatio
 - [x] Audit CLI validates bare arrays or envelope.events, fails closed on invalid shapes and ignores claimed metadata; four new focused regressions passed.
 - [x] Prior production build,69 local tests,nine browser tests, real local inference and dependency/license inventory retained as historical evidence; completed suites not rerun.
 - [x] Devpost description/known-field JSON,21 technology tags, screenshot captions, original architecture SVG, technical docs and one consolidated approval packet prepared.
-- [ ] Final private GitHub checkpoint and final scoped format/type/source release checks (record results in RELEASE_CANDIDATE_REPORT.md).
+- [x] Private main/candidate synchronized at release-material commit4929d88e900081e1c60bb9939704574ac3668e79; independent GitHub visibility/tree and git ref readback passed. Scoped format/type/source release checks passed; source scan zero findings. See RELEASE_CANDIDATE_REPORT.md and evidence/private-release-checkpoint.json.
 
 ## External limits
 

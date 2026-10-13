@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-13T21:16:55.304Z",
+  "category": "independent-private-github-release-readback",
+  "repository": "Ledgercorp/Waylatch",
+  "visibility": "private",
+  "releaseMaterialCommit": "4929d88e900081e1c60bb9939704574ac3668e79",
+  "refs": {
+    "HEAD": "4929d88e900081e1c60bb9939704574ac3668e79",
+    "main": "4929d88e900081e1c60bb9939704574ac3668e79",
+    "feat/waylatch-release-candidate": "4929d88e900081e1c60bb9939704574ac3668e79"
+  },
+  "remoteTreeTruncated": false,
+  "independentlyReadVia": "GitHub repository metadata and REST Git tree; separate git ls-remote",
+  "artifacts": [
+    {
+      "path": "docs/RELEASE_APPROVALS.md",
+      "gitBlobSha": "d2c456e00df83930378f4e710b08bd10215ae4af",
+      "bytes": 11419
+    },
+    {
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "gitBlobSha": "b61196df60029cb8aa641131849981f6372b707b",
+      "bytes": 2153105
+    },
+    {
+      "path": "docs/evidence/paypal-independent-verification.json",
+      "gitBlobSha": "a436fb38b550fa19308bb3ae255e75b76408233b",
+      "bytes": 1387
+    },
+    {
+      "path": "docs/evidence/paypal-real-sandbox.json",
+      "gitBlobSha": "f799d07ac648aebed5eb97f5c9e5dac0d12574b5",
+      "bytes": 1264
+    },
+    {
+      "path": "docs/evidence/paypal-sandbox-audit-validation.json",
+      "gitBlobSha": "ec2f15ecd77c7397b607dc3e05b09a6da59322d9",
+      "bytes": 283
+    },
+    {
+      "path": "docs/evidence/paypal-sandbox-audit.json",
+      "gitBlobSha": "bd59f1cd50290e87a209d35b0deb321927f9b2a6",
+      "bytes": 4135
+    },
+    {
+      "path": "docs/evidence/release-artifact-manifest.json",
+      "gitBlobSha": "045de378d0fb85aba759622564b5aa54c7256646",
+      "bytes": 6278
+    }
+  ],
+  "publicVisibilityChanged": false,
+  "realMoneyUsed": 0
+}

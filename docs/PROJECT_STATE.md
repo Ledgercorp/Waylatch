@@ -1,3 +1,11 @@
+# Latest private release candidate — 2026-10-13
+
+Genuine USD1.00 simulated Sandbox purchase independently verified through order/capture GETs200/COMPLETED. Authentic settled PAID UI/audit7 footage now updates the existing110.04-second demo;35 reviewed artifact digests bind the release. New browser status/export verification and feasible webhook rejection checks passed without financial mutations. Four new audit-export CLI regressions passed after fixing envelope input validation; original app/hash/protocol source unchanged. No production rebuild or completed-suite rerun.
+
+Release material privately committed/pushed as4929d88e900081e1c60bb9939704574ac3668e79 to main and feat/waylatch-release-candidate. Independent ref/visibility/tree/blob readbacks passed; repository remains private. Full status: [RELEASE_CANDIDATE_REPORT.md](RELEASE_CANDIDATE_REPORT.md); exact public/source-rights/MIT/video/legal/Devpost proposal: [RELEASE_APPROVALS.md](RELEASE_APPROVALS.md). Devpost account/registration/form reads still fail with-32603, YouTube public URL pending, genuine signed callback/Payouts unverified. No license adoption, public visibility/upload, terms acceptance or submission. $0 real spending.
+
+---
+
 # Current continuation: genuine Sandbox capture completed — 2026-10-13
 
 Resumed private GitHub HEAD/main/candidate at `5ca7ce805597a46570aab250e350ba37052d6313`. Existing PAYPAL_CLIENT_ID and PAYPAL_SECRET_KEY alias authenticated successfully: `npm run paypal:auth` exited 0 with real Sandbox HTTP 200. PayPal credentials and application code unchanged.
