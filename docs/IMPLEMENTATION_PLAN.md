@@ -28,6 +28,6 @@ Review focus: uncertain remote response must not enable a second purchase; revis
 - [x] Investigate name; record AMBER registry uncertainty; perform reversible internal rebrand.
 - [x] Preserve legacy IndexedDB, RL1 and audit contracts with pinned compatibility fixtures.
 - [x] Run 45 local tests, eight browser tests, production build and actual local AI.
-- [ ] Checkpoint and push verified rebrand; independently read back refs.
+- [x] Checkpoint and push verified rebrand; independently read back refs.
 - [ ] Secure runtime Sandbox credentials, verify OAuth, human buyer approval and capture.
-- [ ] Finish continuation security/integration/readiness evidence without public release.
+- [x] Finish continuation security/integration/readiness evidence without public release; 50 tests and eight browser checks reproduced from private main.

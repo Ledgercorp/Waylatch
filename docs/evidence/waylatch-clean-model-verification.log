@@ -1,0 +1,12 @@
+
+> waylatch@0.1.0 model:download
+> tsx scripts/download-model.ts
+
+Verified existing config.json (650 bytes)
+Verified existing tokenizer.json (711661 bytes)
+Verified existing tokenizer_config.json (366 bytes)
+Verified existing special_tokens_map.json (125 bytes)
+Verified existing vocab.txt (231508 bytes)
+Verified existing README.md (1767 bytes)
+Verified existing onnx/model_quantized.onnx (22972370 bytes)
+Pinned Apache-2.0 model ready. App runtime permits local assets only.

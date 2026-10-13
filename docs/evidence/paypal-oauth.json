@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-13T14:35:32.827Z",
-  "implementationCommit": "727ccd406882eb37cbcf6b4d847922e2b946b53b",
-  "worktreeDirty": true,
+  "checkedAt": "2026-10-13T14:48:25.772Z",
+  "implementationCommit": "ede567797bccf059d3754b22792c8cfdde62bb8b",
+  "worktreeDirty": false,
   "environment": "sandbox",
   "host": "api-m.sandbox.paypal.com",
   "path": "/v1/oauth2/token",

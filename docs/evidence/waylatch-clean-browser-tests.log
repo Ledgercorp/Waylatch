@@ -1,0 +1,25 @@
+
+> waylatch@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:7535) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:7547) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:7547) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:7573) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/product.spec.ts:4:1 › field request survives real offline reload (2.1s)
+  ✓  2 tests/product.spec.ts:24:1 › packets cross two disconnected browser contexts and reject corruption (2.6s)
+  ✓  3 tests/product.spec.ts:51:1 › coordinator explicitly reviews and approves, missing credentials stay honest (1.6s)
+  ✓  4 tests/product.spec.ts:73:3 › accessible command interface 1440px (2.8s)
+  ✓  5 tests/product.spec.ts:73:3 › accessible command interface 390px (2.3s)
+  ✓  6 tests/product.spec.ts:96:1 › real local AI and separate claim approval are usable through the interface (7.3s)
+  ✓  7 tests/product.spec.ts:137:1 › mobile capture and QR dialogs have accessible controls (11.1s)
+  ✓  8 tests/product.spec.ts:154:1 › Waylatch metadata and legacy IndexedDB survive offline reload (6.7s)
+
+  8 passed (41.1s)

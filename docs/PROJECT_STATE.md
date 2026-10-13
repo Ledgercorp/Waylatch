@@ -4,7 +4,7 @@ Owner: Colby Weiss / LeftSock Labs. Continuation date: 2026-10-13. Original name
 
 ## Authentic source protected
 
-Original baseline: **ee1488bde39347347d5a40e6bd766072fad7f16f**, with 5bb6e37 and 407122d ancestors. Git objects/bundle and archive SHA-256 checks verified. Original artifacts retained. Authenticated private destination: https://github.com/Ledgercorp/Waylatch. Original branch and main independently read back at baseline SHA before rebrand; main is the verified default. Verified internal rebrand: **727ccd406882eb37cbcf6b4d847922e2b946b53b**, independently read back from the private remote. Subsequent hardening/evidence SHAs are recorded after commits exist.
+Original baseline: **ee1488bde39347347d5a40e6bd766072fad7f16f**, with 5bb6e37 and 407122d ancestors. Git objects/bundle and archive SHA-256 checks verified. Original artifacts retained. Authenticated private destination: https://github.com/Ledgercorp/Waylatch. Original branch and main independently read back at baseline SHA before rebrand; main is the verified default. Verified internal rebrand: **727ccd406882eb37cbcf6b4d847922e2b946b53b**, independently read back from the private remote. Integration hardening: **ede567797bccf059d3754b22792c8cfdde62bb8b**; private main and rebrand branch independently read back this SHA. Original branch stays at ee1488b.
 
 ## Controlled internal rebrand
 
@@ -18,7 +18,7 @@ Recovered baseline freshly passed 40 local tests, seven browser tests and produc
 
 ## Integration status
 
-Runtime credential presence check: PAYPAL_CLIENT_ID absent, PAYPAL_CLIENT_SECRET absent, PAYPAL_WEBHOOK_ID absent. Environment status reports no secret bindings. PayPal fixed Sandbox host and no-live fallback verified in source. Unauthenticated HTTPS HEAD to Sandbox root returned403; this is reachability evidence only, not OAuth or endpoint-permission evidence. Added a sanitized OAuth-only CLI gate and corrected integration-harness review to require REVIEW before recording a human review, then AUTHORIZE and CAPTURE separately. No real financial operation, webhook callback or Payouts probe executed. Existing payment simulations remain explicitly simulations.
+Runtime credential presence check: PAYPAL_CLIENT_ID absent, PAYPAL_CLIENT_SECRET absent, PAYPAL_WEBHOOK_ID absent. Environment status reports no secret bindings. PayPal fixed Sandbox host and no-live fallback verified in source. Unauthenticated HTTPS HEAD to Sandbox root returned403; this is reachability evidence only, not OAuth or endpoint-permission evidence. Latest OAuth gate evidence references the committed implementation with worktreeDirty=false; both required variables remain absent and no provider request executed. Added a sanitized OAuth-only CLI gate and corrected integration-harness review to require REVIEW before recording a human review, then AUTHORIZE and CAPTURE separately. No real financial operation, webhook callback or Payouts probe executed. Existing payment simulations remain explicitly simulations.
 
 ## Budget and boundaries
 
@@ -26,4 +26,4 @@ $0 real funds or paid services. No public visibility change, domain purchase, pa
 
 ## Next executable action
 
-Finish verified rebrand commit/push and independently read back refs, then authenticate Sandbox with securely bound credentials and perform the explicit human-authorized Orders workflow. If bindings remain absent, preserve honest blocked evidence and finish independent security/release preparation. Public license/branding/video/submission decisions remain with owner.
+Recovery, rebrand and private main/branch synchronization are verified. Clean GitHub clone installation passed 50 local tests, eight browser tests, production build, pinned cached-model verification and release checks. Next: authenticate Sandbox with securely bound credentials and perform the explicit human-authorized Orders workflow. If bindings remain absent, preserve honest blocked evidence and finish independent security/release preparation. Public license/branding/video/submission decisions remain with owner.

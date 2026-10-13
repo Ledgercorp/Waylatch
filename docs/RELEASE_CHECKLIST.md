@@ -16,3 +16,9 @@ Engineering may prepare this list without accepting terms or publishing.
 - [ ] Owner explicitly approves final Devpost submission, then confirm submission receipt.
 
 No paid hosting, card, automatic top-up, live PayPal credential, real transfer or paid inference endpoint is needed. The runnable-repository alternative is supported by the official rules.
+
+## Current private-release readiness assessment
+
+Verified: authentic source/Git ancestry protected in private Ledgercorp/Waylatch; controlled rebrand with pinned legacy compatibility; current visual/mobile/a11y evidence; clean installation/build; 50 local tests and eight browser tests; actual local AI; server authorization/idempotency/signature/audit tests; complete setup/architecture/security/demo/submission drafts and proposed MIT license.
+
+Not ready for final public submission: genuine Sandbox OAuth/order/buyer approval/capture are blocked by missing task-time secret bindings; real callbacks unverified; Payouts entitlement unknown; naming AMBER; no adopted root license, public repository or public YouTube footage. Owner approval is still required for licensing, public branding/repository/video, legal participation and submission. No automatic publishing or paid resource is needed.

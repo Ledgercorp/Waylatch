@@ -31,3 +31,5 @@ Header/footer, browser title/application metadata/description, tagline, home acc
 The recovered baseline was freshly verified: 40 local tests, seven browser tests and production build passed. Five targeted compatibility tests now verify legacy IndexedDB, partial receiver replay, literal old RL1 bytes/corruption rejection, old audit hashes and Waylatch metadata. Metadata test was observed failing before the rebrand and passing after it.
 
 Verified rebrand commit: **727ccd406882eb37cbcf6b4d847922e2b946b53b**. The private remote rebrand branch independently read back the same SHA. Subsequent integration/evidence commits append to it; their actual SHAs are recorded in session Git evidence. Original ancestry remains an acceptance gate for every push.
+
+Verified integration-hardening commit: **ede567797bccf059d3754b22792c8cfdde62bb8b**. Default main advanced by fast-forward only; original baseline branch is retained. Clean clone from private GitHub independently reproduced 50 tests, eight browser tests and production build. Final documentary commit is an append-only descendant, not a rewritten baseline.

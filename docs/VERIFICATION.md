@@ -35,3 +35,9 @@ Existing injected provider doubles and the separate-process HTTP PayPal simulato
 Missing runtime credentials, public HTTPS callback, official naming-search uncertainty, owner licensing/publication/video/legal/submission decisions are documented in BLOCKERS.md. Root license remains a proposal. No public release or final submission. $0 real money and no paid services activated.
 
 Three additional OAuth transport-double tests verify missing bindings, sanitized success without tokens, and HTTP401 classification. Two process-boundary CLI tests reproduce and protect explicit review/authorization cancellation. The CLI no longer invents human review before confirmation. Real OAuth execution remains blocked by missing bindings, as recorded in paypal-oauth.json.
+
+## Fresh private-GitHub clean clone
+
+A clean clone of default main at **ede567797bccf059d3754b22792c8cfdde62bb8b** executed `ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm ci --no-fund --no-audit`, `npm test` (50 passed, 11 files), `npm run build` (passed), `npm run test:e2e` (eight passed, including actual local AI), and `npm run release:check` (zero findings). Already verified model assets were copied into the ignored cache and `npm run model:download` independently checked all seven pinned hashes; this is cache validation, not another fresh network download. Logs: waylatch-clean-*.log.
+
+Private main and feat/waylatch-rebrand read back the same committed code SHA. API inspection confirmed remote package name waylatch/private=true and the OAuth command. Original feat/rescueledger-mvp is preserved at ee1488b. Final documentary checkpoint refs are verified separately after push.
