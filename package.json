@@ -1,0 +1,55 @@
+{
+  "name": "rescueledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"tsx watch server/index.ts\" \"vite --host 127.0.0.1\"",
+    "build": "tsc --noEmit && vite build",
+    "start": "NODE_USE_ENV_PROXY=1 tsx server/index.ts",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:ai": "tsx scripts/benchmark-ai.ts",
+    "paypal:probe": "NODE_USE_ENV_PROXY=1 tsx scripts/paypal-probe.ts",
+    "format": "prettier --write src server tests scripts docs *.ts *.json public/*.js",
+    "format:check": "prettier --check src server tests scripts docs *.ts *.json public/*.js",
+    "model:download": "tsx scripts/download-model.ts",
+    "paypal:integration": "tsx scripts/sandbox-integration.ts",
+    "audit:validate": "tsx scripts/validate-audit.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.8.1",
+    "@msgpack/msgpack": "^3.1.0",
+    "express": "^5.1.0",
+    "idb": "^8.0.3",
+    "jsqr": "^1.4.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "lucide-react": "^0.468.0",
+    "zod": "^4.1.0",
+    "dotenv": "^17.2.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.55.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.0",
+    "supertest": "^7.1.0",
+    "@types/supertest": "^6.0.0",
+    "fake-indexeddb": "^6.2.0"
+  }
+}

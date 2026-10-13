@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env*
+!.env.example
+data/
+models/
+.cache/
+test-results/
+playwright-report/
+*.log

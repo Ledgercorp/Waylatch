@@ -1,0 +1,23 @@
+{
+  "commit": "8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f",
+  "original_git_status": "",
+  "disposable_copy": "/workspace/crisiscodec-verification",
+  "commands": [
+    "npm ci --ignore-scripts --no-audit --no-fund",
+    "npm test",
+    "npm run test:e2e"
+  ],
+  "results": {
+    "unit_integration_passed": 38,
+    "browser_passed": 7
+  },
+  "files": {
+    "src/core/codec.ts": "a1c575547eca494a7a707170996fd6484527524016e7552c2a24825a428f4f1a",
+    "src/core/reconstruction.ts": "c8297637866f27d53a2e2ee1b1b40f8b648ede1334a2a1fa9b73cec34cc49a1a",
+    "package-lock.json": "7bcf5193a569b8d43296ba652fc5af5171441622535cb84f4f0dd1a9caf03b73",
+    "tests/core.test.ts": "7cd5d3d0c05fac17814ea03cfd369f6e6ad5025c45a7aca5f3cdb00c539bada1",
+    "tests/network.test.ts": "26de41244f67d20cfe4eef0f49fbd4683265423d1da0b63043ff046b3ccfd666",
+    "tests/server.test.ts": "05a01c05b0b286aacffe495b032be5d11bc783faef42b3448061960cae162aba",
+    "tests/app.spec.ts": "27a0b6fd7fe9fc2bbe6f0cb38567a2c6bea42ddc398c93e467757a0a7f4e427d"
+  }
+}
