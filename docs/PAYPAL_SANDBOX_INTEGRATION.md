@@ -1,3 +1,13 @@
+# Latest actual-provider milestone: completed Sandbox purchase — 2026-10-13
+
+Existing credentials authenticated with HTTP 200 through `npm run paypal:auth`. Genuine Sandbox order **2W330508JA572391V**, exact USD 1.00 in simulated funds, is authoritatively **COMPLETED** with capture **8WY07860808872629**; Waylatch state **PAID**. [Sanitized real-provider evidence](evidence/paypal-real-sandbox.json).
+
+Actual human REVIEW/AUTHORIZE, genuine personal-buyer approval and separate explicit **CAPTURE — simulated funds only** were all supplied by the user. The mobile 127.0.0.1 return-page error did not prevent buyer approval; backend authoritative inspection confirmed APPROVED before capture. No human decision was impersonated.
+
+User-authorized isolated SQLite storage and a private in-memory temporary coordinator passphrase preserved existing accounts/records and normal authentication/financial gates. Seven exported audit events validate and match persisted events. Instance stopped and coordinator session revoked. No rebuild, PayPal credential change or repeated completed test suite. **$0 real spending.** Actual webhook/callback and Payouts remain unverified; no financial footage replacement is claimed. [Full continuation](PAYPAL_AUTHENTICATED_CONTINUATION.md). Earlier blocked reports below are historical.
+
+---
+
 # Configuration-to-runtime association remains unresolved
 
 The owner already configured the Sandbox hostname in saved environment79e2602645508191bbaa0e5bd232597f revision13; screenshot confirms it. Saved publication/attachment and workspace enforcement cannot be read through current tools. Thread-managed spec revision68 is a separate context with null source association. [OPENAI_SUPPORT_REPORT.md](OPENAI_SUPPORT_REPORT.md) compares evidence and preserves the distinction between reported CONNECT403 and recorded CONNECT200/HTTP403. Do not repeat hostname/key instructions or alter payment code. This issue is not fixed until actual authenticated Sandbox OAuth succeeds.

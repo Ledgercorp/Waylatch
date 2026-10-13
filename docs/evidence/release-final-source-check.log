@@ -1,0 +1,5 @@
+
+> waylatch@0.1.0 release:check-source
+> tsx scripts/check-release.ts --source-only
+
+{"category":"local-static-release-check","trackedFiles":253,"sourceMode":"git-index","frontendArtifactsChecked":false,"findings":[],"scope":"Source only; frontend artifacts not inspected in this run. Configured-secret and specific-pattern scan; not a comprehensive secret/security certification"}

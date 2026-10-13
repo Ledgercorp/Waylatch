@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-13T19:06:55.213Z",
-  "implementationCommit": "7393ff0a8eb500a9416e91ce6037c1d62948046d",
-  "worktreeDirty": true,
+  "checkedAt": "2026-10-13T20:17:48.443Z",
+  "implementationCommit": "5ca7ce805597a46570aab250e350ba37052d6313",
+  "worktreeDirty": false,
   "environment": "sandbox",
   "host": "api-m.sandbox.paypal.com",
   "path": "/v1/oauth2/token",
@@ -13,15 +13,13 @@
     "PAYPAL_CLIENT_SECRET",
     "PAYPAL_SECRET_KEY"
   ],
-  "fallbackAliasSelected": false,
-  "missingVariables": [
-    "PAYPAL_CLIENT_ID",
-    "PAYPAL_CLIENT_SECRET"
-  ],
-  "requestExecuted": false,
-  "authenticated": false,
-  "httpStatus": null,
-  "providerResponse": null,
-  "category": "blocked-configuration",
-  "code": "SANDBOX_CREDENTIALS_MISSING"
+  "fallbackAliasSelected": true,
+  "missingVariables": [],
+  "requestExecuted": true,
+  "authenticated": true,
+  "httpStatus": 200,
+  "providerResponse": {
+    "accessTokenReceived": true
+  },
+  "category": "executed-real-paypal-sandbox-oauth"
 }

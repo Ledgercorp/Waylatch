@@ -1,0 +1,32 @@
+{
+  "executedAt": "2026-10-13T20:21:49.854Z",
+  "implementationCommit": "5ca7ce805597a46570aab250e350ba37052d6313",
+  "category": "executed-real-paypal-sandbox",
+  "recordId": "RL-REAL-20261013-201748",
+  "revision": 1,
+  "amountCents": 100,
+  "currency": "USD",
+  "isolatedDatabase": "data/paypal-demo/RL-REAL-20261013-201748.sqlite",
+  "humanReviewSource": "Actual user reply: REVIEW and AUTHORIZE for this exact record",
+  "captureAuthorized": true,
+  "captureExecuted": true,
+  "realMoneyUsed": 0,
+  "orderId": "2W330508JA572391V",
+  "approvalUrl": "https://www.sandbox.paypal.com/checkoutnow?token=2W330508JA572391V",
+  "paymentState": "PAID",
+  "paypalStatus": "COMPLETED",
+  "orderCreated": true,
+  "buyerApprovalObserved": true,
+  "audit": {
+    "valid": true,
+    "events": 7
+  },
+  "inspectedAt": "2026-10-13T20:38:14.038Z",
+  "captureId": "8WY07860808872629",
+  "capturedAt": "2026-10-13T20:39:07.779Z",
+  "reconciledAt": "2026-10-13T20:39:59.295Z",
+  "humanCaptureSource": "Actual user reply: CAPTURE — simulated funds only",
+  "captureApprovalScope": "Exact USD 1.00 simulated funds for RL-REAL-20261013-201748 revision 1 and order 2W330508JA572391V; USD 0.00 real spending",
+  "loopbackInstanceStopped": true,
+  "coordinatorSessionsRemaining": 0
+}

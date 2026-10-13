@@ -1,3 +1,17 @@
+# Current release finalization — 2026-10-13
+
+Genuine Sandbox USD1.00 purchase completed with actual human approvals and seven valid audit events. New independent authorized Orders/Capture GETs both returned HTTP200/COMPLETED, matching exact saved amount/references. Actual settled UI recording verified PAID, disabled operation controls, authoritative status refresh and browser export matching SQLite; no financial mutation or approval reenactment. The revised existing MP4 remains110.04seconds, now showing authentic payment/audit and selected provider evidence.
+
+Feasible webhook followup: actual registration/event GETs200 with zero results; three unsigned/synthetic callbacks rejected400 on an isolated real paid copy with unchanged state/audit. Genuine signature/callback remains unverified because registration/ID/ingress are absent. No repeated tunnel attempt or new financial operation.
+
+Final review found the audit CLI accepted an envelope as an array and reported valid without traversing events. Fixed only its input boundary to validate raw arrays or envelope.events, ignore claimed metadata and fail closed on invalid shapes. Four new focused regressions passed; red/green logs retained. Core audit hashes, event schemas and application/payment code unchanged. Prior raw-array eight-event validation is unaffected.
+
+Submission materials and one rights/MIT/public-repo/video/legal/Devpost approval packet are prepared privately. Devpost reads return internal-32603; registration/custom fields/terms cannot be invented. YouTube route/URL pending. No license adoption, visibility change, public upload, agreement acceptance or submission. $0 real spending. Final artifact/checkpoint/check results: [RELEASE_CANDIDATE_REPORT.md](RELEASE_CANDIDATE_REPORT.md).
+
+Historical reports below retain their original numbers/logs. Mutable JSON paths may now hold newer evidence; the original video metadata is preserved as evidence/demo-video-prior.json, and its original binary remains in Git history.
+
+---
+
 # Latest Waylatch credential-alias implementation — 2026-10-13
 
 Implemented from private candidate d4cf568fa7ce7dc78edbc2924bad193f5b2394af, without recreating/rebranding/redesigning the application.

@@ -1,3 +1,19 @@
+# Fresh genuine PayPal Sandbox capture verification — 2026-10-13
+
+Private remote HEAD/main/candidate independently matched existing source commit `5ca7ce805597a46570aab250e350ba37052d6313`. Name-only checks found PAYPAL_CLIENT_ID and PAYPAL_SECRET_KEY; existing alias resolver used them without modification. `npm run paypal:auth` exited 0: real Sandbox OAuth HTTP 200, accessTokenReceived=true, no token/credential disclosure.
+
+The user's actual REVIEW/AUTHORIZE for the exact USD 1.00 fictional record was recorded through normal authenticated API routes. User-authorized isolated SQLite storage and a 48-byte random coordinator passphrase held only in process memory preserved existing accounts/records. Actual order **2W330508JA572391V** was created and resumed without duplication. After the user's real buyer action and Safari loopback return-page failure, authoritative inspection confirmed **APPROVED** with matching reference/amount. The user separately authorized **CAPTURE — simulated funds only**.
+
+The existing server rechecked buyer approval and amount, captured, then independently fetched and reconciled the provider order: **COMPLETED**, capture **8WY07860808872629**, application **PAID**, exact USD 1.00 simulated funds. [Actual evidence](evidence/paypal-real-sandbox.json). The exported [seven-event audit](evidence/paypal-sandbox-audit.json) independently validates and exactly matches persisted SQLite events; capture/order/amount references match. [Validation](evidence/paypal-sandbox-audit-validation.json).
+
+Fresh persisted counts: one record, one payment, seven events, zero coordinator sessions. Capture ID and PAID state survived instance cleanup. [Cleanup/database digest](evidence/paypal-sandbox-resume.json). Loopback instance stopped and temporary credential discarded. No existing account/database affected. New docs/evidence were scanned for configured PayPal credential values; none were found.
+
+No project rebuild, previous test/build suite repetition or new model/inference verification. Missing locked dependencies were restored with installation hooks disabled. Historical test counts below remain historical. Genuine webhook/callback/Payouts remain unverified; authentic settled payment/audit footage is now in the revised110.04-second demo. **$0 real spending.** [Full continuation](PAYPAL_AUTHENTICATED_CONTINUATION.md).
+
+Historical sections preserve prior counts and logs. Mutable JSON paths may now contain refreshed evidence; prior media metadata is retained in evidence/demo-video-prior.json and the original video remains in Git history.
+
+---
+
 # Saved-environment support comparison — 2026-10-13
 
 Fresh runtime metadata: current thread-managed instance ccarenv_d8bf3f4bae288191951118a64167afdb, spec/observed revision68, unrestricted/enforced HTTP policy, null source configuration IDs. Executor policy snapshot remains HTTP unrestricted, with separate empty TCP grants. User screenshot confirms requested internet/domain settings; saved environment79e2602645508191bbaa0e5bd232597f revision13/publication and workspace-policy data remain uninspectable. The skill/tool explicitly excludes extra attached environments and drafts from this runtime observation.
@@ -146,3 +162,7 @@ Private main and feat/waylatch-rebrand read back the same committed code SHA. AP
 Final `npm run test:e2e`: **9 passed**, zero failures,37.6seconds. The constrained-network cold load was9214ms at150ms simulated latency,64KiB/s download and16KiB/s upload. Offline reload preserved the request; reconnection produced zero automatic record submissions, financial operations or audit changes. These are Chromium emulation measurements only.
 
 `npm run release:check` passed with zero findings across the staged release index and frontend. `npm run format:check` passed. Independent `audit:validate` returned valid:true,count8 for the preview export. All temporary recorder/backend/gateway processes were closed; no public tunnel is running. The only build warning is a537.54kB uncompressed JavaScript chunk (173.03kB gzip estimate). The offline shell deliberately preloads the complete core; code splitting is deferred because it would need careful offline asset precaching. The measured constrained-network run completes; no mobile-network performance claim is made.
+
+## Release continuation results
+
+New independent Sandbox order/capture GETs confirmed HTTP200/COMPLETED and exact references/amount. Actual settled UI status/audit-export verification passed, with disabled create/capture controls and no financial mutation. Revised110.04-second video and captions preserve authentic prior nonfinancial scenes, add actual PAID/audit7 footage and selected provider evidence. Feasible webhook checks and exact signed-callback limit: WEBHOOK_RELEASE_STATUS.md. Audit CLI envelope/raw validation and four new focused tampering/format regressions passed. No whole-suite rerun or production rebuild. Final private checkpoint/artifacts/checks: RELEASE_CANDIDATE_REPORT.md; consolidated public/submission proposal: RELEASE_APPROVALS.md.

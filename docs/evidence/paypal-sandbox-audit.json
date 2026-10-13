@@ -1,0 +1,124 @@
+{
+  "exportedAt": "2026-10-13T20:39:10.035Z",
+  "recordId": "RL-REAL-20261013-201748",
+  "chain": {
+    "valid": true,
+    "brokenAt": null,
+    "count": 7
+  },
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-13T20:21:49.890Z",
+      "type": "request_created",
+      "recordId": "RL-REAL-20261013-201748",
+      "data": {
+        "revision": 1,
+        "provenance": "local",
+        "record": {
+          "id": "RL-REAL-20261013-201748",
+          "kind": "procurement",
+          "incident": "FLOOD-EMBER-26",
+          "resources": [
+            {
+              "description": "Fictional one-dollar Sandbox procurement test item",
+              "quantity": 1
+            }
+          ],
+          "urgency": "urgent",
+          "amountCents": 100,
+          "amountKind": "exact",
+          "currency": "USD",
+          "location": "Ember shelter · fictional",
+          "origin": "Field team Delta · fictional",
+          "revision": 1,
+          "createdAt": "2026-10-13T20:18:39.511Z",
+          "receiptDigest": null,
+          "transactionReference": null,
+          "expenseAt": null
+        }
+      },
+      "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "2872d3c8e5b5c7cb6c0dc050a4814dd4faf00c16299d1f759283c4d3f0e5a93a"
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-13T20:21:49.894Z",
+      "type": "human_review_completed",
+      "recordId": "RL-REAL-20261013-201748",
+      "data": {
+        "revision": 1,
+        "disposition": "clear",
+        "note": "Human operator explicitly replied REVIEW and AUTHORIZE for RL-REAL-20261013-201748 revision 1, one fictional item, exact USD 1.00 Sandbox funds; capture consent pending."
+      },
+      "previous": "2872d3c8e5b5c7cb6c0dc050a4814dd4faf00c16299d1f759283c4d3f0e5a93a",
+      "hash": "f72faf9efc3e2876989428903a7bfbe0adee1913967b4a7e5c664de443cbb74c"
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-13T20:21:49.898Z",
+      "type": "purchase_approved",
+      "recordId": "RL-REAL-20261013-201748",
+      "data": {
+        "revision": 1,
+        "amountCents": 100,
+        "confirmation": true
+      },
+      "previous": "f72faf9efc3e2876989428903a7bfbe0adee1913967b4a7e5c664de443cbb74c",
+      "hash": "783bd7d6127ab5e84810716f5b02589d47f11ded56940e2347aeb1c57eb82d4b"
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-13T20:21:49.901Z",
+      "type": "order_attempt_reserved",
+      "recordId": "RL-REAL-20261013-201748",
+      "data": {
+        "revision": 1,
+        "amountCents": 100
+      },
+      "previous": "783bd7d6127ab5e84810716f5b02589d47f11ded56940e2347aeb1c57eb82d4b",
+      "hash": "e32a76cae9485bd3933ed57cb7dacdbaefeec56a5eb92fac7aec7aba54055a2c"
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-13T20:21:54.632Z",
+      "type": "paypal_order_created",
+      "recordId": "RL-REAL-20261013-201748",
+      "data": {
+        "orderId": "2W330508JA572391V",
+        "revision": 1,
+        "amountCents": 100,
+        "environment": "sandbox"
+      },
+      "previous": "e32a76cae9485bd3933ed57cb7dacdbaefeec56a5eb92fac7aec7aba54055a2c",
+      "hash": "b0e80a17cf81eb02f1d568cdf3e5ff85c2151f79facb8c70f05cb1d042c0c0a2"
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-13T20:39:04.270Z",
+      "type": "buyer_approval_observed",
+      "recordId": "RL-REAL-20261013-201748",
+      "data": {
+        "orderId": "2W330508JA572391V",
+        "source": "authoritative_order_inspection"
+      },
+      "previous": "b0e80a17cf81eb02f1d568cdf3e5ff85c2151f79facb8c70f05cb1d042c0c0a2",
+      "hash": "c14ea67693b9c92aff67f38b04b80e5d64ef01aa82acdd0e5203cf8b4daef12c"
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-13T20:39:07.779Z",
+      "type": "capture_completed",
+      "recordId": "RL-REAL-20261013-201748",
+      "data": {
+        "orderId": "2W330508JA572391V",
+        "captureId": "8WY07860808872629",
+        "amountCents": 100,
+        "environment": "sandbox",
+        "source": "order_inspection"
+      },
+      "previous": "c14ea67693b9c92aff67f38b04b80e5d64ef01aa82acdd0e5203cf8b4daef12c",
+      "hash": "114009b9edb04b9a25479b1353a10a2a2fd3a12f4bb37cb1c8354929a0ddcfab"
+    }
+  ]
+}

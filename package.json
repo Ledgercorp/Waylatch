@@ -21,6 +21,11 @@
     "audit:validate": "tsx scripts/validate-audit.ts",
     "release:check": "tsx scripts/check-release.ts",
     "paypal:auth": "NODE_USE_ENV_PROXY=1 tsx scripts/paypal-auth.ts",
+    "paypal:verify": "NODE_USE_ENV_PROXY=1 tsx scripts/verify-sandbox-transaction.ts",
+    "paypal:webhooks-check": "NODE_USE_ENV_PROXY=1 tsx scripts/verify-sandbox-webhooks.ts",
+    "release:check-source": "tsx scripts/check-release.ts --source-only",
+    "demo:record-settled": "NODE_USE_ENV_PROXY=1 tsx scripts/record-settled-demo.ts",
+    "demo:update-payment": "python3 scripts/update-demo-payment.py",
     "webhook:gateway": "tsx scripts/webhook-gateway.ts",
     "demo:record": "tsx scripts/record-demo.ts",
     "demo:render": "python3 scripts/render-demo.py"

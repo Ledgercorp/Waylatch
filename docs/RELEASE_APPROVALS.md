@@ -1,0 +1,61 @@
+# Consolidated release approval — Waylatch
+
+**Prepared for one final owner decision. No approval is recorded; no public action is authorized by this document.** Existing engineering/doc/media preparation and read-only verification are already authorized. Real spending stays **USD 0.00**.
+
+## Concrete proposal
+
+Publish the existing Waylatch source candidate from **Ledgercorp/Waylatch**, retaining authentic RescueLedger ancestry and compatibility identifiers. Change that existing repository from **private to public** only after the owner approves this packet. Do not create another repository or rewrite history. Proposed judge access is local installation from the public source repository; no hosted deployment, domain, paid resource or live payment is proposed.
+
+Adopt the reviewed [MIT proposal](LICENSE-MIT-PROPOSAL.txt) as repository-root `LICENSE`, removing its proposal-only preamble on adoption. Proposed attribution: **Copyright (c) 2026 Colby Weiss / LeftSock Labs**, subject to the owner's confirmation of the actual rights holder. Confirm rights to all contributors and the two adapted CrisisCodec primitives from commit **8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f**; private reuse authorization does not establish public redistribution rights. Preserve [CRISISCODEC_REUSE.md](CRISISCODEC_REUSE.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSE_AUDIT.md](LICENSE_AUDIT.md). MIT applies to approved owner-controlled source; third-party packages/models retain their own licenses.
+
+Release source, lockfile, docs, original architecture SVG, fictional-data screenshots, the approved MP4/captions and sanitized evidence. Exclude `.env`, credentials/tokens/buyer data, SQLite databases, node_modules, models/native binaries, runtime caches and raw recording caches. No binary/model bundle is proposed; judges install packages/download pinned assets from their publishers. Native LGPL/MPL and data attribution obligations remain as audited.
+
+Approve public use of **Waylatch** / **From field need to verified action** with **Colby Weiss / LeftSock Labs** attribution, acknowledging [AMBER name investigation](WAYLATCH_NAME_CLEARANCE.md): incomplete official registry searches, no legal trademark clearance or exclusive-rights assertion.
+
+Publish the exact reviewed silent captioned [MP4](demo/waylatch-engineering-preview.mp4) to **public YouTube** at no cost; use title **Waylatch — From field need to verified action** and the description in [NARRATION.md](demo/NARRATION.md). Final duration, SHA-256, encoding and source disclosures are bound by [demo-video.json](evidence/demo-video.json). No external music, paid narration, vendor logos or invented financial footage. The original automated review/authorization fixtures remain identified; the separate completed purchase uses newly recorded actual settled PAID UI and genuine seven-event audit, with independent saved provider evidence explicitly identified. The public YouTube URL is not yet available.
+
+Create/update the Waylatch Devpost project for **paypalaihackathon** using the approved copy in [DEVPOST_DRAFT.md](DEVPOST_DRAFT.md), [devpost-submission.md](../devpost-submission.md) and [project-fields.json](submission/project-fields.json), then enter it only once exact required fields/registration/legal gates are established and the owner has explicitly approved the final Devpost action. Confirm a live receipt afterward; draft preparation never establishes success.
+
+## Exact review deliverables
+
+| Deliverable                                                | Review source                                                                                                                                                                                    |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Project title, pitch, description, 21 technology tags      | docs/DEVPOST_DRAFT.md; devpost-submission.md; docs/submission/project-fields.json                                                                                                                |
+| Judge install/run path and limits                          | README.md; docs/AI_MODEL.md; docs/VERIFICATION.md                                                                                                                                                |
+| Actual desktop/mobile/AI/audit screenshots                 | docs/evidence/interface-1440.png; interface-390.png; review-ai.png; audit.png                                                                                                                    |
+| Genuine settled payment and seven-event audit screenshots  | [payment-completed.png](evidence/payment-completed.png); [audit-paypal-completed.png](evidence/audit-paypal-completed.png)                                                                       |
+| Corrected standalone audit CLI and narrow verification     | scripts/validate-audit.ts; tests/audit-export-cli.test.ts; [four targeted checks](evidence/release-audit-cli-green.log); [seven-event command output](evidence/release-audit-envelope-green.log) |
+| Original architecture diagram                              | docs/submission/architecture.svg                                                                                                                                                                 |
+| Under-three-minute video, timing, captions and description | docs/demo/waylatch-engineering-preview.mp4; captions.srt; NARRATION.md; docs/DEMO_SCRIPT.md; docs/evidence/demo-video.json                                                                       |
+| Genuine USD1.00 simulated purchase                         | docs/evidence/paypal-real-sandbox.json; docs/PAYPAL_AUTHENTICATED_CONTINUATION.md                                                                                                                |
+| Actual settled UI and seven-event export recording         | docs/evidence/settled-demo-recording.json                                                                                                                                                        |
+| New independent provider GET verification                  | docs/evidence/paypal-independent-verification.json                                                                                                                                               |
+| Seven-event audit and validation                           | docs/evidence/paypal-sandbox-audit.json; paypal-sandbox-audit-validation.json                                                                                                                    |
+| Public license/source rights and notices                   | docs/LICENSE-MIT-PROPOSAL.txt; LICENSE_AUDIT.md; THIRD_PARTY_NOTICES.md; CRISISCODEC_REUSE.md                                                                                                    |
+| Final candidate commit and release artifact binding        | Final commit/artifact manifest supplied in the completion report; video hash in docs/evidence/demo-video.json                                                                                    |
+
+The payment is **RL-REAL-20261013-201748 revision 1**, order **2W330508JA572391V**, capture **8WY07860808872629**, **USD1.00 simulated**, PayPal **COMPLETED**, Waylatch **PAID**, real spending **USD0.00**. Independent authorized GETs returned HTTP200 for order/capture and matched exact references/amount/single final capture. Do not create, approve or capture that completed purchase again.
+
+The source candidate includes the narrow standalone audit-validator correction: validate raw arrays or envelope `events`, fail closed on invalid shapes and check the actual chain rather than claimed metadata. Four new targeted CLI checks passed; no previous whole suite was repeated. Core event/hash/schema and application payment behavior are unchanged. Genuine purchase and original screenshot audits remain distinctly identified.
+
+## Owner confirmations to bundle in the single decision
+
+- Confirm source/contributor ownership, CrisisCodec public rights, MIT text and copyright holder.
+- Confirm public Waylatch branding and the attribution, with AMBER investigation limits acknowledged.
+- Approve the exact source/docs/sanitized evidence release and change of the existing private repository to public.
+- Approve public YouTube publication of the exact reviewed MP4 and metadata; identify the usable authorized upload route/account.
+- Confirm participant identity/team, eligibility and authority to represent LeftSock Labs where applicable; provide actual missing official answers.
+- Review the actual event rules, Devpost terms and eligibility statements once retrieved, and explicitly accept each applicable agreement. Draft preparation is not agreement acceptance.
+- Explicitly approve the final Devpost creation/update/entry action after all mandatory official fields and public URLs are resolved. No assumed consent from a generic progress reply.
+
+## External blockers and limits of this proposal
+
+Devpost `whoami`, `list_hackathons`, `get_submission_requirements`, `get_judging_criteria` and `get_key_dates` returned **internal error -32603** in this finalization. Account identity, registered relationship, exact custom field IDs/labels/options, required uploads and live phase/deadline are **unknown**. No registration or mutation was attempted. The local workflow state file is absent and was not reinitialized. The prior official-page requirements are recorded in HACKATHON_REQUIREMENTS.md, but cannot substitute for unavailable live form fields or terms/eligibility consent. Never invent required answers or claim registration.
+
+No supported YouTube upload connection/account was established in the prepared package. A reviewed local MP4 is concrete; a public YouTube URL is still pending. Approved owner upload through an available account may supply that URL. A one-time approval cannot resolve unavailable required facts or authorize unseen legal agreements: include their exact text/options in the final review when accessible; otherwise report the external block while retaining this completed private candidate.
+
+Webhook subscription/signature-verification delivery and Payouts entitlement/transfer are unverified; reimbursement transfer is unimplemented. These are disclosed limitations, not gates to the demonstrated Sandbox purchasing claim. Mobile buyer return to cloud loopback failed; authoritative provider inspection confirmed approval independently. No production/emergency readiness, held-out model accuracy, universal accessibility certification or immutable audit is claimed.
+
+[Fresh webhook release diagnostic](WEBHOOK_RELEASE_STATUS.md) confirms zero existing Sandbox registrations/events and HTTP400 rejection of three unsigned/synthetic callbacks with copied PAID state and seven-event audit unchanged. Actual signed callback delivery remains unverified; these local rejections are not a substitute.
+
+**Current outcome: reviewable private draft/candidate.** No root license adopted, repository visibility changed, video publicly uploaded, legal agreement accepted, Devpost project created or final entry sent by this work.

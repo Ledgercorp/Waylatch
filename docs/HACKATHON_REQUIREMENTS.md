@@ -1,5 +1,11 @@
 # Official qualification and release gates
 
+## Current prepared release candidate — 2026-10-13
+
+The genuine USD 1.00 simulated Sandbox purchase and capture completed, with separate actual human approvals. Independent Orders and Capture GET requests confirmed HTTP 200 / COMPLETED and exact references/amount. The revised 110.04-second MP4 now includes authentic settled PAID UI and seven-event audit footage plus selected independent provider evidence; no buyer/capture reenactment. The old pending-payment statements below are historical.
+
+The refreshed Devpost draft, fields, screenshots, video/captions and technical documents are prepared privately. Read-only Devpost identity/registration/requirements/judging/date calls currently return internal error -32603; live custom fields and registration remain unknown. Previously recorded official rules below remain the known requirements and must be checked before submission. No public source/video release, adopted root license, accepted legal terms or submission has occurred. One [consolidated approval packet](RELEASE_APPROVALS.md) covers the concrete proposal. Real spending stays $0.
+
 Live official pages retrieved on 2026-10-13 with successful HTTP responses, before product implementation:
 
 - https://paypalaihackathon.devpost.com/rules

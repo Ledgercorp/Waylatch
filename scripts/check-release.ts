@@ -3,6 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 let sourceMode = 'git-index';
+const sourceOnly = process.argv.includes('--source-only');
 let tracked: string[];
 try {
   tracked = execFileSync('git', ['ls-files', '-z'], {
@@ -61,7 +62,7 @@ function files(dir: string): string[] {
     x.isDirectory() ? files(join(dir, x.name)) : [join(dir, x.name)],
   );
 }
-for (const file of files('dist')) {
+for (const file of sourceOnly ? [] : files('dist')) {
   const text = readFileSync(file, 'utf8');
   if (
     /PAYPAL_CLIENT_SECRET|PAYPAL_SECRET_KEY|COORDINATOR_PASSWORD|api-m\.sandbox\.paypal\.com|verify-webhook-signature/.test(
@@ -76,8 +77,10 @@ console.log(
     category: 'local-static-release-check',
     trackedFiles: tracked.length,
     sourceMode,
+    frontendArtifactsChecked: !sourceOnly,
     findings,
     scope:
+      (sourceOnly ? 'Source only; frontend artifacts not inspected in this run. ' : '') +
       'Configured-secret and specific-pattern scan; not a comprehensive secret/security certification',
   }),
 );

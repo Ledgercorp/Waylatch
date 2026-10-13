@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-13T20:39:59.295Z",
+  "category": "independent-validation-of-genuine-sandbox-capture-audit",
+  "recordId": "RL-REAL-20261013-201748",
+  "valid": true,
+  "brokenAt": null,
+  "count": 7,
+  "persistedEventsMatchExport": true,
+  "captureReferencesMatch": true
+}

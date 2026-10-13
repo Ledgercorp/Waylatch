@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-13T20:38:14.038Z",
+  "category": "sandbox-buyer-approved-despite-mobile-return-failure",
+  "orderId": "2W330508JA572391V",
+  "recordId": "RL-REAL-20261013-201748",
+  "paypalStatus": "APPROVED",
+  "paymentState": "ORDER_CREATED",
+  "amountCents": 100,
+  "observedBrowserHost": "127.0.0.1",
+  "userReportedAction": "User hit Pay and received Safari could not connect to server at 127.0.0.1",
+  "explanation": "Loopback return URL points to the buyer device; it cannot reach the isolated cloud loopback API. Authoritative PayPal order inspection confirms buyer approval independently of the return page.",
+  "captureAuthorized": false,
+  "captureExecuted": false,
+  "realMoneyUsed": 0
+}

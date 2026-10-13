@@ -1,0 +1,4 @@
+Command: npx tsc --noEmit
+Exit code: 0
+Compiler diagnostics: none
+Application rebuild: not performed

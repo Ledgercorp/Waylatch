@@ -1,0 +1,46 @@
+{
+  "verifiedAt": "2026-10-13T20:58:36.864Z",
+  "category": "independent-authorized-paypal-sandbox-transaction-verification",
+  "implementationCommit": "5ca7ce805597a46570aab250e350ba37052d6313",
+  "environment": "sandbox",
+  "host": "api-m.sandbox.paypal.com",
+  "savedEvidenceFile": "docs/evidence/paypal-real-sandbox.json",
+  "savedEvidenceSha256": "3164e8c7310a3b358b8371bea270b6bbdbc592acc789354d8d5e8bc78c74a34b",
+  "recordId": "RL-REAL-20261013-201748",
+  "revision": 1,
+  "amountCents": 100,
+  "currency": "USD",
+  "orderId": "2W330508JA572391V",
+  "captureId": "8WY07860808872629",
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/v1/oauth2/token",
+      "httpStatus": 200,
+      "purpose": "Read-only API inspection authentication"
+    },
+    {
+      "method": "GET",
+      "path": "/v2/checkout/orders/2W330508JA572391V",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v2/payments/captures/8WY07860808872629",
+      "httpStatus": 200
+    }
+  ],
+  "independentlyVerified": true,
+  "financialMutationsExecuted": false,
+  "realMoneyUsed": 0,
+  "orderStatus": "COMPLETED",
+  "captureStatus": "COMPLETED",
+  "authoritativeAmount": {
+    "currency": "USD",
+    "value": "1.00"
+  },
+  "referenceMatched": true,
+  "singleFinalCaptureMatched": true,
+  "captureCreatedAt": "2026-10-13T20:39:05Z",
+  "captureUpdatedAt": "2026-10-13T20:39:05Z"
+}

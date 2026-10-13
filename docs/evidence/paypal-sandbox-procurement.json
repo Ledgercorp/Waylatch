@@ -1,0 +1,39 @@
+{
+  "preparedAt": "2026-10-13T20:18:39.514Z",
+  "category": "prepared-pending-human-review-not-a-payment",
+  "implementationCommit": "5ca7ce805597a46570aab250e350ba37052d6313",
+  "environment": "sandbox",
+  "record": {
+    "id": "RL-REAL-20261013-201748",
+    "kind": "procurement",
+    "incident": "FLOOD-EMBER-26",
+    "resources": [
+      {
+        "description": "Fictional one-dollar Sandbox procurement test item",
+        "quantity": 1
+      }
+    ],
+    "urgency": "urgent",
+    "amountCents": 100,
+    "amountKind": "exact",
+    "currency": "USD",
+    "location": "Ember shelter · fictional",
+    "origin": "Field team Delta · fictional",
+    "revision": 1,
+    "createdAt": "2026-10-13T20:18:39.511Z",
+    "receiptDigest": null,
+    "transactionReference": null,
+    "expenseAt": null
+  },
+  "persistedToApplication": true,
+  "humanReviewRecorded": true,
+  "purchaseAuthorized": true,
+  "orderCreated": true,
+  "buyerApprovalObserved": true,
+  "captureAuthorized": true,
+  "captureExecuted": true,
+  "realMoneyUsed": 0,
+  "blockers": [],
+  "humanDecisionSource": "Actual user reply REVIEW and AUTHORIZE for this exact record",
+  "isolatedDatabase": "data/paypal-demo/RL-REAL-20261013-201748.sqlite"
+}

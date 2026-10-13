@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-13T20:59:21.706Z",
+  "category": "read-only-real-sandbox-webhook-release-diagnostic",
+  "orderId": "2W330508JA572391V",
+  "captureId": "8WY07860808872629",
+  "configuredWebhookIdPresent": false,
+  "fallbackSecretAliasSelected": true,
+  "network": {
+    "policyVersion": 1,
+    "mode": "restricted",
+    "sandboxApiAllowed": true,
+    "vpnConfigured": false,
+    "tcpDomainGrants": 0,
+    "tcpIpRangeGrants": 0,
+    "inheritedProxyPreserved": true
+  },
+  "providerRequests": [
+    {
+      "method": "GET",
+      "path": "/v1/notifications/webhooks",
+      "httpStatus": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/notifications/webhooks-events?start_time=2026-10-13T20%3A16%3A49.854Z&end_time=2026-10-13T20%3A44%3A07.779Z&event_type=PAYMENT.CAPTURE.COMPLETED&page_size=100",
+      "httpStatus": 400
+    }
+  ],
+  "financialMutationsExecuted": false,
+  "webhookRegistrationsChanged": false,
+  "realMoneyUsed": 0,
+  "genuineCallbackReceived": false,
+  "genuineSignatureVerified": false,
+  "oauthHttpStatus": 200,
+  "registrations": {
+    "count": 0,
+    "subscribedEventTypes": [],
+    "callbackUrlsAndOtherApplicationsOmitted": true
+  },
+  "localRejection": {
+    "unsignedBackendHttpStatus": 400,
+    "unsignedGatewayHttpStatus": 400,
+    "syntheticHeadersGatewayToRealBackendHttpStatus": 400,
+    "reason": "PayPalClient fails closed without PAYPAL_WEBHOOK_ID; no verification API request or financial reconciliation occurs",
+    "payloadCategory": "synthetic callback referencing genuine completed Sandbox identifiers",
+    "providerImplementation": "real PayPalClient; no provider double",
+    "originalDatabaseOpenedOrModified": false,
+    "copiedRecordsPaymentsAuditAndWebhookMarkersUnchanged": true,
+    "snapshotSha256Before": "a768679f4f2059127f997db5f7c0062ba0a8c3ae19342ca22b3d1cc968946e95",
+    "snapshotSha256After": "a768679f4f2059127f997db5f7c0062ba0a8c3ae19342ca22b3d1cc968946e95",
+    "paymentState": "PAID",
+    "auditValid": true,
+    "auditEvents": 7
+  }
+}

@@ -1,21 +1,54 @@
 {
-  "generatedAt": "2026-10-13T15:22:30.309928+00:00",
-  "category": "actual-application-footage-with-labeled-automated-fixtures",
+  "generatedAt": "2026-10-13T21:04:11.048935+00:00",
+  "category": "existing-application-footage-updated-with-genuine-settled-payment-footage-and-evidence",
   "file": "docs/demo/waylatch-engineering-preview.mp4",
-  "sha256": "52257fcf1174b909f46a70224b3322c2502f07bcaa068788b10201ba5b12abcc",
+  "sha256": "2c7bf7c0bc9f936f855b712b2f273dffead34023330ab62f6ae10080f7e43d58",
   "durationSeconds": 110.04,
-  "bytes": 2078842,
+  "bytes": 2153105,
   "codec": "h264",
   "width": 1600,
   "height": 900,
   "audio": false,
   "publiclyPublished": false,
   "realLocalAI": true,
-  "realPayPalTransaction": false,
+  "realPayPalTransaction": true,
+  "orderId": "2W330508JA572391V",
+  "captureId": "8WY07860808872629",
+  "amountCents": 100,
+  "realMoneyUsed": 0,
+  "sourceCommit": "5ca7ce805597a46570aab250e350ba37052d6313",
+  "retainedSourceVideoSha256": "52257fcf1174b909f46a70224b3322c2502f07bcaa068788b10201ba5b12abcc",
+  "settledSourceVideoSha256": "55866c7bce42824f3aeecde9fae74130a222544e13aca102c1bb164c7a9516bb",
+  "paymentEvidenceFile": "docs/evidence/paypal-real-sandbox.json",
+  "independentVerificationFile": "docs/evidence/paypal-independent-verification.json",
+  "segments": [
+    {
+      "startSeconds": 0,
+      "endSeconds": 83.84,
+      "source": "Retained authentic historical application footage; automated nonfinancial fixtures labeled."
+    },
+    {
+      "startSeconds": 83.84,
+      "endSeconds": 94.08,
+      "source": "New authentic UI recording of the genuine settled USD1.00 Sandbox purchase."
+    },
+    {
+      "startSeconds": 94.08,
+      "endSeconds": 102.16,
+      "source": "New authentic UI recording of its seven-event audit and browser export."
+    },
+    {
+      "startSeconds": 102.16,
+      "endSeconds": 110.04,
+      "source": "Selected factual saved evidence from independent authorized Sandbox GETs."
+    }
+  ],
   "limitations": [
-    "Engineering preview; not final financial integration footage.",
-    "Review and authorization use labeled automated local fixtures, not an independent human decision.",
-    "Disconnection simulated; IndexedDB, QR decoding, inference and audit validation actually executed.",
-    "No narration or music. Captions and narration script provided."
+    "Original offline/QR/AI scenes retain synthetic records, automated nonfinancial review fixtures and simulated disconnection.",
+    "The genuine USD1.00 purchasing fixture is separate from the retained USD128 offline/example records.",
+    "Checkout login, buyer approval and capture actions were not screen-recorded; no reenactment claims are made.",
+    "The paid-state and audit UI show authentic persisted financial evidence after the actual human-authorized capture.",
+    "Actual signed webhook/callback delivery and Payouts remain unverified.",
+    "Silent with captions; no narration or music. Public publication requires owner approval."
   ]
 }

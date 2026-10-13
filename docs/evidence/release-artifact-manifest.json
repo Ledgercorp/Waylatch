@@ -1,0 +1,193 @@
+{
+  "generatedAt": "2026-10-13T21:14:25.481494+00:00",
+  "category": "exact-private-release-material",
+  "sourceBaselineCommit": "5ca7ce805597a46570aab250e350ba37052d6313",
+  "orderId": "2W330508JA572391V",
+  "captureId": "8WY07860808872629",
+  "realMoneyUsed": 0,
+  "publicReleaseAuthorized": false,
+  "excludes": [
+    "credentials",
+    "databases",
+    "node_modules",
+    "model binaries",
+    "raw runtime caches"
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 15502,
+      "sha256": "b6ef0f76536c1b4392992330e9f693ed3f018f60a5b3097c0e5a94b472eef6c5"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2544,
+      "sha256": "d8d0c64c4bad049d8e550a7964763a94785796948b64821b5027eeb476c3e387"
+    },
+    {
+      "path": "devpost-submission.md",
+      "bytes": 12204,
+      "sha256": "0c7f93f2657ff6d48340ca6a526fa073edaa1193506e8c6ff530d40f5bd47311"
+    },
+    {
+      "path": "docs/DEVPOST_DRAFT.md",
+      "bytes": 10890,
+      "sha256": "26c131ae043c5d3d183611e5e4c17eaddd7b23263044118a9a3fdd70fc68fd18"
+    },
+    {
+      "path": "docs/submission/SUBMISSION_PACKAGE.md",
+      "bytes": 11444,
+      "sha256": "c9f366165521321251aaf6d60853395b128fc3ecbf66128a35cb8243c21850e5"
+    },
+    {
+      "path": "docs/submission/project-fields.json",
+      "bytes": 12623,
+      "sha256": "a15dc747b6ec9b037bacf5b184804f5b9af8b43bc2d14c31720a388ad60d70f1"
+    },
+    {
+      "path": "docs/RELEASE_APPROVALS.md",
+      "bytes": 11419,
+      "sha256": "77b454592cc11807cdbdd7f754d57a738b7420c732abb0c790b2b0badc40affb"
+    },
+    {
+      "path": "docs/LICENSE-MIT-PROPOSAL.txt",
+      "bytes": 1408,
+      "sha256": "69f89378aeb473411d2926aa3f5b3b395206c783c7b69e310cf525b0a1cecb75"
+    },
+    {
+      "path": "docs/THIRD_PARTY_NOTICES.md",
+      "bytes": 2747,
+      "sha256": "2c21888ce834dce499ae6aebb6a0a69fd2f5784942a5d79683d2bd51f677b068"
+    },
+    {
+      "path": "docs/CRISISCODEC_REUSE.md",
+      "bytes": 3291,
+      "sha256": "a310e8f42f19716a6a37fb53f2040986df9fdbcb7a63d44822505f707fbc6362"
+    },
+    {
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "bytes": 2153105,
+      "sha256": "2c7bf7c0bc9f936f855b712b2f273dffead34023330ab62f6ae10080f7e43d58"
+    },
+    {
+      "path": "docs/demo/captions.srt",
+      "bytes": 1519,
+      "sha256": "4ed4162a14e3947373c436367d79182555605f50abcf3fedef9a32d580621c8e"
+    },
+    {
+      "path": "docs/demo/captions.ass",
+      "bytes": 2239,
+      "sha256": "e06406cf1fd7bf72a29f8226e18c486a35485173d268c7b5dea0cc37c3ad6897"
+    },
+    {
+      "path": "docs/demo/NARRATION.md",
+      "bytes": 8802,
+      "sha256": "af09024178bc1cb7879dda14275506c6baf3bb80378993eba2f277c3a27c8698"
+    },
+    {
+      "path": "docs/DEMO_SCRIPT.md",
+      "bytes": 6152,
+      "sha256": "df58f18b05022ead938e6cac15241cef9a7970203de7a707da19cf4dbc688fdb"
+    },
+    {
+      "path": "docs/evidence/paypal-real-sandbox.json",
+      "bytes": 1264,
+      "sha256": "3164e8c7310a3b358b8371bea270b6bbdbc592acc789354d8d5e8bc78c74a34b"
+    },
+    {
+      "path": "docs/evidence/paypal-independent-verification.json",
+      "bytes": 1387,
+      "sha256": "c926e866b9104d734fccee3054e177cfd440c84a9f24861a153b858fe5eae57b"
+    },
+    {
+      "path": "docs/evidence/paypal-sandbox-audit.json",
+      "bytes": 4135,
+      "sha256": "e9c79422cffc00e5fb9449e0582e68ee01d1402db1f1d79b30521a0c7ffed469"
+    },
+    {
+      "path": "docs/evidence/paypal-sandbox-audit-validation.json",
+      "bytes": 283,
+      "sha256": "e996f551150a597a1beaa2709b8c9f484b430a8ff004fe41fed3053eccce532a"
+    },
+    {
+      "path": "docs/evidence/paypal-sandbox-resume.json",
+      "bytes": 715,
+      "sha256": "1a17698b4201903f7deed242b51ba0d58f86248483351824b0d7c53e9b2c7557"
+    },
+    {
+      "path": "docs/evidence/paypal-sandbox-procurement.json",
+      "bytes": 1213,
+      "sha256": "99e07d418de75d45e618472798ed329aface3a08f661c537df99d38548fcab61"
+    },
+    {
+      "path": "docs/evidence/demo-video.json",
+      "bytes": 2384,
+      "sha256": "9a4141c526eb2298af90fff639fb35dfc1ba2e249ff19856597ae2bb2c792fd6"
+    },
+    {
+      "path": "docs/evidence/demo-video-prior.json",
+      "bytes": 848,
+      "sha256": "2273c9e4355346825ce041d362b16f1ad140b13ab1307373e36eb2cc8859ff81"
+    },
+    {
+      "path": "docs/evidence/settled-demo-recording.json",
+      "bytes": 1407,
+      "sha256": "89d4a236cc7b413de79812dfa18a15ca501be0e7e07cc493af80d39f222a37f6"
+    },
+    {
+      "path": "docs/evidence/payment-completed.png",
+      "bytes": 72477,
+      "sha256": "53afb87bc1dc94ccf0145e8e5a45c0f96724ca387701453de382638b2ac16f0b"
+    },
+    {
+      "path": "docs/evidence/audit-paypal-completed.png",
+      "bytes": 118195,
+      "sha256": "bd7b76a84628ff02795400d5313b74c66e4299f6e7f8a46939ed169de2795d6a"
+    },
+    {
+      "path": "docs/evidence/release-webhook-verification.json",
+      "bytes": 2365,
+      "sha256": "bc25d626f76aac6573ff95bae27b53940ed2564c877094e05ea4f0c7cd0cd765"
+    },
+    {
+      "path": "docs/WEBHOOK_RELEASE_STATUS.md",
+      "bytes": 6794,
+      "sha256": "be194e1a2f6863eafa1ccb36dcc9621e947b824ae7f3d7970be4e3245227853b"
+    },
+    {
+      "path": "scripts/verify-sandbox-transaction.ts",
+      "bytes": 5598,
+      "sha256": "6ddb59562ac6a67cfa4416b36501be5eeeefe0326b7476678cf375db788f4c22"
+    },
+    {
+      "path": "scripts/verify-sandbox-webhooks.ts",
+      "bytes": 9662,
+      "sha256": "b06eaa977d94149307cedf4ced1e3364e6ce4a489a43e34cb08e986eb439663a"
+    },
+    {
+      "path": "scripts/record-settled-demo.ts",
+      "bytes": 6926,
+      "sha256": "0b9297fbaf5932a4dfdb14dddbbae2d0c464706642b0b2e7df18053cd182b41f"
+    },
+    {
+      "path": "scripts/update-demo-payment.py",
+      "bytes": 9434,
+      "sha256": "6f27deb4dede52278e751d496ab85d8971f519c19d1edee3d1774777ad17827e"
+    },
+    {
+      "path": "scripts/validate-audit.ts",
+      "bytes": 1031,
+      "sha256": "76fe1c88dc78cf18ee1177f404388fdbf4b7b80e20a0f83d383012123398bd59"
+    },
+    {
+      "path": "tests/audit-export-cli.test.ts",
+      "bytes": 1766,
+      "sha256": "369bf820df0f0580aef328bb7c58efffeaa29ff3b97b0527d4ccc723cebcfea4"
+    },
+    {
+      "path": "scripts/check-release.ts",
+      "bytes": 2888,
+      "sha256": "976a70a8aa569065a4b1d27f8c8c336a2b53a6e32dae36a398cb572a4f561004"
+    }
+  ]
+}

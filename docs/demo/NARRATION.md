@@ -1,10 +1,29 @@
-# Actual engineering-preview video
+# Final private demonstration and optional narration
 
-File: waylatch-engineering-preview.mp4. Duration: 110.04 seconds. Silent, burned-in captions, no music. H.264/yuv420p, 1600×900, 25 fps, fast-start MP4. Exact hash and generation metadata: ../evidence/demo-video.json. Source: actual Playwright screen recordings from two isolated browser contexts; no fabricated payment footage. This asset has not been uploaded or made public.
+Asset: [waylatch-engineering-preview.mp4](waylatch-engineering-preview.mp4). The filename is retained for compatibility; its current payment and closing scenes are refreshed with genuine completed-purchase evidence. Duration: **110.04 seconds**, under three minutes. Silent, burned-in captions, no music. H.264/yuv420p, 1600×900, 25 fps, fast-start MP4; final hash and source metadata: [demo-video.json](../evidence/demo-video.json). Nothing has been publicly uploaded.
 
-## Exact optional narration transcript
+Original footage shows actual IndexedDB offline reload, QR decoding/reconstruction, real local semantic inference and, in newly recorded scenes, the actual settled payment and genuine seven-event audit. Network loss is simulated; original automated UI review/authorization fixtures remain labeled. The new settled-payment and audit footage refers to a **separate actual human-authorized Sandbox transaction**. Create/capture controls are disabled; browser audit export matches persisted SQLite and financial state remained unchanged. [Recording proof](../evidence/settled-demo-recording.json). Genuine buyer checkout and capture were not screen-recorded; the insert is an actual settled-state UI recording plus independent saved provider evidence, not a reenactment.
 
-Read the captions below in order, allowing each scene to breathe. There is intentionally no claim of genuine buyer approval, capture, payout or webhook delivery. The permanent top label identifies fictional data, automated UI fixtures and no PayPal transaction.
+## Optional narration transcript
+
+The deliverable remains silent; narration below is prepared copy, not recorded audio. Exact burned-in text/timings are in [captions.srt](captions.srt). Allow scene transitions to breathe if narration is later recorded.
+
+1. Waylatch carries an urgent field request from disconnection to an accountable purchase.
+2. This fictional scenario simulates network failure. The request stays on this device.
+3. A complete offline reload preserves the actual IndexedDB request.
+4. RL1 packets carry request data; they carry no payment authority.
+5. A second disconnected browser decodes an actual QR image.
+6. Fragments reconstruct the request. Import provenance remains untrusted.
+7. Real local MiniLM embeddings support explainable similarity review. Similarity is not a fraud probability.
+8. These review controls use the original automated UI fixture. AI has no financial authority.
+9. A separate incurred-expense claim requires explicit confirmation; no reimbursement transfer is performed.
+10. Claim review works. Sandbox Payouts entitlement and transfer remain unverified.
+11. This authorization scene is the original local automated fixture, separate from the genuine purchase.
+12. The actual user reviewed and authorized one dollar in simulated funds, approved genuine Sandbox checkout, and separately authorized capture. The saved evidence confirms completed payment; buyer checkout and capture were not screen-recorded.
+13. This is the actual settled payment audit: seven verified events and an exported chain matching SQLite.
+14. Independent PayPal order and capture checks confirm completed payment. Webhook delivery and Payouts remain unverified. One dollar simulated, zero dollars real spending.
+
+## Exact burned-in captions
 
 ```srt
 1
@@ -48,40 +67,42 @@ Separate incurred-expense claim: explicit confirmation. No reimbursement transfe
 Claim review works. Payout entitlement remains unverified.
 
 11
-00:01:18,757 --> 00:01:23,853
+00:01:18,757 --> 00:01:23,840
 Sandbox authorization boundary exercised by a labeled automated fixture.
 
 12
-00:01:23,853 --> 00:01:34,065
-Honest payment status: credentials missing. No PayPal order or capture executed.
+00:01:23,840 --> 00:01:34,080
+Separate USD 1.00 Sandbox fixture: genuine human-authorized purchase, completed capture, $0 real spending.
 
 13
-00:01:34,065 --> 00:01:42,143
-Actual SQLite events validate as a SHA-256-linked, tamper-evident chain.
+00:01:34,080 --> 00:01:42,160
+Actual settled payment audit: seven verified events and an exported chain matching SQLite.
 
 14
-00:01:42,143 --> 00:01:50,040
-Offline continuity and local AI verified. Genuine Sandbox capture is the remaining gate.
+00:01:42,160 --> 00:01:50,040
+Independent PayPal order/capture inspection confirms COMPLETED. Webhook delivery and Payouts remain unverified.
 ```
 
-## Reproduce / edit
+## Exact financial references and limits
 
-With the production build, Chromium and pinned local model installed:
+Request **RL-REAL-20261013-201748**, revision **1**, exact **USD 1.00 simulated**. Order **2W330508JA572391V**, capture **8WY07860808872629**. PayPal **COMPLETED**, Waylatch **PAID**, seven genuine validated audit events; real spending **USD 0.00**. Independent authorized GETs for both resources returned HTTP200 and matched amount/reference/single final capture. [Provider result](../evidence/paypal-real-sandbox.json), [new independent check](../evidence/paypal-independent-verification.json), [audit validation](../evidence/paypal-sandbox-audit-validation.json).
 
-```sh
-npm run demo:record
-npm run demo:render
-npm run audit:validate -- docs/evidence/demo-audit.json
-```
+The Sandbox buyer's mobile return page failed because its loopback address pointed at the phone. Authoritative inspection confirmed APPROVED before the separately authorized capture; no successful return-page footage is claimed. Actual webhook delivery/signature verification and Payouts transfer remain unverified. No live funds, production deployment or emergency field validation is represented.
 
-Requires Python 3 and free FFmpeg/FFprobe with libx264, libass and the system DejaVu Sans font. The recorder starts its own loopback server and unique SQLite database, explicitly sets all PayPal credential variables empty, uses only a synthetic demo passphrase, saves raw footage in ignored .cache/demo and closes its server/browser afterward. Never use this script to portray an independent human financial decision. Human prompts in paypal:integration remain mandatory.
+Review screenshots: [actual settled PAID screen](../evidence/payment-completed.png) and [genuine seven-event audit](../evidence/audit-paypal-completed.png). The corrected standalone audit CLI validates raw event arrays or export `events`, fails closed on invalid shapes and ignores claimed validity metadata; [actual seven-event result](../evidence/release-audit-envelope-green.log). Four new targeted CLI checks passed; earlier whole suites were not repeated.
 
-To produce the final competition video, obtain genuine Sandbox capture first, then replace the blocked-payment scene with actual secure checkout/capture and reconciled order/capture references. Use the 2:50 final-story plan in ../DEMO_SCRIPT.md. Trim provider waiting time with clear transitions; never substitute a simulator result. Keep final duration below 180 seconds, hide login/credentials, recheck screenshots, and regenerate video metadata/hash. If narration is recorded later, use an authorized speaker or clearly disclosed permitted synthetic narration; no paid service or impersonation is needed.
+## Edit / reproduce boundaries
 
-## Prepared upload metadata — not sent
+This finalized edit retains original nonfinancial footage and replaces the stale missing-credentials scene, original eight-event fixture audit and pending-capture closing with actual settled PAID UI, the real seven-event audit and saved independent provider confirmation. Preserve the original nonfinancial fixture labels and use the newly recorded genuine seven-event audit. No capture replay or new financial operation is needed. Final media/caption hashes and disclosure metadata must match the local reviewed asset.
 
-Title: Waylatch — From field need to verified action (engineering preview)
+The historical commands `npm run demo:record` and `npm run demo:render` create fresh **automated fixture footage with PayPal disabled**; they do not reproduce the separate human approvals or final evidence insert. Do not rerun them as though they were financial proof. Raw recording caches and isolated SQLite databases remain excluded from the source release.
 
-Description: Actual application footage of fictional emergency procurement preserved offline, transferred through QR packets, reviewed with real local semantic embeddings and recorded in a tamper-evident audit. Disconnection is simulated; review/authorization controls use labeled automated local test fixtures. PayPal Sandbox checkout is blocked by missing runtime credentials in this recording. No order, capture, payout or real funds occurred. Prototype has not been tested in real emergencies. LeftSock Labs / Colby Weiss.
+If narration is later recorded, use an authorized speaker or clearly disclosed permitted synthetic voice. No paid service or impersonation is needed. That future audio is not part of the current exact silent MP4 approval.
 
-The current MP4 is a reviewable preview, not the finished financial demonstration required for final submission. No YouTube account is connected through the available publishing integration. A public URL is intentionally absent. Public upload needs owner authorization after final financial footage is complete.
+## Prepared public YouTube metadata — not sent
+
+**Title:** Waylatch — From field need to verified action
+
+**Description:** Waylatch preserves fictional emergency procurement requests offline, transfers them through QR packets, assists review with actual local MiniLM embeddings and links decisions to payment evidence. Original nonfinancial product footage uses clearly labeled automated local UI fixtures and simulated network failure. A separate genuine PayPal Sandbox purchase completed after actual user review/authorization, buyer approval and separate capture permission: request RL-REAL-20261013-201748 revision 1, order 2W330508JA572391V, capture 8WY07860808872629, USD1.00 simulated funds, USD0.00 real spending. The payment insert shows actual settled PAID UI and a seven-event audit with browser export matching SQLite, then sanitized independent provider confirmation; buyer checkout and capture were not screen-recorded. Independent provider GETs and the seven-event exported audit confirm the result. The mobile loopback return page failed; authoritative provider inspection proved approval independently. Reimbursement transfer and real webhook delivery remain unverified. Prototype has not been tested in real emergencies. Silent captioned demo; no music. Colby Weiss / LeftSock Labs.
+
+**Public YouTube URL: PENDING approved upload.** No supported upload connection/account is established in this package. Approve the exact local asset, description and authorized upload route with the rest of [RELEASE_APPROVALS.md](../RELEASE_APPROVALS.md); publication is a final owner decision.

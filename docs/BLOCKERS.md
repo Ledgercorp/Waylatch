@@ -1,3 +1,11 @@
+# Current remaining gates after genuine Sandbox capture — 2026-10-13
+
+**Resolved for this isolated demonstration:** credential availability, genuine HTTP 200 OAuth, normal coordinator authentication using a user-authorized private temporary passphrase, actual human REVIEW/AUTHORIZE, real order creation, genuine personal-buyer approval and separately authorized capture. Order **2W330508JA572391V COMPLETED**, capture **8WY07860808872629**, application **PAID**, exact USD 1.00 in simulated funds. [Evidence](evidence/paypal-real-sandbox.json). Seven valid audit events; existing accounts/records untouched; loopback instance stopped and session revoked.
+
+**Remaining:** PAYPAL_WEBHOOK_ID absent; actual subscription, official callback signature verification and delivery unverified. Payouts entitlement/transfer unverified. Existing financial preview has not been replaced with actual payment footage. Public/licensing/source-rights/legal/submission approvals remain unchanged. No new paid or public resource was provisioned. No app rebuild, PayPal credential change or completed test rerun. **$0 real spending.** [Full continuation](PAYPAL_AUTHENTICATED_CONTINUATION.md). Historical credential/purchase blockers below are superseded for this demonstrated purchase.
+
+---
+
 # Saved configuration / runtime association remains unverified
 
 The owner-provided saved environment79e2602645508191bbaa0e5bd232597f revision13 already contains the correct Sandbox hostname, confirmed in the screenshot. Available tools cannot inspect its publication history, resolved policy, task attachment or workspace/global restrictions. Thread-managed metadata exposes a different instance ID, revision68, null source association and unrestricted/enforced HTTP policy; it does not cover extra attached environments. No cause can be conclusively selected among stale publication, attachment mismatch, saved-but-unapplied policy or higher-level restriction. Support draft: [OPENAI_SUPPORT_REPORT.md](OPENAI_SUPPORT_REPORT.md). No domain/credential/configuration repetition requested. Not fixed: authenticated Sandbox OAuth remains unexecuted.

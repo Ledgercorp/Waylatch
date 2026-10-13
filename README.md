@@ -8,13 +8,13 @@ Waylatch preserves emergency resource requests offline, moves them between devic
 
 Built by Colby Weiss / LeftSock Labs for the PayPal AI Hackathon 2026. All incident, organization, identity and expense examples are fictional. This prototype has not been tested in real emergencies. No lending, credit, deferred repayment, real-money transactions or autonomous AI authorization.
 
-**Current limitation:** actual PayPal account integration is blocked by missing cloud Sandbox credentials. The Orders v2 client and guarded workflow execute against clearly labeled local test providers. Real local AI inference, offline reload and QR transfer have been executed. Payouts execution is blocked/unimplemented; claim review and human reimbursement approval work independently. See [verification](docs/VERIFICATION.md).
+**Verified genuine Sandbox purchase:** the user-authorized USD 1.00 simulated purchase completed with PayPal order `2W330508JA572391V` and capture `8WY07860808872629`; Waylatch reconciled `PAID`. Independent authorized Orders and Capture GET requests both returned HTTP 200 / `COMPLETED`, matching the exact amount and references. Seven persisted audit events validate. **Real spending: $0.** [Actual evidence](docs/evidence/paypal-real-sandbox.json), [independent verification](docs/evidence/paypal-independent-verification.json). Real local AI, offline reload and QR transfer are evidenced separately. Genuine webhook delivery remains unverified; Payouts transfer is unimplemented. See [verification](docs/VERIFICATION.md).
 
 ![Desktop command workspace](docs/evidence/interface-1440.png)
 
 ## Run locally, at no cost
 
-Requires Node.js **24+**, npm, Python 3 (only for the one-time model downloader), and a modern Chromium browser. Node's built-in SQLite stores durable server records without an external database.
+Requires Node.js **24+**, npm, Python 3 (for the model downloader and optional media tooling), and a modern Chromium browser. Node's built-in SQLite stores durable server records without an external database.
 
 ```bash
 # Unpack the supplied source archive (or clone a future authorized private repository).
@@ -97,13 +97,13 @@ Root license adoption is **pending owner approval**. `docs/LICENSE-MIT-PROPOSAL.
 
 ## Private release preparation
 
-The current engineering checkpoint adds a callback-only gateway, a $1.00 fictional Sandbox integration fixture with unchanged human prompts, a complete lockfile/native-dependency license inventory, and a recorded [1:50 captioned engineering preview](docs/demo/waylatch-engineering-preview.mp4). The preview uses actual app footage and visibly labels automated review fixtures, simulated disconnection and blocked PayPal checkout. It is not a final financial demonstration.
+The [1:50 captioned demo](docs/demo/waylatch-engineering-preview.mp4) retains the actual offline/QR/local-AI footage and now shows the genuine completed USD 1.00 Sandbox payment and its seven-event audit in the existing UI. A closing evidence panel cites independently verified provider results. Original nonfinancial automated fixtures remain labeled; the USD 1.00 purchase is a separate human-authorized fixture. Checkout login, buyer approval and capture actions were not screen-recorded or reenacted. [Media provenance](docs/evidence/demo-video.json).
 
 The [submission package](docs/submission/SUBMISSION_PACKAGE.md) includes prepared Devpost fields, technology tags, an exportable architecture SVG, screenshot captions, narration/editing instructions and release gates. No Devpost project, YouTube upload, public repository, root license adoption or final submission has been performed. Naming remains AMBER. See [license audit](docs/LICENSE_AUDIT.md) before redistribution.
 
 For secure callback testing, start the existing coordinator backend locally and run `npm run webhook:gateway`. Any approved free tunnel must target **127.0.0.1:4180**, never the coordinator port. Only POST /api/webhooks/paypal is forwarded; official Sandbox verification still runs on the backend. The attempted Quick Tunnel failed with a TCP connection refusal and produced no public endpoint or real callback. This receiver is a narrow prototype test boundary, not a production ingress service.
 
-This runtime lacks both required PayPal variables. [Cloud continuation](docs/CLOUD_CONTINUATION.md) records the exact fresh-task handoff using the published Waylatch environment. Do not paste credentials into chat. The integration harness still requires REVIEW, AUTHORIZE and CAPTURE from an actual operator; demo recording scripts disable PayPal and do not satisfy that human requirement.
+Existing secure PayPal bindings authenticated successfully without setup changes. The completed demonstration used actual human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE. The original `demo:record` remains an automated nonfinancial fixture recording and disables PayPal. `demo:record-settled` records only the independently verified settled state, blocks financial mutations, and uses a database copy; it cannot substitute for human approval. Do not repeat the completed payment. See [authenticated continuation](docs/PAYPAL_AUTHENTICATED_CONTINUATION.md).
 
 ## Server-side secret-name compatibility
 
@@ -111,4 +111,8 @@ Waylatch accepts the existing `PAYPAL_SECRET_KEY` binding as a fallback for `PAY
 
 The server, OAuth diagnostic, integration harness and optional entitlement probe share `server/paypal-config.ts`. The integration harness still requires actual operator REVIEW, AUTHORIZE and CAPTURE plus genuine Sandbox buyer approval. Alias support grants no financial authority and does not change the fixed Sandbox API host. Browser tests/demo recording clear both secret names, and the release scanner checks both names/values, including dotenv configuration.
 
-`npm run paypal:auth` now reports accepted secret variable names and whether the fallback was selected, without credential/token values. Missing configuration remains a pre-request blocker; HTTP credential rejection and transport/response failures are separate. Do not assume a nonempty value is a real credential if it came from a network-secret placeholder. Current executor observations still show the ID and both secret names absent; the application's name mismatch is nevertheless resolved and tested. Existing secure environment bindings can be used as-is.
+`npm run paypal:auth` reports accepted secret variable names and fallback selection without values/tokens. The existing alias authenticated successfully in this runtime. `npm run paypal:verify` independently inspects the saved completed order and capture through read-only Sandbox GETs; it never creates, captures or refunds a payment. `npm run paypal:webhooks-check` checks existing registrations/events and rejection of unsigned callbacks on a disposable settled database copy. No credential changes are needed.
+
+`npm run demo:update-payment` updates the existing video from preserved original Git footage and the authentic settled-state recording. `npm run release:check-source` explicitly scans only tracked/staged source artifacts when no production `dist` is present; frontend-build verification remains historical. The default `release:check` still requires `dist`. This release continuation did not rebuild the application or repeat completed unit/browser/AI suites. [Consolidated public-release proposal](docs/RELEASE_APPROVALS.md) remains pending owner approval.
+
+Optional settled-demo recording requires Chromium and Playwright video support; this Linux capture used /usr/bin/chromium and the installed ffmpeg. Video updating requires ffmpeg/ffprobe with libx264/libass. These tools record settled state and cannot authorize a purchase or reenact buyer actions.

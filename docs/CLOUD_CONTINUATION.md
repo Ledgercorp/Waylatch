@@ -1,3 +1,13 @@
+# Current continuation completed genuine Sandbox capture — 2026-10-13
+
+No PayPal key rename/replacement or network reconfiguration was needed. Existing PAYPAL_CLIENT_ID/PAYPAL_SECRET_KEY produced genuine HTTP 200 OAuth. Actual human REVIEW/AUTHORIZE, personal-buyer approval and separate **CAPTURE — simulated funds only** led to order **2W330508JA572391V COMPLETED**, capture **8WY07860808872629**, application **PAID**. [Evidence](evidence/paypal-real-sandbox.json).
+
+The user authorized isolated storage and a private temporary coordinator passphrase; no existing coordinator password was needed or changed. Loopback instance is stopped, session revoked, and the separate database retained at data/paypal-demo/RL-REAL-20261013-201748.sqlite. Seven valid audit events, one request/order, no duplicate. Never create another order merely to resume. The mobile loopback return-page failure was bypassed operationally by authoritative provider inspection, without changing credentials, exposing the backend or impersonating buyer approval.
+
+**$0 real spending**, no app rebuild or repeated completed tests. Callback/Payouts/payment footage remain unfinished. Preserve actual provider evidence and original release assets; public/licensing/legal/submission gates remain human decisions. [Full continuation](PAYPAL_AUTHENTICATED_CONTINUATION.md). Earlier unavailable-credential instructions below are historical.
+
+---
+
 # Saved-environment comparison — 2026-10-13
 
 Do not repeat hostname/credential editor steps. The supplied screenshot confirms the Sandbox hostname already exists under internet-enabled Package managers settings. Saved environment79e2602645508191bbaa0e5bd232597f revision13 cannot be inspected for publication or attachment through available tools. Thread-managed instance spec revision68 is a different namespace with null source IDs, not proof of saved revision13 being applied or stale. Root cause unresolved; see [OPENAI_SUPPORT_REPORT.md](OPENAI_SUPPORT_REPORT.md). Keep the owner's reported CONNECT403 separate from locally recorded CONNECT200 then HTTP403/401. No code/policy modification, support message or automatic task switch was performed. Genuine authenticated Sandbox OAuth is the required success gate.

@@ -1,3 +1,17 @@
+# Current continuation: genuine Sandbox capture completed — 2026-10-13
+
+Resumed private GitHub HEAD/main/candidate at `5ca7ce805597a46570aab250e350ba37052d6313`. Existing PAYPAL_CLIENT_ID and PAYPAL_SECRET_KEY alias authenticated successfully: `npm run paypal:auth` exited 0 with real Sandbox HTTP 200. PayPal credentials and application code unchanged.
+
+The user supplied actual REVIEW/AUTHORIZE for request RL-REAL-20261013-201748 revision 1, one fictional item, exact USD 1.00 in simulated funds. The user authorized an isolated database and private in-memory temporary coordinator passphrase. Normal authenticated API routes created genuine order **2W330508JA572391V**. After the user hit Pay, authoritative inspection confirmed APPROVED despite Safari's failed loopback return page. The user then explicitly replied **CAPTURE — simulated funds only**.
+
+The existing Payments implementation captured and authoritatively reconciled **COMPLETED**, application state **PAID**, capture **8WY07860808872629**. [Real Sandbox evidence](evidence/paypal-real-sandbox.json). Seven hash-linked audit events independently validate and match persisted SQLite events. Exactly one request/order remains; no duplicate order. Loopback instance stopped, zero retained coordinator sessions, temporary passphrase discarded. Existing accounts/records untouched. [Cleanup evidence](evidence/paypal-sandbox-resume.json).
+
+Real spending **$0**. No app rebuild, PayPal credential change or repeated completed test suite. Genuine webhook/callback/Payouts remain unverified; the revised110.04-second demo now shows authentic settled PAID UI and its seven-event audit. Existing preview and release assets preserved. [Full authenticated continuation](PAYPAL_AUTHENTICATED_CONTINUATION.md). Historical missing-credential and pending-purchase reports below are superseded for this isolated demonstration.
+
+Historical sections preserve prior counts and logs. Mutable JSON paths may now contain refreshed evidence; prior media metadata is retained in evidence/demo-video-prior.json and the original video remains in Git history.
+
+---
+
 # Saved-environment comparison and support preparation — 2026-10-13
 
 Owner identifies saved Waylatch environment79e2602645508191bbaa0e5bd232597f revision13. Screenshot confirms internet enabled, Package managers preset and the already-added Sandbox hostname. Saved publication/application history and attachment mapping are inaccessible through available tools. Thread-managed instance separately reports ccarenv_d8bf3f4bae288191951118a64167afdb spec/observed revision68, current unrestricted/enforced HTTP policy, null source configuration IDs. These revision namespaces cannot be equated. Workspace/global restrictions are not readable.
@@ -101,3 +115,7 @@ $0 real funds or paid services. No public visibility change, domain purchase, pa
 ## Next executable action
 
 Recovery, rebrand and private main/branch synchronization are verified. Clean GitHub clone installation passed 50 local tests, eight browser tests, production build, pinned cached-model verification and release checks. Next: authenticate Sandbox with securely bound credentials and perform the explicit human-authorized Orders workflow. If bindings remain absent, preserve honest blocked evidence and finish independent security/release preparation. Public license/branding/video/submission decisions remain with owner.
+
+## Release continuation results
+
+New independent Sandbox order/capture GETs confirmed HTTP200/COMPLETED and exact references/amount. Actual settled UI status/audit-export verification passed, with disabled create/capture controls and no financial mutation. Revised110.04-second video and captions preserve authentic prior nonfinancial scenes, add actual PAID/audit7 footage and selected provider evidence. Feasible webhook checks and exact signed-callback limit: WEBHOOK_RELEASE_STATUS.md. Audit CLI envelope/raw validation and four new focused tampering/format regressions passed. No whole-suite rerun or production rebuild. Final private checkpoint/artifacts/checks: RELEASE_CANDIDATE_REPORT.md; consolidated public/submission proposal: RELEASE_APPROVALS.md.

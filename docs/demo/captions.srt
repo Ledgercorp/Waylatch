@@ -39,17 +39,17 @@ Separate incurred-expense claim: explicit confirmation. No reimbursement transfe
 Claim review works. Payout entitlement remains unverified.
 
 11
-00:01:18,757 --> 00:01:23,853
+00:01:18,757 --> 00:01:23,840
 Sandbox authorization boundary exercised by a labeled automated fixture.
 
 12
-00:01:23,853 --> 00:01:34,065
-Honest payment status: credentials missing. No PayPal order or capture executed.
+00:01:23,840 --> 00:01:34,080
+Separate USD 1.00 Sandbox fixture: genuine human-authorized purchase, completed capture, $0 real spending.
 
 13
-00:01:34,065 --> 00:01:42,143
-Actual SQLite events validate as a SHA-256-linked, tamper-evident chain.
+00:01:34,080 --> 00:01:42,160
+Actual settled payment audit: seven verified events and an exported chain matching SQLite.
 
 14
-00:01:42,143 --> 00:01:50,040
-Offline continuity and local AI verified. Genuine Sandbox capture is the remaining gate.
+00:01:42,160 --> 00:01:50,040
+Independent PayPal order/capture inspection confirms COMPLETED. Webhook delivery and Payouts remain unverified.

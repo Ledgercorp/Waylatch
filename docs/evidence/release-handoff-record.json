@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-13T21:13:12.196Z",
+  "category": "same-genuine-fixture-request-packet-roundtrip",
+  "recordId": "RL-REAL-20261013-201748",
+  "revision": 1,
+  "amountCents": 100,
+  "packetCount": 14,
+  "largestRawPacketBytes": 175,
+  "requestSchemaAndFieldsPreserved": true,
+  "textPacketTransportAndOutOfOrderReconstruction": true,
+  "paymentAuthorityIncluded": false,
+  "actualQrImageDecodingReexecuted": false,
+  "browserOfflineReloadReexecuted": false,
+  "source": "Existing protocol functions applied to the genuine USD1.00 request; prior actual QR-image/offline checks retained as historical evidence",
+  "requestSha256": "14fc11e7ae96b13d28e670bd33bad2e6b3b8a8076b8f40cd4d537417c9d931d0",
+  "financialMutationsExecuted": false,
+  "realMoneyUsed": 0
+}

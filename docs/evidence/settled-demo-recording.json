@@ -1,0 +1,52 @@
+{
+  "recordedAt": "2026-10-13T21:01:49.810Z",
+  "category": "actual-ui-footage-of-genuine-completed-sandbox-payment",
+  "file": ".cache/settled-demo/settled.webm",
+  "sha256": "55866c7bce42824f3aeecde9fae74130a222544e13aca102c1bb164c7a9516bb",
+  "databaseSource": "data/paypal-demo/RL-REAL-20261013-201748.sqlite",
+  "databaseCopy": ".cache/settled-demo/settled-1791925282191.sqlite",
+  "payStartSeconds": 1.029277202,
+  "auditStartSeconds": 17.647214248,
+  "recordId": "RL-REAL-20261013-201748",
+  "orderId": "2W330508JA572391V",
+  "captureId": "8WY07860808872629",
+  "amountCents": 100,
+  "applicationState": "PAID",
+  "providerState": "COMPLETED",
+  "auditEvents": 7,
+  "browserExportMatchesPersistedAudit": true,
+  "captureButtonDisabled": true,
+  "createOrderButtonDisabled": true,
+  "financialStateUnchanged": true,
+  "blockedFinancialMutations": 0,
+  "apiRequests": [
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/state"
+    },
+    {
+      "method": "GET",
+      "path": "/api/health"
+    },
+    {
+      "method": "GET",
+      "path": "/api/state"
+    },
+    {
+      "method": "GET",
+      "path": "/api/payments/RL-REAL-20261013-201748"
+    },
+    {
+      "method": "GET",
+      "path": "/api/state"
+    }
+  ],
+  "productionBuildExecuted": false,
+  "devServerUsed": true,
+  "paymentApprovalReenacted": false,
+  "realMoneyUsed": 0
+}

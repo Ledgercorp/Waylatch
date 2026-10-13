@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/audit-export-cli.test.ts (4 tests) 431ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  21:08:58
+   Duration  561ms (transform 20ms, setup 0ms, collect 23ms, tests 431ms, environment 0ms, prepare 33ms)
+

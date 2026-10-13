@@ -4,20 +4,20 @@ PlayResX: 1600
 PlayResY: 900
 [V4+ Styles]
 Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style: Caption,DejaVu Sans,30,&H00FFFFFF,&H00FFFFFF,&H00182409,&H00182409,0,0,0,0,100,100,0,0,1,0,0,2,45,45,20,1
+Style: Caption,DejaVu Sans,29,&H00FFFFFF,&H00FFFFFF,&H00182409,&H00182409,0,0,0,0,100,100,0,0,1,0,0,2,45,45,20,1
 [Events]
 Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
 Dialogue: 0,0:00:00.00,0:00:07.29,Caption,,0,0,0,,Waylatch / From field need to verified action.
-Dialogue: 0,0:00:07.29,0:00:14.27,Caption,,0,0,0,,Network failure simulated. The field request stays on this device.
-Dialogue: 0,0:00:14.27,0:00:22.73,Caption,,0,0,0,,Complete offline reload: the actual IndexedDB request survives.
-Dialogue: 0,0:00:22.73,0:00:31.75,Caption,,0,0,0,,RL1 packets carry request data. They carry no payment authority.
-Dialogue: 0,0:00:31.75,0:00:38.00,Caption,,0,0,0,,Second disconnected browser: an actual QR image is decoded.
-Dialogue: 0,0:00:38.00,0:00:48.20,Caption,,0,0,0,,Fragments reconstructed. Import provenance remains untrusted.
-Dialogue: 0,0:00:48.20,0:00:59.72,Caption,,0,0,0,,Real local MiniLM inference: explainable similarity, not a fraud probability.
+Dialogue: 0,0:00:07.29,0:00:14.26,Caption,,0,0,0,,Network failure simulated. The field request stays on this device.
+Dialogue: 0,0:00:14.26,0:00:22.72,Caption,,0,0,0,,Complete offline reload: the actual IndexedDB request survives.
+Dialogue: 0,0:00:22.72,0:00:31.74,Caption,,0,0,0,,RL1 packets carry request data. They carry no payment authority.
+Dialogue: 0,0:00:31.74,0:00:38.00,Caption,,0,0,0,,Second disconnected browser: an actual QR image is decoded.
+Dialogue: 0,0:00:38.00,0:00:48.19,Caption,,0,0,0,,Fragments reconstructed. Import provenance remains untrusted.
+Dialogue: 0,0:00:48.19,0:00:59.72,Caption,,0,0,0,,Real local MiniLM inference: explainable similarity, not a fraud probability.
 Dialogue: 0,0:00:59.72,0:01:06.71,Caption,,0,0,0,,Review controls shown with an automated test fixture. AI has no financial authority.
 Dialogue: 0,0:01:06.71,0:01:12.84,Caption,,0,0,0,,Separate incurred-expense claim: explicit confirmation. No reimbursement transfer.
-Dialogue: 0,0:01:12.84,0:01:18.76,Caption,,0,0,0,,Claim review works. Payout entitlement remains unverified.
-Dialogue: 0,0:01:18.76,0:01:23.85,Caption,,0,0,0,,Sandbox authorization boundary exercised by a labeled automated fixture.
-Dialogue: 0,0:01:23.85,0:01:34.07,Caption,,0,0,0,,Honest payment status: credentials missing. No PayPal order or capture executed.
-Dialogue: 0,0:01:34.07,0:01:42.14,Caption,,0,0,0,,Actual SQLite events validate as a SHA-256-linked, tamper-evident chain.
-Dialogue: 0,0:01:42.14,0:01:50.04,Caption,,0,0,0,,Offline continuity and local AI verified. Genuine Sandbox capture is the remaining gate.
+Dialogue: 0,0:01:12.84,0:01:18.75,Caption,,0,0,0,,Claim review works. Payout entitlement remains unverified.
+Dialogue: 0,0:01:18.75,0:01:23.84,Caption,,0,0,0,,Sandbox authorization boundary exercised by a labeled automated fixture.
+Dialogue: 0,0:01:23.84,0:01:34.08,Caption,,0,0,0,,Separate USD 1.00 Sandbox fixture: genuine human-authorized purchase, completed capture, $0\Nreal spending.
+Dialogue: 0,0:01:34.08,0:01:42.16,Caption,,0,0,0,,Actual settled payment audit: seven verified events and an exported chain matching SQLite.
+Dialogue: 0,0:01:42.16,0:01:50.04,Caption,,0,0,0,,Independent PayPal order/capture inspection confirms COMPLETED. Webhook delivery and Payouts\Nremain unverified.

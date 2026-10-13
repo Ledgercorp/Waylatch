@@ -1,36 +1,38 @@
 # Public release and submission checklist
 
-Engineering may prepare this list without accepting terms or publishing.
+Private preparation is complete for the demonstrated purchase. Public publication, license adoption, legal acceptance and final submission remain pending the single [approval packet](RELEASE_APPROVALS.md). Real spending remains **$0**.
 
-- [ ] Actual Sandbox Orders create → buyer approve → capture succeeds via `paypal:integration`; retain sanitized order/capture refs and environment evidence.
-- [ ] Probe Payouts entitlement once if keys exist; retain real response. If unavailable, leave blocked. Implement separate payout state machine only with entitlement; do not replace it with a mock.
-- [ ] Optional public HTTPS callback: real signature verification and duplicate delivery evidence. Local verification tests remain labeled if no callback exists.
-- [ ] Clean installation reproduces build/tests/model download and README flows.
-- [ ] Owner confirms rights to adapted CrisisCodec source and copyright holder; approves proposed MIT text.
-- [ ] Adopt approved repository-root LICENSE with confirmed copyright; dependency/model notices retained.
-- [ ] Inspect all tracked artifacts for secrets/private incident records; only synthetic fixtures and sanitized evidence.
-- [ ] Owner explicitly approves making this private repository public. Confirm actual visibility and remote commit after change.
-- [ ] Record/publish authorized functioning YouTube demo <3:00; retain accessible public URL.
-- [ ] Final project description accurately reflects executed PayPal/AI/offline evidence; technology list complete.
-- [ ] Owner confirms eligibility, organization representation, registration and legal terms.
-- [ ] Owner explicitly approves final Devpost submission, then confirm submission receipt.
+## Verified and preserved
 
-No paid hosting, card, automatic top-up, live PayPal credential, real transfer or paid inference endpoint is needed. The runnable-repository alternative is supported by the official rules.
+- [x] Original source/history and compatibility retained; no application rebuild in this continuation.
+- [x] Genuine Sandbox OAuth, human REVIEW/AUTHORIZE, actual personal-buyer approval and separate human CAPTURE.
+- [x] Exact USD 1.00 simulated purchase: order 2W330508JA572391V, capture 8WY07860808872629, PayPal COMPLETED / Waylatch PAID.
+- [x] Independent authorized order/capture GETs returned HTTP 200 and matched amount/reference/single final capture.
+- [x] Seven-event audit independently validated against SQLite; session revoked and isolated payment state retained.
+- [x] New browser verification of actual PAID UI, disabled create/capture controls, authoritative status inspection and matching browser audit export, without financial mutation.
+- [x] Revised authentic110.04-second H.264 MP4, captions/narration and selected provider evidence; no checkout/capture reenactment.
+- [x] Actual webhook registration/event GETs and three rejection checks on an isolated paid-state copy; limits disclosed.
+- [x] Audit CLI validates bare arrays or envelope.events, fails closed on invalid shapes and ignores claimed metadata; four new focused regressions passed.
+- [x] Prior production build,69 local tests,nine browser tests, real local inference and dependency/license inventory retained as historical evidence; completed suites not rerun.
+- [x] Devpost description/known-field JSON,21 technology tags, screenshot captions, original architecture SVG, technical docs and one consolidated approval packet prepared.
+- [ ] Final private GitHub checkpoint and final scoped format/type/source release checks (record results in RELEASE_CANDIDATE_REPORT.md).
 
-## Previous synchronized checkpoint readiness assessment
+## External limits
 
-Verified: authentic source/Git ancestry protected in private Ledgercorp/Waylatch; controlled rebrand with pinned legacy compatibility; current visual/mobile/a11y evidence; clean installation/build; 50 local tests and eight browser tests; actual local AI; server authorization/idempotency/signature/audit tests; complete setup/architecture/security/demo/submission drafts and proposed MIT license.
+- [ ] Genuine signed webhook delivery/official verification/duplicate-delivery proof: no registration/ID or permitted HTTPS ingress. Optional to the demonstrated purchasing claim; no fabricated substitute.
+- [ ] Payouts entitlement/transfer: unverified/unimplemented. Claim review remains independent; no new probe/transfer proposed.
+- [ ] Fresh production dist/cold-install/offline suite: not repeated/rebuilt here. Source-only scan is explicitly scoped, prior frontend checks retained.
+- [ ] Devpost connection/identity/registration/custom fields: read tools return internal error-32603. Do not invent fields, terms, identity or registration.
+- [ ] Authorized YouTube upload route and public video URL: pending, no upload performed.
 
-Not ready for final public submission: genuine Sandbox OAuth/order/buyer approval/capture are blocked by missing task-time secret bindings; real callbacks unverified; Payouts entitlement unknown; naming AMBER; no adopted root license, public repository or public YouTube footage. Owner approval is still required for licensing, public branding/repository/video, legal participation and submission. No automatic publishing or paid resource is needed.
+## Consolidated owner decision
 
-## This private candidate
+- [ ] Confirm rights to owner/contributor/adapted CrisisCodec source, copyright holder and reviewed MIT proposal.
+- [ ] Approve root LICENSE adoption with third-party notices retained.
+- [ ] Confirm public Waylatch branding/attribution acknowledging AMBER name-investigation limits.
+- [ ] Approve making the existing private Ledgercorp/Waylatch candidate public after exact-artifact review.
+- [ ] Approve public publication of the exact reviewed MP4 and YouTube description.
+- [ ] Confirm participant eligibility/team/representation and actual required official answers; review and accept applicable actual terms.
+- [ ] Explicitly approve final Devpost creation/update/entry once exact fields, registration, uploads and public URLs are resolved; confirm live receipt.
 
-- [x] Fresh CPU-only dependency install and production build.
-- [x]59 local tests, real local AI, historical compatibility and callback-route isolation.
-- [x] Actual captioned110.04s MP4, SRT/narration/editing instructions and metadata; preview labels the blocked financial scene.
-- [x] Full382-package lockfile inventory, native component/license obligations and source/model provenance review.
-- [x] Known-field Devpost JSON, architecture SVG, screenshot captions, security/accessibility/impact narrative and exact cloud continuation.
-- [ ] Replace incomplete financial preview scene with a genuine human-authorized Sandbox capture.
-- [ ] Resolve Devpost connection/registration and public YouTube account access only at actual release.
-
-The remaining unchecked financial/license/publication/legal gates above are real; an engineering preview does not make the project submission-complete.
+No paid hosting, domain, card, real transfer, live PayPal credential or paid inference is needed. Judge access follows the official runnable-repository route. No public release/submission is claimed until the applicable actions succeed.

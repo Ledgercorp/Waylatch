@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-13T20:39:59.295Z",
+  "category": "isolated-demo-capture-and-cleanup",
+  "isolatedDatabase": "data/paypal-demo/RL-REAL-20261013-201748.sqlite",
+  "orderId": "2W330508JA572391V",
+  "captureId": "8WY07860808872629",
+  "paymentState": "PAID",
+  "paypalStatus": "COMPLETED",
+  "amountCents": 100,
+  "records": 1,
+  "payments": 1,
+  "events": 7,
+  "sessions": 0,
+  "resumeCreatedAdditionalOrder": false,
+  "captureAuthorized": true,
+  "captureExecuted": true,
+  "coordinatorCredentialPersisted": false,
+  "existingAccountsOrRecordsModified": false,
+  "loopbackInstanceStopped": true,
+  "realMoneyUsed": 0,
+  "databaseSha256": "bff3bfa0b2c5ebd57c6dbe765402b9668fb05f49ce3a21e5c7643e6b48df162a"
+}

@@ -1,0 +1,25 @@
+README.md 52ms (unchanged)
+devpost-submission.md 23ms (unchanged)
+docs/BLOCKERS.md 16ms (unchanged)
+docs/CLOUD_CONTINUATION.md 11ms (unchanged)
+docs/DEMO_SCRIPT.md 13ms (unchanged)
+docs/DEVPOST_DRAFT.md 15ms (unchanged)
+docs/EXECUTION_REPORT.md 22ms (unchanged)
+docs/HACKATHON_REQUIREMENTS.md 13ms (unchanged)
+docs/PAYPAL_AUTHENTICATED_CONTINUATION.md 10ms
+docs/PAYPAL_SANDBOX_INTEGRATION.md 23ms (unchanged)
+docs/PROJECT_STATE.md 19ms
+docs/RELEASE_APPROVALS.md 11ms (unchanged)
+docs/RELEASE_CHECKLIST.md 7ms (unchanged)
+docs/VERIFICATION.md 29ms
+docs/WEBHOOK_RELEASE_STATUS.md 8ms (unchanged)
+docs/demo/NARRATION.md 10ms (unchanged)
+docs/submission/SUBMISSION_PACKAGE.md 14ms (unchanged)
+docs/submission/project-fields.json 19ms (unchanged)
+package.json 2ms (unchanged)
+scripts/check-release.ts 42ms (unchanged)
+scripts/record-settled-demo.ts 35ms
+scripts/validate-audit.ts 3ms
+scripts/verify-sandbox-transaction.ts 19ms
+scripts/verify-sandbox-webhooks.ts 22ms (unchanged)
+tests/audit-export-cli.test.ts 5ms (unchanged)
