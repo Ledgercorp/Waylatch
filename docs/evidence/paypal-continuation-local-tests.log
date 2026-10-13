@@ -1,0 +1,31 @@
+
+> waylatch@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/paypal-http.test.ts (4 tests) 3313ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > executes OAuth/order/buyer approval/capture/inspection without duplicate logical purchases  1366ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > recovers a dropped create response with the same request ID  631ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > reconciles a dropped successful capture response without another capture  520ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > forwards official verification fields and rejects an invalid signature over HTTP  793ms
+ ✓ tests/sandbox-cli.test.ts (2 tests) 3690ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation  2239ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined  1407ms
+ ✓ tests/payments.test.ts (7 tests) 465ms
+ ✓ tests/offline.test.ts (10 tests) 417ms
+ ✓ tests/input-boundary.test.ts (2 tests) 95ms
+ ✓ tests/webhook-gateway.test.ts (9 tests) 754ms
+ ✓ tests/compatibility.test.ts (5 tests) 42ms
+ ✓ tests/security-review.test.ts (4 tests) 572ms
+ ✓ tests/risk.test.ts (9 tests) 96ms
+ ✓ tests/receipt.test.ts (2 tests) 11ms
+ ✓ tests/paypal-auth.test.ts (3 tests) 19ms
+ ✓ tests/schema.test.ts (2 tests) 20ms
+
+ Test Files  12 passed (12)
+      Tests  59 passed (59)
+   Start at  16:10:27
+   Duration  14.07s (transform 1.43s, setup 0ms, collect 8.51s, tests 9.50s, environment 5ms, prepare 3.10s)
+

@@ -1,3 +1,24 @@
+# Latest PayPal continuation verification — 2026-10-13
+
+Starting code SHA:7b3d1c32e962d5944de2247b30a770e55888790e. No implementation/UI changes. Current execution, not repeated historical counts:
+
+| Command                                                 | Result                                                               | Evidence                              |
+| ------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------- |
+| npm run paypal:auth                                     | Exit2,SANDBOX_CREDENTIALS_MISSING; requestExecuted=false,status=null | paypal-oauth.json                     |
+| npm run paypal:integration                              | Exit2 before requests/operator prompts                               | paypal-continuation-integration.log   |
+| npm test                                                | 59 passed,12 files,0 failures                                        | paypal-continuation-local-tests.log   |
+| npm run test:e2e                                        | 9 passed,0 failures,51.5seconds                                      | paypal-continuation-browser-tests.log |
+| npm run build                                           | TypeScript/Vite passed; existing single-chunk warning                | paypal-continuation-build.log         |
+| npm run audit:validate -- docs/evidence/demo-audit.json | valid:true,count8                                                    | paypal-continuation-audit-check.log   |
+
+Browser tests execute actual local AI, offline/QR/legacy data, accessibility and zero-automatic-mutation reconnection. Provider successes/failures and webhook verification remain local simulations. **Genuine OAuth,order,buyer approval,capture,callback,payout: not executed.** No new AI benchmark/clean npm installation/video recording is claimed; those previous artifacts remain preserved. npm run format:check passed; npm run release:check passed with zero findings across the final staged source index and frontend. Private remote checkpoint is independently read back after push.
+
+Credential diagnostics checked both direct environment and dotenv loading, safe runtime bindings, current official cloud guide and legacy setup-phase semantics. Runtime has no source association or credentials. Direct Environment variables are appropriate for the current unmodified Basic-auth client; network-secret substitution through its derived Base64 header is unverified. The saved editor, scope choice and publication timing are not readable here. Codex cloud CLI read-only listing also failed with unavailable authentication; no new task was submitted. The precise field/new-task selection is documented, not an assertion that the owner entered invalid PayPal credentials. See paypal-environment-diagnosis.json.
+
+---
+
+## Previous verified candidate evidence
+
 # Current execution verification — private candidate, 2026-10-13
 
 Fresh results below supersede earlier current-count prose. Historical logs/reports remain retained after this section; they are not repeated as newly executed evidence.

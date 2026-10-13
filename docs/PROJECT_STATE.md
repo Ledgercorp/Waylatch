@@ -1,3 +1,15 @@
+# Latest PayPal continuation — 2026-10-13
+
+Started from verified private main/candidate SHA **7b3d1c32e962d5944de2247b30a770e55888790e** without rebuilding/rebranding/recovering. Runtime still has no source-config association, direct variables or secret bindings; both expected PayPal names absent before/after dotenv. OAuth/integration exit2 before any provider action. No actual human approval was simulated.
+
+Investigated official current versus legacy Codex environment documentation. Corrected the ambiguous “Environment-scoped Secrets” handoff: this existing Basic-auth client needs the exact direct keys under **Environment variables → Manage**. Network secrets are proxy placeholders; substitution inside the derived Base64 header is unverified. Personal vault keys must also be requested by the chosen environment. Republish applies to a new task; this existing thread retains its own state. Saved editor contents/publication time remain inaccessible. Installed Codex cloud CLI was checked; read-only cloud listing failed for lack of usable authentication, so no replacement task was submitted. See CLOUD_CONTINUATION.md for the one precise account-controlled action.
+
+Fresh verification: **59 local tests and9 browser tests passed**, production build passed. The callback gateway, human gates, storage/protocol/audit compatibility, source ancestry and original1:50 preview remain unchanged. Audit export still validates8 events. Updated sanitized evidence retained under paypal-continuation-*. No genuine OAuth/order/buyer approval/capture/webhook/Payouts operation occurred. Sandbox host reached unauthenticated HTTP403. No real spending, paid resource, public release or legal acceptance. Actual payment footage and final submission still depend on the missing task-time configuration and subsequent human/buyer gates.
+
+---
+
+## Previous verified candidate report
+
 # Current private engineering candidate — 2026-10-13
 
 Branch: feat/waylatch-release-candidate, descending from synchronized baseline **1cca55994f22252d7875ebe9d5025b428c3e179e**. Original RescueLedger SHA **ee1488bde39347347d5a40e6bd766072fad7f16f** and feat/rescueledger-mvp preserved. GitHub remains private, default main. Original source/recovery artifacts and historical rebrand identity retained. No CrisisCodec modifications, rebuild, new repository or history rewriting.

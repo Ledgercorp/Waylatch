@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-13T16:15:26.265667+00:00",
+  "cliAvailable": true,
+  "operation": "codex cloud list --json --limit 20",
+  "readOnly": true,
+  "newTaskSubmitted": false,
+  "exitCode": 1,
+  "category": "authentication-unavailable",
+  "safeReason": "CLI returned a nonzero result; raw output withheld"
+}

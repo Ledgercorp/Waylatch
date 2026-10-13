@@ -1,3 +1,23 @@
+# Latest Waylatch PayPal continuation — 2026-10-13
+
+Started on feat/waylatch-release-candidate at verified private main/branch SHA7b3d1c32e962d5944de2247b30a770e55888790e. Required handoff documents read. No application, design, history, protocol, approval or payment-state changes made.
+
+**Actual PayPal results:** OAuth not executed (diagnostic exit2 before request), order not created, buyer approval not performed, capture not executed, real webhook not executed. No provider references, authentication rejection or paid-state evidence exists. Both expected values are absent before/after dotenv; safe runtime bindings/source association are empty. Sandbox root unauthenticated HEAD403 only proves reachability. No financial human gate was supplied by automation.
+
+**Precise diagnosis:** current cloud documentation distinguishes direct Environment variables from Network secrets/proxy placeholders. Corrected previous ambiguous “Environment-scoped Secrets” instruction to **Environment variables → Manage** for this unmodified Basic-auth client. Published updates affect new tasks; an existing thread keeps its state. Personal values require matching requested keys. Legacy setup-only secrets must not be copied into files to evade agent-phase removal. Actual saved editor/ownership/publication settings cannot be inspected, so no claim is made that the owner entered invalid PayPal credentials. The Codex CLI is installed, but its read-only cloud listing failed with unavailable authentication; no replacement task was started.
+
+**Fresh verification:** npm test59/59 in12 files; npm run test:e2e9/9 (51.5seconds), including actual AI/offline/QR/authorization/a11y/reconnection; production TypeScript/Vite build passed with the existing single-chunk warning; independent audit export valid:true,count8. Sanitized fresh logs, runtime/documentation diagnosis and reachability evidence are in docs/evidence/paypal-continuation-* and paypal-environment-diagnosis.json. No new clean install or AI benchmark is claimed. Final format check passed; staged-index/frontend release scan found zero findings. No raw credential/token/log output was introduced.
+
+**Deliverables and gates:** original110.04-second captioned preview, submission package, license proposal and authentic Git history retained. Real payment footage cannot be added without provider capture. Callback/Payouts remain optional and unverified; previous tunnel failure is historical, not a new attempt. No public repository/video release, license adoption, Devpost registration/legal agreement/submission, real-money operation or paid service. $0 spent.
+
+**Single account action:** Settings → Codex Cloud → Environments → Waylatch → Edit: verify the two exact direct variable keys under Environment variables → Manage (or matching requested personal Environment-variable values), Save/Republish, then start a new task using Work in → Cloud → Waylatch on this branch. Never send credential values in chat. This process cannot edit saved configurations or supply missing cloud-CLI authentication. After real OAuth, request actual review/authorization for the fictional USD1.00 fixture and secure Sandbox buyer approval/capture once, preserving the gates. Licensing/publication/legal submission decisions remain deferred until the final financial candidate is ready.
+
+Implementation remains7b3d1c32e962d5944de2247b30a770e55888790e; this is a documentation/evidence checkpoint. Final branch/main SHAs are independently read back after push. No background continuation is scheduled.
+
+---
+
+## Previous execution report — historical
+
 # Waylatch execution report — 2026-10-13
 
 ## Completed autonomously

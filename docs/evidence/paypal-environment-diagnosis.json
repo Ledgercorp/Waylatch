@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-13T16:12:53.945611+00:00",
+  "currentGuide": "https://learn.chatgpt.com/docs/environments/cloud-environments",
+  "currentGuideHttpStatus": 200,
+  "currentGuideSha256": "341b6a58e1f459e2499e3e747602536f6658c720d0425d98d4a214b9fc81d84a",
+  "currentGuideFindings": [
+    "Published changes apply to new tasks; an existing task retains its own state.",
+    "Environment variables deliver direct process values; network secrets deliver placeholders substituted by the proxy on permitted HTTPS destinations.",
+    "Only environment-requested personal keys reach the task.",
+    "An environment variable and a network secret must not share a key."
+  ],
+  "legacyGuide": "https://learn.chatgpt.com/docs/environments/cloud-environment",
+  "legacyGuideAppliesTo": "Legacy Code Review and Linear/GitHub integrations, not the current web/mobile/desktop cloud environment workflow.",
+  "legacyFinding": "Legacy secrets are setup-only and removed before the agent phase; do not use legacy setup-secret persistence tricks.",
+  "runtimeDiagnosis": "Both expected variables absent before and after dotenv; cloud metadata has no source configuration, runtime variables or secret bindings. Editor contents, ownership and publication times inaccessible.",
+  "recommendation": "For the unmodified Basic-auth client, configure the exact expected keys as direct Environment variables in the saved private Waylatch environment, then republish and start a new task through Work in > Cloud > Waylatch. Network-secret substitution inside this client's derived Base64 header is not independently verified; do not claim support or silently change modes."
+}

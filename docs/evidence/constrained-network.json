@@ -3,7 +3,7 @@
   "latencyMilliseconds": 150,
   "downloadBytesPerSecond": 65536,
   "uploadBytesPerSecond": 16384,
-  "coldLoadMilliseconds": 9214.011218,
+  "coldLoadMilliseconds": 9371.646852000005,
   "offlineReloadPreserved": true,
   "reconnectSubmittedRecords": 0,
   "reconnectFinancialOperations": 0,
