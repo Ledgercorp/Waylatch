@@ -1,0 +1,40 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/release-alias.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ❯ tests/release-alias.test.ts (2 tests | 1 failed) 776ms
+   ✓ detects an ignored fallback-alias secret leaked into a frontend artifact  484ms
+   × detects dotenv-only alias leakage without exposing its value 290ms
+     → expected +0 to be 1 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/release-alias.test.ts > detects dotenv-only alias leakage without exposing its value
+AssertionError: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ check tests/release-alias.test.ts:21:25
+     19|     encoding: 'utf8',
+     20|   });
+     21|   expect(result.status).toBe(1);
+       |                         ^
+     22|   expect(result.stdout).not.toContain(fixture);
+     23|   const report = JSON.parse(result.stdout.trim());
+ ❯ tests/release-alias.test.ts:27:74
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  16:44:26
+   Duration  1.41s (transform 82ms, setup 0ms, collect 114ms, tests 776ms, environment 0ms, prepare 169ms)
+

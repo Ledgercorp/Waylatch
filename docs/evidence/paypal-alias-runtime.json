@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-13T16:51:31.674884+00:00",
+  "variablePresence": {
+    "PAYPAL_CLIENT_ID": false,
+    "PAYPAL_CLIENT_SECRET": false,
+    "PAYPAL_SECRET_KEY": false
+  },
+  "mappingRequested": true,
+  "mappingScope": "single Node diagnostic process and child environment; no shell tracing, values or file persistence",
+  "mappingApplied": false,
+  "reason": "alias value absent in this executor",
+  "runtimeSourceConfigId": null,
+  "configuredBindings": [],
+  "runtimeSpecRevision": "54",
+  "realOAuthRequestExecuted": false,
+  "failureCategory": "missing-runtime-configuration",
+  "invalidCredentialEvidence": false,
+  "networkPlaceholderEvidence": false,
+  "transportErrorEvidence": false,
+  "namingMismatchFixedInCode": true,
+  "noEnvironmentReconfigurationRequested": true,
+  "environmentId": "ccarenv_b64_Y2NhcmVudl9kOGJmM2Y0YmFlMjg4MTkxOTUxMTE4YTY0MTY3YWZkYg",
+  "observationsCurrent": true,
+  "networkPolicy": "unrestricted/enforced"
+}

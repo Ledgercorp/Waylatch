@@ -13,7 +13,7 @@ afterEach(async () => {
     await new Promise<void>((resolve) => server.close(() => resolve()));
   for (const store of stores.splice(0)) store.close();
 });
-async function run(cancelReview: boolean) {
+async function run(cancelReview: boolean, aliasOnly = false) {
   const server = createServer();
   servers.push(server);
   await new Promise<void>((resolve) => server.listen(0, '127.0.0.1', () => resolve()));
@@ -41,7 +41,8 @@ async function run(cancelReview: boolean) {
       ...process.env,
       APP_ORIGIN: origin,
       PAYPAL_CLIENT_ID: 'cli-fixture-id',
-      PAYPAL_CLIENT_SECRET: 'cli-fixture-secret',
+      PAYPAL_CLIENT_SECRET: aliasOnly ? '' : 'cli-fixture-secret',
+      PAYPAL_SECRET_KEY: aliasOnly ? 'cli-fixture-alias-secret' : '',
       COORDINATOR_PASSWORD: 'cli-test-only-password',
     },
     stdio: ['pipe', 'pipe', 'pipe'],
@@ -70,6 +71,23 @@ async function run(cancelReview: boolean) {
   return { store, financialCalls, output, code };
 }
 describe('interactive integration harness: local app/provider double, no real PayPal', () => {
+  it('accepts an alias-only fixture but records no human decision when review is declined', async () => {
+    const r = await run(true, true);
+    expect(r.code).toBe(2);
+    expect(r.store.records()).toHaveLength(1);
+    expect(r.store.records()[0].status).toBe('pending');
+    expect(r.financialCalls).toBe(0);
+    expect(r.output).not.toContain('cli-fixture-alias-secret');
+    expect(r.output).toContain('Type REVIEW');
+  });
+  it('preserves purchase authorization cancellation with alias-only credentials', async () => {
+    const r = await run(false, true);
+    expect(r.code).toBe(2);
+    expect(r.store.records()).toHaveLength(1);
+    expect(r.store.records()[0].status).toBe('reviewed');
+    expect(r.store.events().some((e) => e.type === 'purchase_approved')).toBe(false);
+    expect(r.financialCalls).toBe(0);
+  });
   it('does not invent human review when the operator declines the first confirmation', async () => {
     const r = await run(true);
     expect(r.code).toBe(2);

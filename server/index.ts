@@ -3,6 +3,7 @@ import express from 'express';
 import { resolve } from 'node:path';
 import { Store } from './store';
 import { PayPalClient } from './paypal';
+import { paypalConfigFromEnv } from './paypal-config';
 import { createApp } from './app';
 import { disposeModel } from '../src/risk/model';
 const port = Number(process.env.PORT ?? 4173);
@@ -10,11 +11,7 @@ const origin = process.env.APP_ORIGIN ?? `http://127.0.0.1:${port}`;
 const store = new Store(process.env.DATABASE_PATH ?? 'data/rescueledger.sqlite');
 const app = createApp({
   store,
-  paypal: new PayPalClient({
-    clientId: process.env.PAYPAL_CLIENT_ID,
-    clientSecret: process.env.PAYPAL_CLIENT_SECRET,
-    webhookId: process.env.PAYPAL_WEBHOOK_ID,
-  }),
+  paypal: new PayPalClient(paypalConfigFromEnv()),
   password: process.env.COORDINATOR_PASSWORD ?? '',
   origin,
 });

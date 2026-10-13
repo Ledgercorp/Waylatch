@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-13T16:10:10.605Z",
-  "implementationCommit": "7b3d1c32e962d5944de2247b30a770e55888790e",
-  "worktreeDirty": false,
+  "checkedAt": "2026-10-13T16:45:32.408Z",
+  "implementationCommit": "d4cf568fa7ce7dc78edbc2924bad193f5b2394af",
+  "worktreeDirty": true,
   "environment": "sandbox",
   "host": "api-m.sandbox.paypal.com",
   "path": "/v1/oauth2/token",
@@ -9,6 +9,11 @@
     "PAYPAL_CLIENT_ID",
     "PAYPAL_CLIENT_SECRET"
   ],
+  "acceptedSecretVariables": [
+    "PAYPAL_CLIENT_SECRET",
+    "PAYPAL_SECRET_KEY"
+  ],
+  "fallbackAliasSelected": false,
   "missingVariables": [
     "PAYPAL_CLIENT_ID",
     "PAYPAL_CLIENT_SECRET"

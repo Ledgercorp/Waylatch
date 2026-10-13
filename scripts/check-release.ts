@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -37,6 +38,7 @@ try {
 const findings: string[] = [];
 const secrets = [
   'PAYPAL_CLIENT_SECRET',
+  'PAYPAL_SECRET_KEY',
   'PAYPAL_CLIENT_ID',
   'COORDINATOR_PASSWORD',
   'GH_TOKEN',
@@ -62,7 +64,7 @@ function files(dir: string): string[] {
 for (const file of files('dist')) {
   const text = readFileSync(file, 'utf8');
   if (
-    /PAYPAL_CLIENT_SECRET|COORDINATOR_PASSWORD|api-m\.sandbox\.paypal\.com|verify-webhook-signature/.test(
+    /PAYPAL_CLIENT_SECRET|PAYPAL_SECRET_KEY|COORDINATOR_PASSWORD|api-m\.sandbox\.paypal\.com|verify-webhook-signature/.test(
       text,
     ) ||
     secrets.some((s) => text.includes(s))

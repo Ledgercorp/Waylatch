@@ -1,0 +1,20 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/paypal-config.test.ts tests/sandbox-cli.test.ts tests/paypal-auth.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/paypal-config.test.ts (6 tests) 83ms
+ ✓ tests/sandbox-cli.test.ts (4 tests) 3822ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > accepts an alias-only fixture but records no human decision when review is declined  1607ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > preserves purchase authorization cancellation with alias-only credentials  508ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation  420ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined  1286ms
+ ✓ tests/paypal-auth.test.ts (3 tests) 21ms
+
+ Test Files  3 passed (3)
+      Tests  13 passed (13)
+   Start at  16:43:04
+   Duration  7.18s (transform 579ms, setup 0ms, collect 2.03s, tests 3.93s, environment 2ms, prepare 715ms)
+

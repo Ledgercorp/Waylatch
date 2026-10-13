@@ -3,12 +3,10 @@ import { createInterface } from 'node:readline/promises';
 import { stdin, stdout } from 'node:process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { demoRequest } from '../src/requests/schema';
+import { paypalConfigFromEnv } from '../server/paypal-config';
 const origin = process.env.APP_ORIGIN ?? 'http://127.0.0.1:4173';
-if (
-  !process.env.PAYPAL_CLIENT_ID ||
-  !process.env.PAYPAL_CLIENT_SECRET ||
-  !process.env.COORDINATOR_PASSWORD
-) {
+const config = paypalConfigFromEnv();
+if (!config.clientId || !config.clientSecret || !process.env.COORDINATOR_PASSWORD) {
   console.log(
     'BLOCKED: securely configure Sandbox credentials and coordinator passphrase; no transaction executed.',
   );

@@ -1,3 +1,26 @@
+# Current PayPal secret-name compatibility
+
+`PAYPAL_SECRET_KEY` is a supported server-side fallback. A nonempty `PAYPAL_CLIENT_SECRET` wins; missing/empty canonical uses the alias. The shared resolver reads process configuration without mutating it, exposing values to the browser or copying values into persistent files. Server/OAuth/integration/probe use it consistently. The fixed Sandbox endpoint, stable PayPal request IDs and human REVIEW/AUTHORIZE/CAPTURE/buyer-approval gates remain unchanged. No alias retry follows an HTTP rejection of the chosen canonical credential.
+
+Requested temporary mapping ran in a single diagnostic process without shell tracing or persisted values. This executor reports PAYPAL_CLIENT_ID=false, PAYPAL_CLIENT_SECRET=false and PAYPAL_SECRET_KEY=false. The mapped diagnostic and alias-aware diagnostic both exited2 before a request. This is **missing configuration in this executor**, not evidence of invalid credentials, a proxy-placeholder rejection or a transport failure. No genuine OAuth/order/buyer approval/capture/callback/Payouts operation occurred. Runtime metadata is safe and has no bindings/source association. No environment rename/reconfiguration is requested to resolve the now-fixed naming mismatch.
+
+Six local configuration regressions authenticate through synthetic transports to verify canonical-only support, precedence, absent/empty fallback, fail-closed behavior and no environment mutation. Two process-boundary alias tests retain declined review/authorization with zero provider financial calls. Two release regressions verify alias leakage is detected from process and dotenv even if canonical is preferred. Browser/demo processes clear both names. All synthetic authentication results remain labeled local doubles, not PayPal evidence.
+
+Sanitized diagnostic failure interpretation:
+
+| Observation                                                    | Interpretation                                                                                                                 |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| requestExecuted=false / SANDBOX_CREDENTIALS_MISSING            | Required effective configuration absent; no authentication/network result                                                      |
+| Actual HTTP401 / SANDBOX_OAUTH_FAILED                          | Provider rejected the presented Basic authentication; confirm direct vs proxy binding before asserting raw credentials invalid |
+| Known network-secret binding / placeholder with derived Base64 | Placeholder compatibility unverified; report separately, never print or extract value                                          |
+| No provider HTTP response / CONNECTIVITY_OR_RESPONSE_ERROR     | Transport or response parsing/runtime evidence needs separation; don't describe it as a provider credential rejection          |
+
+No current value exists here to inspect or classify as a placeholder, and no current transport request failed. Existing raw-error logging remains suppressed. See paypal-alias-runtime.json and paypal-oauth.json. Real financial footage remains pending genuine capture; no simulated result is substituted.
+
+---
+
+## Previous investigation and runbook — historical configuration wording superseded
+
 # Waylatch PayPal Sandbox integration evidence and runbook
 
 ## Current actual-provider status

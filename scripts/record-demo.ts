@@ -15,6 +15,7 @@ const server = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
     COORDINATOR_PASSWORD: 'demo-fixture-no-payments',
     PAYPAL_CLIENT_ID: '',
     PAYPAL_CLIENT_SECRET: '',
+    PAYPAL_SECRET_KEY: '',
     PAYPAL_WEBHOOK_ID: '',
   },
   stdio: 'ignore',

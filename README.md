@@ -28,7 +28,7 @@ Configure `.env` locally or use securely bound runtime environment variables:
 - `COORDINATOR_PASSWORD`: a strong, unique passphrase of at least 12 characters; no default is supplied. Generate one with `openssl rand -hex 24` and set it locally. Do not commit it or paste it into chat.
 - `APP_ORIGIN=http://127.0.0.1:4173`, `PORT=4173` (default).
 - `DATABASE_PATH=data/rescueledger.sqlite` (ignored durable SQLite file).
-- `PAYPAL_CLIENT_ID` and `PAYPAL_CLIENT_SECRET`: **Sandbox application credentials only** from the PayPal Developer Dashboard. Optional until real payment testing. Never use live credentials.
+- `PAYPAL_CLIENT_ID` plus `PAYPAL_CLIENT_SECRET` **or** `PAYPAL_SECRET_KEY`: **Sandbox application credentials only** from the PayPal Developer Dashboard. The nonempty canonical secret takes precedence; the alias is used only when it is absent/empty. Optional until real payment testing. Never use live credentials.
 - `PAYPAL_WEBHOOK_ID`: optional until a real Sandbox webhook subscription and public HTTPS callback exist. Missing configuration rejects notifications.
 
 ```bash
@@ -105,6 +105,10 @@ For secure callback testing, start the existing coordinator backend locally and 
 
 This runtime lacks both required PayPal variables. [Cloud continuation](docs/CLOUD_CONTINUATION.md) records the exact fresh-task handoff using the published Waylatch environment. Do not paste credentials into chat. The integration harness still requires REVIEW, AUTHORIZE and CAPTURE from an actual operator; demo recording scripts disable PayPal and do not satisfy that human requirement.
 
-## Exact cloud credential field
+## Server-side secret-name compatibility
 
-For this server's existing OAuth Basic-auth implementation, configure PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET under the published private environment's **Environment variables → Manage**. Current Codex **Network secrets** deliver proxy placeholders; substitution inside the client's derived Base64 header has not been verified. Legacy setup-only secrets are a different workflow. Personal values reach a task only when their keys are requested by its environment. See [corrected cloud continuation](docs/CLOUD_CONTINUATION.md) and its official documentation sources; never copy secrets into setup-generated files or chat. Republished settings apply to a new task selected through **Work in → Cloud → Waylatch**, not an additional prompt in an existing task. This runtime still has neither variable.
+Waylatch accepts the existing `PAYPAL_SECRET_KEY` binding as a fallback for `PAYPAL_CLIENT_SECRET`; no environment renaming is required. A nonempty `PAYPAL_CLIENT_SECRET` always wins, even when the alias is also present. There is no retry with the alias after canonical authentication rejection. Values are opaque: they are not trimmed, logged, copied to files or exposed to the browser.
+
+The server, OAuth diagnostic, integration harness and optional entitlement probe share `server/paypal-config.ts`. The integration harness still requires actual operator REVIEW, AUTHORIZE and CAPTURE plus genuine Sandbox buyer approval. Alias support grants no financial authority and does not change the fixed Sandbox API host. Browser tests/demo recording clear both secret names, and the release scanner checks both names/values, including dotenv configuration.
+
+`npm run paypal:auth` now reports accepted secret variable names and whether the fallback was selected, without credential/token values. Missing configuration remains a pre-request blocker; HTTP credential rejection and transport/response failures are separate. Do not assume a nonempty value is a real credential if it came from a network-secret placeholder. Current executor observations still show the ID and both secret names absent; the application's name mismatch is nevertheless resolved and tested. Existing secure environment bindings can be used as-is.

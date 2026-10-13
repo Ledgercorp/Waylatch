@@ -1,3 +1,22 @@
+# Latest alias compatibility verification — 2026-10-13
+
+Implemented from d4cf568fa7ce7dc78edbc2924bad193f5b2394af without altering product/protocol/payment authority. Two new CLI alias tests failed first because effective credentials were rejected before record creation; after shared configuration support they pass. A dotenv-only alias-leakage regression failed before the release checker loaded dotenv and passed after the fix. All original tests retained.
+
+- npm test: **69 passed,14 files**, zero failures; paypal-alias-local-tests.log.
+- Targeted configuration/OAuth/CLI:13 passed; paypal-alias-green.log. These authenticate with synthetic transports, not PayPal.
+- npm run build: TypeScript/Vite passed; paypal-alias-build.log.
+- npm run test:e2e: **9 passed**, zero failures (43.7seconds); paypal-alias-browser-tests.log. PayPal aliases intentionally cleared; local AI/QR/offline/a11y checks execute.
+- Requested process-local mapping + npm run paypal:auth: exit2 before outbound request because client ID and both secret names absent. Updated alias-aware run also exit2; paypal-alias-auth.log/paypal-oauth.json.
+- Actual OAuth/order/buyer approval/capture/webhook/Payouts: **not executed**. No invalid credential, placeholder rejection or transport failure is inferred from missing configuration.
+
+Six configuration tests verify exact synthetic Basic auth with canonical/alias precedence and fallback, no mutation and missing-secret fail-closed behavior. Two alias CLI tests verify decline gates with zero financial calls. Two release tests deliberately put a fictional alias into temporary frontend artifacts and verify nonzero guard results without the value in output, including dotenv-only and ignored-alias cases. No real secret fixture or actual account identity is used.
+
+Final format check passed; release scan returned zero findings and covers both configured secret names and browser-artifact name patterns; metadata/logs exclude values. Current environment observations are in paypal-alias-runtime.json. Previous model/installation/video evidence retained; no new AI benchmark, model download or finished payment footage is claimed. Backend amount/idempotency/audit/authorization tests still pass; final SHA and private remote refs are independently read back after push.
+
+---
+
+## Previous verification reports
+
 # Latest PayPal continuation verification — 2026-10-13
 
 Starting code SHA:7b3d1c32e962d5944de2247b30a770e55888790e. No implementation/UI changes. Current execution, not repeated historical counts:

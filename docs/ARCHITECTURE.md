@@ -34,3 +34,7 @@ Waylatch continues the original RescueLedger architecture. Browser branding does
 `server/webhook-gateway.ts` and `scripts/webhook-gateway.ts` provide a separate loopback test listener exposing only POST /api/webhooks/paypal. It forwards bounded raw JSON and PayPal signature headers to the existing backend, never coordinator cookies or authorization. No additional financial authority, state store or mock-provider production mode is introduced. Signature verification, persistent deduplication and authoritative reconciliation remain in app/payments/store. The optional tunnel targets this listener; tunnel provisioning is currently blocked.
 
 `demo:record` starts an isolated loopback application with a unique SQLite database, disabled PayPal credentials and labeled automated local fixtures. `demo:render` converts actual recordings to captioned H.264 and verifies duration. The original diagram export is submission/architecture.svg. None of this changes RL1, IndexedDB identities, historical event hashes, model configuration or the payment state machine.
+
+## Server credential compatibility
+
+server/paypal-config.ts is the shared server-only environment resolver used by startup and all provider scripts. It prefers nonempty PAYPAL_CLIENT_SECRET and otherwise accepts PAYPAL_SECRET_KEY. It does not mutate process state, alter the payment provider host, expose values to the frontend or confer authorization. Existing API, packet, storage, payment reservation and audit contracts are unchanged.

@@ -1,0 +1,38 @@
+
+> waylatch@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/release-alias.test.ts (2 tests) 992ms
+   ✓ detects an ignored fallback-alias secret leaked into a frontend artifact  614ms
+   ✓ detects dotenv-only alias leakage without exposing its value  364ms
+ ✓ tests/paypal-http.test.ts (4 tests) 1759ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > executes OAuth/order/buyer approval/capture/inspection without duplicate logical purchases  428ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > recovers a dropped create response with the same request ID  575ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > reconciles a dropped successful capture response without another capture  433ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > forwards official verification fields and rejects an invalid signature over HTTP  322ms
+ ✓ tests/sandbox-cli.test.ts (4 tests) 4161ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > accepts an alias-only fixture but records no human decision when review is declined  1560ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > preserves purchase authorization cancellation with alias-only credentials  821ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation  768ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined  1011ms
+ ✓ tests/webhook-gateway.test.ts (9 tests) 603ms
+ ✓ tests/security-review.test.ts (4 tests) 666ms
+   ✓ adversarial financial review: local doubles only > keeps the same create idempotency key through an interrupted provider request and app restart  412ms
+ ✓ tests/payments.test.ts (7 tests) 574ms
+ ✓ tests/offline.test.ts (10 tests) 359ms
+ ✓ tests/risk.test.ts (9 tests) 26ms
+ ✓ tests/paypal-config.test.ts (6 tests) 19ms
+ ✓ tests/input-boundary.test.ts (2 tests) 124ms
+ ✓ tests/paypal-auth.test.ts (3 tests) 58ms
+ ✓ tests/compatibility.test.ts (5 tests) 79ms
+ ✓ tests/schema.test.ts (2 tests) 13ms
+ ✓ tests/receipt.test.ts (2 tests) 44ms
+
+ Test Files  14 passed (14)
+      Tests  69 passed (69)
+   Start at  16:45:31
+   Duration  13.24s (transform 918ms, setup 0ms, collect 6.77s, tests 9.48s, environment 3ms, prepare 2.57s)
+

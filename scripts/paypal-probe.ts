@@ -1,9 +1,7 @@
 import 'dotenv/config';
 import { PayPalClient, ProviderError } from '../server/paypal';
-const client = new PayPalClient({
-  clientId: process.env.PAYPAL_CLIENT_ID,
-  clientSecret: process.env.PAYPAL_CLIENT_SECRET,
-});
+import { paypalConfigFromEnv } from '../server/paypal-config';
+const client = new PayPalClient(paypalConfigFromEnv());
 if (!client.configured) {
   console.log(
     JSON.stringify({

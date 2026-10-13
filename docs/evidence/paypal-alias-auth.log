@@ -1,0 +1,5 @@
+
+> waylatch@0.1.0 paypal:auth
+> NODE_USE_ENV_PROXY=1 tsx scripts/paypal-auth.ts
+
+{"checkedAt":"2026-10-13T16:45:32.408Z","implementationCommit":"d4cf568fa7ce7dc78edbc2924bad193f5b2394af","worktreeDirty":true,"environment":"sandbox","host":"api-m.sandbox.paypal.com","path":"/v1/oauth2/token","credentialVariables":["PAYPAL_CLIENT_ID","PAYPAL_CLIENT_SECRET"],"acceptedSecretVariables":["PAYPAL_CLIENT_SECRET","PAYPAL_SECRET_KEY"],"fallbackAliasSelected":false,"missingVariables":["PAYPAL_CLIENT_ID","PAYPAL_CLIENT_SECRET"],"requestExecuted":false,"authenticated":false,"httpStatus":null,"providerResponse":null,"category":"blocked-configuration","code":"SANDBOX_CREDENTIALS_MISSING"}

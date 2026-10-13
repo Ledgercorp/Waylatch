@@ -2,6 +2,7 @@ import 'dotenv/config';
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { PayPalClient, ProviderError } from '../server/paypal';
+import { paypalConfigFromEnv } from '../server/paypal-config';
 let implementationCommit: string | null = null;
 let worktreeDirty: boolean | null = null;
 try {
@@ -17,7 +18,10 @@ try {
   /* Unpacked source is reproducible without a Git directory. */
 }
 const variables = ['PAYPAL_CLIENT_ID', 'PAYPAL_CLIENT_SECRET'] as const;
-const missing = variables.filter((key) => !process.env[key]);
+const config = paypalConfigFromEnv();
+const missing = variables.filter((key) =>
+  key === 'PAYPAL_CLIENT_ID' ? !config.clientId : !config.clientSecret,
+);
 const evidence: { [key: string]: unknown } = {
   checkedAt: new Date().toISOString(),
   implementationCommit,
@@ -26,6 +30,8 @@ const evidence: { [key: string]: unknown } = {
   host: new URL(PayPalClient.base).hostname,
   path: '/v1/oauth2/token',
   credentialVariables: [...variables],
+  acceptedSecretVariables: ['PAYPAL_CLIENT_SECRET', 'PAYPAL_SECRET_KEY'],
+  fallbackAliasSelected: !process.env.PAYPAL_CLIENT_SECRET && !!process.env.PAYPAL_SECRET_KEY,
   missingVariables: missing,
   requestExecuted: false,
   authenticated: false,
@@ -39,10 +45,7 @@ if (missing.length) {
 } else {
   evidence.requestExecuted = true;
   try {
-    const client = new PayPalClient({
-      clientId: process.env.PAYPAL_CLIENT_ID,
-      clientSecret: process.env.PAYPAL_CLIENT_SECRET,
-    });
+    const client = new PayPalClient(config);
     const result = await client.authenticate();
     evidence.category = 'executed-real-paypal-sandbox-oauth';
     evidence.authenticated = true;

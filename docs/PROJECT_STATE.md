@@ -1,3 +1,17 @@
+# Latest Waylatch alias-compatibility milestone
+
+Continued from private checkpoint d4cf568fa7ce7dc78edbc2924bad193f5b2394af on feat/waylatch-release-candidate. Implemented server-only PAYPAL_SECRET_KEY fallback with nonempty PAYPAL_CLIENT_SECRET precedence. Server and all provider scripts share a resolver; no credential values are printed/committed, copied to files or embedded in frontend bundles. Extended release scans to both names and dotenv, and cleared the alias in automated browser/demo processes. No environment rename requested. Human review, authorization, buyer approval and capture gates remain intact.
+
+Fresh local verification:69 tests passed in14 files, including10 additional configuration/cancellation/leakage regressions. Production build passed. Nine browser tests passed (43.7seconds); Format and staged-source/frontend release checks passed with zero findings. Existing protocol/data/audit history and original source ancestry preserved; CrisisCodec unchanged.
+
+The requested temporary backend-process mapping and alias-aware OAuth diagnostic could not authenticate: this executor has neither client ID nor either secret name before/after dotenv. Cloud metadata has no configured bindings or source association. Diagnostics exit2 with requestExecuted=false and no provider status. Not an invalid-credential/placeholder/transport rejection. Actual OAuth/order/buyer approval/capture/webhook/Payouts remain unexecuted. Alias behavior is proven only with labeled local transports, never described as real PayPal success.
+
+No real spending, paid services, public visibility change, license adoption, registration/legal acceptance or submission. Existing1:50 preview retained until actual capture evidence can replace the financial scene. Next financial action is actual OAuth with existing secure bindings, then the explicit human-authorized USD1.00 fixture. No background continuation is scheduled.
+
+---
+
+## Previous continuation evidence
+
 # Latest PayPal continuation — 2026-10-13
 
 Started from verified private main/candidate SHA **7b3d1c32e962d5944de2247b30a770e55888790e** without rebuilding/rebranding/recovering. Runtime still has no source-config association, direct variables or secret bindings; both expected PayPal names absent before/after dotenv. OAuth/integration exit2 before any provider action. No actual human approval was simulated.

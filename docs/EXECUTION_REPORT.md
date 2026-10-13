@@ -1,3 +1,34 @@
+# Latest Waylatch credential-alias implementation — 2026-10-13
+
+Implemented from private candidate d4cf568fa7ce7dc78edbc2924bad193f5b2394af, without recreating/rebranding/redesigning the application.
+
+## Completed autonomously
+
+- Ran the requested temporary mapping inside a Node backend diagnostic process, without shell tracing, command-argument values or file persistence. This executor had neither ID nor either secret name; mapping could not populate a value.
+- Added server/paypal-config.ts: accepts PAYPAL_SECRET_KEY if PAYPAL_CLIENT_SECRET is absent/empty; a nonempty canonical secret wins. No alias retry after rejected canonical auth; values are read without mutation or logging.
+- Applied the resolver to server startup, OAuth diagnostic, purchasing harness and optional Payouts probe. Human REVIEW/AUTHORIZE/CAPTURE and genuine buyer approval are unchanged; no financial decision supplied by the agent.
+- Extended release scanning to both secret values/name patterns and dotenv. Browser tests/demo processes explicitly clear the alias. No frontend secret configuration added.
+- Added10 regressions:6 configuration tests,2 alias cancellation process tests and2 release-leakage tests. Observed the two alias gate failures before implementation and the dotenv-leak guard failure before correction. All original tests retained.
+- Updated README, empty .env.example and durable runbook/state/verification. No environment rename/reconfiguration requested. Original history, RL1/storage/audit contracts and CrisisCodec unchanged.
+
+## Real PayPal evidence
+
+OAuth: not executed; diagnostic exit2 before request. Order: none. Buyer approval: none. Capture: none. Genuine webhook: none. Payout: none. The mapped and alias-aware diagnostics both found effective configuration absent. Current name-presence checks: PAYPAL_CLIENT_ID=false, PAYPAL_CLIENT_SECRET=false, PAYPAL_SECRET_KEY=false before/after dotenv. Safe cloud metadata has no configured bindings/source association in this executor, despite the owner's report of a separate initialized environment. No invalid-credential, placeholder rejection or transport-error conclusion is drawn from that absence. No values are requested or revealed. Configuration/OAuth tests use synthetic local responses and are not provider authentication evidence.
+
+## Verification
+
+npm test: **69 passed,14 files,0 failures**. npm run test:e2e: **9 passed,0 failures,43.7seconds**, including actual local AI, offline reload/QR/legacy metadata, authorization/audit/accessibility and constrained-network reconnection. npm run build passed TypeScript/Vite; unchanged chunk-size warning retained. Final format check passed; staged-source/frontend release scan returned zero findings. New logs: docs/evidence/paypal-alias-*. No new clean install/AI benchmark/video recording is claimed. Current preview110.04seconds remains accurately incomplete; actual capture footage cannot be fabricated.
+
+## Repository / cost / next gate
+
+Private Ledgercorp/Waylatch, feat/waylatch-release-candidate; commits and remote refs are independently verified after push. No force-push or unrelated changes. $0 real money, no paid service or live PayPal endpoint. No public release, license adoption, legal consent or Devpost submission.
+
+The variable-name mismatch is resolved in code. The remaining financial blocker is that neither secure credential source is visible in the supplied executor; not a demand to rename or reconfigure the environment. Once existing bindings are actually available to a backend process, run paypal:auth, obtain actual human decisions for the USD1.00 fictional procurement and secure Sandbox buyer approval, capture and reconcile, then replace financial footage. Public/legal/source-rights approvals remain deferred. No background continuation is scheduled.
+
+---
+
+## Previous reports — historical
+
 # Latest Waylatch PayPal continuation — 2026-10-13
 
 Started on feat/waylatch-release-candidate at verified private main/branch SHA7b3d1c32e962d5944de2247b30a770e55888790e. Required handoff documents read. No application, design, history, protocol, approval or payment-state changes made.

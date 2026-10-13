@@ -1,3 +1,15 @@
+# Current Waylatch blockers after alias fix
+
+**Resolved:** PAYPAL_SECRET_KEY is accepted as a fallback for PAYPAL_CLIENT_SECRET with canonical precedence across backend and provider scripts. Do not ask for renaming/reconfiguration because of this mismatch. Regression tests and release protection cover it.
+
+**Remaining:** this executor has no PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET or PAYPAL_SECRET_KEY binding, including after dotenv and the requested in-process mapping. No actual OAuth request executed. The separately initialized credential-bearing environment cannot be established from the available runtime metadata. This is credential availability in the supplied executor, not the now-resolved variable-name mismatch. No raw secret or repeated configuration action is requested.
+
+Real human REVIEW/AUTHORIZE/CAPTURE and secure Sandbox buyer approval remain required after actual OAuth. Webhook subscription/callback and Payouts entitlement remain unverified; prior tunnel failure is historical. Public financial footage, licensing/source-rights/publication and legal registration/submission gates remain. No new paid resource, live endpoint, secret transfer or public operation is introduced.
+
+---
+
+## Previous blocker ledger — historical configuration instructions superseded
+
 # Current external blockers
 
 Verified in this execution, 2026-10-13. All independent release preparation below is preserved; no completion percentage is inferred.
