@@ -2,4 +2,4 @@
 > waylatch@0.1.0 release:check
 > tsx scripts/check-release.ts
 
-{"category":"local-static-release-check","trackedFiles":183,"sourceMode":"git-index","findings":[],"scope":"Configured-secret and specific-pattern scan; not a comprehensive secret/security certification"}
+{"category":"local-static-release-check","trackedFiles":186,"sourceMode":"git-index","findings":[],"scope":"Configured-secret and specific-pattern scan; not a comprehensive secret/security certification"}

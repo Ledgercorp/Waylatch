@@ -1,0 +1,20 @@
+{
+  "verifiedAt": "2026-10-13T15:39:33.474327+00:00",
+  "repository": "https://github.com/Ledgercorp/Waylatch",
+  "private": true,
+  "defaultBranch": "main",
+  "implementationCommit": "aed191d213b142304b61f3e0738c5c9fdcb99825",
+  "verifiedRemoteRefs": {
+    "main": "aed191d213b142304b61f3e0738c5c9fdcb99825",
+    "feat/waylatch-release-candidate": "aed191d213b142304b61f3e0738c5c9fdcb99825",
+    "feat/waylatch-rebrand": "1cca55994f22252d7875ebe9d5025b428c3e179e",
+    "feat/rescueledger-mvp": "ee1488bde39347347d5a40e6bd766072fad7f16f"
+  },
+  "remoteMP4": {
+    "path": "docs/demo/waylatch-engineering-preview.mp4",
+    "bytes": 2078842,
+    "gitBlobSHA": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4"
+  },
+  "pushMethod": "ordinary fast-forward pushes; independent ls-remote and GitHub API reads",
+  "note": "This evidence identifies the verified implementation checkpoint. A subsequent documentation checkpoint may advance main and the candidate branch; final refs are independently verified in the execution report and source artifact manifest."
+}
