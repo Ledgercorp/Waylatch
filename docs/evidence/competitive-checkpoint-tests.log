@@ -1,0 +1,38 @@
+
+> waylatch@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/audit-export-cli.test.ts (4 tests) 795ms
+ ✓ tests/sandbox-cli.test.ts (4 tests) 1097ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > accepts an alias-only fixture but records no human decision when review is declined  376ms
+ ✓ tests/release-alias.test.ts (2 tests) 149ms
+ ✓ tests/paypal-http.test.ts (4 tests) 646ms
+ ✓ tests/judge-demo.test.ts (8 tests) 104ms
+ ✓ tests/offline.test.ts (10 tests) 94ms
+ ✓ tests/security-review.test.ts (4 tests) 124ms
+ ✓ tests/payments.test.ts (7 tests) 94ms
+ ✓ tests/judge-demo-runtime.test.ts (4 tests) 18ms
+ ✓ tests/webhook-gateway.test.ts (9 tests) 84ms
+ ✓ tests/risk.test.ts (9 tests) 6ms
+ ✓ tests/input-boundary.test.ts (2 tests) 37ms
+ ✓ tests/proof-trail-component.test.ts (2 tests) 32ms
+ ✓ tests/comparison-component.test.ts (5 tests) 33ms
+ ✓ tests/compatibility.test.ts (5 tests) 20ms
+ ✓ tests/evaluation-runner.test.ts (5 tests) 42ms
+ ✓ tests/comparison.test.ts (5 tests) 15ms
+ ✓ tests/evaluation.test.ts (8 tests) 11ms
+ ✓ tests/judge-demo-launcher.test.ts (3 tests) 10ms
+ ✓ tests/proof-trail.test.ts (11 tests) 12ms
+ ✓ tests/paypal-config.test.ts (6 tests) 8ms
+ ✓ tests/schema.test.ts (2 tests) 5ms
+ ✓ tests/paypal-auth.test.ts (3 tests) 6ms
+ ✓ tests/receipt.test.ts (2 tests) 5ms
+
+ Test Files  24 passed (24)
+      Tests  124 passed (124)
+   Start at  21:49:02
+   Duration  4.51s (transform 518ms, setup 0ms, collect 2.23s, tests 3.45s, environment 2ms, prepare 855ms)
+

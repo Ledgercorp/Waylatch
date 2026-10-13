@@ -35,4 +35,6 @@ Declared direct packages and installed versions/licenses; full packages retain t
 
 Model: Xenova/all-MiniLM-L6-v2, pinned 751bff37182d3f1213fa05d7196b954e230abad9, Apache-2.0. Upstream sentence-transformers/all-MiniLM-L6-v2 is Apache-2.0. Model assets are downloaded separately, not committed. Model card/license evidence and asset hashes are in AI_MODEL.md.
 
-CrisisCodec adaptation is owner-authorized private reuse; source has no adopted root license. See CRISISCODEC_REUSE.md before public distribution. No CrisisCodec fonts or UI assets copied.
+## Owner-controlled source provenance
+
+CrisisCodec is the owner's unfinished Colby Weiss / LeftSock Labs project under the same ownership as Waylatch. Its two selectively adapted packet/reconstruction primitives are owner-controlled internal reuse; the absence of an earlier adopted MIT license does not block that development. This corrects the earlier generic private-reuse licensing qualifier. Read-only source/history inspection found only Colby Weiss author/committer metadata and no independent contributor attribution in those two files; unrecorded/copied contributions cannot be excluded by metadata alone. See [CRISISCODEC_REUSE.md](CRISISCODEC_REUSE.md) and [owner-source-provenance.json](evidence/owner-source-provenance.json) for exact scope and fingerprints. Application MIT adoption and public release remain separate owner decisions. No CrisisCodec fonts or UI assets copied. All third-party package/model obligations above remain unchanged.

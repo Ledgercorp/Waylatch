@@ -6,7 +6,9 @@ The lockfile contains 382 package entries; 312 are installed on this Linux runti
 
 ## Recommendation and boundaries
 
-Recommend the existing MIT proposal for owner-controlled Waylatch source after Colby Weiss confirms copyright ownership and rights to the two adapted CrisisCodec primitives. MIT does not replace third-party licenses. CrisisCodec has no adopted root license, so private owner authorization does not automatically establish public redistribution rights to contributions by anyone else. Preserve its exact reference commit and adaptation disclosure in CRISISCODEC_REUSE.md. The original RescueLedger history remains intact.
+Recommend the existing MIT proposal for owner-controlled Waylatch source, subject to separate owner approval of application licensing and final copyright attribution. The owner has corrected the provenance: CrisisCodec is Colby Weiss / LeftSock Labs' unfinished project under the same ownership, and selective packet/reconstruction reuse is owner-controlled internal development. An earlier adopted MIT license is not needed to authorize that internal reuse. The prior blanket CrisisCodec rights qualifier is superseded by this correction. MIT does not replace third-party licenses.
+
+Read-only inspection of the two adapted source files at `8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f`, their introducing/modifying patches and reachable Git history found only Colby Weiss author/committer metadata, no coauthor trailers and no independent contributor attribution in those files. Source hashes match the historical reference ledger. This is scoped evidence supporting the owner's confirmation, not proof of copyright title: unsigned metadata cannot exclude unrecorded or copied material. Any remaining inquiry is limited to independently owned material, if any, incorporated into these two primitives outside the observed history. Preserve the exact reference commit, adaptation disclosure and evidence in [CRISISCODEC_REUSE.md](CRISISCODEC_REUSE.md) and [owner-source-provenance.json](evidence/owner-source-provenance.json). The original RescueLedger history remains intact.
 
 This release should distribute source, lockfile and documentation, not node_modules, native binaries, fonts or model weights. Judges install dependencies from their publishers and download the seven pinned/hash-verified model assets. Preserve notices and upstream source links. If a container, packaged executable or node_modules archive is later distributed, its native-library/source and notice obligations must be reviewed separately before release.
 
@@ -22,7 +24,7 @@ This release should distribute source, lockfile and documentation, not node_modu
 
 ## Remaining owner decisions
 
-Approve the proposed MIT text and copyright attribution; confirm public rights to adapted CrisisCodec source and all contributors; acknowledge AMBER name-investigation limitations before public branding. Public visibility and final submission require separate explicit consent. All runtime secrets, databases, model/native binaries and recording caches are excluded from the release.
+Approve the proposed application MIT text and final copyright attribution; resolve any identified independently owned contributions, including material outside the observed history of the two CrisisCodec primitives; acknowledge AMBER name-investigation limitations before public branding. CrisisCodec's same-owner provenance and authorized internal reuse are already confirmed by the owner. Public visibility and final submission require separate explicit consent. All runtime secrets, databases, model/native binaries and recording caches are excluded from the release.
 
 ## Additional bundled-library source checks
 

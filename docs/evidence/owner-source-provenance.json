@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-13T21:37:12Z",
+  "review_type": "read-only source and contribution-history inspection",
+  "repository": "Ledgercorp/CrisisCodec",
+  "repository_visibility_at_review": "private",
+  "reference_commit": "8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f",
+  "reference_branch": "feat/crisiscodec-mvp",
+  "owner_confirmation": {
+    "source": "Owner correction in the current task; not inferred from repository metadata.",
+    "rights_holder_description": "Colby Weiss / LeftSock Labs",
+    "relationship": "CrisisCodec is the same owner's unfinished project.",
+    "authorized_scope": "Selective owner-controlled packet/reconstruction reuse for internal Waylatch development.",
+    "application_mit_adoption_approved": false,
+    "public_release_approved": false,
+    "spending_approved": false
+  },
+  "historical_reference_evidence": "docs/evidence/crisiscodec-reference.json",
+  "source_files": [
+    {
+      "path": "src/core/codec.ts",
+      "adapted_path": "src/offline/codec.ts",
+      "source_url": "https://github.com/Ledgercorp/CrisisCodec/blob/8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f/src/core/codec.ts",
+      "git_blob_sha": "57c964eeed0d3ae2fe398c53fe269af341efa743",
+      "utf8_bytes": 6859,
+      "sha256": "a1c575547eca494a7a707170996fd6484527524016e7552c2a24825a428f4f1a",
+      "matches_historical_reference_sha256": true,
+      "path_history_url": "https://api.github.com/repos/Ledgercorp/CrisisCodec/commits?sha=8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f&path=src/core/codec.ts&per_page=100",
+      "path_history_commits": [
+        "e0587e4dee1b7cac441105e03596190298d36cba",
+        "af53e58aa9a011b8392f0721568297b40d3630d9"
+      ],
+      "introducing_commit": "af53e58aa9a011b8392f0721568297b40d3630d9",
+      "introducing_status": "added",
+      "independent_contributor_attribution_observed": false
+    },
+    {
+      "path": "src/core/reconstruction.ts",
+      "adapted_path": "src/offline/reconstruction.ts",
+      "source_url": "https://github.com/Ledgercorp/CrisisCodec/blob/8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f/src/core/reconstruction.ts",
+      "git_blob_sha": "661feea4a0afe806dd1c4c31b1a270f24a065d1c",
+      "utf8_bytes": 3639,
+      "sha256": "c8297637866f27d53a2e2ee1b1b40f8b648ede1334a2a1fa9b73cec34cc49a1a",
+      "matches_historical_reference_sha256": true,
+      "path_history_url": "https://api.github.com/repos/Ledgercorp/CrisisCodec/commits?sha=8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f&path=src/core/reconstruction.ts&per_page=100",
+      "path_history_commits": [
+        "e0587e4dee1b7cac441105e03596190298d36cba",
+        "af53e58aa9a011b8392f0721568297b40d3630d9"
+      ],
+      "introducing_commit": "af53e58aa9a011b8392f0721568297b40d3630d9",
+      "introducing_status": "added",
+      "independent_contributor_attribution_observed": false
+    }
+  ],
+  "reachable_history": {
+    "url": "https://api.github.com/repos/Ledgercorp/CrisisCodec/commits?sha=8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f&per_page=100",
+    "returned_commit_count": 4,
+    "ends_at_parentless_introducing_commit": true,
+    "commits": [
+      {
+        "sha": "8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f",
+        "author": "Colby Weiss",
+        "author_date": "2026-10-12T13:02:50Z",
+        "committer": "Colby Weiss",
+        "committer_date": "2026-10-12T13:02:50Z",
+        "message": "design: apply navy orange cyan CrisisCodec identity",
+        "parents": [
+          "5d5d64a98ead3a1691fc31e4e6386cd5af89abad"
+        ],
+        "github_author_login": null,
+        "github_committer_login": null,
+        "signature_verification": "unsigned"
+      },
+      {
+        "sha": "5d5d64a98ead3a1691fc31e4e6386cd5af89abad",
+        "author": "Colby Weiss",
+        "author_date": "2026-10-12T12:47:30Z",
+        "committer": "Colby Weiss",
+        "committer_date": "2026-10-12T12:47:30Z",
+        "message": "docs: record verified handoff and external access blockers",
+        "parents": [
+          "e0587e4dee1b7cac441105e03596190298d36cba"
+        ],
+        "github_author_login": null,
+        "github_committer_login": null,
+        "signature_verification": "unsigned"
+      },
+      {
+        "sha": "e0587e4dee1b7cac441105e03596190298d36cba",
+        "author": "Colby Weiss",
+        "author_date": "2026-10-12T12:46:14Z",
+        "committer": "Colby Weiss",
+        "committer_date": "2026-10-12T12:46:14Z",
+        "message": "feat: deliver verified offline CrisisCodec operator application",
+        "parents": [
+          "af53e58aa9a011b8392f0721568297b40d3630d9"
+        ],
+        "github_author_login": null,
+        "github_committer_login": null,
+        "signature_verification": "unsigned"
+      },
+      {
+        "sha": "af53e58aa9a011b8392f0721568297b40d3630d9",
+        "author": "Colby Weiss",
+        "author_date": "2026-10-12T11:59:51Z",
+        "committer": "Colby Weiss",
+        "committer_date": "2026-10-12T11:59:51Z",
+        "message": "feat: implement validated adaptive incident codec and network engine",
+        "parents": [],
+        "github_author_login": null,
+        "github_committer_login": null,
+        "signature_verification": "unsigned"
+      }
+    ],
+    "coauthor_trailers_observed": false
+  },
+  "reviewed_source_patches": [
+    "https://api.github.com/repos/Ledgercorp/CrisisCodec/commits/af53e58aa9a011b8392f0721568297b40d3630d9",
+    "https://api.github.com/repos/Ledgercorp/CrisisCodec/commits/e0587e4dee1b7cac441105e03596190298d36cba"
+  ],
+  "reviewed_license_context": {
+    "tree_url": "https://api.github.com/repos/Ledgercorp/CrisisCodec/git/trees/8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f?recursive=1",
+    "tree_truncated": false,
+    "adopted_root_license_observed": false,
+    "proposal_file": "docs/LICENSE-MIT-PROPOSAL.txt",
+    "proposal_is_not_an_adopted_license": true,
+    "third_party_notice_file": "docs/third-party-notices.md",
+    "upstream_notice_observation": "Dependencies are used through maintained npm packages; notice states no source from researched Meshtastic, TAK or CAP systems is incorporated. Bundled font licenses remain separate; no CrisisCodec UI/font assets are part of the recorded Waylatch adaptation.",
+    "third_party_obligations_changed": false
+  },
+  "local_adaptation_history": {
+    "read_command": "git log --format='%h %an <%ae> %ad %s' --date=iso-strict -- src/offline/codec.ts src/offline/reconstruction.ts",
+    "observed_commits": [
+      {
+        "sha_prefix": "727ccd4",
+        "author": "Colby Weiss",
+        "date": "2026-10-13T14:33:10Z",
+        "subject": "feat: rebrand RescueLedger as Waylatch with legacy data and protocol compatibility"
+      },
+      {
+        "sha_prefix": "5bb6e37",
+        "author": "Colby Weiss",
+        "date": "2026-10-13T03:01:39Z",
+        "subject": "feat: build offline procurement, local AI review and guarded Sandbox payment workflow"
+      }
+    ],
+    "source_comments_disclose_selective_adaptation": true
+  },
+  "method": {
+    "source_access": "Connected GitHub tools: fetch_file for complete UTF-8 contents; fetch GET for path histories, reachable history, commit patches and exact-reference tree; get_repo for repository visibility.",
+    "hash_computation": "Python hashlib.sha256 over fetched UTF-8 source bytes; compared with historical reference ledger.",
+    "shell_gh_path_history_attempt": "Both read-only gh api requests returned Forbidden. Equivalent connected GitHub fetch requests succeeded.",
+    "source_clone_created": false,
+    "reference_repository_modified": false,
+    "reference_tests_rerun": false
+  },
+  "conclusion": {
+    "observed_evidence": "The two reused files were introduced and modified only by commits recording Colby Weiss as author and committer. No independent contributor attribution was found in the complete files or affected patches; all reachable commit messages lack coauthor trailers.",
+    "internal_reuse": "Proceed within owner-authorized internal development. No prior MIT adoption or outside-company commercial license is required by the same-owner correction.",
+    "remaining_rights_question": "Whether independently owned material was incorporated into these specific primitives outside the observed Git history; review any such material if identified.",
+    "limits": [
+      "Unsigned author/committer metadata has no linked GitHub author identity and does not prove copyright title.",
+      "This scoped inspection cannot rule out unrecorded or copied contributions, contractual rights or ownership transfers.",
+      "No blanket clearance is claimed for other CrisisCodec files, all possible contributors, npm dependencies, model assets or native libraries.",
+      "Application MIT adoption, final copyright attribution and public release remain separate owner decisions."
+    ]
+  }
+}

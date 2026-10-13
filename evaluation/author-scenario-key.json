@@ -1,0 +1,1216 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "waylatch-fictional-purchase-pairs-v1",
+  "provenance": {
+    "kind": "fictional-synthetic",
+    "language": "English",
+    "author": "AI coding agent",
+    "modelBlind": true,
+    "humanLabeled": false,
+    "realFieldData": false,
+    "constructionKeyIsIndependentAnnotation": false
+  },
+  "warning": "Construction intent only; not independent, human, expert, or field labels.",
+  "constructionIntent": [
+    {
+      "caseId": "pair-01-01",
+      "intent": "same_purchase",
+      "rationale": "Both forms claim that one delivered pallet."
+    },
+    {
+      "caseId": "pair-01-02",
+      "intent": "same_purchase",
+      "rationale": "Two wordings of the logged tanker fill."
+    },
+    {
+      "caseId": "pair-01-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent units and terms describe the same dispatch."
+    },
+    {
+      "caseId": "pair-01-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviations refer to the same box."
+    },
+    {
+      "caseId": "pair-01-05",
+      "intent": "same_purchase",
+      "rationale": "Misspellings and transcription concern one pickup."
+    },
+    {
+      "caseId": "pair-01-06",
+      "intent": "same_purchase",
+      "rationale": "Different file digests do not create a second purchase."
+    },
+    {
+      "caseId": "pair-01-07",
+      "intent": "same_purchase",
+      "rationale": "Amount disagreement is explained by the deposit on one procurement."
+    },
+    {
+      "caseId": "pair-01-08",
+      "intent": "same_purchase",
+      "rationale": "Missing structured facts coexist with a known single delivery."
+    },
+    {
+      "caseId": "pair-01-09",
+      "intent": "same_purchase",
+      "rationale": "A reassignment of one consignment does not authorize a second claim."
+    },
+    {
+      "caseId": "pair-01-10",
+      "intent": "distinct_purchase",
+      "rationale": "Identical wording covers two legitimate replenishments."
+    },
+    {
+      "caseId": "pair-01-11",
+      "intent": "distinct_purchase",
+      "rationale": "Same incident and product do not merge the two orders."
+    },
+    {
+      "caseId": "pair-01-12",
+      "intent": "distinct_purchase",
+      "rationale": "Coincident amounts cover distinct goods and services."
+    },
+    {
+      "caseId": "pair-01-13",
+      "intent": "distinct_purchase",
+      "rationale": "Shared vendor and water terms conceal a delivery versus a return service."
+    },
+    {
+      "caseId": "pair-01-14",
+      "intent": "distinct_purchase",
+      "rationale": "Filled drinking supply and empty vessels are separate purchases."
+    },
+    {
+      "caseId": "pair-01-15",
+      "intent": "distinct_purchase",
+      "rationale": "Repeated legitimate service is not one original fill."
+    },
+    {
+      "caseId": "pair-01-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts corroborate two purchases."
+    },
+    {
+      "caseId": "pair-01-17",
+      "intent": "distinct_purchase",
+      "rationale": "Missing attachments do not erase independent order identities."
+    },
+    {
+      "caseId": "pair-01-18",
+      "intent": "distinct_purchase",
+      "rationale": "Sharing an invoice file does not make separate authorized line purchases duplicates."
+    },
+    {
+      "caseId": "pair-01-19",
+      "intent": "same_purchase",
+      "rationale": "Delayed recording still claims the original consignment."
+    },
+    {
+      "caseId": "pair-01-20",
+      "intent": "unresolved",
+      "rationale": "Available facts cannot establish one purchase or two."
+    },
+    {
+      "caseId": "pair-02-01",
+      "intent": "same_purchase",
+      "rationale": "One pickup has two submissions."
+    },
+    {
+      "caseId": "pair-02-02",
+      "intent": "same_purchase",
+      "rationale": "Paraphrase describes the same replacement kit."
+    },
+    {
+      "caseId": "pair-02-03",
+      "intent": "same_purchase",
+      "rationale": "Coin and button terminology names one procurement."
+    },
+    {
+      "caseId": "pair-02-04",
+      "intent": "same_purchase",
+      "rationale": "Short and expanded wording refer to one restock."
+    },
+    {
+      "caseId": "pair-02-05",
+      "intent": "same_purchase",
+      "rationale": "Typo variation preserves the original pair."
+    },
+    {
+      "caseId": "pair-02-06",
+      "intent": "same_purchase",
+      "rationale": "Two receipt representations concern one kit."
+    },
+    {
+      "caseId": "pair-02-07",
+      "intent": "same_purchase",
+      "rationale": "Price entries disagree about one sale's discount."
+    },
+    {
+      "caseId": "pair-02-08",
+      "intent": "same_purchase",
+      "rationale": "An incomplete form still identifies the same pickup."
+    },
+    {
+      "caseId": "pair-02-09",
+      "intent": "same_purchase",
+      "rationale": "Separate incident allocations do not imply separate stock purchases."
+    },
+    {
+      "caseId": "pair-02-10",
+      "intent": "distinct_purchase",
+      "rationale": "Same text covers distinct scheduled purchases."
+    },
+    {
+      "caseId": "pair-02-11",
+      "intent": "distinct_purchase",
+      "rationale": "The shared incident contains two legitimate pairs."
+    },
+    {
+      "caseId": "pair-02-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal amounts do not equate the different items."
+    },
+    {
+      "caseId": "pair-02-13",
+      "intent": "distinct_purchase",
+      "rationale": "Similar lighting and battery words describe supply and disposal."
+    },
+    {
+      "caseId": "pair-02-14",
+      "intent": "distinct_purchase",
+      "rationale": "Closely related battery types fulfill separate requirements."
+    },
+    {
+      "caseId": "pair-02-15",
+      "intent": "distinct_purchase",
+      "rationale": "A justified replacement is a new purchase."
+    },
+    {
+      "caseId": "pair-02-16",
+      "intent": "distinct_purchase",
+      "rationale": "Separate receipts and serials establish separate purchases."
+    },
+    {
+      "caseId": "pair-02-17",
+      "intent": "distinct_purchase",
+      "rationale": "External stock records establish two purchases despite missing fields."
+    },
+    {
+      "caseId": "pair-02-18",
+      "intent": "distinct_purchase",
+      "rationale": "One consolidated invoice contains two independent purchases."
+    },
+    {
+      "caseId": "pair-02-19",
+      "intent": "same_purchase",
+      "rationale": "An archive import repeats the original purchase."
+    },
+    {
+      "caseId": "pair-02-20",
+      "intent": "unresolved",
+      "rationale": "One pack versus separate packs remains unresolved."
+    },
+    {
+      "caseId": "pair-03-01",
+      "intent": "same_purchase",
+      "rationale": "The delivery was claimed twice."
+    },
+    {
+      "caseId": "pair-03-02",
+      "intent": "same_purchase",
+      "rationale": "Two descriptions of one refill."
+    },
+    {
+      "caseId": "pair-03-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent terminology concerns the same pack."
+    },
+    {
+      "caseId": "pair-03-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviated and full clinical wording identify one pack."
+    },
+    {
+      "caseId": "pair-03-05",
+      "intent": "same_purchase",
+      "rationale": "Correcting spelling does not establish a second purchase."
+    },
+    {
+      "caseId": "pair-03-06",
+      "intent": "same_purchase",
+      "rationale": "File transformations do not change the purchase identity."
+    },
+    {
+      "caseId": "pair-03-07",
+      "intent": "same_purchase",
+      "rationale": "Conflicting gross and net amounts refer to one sale."
+    },
+    {
+      "caseId": "pair-03-08",
+      "intent": "same_purchase",
+      "rationale": "Missing fields do not obscure the documented box identity."
+    },
+    {
+      "caseId": "pair-03-09",
+      "intent": "same_purchase",
+      "rationale": "A clinic transfer does not create another purchase."
+    },
+    {
+      "caseId": "pair-03-10",
+      "intent": "distinct_purchase",
+      "rationale": "Repeated text belongs to distinct purchases."
+    },
+    {
+      "caseId": "pair-03-11",
+      "intent": "distinct_purchase",
+      "rationale": "Same incident includes two independent clinic orders."
+    },
+    {
+      "caseId": "pair-03-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal price does not merge consumables and an instrument."
+    },
+    {
+      "caseId": "pair-03-13",
+      "intent": "distinct_purchase",
+      "rationale": "Shared dressing vocabulary masks different products."
+    },
+    {
+      "caseId": "pair-03-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar supplies have independently fulfilled purposes."
+    },
+    {
+      "caseId": "pair-03-15",
+      "intent": "distinct_purchase",
+      "rationale": "Consumption followed by restocking is a legitimate new purchase."
+    },
+    {
+      "caseId": "pair-03-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts document independent stocks."
+    },
+    {
+      "caseId": "pair-03-17",
+      "intent": "distinct_purchase",
+      "rationale": "Documentary collection identities establish separate purchases."
+    },
+    {
+      "caseId": "pair-03-18",
+      "intent": "distinct_purchase",
+      "rationale": "Shared receipt bytes encompass two separate purchases."
+    },
+    {
+      "caseId": "pair-03-19",
+      "intent": "same_purchase",
+      "rationale": "Later reconstruction duplicates the original procurement."
+    },
+    {
+      "caseId": "pair-03-20",
+      "intent": "unresolved",
+      "rationale": "The original purchase identity is genuinely undetermined."
+    },
+    {
+      "caseId": "pair-04-01",
+      "intent": "same_purchase",
+      "rationale": "Both forms claim the same metered delivery."
+    },
+    {
+      "caseId": "pair-04-02",
+      "intent": "same_purchase",
+      "rationale": "Different machine wording refers to the same fuel drop."
+    },
+    {
+      "caseId": "pair-04-03",
+      "intent": "same_purchase",
+      "rationale": "Regional product terms name one supply."
+    },
+    {
+      "caseId": "pair-04-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviated fuel terminology refers to one collection."
+    },
+    {
+      "caseId": "pair-04-05",
+      "intent": "same_purchase",
+      "rationale": "Typo correction repeats the same collection."
+    },
+    {
+      "caseId": "pair-04-06",
+      "intent": "same_purchase",
+      "rationale": "Distinct receipt images document the same visit."
+    },
+    {
+      "caseId": "pair-04-07",
+      "intent": "same_purchase",
+      "rationale": "Amount conflict concerns components of one bill."
+    },
+    {
+      "caseId": "pair-04-08",
+      "intent": "same_purchase",
+      "rationale": "Known collection identity survives missing metadata."
+    },
+    {
+      "caseId": "pair-04-09",
+      "intent": "same_purchase",
+      "rationale": "Moving previously bought fuel does not create another purchase."
+    },
+    {
+      "caseId": "pair-04-10",
+      "intent": "distinct_purchase",
+      "rationale": "Repeated operation required two independent supplies."
+    },
+    {
+      "caseId": "pair-04-11",
+      "intent": "distinct_purchase",
+      "rationale": "One incident legitimately contains two generator fuel purchases."
+    },
+    {
+      "caseId": "pair-04-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal amounts accompany different procurements."
+    },
+    {
+      "caseId": "pair-04-13",
+      "intent": "distinct_purchase",
+      "rationale": "Fuel supply and tank maintenance are distinct despite shared words."
+    },
+    {
+      "caseId": "pair-04-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar purpose does not equate fuels or machines."
+    },
+    {
+      "caseId": "pair-04-15",
+      "intent": "distinct_purchase",
+      "rationale": "Consumption separates the original and replacement supply."
+    },
+    {
+      "caseId": "pair-04-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts corroborate separate fuel purchases."
+    },
+    {
+      "caseId": "pair-04-17",
+      "intent": "distinct_purchase",
+      "rationale": "Separate depot orders remain identifiable without attachments."
+    },
+    {
+      "caseId": "pair-04-18",
+      "intent": "distinct_purchase",
+      "rationale": "Shared consolidated receipt is not overlapping procurement."
+    },
+    {
+      "caseId": "pair-04-19",
+      "intent": "same_purchase",
+      "rationale": "Timing difference does not change the original fuel identity."
+    },
+    {
+      "caseId": "pair-04-20",
+      "intent": "unresolved",
+      "rationale": "Insufficient facts leave one delivery versus two unresolved."
+    },
+    {
+      "caseId": "pair-05-01",
+      "intent": "same_purchase",
+      "rationale": "One equipment hire has two submissions."
+    },
+    {
+      "caseId": "pair-05-02",
+      "intent": "same_purchase",
+      "rationale": "Different wording describes the same contractor visit."
+    },
+    {
+      "caseId": "pair-05-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent product and location terms describe one carton."
+    },
+    {
+      "caseId": "pair-05-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviation refers to the same hire."
+    },
+    {
+      "caseId": "pair-05-05",
+      "intent": "same_purchase",
+      "rationale": "Correcting typos repeats one stock purchase."
+    },
+    {
+      "caseId": "pair-05-06",
+      "intent": "same_purchase",
+      "rationale": "Different documents support one cleaning service."
+    },
+    {
+      "caseId": "pair-05-07",
+      "intent": "same_purchase",
+      "rationale": "A fee omission is an amount conflict within one hire."
+    },
+    {
+      "caseId": "pair-05-08",
+      "intent": "same_purchase",
+      "rationale": "Missing metadata still leaves one known delivery."
+    },
+    {
+      "caseId": "pair-05-09",
+      "intent": "same_purchase",
+      "rationale": "Relocation does not create a second hire contract."
+    },
+    {
+      "caseId": "pair-05-10",
+      "intent": "distinct_purchase",
+      "rationale": "Repeated wording covers distinct supplies."
+    },
+    {
+      "caseId": "pair-05-11",
+      "intent": "distinct_purchase",
+      "rationale": "Same incident includes separate toilet hires."
+    },
+    {
+      "caseId": "pair-05-12",
+      "intent": "distinct_purchase",
+      "rationale": "Same amount belongs to different procurement purposes."
+    },
+    {
+      "caseId": "pair-05-13",
+      "intent": "distinct_purchase",
+      "rationale": "Shared cleaning terms do not equate materials and inspection."
+    },
+    {
+      "caseId": "pair-05-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar paper rolls fulfill different fixture needs."
+    },
+    {
+      "caseId": "pair-05-15",
+      "intent": "distinct_purchase",
+      "rationale": "Recurring sanitation visits are distinct fulfilled jobs."
+    },
+    {
+      "caseId": "pair-05-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts corroborate separate batches."
+    },
+    {
+      "caseId": "pair-05-17",
+      "intent": "distinct_purchase",
+      "rationale": "Separate requisitions establish two purchases despite missing attachments."
+    },
+    {
+      "caseId": "pair-05-18",
+      "intent": "distinct_purchase",
+      "rationale": "A common statement contains separate sanitation jobs."
+    },
+    {
+      "caseId": "pair-05-19",
+      "intent": "same_purchase",
+      "rationale": "Deferred entry repeats the original carton."
+    },
+    {
+      "caseId": "pair-05-20",
+      "intent": "unresolved",
+      "rationale": "The notes do not establish one supply or independent restocks."
+    },
+    {
+      "caseId": "pair-06-01",
+      "intent": "same_purchase",
+      "rationale": "The one formula pickup is claimed twice."
+    },
+    {
+      "caseId": "pair-06-02",
+      "intent": "same_purchase",
+      "rationale": "Paraphrase concerns the same case."
+    },
+    {
+      "caseId": "pair-06-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent regional product terms identify one pack."
+    },
+    {
+      "caseId": "pair-06-04",
+      "intent": "same_purchase",
+      "rationale": "The acronym and full wording claim one formula purchase."
+    },
+    {
+      "caseId": "pair-06-05",
+      "intent": "same_purchase",
+      "rationale": "Typo correction preserves one procurement."
+    },
+    {
+      "caseId": "pair-06-06",
+      "intent": "same_purchase",
+      "rationale": "Two receipt versions concern one box."
+    },
+    {
+      "caseId": "pair-06-07",
+      "intent": "same_purchase",
+      "rationale": "Amount discrepancy reflects one delivery fee."
+    },
+    {
+      "caseId": "pair-06-08",
+      "intent": "same_purchase",
+      "rationale": "Incomplete structured fields still identify one collection."
+    },
+    {
+      "caseId": "pair-06-09",
+      "intent": "same_purchase",
+      "rationale": "Reallocation does not justify another original-purchase claim."
+    },
+    {
+      "caseId": "pair-06-10",
+      "intent": "distinct_purchase",
+      "rationale": "Identical descriptions conceal legitimate separate replenishment."
+    },
+    {
+      "caseId": "pair-06-11",
+      "intent": "distinct_purchase",
+      "rationale": "Shared incident does not merge two desk purchases."
+    },
+    {
+      "caseId": "pair-06-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal cost does not make different feeding supplies one purchase."
+    },
+    {
+      "caseId": "pair-06-13",
+      "intent": "distinct_purchase",
+      "rationale": "Shared formula terms describe goods and an independent service."
+    },
+    {
+      "caseId": "pair-06-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar formula products are distinct age-specific purchases."
+    },
+    {
+      "caseId": "pair-06-15",
+      "intent": "distinct_purchase",
+      "rationale": "Consumed stock followed by a refill is a separate purchase."
+    },
+    {
+      "caseId": "pair-06-16",
+      "intent": "distinct_purchase",
+      "rationale": "Distinct receipts corroborate distinct item orders."
+    },
+    {
+      "caseId": "pair-06-17",
+      "intent": "distinct_purchase",
+      "rationale": "Missing uploads do not erase independent sales."
+    },
+    {
+      "caseId": "pair-06-18",
+      "intent": "distinct_purchase",
+      "rationale": "One invoice groups independent non-overlapping purchases."
+    },
+    {
+      "caseId": "pair-06-19",
+      "intent": "same_purchase",
+      "rationale": "Late capture repeats the original set purchase."
+    },
+    {
+      "caseId": "pair-06-20",
+      "intent": "unresolved",
+      "rationale": "Available facts cannot determine whether a restock was separate."
+    },
+    {
+      "caseId": "pair-07-01",
+      "intent": "same_purchase",
+      "rationale": "The same radio hire was submitted twice."
+    },
+    {
+      "caseId": "pair-07-02",
+      "intent": "same_purchase",
+      "rationale": "Paraphrase describes one four-radio rental."
+    },
+    {
+      "caseId": "pair-07-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent terminology describes the same accessory pack."
+    },
+    {
+      "caseId": "pair-07-04",
+      "intent": "same_purchase",
+      "rationale": "Acronym expansion refers to one purchase."
+    },
+    {
+      "caseId": "pair-07-05",
+      "intent": "same_purchase",
+      "rationale": "Typo variation does not create a second pack purchase."
+    },
+    {
+      "caseId": "pair-07-06",
+      "intent": "same_purchase",
+      "rationale": "Different document encodings concern the same hire."
+    },
+    {
+      "caseId": "pair-07-07",
+      "intent": "same_purchase",
+      "rationale": "Amount conflict is within one radio rental."
+    },
+    {
+      "caseId": "pair-07-08",
+      "intent": "same_purchase",
+      "rationale": "Missing fields still leave one procurement identity."
+    },
+    {
+      "caseId": "pair-07-09",
+      "intent": "same_purchase",
+      "rationale": "Incident reassignment does not create a new radio purchase."
+    },
+    {
+      "caseId": "pair-07-10",
+      "intent": "distinct_purchase",
+      "rationale": "Identical text refers to separately fulfilled hires."
+    },
+    {
+      "caseId": "pair-07-11",
+      "intent": "distinct_purchase",
+      "rationale": "Same incident contains two legitimate kit purchases."
+    },
+    {
+      "caseId": "pair-07-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal amount does not equate a rental and printed goods."
+    },
+    {
+      "caseId": "pair-07-13",
+      "intent": "distinct_purchase",
+      "rationale": "Shared mast words describe independent hire and inspection purchases."
+    },
+    {
+      "caseId": "pair-07-14",
+      "intent": "distinct_purchase",
+      "rationale": "Related handset products are separate purchases."
+    },
+    {
+      "caseId": "pair-07-15",
+      "intent": "distinct_purchase",
+      "rationale": "A separately authorized later rental period is a legitimate new service."
+    },
+    {
+      "caseId": "pair-07-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts corroborate separately required accessories."
+    },
+    {
+      "caseId": "pair-07-17",
+      "intent": "distinct_purchase",
+      "rationale": "Missing uploads coexist with two documented pack orders."
+    },
+    {
+      "caseId": "pair-07-18",
+      "intent": "distinct_purchase",
+      "rationale": "Shared statement contains distinct radio hire purchases."
+    },
+    {
+      "caseId": "pair-07-19",
+      "intent": "same_purchase",
+      "rationale": "Delayed entry repeats the original accessory purchase."
+    },
+    {
+      "caseId": "pair-07-20",
+      "intent": "unresolved",
+      "rationale": "There is no basis to resolve one kit versus separate purchases."
+    },
+    {
+      "caseId": "pair-08-01",
+      "intent": "same_purchase",
+      "rationale": "Both entries claim the same two-tent hire."
+    },
+    {
+      "caseId": "pair-08-02",
+      "intent": "same_purchase",
+      "rationale": "Different wording identifies the same canopy rental."
+    },
+    {
+      "caseId": "pair-08-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent terminology names one rope pack."
+    },
+    {
+      "caseId": "pair-08-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviation and expansion refer to one tarp purchase."
+    },
+    {
+      "caseId": "pair-08-05",
+      "intent": "same_purchase",
+      "rationale": "Spelling repair repeats one purchase."
+    },
+    {
+      "caseId": "pair-08-06",
+      "intent": "same_purchase",
+      "rationale": "Document format variation does not change hire identity."
+    },
+    {
+      "caseId": "pair-08-07",
+      "intent": "same_purchase",
+      "rationale": "Amount conflict involves one inclusive hire bill."
+    },
+    {
+      "caseId": "pair-08-08",
+      "intent": "same_purchase",
+      "rationale": "Missing metadata still identifies one supplied kit."
+    },
+    {
+      "caseId": "pair-08-09",
+      "intent": "same_purchase",
+      "rationale": "A moved rental remains one purchase."
+    },
+    {
+      "caseId": "pair-08-10",
+      "intent": "distinct_purchase",
+      "rationale": "Identical descriptions refer to independent hires."
+    },
+    {
+      "caseId": "pair-08-11",
+      "intent": "distinct_purchase",
+      "rationale": "One incident includes two separate structure purchases."
+    },
+    {
+      "caseId": "pair-08-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal price does not merge goods and labor."
+    },
+    {
+      "caseId": "pair-08-13",
+      "intent": "distinct_purchase",
+      "rationale": "Related roof descriptions cover separate goods and service purchases."
+    },
+    {
+      "caseId": "pair-08-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar tarp products meet different independently bought requirements."
+    },
+    {
+      "caseId": "pair-08-15",
+      "intent": "distinct_purchase",
+      "rationale": "A new paid service period is distinct from the first hire."
+    },
+    {
+      "caseId": "pair-08-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts corroborate independently needed anchor types."
+    },
+    {
+      "caseId": "pair-08-17",
+      "intent": "distinct_purchase",
+      "rationale": "Independent store acquisitions remain identifiable."
+    },
+    {
+      "caseId": "pair-08-18",
+      "intent": "distinct_purchase",
+      "rationale": "Same invoice file holds two distinct hire purchases."
+    },
+    {
+      "caseId": "pair-08-19",
+      "intent": "same_purchase",
+      "rationale": "Restoring an old draft repeats the original kit."
+    },
+    {
+      "caseId": "pair-08-20",
+      "intent": "unresolved",
+      "rationale": "The two notes cannot resolve procurement identity."
+    },
+    {
+      "caseId": "pair-09-01",
+      "intent": "same_purchase",
+      "rationale": "Both forms claim the same sacks."
+    },
+    {
+      "caseId": "pair-09-02",
+      "intent": "same_purchase",
+      "rationale": "Paraphrase refers to one delivered meal batch."
+    },
+    {
+      "caseId": "pair-09-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent ingredient terms concern the same tins."
+    },
+    {
+      "caseId": "pair-09-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviation expansion repeats one catering purchase."
+    },
+    {
+      "caseId": "pair-09-05",
+      "intent": "same_purchase",
+      "rationale": "Corrected spelling concerns one ingredient purchase."
+    },
+    {
+      "caseId": "pair-09-06",
+      "intent": "same_purchase",
+      "rationale": "Different receipt copies do not create another case purchase."
+    },
+    {
+      "caseId": "pair-09-07",
+      "intent": "same_purchase",
+      "rationale": "Amount discrepancy concerns one meal order's service charge."
+    },
+    {
+      "caseId": "pair-09-08",
+      "intent": "same_purchase",
+      "rationale": "Incomplete entry still identifies one goods delivery."
+    },
+    {
+      "caseId": "pair-09-09",
+      "intent": "same_purchase",
+      "rationale": "Reallocating pantry stock does not create a second original purchase."
+    },
+    {
+      "caseId": "pair-09-10",
+      "intent": "distinct_purchase",
+      "rationale": "Identical wording describes independent catered meals."
+    },
+    {
+      "caseId": "pair-09-11",
+      "intent": "distinct_purchase",
+      "rationale": "Same incident includes separate kitchen stock purchases."
+    },
+    {
+      "caseId": "pair-09-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal amounts do not equate ingredients and rented equipment."
+    },
+    {
+      "caseId": "pair-09-13",
+      "intent": "distinct_purchase",
+      "rationale": "Shared meal-tray wording hides meals versus packaging."
+    },
+    {
+      "caseId": "pair-09-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar ingredients are independent dietary stocks."
+    },
+    {
+      "caseId": "pair-09-15",
+      "intent": "distinct_purchase",
+      "rationale": "New demand and fulfillment establish a separate meal purchase."
+    },
+    {
+      "caseId": "pair-09-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts corroborate two ingredient purchases."
+    },
+    {
+      "caseId": "pair-09-17",
+      "intent": "distinct_purchase",
+      "rationale": "Separate collections remain identifiable despite incomplete uploads."
+    },
+    {
+      "caseId": "pair-09-18",
+      "intent": "distinct_purchase",
+      "rationale": "Consolidated invoice does not make the separate orders overlap."
+    },
+    {
+      "caseId": "pair-09-19",
+      "intent": "same_purchase",
+      "rationale": "Delayed capture repeats one pantry purchase."
+    },
+    {
+      "caseId": "pair-09-20",
+      "intent": "unresolved",
+      "rationale": "Facts do not establish one stock purchase or separate orders."
+    },
+    {
+      "caseId": "pair-10-01",
+      "intent": "same_purchase",
+      "rationale": "The same pump rental was submitted twice."
+    },
+    {
+      "caseId": "pair-10-02",
+      "intent": "same_purchase",
+      "rationale": "Paraphrase describes one pump hire."
+    },
+    {
+      "caseId": "pair-10-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent equipment terms refer to one hose."
+    },
+    {
+      "caseId": "pair-10-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviated and full wording identify one rental."
+    },
+    {
+      "caseId": "pair-10-05",
+      "intent": "same_purchase",
+      "rationale": "Typo variation concerns one machine hire."
+    },
+    {
+      "caseId": "pair-10-06",
+      "intent": "same_purchase",
+      "rationale": "Different receipt representations document one hire."
+    },
+    {
+      "caseId": "pair-10-07",
+      "intent": "same_purchase",
+      "rationale": "Amount conflict concerns charges on one contract."
+    },
+    {
+      "caseId": "pair-10-08",
+      "intent": "same_purchase",
+      "rationale": "Missing fields do not erase one known kit identity."
+    },
+    {
+      "caseId": "pair-10-09",
+      "intent": "same_purchase",
+      "rationale": "Incident transfer does not create a new hire purchase."
+    },
+    {
+      "caseId": "pair-10-10",
+      "intent": "distinct_purchase",
+      "rationale": "Identical descriptions cover two fulfilled rentals."
+    },
+    {
+      "caseId": "pair-10-11",
+      "intent": "distinct_purchase",
+      "rationale": "One incident includes two independent machine hires."
+    },
+    {
+      "caseId": "pair-10-12",
+      "intent": "distinct_purchase",
+      "rationale": "Same price does not equate rented machinery and bought accessories."
+    },
+    {
+      "caseId": "pair-10-13",
+      "intent": "distinct_purchase",
+      "rationale": "Similar pump descriptions represent different goods and services."
+    },
+    {
+      "caseId": "pair-10-14",
+      "intent": "distinct_purchase",
+      "rationale": "Related pump types serve independently purchased tasks."
+    },
+    {
+      "caseId": "pair-10-15",
+      "intent": "distinct_purchase",
+      "rationale": "Non-overlapping authorized hire periods are distinct purchases."
+    },
+    {
+      "caseId": "pair-10-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts establish independently needed part purchases."
+    },
+    {
+      "caseId": "pair-10-17",
+      "intent": "distinct_purchase",
+      "rationale": "Supplier collection evidence establishes separate purchases."
+    },
+    {
+      "caseId": "pair-10-18",
+      "intent": "distinct_purchase",
+      "rationale": "Shared invoice file contains non-overlapping rental purchases."
+    },
+    {
+      "caseId": "pair-10-19",
+      "intent": "same_purchase",
+      "rationale": "Restored form repeats the original hose procurement."
+    },
+    {
+      "caseId": "pair-10-20",
+      "intent": "unresolved",
+      "rationale": "Purchase identity cannot be established from the notes."
+    },
+    {
+      "caseId": "pair-11-01",
+      "intent": "same_purchase",
+      "rationale": "One coach service has duplicate submissions."
+    },
+    {
+      "caseId": "pair-11-02",
+      "intent": "same_purchase",
+      "rationale": "Paraphrase identifies the same passenger trip."
+    },
+    {
+      "caseId": "pair-11-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent transport names describe one booking."
+    },
+    {
+      "caseId": "pair-11-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviation expansion refers to one trip purchase."
+    },
+    {
+      "caseId": "pair-11-05",
+      "intent": "same_purchase",
+      "rationale": "Typo correction repeats one transfer booking."
+    },
+    {
+      "caseId": "pair-11-06",
+      "intent": "same_purchase",
+      "rationale": "Different document files record the same trip."
+    },
+    {
+      "caseId": "pair-11-07",
+      "intent": "same_purchase",
+      "rationale": "Amount disagreement concerns one booking's charge components."
+    },
+    {
+      "caseId": "pair-11-08",
+      "intent": "same_purchase",
+      "rationale": "Missing fields still identify one completed trip."
+    },
+    {
+      "caseId": "pair-11-09",
+      "intent": "same_purchase",
+      "rationale": "Changed allocation and destination do not create another purchased trip."
+    },
+    {
+      "caseId": "pair-11-10",
+      "intent": "distinct_purchase",
+      "rationale": "Same description covers separate outward and return trips."
+    },
+    {
+      "caseId": "pair-11-11",
+      "intent": "distinct_purchase",
+      "rationale": "Same incident contains two separate bus purchases."
+    },
+    {
+      "caseId": "pair-11-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal amount does not merge transport service and printed goods."
+    },
+    {
+      "caseId": "pair-11-13",
+      "intent": "distinct_purchase",
+      "rationale": "Related bus wording covers two independent services."
+    },
+    {
+      "caseId": "pair-11-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar journeys have independently purchased accessibility requirements."
+    },
+    {
+      "caseId": "pair-11-15",
+      "intent": "distinct_purchase",
+      "rationale": "A further completed run is a legitimate new service."
+    },
+    {
+      "caseId": "pair-11-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts corroborate independent trips."
+    },
+    {
+      "caseId": "pair-11-17",
+      "intent": "distinct_purchase",
+      "rationale": "Separate booking records establish distinct services."
+    },
+    {
+      "caseId": "pair-11-18",
+      "intent": "distinct_purchase",
+      "rationale": "A shared statement contains distinct non-overlapping trips."
+    },
+    {
+      "caseId": "pair-11-19",
+      "intent": "same_purchase",
+      "rationale": "Late submission repeats one transport purchase."
+    },
+    {
+      "caseId": "pair-11-20",
+      "intent": "unresolved",
+      "rationale": "The descriptions cannot resolve one booking versus separate trips."
+    },
+    {
+      "caseId": "pair-12-01",
+      "intent": "same_purchase",
+      "rationale": "One cable pack was submitted twice."
+    },
+    {
+      "caseId": "pair-12-02",
+      "intent": "same_purchase",
+      "rationale": "Paraphrase describes one board purchase."
+    },
+    {
+      "caseId": "pair-12-03",
+      "intent": "same_purchase",
+      "rationale": "Equivalent safety-device terminology names one pack."
+    },
+    {
+      "caseId": "pair-12-04",
+      "intent": "same_purchase",
+      "rationale": "Abbreviated and full specifications refer to one purchase."
+    },
+    {
+      "caseId": "pair-12-05",
+      "intent": "same_purchase",
+      "rationale": "Spelling correction repeats one reel purchase."
+    },
+    {
+      "caseId": "pair-12-06",
+      "intent": "same_purchase",
+      "rationale": "Different receipt files support one rental."
+    },
+    {
+      "caseId": "pair-12-07",
+      "intent": "same_purchase",
+      "rationale": "Amount conflict concerns components of one supplied cable."
+    },
+    {
+      "caseId": "pair-12-08",
+      "intent": "same_purchase",
+      "rationale": "Missing metadata leaves one known equipment purchase."
+    },
+    {
+      "caseId": "pair-12-09",
+      "intent": "same_purchase",
+      "rationale": "Reassigning owned equipment does not create another purchase."
+    },
+    {
+      "caseId": "pair-12-10",
+      "intent": "distinct_purchase",
+      "rationale": "Identical descriptions cover separately required purchases."
+    },
+    {
+      "caseId": "pair-12-11",
+      "intent": "distinct_purchase",
+      "rationale": "Same incident contains two legitimate board purchases."
+    },
+    {
+      "caseId": "pair-12-12",
+      "intent": "distinct_purchase",
+      "rationale": "Equal cost does not equate cables and floor covers."
+    },
+    {
+      "caseId": "pair-12-13",
+      "intent": "distinct_purchase",
+      "rationale": "Shared outlet terms describe separate equipment and inspection purchases."
+    },
+    {
+      "caseId": "pair-12-14",
+      "intent": "distinct_purchase",
+      "rationale": "Similar cables have distinct independently purchased ratings and uses."
+    },
+    {
+      "caseId": "pair-12-15",
+      "intent": "distinct_purchase",
+      "rationale": "A new non-overlapping hire period is a distinct service purchase."
+    },
+    {
+      "caseId": "pair-12-16",
+      "intent": "distinct_purchase",
+      "rationale": "Different receipts establish independent connector purchases."
+    },
+    {
+      "caseId": "pair-12-17",
+      "intent": "distinct_purchase",
+      "rationale": "Missing uploads do not merge separately recorded sales."
+    },
+    {
+      "caseId": "pair-12-18",
+      "intent": "distinct_purchase",
+      "rationale": "Shared invoice file contains independent equipment purchases."
+    },
+    {
+      "caseId": "pair-12-19",
+      "intent": "same_purchase",
+      "rationale": "Later capture repeats the original reel purchase."
+    },
+    {
+      "caseId": "pair-12-20",
+      "intent": "unresolved",
+      "rationale": "Facts do not establish whether one kit or separate purchases were claimed."
+    }
+  ]
+}

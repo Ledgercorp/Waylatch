@@ -4,7 +4,15 @@ Owner authorized selective private adaptation from Ledgercorp/CrisisCodec, feat/
 
 Candidate primitives: src/core/codec.ts CRC32, MessagePack bounded decoding, envelope fragmentation, text transport; src/core/reconstruction.ts duplicate fingerprint, bounded state, revision conflict rejection and coverage. RescueLedger uses a new RL1 procurement envelope, lower QR budget, explicit unknown fields, independently reviewed imported records and no payment authority in packets. Exact final adapted files and independently executed tests recorded after implementation.
 
-Source has no adopted root license; docs/LICENSE-MIT-PROPOSAL.txt explicitly is not a license. Private adaptation is authorized by owner. Owner must confirm rights and approve release license before public publication. Third-party dependency licenses remain separate.
+## Current ownership correction — 2026-10-13
+
+The owner confirms that CrisisCodec is their unfinished project under Colby Weiss / LeftSock Labs, with the same ownership as Waylatch. Selective packet/reconstruction reuse is owner-controlled internal reuse. Its missing adopted MIT license does not block authorized internal development or require a commercial license from an outside company. The earlier blanket requirement to reconfirm CrisisCodec public rights is superseded by this correction and the scoped evidence below; the original selective-adaptation history remains recorded here.
+
+Read-only GitHub inspection at the exact reference commit found two commits affecting each reused file: root commit `af53e58aa9a011b8392f0721568297b40d3630d9` adds both files, and `e0587e4dee1b7cac441105e03596190298d36cba` modifies them. Both record Colby Weiss as author and committer. All four reachable commits use that identity, with no coauthor trailers. The complete source and affected patches contain no independently owned contributor attribution; npm dependencies are imported separately. Fetched UTF-8 file SHA-256 values match [crisiscodec-reference.json](evidence/crisiscodec-reference.json). Recorded queries, source fingerprints, scope and limits are in [owner-source-provenance.json](evidence/owner-source-provenance.json).
+
+This supports the owner's account and reveals no independent contributor in these two primitives. Git author metadata is unsigned, with no linked GitHub author identity, and does not prove copyright title or exclude unrecorded/copied contributions. The remaining rights question is limited to whether any independently owned material outside the observed history was incorporated into these specific files; if identified, review that material and its permission. This is not a blanket licensing block on internal work.
+
+The source still has no adopted root license; `docs/LICENSE-MIT-PROPOSAL.txt` explicitly is a proposal. Adoption of Waylatch's application MIT license, final attribution and any public release remain separate owner decisions. Third-party npm, model and native-library licenses remain separate and unchanged. This correction authorizes no license adoption, public action or spending.
 
 ## Final adapted components
 

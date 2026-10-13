@@ -13,6 +13,8 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:ai": "tsx scripts/benchmark-ai.ts",
+    "ai:evaluate": "tsx scripts/evaluate-ai.ts",
+    "judge": "node scripts/judge-start.mjs",
     "paypal:probe": "NODE_USE_ENV_PROXY=1 tsx scripts/paypal-probe.ts",
     "format": "prettier --write src server tests scripts docs *.ts *.json public/*.js",
     "format:check": "prettier --check src server tests scripts docs *.ts *.json public/*.js",

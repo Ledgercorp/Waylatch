@@ -6,6 +6,7 @@ import { validateChain } from '../src/audit/chain';
 import { Store } from './store';
 import { Conflict, Payments } from './payments';
 import type { PayPalProvider } from './paypal';
+import { isLoopbackHost, judgeDemoMetadata, loadJudgeArchive, type JudgeArchive } from './judge-demo';
 const hash = (x: string) => createHash('sha256').update(x).digest('hex');
 const confirmed = z.strictObject({ confirm: z.literal(true) });
 export function createApp({
@@ -13,22 +14,27 @@ export function createApp({
   paypal,
   password,
   origin,
+  judgeMode = false,
+  judgeArchive,
 }: {
   store: Store;
   paypal: PayPalProvider;
   password: string;
   origin: string;
+  judgeMode?: boolean;
+  judgeArchive?: JudgeArchive;
 }) {
   if (password.length < 12)
     throw new Error('COORDINATOR_PASSWORD must have at least 12 characters');
   const url = new URL(origin);
   if (!['http:', 'https:'].includes(url.protocol) || url.pathname !== '/')
     throw new Error('APP_ORIGIN must be an origin');
+  if (judgeMode && !isLoopbackHost(url.host)) throw new Error('Judge demo requires a loopback origin');
   const app = express();
   app.disable('x-powered-by');
   app.use(express.json({ limit: '48kb' }));
   const payments = new Payments(store, paypal, origin);
-  payments.recoverInterrupted();
+  if (!judgeMode) payments.recoverInterrupted();
   app.use((_req, res, next) => {
     res.set({
       'Cache-Control': 'no-store',
@@ -57,6 +63,29 @@ export function createApp({
     }
     next();
   });
+  if (judgeMode) {
+    const demo = judgeDemoMetadata(judgeArchive ?? loadJudgeArchive());
+    app.get('/api/demo', (_req, res) => res.json(demo));
+    app.post('/api/demo/session', (req, res) => {
+      if (req.headers.origin !== origin || req.headers.host !== url.host || !isLoopbackHost(req.headers.host)) {
+        res.status(403).json({ error: 'Judge demo session requires the exact loopback origin and host' });
+        return;
+      }
+      z.strictObject({}).parse(req.body);
+      const session = randomBytes(32).toString('hex');
+      store.session(hash(session), Date.now() + 8 * 60 * 60 * 1000);
+      res.setHeader('Set-Cookie', `rl_session=${session}; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800${url.protocol === 'https:' ? '; Secure' : ''}`);
+      res.json({ authenticated: true, mode: 'judge', financialMutationsAllowed: false });
+    });
+    app.use('/api', (req, res, next) => {
+      const path = req.path.toLowerCase().replace(/\/+$/, '');
+      if (path === '/webhooks/paypal' || path.startsWith('/payments/') || (req.method === 'POST' && /^\/(requests|claims)\/[^/]+\/approve$/.test(path))) {
+        res.status(403).json({ error: 'Judge demo blocks financial approvals and all payment provider operations' });
+        return;
+      }
+      next();
+    });
+  }
   let attempts = new Map<string, { count: number; start: number }>();
   app.post('/api/session', (req, res) => {
     const key = req.ip ?? 'local';
@@ -87,7 +116,7 @@ export function createApp({
   app.get('/api/health', (_req, res) =>
     res.json({
       environment: 'sandbox',
-      paypalConfigured: paypal.configured,
+      paypalConfigured: judgeMode ? false : paypal.configured,
       payouts: 'blocked-unverified',
       ai: 'local-assets-required',
     }),
@@ -179,6 +208,21 @@ export function createApp({
       );
     });
     res.status(201).json(row);
+  });
+  app.post('/api/requests/:id/relationships', (req, res) => {
+    const input = z.strictObject({
+      candidateId: z.string().regex(/^[a-zA-Z0-9_-]{6,48}$/),
+      revision: z.number().int().min(1).max(1000000),
+      candidateRevision: z.number().int().min(1).max(1000000),
+      disposition: z.enum(['related', 'unrelated', 'investigate']),
+      note: z.string().trim().min(3).max(1000),
+    }).parse(req.body);
+    const row = store.record(req.params.id);
+    const candidate = store.record(input.candidateId);
+    if (!row || !candidate || row.record.id === candidate.record.id || row.record.revision !== input.revision || candidate.record.revision !== input.candidateRevision)
+      throw new Conflict('Both distinct requests must exist at the specified revisions');
+    const event = store.atomic(() => store.append('pair_disposition_recorded', row.record.id, input));
+    res.status(201).json(event);
   });
   app.post('/api/requests/:id/review', (req, res) => {
     const input = z
