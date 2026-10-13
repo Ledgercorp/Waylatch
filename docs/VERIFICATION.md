@@ -1,31 +1,47 @@
 # Verification ledger
 
-Detailed logs and benchmark JSON: docs/evidence/. Evidence categories must remain distinct.
+Date: 2026-10-13. Logs, screenshot artifacts, calibration measurements and source fingerprints are in docs/evidence/. Categories below are intentionally separate.
 
-## Executed real integrations
+## 1. Executed real integrations
 
-- GitHub authenticated read: exact CrisisCodec reference commit; original clean. Private RescueLedger synchronization will be recorded after push.
-- Real local MiniLM CPU inference: `npm run test:ai`; pinned 384-dimensional q8 model. Synthetic calibration set TP5/FP0/FN1/TN6; no held-out accuracy claim. Benchmark/model hashes in AI_MODEL.md and evidence.
-- **No PayPal account transaction, Payouts entitlement result or real webhook callback executed.**
+- **Real local AI inference:** `npm run test:ai` executed pinned MiniLM q8 weights on Linux x64 CPU, remote model access disabled, 384-dimensional embeddings. Synthetic calibration: TP5/FP0/FN1/TN6, threshold .60; not a held-out accuracy estimate. Latest loading/runtime/memory measurements, every pair score and SHA-256 asset hashes are in `ai-benchmark.json`. Browser test also executed the app's real authenticated semantic-review endpoint and displayed its evidence.
+- **GitHub read:** authenticated reference access at exact 8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f. Original clean. Creation of a private RescueLedger repository was rejected by integration permission; no remote synchronization.
+- **No real PayPal account operation, Payouts entitlement result or real signed webhook callback executed.**
 
-## Executed local/integration tests
+## 2. Executed local/integration tests
 
-- `npm test`: 28 base tests passed; `npm test -- tests/security-review.test.ts tests/payments.test.ts`: 11 passed, including four adversarial regressions. Full integrated total will be refreshed after final hardening.
-- `npm run build`: passed (TypeScript + Vite). Minor upstream Zod annotation and 500KB chunk advisories; no build errors.
-- `npm run test:e2e`: five passed. Offline request survives actual browser reload; disconnected browser contexts import a real generated QR image plus packet fragments; malformed text fails; coordinator review and approval enforced; credentials missing visibly blocks order creation.
-- axe: zero violations in tested Request screens at 1440×1000 and 390×844. Automated checks are not a full manual accessibility certification.
-- Independent CrisisCodec disposable copy: 38 unit/integration and seven browser tests passed; source and commit fingerprints retained in evidence.
+| Command                                        | Result                 | Evidence / practical scope                                                                                                                                                                                                                            |
+| ---------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm test`                                     | 40 passed, 8 files     | `local-tests.log`: schemas, unknown fields, offline receiver/storage, receipts, review signals, auth, amount/revision freeze, audit corruption, concurrency, interrupted create/capture, restart, bounded malformed input and webhook retries         |
+| `npm run build`                                | Passed                 | `build.log`: TypeScript + production Vite bundle. Upstream Zod annotation and >500KB bundle advisory only                                                                                                                                             |
+| `npm run test:e2e`                             | 7 passed               | `browser-tests.log`: actual offline preservation/reload, QR image plus packet text between disconnected contexts, corrupted import, explicit human review/approval, visibly blocked payments, real AI, separate claim approval, audit, mobile dialogs |
+| `npm run format:check`                         | Passed                 | `format-check.log`; generated evidence excluded from source formatting checks                                                                                                                                                                         |
+| `npm run release:check`                        | Passed · zero findings | Bounded configured-secret/credential-pattern/frontend provider-code scan, not a comprehensive security certification                                                                                                                                  |
+| CrisisCodec disposable copy `npm test`         | 38 passed              | `crisiscodec-unit.log`, exact commit and file hashes in `crisiscodec-reference.json`                                                                                                                                                                  |
+| CrisisCodec disposable copy `npm run test:e2e` | 7 passed               | `crisiscodec-browser.log`; original reference checkout untouched                                                                                                                                                                                      |
 
-## Simulated behavior
+axe found **zero violations** on tested Request desktop/mobile, Review, claim Pay, Audit and mobile capture/QR/receiver dialogs. These checks do not constitute manual assistive-technology or operational certification. Screenshots depict real running synthetic fixtures, not fabricated payment outcomes.
 
-- PayPal provider response doubles in local tests: OAuth/Orders/capture representations, approval, concurrent retries, mismatched authoritative amount, invalid webhook, verified webhook double, network interruptions. These do not prove PayPal account integration.
-- Browser offline conditions are explicitly simulated using Playwright; requests, reload, persistence and QR import execute for real in the browser.
-- All incident, identity, organization, vendor and receipt fixtures are fictional.
+Four substantiated defects were corrected with red/green regression evidence: rolling capture retry expiry; signed webhook redelivery discarded after inspection failure; malformed JSON mislabeled as provider failure; malformed certificate URL threw instead of cleanly rejecting. Existing auth and financial controls remained enforced.
 
-## Unverified requirements
+## 3. Simulated behavior
 
-Actual Sandbox create/buyer approve/capture; real signature-verified callback receipt; Payouts entitlement/reimbursement execution; public repository license/visibility; public YouTube demo; Devpost registration and final submission. Not complete for submission.
+- Separate-process HTTP PayPal simulator: four tests exercise real HTTP OAuth/Orders/capture/verification contracts. Simulator records amounts, request IDs and logical order/capture counts. Healthy path and dropped successful responses yielded one logical order and one capture. This verifies software contract/recovery, **not actual PayPal account behavior**.
+- Additional injected provider doubles test authoritative amount mismatch, Sandbox-only transport, invalid signatures and signed-event retries. A verified webhook **double** is not a real PayPal signature result.
+- Playwright simulates network disconnection. Request saving, IndexedDB reload, generated QR scanning and reconstruction execute in real browser contexts.
+- All examples and benchmark labels are synthetic. No real emergency, claimant, vendor, receipt or inventory outcome is represented.
 
-## Blockers
+## 4. Unverified requirements
 
-See BLOCKERS.md. `npm run paypal:probe` produced BLOCKED_CREDENTIALS_MISSING with exit2 and realMoneyUsed0; no mock payout success.
+Actual Sandbox order create/buyer approval/capture; real public HTTPS signature-verified webhook receipt; Payouts entitlement and reimbursement execution; public repository/license adoption; public YouTube video; owner eligibility/registration/legal consent and final Devpost submission. The project is **not submission-complete**.
+
+No hosted demo was deployed. Repository execution remains the chosen permitted route. Clean-source install/reproduction evidence is recorded when executed; no blanket claim of production/emergency readiness.
+
+## 5. Blockers
+
+- Missing securely bound PayPal Sandbox client ID/secret/webhook ID. `npm run paypal:probe` reports BLOCKED_CREDENTIALS_MISSING, exit2, no provider transaction.
+- GitHub integration cannot create private repositories (`Resource not accessible by integration`). No remote was silently substituted; local branch/source archive/Git bundle preserve progress.
+- Public HTTPS callback unavailable; actual callback verification remains unexecuted.
+- Owner approval required for root license, public visibility, public video and final submission. Prepared drafts are reviewable; no approval implied.
+
+Financial usage: $0 real-money project charges; no funds transferred, paid service activated, card added, hosting purchased or external paid inference used. Work used the supplied Codex Cloud runtime, free packages/model downloads and localhost tests. No Mac dependence.

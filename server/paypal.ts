@@ -1,25 +1,213 @@
 import { z } from 'zod';
-const Money=z.object({currency_code:z.string(),value:z.string()});
-export const OrderSchema=z.object({id:z.string().min(1).max(100),status:z.string(),purchase_units:z.array(z.object({custom_id:z.string().optional(),amount:Money.optional(),payments:z.object({captures:z.array(z.object({id:z.string(),status:z.string(),final_capture:z.boolean().optional(),amount:Money})).optional()}).optional()})).max(10).optional(),links:z.array(z.object({rel:z.string(),href:z.string()})).optional()});
-export type Order=z.infer<typeof OrderSchema>;
-export type CreateOrder={reference:string;amountCents:number;requestId:string;returnUrl:string;cancelUrl:string};
-export interface PayPalProvider{configured:boolean;createOrder(input:CreateOrder):Promise<Order>;getOrder(id:string):Promise<Order>;captureOrder(id:string,requestId:string):Promise<Order>;verifyWebhook(headers:Record<string,string|undefined>,event:unknown):Promise<boolean>;}
-export class ProviderError extends Error{constructor(public status:number,public code:string){super(code);}}
-export class PayPalClient implements PayPalProvider{
- readonly configured:boolean;private token:string|null=null;private expires=0;
- static readonly base='https://api-m.sandbox.paypal.com';
- constructor(private config:{clientId?:string;clientSecret?:string;webhookId?:string},private transport:typeof fetch=fetch){this.configured=!!config.clientId&&!!config.clientSecret;}
- private async accessToken(){if(!this.configured)throw new ProviderError(503,'SANDBOX_CREDENTIALS_MISSING');if(this.token&&this.expires>Date.now())return this.token;
- const response=await this.transport(PayPalClient.base+'/v1/oauth2/token',{method:'POST',headers:{Authorization:'Basic '+Buffer.from(`${this.config.clientId}:${this.config.clientSecret}`).toString('base64'),'Content-Type':'application/x-www-form-urlencoded'},body:'grant_type=client_credentials',signal:AbortSignal.timeout(20000)});
- if(!response.ok)throw new ProviderError(response.status,'SANDBOX_OAUTH_FAILED');const data=z.object({access_token:z.string().min(1),expires_in:z.number()}).parse(await response.json());this.token=data.access_token;this.expires=Date.now()+Math.max(0,data.expires_in-60)*1000;return this.token;}
- private async call(path:string,method:string,body?:unknown,requestId?:string){const token=await this.accessToken();const headers:Record<string,string>={Authorization:'Bearer '+token,'Content-Type':'application/json',Prefer:'return=representation'};if(requestId)headers['PayPal-Request-Id']=requestId;
- const r=await this.transport(PayPalClient.base+path,{method,headers,body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(20000)});if(!r.ok){if(r.status===401){this.token=null;this.expires=0;}throw new ProviderError(r.status,'SANDBOX_API_FAILED');}return await r.json();}
- async createOrder(input:CreateOrder){if(!Number.isInteger(input.amountCents)||input.amountCents<=0)throw new Error('Invalid approved amount');return OrderSchema.parse(await this.call('/v2/checkout/orders','POST',{intent:'CAPTURE',purchase_units:[{custom_id:input.reference,amount:{currency_code:'USD',value:(input.amountCents/100).toFixed(2)}}],payment_source:{paypal:{experience_context:{return_url:input.returnUrl,cancel_url:input.cancelUrl,user_action:'PAY_NOW',shipping_preference:'NO_SHIPPING'}}}},input.requestId));}
- async getOrder(id:string){return OrderSchema.parse(await this.call('/v2/checkout/orders/'+encodeURIComponent(id),'GET'));}
- async captureOrder(id:string,requestId:string){return OrderSchema.parse(await this.call('/v2/checkout/orders/'+encodeURIComponent(id)+'/capture','POST',{},requestId));}
- async verifyWebhook(headers:Record<string,string|undefined>,event:unknown){if(!this.config.webhookId)return false;const required=['paypal-auth-algo','paypal-cert-url','paypal-transmission-id','paypal-transmission-sig','paypal-transmission-time'];if(required.some(k=>!headers[k]))return false;
- const cert=new URL(headers['paypal-cert-url']!);if(cert.protocol!=='https:'||cert.hostname!=='api.sandbox.paypal.com'||!cert.pathname.startsWith('/v1/notifications/certs/'))return false;
- const data=z.object({verification_status:z.string()}).parse(await this.call('/v1/notifications/verify-webhook-signature','POST',{auth_algo:headers['paypal-auth-algo'],cert_url:headers['paypal-cert-url'],transmission_id:headers['paypal-transmission-id'],transmission_sig:headers['paypal-transmission-sig'],transmission_time:headers['paypal-transmission-time'],webhook_id:this.config.webhookId,webhook_event:event}));return data.verification_status==='SUCCESS';}
- async probePayouts(){// Sandbox $0 real-money entitlement probe; one synthetic receiver and one stable batch ID.
- return this.call('/v1/payments/payouts','POST',{sender_batch_header:{sender_batch_id:'RESCUELEDGER-ENTITLEMENT-2026-01',email_subject:'RescueLedger synthetic sandbox probe'},items:[{recipient_type:'EMAIL',amount:{value:'0.01',currency:'USD'},receiver:'rescueledger-fictional-receiver@example.com',note:'Synthetic Sandbox entitlement probe',sender_item_id:'RL-PROBE-01'}]},'rescueledger-payout-probe-2026-01');}
+const Money = z.object({ currency_code: z.string(), value: z.string() });
+export const OrderSchema = z.object({
+  id: z.string().min(1).max(100),
+  status: z.string(),
+  purchase_units: z
+    .array(
+      z.object({
+        custom_id: z.string().optional(),
+        amount: Money.optional(),
+        payments: z
+          .object({
+            captures: z
+              .array(
+                z.object({
+                  id: z.string(),
+                  status: z.string(),
+                  final_capture: z.boolean().optional(),
+                  amount: Money,
+                }),
+              )
+              .optional(),
+          })
+          .optional(),
+      }),
+    )
+    .max(10)
+    .optional(),
+  links: z.array(z.object({ rel: z.string(), href: z.string() })).optional(),
+});
+export type Order = z.infer<typeof OrderSchema>;
+export type CreateOrder = {
+  reference: string;
+  amountCents: number;
+  requestId: string;
+  returnUrl: string;
+  cancelUrl: string;
+};
+export interface PayPalProvider {
+  configured: boolean;
+  createOrder(input: CreateOrder): Promise<Order>;
+  getOrder(id: string): Promise<Order>;
+  captureOrder(id: string, requestId: string): Promise<Order>;
+  verifyWebhook(headers: Record<string, string | undefined>, event: unknown): Promise<boolean>;
+}
+export class ProviderError extends Error {
+  constructor(
+    public status: number,
+    public code: string,
+  ) {
+    super(code);
+  }
+}
+export class PayPalClient implements PayPalProvider {
+  readonly configured: boolean;
+  private token: string | null = null;
+  private expires = 0;
+  static readonly base = 'https://api-m.sandbox.paypal.com';
+  constructor(
+    private config: { clientId?: string; clientSecret?: string; webhookId?: string },
+    private transport: typeof fetch = fetch,
+  ) {
+    this.configured = !!config.clientId && !!config.clientSecret;
+  }
+  private async accessToken() {
+    if (!this.configured) throw new ProviderError(503, 'SANDBOX_CREDENTIALS_MISSING');
+    if (this.token && this.expires > Date.now()) return this.token;
+    const response = await this.transport(PayPalClient.base + '/v1/oauth2/token', {
+      method: 'POST',
+      headers: {
+        Authorization:
+          'Basic ' +
+          Buffer.from(`${this.config.clientId}:${this.config.clientSecret}`).toString('base64'),
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: 'grant_type=client_credentials',
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!response.ok) throw new ProviderError(response.status, 'SANDBOX_OAUTH_FAILED');
+    const data = z
+      .object({ access_token: z.string().min(1), expires_in: z.number() })
+      .parse(await response.json());
+    this.token = data.access_token;
+    this.expires = Date.now() + Math.max(0, data.expires_in - 60) * 1000;
+    return this.token;
+  }
+  private async call(path: string, method: string, body?: unknown, requestId?: string) {
+    const token = await this.accessToken();
+    const headers: Record<string, string> = {
+      Authorization: 'Bearer ' + token,
+      'Content-Type': 'application/json',
+      Prefer: 'return=representation',
+    };
+    if (requestId) headers['PayPal-Request-Id'] = requestId;
+    const r = await this.transport(PayPalClient.base + path, {
+      method,
+      headers,
+      body: body === undefined ? undefined : JSON.stringify(body),
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!r.ok) {
+      if (r.status === 401) {
+        this.token = null;
+        this.expires = 0;
+      }
+      throw new ProviderError(r.status, 'SANDBOX_API_FAILED');
+    }
+    return await r.json();
+  }
+  async createOrder(input: CreateOrder) {
+    if (!Number.isInteger(input.amountCents) || input.amountCents <= 0)
+      throw new Error('Invalid approved amount');
+    return OrderSchema.parse(
+      await this.call(
+        '/v2/checkout/orders',
+        'POST',
+        {
+          intent: 'CAPTURE',
+          purchase_units: [
+            {
+              custom_id: input.reference,
+              amount: { currency_code: 'USD', value: (input.amountCents / 100).toFixed(2) },
+            },
+          ],
+          payment_source: {
+            paypal: {
+              experience_context: {
+                return_url: input.returnUrl,
+                cancel_url: input.cancelUrl,
+                user_action: 'PAY_NOW',
+                shipping_preference: 'NO_SHIPPING',
+              },
+            },
+          },
+        },
+        input.requestId,
+      ),
+    );
+  }
+  async getOrder(id: string) {
+    return OrderSchema.parse(
+      await this.call('/v2/checkout/orders/' + encodeURIComponent(id), 'GET'),
+    );
+  }
+  async captureOrder(id: string, requestId: string) {
+    return OrderSchema.parse(
+      await this.call(
+        '/v2/checkout/orders/' + encodeURIComponent(id) + '/capture',
+        'POST',
+        {},
+        requestId,
+      ),
+    );
+  }
+  async verifyWebhook(headers: Record<string, string | undefined>, event: unknown) {
+    if (!this.config.webhookId) return false;
+    const required = [
+      'paypal-auth-algo',
+      'paypal-cert-url',
+      'paypal-transmission-id',
+      'paypal-transmission-sig',
+      'paypal-transmission-time',
+    ];
+    if (required.some((k) => !headers[k])) return false;
+    let cert: URL;
+    try {
+      cert = new URL(headers['paypal-cert-url']!);
+    } catch {
+      return false;
+    }
+    if (
+      cert.protocol !== 'https:' ||
+      cert.hostname !== 'api.sandbox.paypal.com' ||
+      !cert.pathname.startsWith('/v1/notifications/certs/')
+    )
+      return false;
+    const data = z.object({ verification_status: z.string() }).parse(
+      await this.call('/v1/notifications/verify-webhook-signature', 'POST', {
+        auth_algo: headers['paypal-auth-algo'],
+        cert_url: headers['paypal-cert-url'],
+        transmission_id: headers['paypal-transmission-id'],
+        transmission_sig: headers['paypal-transmission-sig'],
+        transmission_time: headers['paypal-transmission-time'],
+        webhook_id: this.config.webhookId,
+        webhook_event: event,
+      }),
+    );
+    return data.verification_status === 'SUCCESS';
+  }
+  async probePayouts() {
+    // Sandbox $0 real-money entitlement probe; one synthetic receiver and one stable batch ID.
+    return this.call(
+      '/v1/payments/payouts',
+      'POST',
+      {
+        sender_batch_header: {
+          sender_batch_id: 'RESCUELEDGER-ENTITLEMENT-2026-01',
+          email_subject: 'RescueLedger synthetic sandbox probe',
+        },
+        items: [
+          {
+            recipient_type: 'EMAIL',
+            amount: { value: '0.01', currency: 'USD' },
+            receiver: 'rescueledger-fictional-receiver@example.com',
+            note: 'Synthetic Sandbox entitlement probe',
+            sender_item_id: 'RL-PROBE-01',
+          },
+        ],
+      },
+      'rescueledger-payout-probe-2026-01',
+    );
+  }
 }

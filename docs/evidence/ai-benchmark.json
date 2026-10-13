@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-10-13T02:47:54.190Z",
+  "executedAt": "2026-10-13T03:14:26.208Z",
   "category": "executed-real-local-ai-inference",
   "model": "Xenova/all-MiniLM-L6-v2",
   "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
@@ -25,14 +25,14 @@
     "trueNegatives": 6,
     "precision": 1,
     "recall": 0.8333333333333334,
-    "loadMilliseconds": 382.046918,
-    "inferenceMilliseconds": 196.74897999999996,
+    "loadMilliseconds": 347.39614,
+    "inferenceMilliseconds": 57.33255600000024,
     "inferenceBatches": 13,
-    "totalMilliseconds": 589.2451040000001,
-    "baselineRssBytes": 61390848,
-    "finalRssBytes": 226189312,
-    "rssIncreaseBytes": 164798464,
-    "processPeakRssBytes": 232177664
+    "totalMilliseconds": 407.48884,
+    "baselineRssBytes": 60858368,
+    "finalRssBytes": 223318016,
+    "rssIncreaseBytes": 162459648,
+    "processPeakRssBytes": 230723584
   },
   "assets": [
     {
@@ -85,7 +85,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 48.704636999999934
+      "milliseconds": 6.5630669999999895
     },
     {
       "id": "battery-paraphrase",
@@ -100,7 +100,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 14.672150999999985
+      "milliseconds": 5.004001000000017
     },
     {
       "id": "medical-paraphrase",
@@ -110,7 +110,7 @@
       "similarity": 0.5897200902884364,
       "reviewRecommended": false,
       "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 10.192375999999967
+      "milliseconds": 5.248709000000019
     },
     {
       "id": "fuel-paraphrase",
@@ -125,7 +125,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 7.31221000000005
+      "milliseconds": 4.026460000000043
     },
     {
       "id": "beds-paraphrase",
@@ -140,7 +140,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 52.64543000000003
+      "milliseconds": 4.804309999999987
     },
     {
       "id": "blankets-paraphrase",
@@ -155,7 +155,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 7.914337000000046
+      "milliseconds": 4.3941129999999475
     },
     {
       "id": "water-vs-bus",
@@ -165,7 +165,7 @@
       "similarity": 0.3393803297169197,
       "reviewRecommended": false,
       "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 11.478812999999946
+      "milliseconds": 4.087541999999985
     },
     {
       "id": "battery-vs-food",
@@ -175,7 +175,7 @@
       "similarity": 0.054200823723587296,
       "reviewRecommended": false,
       "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 10.454831000000013
+      "milliseconds": 3.6219110000000683
     },
     {
       "id": "medical-vs-fuel",
@@ -185,7 +185,7 @@
       "similarity": 0.0359525646220617,
       "reviewRecommended": false,
       "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 11.554116000000022
+      "milliseconds": 3.626619000000005
     },
     {
       "id": "beds-vs-radio",
@@ -195,7 +195,7 @@
       "similarity": 0.1911369631837325,
       "reviewRecommended": false,
       "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 10.089771000000042
+      "milliseconds": 3.3072670000000244
     },
     {
       "id": "blankets-vs-pump",
@@ -205,7 +205,7 @@
       "similarity": 0.3611710973711798,
       "reviewRecommended": false,
       "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 8.758238000000006
+      "milliseconds": 3.692647000000079
     },
     {
       "id": "near-domain-distinct",
@@ -215,7 +215,7 @@
       "similarity": 0.38690188902116346,
       "reviewRecommended": false,
       "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 4.913928000000055
+      "milliseconds": 3.7943910000000187
     }
   ],
   "limitations": [

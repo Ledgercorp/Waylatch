@@ -1,0 +1,17 @@
+
+> crisiscodec@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/crisiscodec-verification
+
+ ✓ tests/server.test.ts (18 tests) 674ms
+   ✓ real WebSocket room relay > caps peers and expires relay sessions  313ms
+ ✓ tests/core.test.ts (11 tests) 103ms
+ ✓ tests/network.test.ts (9 tests) 139ms
+
+ Test Files  3 passed (3)
+      Tests  38 passed (38)
+   Start at  02:47:33
+   Duration  2.84s (transform 206ms, setup 0ms, collect 807ms, tests 915ms, environment 1ms, prepare 280ms)
+

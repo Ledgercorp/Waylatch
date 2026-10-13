@@ -2,11 +2,7 @@
   "commit": "8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f",
   "original_git_status": "",
   "disposable_copy": "/workspace/crisiscodec-verification",
-  "commands": [
-    "npm ci --ignore-scripts --no-audit --no-fund",
-    "npm test",
-    "npm run test:e2e"
-  ],
+  "commands": ["npm ci --ignore-scripts --no-audit --no-fund", "npm test", "npm run test:e2e"],
   "results": {
     "unit_integration_passed": 38,
     "browser_passed": 7

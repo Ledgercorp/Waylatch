@@ -18,7 +18,8 @@
     "format:check": "prettier --check src server tests scripts docs *.ts *.json public/*.js",
     "model:download": "tsx scripts/download-model.ts",
     "paypal:integration": "tsx scripts/sandbox-integration.ts",
-    "audit:validate": "tsx scripts/validate-audit.ts"
+    "audit:validate": "tsx scripts/validate-audit.ts",
+    "release:check": "tsx scripts/check-release.ts"
   },
   "dependencies": {
     "@huggingface/transformers": "^3.8.1",

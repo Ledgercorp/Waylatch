@@ -1,0 +1,36 @@
+
+> crisiscodec@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:2219) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] node_modules/zod/v4/core/regexes.js (74:0): A comment
+[WebServer] 
+[WebServer] "/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+[WebServer]  * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+[WebServer]  * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+[WebServer] 
+[WebServer] in "node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+[WebServer] node_modules/zod/v4/core/util.js (400:0): A comment
+[WebServer] 
+[WebServer] "// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+[WebServer] 
+[WebServer] in "node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+[WebServer] (node:2250) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:2280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/app.spec.ts:9:1 › capture, two-client relay, constrained delivery and delta update (10.9s)
+  ✓  2 tests/app.spec.ts:43:1 › offline capture persists across reload after service worker caches application (1.3s)
+  ✓  3 tests/app.spec.ts:72:1 › exports a QR image and decodes it through receiver import (1.2s)
+  ✓  4 tests/app.spec.ts:89:1 › mobile screens have no horizontal overflow and keyboard navigation (864ms)
+  ✓  5 tests/app.spec.ts:104:1 › freezes source edits during extraction and requires fresh human approval (494ms)
+  ✓  6 tests/app.spec.ts:129:1 › reconstructs a full report using only offline QR images and persists receiver state (3.6s)
+  ✓  7 tests/app.spec.ts:171:1 › operator screens meet automated WCAG A and AA checks (3.7s)
+
+  7 passed (34.9s)
