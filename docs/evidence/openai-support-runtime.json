@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-13T19:38:04Z",
+  "reportedSavedEnvironment": {
+    "id": "79e2602645508191bbaa0e5bd232597f",
+    "revision": 13,
+    "source": "Owner-provided identifier/revision and attached settings screenshot; not queried through provider API",
+    "screenshotObservations": {
+      "internetAccessEnabled": true,
+      "preset": "Package managers",
+      "additionalAllowedDomains": [
+        "api-m.sandbox.paypal.com"
+      ],
+      "publicationStatusVisible": false,
+      "environmentIdVisible": false,
+      "revisionVisible": false
+    },
+    "reportedProxyConnectStatus": 403,
+    "proxyConnect403IndependentlyVerified": false
+  },
+  "threadManagedInstance": {
+    "environment_id": "ccarenv_b64_Y2NhcmVudl9kOGJmM2Y0YmFlMjg4MTkxOTUxMTE4YTY0MTY3YWZkYg",
+    "source_config_id": null,
+    "source_config_version_id": null,
+    "spec_revision": "68",
+    "observed_spec_revision": "68",
+    "observations_current": true,
+    "provider": "cloud",
+    "desired_phase": "running",
+    "observed_phase": "running",
+    "failure": null,
+    "connectivity": "connected",
+    "network_policy": {
+      "mode": "unrestricted",
+      "state": "enforced"
+    },
+    "capabilities": [],
+    "secrets": [],
+    "runtime_variables": [],
+    "outbound_identities": []
+  },
+  "decodedManagedInstanceId": "ccarenv_d8bf3f4bae288191951118a64167afdb",
+  "executorPolicySnapshot": {
+    "path": "/etc/codex/network-policy.json",
+    "version": 1,
+    "vpn_configured": false,
+    "http_proxy": "http://proxy:8080",
+    "http_network_policy": {
+      "type": "unrestricted"
+    },
+    "tcp_connect_proxy": "http://proxy:8088",
+    "tcp_network_access": {
+      "domains": [],
+      "ip_ranges": []
+    }
+  },
+  "inspectionLimitations": [
+    "Runtime status describes the thread managed instance, not editable saved drafts or extra attached environments.",
+    "No available tool reads saved environment 79e2602645508191bbaa0e5bd232597f revision 13, publication history or task attachment mapping.",
+    "No workspace Agent Security/global-policy read tool is available.",
+    "Saved revision 13 and managed instance spec revision 68 cannot be compared as one version sequence without the missing source mapping."
+  ],
+  "existingTransportEvidence": "paypal-network-current.json",
+  "existingAuthEvidence": "paypal-oauth.json",
+  "authenticatedSandboxOAuthSucceeded": false,
+  "rootCause": "Unresolved: saved environment/task association and publication/application history cannot be inspected."
+}

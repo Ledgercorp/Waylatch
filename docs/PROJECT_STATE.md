@@ -1,3 +1,11 @@
+# Saved-environment comparison and support preparation — 2026-10-13
+
+Owner identifies saved Waylatch environment79e2602645508191bbaa0e5bd232597f revision13. Screenshot confirms internet enabled, Package managers preset and the already-added Sandbox hostname. Saved publication/application history and attachment mapping are inaccessible through available tools. Thread-managed instance separately reports ccarenv_d8bf3f4bae288191951118a64167afdb spec/observed revision68, current unrestricted/enforced HTTP policy, null source configuration IDs. These revision namespaces cannot be equated. Workspace/global restrictions are not readable.
+
+Prepared [OPENAI_SUPPORT_REPORT.md](OPENAI_SUPPORT_REPORT.md) with exact safe metadata and the owner's reported CONNECT403 distinguished from this executor's CONNECT200/HTTP403 root and CONNECT200/HTTP401 OAuth-path evidence. No report sent, no request to add the hostname/re-enter keys, no application modification or unrelated suite rerun. Root cause remains unresolved; genuine authenticated OAuth has not succeeded. Private repository and existing release assets preserved. $0 spent.
+
+---
+
 # Latest Sandbox endpoint check — 2026-10-13
 
 Continued from verified private main/candidate `7393ff0a8eb500a9416e91ce6037c1d62948046d`. The exact OAuth endpoint is reachable through the configured proxy: unauthenticated POST returns HTTP401 / invalid_client with CONNECT200 and verified TLS. Root HEAD403 does not establish an environment allowlist or higher-level managed-network denial. No PayPal code or credentials changed.

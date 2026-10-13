@@ -1,3 +1,11 @@
+# Saved-environment support comparison — 2026-10-13
+
+Fresh runtime metadata: current thread-managed instance ccarenv_d8bf3f4bae288191951118a64167afdb, spec/observed revision68, unrestricted/enforced HTTP policy, null source configuration IDs. Executor policy snapshot remains HTTP unrestricted, with separate empty TCP grants. User screenshot confirms requested internet/domain settings; saved environment79e2602645508191bbaa0e5bd232597f revision13/publication and workspace-policy data remain uninspectable. The skill/tool explicitly excludes extra attached environments and drafts from this runtime observation.
+
+Existing proxy/OAuth evidence reviewed without re-running network/auth or unrelated suites. Owner-reported CONNECT403 is not independently evidenced in this executor's saved logs; local logs show CONNECT200 followed by HTTP403 root / HTTP401 invalid_client OAuth endpoint. No successful authenticated OAuth or financial operation is claimed. Sanitized support draft and metadata: OPENAI_SUPPORT_REPORT.md, evidence/openai-support-runtime.json. Document formatting and diff integrity checked before private synchronization; no app code or credential/policy changes.
+
+---
+
 # Latest targeted endpoint diagnostic — 2026-10-13
 
 From private checkpoint7393ff0a8eb500a9416e91ce6037c1d62948046d: proxy-aware TLS-verified HEAD root returned403, but credential-free POST to the exact Sandbox OAuth path returned401 / invalid_client. Both CONNECT statuses200 and TLS results0. No environment HTTP allowlist denial or higher-level managed-network block is established for this OAuth request. This was an actual unauthenticated endpoint probe, not successful application OAuth.

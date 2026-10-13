@@ -1,3 +1,9 @@
+# Saved-environment comparison — 2026-10-13
+
+Do not repeat hostname/credential editor steps. The supplied screenshot confirms the Sandbox hostname already exists under internet-enabled Package managers settings. Saved environment79e2602645508191bbaa0e5bd232597f revision13 cannot be inspected for publication or attachment through available tools. Thread-managed instance spec revision68 is a different namespace with null source IDs, not proof of saved revision13 being applied or stale. Root cause unresolved; see [OPENAI_SUPPORT_REPORT.md](OPENAI_SUPPORT_REPORT.md). Keep the owner's reported CONNECT403 separate from locally recorded CONNECT200 then HTTP403/401. No code/policy modification, support message or automatic task switch was performed. Genuine authenticated Sandbox OAuth is the required success gate.
+
+---
+
 # Latest transport result — 2026-10-13
 
 Use the current private release-candidate ref; the alias resolver is already implemented. Exact OAuth POST responds HTTP401 / invalid_client without credentials, with successful CONNECT and TLS. Root HEAD403 is not an established network blocker. Current executor still reports no requested variables, bindings or source-config association, and auth exits2 before transport. Do not rename keys or change PayPal networking code. This observation does not establish the contents of the owner's separate published environment. See [PAYPAL_NETWORK_DIAGNOSIS.md](PAYPAL_NETWORK_DIAGNOSIS.md). No task switch or background continuation is scheduled.

@@ -1,3 +1,9 @@
+# Saved configuration / runtime association remains unverified
+
+The owner-provided saved environment79e2602645508191bbaa0e5bd232597f revision13 already contains the correct Sandbox hostname, confirmed in the screenshot. Available tools cannot inspect its publication history, resolved policy, task attachment or workspace/global restrictions. Thread-managed metadata exposes a different instance ID, revision68, null source association and unrestricted/enforced HTTP policy; it does not cover extra attached environments. No cause can be conclusively selected among stale publication, attachment mismatch, saved-but-unapplied policy or higher-level restriction. Support draft: [OPENAI_SUPPORT_REPORT.md](OPENAI_SUPPORT_REPORT.md). No domain/credential/configuration repetition requested. Not fixed: authenticated Sandbox OAuth remains unexecuted.
+
+---
+
 # Latest verified blocker — 2026-10-13
 
 **OAuth endpoint connectivity is demonstrated:** credential-free POST returns401 / invalid_client after successful CONNECT and TLS. Root HEAD403 does not establish an HTTP allowlist or higher-level proxy restriction on OAuth. No PayPal code change or expanded network request is warranted by this evidence.

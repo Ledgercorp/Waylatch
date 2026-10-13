@@ -1,3 +1,9 @@
+# Configuration-to-runtime association remains unresolved
+
+The owner already configured the Sandbox hostname in saved environment79e2602645508191bbaa0e5bd232597f revision13; screenshot confirms it. Saved publication/attachment and workspace enforcement cannot be read through current tools. Thread-managed spec revision68 is a separate context with null source association. [OPENAI_SUPPORT_REPORT.md](OPENAI_SUPPORT_REPORT.md) compares evidence and preserves the distinction between reported CONNECT403 and recorded CONNECT200/HTTP403. Do not repeat hostname/key instructions or alter payment code. This issue is not fixed until actual authenticated Sandbox OAuth succeeds.
+
+---
+
 # Latest endpoint verification — 2026-10-13
 
 Credential-free OAuth POST is reachable: CONNECT200, verified TLS, HTTP401 with invalid_client. Root HEAD403 is insufficient evidence of an environment allowlist or managed-network block. Existing `npm run paypal:auth` exits2 before its authenticated transport because this executor still has neither client ID nor either accepted secret name. No invalid-credential/placeholder rejection is established; no actual application OAuth or financial operation occurred. Resolver and human gates are unchanged. See [PAYPAL_NETWORK_DIAGNOSIS.md](PAYPAL_NETWORK_DIAGNOSIS.md) and fresh evidence JSON. No unrelated suites rerun or credential reconfiguration requested.
