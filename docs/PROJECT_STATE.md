@@ -1,6 +1,6 @@
 # RescueLedger durable project state
 
-2026-10-13. Branch: **feat/rescueledger-mvp**. First verified milestone: **5bb6e37**. Final milestone and artifact hashes are recorded in the session report/artifact manifest; this file is an index, not source authority. Validate live Git and tests on resume.
+2026-10-13. Branch: **feat/rescueledger-mvp**. Verified milestones: **5bb6e37** (foundation), **407122d** (hardening/release preparation). Final milestone and artifact hashes are recorded in the session report/artifact manifest; this file is an index, not source authority. Validate live Git and tests on resume.
 
 ## Implemented
 
@@ -10,7 +10,7 @@ Release-preparation artifacts: reproducible README, architecture/security/protoc
 
 ## Verification
 
-`npm test`: **40 passed**. `npm run test:e2e`: **7 passed**, including real AI endpoint, offline reload, two-context QR transfer, claim/audit/mobile and axe. `npm run build` and source format check passed. CPU model inference executed; synthetic calibration TP5/FP0/FN1/TN6. Independent CrisisCodec: **38 unit/integration + 7 browser tests passed**. Four real reproduced failure-classification/retry bugs fixed with regressions. Separate-process PayPal simulator is explicitly a simulator, not real account evidence. See VERIFICATION.md and docs/evidence/.
+`npm test`: **40 passed**. `npm run test:e2e`: **7 passed**, including real AI endpoint, offline reload, two-context QR transfer, claim/audit/mobile and axe. `npm run build` and source format check passed. CPU model inference executed; synthetic calibration TP5/FP0/FN1/TN6. Independent CrisisCodec: **38 unit/integration + 7 browser tests passed**. Four real reproduced failure-classification/retry bugs fixed with regressions. Clean archived-source installation independently passed the same 40 tests/build/model download/inference and seven browser tests. An archive-only release-checker failure was reproduced and corrected. Separate-process PayPal simulator is explicitly a simulator, not real account evidence. See VERIFICATION.md and docs/evidence/.
 
 ## Repository and budget
 

@@ -1,0 +1,12 @@
+
+> rescueledger@0.1.0 model:download
+> tsx scripts/download-model.ts
+
+Downloaded and verified config.json (650 bytes)
+Downloaded and verified tokenizer.json (711661 bytes)
+Downloaded and verified tokenizer_config.json (366 bytes)
+Downloaded and verified special_tokens_map.json (125 bytes)
+Downloaded and verified vocab.txt (231508 bytes)
+Downloaded and verified README.md (1767 bytes)
+Downloaded and verified onnx/model_quantized.onnx (22972370 bytes)
+Pinned Apache-2.0 model ready. App runtime permits local assets only.

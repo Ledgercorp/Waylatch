@@ -1,0 +1,255 @@
+{
+  "executedAt": "2026-10-13T03:20:40.678Z",
+  "category": "executed-real-local-ai-inference",
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "license": "Apache-2.0",
+  "dtype": "q8",
+  "embeddingDimensions": 384,
+  "threshold": 0.6,
+  "thresholdChosenBeforeBenchmark": false,
+  "calibration": "Initial 0.78 threshold missed all six positive paraphrases. 0.60 was selected after inspecting these synthetic fixtures; these results are calibration-set measurements, not a held-out accuracy estimate. Initial evidence retained in ai-baseline-078.json.",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "transformers": "3.8.1",
+    "threads": 2,
+    "remoteModelsAllowed": false
+  },
+  "metrics": {
+    "truePositives": 5,
+    "falsePositives": 0,
+    "falseNegatives": 1,
+    "trueNegatives": 6,
+    "precision": 1,
+    "recall": 0.8333333333333334,
+    "loadMilliseconds": 434.112572,
+    "inferenceMilliseconds": 67.32937199999992,
+    "inferenceBatches": 13,
+    "totalMilliseconds": 504.07113000000004,
+    "baselineRssBytes": 61087744,
+    "finalRssBytes": 225976320,
+    "rssIncreaseBytes": 164888576,
+    "processPeakRssBytes": 230633472
+  },
+  "assets": [
+    {
+      "file": "config.json",
+      "bytes": 650,
+      "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 711661,
+      "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 366,
+      "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    {
+      "file": "vocab.txt",
+      "bytes": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1767,
+      "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02"
+    },
+    {
+      "file": "onnx/model_quantized.onnx",
+      "bytes": 22972370,
+      "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+    }
+  ],
+  "results": [
+    {
+      "id": "water-paraphrase",
+      "duplicate": true,
+      "left": "Twenty cases of bottled drinking water for the flood shelter",
+      "right": "20 cartons of bottled water for people staying at the flood evacuation shelter",
+      "similarity": 0.7613763540138553,
+      "reviewRecommended": true,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours",
+        "Semantically similar expense description"
+      ],
+      "milliseconds": 6.575468999999998
+    },
+    {
+      "id": "battery-paraphrase",
+      "duplicate": true,
+      "left": "AA batteries for responder headlamps during shelter night shifts",
+      "right": "Double A replacement batteries for emergency team head torches at night",
+      "similarity": 0.6314452551452492,
+      "reviewRecommended": true,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours",
+        "Semantically similar expense description"
+      ],
+      "milliseconds": 4.711502999999993
+    },
+    {
+      "id": "medical-paraphrase",
+      "duplicate": true,
+      "left": "First aid kits with bandages and antiseptic for evacuees",
+      "right": "Emergency medical supply packs containing dressings and disinfectant for displaced families",
+      "similarity": 0.5897200902884364,
+      "reviewRecommended": false,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 5.932059999999979
+    },
+    {
+      "id": "fuel-paraphrase",
+      "duplicate": true,
+      "left": "Diesel fuel to refill the shelter backup generator",
+      "right": "Purchase diesel for refueling the emergency accommodation power generator",
+      "similarity": 0.7123538057902058,
+      "reviewRecommended": true,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours",
+        "Semantically similar expense description"
+      ],
+      "milliseconds": 4.741118000000029
+    },
+    {
+      "id": "beds-paraphrase",
+      "duplicate": true,
+      "left": "Thirty folding cots for overnight shelter accommodation",
+      "right": "30 portable folding camp beds for evacuees sleeping at the shelter",
+      "similarity": 0.750113806701278,
+      "reviewRecommended": true,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours",
+        "Semantically similar expense description"
+      ],
+      "milliseconds": 5.030422000000044
+    },
+    {
+      "id": "blankets-paraphrase",
+      "duplicate": true,
+      "left": "Warm blankets for flood evacuees at the temporary shelter",
+      "right": "Thermal bedding blankets for displaced residents in emergency accommodation",
+      "similarity": 0.6820319813164846,
+      "reviewRecommended": true,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours",
+        "Semantically similar expense description"
+      ],
+      "milliseconds": 4.185610999999994
+    },
+    {
+      "id": "water-vs-bus",
+      "duplicate": false,
+      "left": "Bottled drinking water for the flood shelter",
+      "right": "Bus rental to transport evacuees from the flood zone",
+      "similarity": 0.3393803297169197,
+      "reviewRecommended": false,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 4.091670000000022
+    },
+    {
+      "id": "battery-vs-food",
+      "duplicate": false,
+      "left": "AA batteries for responder headlamps",
+      "right": "Rice and canned beans for shelter meals",
+      "similarity": 0.054200823723587296,
+      "reviewRecommended": false,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 5.430213999999978
+    },
+    {
+      "id": "medical-vs-fuel",
+      "duplicate": false,
+      "left": "First aid kits with bandages and antiseptic",
+      "right": "Diesel fuel for the backup generator",
+      "similarity": 0.0359525646220617,
+      "reviewRecommended": false,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 3.6614319999999907
+    },
+    {
+      "id": "beds-vs-radio",
+      "duplicate": false,
+      "left": "Folding cots for overnight accommodation",
+      "right": "Two-way radios for coordinating volunteer teams",
+      "similarity": 0.1911369631837325,
+      "reviewRecommended": false,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 5.084423999999899
+    },
+    {
+      "id": "blankets-vs-pump",
+      "duplicate": false,
+      "left": "Warm bedding blankets for flood evacuees",
+      "right": "Submersible pumps to remove flood water from buildings",
+      "similarity": 0.3611710973711798,
+      "reviewRecommended": false,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 7.974303000000077
+    },
+    {
+      "id": "near-domain-distinct",
+      "duplicate": false,
+      "left": "Bottled drinking water for shelter residents",
+      "right": "Waterproof storage containers for keeping medical supplies dry",
+      "similarity": 0.38690188902116346,
+      "reviewRecommended": false,
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 4.120732999999973
+    }
+  ],
+  "limitations": [
+    "12 synthetic English examples are a smoke benchmark, not a representative accuracy evaluation.",
+    "Semantic similarity and review recommendations are not evidence of fraud.",
+    "Memory and timing depend on host and cannot establish mobile/browser compatibility.",
+    "Model download requires network once; runtime is Node CPU local inference with pinned assets."
+  ]
+}

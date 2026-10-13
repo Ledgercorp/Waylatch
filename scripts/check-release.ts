@@ -1,9 +1,39 @@
 import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-const tracked = execFileSync('git', ['ls-files', '-z'], { encoding: 'utf8' })
-  .split('\0')
-  .filter(Boolean);
+let sourceMode = 'git-index';
+let tracked: string[];
+try {
+  tracked = execFileSync('git', ['ls-files', '-z'], {
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'ignore'],
+  })
+    .split('\0')
+    .filter(Boolean);
+} catch {
+  sourceMode = 'source-archive-runtime-files-excluded';
+  const excluded = new Set([
+    '.git',
+    'node_modules',
+    'dist',
+    'data',
+    'models',
+    '.cache',
+    'test-results',
+    'playwright-report',
+  ]);
+  const sourceFiles = (dir: string): string[] =>
+    readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+      if (
+        excluded.has(entry.name) ||
+        (entry.name.startsWith('.env') && entry.name !== '.env.example')
+      )
+        return [];
+      const path = join(dir, entry.name);
+      return entry.isDirectory() ? sourceFiles(path) : [path];
+    });
+  tracked = sourceFiles('.');
+}
 const findings: string[] = [];
 const secrets = [
   'PAYPAL_CLIENT_SECRET',
@@ -43,6 +73,7 @@ console.log(
   JSON.stringify({
     category: 'local-static-release-check',
     trackedFiles: tracked.length,
+    sourceMode,
     findings,
     scope:
       'Configured-secret and specific-pattern scan; not a comprehensive secret/security certification',

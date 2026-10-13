@@ -35,7 +35,7 @@ Four substantiated defects were corrected with red/green regression evidence: ro
 
 Actual Sandbox order create/buyer approval/capture; real public HTTPS signature-verified webhook receipt; Payouts entitlement and reimbursement execution; public repository/license adoption; public YouTube video; owner eligibility/registration/legal consent and final Devpost submission. The project is **not submission-complete**.
 
-No hosted demo was deployed. Repository execution remains the chosen permitted route. Clean-source install/reproduction evidence is recorded when executed; no blanket claim of production/emergency readiness.
+No hosted demo was deployed. Repository execution remains the chosen permitted route. Clean source at commit 407122d was unpacked with `git archive HEAD`, then `ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm ci --no-fund --no-audit`, `npm test` (40 passed), `npm run build`, `npm run model:download` (all seven pinned assets downloaded and verified), `npm run test:ai` (actual inference), and `npm run test:e2e` (7 passed) executed successfully. The release checker initially failed without `.git`; the corrected checker was copied into that source copy and its archive-mode scan plus source format check passed. `clean-*.log` and `ai-clean-reproduction.json` retain evidence. No blanket claim of production/emergency readiness.
 
 ## 5. Blockers
 

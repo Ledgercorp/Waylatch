@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-13",
+  "environment": "sandbox",
+  "credentials": "absent",
+  "orders": "BLOCKED_CREDENTIALS_MISSING",
+  "capture": "NOT_EXECUTED",
+  "payoutProbe": "NOT_EXECUTED_CREDENTIALS_MISSING",
+  "realWebhookReceipt": "NOT_EXECUTED_NO_HTTPS_OR_WEBHOOK_ID",
+  "realMoneyUsed": 0,
+  "mockSuccessClaimed": false
+}
