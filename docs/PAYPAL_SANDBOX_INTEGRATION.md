@@ -68,3 +68,13 @@ Cloudflare's current [Quick Tunnels documentation](https://developers.cloudflare
 ## Integration harness authorization defect corrected
 
 A separate-process CLI cancellation test reproduced review being recorded before an operator confirmed it. The harness now displays the fictional details and requires REVIEW before writing human_review_completed, AUTHORIZE before purchase approval/order creation, and CAPTURE after actual buyer approval. Two regression tests confirm cancelled review stays pending and cancelled purchase performs zero provider financial calls. All CLI regression evidence uses local doubles, not PayPal.
+
+## Private engineering candidate — latest continuation
+
+The fresh OAuth diagnostic again exited2 with SANDBOX_CREDENTIALS_MISSING, requestExecuted=false and no HTTP status. The purchasing harness also exited2 before any request. Runtime metadata exposes source_config_id=null, no configured secret bindings and no credential-mutation API. The environment ID matches the original session, but no saved-environment publication time or source association can be inspected. See CLOUD_CONTINUATION.md and evidence/cloud-runtime.json; no claim is made that the owner entered invalid PayPal credentials.
+
+The actual integration fixture is now **one fictional test item, quantity1, exact USD1.00**, revision1. Displayed amount, server approval payload and retained evidence derive from the same record. REVIEW, AUTHORIZE and CAPTURE remain mandatory; this task has not supplied those decisions or made a provider operation. Local cancellation tests confirm review/authorization cannot silently proceed.
+
+`npm run webhook:gateway` starts the callback-only listener on 127.0.0.1:4180 and forwards only the exact POST /api/webhooks/paypal route to the configured loopback backend. It accepts bounded uncompressed JSON and bounded required signature headers, preserves callback bytes, strips cookies/Authorization, rejects redirects and returns retryable failure when verification is unavailable. Nine local gateway tests use a local upstream fixture, not PayPal signature verification. Existing backend tests continue to cover actual production verification contracts, event deduplication and retryable reconciliation with labeled doubles.
+
+Cloudflared2026.10.0 was downloaded from its official release and SHA-256 verified. A bounded Quick Tunnel attempt failed at api.trycloudflare.com:443 with TCP connection refused. No tunnel, paid resource, webhook subscription or callback was created. No network/TLS bypass was attempted. Keep all financial mutation endpoints private; do not tunnel the full backend merely to work around this blocker. Real callback testing remains optional after the primary genuine capture milestone.

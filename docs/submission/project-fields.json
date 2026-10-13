@@ -1,0 +1,45 @@
+{
+  "prepared": true,
+  "createdOnDevpost": false,
+  "submitted": false,
+  "publicationAuthorized": false,
+  "createProjectArguments": {
+    "name": "Waylatch",
+    "hackathon_subdomain": "paypalaihackathon",
+    "tagline": "Offline-ready emergency procurement and accountable payments. From field need to verified action.",
+    "built_with": [
+      "paypal",
+      "react",
+      "typescript",
+      "vite",
+      "node.js",
+      "express",
+      "sqlite",
+      "indexeddb",
+      "service-workers",
+      "zod",
+      "messagepack",
+      "qrcode",
+      "jsqr",
+      "transformers.js",
+      "onnx",
+      "minilm",
+      "sha-256",
+      "vitest",
+      "playwright",
+      "axe-core",
+      "github"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/Ledgercorp/Waylatch"
+      }
+    ],
+    "description": "# Devpost project draft \u2014 release review required\n\n## Project name / tagline\n\nWaylatch \u2014 Offline-ready emergency procurement and accountable payments.\n\nTagline: From field need to verified action.\n\n## Problem and audience\n\nField responders, volunteer coordinators and nonprofit teams may need to request supplies before reliable connectivity returns. Lost requests and duplicate expense records make later authorization and reconciliation harder. Waylatch preserves the request, carries it between devices and maintains a clear boundary between AI evidence and human financial authority.\n\n## What it does\n\nA field request survives offline reload in IndexedDB. Compact MessagePack QR packets reconstruct it on another device, preserving unknown fields and import provenance. A local MiniLM embedding model compares descriptions alongside exact receipt, amount, incident and time indicators. A human records a disposition and explicitly approves a frozen procurement revision. PayPal Sandbox Orders v2 supplies buyer approval and capture, while authoritative order inspection reconciles the resulting payment. SHA-256-linked events connect record, review, approval and transaction references. Separate incurred-expense claims receive human review without becoming purchase orders.\n\n**Accuracy note for this draft:** real local inference and offline transfers are executed. The Sandbox client is implemented and contract-tested, but actual account checkout/capture is pending secure credentials. Payouts is blocked/unimplemented, not a completed reimbursement transfer. Update the final description only after real evidence exists. Do not submit this draft as a functioning financial demonstration yet.\n\n## How we built it\n\nReact, TypeScript and Vite supply a responsive four-stage command interface. IndexedDB and a production service worker preserve field continuity. Strict Zod validation and bounded MessagePack/CRC32 envelopes treat imports as untrusted. Node 24 / Express and built-in SQLite hold durable review, authorization, reservations and audit events. The official Sandbox REST APIs handle OAuth, Orders v2 creation/details/capture and webhook signature verification. Pinned Apache-2.0 MiniLM ONNX weights run through Transformers.js on local CPU without external inference calls. AI recommendations cannot execute or reject a payment.\n\n## Innovation / impact\n\nThe integration makes connectivity loss part of procurement operations: field capture, a disconnected handoff, explainable duplicate review, explicit financial authorization and reconciliation are one continuous product flow. CRCs do not masquerade as authentication, semantic similarity does not masquerade as fraud certainty, and unknown data cannot silently become payment authority.\n\nThis is a synthetic prototype for a specific operational problem, not evidence of emergency readiness. Impact requires testing with representative organizations and field workflows before real-world deployment.\n\n## New work and reuse\n\nThe original RescueLedger implementation was created during the 2026 submission period and continues as Waylatch without rebuilding or rewriting its history. With owner authorization, it selectively adapts CrisisCodec's codec/reconstruction primitives at commit 8ca845c; request/claim domain, guarded PayPal integration, local semantic review, audit chain and visual product are new work. CrisisCodec UI/domain behavior was not cloned. Exact source adaptation and rights limitations are disclosed in CRISISCODEC_REUSE.md.\n\n## Technology list\n\nPayPal Developer Platform (Sandbox OAuth, Orders v2, browser buyer approval, capture/details, webhook signature-verification API); React; TypeScript; Vite; Node.js 24; Express; SQLite (node:sqlite); IndexedDB/idb; Service Worker API; Zod; MessagePack (@msgpack/msgpack); qrcode; jsQR; Transformers.js; ONNX Runtime CPU; Xenova/all-MiniLM-L6-v2 (Apache-2.0, q8); SHA-256/Web Crypto; Vitest; Playwright; axe-core; Git/GitHub; Python (model asset downloader only).\n\nNo Nebius, paid inference, Tavily critical dependency, credit/lending service or live PayPal mode. Payouts probe support is not a completed reimbursement integration.\n\n## What remains before submission\n\nReal Sandbox capture evidence, optional real verified webhook callback, approved root license/public repository, public YouTube demonstration under three minutes, owner registration/representation/legal consent and final Devpost approval.\n"
+  },
+  "video_url": null,
+  "customAnswers": "Unavailable: connector requirement query returned internal error. Do not invent submission_field_id or required-answer options.",
+  "personalEligibility": "Owner must confirm; not inferred.",
+  "registrationStatus": "Unknown: whoami/list_hackathons/list_my_projects returned internal error.",
+  "videoAsset": "docs/demo/waylatch-engineering-preview.mp4; private engineering preview, no actual Sandbox transaction footage."
+}

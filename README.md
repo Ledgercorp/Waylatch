@@ -94,3 +94,13 @@ Subscribe a **Sandbox** app to `PAYMENT.CAPTURE.COMPLETED` and configure a publi
 The authentic implementation history is synchronized to the private repository https://github.com/Ledgercorp/Waylatch. The original `feat/rescueledger-mvp` branch and recovery archives remain preserved. Public visibility is not authorized.
 
 Root license adoption is **pending owner approval**. `docs/LICENSE-MIT-PROPOSAL.txt` is a proposal and does not license this private repository. CrisisCodec code was selectively adapted with the owner's authorization; its original source also has no adopted root license. Dependencies/models retain their own notices. Do not change visibility or submit until ownership, license, public release and final submission approvals are complete.
+
+## Private release preparation
+
+The current engineering checkpoint adds a callback-only gateway, a $1.00 fictional Sandbox integration fixture with unchanged human prompts, a complete lockfile/native-dependency license inventory, and a recorded [1:50 captioned engineering preview](docs/demo/waylatch-engineering-preview.mp4). The preview uses actual app footage and visibly labels automated review fixtures, simulated disconnection and blocked PayPal checkout. It is not a final financial demonstration.
+
+The [submission package](docs/submission/SUBMISSION_PACKAGE.md) includes prepared Devpost fields, technology tags, an exportable architecture SVG, screenshot captions, narration/editing instructions and release gates. No Devpost project, YouTube upload, public repository, root license adoption or final submission has been performed. Naming remains AMBER. See [license audit](docs/LICENSE_AUDIT.md) before redistribution.
+
+For secure callback testing, start the existing coordinator backend locally and run `npm run webhook:gateway`. Any approved free tunnel must target **127.0.0.1:4180**, never the coordinator port. Only POST /api/webhooks/paypal is forwarded; official Sandbox verification still runs on the backend. The attempted Quick Tunnel failed with a TCP connection refusal and produced no public endpoint or real callback. This receiver is a narrow prototype test boundary, not a production ingress service.
+
+This runtime lacks both required PayPal variables. [Cloud continuation](docs/CLOUD_CONTINUATION.md) records the exact fresh-task handoff using the published Waylatch environment. Do not paste credentials into chat. The integration harness still requires REVIEW, AUTHORIZE and CAPTURE from an actual operator; demo recording scripts disable PayPal and do not satisfy that human requirement.

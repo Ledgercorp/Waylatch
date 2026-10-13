@@ -82,6 +82,8 @@ describe('interactive integration harness: local app/provider double, no real Pa
     const r = await run(false);
     expect(r.code).toBe(2);
     expect(r.output).toContain('Type REVIEW');
+    expect(r.output).toContain('$1.00 SANDBOX');
+    expect(r.store.records()[0].record.amountCents).toBe(100);
     expect(r.store.records()[0].status).toBe('reviewed');
     expect(r.store.events().some((e) => e.type === 'purchase_approved')).toBe(false);
     expect(r.financialCalls).toBe(0);

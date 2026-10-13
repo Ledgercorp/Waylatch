@@ -1,0 +1,33 @@
+
+> waylatch@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/paypal-http.test.ts (4 tests) 3231ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > executes OAuth/order/buyer approval/capture/inspection without duplicate logical purchases  1086ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > recovers a dropped create response with the same request ID  1009ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > reconciles a dropped successful capture response without another capture  439ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > forwards official verification fields and rejects an invalid signature over HTTP  690ms
+ ✓ tests/sandbox-cli.test.ts (2 tests) 3770ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation  2218ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined  1549ms
+ ✓ tests/security-review.test.ts (4 tests) 390ms
+ ✓ tests/payments.test.ts (7 tests) 603ms
+ ✓ tests/webhook-gateway.test.ts (9 tests) 527ms
+ ✓ tests/input-boundary.test.ts (2 tests) 396ms
+   ✓ malformed external input > classifies malformed JSON and oversized payloads without provider effects  392ms
+ ✓ tests/offline.test.ts (10 tests) 741ms
+   ✓ disconnected handoff, local execution only > creates an actual QR PNG for bounded packet text  472ms
+ ✓ tests/compatibility.test.ts (5 tests) 156ms
+ ✓ tests/risk.test.ts (9 tests) 75ms
+ ✓ tests/receipt.test.ts (2 tests) 69ms
+ ✓ tests/paypal-auth.test.ts (3 tests) 16ms
+ ✓ tests/schema.test.ts (2 tests) 15ms
+
+ Test Files  12 passed (12)
+      Tests  59 passed (59)
+   Start at  15:25:46
+   Duration  14.05s (transform 1.25s, setup 0ms, collect 8.18s, tests 9.99s, environment 3ms, prepare 2.97s)
+

@@ -1,0 +1,44 @@
+
+> waylatch@0.1.0 test:e2e
+> playwright test --grep constrained network
+
+[WebServer] (node:11812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:11824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:11832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/product.spec.ts:196:1 › constrained network preserves local work and reconnection does not submit or pay (11.2s)
+
+
+  1) tests/product.spec.ts:196:1 › constrained network preserves local work and reconnection does not submit or pay 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    Expected: undefined
+    Received: []
+
+      228 |   await expect(page.getByText('Fictional constrained-network continuity test', { exact: true }).first()).toBeVisible();
+      229 |   const after = await (await page.request.get('/api/state')).json();
+    > 230 |   expect(after.records).toEqual(before.records);
+          |                         ^
+      231 |   expect(after.payments).toEqual(before.payments);
+      232 |   expect(after.events).toEqual(before.events);
+      233 |   writeFileSync('docs/evidence/constrained-network.json', JSON.stringify({
+        at /workspace/Waylatch/tests/product.spec.ts:230:25
+
+    Error Context: test-results/product-constrained-networ-598bb-tion-does-not-submit-or-pay/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/product-constrained-networ-598bb-tion-does-not-submit-or-pay/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/product-constrained-networ-598bb-tion-does-not-submit-or-pay/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/product.spec.ts:196:1 › constrained network preserves local work and reconnection does not submit or pay 

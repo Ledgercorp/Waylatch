@@ -37,7 +37,13 @@ const health = await call('/health');
 if (health.environment !== 'sandbox' || !health.paypalConfigured)
   throw new Error('Server Sandbox provider is not configured');
 await call('/session', { password: process.env.COORDINATOR_PASSWORD });
-const record = { ...demoRequest, id: 'RL-REAL-' + Date.now(), createdAt: new Date().toISOString() };
+const record = {
+  ...demoRequest,
+  id: 'RL-REAL-' + Date.now(),
+  resources: [{ description: 'Fictional one-dollar Sandbox procurement test item', quantity: 1 }],
+  amountCents: 100,
+  createdAt: new Date().toISOString(),
+};
 await call('/requests', { record, provenance: 'local' });
 const rl = createInterface({ input: stdin, output: stdout });
 async function integrate() {
@@ -70,14 +76,18 @@ async function integrate() {
     note: 'Operator explicitly confirmed REVIEW for the displayed synthetic procurement',
   });
   const consent = await rl.question(
-    `Authorize this synthetic $128.00 SANDBOX purchase? Type AUTHORIZE: `,
+    `Authorize this synthetic $${(record.amountCents / 100).toFixed(2)} SANDBOX purchase? Type AUTHORIZE: `,
   );
   if (consent !== 'AUTHORIZE') {
     console.log('Stopped without purchase authorization or order creation.');
     process.exitCode = 2;
     return;
   }
-  await call(`/requests/${record.id}/approve`, { revision: 1, amountCents: 12800, confirm: true });
+  await call(`/requests/${record.id}/approve`, {
+    revision: 1,
+    amountCents: record.amountCents,
+    confirm: true,
+  });
   const order = await call(`/payments/${record.id}/order`, { confirm: true });
   console.log('Approve with a Sandbox PERSONAL buyer account in a browser:', order.approvalUrl);
   const capture = await rl.question(
@@ -97,7 +107,7 @@ async function integrate() {
     category: 'executed-real-paypal-sandbox',
     recordId: record.id,
     revision: 1,
-    amountCents: 12800,
+    amountCents: record.amountCents,
     currency: 'USD',
     orderId: payment.orderId,
     captureId: payment.captureId,

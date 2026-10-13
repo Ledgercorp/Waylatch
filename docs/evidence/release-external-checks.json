@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-13T15:13:38.072882+00:00",
+  "requests": [
+    {
+      "url": "https://paypalaihackathon.devpost.com/rules",
+      "httpStatus": 200,
+      "bytes": 174712,
+      "title": [
+        "PayPal AI Hackathon: Build what\u2019s next with PayPal and AI - Devpost"
+      ]
+    },
+    {
+      "url": "https://paypalaihackathon.devpost.com/resources",
+      "httpStatus": 200,
+      "bytes": 131432,
+      "title": [
+        "Devpost"
+      ]
+    },
+    {
+      "url": "https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/",
+      "httpStatus": 200,
+      "bytes": 114217,
+      "title": [
+        "Quick Tunnels \u00b7 Cloudflare Docs"
+      ]
+    },
+    {
+      "url": "https://api-m.sandbox.paypal.com",
+      "httpStatus": 403
+    }
+  ],
+  "authenticatedPayPalRequest": false,
+  "devpostConnector": "Five read-only calls returned internal error -32603; registration and project state unknown"
+}

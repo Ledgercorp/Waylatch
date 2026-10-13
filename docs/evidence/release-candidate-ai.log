@@ -1,0 +1,24 @@
+
+> waylatch@0.1.0 test:ai
+> tsx scripts/benchmark-ai.ts
+
+{
+  "category": "executed-real-local-ai-inference",
+  "mode": "semantic-local",
+  "metrics": {
+    "truePositives": 5,
+    "falsePositives": 0,
+    "falseNegatives": 1,
+    "trueNegatives": 6,
+    "precision": 1,
+    "recall": 0.8333333333333334,
+    "loadMilliseconds": 4126.323638,
+    "inferenceMilliseconds": 413.2596459999986,
+    "inferenceBatches": 13,
+    "totalMilliseconds": 4548.455496,
+    "baselineRssBytes": 42467328,
+    "finalRssBytes": 183672832,
+    "rssIncreaseBytes": 141205504,
+    "processPeakRssBytes": 209854464
+  }
+}

@@ -55,3 +55,9 @@ Recheck rules immediately before submission because the host may amend them. Do 
 ## Continuation recheck — 2026-10-13
 
 The official rules/resources and current PayPal OAuth/Orders/webhook API pages were fetched again with HTTP200. The November12 deadline, Sandbox/AI focus, five judging criteria, runnable-build option, public licensed code and public YouTube video under three minutes remain present. No material requirement change was identified in the inspected sections. Sanitized fetch dates/statuses/content fingerprints: docs/evidence/waylatch-official-docs-checks.json. No registration or terms acceptance occurred.
+
+## Finalization investigation in this execution
+
+Rules/resources were fetched again with HTTP200; Sandbox+AI, public licensed source, runnable-build alternative and public YouTube video under three minutes remain required. Official judging period is December1,14:00 Pacific through December15,08:00 Pacific; preserve free judge access through its end. Evidence: release-external-checks.json.
+
+Five Devpost read-only connector calls (identity, registered events, projects, event overview, submission requirements) returned internal error -32603. Registration/eligibility/submission-field IDs remain unknown; no legal terms were accepted and no project was created. Prepared project-fields.json contains actual known fields,21 technology tags and explicitly unset video/custom-answer IDs. Available publishing accounts were inspected; no YouTube account was connected. A silent110.04-second actual-footage preview exists, but its blocked-payment scene must be replaced before final submission. Root license/publication and final submission approvals remain pending.

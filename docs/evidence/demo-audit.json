@@ -1,0 +1,191 @@
+[
+  {
+    "seq": 1,
+    "at": "2026-10-13T15:20:04.918Z",
+    "type": "request_imported",
+    "recordId": "RL-a1d13466-d90",
+    "data": {
+      "revision": 1,
+      "provenance": "qr",
+      "record": {
+        "id": "RL-a1d13466-d90",
+        "kind": "procurement",
+        "incident": "FLOOD-EMBER-26",
+        "resources": [
+          {
+            "description": "Water bottles for displaced families at Ember shelter",
+            "quantity": 24
+          }
+        ],
+        "urgency": "urgent",
+        "amountCents": 12800,
+        "amountKind": "exact",
+        "currency": "USD",
+        "location": null,
+        "origin": "Fictional storm-response field team",
+        "revision": 1,
+        "createdAt": "2026-10-13T15:19:31.515Z",
+        "receiptDigest": null,
+        "transactionReference": null,
+        "expenseAt": null
+      }
+    },
+    "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "04c666c7c9380faa4978fbac61226e3cfd1182b2622552a686b5ce7608a577c8"
+  },
+  {
+    "seq": 2,
+    "at": "2026-10-13T15:20:05.249Z",
+    "type": "request_created",
+    "recordId": "RL-DEMO02",
+    "data": {
+      "revision": 1,
+      "provenance": "local",
+      "record": {
+        "id": "RL-DEMO02",
+        "kind": "procurement",
+        "incident": "FLOOD-EMBER-26",
+        "resources": [
+          {
+            "description": "Drinking water bottles for displaced families at Ember shelter",
+            "quantity": 24
+          }
+        ],
+        "urgency": "urgent",
+        "amountCents": 12800,
+        "amountKind": "exact",
+        "currency": "USD",
+        "location": "Ember shelter · fictional",
+        "origin": "Coordinator Echo · fictional",
+        "revision": 1,
+        "createdAt": "2026-10-13T08:15:00.000Z",
+        "receiptDigest": null,
+        "transactionReference": null,
+        "expenseAt": null
+      }
+    },
+    "previous": "04c666c7c9380faa4978fbac61226e3cfd1182b2622552a686b5ce7608a577c8",
+    "hash": "550a27e35d88131cf780512540467d7651943e29719b59b602004a90301dd5bb"
+  },
+  {
+    "seq": 3,
+    "at": "2026-10-13T15:20:05.541Z",
+    "type": "claim_submitted",
+    "recordId": "RL-CLAIM01",
+    "data": {
+      "revision": 1,
+      "provenance": "local",
+      "record": {
+        "id": "RL-CLAIM01",
+        "kind": "claim",
+        "incident": "FLOOD-EMBER-26",
+        "resources": [
+          {
+            "description": "Water bottles purchased for the Ember flood shelter",
+            "quantity": 24
+          }
+        ],
+        "urgency": "urgent",
+        "amountCents": 12800,
+        "amountKind": "exact",
+        "currency": "USD",
+        "location": "Ember shelter · fictional",
+        "origin": "Fictional volunteer Quinn",
+        "revision": 1,
+        "createdAt": "2026-10-13T08:20:00.000Z",
+        "receiptDigest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "transactionReference": null,
+        "expenseAt": "2026-10-12T17:30:00.000Z"
+      }
+    },
+    "previous": "550a27e35d88131cf780512540467d7651943e29719b59b602004a90301dd5bb",
+    "hash": "a07f6e10d9e290fbf641cfbac55a660c239a15be45fcc3aa56d921c969afd6fe"
+  },
+  {
+    "seq": 4,
+    "at": "2026-10-13T15:20:06.645Z",
+    "type": "risk_assessment_produced",
+    "recordId": "RL-CLAIM01",
+    "data": {
+      "mode": "semantic-local",
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "candidates": [
+        {
+          "id": "RL-DEMO02",
+          "similarity": 0.7735877116359409,
+          "reasons": [
+            "Same incident",
+            "Identical amount",
+            "Created within 72 hours",
+            "Semantically similar expense description"
+          ],
+          "reviewRecommended": true
+        },
+        {
+          "id": "RL-a1d13466-d90",
+          "similarity": 0.8297143982082522,
+          "reasons": [
+            "Same incident",
+            "Identical amount",
+            "Created within 72 hours",
+            "Semantically similar expense description"
+          ],
+          "reviewRecommended": true
+        }
+      ]
+    },
+    "previous": "a07f6e10d9e290fbf641cfbac55a660c239a15be45fcc3aa56d921c969afd6fe",
+    "hash": "b94f83ba5dba1db9a77be5bdd6729250f449391b17abdce8a4530c1ca78638f8"
+  },
+  {
+    "seq": 5,
+    "at": "2026-10-13T15:20:25.436Z",
+    "type": "human_review_completed",
+    "recordId": "RL-CLAIM01",
+    "data": {
+      "revision": 1,
+      "disposition": "clear",
+      "note": "AUTOMATED LOCAL DEMO FIXTURE: not an independent human decision. Fictional receipt and duplicate indicators inspected by scripted test only."
+    },
+    "previous": "b94f83ba5dba1db9a77be5bdd6729250f449391b17abdce8a4530c1ca78638f8",
+    "hash": "a7258d048ab1dd85eb596a6bdf19ea3a26609a9a1aac7358c755ef19d5dc6fea"
+  },
+  {
+    "seq": 6,
+    "at": "2026-10-13T15:20:31.892Z",
+    "type": "reimbursement_approved",
+    "recordId": "RL-CLAIM01",
+    "data": {
+      "payout": "blocked-unverified",
+      "confirmation": true
+    },
+    "previous": "a7258d048ab1dd85eb596a6bdf19ea3a26609a9a1aac7358c755ef19d5dc6fea",
+    "hash": "0d55ffc6a3ee2ac065f33f11c907b7a580a554c6558859229382a0a2247da41a"
+  },
+  {
+    "seq": 7,
+    "at": "2026-10-13T15:20:37.307Z",
+    "type": "human_review_completed",
+    "recordId": "RL-DEMO02",
+    "data": {
+      "revision": 1,
+      "disposition": "clear",
+      "note": "AUTOMATED LOCAL DEMO FIXTURE ONLY: no independent human authorization and no provider transaction."
+    },
+    "previous": "0d55ffc6a3ee2ac065f33f11c907b7a580a554c6558859229382a0a2247da41a",
+    "hash": "5d72eb82cb3bddddca1ffa38074cfc035b3522d4d6289e7553e657c65a450acf"
+  },
+  {
+    "seq": 8,
+    "at": "2026-10-13T15:20:42.919Z",
+    "type": "purchase_approved",
+    "recordId": "RL-DEMO02",
+    "data": {
+      "revision": 1,
+      "amountCents": 12800,
+      "confirmation": true
+    },
+    "previous": "5d72eb82cb3bddddca1ffa38074cfc035b3522d4d6289e7553e657c65a450acf",
+    "hash": "a289a547e792ed0eadf291552cb7a050c245d6cae9afa8e03b6c4cafaa561447"
+  }
+]

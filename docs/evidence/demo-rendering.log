@@ -1,0 +1,5 @@
+
+> waylatch@0.1.0 demo:render
+> python3 scripts/render-demo.py
+
+{"generatedAt": "2026-10-13T15:22:30.309928+00:00", "category": "actual-application-footage-with-labeled-automated-fixtures", "file": "docs/demo/waylatch-engineering-preview.mp4", "sha256": "52257fcf1174b909f46a70224b3322c2502f07bcaa068788b10201ba5b12abcc", "durationSeconds": 110.04, "bytes": 2078842, "codec": "h264", "width": 1600, "height": 900, "audio": false, "publiclyPublished": false, "realLocalAI": true, "realPayPalTransaction": false, "limitations": ["Engineering preview; not final financial integration footage.", "Review and authorization use labeled automated local fixtures, not an independent human decision.", "Disconnection simulated; IndexedDB, QR decoding, inference and audit validation actually executed.", "No narration or music. Captions and narration script provided."]}

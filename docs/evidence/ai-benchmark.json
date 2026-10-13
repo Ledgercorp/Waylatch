@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-10-13T14:31:30.375Z",
+  "executedAt": "2026-10-13T15:15:05.445Z",
   "category": "executed-real-local-ai-inference",
   "model": "Xenova/all-MiniLM-L6-v2",
   "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
@@ -25,14 +25,14 @@
     "trueNegatives": 6,
     "precision": 1,
     "recall": 0.8333333333333334,
-    "loadMilliseconds": 1099.505296,
-    "inferenceMilliseconds": 87.41697399999975,
+    "loadMilliseconds": 4126.323638,
+    "inferenceMilliseconds": 413.2596459999986,
     "inferenceBatches": 13,
-    "totalMilliseconds": 1191.105731,
-    "baselineRssBytes": 60948480,
-    "finalRssBytes": 234262528,
-    "rssIncreaseBytes": 173314048,
-    "processPeakRssBytes": 234655744
+    "totalMilliseconds": 4548.455496,
+    "baselineRssBytes": 42467328,
+    "finalRssBytes": 183672832,
+    "rssIncreaseBytes": 141205504,
+    "processPeakRssBytes": 209854464
   },
   "assets": [
     {
@@ -85,7 +85,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 10.180020000000013
+      "milliseconds": 17.951837999999952
     },
     {
       "id": "battery-paraphrase",
@@ -100,7 +100,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 7.74703599999998
+      "milliseconds": 45.21850699999959
     },
     {
       "id": "medical-paraphrase",
@@ -114,7 +114,7 @@
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 7.242706000000226
+      "milliseconds": 16.45165900000029
     },
     {
       "id": "fuel-paraphrase",
@@ -129,7 +129,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 5.453260999999884
+      "milliseconds": 13.010576000000583
     },
     {
       "id": "beds-paraphrase",
@@ -144,7 +144,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 6.842885000000024
+      "milliseconds": 14.299997999999505
     },
     {
       "id": "blankets-paraphrase",
@@ -159,7 +159,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 5.486501000000089
+      "milliseconds": 47.18723200000022
     },
     {
       "id": "water-vs-bus",
@@ -173,7 +173,7 @@
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 5.926684000000023
+      "milliseconds": 23.669600000000173
     },
     {
       "id": "battery-vs-food",
@@ -187,7 +187,7 @@
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 4.954590999999937
+      "milliseconds": 16.72151600000052
     },
     {
       "id": "medical-vs-fuel",
@@ -201,7 +201,7 @@
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 5.3516189999998005
+      "milliseconds": 68.5561570000009
     },
     {
       "id": "beds-vs-radio",
@@ -215,7 +215,7 @@
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 4.885045999999875
+      "milliseconds": 19.252371999999923
     },
     {
       "id": "blankets-vs-pump",
@@ -229,7 +229,7 @@
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 4.926297999999861
+      "milliseconds": 68.00158199999987
     },
     {
       "id": "near-domain-distinct",
@@ -243,7 +243,7 @@
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 4.523782999999867
+      "milliseconds": 48.4119869999995
     }
   ],
   "limitations": [

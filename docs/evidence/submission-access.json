@@ -1,0 +1,17 @@
+{
+  "devpostReadCalls": {
+    "whoami": "internal error -32603",
+    "list_hackathons": "internal error -32603",
+    "list_my_projects": "internal error -32603",
+    "get_hackathon_overview": "internal error -32603",
+    "get_submission_requirements": "internal error -32603"
+  },
+  "registrationVerified": false,
+  "projectCreated": false,
+  "submissionPerformed": false,
+  "publishingConnectionInspected": true,
+  "youtubeAccountConnected": false,
+  "mediaUploaded": false,
+  "publicationPerformed": false,
+  "officialRulesDirectFetch": 200
+}

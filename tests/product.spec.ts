@@ -192,3 +192,78 @@ test('Waylatch metadata and legacy IndexedDB survive offline reload', async ({ p
     await page.evaluate(async () => (await caches.match('/manifest.webmanifest'))?.json()),
   ).toMatchObject({ name: 'Waylatch' });
 });
+
+test('constrained network preserves local work and reconnection does not submit or pay', async ({
+  page,
+  context,
+}) => {
+  const cdp = await context.newCDPSession(page);
+  await cdp.send('Network.enable');
+  await cdp.send('Network.emulateNetworkConditions', {
+    offline: false,
+    latency: 150,
+    downloadThroughput: 64 * 1024,
+    uploadThroughput: 16 * 1024,
+  });
+  const started = performance.now();
+  await page.goto('/');
+  await page.evaluate(() => navigator.serviceWorker.ready.then(() => true));
+  const coldLoadMilliseconds = performance.now() - started;
+  await page.getByRole('button', { name: 'Coordinator sign in' }).click();
+  await page.getByLabel('Coordinator passphrase').fill('browser-test-passphrase');
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Sign out', exact: true })).toBeVisible();
+  const beforeResponse = await page.request.get('/api/state');
+  expect(beforeResponse.status()).toBe(200);
+  const before = await beforeResponse.json();
+  await page.getByRole('button', { name: 'New field request' }).click();
+  await page
+    .getByLabel('Resource description')
+    .fill('Fictional constrained-network continuity test');
+  await page.getByLabel('Quantity', { exact: true }).fill('1');
+  await page.getByLabel('Requested amount (USD)').fill('3.25');
+  await page.getByLabel('Origin label').fill('Synthetic network test team');
+  // End CDP throttling before Playwright takes ownership of offline state.
+  // Two independent emulation controllers otherwise restore conflicting state on reload.
+  await cdp.send('Network.disable');
+  await cdp.detach();
+  await context.setOffline(true);
+  await expect.poll(() => page.evaluate(() => navigator.onLine)).toBe(false);
+  await page.getByRole('button', { name: 'Preserve request' }).click();
+  await expect(
+    page.getByText('Fictional constrained-network continuity test', { exact: true }).first(),
+  ).toBeVisible();
+  await page.reload();
+  await expect(page.getByText('OFFLINE · requests stay on this device')).toBeVisible();
+  await context.setOffline(false);
+  await expect(page.getByText('ONLINE · local preservation ready')).toBeVisible();
+  await page.reload();
+  await expect(
+    page.getByText('Fictional constrained-network continuity test', { exact: true }).first(),
+  ).toBeVisible();
+  const afterResponse = await page.request.get('/api/state');
+  expect(afterResponse.status()).toBe(200);
+  const after = await afterResponse.json();
+  expect(after.records).toEqual(before.records);
+  expect(after.payments).toEqual(before.payments);
+  expect(after.events).toEqual(before.events);
+  writeFileSync(
+    'docs/evidence/constrained-network.json',
+    JSON.stringify(
+      {
+        category: 'executed-browser-with-simulated-network',
+        latencyMilliseconds: 150,
+        downloadBytesPerSecond: 65536,
+        uploadBytesPerSecond: 16384,
+        coldLoadMilliseconds,
+        offlineReloadPreserved: true,
+        reconnectSubmittedRecords: 0,
+        reconnectFinancialOperations: 0,
+        limitation:
+          'Chromium CDP emulation on this host, not emergency field or real mobile network measurements.',
+      },
+      null,
+      2,
+    ) + '\n',
+  );
+});

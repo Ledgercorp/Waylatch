@@ -14,3 +14,7 @@ Preparation: production app on two browser contexts; model assets installed and 
 | 2:45–2:50 | Product title / runnable repository                                                         | “Keep the request. Explain the decision. Account for the payment.”                                                                                                                                                                                                                                                                  |
 
 Before public recording: ensure actual PayPal integration evidence, clean browser labels, fixture selection, model warm status, visible simulated-network label and no credential exposure. Current credentials blocker prevents honestly filming the complete financial scene. A missing-credentials scene can document progress, but does not satisfy the final end-to-end submission goal.
+
+## Recorded engineering preview
+
+A finished silent captioned MP4 is now in demo/waylatch-engineering-preview.mp4 (110.04seconds,1600×900,H.264). It shows actual IndexedDB survival, QR decoding in a second browser, real local embeddings, labeled automated review/authorization fixtures, honest missing-credentials UI and validated audit export. No PayPal payment footage is fabricated. Captions, exact narration and editing/reproduction instructions are in demo/. This is a private preview; the genuine purchasing scene still needs actual human decisions and authoritative capture evidence before the final under-three-minute submission video.

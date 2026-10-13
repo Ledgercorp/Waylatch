@@ -1,0 +1,17 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/sandbox-cli.test.ts tests/webhook-gateway.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/webhook-gateway.test.ts (6 tests) 276ms
+ ✓ tests/sandbox-cli.test.ts (2 tests) 1118ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation  730ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined  386ms
+
+ Test Files  2 passed (2)
+      Tests  8 passed (8)
+   Start at  15:14:23
+   Duration  2.26s (transform 397ms, setup 0ms, collect 1.09s, tests 1.39s, environment 1ms, prepare 444ms)
+

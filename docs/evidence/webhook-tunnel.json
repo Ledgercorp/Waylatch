@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-13T15:19:16.564657+00:00",
+  "tool": "cloudflared 2026.10.0",
+  "binaryReleaseDigestVerified": true,
+  "gateway": "http://127.0.0.1:4180",
+  "exposedRoutes": [
+    "POST /api/webhooks/paypal"
+  ],
+  "quickTunnelCreated": false,
+  "failure": "api.trycloudflare.com:443 TCP connection refused at tunnel creation",
+  "realCallbackReceived": false,
+  "workaroundAttempted": false,
+  "paidResourcesCreated": false,
+  "scope": "Single bounded attempt; no broad backend exposure or network/TLS policy bypass. Missing PayPal credentials prevent webhook subscription regardless."
+}

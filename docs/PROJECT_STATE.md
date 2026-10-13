@@ -1,3 +1,33 @@
+# Current private engineering candidate — 2026-10-13
+
+Branch: feat/waylatch-release-candidate, descending from synchronized baseline **1cca55994f22252d7875ebe9d5025b428c3e179e**. Original RescueLedger SHA **ee1488bde39347347d5a40e6bd766072fad7f16f** and feat/rescueledger-mvp preserved. GitHub remains private, default main. Original source/recovery artifacts and historical rebrand identity retained. No CrisisCodec modifications, rebuild, new repository or history rewriting.
+
+## Work completed in this execution
+
+- Verified local and remote baseline/history and private destination before changes.
+- Diagnosed current cloud runtime: same original environment ID, no source-config association or secret bindings, no supported binding/task-switch API. Both PayPal variable names absent. OAuth and purchasing scripts exit2 before any provider operation. Exact environment-bound fresh-task continuation prepared.
+- Changed only the integration test procurement to one fictional item / quantity1 / exact USD1.00, deriving prompts/approval/evidence from one record. Actual REVIEW/AUTHORIZE/CAPTURE remain mandatory.
+- Added a callback-only loopback gateway with no coordinator/payment/static routes, bounded JSON/signature headers, no credential forwarding or redirects, retryable failures and nine local tests. Official backend verification/deduplication remains authoritative.
+- Downloaded official Cloudflared2026.10.0 and verified release digest. One bounded Quick Tunnel attempt failed with TCP connection refused before endpoint creation. No real callback/subscription or broad app exposure.
+- Produced an actual110.04-second captioned silent H.264 MP4 from two browser contexts. Actual offline persistence, QR decode/reconstruction, local AI and SQLite audit are shown. Automated review fixtures and missing financial integration remain visibly labeled. Independent exported eight-event chain validation passed.
+- Audited all382 lockfile package entries,312 installed packages, native libvips components, model/source provenance and license obligations. Recommended existing MIT proposal subject to owner rights/adoption approval; no LICENSE adopted.
+- Prepared full known-field Devpost package,21 technology tags, original architecture SVG, screenshot captions, narration/editing instructions, upload metadata and release gates. Devpost read tools failed internally; no connected YouTube account. Nothing published/submitted.
+- Fresh final checks:59 local tests,9 browser tests, CPU-only clean dependency install, production build, actual AI and valid exported audit. Added constrained-network/reconnection regression: cold load 9214ms at simulated150ms/64KiB/s; zero automatic server record/payment/event changes after reconnection. Measurements and limits in VERIFICATION.md/evidence.
+
+## Real provider evidence
+
+None. OAuth/order/buyer approval/capture/webhook/Payouts not executed. Sandbox host reachable with unauthenticated HTTP403 root response only. Fixed Sandbox base/no live mode preserved. Browser/provider failure fixtures remain simulations. No human financial decision is claimed for the automated preview.
+
+Final staged-index/frontend release check: zero findings. Final format check passed. All temporary recording/gateway processes closed; no tunnel remains. The single JS chunk build warning and synthetic constrained-network timing are documented without inflating performance claims.
+
+## Cost and remaining work
+
+Real spending **$0**; no paid service, live payment, card, paid inference, public release, legal acceptance or final submission. The next executable integration step requires a fresh task selecting the published Waylatch environment with Environment-scoped PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET available at task execution. See CLOUD_CONTINUATION.md. After real OAuth, obtain actual human decisions and genuine buyer approval/capture, then replace the financial video scene. Owner license/source-rights/publication/legal/submission approvals come after the concrete final candidate. No background continuation is scheduled.
+
+---
+
+## Previous synchronized checkpoint (historical)
+
 # Waylatch durable project state
 
 Owner: Colby Weiss / LeftSock Labs. Continuation date: 2026-10-13. Original name: RescueLedger. Current worktree: `/workspace/Waylatch`; branch `feat/waylatch-rebrand`. Original worktree `/workspace/RescueLedger` remains on `feat/rescueledger-mvp`.

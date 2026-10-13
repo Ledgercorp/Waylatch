@@ -17,8 +17,20 @@ Engineering may prepare this list without accepting terms or publishing.
 
 No paid hosting, card, automatic top-up, live PayPal credential, real transfer or paid inference endpoint is needed. The runnable-repository alternative is supported by the official rules.
 
-## Current private-release readiness assessment
+## Previous synchronized checkpoint readiness assessment
 
 Verified: authentic source/Git ancestry protected in private Ledgercorp/Waylatch; controlled rebrand with pinned legacy compatibility; current visual/mobile/a11y evidence; clean installation/build; 50 local tests and eight browser tests; actual local AI; server authorization/idempotency/signature/audit tests; complete setup/architecture/security/demo/submission drafts and proposed MIT license.
 
 Not ready for final public submission: genuine Sandbox OAuth/order/buyer approval/capture are blocked by missing task-time secret bindings; real callbacks unverified; Payouts entitlement unknown; naming AMBER; no adopted root license, public repository or public YouTube footage. Owner approval is still required for licensing, public branding/repository/video, legal participation and submission. No automatic publishing or paid resource is needed.
+
+## This private candidate
+
+- [x] Fresh CPU-only dependency install and production build.
+- [x]59 local tests, real local AI, historical compatibility and callback-route isolation.
+- [x] Actual captioned110.04s MP4, SRT/narration/editing instructions and metadata; preview labels the blocked financial scene.
+- [x] Full382-package lockfile inventory, native component/license obligations and source/model provenance review.
+- [x] Known-field Devpost JSON, architecture SVG, screenshot captions, security/accessibility/impact narrative and exact cloud continuation.
+- [ ] Replace incomplete financial preview scene with a genuine human-authorized Sandbox capture.
+- [ ] Resolve Devpost connection/registration and public YouTube account access only at actual release.
+
+The remaining unchecked financial/license/publication/legal gates above are real; an engineering preview does not make the project submission-complete.

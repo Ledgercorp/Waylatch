@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:07,291
+Waylatch / From field need to verified action.
+
+2
+00:00:07,291 --> 00:00:14,267
+Network failure simulated. The field request stays on this device.
+
+3
+00:00:14,267 --> 00:00:22,728
+Complete offline reload: the actual IndexedDB request survives.
+
+4
+00:00:22,728 --> 00:00:31,747
+RL1 packets carry request data. They carry no payment authority.
+
+5
+00:00:31,747 --> 00:00:38,005
+Second disconnected browser: an actual QR image is decoded.
+
+6
+00:00:38,005 --> 00:00:48,197
+Fragments reconstructed. Import provenance remains untrusted.
+
+7
+00:00:48,197 --> 00:00:59,720
+Real local MiniLM inference: explainable similarity, not a fraud probability.
+
+8
+00:00:59,720 --> 00:01:06,710
+Review controls shown with an automated test fixture. AI has no financial authority.
+
+9
+00:01:06,710 --> 00:01:12,844
+Separate incurred-expense claim: explicit confirmation. No reimbursement transfer.
+
+10
+00:01:12,844 --> 00:01:18,757
+Claim review works. Payout entitlement remains unverified.
+
+11
+00:01:18,757 --> 00:01:23,853
+Sandbox authorization boundary exercised by a labeled automated fixture.
+
+12
+00:01:23,853 --> 00:01:34,065
+Honest payment status: credentials missing. No PayPal order or capture executed.
+
+13
+00:01:34,065 --> 00:01:42,143
+Actual SQLite events validate as a SHA-256-linked, tamper-evident chain.
+
+14
+00:01:42,143 --> 00:01:50,040
+Offline continuity and local AI verified. Genuine Sandbox capture is the remaining gate.

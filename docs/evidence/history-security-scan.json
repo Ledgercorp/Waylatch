@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-13T15:21:50.407982+00:00",
+  "category": "local-static-git-history-scan",
+  "refs": "all local refs, authentic six-commit baseline and current index",
+  "uniqueBlobsScanned": 226,
+  "findings": [],
+  "scope": "Specific credential patterns and prohibited runtime paths only. PayPal secret values unavailable; cannot prove arbitrary strings are not credentials. No raw matching values printed."
+}

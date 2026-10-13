@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-13T15:20:38.914607+00:00",
+  "environmentId": "ccarenv_b64_Y2NhcmVudl9kOGJmM2Y0YmFlMjg4MTkxOTUxMTE4YTY0MTY3YWZkYg",
+  "specRevision": "39",
+  "sourceConfigId": null,
+  "sourceConfigVersionId": null,
+  "observationsCurrent": true,
+  "configuredSecretBindings": [],
+  "runtimeVariables": [],
+  "requiredVariablesPresent": {
+    "PAYPAL_CLIENT_ID": false,
+    "PAYPAL_CLIENT_SECRET": false,
+    "PAYPAL_WEBHOOK_ID": false
+  },
+  "networkPolicy": "unrestricted/enforced",
+  "credentialMutationToolAvailable": false,
+  "notes": "Same environment ID observed in original development task. No association with the saved Waylatch environment is exposed. Cannot establish publication time or task-start/config ordering from available metadata. No unrelated vault or account searched."
+}

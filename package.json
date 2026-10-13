@@ -20,7 +20,10 @@
     "paypal:integration": "tsx scripts/sandbox-integration.ts",
     "audit:validate": "tsx scripts/validate-audit.ts",
     "release:check": "tsx scripts/check-release.ts",
-    "paypal:auth": "NODE_USE_ENV_PROXY=1 tsx scripts/paypal-auth.ts"
+    "paypal:auth": "NODE_USE_ENV_PROXY=1 tsx scripts/paypal-auth.ts",
+    "webhook:gateway": "tsx scripts/webhook-gateway.ts",
+    "demo:record": "tsx scripts/record-demo.ts",
+    "demo:render": "python3 scripts/render-demo.py"
   },
   "dependencies": {
     "@huggingface/transformers": "^3.8.1",

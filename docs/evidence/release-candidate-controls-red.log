@@ -1,0 +1,79 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/sandbox-cli.test.ts tests/webhook-gateway.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ❯ tests/sandbox-cli.test.ts (2 tests | 1 failed) 815ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation  426ms
+   × interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined 388ms
+     → expected 'Synthetic procurement for human revie…' to contain '$1.00 SANDBOX'
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/webhook-gateway.test.ts [ tests/webhook-gateway.test.ts ]
+Error: Cannot find module '../server/webhook-gateway' imported from '/workspace/Waylatch/tests/webhook-gateway.test.ts'
+ ❯ tests/webhook-gateway.test.ts:5:1
+      3| import request from 'supertest';
+      4| import type { Server } from 'node:http';
+      5| import { createWebhookGateway } from '../server/webhook-gateway';
+       | ^
+      6| const servers: Server[] = [];
+      7| afterEach(async () => {
+
+Caused by: Error: Failed to load url ../server/webhook-gateway (resolved id: ../server/webhook-gateway) in /workspace/Waylatch/tests/webhook-gateway.test.ts. Does the file exist?
+ ❯ loadAndTransform node_modules/vite/dist/node/chunks/config.js:22907:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/sandbox-cli.test.ts > interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined
+AssertionError: expected 'Synthetic procurement for human revie…' to contain '$1.00 SANDBOX'
+
+- Expected
++ Received
+
+- $1.00 SANDBOX
++ Synthetic procurement for human review: {
++   "id": "RL-REAL-1791904417612",
++   "incident": "FLOOD-EMBER-26",
++   "resources": [
++     {
++       "description": "Bottled drinking water for Ember shelter",
++       "quantity": 24
++     },
++     {
++       "description": "AA batteries for portable radios",
++       "quantity": 48
++     },
++     {
++       "description": "First aid supply kits",
++       "quantity": 6
++     }
++   ],
++   "revision": 1,
++   "amountCents": 12800,
++   "currency": "USD"
++ }
++ Verify the fictional incident, supplies and exact amount. Type REVIEW to record human review: Authorize this synthetic $128.00 SANDBOX purchase? Type AUTHORIZE: Stopped without purchase authorization or order creation.
++
+
+ ❯ tests/sandbox-cli.test.ts:85:22
+     83|     expect(r.code).toBe(2);
+     84|     expect(r.output).toContain('Type REVIEW');
+     85|     expect(r.output).toContain('$1.00 SANDBOX');
+       |                      ^
+     86|     expect(r.store.records()[0].record.amountCents).toBe(100);
+     87|     expect(r.store.records()[0].status).toBe('reviewed');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  1 failed | 1 passed (2)
+   Start at  15:13:36
+   Duration  1.68s (transform 233ms, setup 0ms, collect 478ms, tests 815ms, environment 1ms, prepare 241ms)
+

@@ -1,3 +1,45 @@
+# Current execution verification — private candidate, 2026-10-13
+
+Fresh results below supersede earlier current-count prose. Historical logs/reports remain retained after this section; they are not repeated as newly executed evidence.
+
+| Command                                                        | Result                                                                             | Evidence                                                  |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm ci --no-fund --no-audit | Passed, CPU-only clean dependency installation                                     | release-candidate-install.log                             |
+| npm test                                                       | **59 passed,12 files**, zero final failures                                        | release-candidate-unit.log                                |
+| npm run build                                                  | Passed TypeScript and production Vite build                                        | release-candidate-build.log                               |
+| npm run test:e2e                                               | **9 passed**, zero final failures (37.6seconds)                                    | release-candidate-browser.log                             |
+| npm run test:ai                                                | Real local q8 CPU embeddings executed; TP5 FP0 FN1 TN6 on12 calibration pairs      | release-candidate-ai.log / ai-benchmark.json              |
+| npm run demo:record / npm run demo:render                      | Actual browser recording and captioned110.04s H.264 MP4 generated; no PayPal calls | demo-recording.log / demo-rendering.log / demo-video.json |
+| npm run audit:validate -- docs/evidence/demo-audit.json        | Passed, valid:true,count8                                                          | demo-audit-validation.log                                 |
+| npm run paypal:auth                                            | Exit2,SANDBOX_CREDENTIALS_MISSING,requestExecuted:false,status:null                | paypal-oauth.json                                         |
+| npm run paypal:integration                                     | Exit2 before requests/operator prompts: credentials unavailable                    | integration blocker; no order evidence                    |
+
+## Executed real integrations
+
+Actual local Transformer/ONNX inference and actual GitHub synchronization are independently evidenced. PayPal Sandbox OAuth, order creation, buyer approval, capture, official signature-verification call, real callback and payout are **not executed**. An unauthenticated Sandbox-host root response403 only establishes reachability. Runtime variables/bindings and external connector outcomes are in cloud-runtime.json,release-external-checks.json,submission-access.json.
+
+## Executed local/browser tests
+
+59 local tests include historical RL1/IndexedDB/audit compatibility, request/claim validation, semantic scoring and asset corruption, backend review/amount/authorization boundaries, concurrent/restarted payment operations, stable request IDs, uncertain-result recovery, invalid webhook handling/deduplication/retry and nine callback gateway cases. Gateway upstreams and PayPal responses are local fixtures.
+
+Browser coverage includes real IndexedDB offline reload, actual QR image decode between contexts, fragment reconstruction/corruption, desktop1440px/mobile390px layout and axe scans, legacy IDB/PWA metadata, actual local AI review, independent claim review and honest missing-credentials UI. Axe returns zero violations in inspected states; this is not universal assistive-technology certification. The new test applies150ms/64KiB/s Chromium throttling then real browser-offline state, and verifies reconnection preserves local data while server records/payments/events remain unchanged. Its initial test-harness failures are retained and explained: CDP and Playwright emulation controllers conflicted, then a snapshot preceded completed sign-in. Assertions now wait for confirmed sign-in and validate response status.
+
+## Simulated behavior
+
+Payment/provider HTTP fixtures, injected timeouts/declines, OAuth transport doubles, webhook fixtures and automated review/authorization notes are simulations. Network failures/throttling are browser emulation. None prove actual provider acceptance, human decision-making or emergency field performance. The preview always states FICTIONAL DATA / AUTOMATED UI FIXTURES / NO PAYPAL TRANSACTION.
+
+## Unverified/blockers
+
+Actual financial integration/capture and callback remain blocked by environment credentials/connectivity. Sandbox buyer authentication needs a secure authorized identity and human approval. Payouts entitlement unknown; transfer unimplemented. Devpost registration/custom fields unavailable from failed read tools. Final public YouTube asset, source/license/publication and legal submission approvals pending. Naming remains AMBER.
+
+## Release audit
+
+All382 lockfile entries have declared licenses;312 installed packages and native libvips subcomponents inspected. Not all optional-platform license texts were downloaded. MIT root proposal is conditional and does not override LGPL/MPL/CC-BY or third-party terms. Git-history specific-pattern scan covered226 baseline blobs with zero findings; it is not comprehensive secret clearance. Final index/frontend release-check result and final browser/format results are recorded in the checkpoint below.
+
+---
+
+## Earlier execution evidence (historical)
+
 # Waylatch verification ledger
 
 Continuation date: 2026-10-13. Original RescueLedger reports remain under docs/history/ and branch feat/rescueledger-mvp. The following results were newly executed; they are not repetitions of the previous session's reported results.
@@ -41,3 +83,9 @@ Three additional OAuth transport-double tests verify missing bindings, sanitized
 A clean clone of default main at **ede567797bccf059d3754b22792c8cfdde62bb8b** executed `ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm ci --no-fund --no-audit`, `npm test` (50 passed, 11 files), `npm run build` (passed), `npm run test:e2e` (eight passed, including actual local AI), and `npm run release:check` (zero findings). Already verified model assets were copied into the ignored cache and `npm run model:download` independently checked all seven pinned hashes; this is cache validation, not another fresh network download. Logs: waylatch-clean-*.log.
 
 Private main and feat/waylatch-rebrand read back the same committed code SHA. API inspection confirmed remote package name waylatch/private=true and the OAuth command. Original feat/rescueledger-mvp is preserved at ee1488b. Final documentary checkpoint refs are verified separately after push.
+
+## Final candidate checkpoint checks
+
+Final `npm run test:e2e`: **9 passed**, zero failures,37.6seconds. The constrained-network cold load was9214ms at150ms simulated latency,64KiB/s download and16KiB/s upload. Offline reload preserved the request; reconnection produced zero automatic record submissions, financial operations or audit changes. These are Chromium emulation measurements only.
+
+`npm run release:check` passed with zero findings across the staged release index and frontend. `npm run format:check` passed. Independent `audit:validate` returned valid:true,count8 for the preview export. All temporary recorder/backend/gateway processes were closed; no public tunnel is running. The only build warning is a537.54kB uncompressed JavaScript chunk (173.03kB gzip estimate). The offline shell deliberately preloads the complete core; code splitting is deferred because it would need careful offline asset precaching. The measured constrained-network run completes; no mobile-network performance claim is made.
