@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-13T19:07:26.533Z",
+  "environment_id": "ccarenv_b64_Y2NhcmVudl9kOGJmM2Y0YmFlMjg4MTkxOTUxMTE4YTY0MTY3YWZkYg",
+  "source_config_id": null,
+  "source_config_version_id": null,
+  "spec_revision": "66",
+  "observed_spec_revision": "66",
+  "observations_current": true,
+  "provider": "cloud",
+  "desired_phase": "running",
+  "observed_phase": "running",
+  "failure": null,
+  "connectivity": "connected",
+  "network_policy": {
+    "mode": "unrestricted",
+    "state": "enforced"
+  },
+  "capabilities": [],
+  "secrets": [],
+  "runtime_variables": [],
+  "outbound_identities": [],
+  "credentialPresenceAfterDotenv": {
+    "PAYPAL_CLIENT_ID": false,
+    "PAYPAL_CLIENT_SECRET": false,
+    "PAYPAL_SECRET_KEY": false
+  }
+}

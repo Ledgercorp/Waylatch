@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-13T19:06:46.186674+00:00",
+  "proxy": "http://proxy:8080",
+  "tlsVerificationEnabled": true,
+  "requests": [
+    {
+      "method": "HEAD",
+      "host": "api-m.sandbox.paypal.com",
+      "path": "/",
+      "credentialsSent": false,
+      "curlExit": 0,
+      "safeResponseHeaders": [
+        [
+          "HTTP/1.1 200 OK",
+          "server: envoy",
+          "HTTP/2 403 ",
+          "content-type: text/html; charset=UTF-8",
+          "server: envoy"
+        ]
+      ],
+      "recognizedBodyMarkers": [],
+      "httpStatus": 403,
+      "proxyConnectStatus": 200,
+      "tlsVerificationResult": 0
+    },
+    {
+      "method": "POST",
+      "host": "api-m.sandbox.paypal.com",
+      "path": "/v1/oauth2/token",
+      "credentialsSent": false,
+      "curlExit": 0,
+      "safeResponseHeaders": [
+        [
+          "HTTP/1.1 200 OK",
+          "server: envoy",
+          "HTTP/2 401 ",
+          "content-type: application/json",
+          "server: envoy"
+        ]
+      ],
+      "recognizedBodyMarkers": [
+        "invalid_client",
+        "error_description"
+      ],
+      "httpStatus": 401,
+      "proxyConnectStatus": 200,
+      "tlsVerificationResult": 0
+    }
+  ],
+  "implementationCommit": "7393ff0a8eb500a9416e91ce6037c1d62948046d",
+  "interpretation": {
+    "oauthPathReachable": true,
+    "root403Attribution": "Not established; root HEAD alone cannot distinguish origin or intermediary policy.",
+    "environmentAllowlist": "Current observed mode unrestricted/enforced; no configured HTTP domain allowlist denial demonstrated.",
+    "higherLevelManagedRestriction": "Not demonstrated for this OAuth POST: CONNECT200, verified TLS, HTTP401 and invalid_client without credentials. No claim of blanket unrestricted provider or buyer access.",
+    "authenticatedOAuth": "Existing diagnostic separately stopped before transport because required effective credentials are absent."
+  }
+}

@@ -1,3 +1,12 @@
+# Latest targeted endpoint diagnostic — 2026-10-13
+
+From private checkpoint7393ff0a8eb500a9416e91ce6037c1d62948046d: proxy-aware TLS-verified HEAD root returned403, but credential-free POST to the exact Sandbox OAuth path returned401 / invalid_client. Both CONNECT statuses200 and TLS results0. No environment HTTP allowlist denial or higher-level managed-network block is established for this OAuth request. This was an actual unauthenticated endpoint probe, not successful application OAuth.
+
+Existing `npm run paypal:auth`: exit2, SANDBOX_CREDENTIALS_MISSING, requestExecuted=false, status=null. Runtime/after-dotenv checks still lack ID and both secret names; no source association/bindings. No financial gates supplied or operation executed. No unrelated unit/browser/AI/build/install reruns, and previous69 local/9 browser results remain historical. Fresh safe observations: paypal-network-current.json, paypal-network-runtime.json, paypal-oauth.json. See [PAYPAL_NETWORK_DIAGNOSIS.md](PAYPAL_NETWORK_DIAGNOSIS.md).
+
+Targeted staged-source/frontend `npm run release:check` passed with zero findings across214 tracked files. Changed-document formatting was corrected after a whitespace warning and verified before commit. No application behavior or financial evidence was changed.
+---
+
 # Latest alias compatibility verification — 2026-10-13
 
 Implemented from d4cf568fa7ce7dc78edbc2924bad193f5b2394af without altering product/protocol/payment authority. Two new CLI alias tests failed first because effective credentials were rejected before record creation; after shared configuration support they pass. A dotenv-only alias-leakage regression failed before the release checker loaded dotenv and passed after the fix. All original tests retained.

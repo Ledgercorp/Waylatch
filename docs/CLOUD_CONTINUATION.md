@@ -1,3 +1,9 @@
+# Latest transport result — 2026-10-13
+
+Use the current private release-candidate ref; the alias resolver is already implemented. Exact OAuth POST responds HTTP401 / invalid_client without credentials, with successful CONNECT and TLS. Root HEAD403 is not an established network blocker. Current executor still reports no requested variables, bindings or source-config association, and auth exits2 before transport. Do not rename keys or change PayPal networking code. This observation does not establish the contents of the owner's separate published environment. See [PAYPAL_NETWORK_DIAGNOSIS.md](PAYPAL_NETWORK_DIAGNOSIS.md). No task switch or background continuation is scheduled.
+
+---
+
 # Waylatch credential-compatible continuation
 
 ## No key renaming required

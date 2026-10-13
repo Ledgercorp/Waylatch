@@ -1,3 +1,11 @@
+# Latest verified blocker — 2026-10-13
+
+**OAuth endpoint connectivity is demonstrated:** credential-free POST returns401 / invalid_client after successful CONNECT and TLS. Root HEAD403 does not establish an HTTP allowlist or higher-level proxy restriction on OAuth. No PayPal code change or expanded network request is warranted by this evidence.
+
+**Effective credentials remain absent in the supplied executor:** client ID, canonical secret and fallback alias are all absent after dotenv; managed runtime lists no variables/bindings/source association. The separately published credential-bearing environment cannot be selected or established through the available task runtime interface. Auth exits2 without an authenticated request. No repeat editor configuration or raw key requested. See [PAYPAL_NETWORK_DIAGNOSIS.md](PAYPAL_NETWORK_DIAGNOSIS.md). All subsequent genuine human/buyer/capture and publication/legal gates remain unchanged.
+
+---
+
 # Current Waylatch blockers after alias fix
 
 **Resolved:** PAYPAL_SECRET_KEY is accepted as a fallback for PAYPAL_CLIENT_SECRET with canonical precedence across backend and provider scripts. Do not ask for renaming/reconfiguration because of this mismatch. Regression tests and release protection cover it.

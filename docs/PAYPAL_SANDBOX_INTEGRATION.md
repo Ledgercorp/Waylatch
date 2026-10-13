@@ -1,3 +1,9 @@
+# Latest endpoint verification — 2026-10-13
+
+Credential-free OAuth POST is reachable: CONNECT200, verified TLS, HTTP401 with invalid_client. Root HEAD403 is insufficient evidence of an environment allowlist or managed-network block. Existing `npm run paypal:auth` exits2 before its authenticated transport because this executor still has neither client ID nor either accepted secret name. No invalid-credential/placeholder rejection is established; no actual application OAuth or financial operation occurred. Resolver and human gates are unchanged. See [PAYPAL_NETWORK_DIAGNOSIS.md](PAYPAL_NETWORK_DIAGNOSIS.md) and fresh evidence JSON. No unrelated suites rerun or credential reconfiguration requested.
+
+---
+
 # Current PayPal secret-name compatibility
 
 `PAYPAL_SECRET_KEY` is a supported server-side fallback. A nonempty `PAYPAL_CLIENT_SECRET` wins; missing/empty canonical uses the alias. The shared resolver reads process configuration without mutating it, exposing values to the browser or copying values into persistent files. Server/OAuth/integration/probe use it consistently. The fixed Sandbox endpoint, stable PayPal request IDs and human REVIEW/AUTHORIZE/CAPTURE/buyer-approval gates remain unchanged. No alias retry follows an HTTP rejection of the chosen canonical credential.

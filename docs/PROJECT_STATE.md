@@ -1,3 +1,11 @@
+# Latest Sandbox endpoint check — 2026-10-13
+
+Continued from verified private main/candidate `7393ff0a8eb500a9416e91ce6037c1d62948046d`. The exact OAuth endpoint is reachable through the configured proxy: unauthenticated POST returns HTTP401 / invalid_client with CONNECT200 and verified TLS. Root HEAD403 does not establish an environment allowlist or higher-level managed-network denial. No PayPal code or credentials changed.
+
+`npm run paypal:auth` again exits2 before transport because this executor lacks client ID and both accepted secret names after dotenv. Runtime metadata has no source association or credential bindings; association with the separately published Waylatch environment cannot be established here. No repeated key rename/configuration request. Actual OAuth/order/buyer approval/capture/callback remain unexecuted. Existing release assets retained; unrelated tests not repeated. Fresh evidence and precise distinction: [PAYPAL_NETWORK_DIAGNOSIS.md](PAYPAL_NETWORK_DIAGNOSIS.md). $0 spent, private development only.
+
+---
+
 # Latest Waylatch alias-compatibility milestone
 
 Continued from private checkpoint d4cf568fa7ce7dc78edbc2924bad193f5b2394af on feat/waylatch-release-candidate. Implemented server-only PAYPAL_SECRET_KEY fallback with nonempty PAYPAL_CLIENT_SECRET precedence. Server and all provider scripts share a resolver; no credential values are printed/committed, copied to files or embedded in frontend bundles. Extended release scans to both names and dotenv, and cleared the alias in automated browser/demo processes. No environment rename requested. Human review, authorization, buyer approval and capture gates remain intact.
