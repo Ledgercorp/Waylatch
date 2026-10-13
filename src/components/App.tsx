@@ -128,12 +128,12 @@ export function App() {
         Skip to command workspace
       </a>
       <header className="site-header">
-        <a href="/" className="brand" aria-label="RescueLedger home">
+        <a href="/" className="brand" aria-label="Waylatch home">
           <span className="brand-mark">
             <LifeBuoy size={24} />
           </span>
           <span>
-            Rescue<span className="brand-ledger">Ledger</span>
+            Way<span className="brand-ledger">latch</span>
           </span>
         </a>
         <span className="header-caption">LEFTSOCK LABS / FIELD OPERATIONS</span>
@@ -185,9 +185,9 @@ export function App() {
           <div>
             <p className="eyebrow">EMERGENCY PROCUREMENT / CONTINUITY BY DESIGN</p>
             <h1>
-              Field to funds.
+              From field need
               <br />
-              <span>Every step accounted for.</span>
+              <span>to verified action.</span>
             </h1>
             <p className="hero-description">
               Keep urgent supply requests moving through a network failure.
@@ -501,7 +501,7 @@ export function App() {
         </div>
         <footer>
           <span>
-            RESCUELEDGER <span className="footer-slash">/</span> LeftSock Labs
+            WAYLATCH <span className="footer-slash">/</span> LeftSock Labs
           </span>
           <p>
             Synthetic demonstration. No real emergencies, identities or funds. PayPal Sandbox only.

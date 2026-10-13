@@ -1,4 +1,4 @@
-# RescueLedger implementation plan
+# RescueLedger implementation plan (historical) and Waylatch continuation
 
 Goal: runnable, reproducible Request → Review → Sandbox Pay → Audit product, plus disconnected handoff and real semantic review. Spec: ARCHITECTURE.md. Execution: autonomous native engineering with bounded independent offline and AI workstreams, as requested; no overlapping edits.
 
@@ -20,3 +20,14 @@ Review focus: uncertain remote response must not enable a second purchase; revis
 - [ ] Verify actual signed HTTPS webhook receipt if infrastructure is available.
 - [ ] Obtain an authorized private Git remote and confirm synchronized commit.
 - [ ] Owner licensing/publication/video/legal/submission approval and execution.
+
+## Waylatch continuation — 2026-10-13
+
+- [x] Recover and validate original full history/artifacts.
+- [x] Push original baseline and main to private Ledgercorp/Waylatch; verify refs and default.
+- [x] Investigate name; record AMBER registry uncertainty; perform reversible internal rebrand.
+- [x] Preserve legacy IndexedDB, RL1 and audit contracts with pinned compatibility fixtures.
+- [x] Run 45 local tests, eight browser tests, production build and actual local AI.
+- [ ] Checkpoint and push verified rebrand; independently read back refs.
+- [ ] Secure runtime Sandbox credentials, verify OAuth, human buyer approval and capture.
+- [ ] Finish continuation security/integration/readiness evidence without public release.

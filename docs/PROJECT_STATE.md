@@ -1,25 +1,29 @@
-# RescueLedger durable project state
+# Waylatch durable project state
 
-2026-10-13. Branch: **feat/rescueledger-mvp**. Verified milestones: **5bb6e37** (foundation), **407122d** (hardening/release preparation). Final milestone and artifact hashes are recorded in the session report/artifact manifest; this file is an index, not source authority. Validate live Git and tests on resume.
+Owner: Colby Weiss / LeftSock Labs. Continuation date: 2026-10-13. Original name: RescueLedger. Current worktree: `/workspace/Waylatch`; branch `feat/waylatch-rebrand`. Original worktree `/workspace/RescueLedger` remains on `feat/rescueledger-mvp`.
 
-## Implemented
+## Authentic source protected
 
-Modular Request → Review → Pay → Audit React application; responsive maritime/rescue identity and fictional geographic context; strict procurement/claim schemas with unknown fields; IndexedDB requests/provenance/outbox and persistent receiver; production offline service worker; bounded RL1 MessagePack/CRC QR handoff and image import; coordinator HttpOnly sessions and server-side approval gates; durable SQLite source revisions/payment reservations and audit events; fixed-Sandbox OAuth/Orders v2/browser approval/capture/detail inspection; official webhook signature-verification client and persistent delivery/reconciliation statuses; stable idempotency/restart recovery and fixed first-capture retry timestamp; local receipt SHA-256 hashing with no image upload; separate human claim approval with Payouts explicitly blocked; pinned, hash-verified real local MiniLM embedding review and synthetic calibration benchmark.
+Original baseline: **ee1488bde39347347d5a40e6bd766072fad7f16f**, with 5bb6e37 and 407122d ancestors. Git objects/bundle and archive SHA-256 checks verified. Original artifacts retained. Authenticated private destination: https://github.com/Ledgercorp/Waylatch. Original branch and main independently read back at baseline SHA before rebrand; main is the verified default. Full rebrand SHA and subsequent synchronization evidence are recorded after commits exist.
 
-Release-preparation artifacts: reproducible README, architecture/security/protocol/reuse docs, exact live hackathon excerpts, benchmark/test/screenshots, MIT proposal (not adopted), complete technology/project draft, 2:50 demo script and approval checklist. CrisisCodec reference unchanged.
+## Controlled internal rebrand
 
-## Verification
+Waylatch: offline-ready emergency procurement and accountable payments. From field need to verified action. User-facing header/footer/title/accessibility labels, package metadata, PWA manifest/icon, current documents and demo/submission drafts updated. Existing visual system retained. Naming result AMBER due incomplete official registry searches; no public announcement or legal-clearance claim.
 
-`npm test`: **40 passed**. `npm run test:e2e`: **7 passed**, including real AI endpoint, offline reload, two-context QR transfer, claim/audit/mobile and axe. `npm run build` and source format check passed. CPU model inference executed; synthetic calibration TP5/FP0/FN1/TN6. Independent CrisisCodec: **38 unit/integration + 7 browser tests passed**. Four real reproduced failure-classification/retry bugs fixed with regressions. Clean archived-source installation independently passed the same 40 tests/build/model download/inference and seven browser tests. An archive-only release-checker failure was reproduced and corrected. Separate-process PayPal simulator is explicitly a simulator, not real account evidence. See VERIFICATION.md and docs/evidence/.
+All compatibility-sensitive identities retained: `rescueledger-field-v1`, RL1, serialized schemas, API routes, `rl_session`, SQLite default path, PayPal sender/idempotency references, receipt digests, hash-linked events and `RESCUELEDGER_MODEL_PATH`. Only disposable shell cache version advances. Historical state/verification reports copied under docs/history/; original branch remains at baseline.
 
-## Repository and budget
+## Current verification
 
-Private repository creation failed: authenticated GitHub integration lacks createRepository permission. No remote exists and nothing is publicly published/submitted. Preserve branch, source archive and Git bundle until an authorized private destination is available. $0 project charges; no real financial operation or paid service. No Mac dependence.
+Recovered baseline freshly passed 40 local tests, seven browser tests and production build. Rebrand freshly passes 45 local tests, eight browser tests, real CPU AI benchmark and production build; five targeted tests pin old IDB/receiver/QR/audit contracts and new metadata. The full eight-test browser rerun passed after correcting Node fixture loading. Fresh evidence is checkpointed in docs/evidence/waylatch-*.log.
 
-## External acceptance blockers
+## Integration status
 
-PayPal Sandbox client ID/secret/webhook ID absent from cloud bindings. Real order/buyer approve/capture and Payouts probe unexecuted. Public HTTPS webhook callback absent. Root license/public release/video/registration/legal terms/submission require owner decisions. No fabricated provider success. Project is not submission-complete.
+Runtime credential presence check: PAYPAL_CLIENT_ID absent, PAYPAL_CLIENT_SECRET absent, PAYPAL_WEBHOOK_ID absent. Environment status reports no secret bindings. PayPal fixed Sandbox host and no-live fallback verified in source. Unauthenticated HTTPS HEAD to Sandbox root returned403; this is reachability evidence only, not OAuth or endpoint-permission evidence. No real financial operation, webhook callback or Payouts probe executed. Existing payment simulations remain explicitly simulations.
 
-## Next engineering action
+## Budget and boundaries
 
-Securely bind Sandbox credentials in Codex Cloud, run the app, then `npm run paypal:integration` through explicit AUTHORIZE → browser Sandbox buyer approval → CAPTURE. Save authoritative real evidence, correct any actual provider mismatch and rerun affected suites. Probe Payouts once next. Obtain authorized private Git destination and confirm remote commit. Public release and submission follow actual integration and owner approvals.
+$0 real funds or paid services. No public visibility change, domain purchase, paid inference, hosting purchase, registration/legal acceptance or Devpost submission. CrisisCodec unchanged. Original recovery artifacts retained.
+
+## Next executable action
+
+Finish verified rebrand commit/push and independently read back refs, then authenticate Sandbox with securely bound credentials and perform the explicit human-authorized Orders workflow. If bindings remain absent, preserve honest blocked evidence and finish independent security/release preparation. Public license/branding/video/submission decisions remain with owner.

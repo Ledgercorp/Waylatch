@@ -1,0 +1,22 @@
+
+> rescueledger@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/RescueLedger
+
+ ✓ tests/security-review.test.ts (4 tests) 197ms
+ ✓ tests/payments.test.ts (7 tests) 211ms
+ ✓ tests/paypal-http.test.ts (4 tests) 1129ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > executes OAuth/order/buyer approval/capture/inspection without duplicate logical purchases  465ms
+ ✓ tests/input-boundary.test.ts (2 tests) 90ms
+ ✓ tests/offline.test.ts (10 tests) 191ms
+ ✓ tests/receipt.test.ts (2 tests) 10ms
+ ✓ tests/risk.test.ts (9 tests) 15ms
+ ✓ tests/schema.test.ts (2 tests) 9ms
+
+ Test Files  8 passed (8)
+      Tests  40 passed (40)
+   Start at  11:33:07
+   Duration  3.18s (transform 393ms, setup 0ms, collect 2.09s, tests 1.85s, environment 1ms, prepare 679ms)
+

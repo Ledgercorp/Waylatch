@@ -1,4 +1,4 @@
-# RescueLedger engineering specification
+# Waylatch engineering specification
 
 Purpose: preserve disconnected emergency supply requests and make immediate human-authorized Sandbox purchases accountable. Synthetic demonstration only; no emergency deployment claim. No credit, lending, advances, autonomous financial authorization, live PayPal, or paid infrastructure.
 
@@ -11,3 +11,20 @@ AI: pinned Apache-2.0 MiniLM ONNX weights, Transformers.js CPU inference local t
 Boundaries: src/requests/schema.ts shared strict request types; src/offline packet/reconstruction/storage; src/risk semantic evidence; server/paypal.ts provider; server/store.ts SQLite and atomic audit; server/payments.ts state machine; server/app.ts auth and routes; src/components UI stages. Optional research cannot affect payments.
 
 Verification: schema/packet corruption and revision cases; API authorization/amount tampering/concurrency/restart; audit corruption; real model benchmark; browser offline reload, QR across contexts, mobile/desktop accessibility. Real PayPal capture and public webhooks need credentials/HTTPS and cannot be claimed from stubs.
+
+## Request to verified action
+
+```mermaid
+flowchart LR
+  Field[Field request] --> Local[IndexedDB + offline shell]
+  Local --> QR[RL1 packets / untrusted handoff]
+  QR --> Review[Coordinator review]
+  Model[Local MiniLM + deterministic evidence] --> Review
+  Review --> Human[Explicit human approval]
+  Human --> Server[Authenticated server / SQLite reservation]
+  Server --> Sandbox[PayPal Sandbox Orders / buyer approval / capture]
+  Sandbox --> Inspect[Authoritative amount + reference reconciliation]
+  Inspect --> Audit[SHA-256 event chain / independent validation]
+```
+
+Waylatch continues the original RescueLedger architecture. Browser branding does not migrate wire/storage/event identities. Model data never goes to an external inference API. Current actual account integration depends on secure runtime credential bindings; diagrams describe the implemented workflow, not completed real-provider evidence.

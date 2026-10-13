@@ -1,6 +1,6 @@
 # Local semantic review
 
-RescueLedger runs genuine local sentence-embedding inference on the Node server using Transformers.js 3.8.1 and the CPU ONNX runtime. No inference service, API credential, paid endpoint, or external transmission of request descriptions is involved. AI produces review evidence and cannot authorize, reject, or execute payments.
+Waylatch runs genuine local sentence-embedding inference on the Node server using Transformers.js 3.8.1 and the CPU ONNX runtime. No inference service, API credential, paid endpoint, or external transmission of request descriptions is involved. AI produces review evidence and cannot authorize, reject, or execute payments.
 
 ## Model and provenance
 
@@ -34,7 +34,7 @@ Runtime uses `env.allowRemoteModels = false`, local-only pipeline options, two C
 
 The initial threshold of 0.78 missed all six positive paraphrases; [that original result is retained](evidence/ai-baseline-078.json). After inspecting this small calibration set, the human-review threshold was changed to 0.60. The resulting run recorded **5 true positives, 0 false positives, 1 false negative, and 6 true negatives**. The missed example involves first-aid kits versus medical supply packs. These measurements use the same examples used to calibrate the threshold and are not a held-out accuracy estimate. No operational suitability or general duplicate-detection accuracy is established.
 
-The latest recorded run loaded the model in about 347 ms, executed 13 inference calls in about 57 ms total, and peaked at approximately 231 MB process RSS. The measured memory increase was about 162 MB; OS, runtime, model verification, request length, and batch size affect memory and latency. Reserve at least 512 MB for initial local evaluation; maximum-length workloads and concurrent server activity have not been stress-tested. This benchmark validates Linux x64 CPU execution, not browser, WebGPU, mobile, multilingual, or emergency field performance.
+The latest recorded run loaded the model in about 1100 ms, executed 13 inference calls in about 87 ms total, and peaked at approximately 235 MB process RSS. The measured memory increase was about 173 MB; OS, runtime, model verification, request length, and batch size affect memory and latency. Reserve at least 512 MB for initial local evaluation; maximum-length workloads and concurrent server activity have not been stress-tested. This benchmark validates Linux x64 CPU execution, not browser, WebGPU, mobile, multilingual, or emergency field performance.
 
 ## Review logic and limitations
 

@@ -27,7 +27,7 @@ app.use(
 );
 app.get('/', (_req, res) => res.sendFile(resolve('dist/index.html')));
 const server = app.listen(port, '127.0.0.1', () =>
-  console.log(`RescueLedger listening on ${origin}; PayPal Sandbox only`),
+  console.log(`Waylatch listening on ${origin}; PayPal Sandbox only`),
 );
 for (const signal of ['SIGTERM', 'SIGINT'] as const)
   process.on(signal, () =>

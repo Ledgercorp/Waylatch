@@ -2,11 +2,13 @@
 
 ## Project name / tagline
 
-RescueLedger — Emergency procurement that survives disconnection and makes every payment accountable.
+Waylatch — Offline-ready emergency procurement and accountable payments.
+
+Tagline: From field need to verified action.
 
 ## Problem and audience
 
-Field responders, volunteer coordinators and nonprofit teams may need to request supplies before reliable connectivity returns. Lost requests and duplicate expense records make later authorization and reconciliation harder. RescueLedger preserves the request, carries it between devices and maintains a clear boundary between AI evidence and human financial authority.
+Field responders, volunteer coordinators and nonprofit teams may need to request supplies before reliable connectivity returns. Lost requests and duplicate expense records make later authorization and reconciliation harder. Waylatch preserves the request, carries it between devices and maintains a clear boundary between AI evidence and human financial authority.
 
 ## What it does
 
@@ -26,7 +28,7 @@ This is a synthetic prototype for a specific operational problem, not evidence o
 
 ## New work and reuse
 
-RescueLedger was created during the 2026 submission period. With owner authorization, it selectively adapts CrisisCodec's codec/reconstruction primitives at commit 8ca845c; request/claim domain, guarded PayPal integration, local semantic review, audit chain and visual product are new work. CrisisCodec UI/domain behavior was not cloned. Exact source adaptation and rights limitations are disclosed in CRISISCODEC_REUSE.md.
+The original RescueLedger implementation was created during the 2026 submission period and continues as Waylatch without rebuilding or rewriting its history. With owner authorization, it selectively adapts CrisisCodec's codec/reconstruction primitives at commit 8ca845c; request/claim domain, guarded PayPal integration, local semantic review, audit chain and visual product are new work. CrisisCodec UI/domain behavior was not cloned. Exact source adaptation and rights limitations are disclosed in CRISISCODEC_REUSE.md.
 
 ## Technology list
 

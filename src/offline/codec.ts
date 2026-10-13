@@ -167,7 +167,7 @@ export function fromText(text: string): Uint8Array {
     text.length > 804 ||
     !/^[A-Za-z0-9+/]+={0,2}$/.test(text.slice(4))
   )
-    throw new Error('Invalid RescueLedger packet text');
+    throw new Error('Invalid Waylatch packet text');
   let bytes: Uint8Array;
   try {
     bytes = Uint8Array.from(atob(text.slice(4)), (character) => character.charCodeAt(0));

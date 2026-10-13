@@ -41,7 +41,7 @@ export function AuditPanel({
                 a.href = URL.createObjectURL(
                   new Blob([JSON.stringify(events, null, 2)], { type: 'application/json' }),
                 );
-                a.download = 'rescueledger-audit.json';
+                a.download = 'waylatch-audit.json';
                 a.click();
                 URL.revokeObjectURL(a.href);
               }}

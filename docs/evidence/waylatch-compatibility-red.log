@@ -1,0 +1,34 @@
+
+> rescueledger@0.1.0 test
+> vitest run tests/compatibility.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ❯ tests/compatibility.test.ts (5 tests | 1 failed) 89ms
+   ✓ Waylatch preserves authentic RescueLedger v1 contracts > loads legacy IndexedDB requests and provenance without migrating or rewriting 14ms
+   ✓ Waylatch preserves authentic RescueLedger v1 contracts > replays a legacy partial receiver and completes pinned RL1 packets 33ms
+   ✓ Waylatch preserves authentic RescueLedger v1 contracts > imports historical wire bytes and rejects a corrupted historical packet 13ms
+   ✓ Waylatch preserves authentic RescueLedger v1 contracts > validates historical RescueLedger event hashes without renaming event data 4ms
+   × Waylatch preserves authentic RescueLedger v1 contracts > exposes the Waylatch browser and PWA identity without financial authority in metadata 21ms
+     → expected '<!doctype html><html lang="en"><head>…' to contain 'Waylatch'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/compatibility.test.ts > Waylatch preserves authentic RescueLedger v1 contracts > exposes the Waylatch browser and PWA identity without financial authority in metadata
+AssertionError: expected '<!doctype html><html lang="en"><head>…' to contain 'Waylatch'
+
+Expected: "Waylatch"
+Received: "<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="theme-color" content="#102630"/><title>RescueLedger · Field to funds</title></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>"
+
+ ❯ tests/compatibility.test.ts:17:165
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed (5)
+   Start at  11:36:01
+   Duration  1.37s (transform 226ms, setup 0ms, collect 540ms, tests 89ms, environment 0ms, prepare 218ms)
+

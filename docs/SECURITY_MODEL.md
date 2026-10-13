@@ -14,7 +14,7 @@ SQLite holds approvals, sessions, transaction reservations and audit events dura
 
 Order/capture references, custom_id, USD amount and a single final completed capture must match the approved record. Capture responses alone are insufficient: server inspects authoritative PayPal order details. A buyer return URL is informational and never triggers capture. Orders errors are surfaced without raw provider bodies or credentials.
 
-Official signature verification is mandatory for webhook events. Required headers and certificate destination are bounded; no certificate URL is fetched by RescueLedger. Verified notification alone does not supply a browser payment amount: authoritative order inspection reconciles known orders. Duplicate events use a persistent delivery ID. Missing webhook configuration fails closed. Local test doubles cannot establish real signed callback receipt.
+Official signature verification is mandatory for webhook events. Required headers and certificate destination are bounded; no certificate URL is fetched by Waylatch. Verified notification alone does not supply a browser payment amount: authoritative order inspection reconciles known orders. Duplicate events use a persistent delivery ID. Missing webhook configuration fails closed. Local test doubles cannot establish real signed callback receipt.
 
 Secrets stay in server configuration or ignored env files. Frontend receives only Sandbox configuration status, records and validated references. PayPal base URL is hard-coded to api-m.sandbox.paypal.com, with sandbox.paypal.com buyer approval links. No environment switch to live, live SDK script, Payouts UI execution or automatic top-up exists.
 

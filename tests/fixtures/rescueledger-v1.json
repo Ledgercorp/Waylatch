@@ -1,0 +1,179 @@
+{
+  "baselineCommit": "ee1488bde39347347d5a40e6bd766072fad7f16f",
+  "request": {
+    "id": "RL-DEMO01",
+    "kind": "procurement",
+    "incident": "FLOOD-EMBER-26",
+    "resources": [
+      {
+        "description": "Bottled drinking water for Ember shelter",
+        "quantity": 24
+      },
+      {
+        "description": "AA batteries for portable radios",
+        "quantity": 48
+      },
+      {
+        "description": "First aid supply kits",
+        "quantity": 6
+      }
+    ],
+    "urgency": "urgent",
+    "amountCents": 12800,
+    "amountKind": "exact",
+    "currency": "USD",
+    "location": "Ember shelter · fictional",
+    "origin": "Field team Delta · fictional",
+    "revision": 1,
+    "createdAt": "2026-10-13T08:00:00.000Z",
+    "receiptDigest": null,
+    "transactionReference": null,
+    "expenseAt": null
+  },
+  "packets": [
+    "RL1:mAGpUkwtREVNTzAxAQAAAcSInaRraW5kqGluY2lkZW50qXJlc291cmNlc6d1cmdlbmN5q2Ftb3VudENlbnRzqmFtb3VudEtpbmSoY3VycmVuY3mobG9jYXRpb26mb3JpZ2luqWNyZWF0ZWRBdK1yZWNlaXB0RGlnZXN0tHRyYW5zYWN0aW9uUmVmZXJlbmNlqWV4cGVuc2VBdM0COwup/kg=",
+    "RL1:mAGpUkwtREVNTzAxAQEAAcQMq3Byb2N1cmVtZW50zQI7196kbQ==",
+    "RL1:mAGpUkwtREVNTzAxAQIAAcQPrkZMT09ELUVNQkVSLTI2zQI76Wq0Jw==",
+    "RL1:mAGpUkwtREVNTzAxAQMAAcSok4KrZGVzY3JpcHRpb27ZKEJvdHRsZWQgZHJpbmtpbmcgd2F0ZXIgZm9yIEVtYmVyIHNoZWx0ZXKocXVhbnRpdHkYgqtkZXNjcmlwdGlvbtkgQUEgYmF0dGVyaWVzIGZvciBwb3J0YWJsZSByYWRpb3OocXVhbnRpdHkwgqtkZXNjcmlwdGlvbrVGaXJzdCBhaWQgc3VwcGx5IGtpdHOocXVhbnRpdHkGzQI7ec1n0A==",
+    "RL1:mAGpUkwtREVNTzAxAQQAAcQHpnVyZ2VudM0COyit4eI=",
+    "RL1:mAGpUkwtREVNTzAxAQUAAcQDzTIAzQI7kze/Iw==",
+    "RL1:mAGpUkwtREVNTzAxAQYAAcQGpWV4YWN0zQI78IzWRg==",
+    "RL1:mAGpUkwtREVNTzAxAQcAAcQEo1VTRM0CO5Luz9U=",
+    "RL1:mAGpUkwtREVNTzAxAQgAAcQbukVtYmVyIHNoZWx0ZXIgwrcgZmljdGlvbmFszQI7txOtpQ==",
+    "RL1:mAGpUkwtREVNTzAxAQkAAcQevUZpZWxkIHRlYW0gRGVsdGEgwrcgZmljdGlvbmFszQI72NJhTA==",
+    "RL1:mAGpUkwtREVNTzAxAQoAAcQZuDIwMjYtMTAtMTNUMDg6MDA6MDAuMDAwWs0CO70nTxU=",
+    "RL1:mAGpUkwtREVNTzAxAQsAAcQBwM0CO9MyXuM=",
+    "RL1:mAGpUkwtREVNTzAxAQwAAcQBwM0CO7dTMyo=",
+    "RL1:mAGpUkwtREVNTzAxAQ0AAcQBwM0CO6AoJ2k="
+  ],
+  "outbox": {
+    "request": {
+      "id": "RL-DEMO01",
+      "kind": "procurement",
+      "incident": "FLOOD-EMBER-26",
+      "resources": [
+        {
+          "description": "Bottled drinking water for Ember shelter",
+          "quantity": 24
+        },
+        {
+          "description": "AA batteries for portable radios",
+          "quantity": 48
+        },
+        {
+          "description": "First aid supply kits",
+          "quantity": 6
+        }
+      ],
+      "urgency": "urgent",
+      "amountCents": 12800,
+      "amountKind": "exact",
+      "currency": "USD",
+      "location": "Ember shelter · fictional",
+      "origin": "Field team Delta · fictional",
+      "revision": 1,
+      "createdAt": "2026-10-13T08:00:00.000Z",
+      "receiptDigest": null,
+      "transactionReference": null,
+      "expenseAt": null
+    },
+    "provenance": {
+      "source": "local",
+      "recordedAt": "2026-10-13T03:00:00.000Z",
+      "origin": "Field team Delta · fictional",
+      "untrusted": false
+    },
+    "syncStatus": "pending"
+  },
+  "receiver": {
+    "packets": [
+      [
+        152, 1, 169, 82, 76, 45, 68, 69, 77, 79, 48, 49, 1, 0, 0, 1, 196, 136, 157, 164, 107, 105,
+        110, 100, 168, 105, 110, 99, 105, 100, 101, 110, 116, 169, 114, 101, 115, 111, 117, 114, 99,
+        101, 115, 167, 117, 114, 103, 101, 110, 99, 121, 171, 97, 109, 111, 117, 110, 116, 67, 101,
+        110, 116, 115, 170, 97, 109, 111, 117, 110, 116, 75, 105, 110, 100, 168, 99, 117, 114, 114,
+        101, 110, 99, 121, 168, 108, 111, 99, 97, 116, 105, 111, 110, 166, 111, 114, 105, 103, 105,
+        110, 169, 99, 114, 101, 97, 116, 101, 100, 65, 116, 173, 114, 101, 99, 101, 105, 112, 116,
+        68, 105, 103, 101, 115, 116, 180, 116, 114, 97, 110, 115, 97, 99, 116, 105, 111, 110, 82,
+        101, 102, 101, 114, 101, 110, 99, 101, 169, 101, 120, 112, 101, 110, 115, 101, 65, 116, 205,
+        2, 59, 11, 169, 254, 72
+      ],
+      [
+        152, 1, 169, 82, 76, 45, 68, 69, 77, 79, 48, 49, 1, 1, 0, 1, 196, 12, 171, 112, 114, 111,
+        99, 117, 114, 101, 109, 101, 110, 116, 205, 2, 59, 215, 222, 164, 109
+      ],
+      [
+        152, 1, 169, 82, 76, 45, 68, 69, 77, 79, 48, 49, 1, 2, 0, 1, 196, 15, 174, 70, 76, 79, 79,
+        68, 45, 69, 77, 66, 69, 82, 45, 50, 54, 205, 2, 59, 233, 106, 180, 39
+      ],
+      [
+        152, 1, 169, 82, 76, 45, 68, 69, 77, 79, 48, 49, 1, 3, 0, 1, 196, 168, 147, 130, 171, 100,
+        101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 217, 40, 66, 111, 116, 116, 108, 101, 100,
+        32, 100, 114, 105, 110, 107, 105, 110, 103, 32, 119, 97, 116, 101, 114, 32, 102, 111, 114,
+        32, 69, 109, 98, 101, 114, 32, 115, 104, 101, 108, 116, 101, 114, 168, 113, 117, 97, 110,
+        116, 105, 116, 121, 24, 130, 171, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 217,
+        32, 65, 65, 32, 98, 97, 116, 116, 101, 114, 105, 101, 115, 32, 102, 111, 114, 32, 112, 111,
+        114, 116, 97, 98, 108, 101, 32, 114, 97, 100, 105, 111, 115, 168, 113, 117, 97, 110, 116,
+        105, 116, 121, 48, 130, 171, 100, 101, 115, 99, 114, 105, 112, 116, 105, 111, 110, 181, 70,
+        105, 114, 115, 116, 32, 97, 105, 100, 32, 115, 117, 112, 112, 108, 121, 32, 107, 105, 116,
+        115, 168, 113, 117, 97, 110, 116, 105, 116, 121, 6, 205, 2, 59, 121, 205, 103, 208
+      ]
+    ],
+    "duplicates": 1
+  },
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-13T03:00:00.000Z",
+      "type": "request_created",
+      "recordId": "RL-DEMO01",
+      "data": {
+        "record": {
+          "id": "RL-DEMO01",
+          "kind": "procurement",
+          "incident": "FLOOD-EMBER-26",
+          "resources": [
+            {
+              "description": "Bottled drinking water for Ember shelter",
+              "quantity": 24
+            },
+            {
+              "description": "AA batteries for portable radios",
+              "quantity": 48
+            },
+            {
+              "description": "First aid supply kits",
+              "quantity": 6
+            }
+          ],
+          "urgency": "urgent",
+          "amountCents": 12800,
+          "amountKind": "exact",
+          "currency": "USD",
+          "location": "Ember shelter · fictional",
+          "origin": "Field team Delta · fictional",
+          "revision": 1,
+          "createdAt": "2026-10-13T08:00:00.000Z",
+          "receiptDigest": null,
+          "transactionReference": null,
+          "expenseAt": null
+        },
+        "product": "RescueLedger"
+      },
+      "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "7aac6328cd319f9721e273186d7e7453cd22b28f28b0d4763acbded25fa1fff7"
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-13T03:01:00.000Z",
+      "type": "human_review_completed",
+      "recordId": "RL-DEMO01",
+      "data": {
+        "revision": 1,
+        "note": "Historical synthetic review"
+      },
+      "previous": "7aac6328cd319f9721e273186d7e7453cd22b28f28b0d4763acbded25fa1fff7",
+      "hash": "6776924fb4eddedcd0dbe1a3de7d2f162cb8fa7335fed5bbc78962b998f0ceed"
+    }
+  ]
+}

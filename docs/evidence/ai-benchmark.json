@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-10-13T03:14:26.208Z",
+  "executedAt": "2026-10-13T14:31:30.375Z",
   "category": "executed-real-local-ai-inference",
   "model": "Xenova/all-MiniLM-L6-v2",
   "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
@@ -25,14 +25,14 @@
     "trueNegatives": 6,
     "precision": 1,
     "recall": 0.8333333333333334,
-    "loadMilliseconds": 347.39614,
-    "inferenceMilliseconds": 57.33255600000024,
+    "loadMilliseconds": 1099.505296,
+    "inferenceMilliseconds": 87.41697399999975,
     "inferenceBatches": 13,
-    "totalMilliseconds": 407.48884,
-    "baselineRssBytes": 60858368,
-    "finalRssBytes": 223318016,
-    "rssIncreaseBytes": 162459648,
-    "processPeakRssBytes": 230723584
+    "totalMilliseconds": 1191.105731,
+    "baselineRssBytes": 60948480,
+    "finalRssBytes": 234262528,
+    "rssIncreaseBytes": 173314048,
+    "processPeakRssBytes": 234655744
   },
   "assets": [
     {
@@ -85,7 +85,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 6.5630669999999895
+      "milliseconds": 10.180020000000013
     },
     {
       "id": "battery-paraphrase",
@@ -100,7 +100,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 5.004001000000017
+      "milliseconds": 7.74703599999998
     },
     {
       "id": "medical-paraphrase",
@@ -109,8 +109,12 @@
       "right": "Emergency medical supply packs containing dressings and disinfectant for displaced families",
       "similarity": 0.5897200902884364,
       "reviewRecommended": false,
-      "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 5.248709000000019
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 7.242706000000226
     },
     {
       "id": "fuel-paraphrase",
@@ -125,7 +129,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 4.026460000000043
+      "milliseconds": 5.453260999999884
     },
     {
       "id": "beds-paraphrase",
@@ -140,7 +144,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 4.804309999999987
+      "milliseconds": 6.842885000000024
     },
     {
       "id": "blankets-paraphrase",
@@ -155,7 +159,7 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 4.3941129999999475
+      "milliseconds": 5.486501000000089
     },
     {
       "id": "water-vs-bus",
@@ -164,8 +168,12 @@
       "right": "Bus rental to transport evacuees from the flood zone",
       "similarity": 0.3393803297169197,
       "reviewRecommended": false,
-      "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 4.087541999999985
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 5.926684000000023
     },
     {
       "id": "battery-vs-food",
@@ -174,8 +182,12 @@
       "right": "Rice and canned beans for shelter meals",
       "similarity": 0.054200823723587296,
       "reviewRecommended": false,
-      "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 3.6219110000000683
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 4.954590999999937
     },
     {
       "id": "medical-vs-fuel",
@@ -184,8 +196,12 @@
       "right": "Diesel fuel for the backup generator",
       "similarity": 0.0359525646220617,
       "reviewRecommended": false,
-      "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 3.626619000000005
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 5.3516189999998005
     },
     {
       "id": "beds-vs-radio",
@@ -194,8 +210,12 @@
       "right": "Two-way radios for coordinating volunteer teams",
       "similarity": 0.1911369631837325,
       "reviewRecommended": false,
-      "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 3.3072670000000244
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 4.885045999999875
     },
     {
       "id": "blankets-vs-pump",
@@ -204,8 +224,12 @@
       "right": "Submersible pumps to remove flood water from buildings",
       "similarity": 0.3611710973711798,
       "reviewRecommended": false,
-      "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 3.692647000000079
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 4.926297999999861
     },
     {
       "id": "near-domain-distinct",
@@ -214,8 +238,12 @@
       "right": "Waterproof storage containers for keeping medical supplies dry",
       "similarity": 0.38690188902116346,
       "reviewRecommended": false,
-      "reasons": ["Same incident", "Identical amount", "Created within 72 hours"],
-      "milliseconds": 3.7943910000000187
+      "reasons": [
+        "Same incident",
+        "Identical amount",
+        "Created within 72 hours"
+      ],
+      "milliseconds": 4.523782999999867
     }
   ],
   "limitations": [

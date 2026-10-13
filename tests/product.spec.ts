@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 test('field request survives real offline reload', async ({ page, context }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'New field request' }).click();
@@ -74,7 +74,7 @@ for (const size of [
     await page.setViewportSize(size);
     await page.goto('/');
     await expect(
-      page.getByRole('heading', { name: 'Field to funds. Every step accounted for.' }),
+      page.getByRole('heading', { name: 'From field need to verified action.' }),
     ).toBeVisible();
     await expect(page.locator('body')).not.toHaveJSProperty('scrollWidth', 0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
@@ -149,4 +149,46 @@ test('mobile capture and QR dialogs have accessible controls', async ({ page }) 
   await page.getByRole('button', { name: 'Receive handoff' }).click();
   results = await new AxeBuilder({ page }).analyze();
   expect(results.violations.map((x) => x.id)).toEqual([]);
+});
+
+test('Waylatch metadata and legacy IndexedDB survive offline reload', async ({ page, context }) => {
+  await page.goto('/');
+  await expect(page).toHaveTitle('Waylatch · From field need to verified action');
+  await expect(page.getByRole('link', { name: 'Waylatch home' })).toBeVisible();
+  const fixture = JSON.parse(readFileSync('tests/fixtures/rescueledger-v1.json', 'utf8'));
+  await page.evaluate(async (entry) => {
+    await new Promise<void>((resolve, reject) => {
+      const r = indexedDB.open('rescueledger-field-v1', 1);
+      r.onupgradeneeded = () => {
+        const db = r.result;
+        if (!db.objectStoreNames.contains('requests'))
+          db.createObjectStore('requests', { keyPath: 'request.id' });
+        if (!db.objectStoreNames.contains('receiver')) db.createObjectStore('receiver');
+      };
+      r.onsuccess = () => {
+        const db = r.result;
+        const tx = db.transaction('requests', 'readwrite');
+        tx.objectStore('requests').put(entry);
+        tx.oncomplete = () => {
+          db.close();
+          resolve();
+        };
+        tx.onerror = () => reject(tx.error);
+      };
+      r.onerror = () => reject(r.error);
+    });
+  }, fixture.outbox);
+  await page.evaluate(() => navigator.serviceWorker.ready.then(() => true));
+  await page.reload();
+  await expect(page.getByText('Preserved in IndexedDB', { exact: true })).toBeVisible();
+  const manifest = await (await page.request.get('/manifest.webmanifest')).json();
+  expect(manifest.name).toBe('Waylatch');
+  expect(manifest.short_name).toBe('Waylatch');
+  await context.setOffline(true);
+  await page.reload();
+  await expect(page.getByRole('link', { name: 'Waylatch home' })).toBeVisible();
+  await expect(page.getByText('Preserved in IndexedDB', { exact: true })).toBeVisible();
+  expect(
+    await page.evaluate(async () => (await caches.match('/manifest.webmanifest'))?.json()),
+  ).toMatchObject({ name: 'Waylatch' });
 });

@@ -195,7 +195,7 @@ export class PayPalClient implements PayPalProvider {
       {
         sender_batch_header: {
           sender_batch_id: 'RESCUELEDGER-ENTITLEMENT-2026-01',
-          email_subject: 'RescueLedger synthetic sandbox probe',
+          email_subject: 'Waylatch synthetic sandbox probe',
         },
         items: [
           {

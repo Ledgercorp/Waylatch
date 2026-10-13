@@ -1,8 +1,10 @@
-# RescueLedger
+# Waylatch
 
-**Emergency procurement that survives disconnection and makes every payment accountable.**
+**Offline-ready emergency procurement and accountable payments.**
 
-RescueLedger preserves emergency resource requests offline, moves them between devices through bounded QR packets, assists a coordinator with real local semantic review, and gates PayPal Sandbox purchases behind human review and explicit authorization. A reconciled capture is linked to its approved request and a tamper-evident event history.
+From field need to verified action. Formerly RescueLedger; original history and compatibility identifiers are retained.
+
+Waylatch preserves emergency resource requests offline, moves them between devices through bounded QR packets, assists a coordinator with real local semantic review, and gates PayPal Sandbox purchases behind human review and explicit authorization. A reconciled capture is linked to its approved request and a tamper-evident event history.
 
 Built by Colby Weiss / LeftSock Labs for the PayPal AI Hackathon 2026. All incident, organization, identity and expense examples are fictional. This prototype has not been tested in real emergencies. No lending, credit, deferred repayment, real-money transactions or autonomous AI authorization.
 
@@ -16,7 +18,7 @@ Requires Node.js **24+**, npm, Python 3 (only for the one-time model downloader)
 
 ```bash
 # Unpack the supplied source archive (or clone a future authorized private repository).
-cd RescueLedger
+cd Waylatch
 ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm ci
 cp .env.example .env
 ```
@@ -87,6 +89,6 @@ Subscribe a **Sandbox** app to `PAYMENT.CAPTURE.COMPLETED` and configure a publi
 - [Official hackathon requirements](docs/HACKATHON_REQUIREMENTS.md), [CrisisCodec adaptation](docs/CRISISCODEC_REUSE.md)
 - [Demo script](docs/DEMO_SCRIPT.md), [submission text](docs/DEVPOST_DRAFT.md), [release checklist](docs/RELEASE_CHECKLIST.md)
 
-Remote repository creation is blocked by the GitHub integration permission. A committed branch, source archive and Git bundle are preserved in the cloud workspace; no remote synchronization is claimed.
+The authentic implementation history is synchronized to the private repository https://github.com/Ledgercorp/Waylatch. The original `feat/rescueledger-mvp` branch and recovery archives remain preserved. Public visibility is not authorized.
 
 Root license adoption is **pending owner approval**. `docs/LICENSE-MIT-PROPOSAL.txt` is a proposal and does not license this private repository. CrisisCodec code was selectively adapted with the owner's authorization; its original source also has no adopted root license. Dependencies/models retain their own notices. Do not change visibility or submit until ownership, license, public release and final submission approvals are complete.

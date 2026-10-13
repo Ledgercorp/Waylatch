@@ -1,4 +1,4 @@
-# RescueLedger disconnected handoff protocol (RL1)
+# Waylatch disconnected handoff protocol (RL1)
 
 This prototype carries **untrusted request data**, never approval or payment authority. It uses fictional demonstration records. It has not been tested in real emergencies.
 
@@ -50,6 +50,8 @@ CRC32 detects accidental corruption. It **does not authenticate a sender**, prev
 
 ## Verification
 
-Run `npx vitest run tests/offline.test.ts` in RescueLedger. This exercises interrupted/out-of-order fragment delivery, exact duplicates, corruption, raw bounds, conflicting/stale revisions, explicit unknown values, strict-schema transport, IndexedDB persistence with `fake-indexeddb`, and actual QR PNG generation. These are local tests, not PayPal integrations. Browser offline reload and QR image transfer need their separate end-to-end browser evidence.
+Run `npx vitest run tests/offline.test.ts` in Waylatch. This exercises interrupted/out-of-order fragment delivery, exact duplicates, corruption, raw bounds, conflicting/stale revisions, explicit unknown values, strict-schema transport, IndexedDB persistence with `fake-indexeddb`, and actual QR PNG generation. These are local tests, not PayPal integrations. Browser offline reload and QR image transfer need their separate end-to-end browser evidence.
 
 CrisisCodec's unmodified reference source was independently tested from a disposable copy at `/workspace/crisiscodec-verification` with `npm ci --ignore-scripts --no-audit --no-fund`; its exact test evidence is preserved in `docs/evidence/crisiscodec-unit.log` and `docs/evidence/crisiscodec-browser.log`. Those baseline results establish reusable source behavior, not RescueLedger behavior.
+
+Waylatch retains the RescueLedger RL1 wire format and `rescueledger-field-v1` IndexedDB identity. Existing requests, provenance and partial receiver packets require no migration. See REBRAND_HISTORY.md and pinned compatibility fixtures.

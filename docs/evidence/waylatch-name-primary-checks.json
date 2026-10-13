@@ -1,0 +1,49 @@
+[
+  {
+    "label": "uspto-search",
+    "url": "https://trademarksearch.uspto.gov/",
+    "checkedAt": "2026-10-13T11:33:04.756061+00:00",
+    "errorType": "URLError"
+  },
+  {
+    "label": "wipo-branddb",
+    "url": "https://branddb.wipo.int/",
+    "checkedAt": "2026-10-13T11:33:04.816149+00:00",
+    "httpStatus": 200,
+    "bytes": 1697
+  },
+  {
+    "label": "npm-exact",
+    "url": "https://registry.npmjs.org/waylatch",
+    "checkedAt": "2026-10-13T11:33:05.517392+00:00",
+    "httpStatus": 404
+  },
+  {
+    "label": "npm-search",
+    "url": "https://registry.npmjs.org/-/v1/search?text=waylatch&size=20",
+    "checkedAt": "2026-10-13T11:33:05.715410+00:00",
+    "httpStatus": 200,
+    "total": 0,
+    "bytes": 58
+  },
+  {
+    "label": "rdap-com",
+    "url": "https://rdap.verisign.com/com/v1/domain/waylatch.com",
+    "checkedAt": "2026-10-13T11:33:05.880562+00:00",
+    "httpStatus": 404
+  },
+  {
+    "label": "rdap-app",
+    "url": "https://pubapi.registry.google/rdap/domain/waylatch.app",
+    "checkedAt": "2026-10-13T11:33:06.106661+00:00",
+    "httpStatus": 404
+  },
+  {
+    "label": "itunes",
+    "url": "https://itunes.apple.com/search?term=waylatch&entity=software&limit=25",
+    "checkedAt": "2026-10-13T11:33:06.493582+00:00",
+    "httpStatus": 200,
+    "resultCount": 10,
+    "bytes": 81469
+  }
+]

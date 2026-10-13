@@ -1,4 +1,4 @@
-const CACHE = 'rescueledger-shell-v1';
+const CACHE = 'rescueledger-shell-v2';
 self.addEventListener('install', (event) => {
   event.waitUntil(
     (async () => {
@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
       const html = await response.text();
       await cache.put('/', new Response(html, { headers: { 'Content-Type': 'text/html' } }));
       const assets = [...html.matchAll(/(?:src|href)="(\/assets\/[^\"]+)"/g)].map((x) => x[1]);
-      await cache.addAll(assets);
+      await cache.addAll([...assets, '/manifest.webmanifest', '/waylatch-icon.svg']);
       await self.skipWaiting();
     })(),
   );
@@ -33,7 +33,10 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fetch(event.request).catch(() => caches.match('/')));
     return;
   }
-  if (url.pathname.startsWith('/assets/'))
+  if (
+    url.pathname.startsWith('/assets/') ||
+    ['/manifest.webmanifest', '/waylatch-icon.svg'].includes(url.pathname)
+  )
     event.respondWith(
       caches.match(event.request).then(
         (cached) =>

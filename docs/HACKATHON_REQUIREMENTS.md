@@ -27,7 +27,7 @@ Relevant exact official text:
 
 The five equally weighted judging criteria are Technological Implementation, Design, Potential Impact, Innovation/Idea, Presentation. Target overall, Most Impactful, Best Use of PayPal + AI, Best Demo Delivery; no claim of award eligibility or likely win. Public runnable repository is our intended demo route; hosting is optional.
 
-Resources explicitly link PayPal REST API, Checkout, JavaScript SDK v6, Sandbox, Payouts and Webhooks. RescueLedger uses the official REST route and browser buyer approval links; an SDK is not necessary for the specified Orders v2 workflow. Live API, credit, Pay Later, lending and autonomous financial authorization are excluded.
+Resources explicitly link PayPal REST API, Checkout, JavaScript SDK v6, Sandbox, Payouts and Webhooks. Waylatch uses the official REST route and browser buyer approval links; an SDK is not necessary for the specified Orders v2 workflow. Live API, credit, Pay Later, lending and autonomous financial authorization are excluded.
 
 ## PayPal primary references inspected
 

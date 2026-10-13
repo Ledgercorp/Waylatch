@@ -1,0 +1,14 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/compatibility.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/compatibility.test.ts (5 tests) 40ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  11:37:10
+   Duration  1.01s (transform 232ms, setup 0ms, collect 553ms, tests 40ms, environment 0ms, prepare 161ms)
+

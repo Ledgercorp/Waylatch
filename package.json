@@ -1,5 +1,5 @@
 {
-  "name": "rescueledger",
+  "name": "waylatch",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -52,5 +52,6 @@
     "supertest": "^7.1.0",
     "@types/supertest": "^6.0.0",
     "fake-indexeddb": "^6.2.0"
-  }
+  },
+  "description": "Offline-ready emergency procurement and accountable payments. From field need to verified action."
 }
