@@ -1,0 +1,17 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/sandbox-cli.test.ts tests/paypal-auth.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/paypal-auth.test.ts (3 tests) 29ms
+ ✓ tests/sandbox-cli.test.ts (2 tests) 1468ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation  823ms
+   ✓ interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined  642ms
+
+ Test Files  2 passed (2)
+      Tests  5 passed (5)
+   Start at  14:41:31
+   Duration  2.42s (transform 344ms, setup 0ms, collect 898ms, tests 1.50s, environment 0ms, prepare 343ms)
+

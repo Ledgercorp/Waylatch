@@ -1,0 +1,20 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/paypal-auth.test.ts tests/paypal-http.test.ts tests/payments.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ✓ tests/paypal-auth.test.ts (3 tests) 22ms
+ ✓ tests/paypal-http.test.ts (4 tests) 1830ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > executes OAuth/order/buyer approval/capture/inspection without duplicate logical purchases  532ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > recovers a dropped create response with the same request ID  408ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > reconciles a dropped successful capture response without another capture  372ms
+   ✓ black-box protocol boundary: separate-process PayPal simulator, NOT PayPal > forwards official verification fields and rejects an invalid signature over HTTP  516ms
+ ✓ tests/payments.test.ts (7 tests) 305ms
+
+ Test Files  3 passed (3)
+      Tests  14 passed (14)
+   Start at  14:35:27
+   Duration  4.37s (transform 349ms, setup 0ms, collect 1.43s, tests 2.16s, environment 1ms, prepare 485ms)
+

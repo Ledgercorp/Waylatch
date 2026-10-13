@@ -51,3 +51,7 @@ Every API URL is fixed to Sandbox in the provider implementation. Browser buyer 
 - [ ] Owner approves final Devpost submission; no autonomous registration/submission.
 
 Recheck rules immediately before submission because the host may amend them. Do not commit Sandbox secrets or buyer credentials despite broad testing-access language; provide secure access instructions and scoped accounts.
+
+## Continuation recheck — 2026-10-13
+
+The official rules/resources and current PayPal OAuth/Orders/webhook API pages were fetched again with HTTP200. The November12 deadline, Sandbox/AI focus, five judging criteria, runnable-build option, public licensed code and public YouTube video under three minutes remain present. No material requirement change was identified in the inspected sections. Sanitized fetch dates/statuses/content fingerprints: docs/evidence/waylatch-official-docs-checks.json. No registration or terms acceptance occurred.

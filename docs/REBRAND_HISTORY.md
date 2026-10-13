@@ -30,4 +30,4 @@ Header/footer, browser title/application metadata/description, tagline, home acc
 
 The recovered baseline was freshly verified: 40 local tests, seven browser tests and production build passed. Five targeted compatibility tests now verify legacy IndexedDB, partial receiver replay, literal old RL1 bytes/corruption rejection, old audit hashes and Waylatch metadata. Metadata test was observed failing before the rebrand and passing after it.
 
-Rebrand and final synchronization SHAs are recorded after the verified commit exists, in PROJECT_STATE.md/session Git evidence. This document deliberately does not invent a future commit hash. Original ancestry remains an acceptance gate for every push.
+Verified rebrand commit: **727ccd406882eb37cbcf6b4d847922e2b946b53b**. The private remote rebrand branch independently read back the same SHA. Subsequent integration/evidence commits append to it; their actual SHAs are recorded in session Git evidence. Original ancestry remains an acceptance gate for every push.

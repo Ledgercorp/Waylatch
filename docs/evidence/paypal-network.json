@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-13T14:29:14.136015+00:00",
+  "category": "unauthenticated-network-reachability-only",
+  "host": "api-m.sandbox.paypal.com",
+  "oauthExecuted": false,
+  "httpsReachable": true,
+  "httpStatus": 403
+}

@@ -39,58 +39,77 @@ if (health.environment !== 'sandbox' || !health.paypalConfigured)
 await call('/session', { password: process.env.COORDINATOR_PASSWORD });
 const record = { ...demoRequest, id: 'RL-REAL-' + Date.now(), createdAt: new Date().toISOString() };
 await call('/requests', { record, provenance: 'local' });
-await call(`/requests/${record.id}/review`, {
-  revision: 1,
-  disposition: 'clear',
-  note: 'Synthetic supplies checked for real Sandbox integration evidence',
-});
 const rl = createInterface({ input: stdin, output: stdout });
-try {
+async function integrate() {
+  console.log(
+    'Synthetic procurement for human review:',
+    JSON.stringify(
+      {
+        id: record.id,
+        incident: record.incident,
+        resources: record.resources,
+        revision: record.revision,
+        amountCents: record.amountCents,
+        currency: record.currency,
+      },
+      null,
+      2,
+    ),
+  );
+  const reviewed = await rl.question(
+    'Verify the fictional incident, supplies and exact amount. Type REVIEW to record human review: ',
+  );
+  if (reviewed !== 'REVIEW') {
+    console.log('Stopped without human review; request remains pending.');
+    process.exitCode = 2;
+    return;
+  }
+  await call(`/requests/${record.id}/review`, {
+    revision: 1,
+    disposition: 'clear',
+    note: 'Operator explicitly confirmed REVIEW for the displayed synthetic procurement',
+  });
   const consent = await rl.question(
     `Authorize this synthetic $128.00 SANDBOX purchase? Type AUTHORIZE: `,
   );
   if (consent !== 'AUTHORIZE') {
-    console.log('Stopped without authorization or order creation.');
+    console.log('Stopped without purchase authorization or order creation.');
     process.exitCode = 2;
-  } else {
-    await call(`/requests/${record.id}/approve`, {
-      revision: 1,
-      amountCents: 12800,
-      confirm: true,
-    });
-    const order = await call(`/payments/${record.id}/order`, { confirm: true });
-    console.log('Approve with a Sandbox PERSONAL buyer account in a browser:', order.approvalUrl);
-    const capture = await rl.question(
-      'After buyer approval, explicitly capture SANDBOX funds? Type CAPTURE: ',
-    );
-    if (capture !== 'CAPTURE') {
-      console.log('Order remains unpaid; capture not requested.');
-      process.exitCode = 2;
-    } else {
-      const payment = await call(`/payments/${record.id}/capture`, { confirm: true });
-      const inspection = await call(`/payments/${record.id}`);
-      if (payment.state !== 'PAID' || inspection.paypalStatus !== 'COMPLETED' || !payment.captureId)
-        throw new Error('Capture not authoritatively reconciled');
-      const evidence = {
-        executedAt: new Date().toISOString(),
-        category: 'executed-real-paypal-sandbox',
-        recordId: record.id,
-        revision: 1,
-        amountCents: 12800,
-        currency: 'USD',
-        orderId: payment.orderId,
-        captureId: payment.captureId,
-        paypalStatus: inspection.paypalStatus,
-        realMoneyUsed: 0,
-      };
-      mkdirSync('docs/evidence', { recursive: true });
-      writeFileSync(
-        'docs/evidence/paypal-real-sandbox.json',
-        JSON.stringify(evidence, null, 2) + '\n',
-      );
-      console.log(JSON.stringify(evidence, null, 2));
-    }
+    return;
   }
+  await call(`/requests/${record.id}/approve`, { revision: 1, amountCents: 12800, confirm: true });
+  const order = await call(`/payments/${record.id}/order`, { confirm: true });
+  console.log('Approve with a Sandbox PERSONAL buyer account in a browser:', order.approvalUrl);
+  const capture = await rl.question(
+    'After genuine buyer approval, explicitly capture SANDBOX funds? Type CAPTURE: ',
+  );
+  if (capture !== 'CAPTURE') {
+    console.log('Order remains unpaid; capture not requested.');
+    process.exitCode = 2;
+    return;
+  }
+  const payment = await call(`/payments/${record.id}/capture`, { confirm: true });
+  const inspection = await call(`/payments/${record.id}`);
+  if (payment.state !== 'PAID' || inspection.paypalStatus !== 'COMPLETED' || !payment.captureId)
+    throw new Error('Capture not authoritatively reconciled');
+  const evidence = {
+    executedAt: new Date().toISOString(),
+    category: 'executed-real-paypal-sandbox',
+    recordId: record.id,
+    revision: 1,
+    amountCents: 12800,
+    currency: 'USD',
+    orderId: payment.orderId,
+    captureId: payment.captureId,
+    paypalStatus: inspection.paypalStatus,
+    realMoneyUsed: 0,
+  };
+  mkdirSync('docs/evidence', { recursive: true });
+  writeFileSync('docs/evidence/paypal-real-sandbox.json', JSON.stringify(evidence, null, 2) + '\n');
+  console.log(JSON.stringify(evidence, null, 2));
+}
+try {
+  await integrate();
 } finally {
   rl.close();
 }

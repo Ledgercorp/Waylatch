@@ -65,11 +65,12 @@ npx playwright install chromium
 npm run test:e2e         # browser offline/QR + real AI + claims + axe; model assets required
 npm run test:ai          # actual local model benchmark; assets required
 npm run release:check    # bounded local credential/bundle scan; not certification
+npm run paypal:auth      # sanitized OAuth-only gate; blocked exit2 without secure bindings
 npm run paypal:probe     # one Sandbox Payouts entitlement probe; blocked exit2 without keys
 npm run paypal:integration
 ```
 
-`paypal:integration` requires the app running with the same secure configuration. It goes through authenticated server upload/review/approval, prompts for explicit `AUTHORIZE`, creates an actual Sandbox order, prints its approval URL, and prompts for explicit `CAPTURE` after browser buyer approval. Success requires authoritative COMPLETED order + capture references, then writes sanitized `docs/evidence/paypal-real-sandbox.json`. **No such success file exists yet.** This harness is loopback-only; do not substitute a provider double for real evidence.
+`paypal:integration` requires the app running with the same secure configuration. It goes through authenticated server upload/review/approval, prompts for explicit `REVIEW` before recording human review, then explicit `AUTHORIZE`, creates an actual Sandbox order, prints its approval URL, and prompts for explicit `CAPTURE` after browser buyer approval. Success requires authoritative COMPLETED order + capture references, then writes sanitized `docs/evidence/paypal-real-sandbox.json`. **No such success file exists yet.** This harness is loopback-only; do not substitute a provider double for real evidence.
 
 `paypal:probe` posts a one-cent **Sandbox-only** payout to a fictional `example.com` receiver with a fixed sender batch ID. Run once per configured account to test entitlement, inspect actual response and retain evidence. No real money is involved. A successful probe alone does not implement a reimbursement flow. Prioritize Orders capture before unlocking Payouts.
 
@@ -85,7 +86,8 @@ Subscribe a **Sandbox** app to `PAYMENT.CAPTURE.COMPLETED` and configure a publi
 
 - [Architecture](docs/ARCHITECTURE.md), [implementation checklist](docs/IMPLEMENTATION_PLAN.md), [durable project state](docs/PROJECT_STATE.md)
 - [Security model](docs/SECURITY_MODEL.md), [offline protocol](docs/OFFLINE_PROTOCOL.md), [AI model and benchmark](docs/AI_MODEL.md)
-- [Verification evidence](docs/VERIFICATION.md), [blockers](docs/BLOCKERS.md)
+- [Verification evidence](docs/VERIFICATION.md), [blockers](docs/BLOCKERS.md), [Sandbox integration runbook](docs/PAYPAL_SANDBOX_INTEGRATION.md)
+- [Rebrand and compatibility](docs/REBRAND_HISTORY.md), [name investigation](docs/WAYLATCH_NAME_CLEARANCE.md)
 - [Official hackathon requirements](docs/HACKATHON_REQUIREMENTS.md), [CrisisCodec adaptation](docs/CRISISCODEC_REUSE.md)
 - [Demo script](docs/DEMO_SCRIPT.md), [submission text](docs/DEVPOST_DRAFT.md), [release checklist](docs/RELEASE_CHECKLIST.md)
 

@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-13T14:35:32.827Z",
+  "implementationCommit": "727ccd406882eb37cbcf6b4d847922e2b946b53b",
+  "worktreeDirty": true,
+  "environment": "sandbox",
+  "host": "api-m.sandbox.paypal.com",
+  "path": "/v1/oauth2/token",
+  "credentialVariables": [
+    "PAYPAL_CLIENT_ID",
+    "PAYPAL_CLIENT_SECRET"
+  ],
+  "missingVariables": [
+    "PAYPAL_CLIENT_ID",
+    "PAYPAL_CLIENT_SECRET"
+  ],
+  "requestExecuted": false,
+  "authenticated": false,
+  "httpStatus": null,
+  "providerResponse": null,
+  "category": "blocked-configuration",
+  "code": "SANDBOX_CREDENTIALS_MISSING"
+}

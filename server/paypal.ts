@@ -55,12 +55,26 @@ export class PayPalClient implements PayPalProvider {
   readonly configured: boolean;
   private token: string | null = null;
   private expires = 0;
+  private oauthStatus: number | null = null;
   static readonly base = 'https://api-m.sandbox.paypal.com';
   constructor(
     private config: { clientId?: string; clientSecret?: string; webhookId?: string },
     private transport: typeof fetch = fetch,
   ) {
     this.configured = !!config.clientId && !!config.clientSecret;
+  }
+  /** Server-only OAuth gate. Force a fresh request and return no credential/token data. */
+  async authenticate() {
+    this.token = null;
+    this.expires = 0;
+    this.oauthStatus = null;
+    await this.accessToken();
+    return {
+      authenticated: true as const,
+      environment: 'sandbox' as const,
+      host: new URL(PayPalClient.base).hostname,
+      httpStatus: this.oauthStatus,
+    };
   }
   private async accessToken() {
     if (!this.configured) throw new ProviderError(503, 'SANDBOX_CREDENTIALS_MISSING');
@@ -76,6 +90,7 @@ export class PayPalClient implements PayPalProvider {
       body: 'grant_type=client_credentials',
       signal: AbortSignal.timeout(20000),
     });
+    this.oauthStatus = response.status;
     if (!response.ok) throw new ProviderError(response.status, 'SANDBOX_OAUTH_FAILED');
     const data = z
       .object({ access_token: z.string().min(1), expires_in: z.number() })

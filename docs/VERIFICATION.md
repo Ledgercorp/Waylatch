@@ -33,3 +33,5 @@ Existing browser workflows still execute offline reload, QR image plus text tran
 Existing injected provider doubles and the separate-process HTTP PayPal simulator remain labeled local tests. They cover unauthorized purchase/capture, amount/revision tampering, idempotency, provider failures, signature rejection, webhook retry/deduplication and audit corruption. Simulated success cannot substitute for real Sandbox capture.
 
 Missing runtime credentials, public HTTPS callback, official naming-search uncertainty, owner licensing/publication/video/legal/submission decisions are documented in BLOCKERS.md. Root license remains a proposal. No public release or final submission. $0 real money and no paid services activated.
+
+Three additional OAuth transport-double tests verify missing bindings, sanitized success without tokens, and HTTP401 classification. Two process-boundary CLI tests reproduce and protect explicit review/authorization cancellation. The CLI no longer invents human review before confirmation. Real OAuth execution remains blocked by missing bindings, as recorded in paypal-oauth.json.

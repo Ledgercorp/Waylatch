@@ -1,0 +1,47 @@
+
+> waylatch@0.1.0 test
+> vitest run tests/sandbox-cli.test.ts
+
+
+ RUN  v3.2.7 /workspace/Waylatch
+
+ ❯ tests/sandbox-cli.test.ts (2 tests | 2 failed) 1245ms
+   × interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation 795ms
+     → expected 'reviewed' to be 'pending' // Object.is equality
+   × interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined 448ms
+     → expected 'Authorize this synthetic $128.00 SAND…' to contain 'Type REVIEW'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/sandbox-cli.test.ts > interactive integration harness: local app/provider double, no real PayPal > does not invent human review when the operator declines the first confirmation
+AssertionError: expected 'reviewed' to be 'pending' // Object.is equality
+
+Expected: "pending"
+Received: "reviewed"
+
+ ❯ tests/sandbox-cli.test.ts:11:221
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/sandbox-cli.test.ts > interactive integration harness: local app/provider double, no real PayPal > records explicit review but creates no order when purchase authorization is declined
+AssertionError: expected 'Authorize this synthetic $128.00 SAND…' to contain 'Type REVIEW'
+
+- Expected
++ Received
+
+- Type REVIEW
++ Authorize this synthetic $128.00 SANDBOX purchase? Type AUTHORIZE: Stopped without authorization or order creation.
++
+
+ ❯ tests/sandbox-cli.test.ts:12:167
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed (2)
+   Start at  14:40:40
+   Duration  2.12s (transform 190ms, setup 0ms, collect 464ms, tests 1.24s, environment 0ms, prepare 121ms)
+

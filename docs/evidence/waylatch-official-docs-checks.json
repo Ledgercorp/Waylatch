@@ -1,0 +1,51 @@
+[
+  {
+    "label": "rules",
+    "url": "https://paypalaihackathon.devpost.com/rules",
+    "checkedAt": "2026-10-13T14:39:10.147517+00:00",
+    "httpStatus": 200,
+    "bytes": 174899,
+    "sha256": "be78582ac9b5199f910ebdbaf281674c7e4d870ba46d4ce8c7535dfe613eb1b7",
+    "checks": {
+      "Nov 12, 2026": true,
+      "Technological Implementation": true,
+      "Potential Impact": true,
+      "YouTube": true,
+      "open source license": true,
+      "sandbox": true,
+      "three (3) minutes": true
+    }
+  },
+  {
+    "label": "resources",
+    "url": "https://paypalaihackathon.devpost.com/resources",
+    "checkedAt": "2026-10-13T14:39:11.056094+00:00",
+    "httpStatus": 200,
+    "bytes": 131454,
+    "sha256": "720fabeacf3e0cdb89cd280e8a5aae9036ced1a6b480501607f4518bb04a76ff"
+  },
+  {
+    "label": "oauth-docs",
+    "url": "https://developer.paypal.com/api/rest/authentication/",
+    "checkedAt": "2026-10-13T14:39:11.390670+00:00",
+    "httpStatus": 200,
+    "bytes": 193765,
+    "sha256": "c9b620300523ca155a9b630e8e9c384bd8159856529f8d6ec7daccb58b6572e1"
+  },
+  {
+    "label": "orders-docs",
+    "url": "https://developer.paypal.com/docs/api/orders/v2/",
+    "checkedAt": "2026-10-13T14:39:11.819918+00:00",
+    "httpStatus": 200,
+    "bytes": 180751,
+    "sha256": "ece6f77e8ccca9b57f30ce0506c74778f07d87e48baf6ae505c3425962f485d5"
+  },
+  {
+    "label": "webhooks-docs",
+    "url": "https://developer.paypal.com/docs/api/webhooks/v1/",
+    "checkedAt": "2026-10-13T14:39:12.776392+00:00",
+    "httpStatus": 200,
+    "bytes": 194684,
+    "sha256": "de397bc55c2bb3b7e19bc49a879d8f4d5dd33a55652deb6329efb5b567dceb2c"
+  }
+]
