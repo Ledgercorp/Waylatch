@@ -1,3 +1,9 @@
+# Current official-source recheck — submission preparation
+
+Public rules/resources and linked Devpost legal/privacy pages were retrieved again on 14 October 2026. [Sanitized source/account status](evidence/submission-external-status.json) records the fresh references; [one owner packet](RELEASE_APPROVALS.md) maps their consequences to the concrete candidate. The deadline remains 12 November 2026, noon Pacific (20:00 UTC); judging access must remain free through 15 December, 08:00 Pacific. Official account/custom-field/date RPCs still return internal errors, so identity/registration/form details remain unknown. No registration, agreement acceptance or submission occurred. The historical quotations/checkpoints below remain reference material, not consent.
+
+---
+
 # Official qualification and release gates
 
 ## Current prepared release candidate — 2026-10-13

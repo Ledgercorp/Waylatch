@@ -1,3 +1,9 @@
+# Current submission acceptance
+
+[Submission readiness](SUBMISSION_READINESS.md) and [judge quickstart](JUDGE_QUICKSTART.md) describe the current candidate. Presentation-only changes explicitly qualify the unvalidated tier; scoring, both frozen evaluations, all original payment evidence and the 87.76-second video remain unchanged. Current full/missing-model acceptance and security evidence use `docs/evidence/submission-*`. Older counts, mutable-path references and provider investigations below are historical; they do not instruct judges to repeat a purchase.
+
+---
+
 # Fresh genuine PayPal Sandbox capture verification — 2026-10-13
 
 Private remote HEAD/main/candidate independently matched existing source commit `5ca7ce805597a46570aab250e350ba37052d6313`. Name-only checks found PAYPAL_CLIENT_ID and PAYPAL_SECRET_KEY; existing alias resolver used them without modification. `npm run paypal:auth` exited 0: real Sandbox OAuth HTTP 200, accessTokenReceived=true, no token/credential disclosure.

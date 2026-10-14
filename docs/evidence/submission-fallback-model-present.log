@@ -1,0 +1,58 @@
+
+> waylatch@0.1.0 test:e2e:competitive
+> playwright test --config playwright.competitive.config.ts
+
+[WebServer] (node:26957) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:26969) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/competitive/judge.spec.ts:54:1 › guided offline preservation, interrupted QR recovery and reconnect never pay (5.0s)
+  ✘  2 tests/competitive/judge.spec.ts:114:1 › difficult calibration pair can be compared and disposition audited without financial authority (6.4s)
+(node:27217) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/competitive/judge.spec.ts:235:3 › historical archive, exports and accessibility at 1440px (3.7s)
+  ✓  4 tests/competitive/judge.spec.ts:235:3 › historical archive, exports and accessibility at 390px (2.6s)
+  ✓  5 tests/competitive/judge.spec.ts:286:1 › conflicting QR snapshots and revised candidates cannot inherit coordinator review evidence (3.5s)
+
+
+  1) tests/competitive/judge.spec.ts:114:1 › difficult calibration pair can be compared and disposition audited without financial authority 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Deterministic indicators only', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Deterministic indicators only', { exact: true }) with timeout 5000ms
+      - waiting for getByText('Deterministic indicators only', { exact: true })
+
+
+      149 |       exact: true,
+      150 |     }),
+    > 151 |   ).toBeVisible();
+          |     ^
+      152 |   await expect(page.getByText('Potentially related', { exact: true }).first()).toBeVisible();
+      153 |   await expect(
+      154 |     page.getByRole('complementary', { name: 'Contradicting recorded evidence' }),
+        at /workspace/Waylatch/tests/competitive/judge.spec.ts:151:5
+
+    Error Context: test-results/competitive/judge-difficult-calibratio-08669-without-financial-authority/error-context.md
+
+    Error Context: test-results/competitive/judge-difficult-calibratio-08669-without-financial-authority/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/competitive/judge-difficult-calibratio-08669-without-financial-authority/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/competitive/judge-difficult-calibratio-08669-without-financial-authority/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/competitive/judge.spec.ts:114:1 › difficult calibration pair can be compared and disposition audited without financial authority 
+  4 passed (24.8s)

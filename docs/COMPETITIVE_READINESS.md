@@ -1,3 +1,9 @@
+# Final submission preparation is current
+
+[SUBMISSION_READINESS.md](SUBMISSION_READINESS.md) supersedes the prior engineering checkpoint below. The application is ready for owner publication review as a local semantic-retrieval/advisory prototype. Both unfavorable scientific evaluations and the 87.76-second video remain unchanged. Current acceptance has 164 tests, all14 full-mode browser tests plus five missing-model checks, clean full/fallback judge setup and history/privacy/source review. No public/legal/payment action occurred. Use the explicit competitive-branch clone in [JUDGE_QUICKSTART.md](JUDGE_QUICKSTART.md); main remains the preserved older release. [One concrete owner packet](RELEASE_APPROVALS.md).
+
+---
+
 # Private competitive readiness — review quality v2
 
 Ready for owner review **with substantial documented scientific limitations**. Engineering acceptance passes; improved duplicate detection and reviewer effectiveness are not demonstrated. Starting competitive commit `caf6d655aa6f30b275fc1d0bc66933bd7122acbc`; main/release remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. [Phase report](REVIEW_QUALITY_FINAL_REPORT.md), [full scientific report](AI_REVIEW_QUALITY_V2.md).

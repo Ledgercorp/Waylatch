@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-14T12:35:59.429Z",
+  "environment": {
+    "id": "ccarenv_b64_Y2NhcmVudl84OGEwZWYwODIzNzQ4MTkxYjg2NjA5YjNiY2E3ZDhhNQ",
+    "specRevision": "43",
+    "observationsCurrent": true,
+    "networkMode": "restricted",
+    "networkState": "enforced",
+    "modelDownloadPerformed": false,
+    "credentialsPrinted": false
+  },
+  "publicSources": [
+    {
+      "url": "https://paypalaihackathon.devpost.com/rules",
+      "retrieval": "Public web tool, current crawl",
+      "reference": "turn292681view0",
+      "summary": "Sandbox + AI, runnable project, public licensed source, public YouTube video under three minutes; submission closes November12,2026 noon Pacific; free access through December15,2026 08:00Pacific. Official eligibility/representation, content rights and legal terms require owner review."
+    },
+    {
+      "url": "https://paypalaihackathon.devpost.com/resources",
+      "retrieval": "Public web tool, current crawl",
+      "reference": "turn292681view1"
+    },
+    {
+      "url": "https://info.devpost.com/legal/terms-of-service",
+      "retrieval": "Public web tool, current crawl",
+      "reference": "turn954790view0"
+    },
+    {
+      "url": "https://info.devpost.com/legal/privacy-policy",
+      "retrieval": "Public web tool, current crawl",
+      "reference": "turn954790view1"
+    }
+  ],
+  "devpostReadOnlyCalls": [
+    {
+      "name": "whoami",
+      "result": "MCP internal error -32603",
+      "accountDetailsKnown": false
+    },
+    {
+      "name": "get_submission_requirements",
+      "result": "MCP internal error -32603",
+      "accountDetailsKnown": false
+    },
+    {
+      "name": "get_key_dates",
+      "result": "MCP internal error -32603",
+      "accountDetailsKnown": false
+    }
+  ],
+  "unblocked": {
+    "url": "https://github.com/Ledgercorp/Waylatch/blob/868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3/README.md",
+    "result": "UNAVAILABLE: account is not part of an Unblocked organization; no account setup or reconnect performed. Local Git supplies repository evidence."
+  },
+  "mutationsPerformed": false,
+  "legalConsentRecorded": false,
+  "publicUrlsEstablished": false,
+  "realSpending": 0
+}

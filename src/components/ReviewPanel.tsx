@@ -204,7 +204,7 @@ export function ReviewPanel({
               )}
               <p className="notice" role="status">
                 Assessment attention: {currentCandidates.filter((c) => c.reviewRecommended).length}{' '}
-                · strong evidence:{' '}
+                · strong evidence (unvalidated):{' '}
                 {currentCandidates.filter((c) => c.tier === 'strong-duplicate-evidence').length} ·
                 informational:{' '}
                 {currentCandidates.filter((c) => c.tier === 'potentially-related').length} ·
@@ -238,6 +238,7 @@ export function ReviewPanel({
                           ? 'Dismissed for current revisions'
                           : TIER_LABELS[group as ReviewTier]}{' '}
                         · {members.length}
+                        {group === 'strong-duplicate-evidence' && ' · unvalidated advisory tier'}
                       </summary>
                       {members.map((candidate) => (
                         <article className="risk-pair" key={candidate.id}>
@@ -256,6 +257,8 @@ export function ReviewPanel({
                             }
                           >
                             {TIER_LABELS[candidate.tier]}
+                            {candidate.tier === 'strong-duplicate-evidence' &&
+                              ' · unvalidated advisory tier'}
                           </span>
                           {candidate.similarity !== null && (
                             <p className="small mono">

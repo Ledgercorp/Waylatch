@@ -1,6 +1,6 @@
 # Final private review-quality demonstration — 87.76 seconds
 
-Authentic newly recorded current application footage shows genuine local MiniLM, explicit advisory tiers, grouped informational comparisons, offline/QR handoff and read-only historical Sandbox proof. [Video](waylatch-competitive-preview.mp4), SHA-256 `96d6025a229905376f38b42ed75640caf1c85123b5dee7d27fece64de5557b6d`; [captions](competitive-captions.srt). Silent H.264 1600×900. No public upload, payment or checkout reenactment.
+Authentic newly recorded current application footage shows genuine local MiniLM, explicit advisory tiers, grouped informational comparisons, offline/QR handoff and read-only historical Sandbox proof. [Video](waylatch-competitive-preview.mp4), SHA-256 `96d6025a229905376f38b42ed75640caf1c85123b5dee7d27fece64de5557b6d`; [captions](competitive-captions.srt). Silent H.264 1600×900. No public upload, payment or checkout reenactment. Buyer approval was not screen-recorded. Final submission preparation adds an explicit unvalidated-tier qualifier; the depicted informational comparison flow and all recorded financial/source boundaries remain accurate. The MP4/captions are unchanged.
 
 | Seconds       | Caption / actual scene                                                                                                                        |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |

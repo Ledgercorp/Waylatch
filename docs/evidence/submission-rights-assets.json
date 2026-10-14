@@ -1,0 +1,302 @@
+{
+  "checkedAt": "2026-10-14T12:38:05.869563+00:00",
+  "lockfileEntries": 365,
+  "missingLicenseDeclarations": [],
+  "licenseCounts": {
+    "MPL-2.0": 2,
+    "MIT": 278,
+    "Apache-2.0": 27,
+    "LGPL-3.0-or-later": 10,
+    "Apache-2.0 AND LGPL-3.0-or-later AND MIT": 1,
+    "Apache-2.0 AND LGPL-3.0-or-later": 3,
+    "ISC": 27,
+    "BSD-3-Clause": 13,
+    "CC-BY-4.0": 1,
+    "BSD-2-Clause": 1,
+    "0BSD": 1,
+    "(MIT OR CC0-1.0)": 1
+  },
+  "modelWeightsOrNativeBinariesTracked": false,
+  "rootLicenseAdopted": false,
+  "MITProposalSha256": "69f89378aeb473411d2926aa3f5b3b395206c783c7b69e310cf525b0a1cecb75",
+  "sameOwnerCrisisCodecProvenance": "Preserved owner confirmation, source reference commit and attribution. No automatic reuse barrier; recorded history is not legal title verification.",
+  "distributionScope": "Source, lockfile, original app SVG/screenshots, silent captioned recordings and sanitized evidence only. Dependencies and pinned model remain separately installed from publishers; native/model redistribution requires separate license review.",
+  "obligations": [
+    "Retain package/model notices and Apache attribution/license terms",
+    "MPL file-level and LGPL native binary/source obligations are not replaced by proposed MIT",
+    "Retain caniuse-lite / Can I Use CC-BY-4.0 attribution if data redistributed",
+    "Lucide ISC and DejaVu font/rendering provenance retained; no font/tool binaries copied",
+    "Git author identities and noncredential engineering runtime metadata remain visible in history, requiring owner public-history approval"
+  ],
+  "assetInventory": [
+    {
+      "path": "docs/demo/captions.ass",
+      "sha256": "e06406cf1fd7bf72a29f8226e18c486a35485173d268c7b5dea0cc37c3ad6897"
+    },
+    {
+      "path": "docs/demo/captions.srt",
+      "sha256": "4ed4162a14e3947373c436367d79182555605f50abcf3fedef9a32d580621c8e"
+    },
+    {
+      "path": "docs/demo/competitive-captions.ass",
+      "sha256": "53362cbd60c4f88877a9903e6f566af2074fa39efe5c19b169c91a05107609ac"
+    },
+    {
+      "path": "docs/demo/competitive-captions.srt",
+      "sha256": "a661886fb8d996f1b41bac9d543a0f3ddbcc352d184c4ac3ec1152f6186bbad0"
+    },
+    {
+      "path": "docs/demo/competitive-fallback-captions.ass",
+      "sha256": "8b6578654ecb8e2da7b71809f537ab7f3adcfa50328f68d5404c7a645606db93"
+    },
+    {
+      "path": "docs/demo/competitive-fallback-captions.srt",
+      "sha256": "83abe3cdd1e94c9f41724969977018156f112ed35fabf7f1bcb7149b3d2d78bf"
+    },
+    {
+      "path": "docs/demo/pre-quality-captions.ass",
+      "sha256": "debf7b7731afb6bfd85d8a4094cf5bfd771316c0f2be1f1204a3177b5ae859f9"
+    },
+    {
+      "path": "docs/demo/pre-quality-captions.srt",
+      "sha256": "0e99b05f329a0a731a7ed0abf9437d40d585e8c303540e57154740356f566f30"
+    },
+    {
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sha256": "1a4e0542c1c7a734df8c87c09e3ddc6bf7264b632b27de06c4a853d08fc9cb8d"
+    },
+    {
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sha256": "96d6025a229905376f38b42ed75640caf1c85123b5dee7d27fece64de5557b6d"
+    },
+    {
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sha256": "2c7bf7c0bc9f936f855b712b2f273dffead34023330ab62f6ae10080f7e43d58"
+    },
+    {
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sha256": "cd673e2d243117181db3bf9e0910ffd70087b55823b90ebaaf9bc4c45b480c1c"
+    },
+    {
+      "path": "docs/evidence/audit-paypal-completed.png",
+      "sha256": "bd7b76a84628ff02795400d5313b74c66e4299f6e7f8a46939ed169de2795d6a"
+    },
+    {
+      "path": "docs/evidence/audit.png",
+      "sha256": "c385f99c2a7387a27103c0401350ed2d430e9af9c7587097644e4114ff147805"
+    },
+    {
+      "path": "docs/evidence/competitive-before-interface-1440.png",
+      "sha256": "7ce9b1b35eb77d992475b7556740f5b3593cc61cb252d1fa8c04205588e6a388"
+    },
+    {
+      "path": "docs/evidence/competitive-before-interface-390.png",
+      "sha256": "68087e56bace194dc661c37e04584fa1ccdbbcc22a055dbf07dd217198f0beef"
+    },
+    {
+      "path": "docs/evidence/competitive-comparison-desktop.png",
+      "sha256": "e033f7ff67b67d05607002c6ddc7e784b641159274aca5cb06940cabef729070"
+    },
+    {
+      "path": "docs/evidence/competitive-comparison-mobile.png",
+      "sha256": "b59233bbb6ae78e0df1a9e336f2e296669dd0c4bfcced223b2de4b5d2124f580"
+    },
+    {
+      "path": "docs/evidence/competitive-proof-1440.png",
+      "sha256": "cd0b05835537e965123ad5020011af70cb976af915d051cbd727c255943d167c"
+    },
+    {
+      "path": "docs/evidence/competitive-proof-390.png",
+      "sha256": "d89e39b3a37550b14ab215f5162b8246b28e9a6eda7c812ad133b3854fce1d1b"
+    },
+    {
+      "path": "docs/evidence/competitive-qr-recovery.png",
+      "sha256": "cd893a37358f068699a7a03ec394b30164cc90235de825915b0873dc374b9bbb"
+    },
+    {
+      "path": "docs/evidence/competitive-regression-interface-1440.png",
+      "sha256": "e1e5fda1536fdab33476efd131c34c96d7980ecefb6af15749fa224c6df54e5c"
+    },
+    {
+      "path": "docs/evidence/competitive-regression-interface-390.png",
+      "sha256": "d8cfcb3fba7902ba97d774e93aaf98e40903333dd7a55291cfb0f985fe097b02"
+    },
+    {
+      "path": "docs/evidence/finalization-competitive-comparison-desktop.png",
+      "sha256": "f7e399240fa53d1f9ff3b9782567591bd281e42684c8ad4c09176044cac7af3e"
+    },
+    {
+      "path": "docs/evidence/finalization-competitive-comparison-mobile.png",
+      "sha256": "58afbc5ff332df756a06c48b791d83b3a3a9d25cbeb7b365ed654561e3fa5193"
+    },
+    {
+      "path": "docs/evidence/finalization-competitive-qr-recovery.png",
+      "sha256": "350dc48195555709b24bedba0b3ad5e64fadd45c3fb9536d3828cf37f00d4fb2"
+    },
+    {
+      "path": "docs/evidence/finalization-interface-1440.png",
+      "sha256": "e1e5fda1536fdab33476efd131c34c96d7980ecefb6af15749fa224c6df54e5c"
+    },
+    {
+      "path": "docs/evidence/finalization-interface-390.png",
+      "sha256": "d8cfcb3fba7902ba97d774e93aaf98e40903333dd7a55291cfb0f985fe097b02"
+    },
+    {
+      "path": "docs/evidence/interface-1440.png",
+      "sha256": "7ce9b1b35eb77d992475b7556740f5b3593cc61cb252d1fa8c04205588e6a388"
+    },
+    {
+      "path": "docs/evidence/interface-390.png",
+      "sha256": "68087e56bace194dc661c37e04584fa1ccdbbcc22a055dbf07dd217198f0beef"
+    },
+    {
+      "path": "docs/evidence/payment-completed.png",
+      "sha256": "53afb87bc1dc94ccf0145e8e5a45c0f96724ca387701453de382638b2ac16f0b"
+    },
+    {
+      "path": "docs/evidence/quality-audit.png",
+      "sha256": "239bfe0ca1c187d275eb91b122abb3cf74dcee4a0373c28fa1769cd894959592"
+    },
+    {
+      "path": "docs/evidence/quality-comparison-desktop.png",
+      "sha256": "44be9596446654c7fc2c21fdaff26688b730093164c4fd9a8388f44a265b3355"
+    },
+    {
+      "path": "docs/evidence/quality-comparison-mobile.png",
+      "sha256": "6cb6cc50cee23343b2bf28eee368585765367b522dc4f53105470727dd7352ab"
+    },
+    {
+      "path": "docs/evidence/quality-demo-group-frame.png",
+      "sha256": "e30ebf3b46dbfd647dc4087c2aafd3dbe74b6e624ae26d11dca85a4974483b36"
+    },
+    {
+      "path": "docs/evidence/quality-demo-review-frame.png",
+      "sha256": "55e43661f7bd5c095018db3db10ea81dba4459127b47241c4137efd1cd845978"
+    },
+    {
+      "path": "docs/evidence/quality-interface-1440.png",
+      "sha256": "e1e5fda1536fdab33476efd131c34c96d7980ecefb6af15749fa224c6df54e5c"
+    },
+    {
+      "path": "docs/evidence/quality-interface-390.png",
+      "sha256": "d8cfcb3fba7902ba97d774e93aaf98e40903333dd7a55291cfb0f985fe097b02"
+    },
+    {
+      "path": "docs/evidence/quality-proof-1440.png",
+      "sha256": "bce744f6521193f1200783a9474bbe57ac261004eb71bec8641b33b8131577a5"
+    },
+    {
+      "path": "docs/evidence/quality-proof-390.png",
+      "sha256": "bd810f3143967964fa8bc92a4c3ec7eaaacf7987c3a488f33b8a8c891b2b38f6"
+    },
+    {
+      "path": "docs/evidence/quality-qr-recovery.png",
+      "sha256": "fc0bb75559c99d9c824609d4c8b4516c5e11f273d6192290735fb60c763f364f"
+    },
+    {
+      "path": "docs/evidence/quality-review-ai.png",
+      "sha256": "2264cc19fafdebdfa148922bbeaa5d52ae4b086cd2953a1b4819338243b221c6"
+    },
+    {
+      "path": "docs/evidence/review-ai.png",
+      "sha256": "b6e48cfcd2e5bf49fd2d7c6f96d1eeffaaf5f3738a3f1039b3e712991fdda251"
+    },
+    {
+      "path": "docs/evidence/semantic-audit.png",
+      "sha256": "579dc15601b152f5f70dbe9d5d2a3a32136cf56ccb309ef51d4f40dbab840109"
+    },
+    {
+      "path": "docs/evidence/semantic-competitive-comparison-desktop.png",
+      "sha256": "7728b2be49c70944ba44e8651f7a29986cc529819a46e14d0009aa25c7c29dc6"
+    },
+    {
+      "path": "docs/evidence/semantic-competitive-comparison-mobile.png",
+      "sha256": "83b5f884b0bc775d644de8e943a28c32453aba8a01f101ebe9ac722c699b9117"
+    },
+    {
+      "path": "docs/evidence/semantic-competitive-proof-1440.png",
+      "sha256": "bce744f6521193f1200783a9474bbe57ac261004eb71bec8641b33b8131577a5"
+    },
+    {
+      "path": "docs/evidence/semantic-competitive-proof-390.png",
+      "sha256": "bd810f3143967964fa8bc92a4c3ec7eaaacf7987c3a488f33b8a8c891b2b38f6"
+    },
+    {
+      "path": "docs/evidence/semantic-competitive-qr-recovery.png",
+      "sha256": "20961ea2b25095dcafd68f231ffde5ecdadef617fe773ce151ea3d30f307f004"
+    },
+    {
+      "path": "docs/evidence/semantic-interface-1440.png",
+      "sha256": "e1e5fda1536fdab33476efd131c34c96d7980ecefb6af15749fa224c6df54e5c"
+    },
+    {
+      "path": "docs/evidence/semantic-interface-390.png",
+      "sha256": "d8cfcb3fba7902ba97d774e93aaf98e40903333dd7a55291cfb0f985fe097b02"
+    },
+    {
+      "path": "docs/evidence/semantic-review-ai.png",
+      "sha256": "d2c9bbc6ea48e6b8bf41233b687a8b23a239728a93730e0c6af1470bd414f3bf"
+    },
+    {
+      "path": "docs/evidence/semantic-video-comparison.png",
+      "sha256": "31be8abc15b94d5fa581b452162782d37ce15a909e5b25b5ce3f9937f4a9ebfb"
+    },
+    {
+      "path": "docs/evidence/semantic-video-provider.png",
+      "sha256": "ea440b1154bb5c1b684724d18c4a1a155d0189d6bf2ddfc8bc948fd6363ba577"
+    },
+    {
+      "path": "docs/evidence/submission-audit.png",
+      "sha256": "6fe6bae66f7ff2177454d2cbdf74813fdd565a9747672d41f55e72d8daf7d9ff"
+    },
+    {
+      "path": "docs/evidence/submission-comparison-desktop.png",
+      "sha256": "c5bb26edff6c5be43d3f9c8fd3786dc1da1390e18805f67b9bd0032cf6a2c829"
+    },
+    {
+      "path": "docs/evidence/submission-comparison-mobile.png",
+      "sha256": "b1382e2c99c39bb8ec011e435b5a8eb91dec88959199ef09bfaa9b85d1ab1804"
+    },
+    {
+      "path": "docs/evidence/submission-interface-1440.png",
+      "sha256": "e1e5fda1536fdab33476efd131c34c96d7980ecefb6af15749fa224c6df54e5c"
+    },
+    {
+      "path": "docs/evidence/submission-interface-390.png",
+      "sha256": "d8cfcb3fba7902ba97d774e93aaf98e40903333dd7a55291cfb0f985fe097b02"
+    },
+    {
+      "path": "docs/evidence/submission-proof-1440.png",
+      "sha256": "bce744f6521193f1200783a9474bbe57ac261004eb71bec8641b33b8131577a5"
+    },
+    {
+      "path": "docs/evidence/submission-proof-390.png",
+      "sha256": "bd810f3143967964fa8bc92a4c3ec7eaaacf7987c3a488f33b8a8c891b2b38f6"
+    },
+    {
+      "path": "docs/evidence/submission-qr-recovery.png",
+      "sha256": "13861df371f0bf1340014f91e1417076b1453ab0dab3fd992f8b50625444134e"
+    },
+    {
+      "path": "docs/evidence/submission-review-ai.png",
+      "sha256": "1364b2ad0630a692b35b05bed13bf72b402287813aa51e9febbb0598839ee2f8"
+    },
+    {
+      "path": "docs/evidence/submission-unvalidated-tier-1440.png",
+      "sha256": "ee9e0a4c09716c96a92b29fb1448e904bd78560907217e62862dc38771344858"
+    },
+    {
+      "path": "docs/evidence/submission-unvalidated-tier-390.png",
+      "sha256": "088613307aa6594b39aa37b8f7c31c153b452f8cb8d666177dc575233fd5cf6d"
+    },
+    {
+      "path": "docs/submission/architecture.svg",
+      "sha256": "fbc790e1df9c23d176be75286437a3f09a42b90844a5bd0e8abef905f8633187"
+    },
+    {
+      "path": "public/waylatch-icon.svg",
+      "sha256": "303863334b41eed9ad374a00f127bacc016a2e947b0f0a1b50e2ee604d8795d3"
+    }
+  ],
+  "assetInventoryIncludesNewPresentationScreenshots": true
+}

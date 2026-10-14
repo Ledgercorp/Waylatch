@@ -1,0 +1,779 @@
+{
+  "checkedAt": "2026-10-14T12:34:38.245207+00:00",
+  "candidate": "868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3",
+  "scope": "All reachable PNG/JPEG blobs plus every10seconds of every reachable MP4, OCR credential/email/buyer-field triage. Video sampling and OCR can miss transient or unreadable content; sampled frames also manually reviewed for current release story. No full automated privacy certification.",
+  "videos": [
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "seconds": 97.52,
+      "audioStreams": 0
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "seconds": 87.76,
+      "audioStreams": 0
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "seconds": 110.04,
+      "audioStreams": 0
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "seconds": 87.68,
+      "audioStreams": 0
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "seconds": 110.04,
+      "audioStreams": 0
+    }
+  ],
+  "samples": [
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 0,
+      "ocrCharacters": 87,
+      "flags": [],
+      "ocrTextSha256": "7b99cc2da7951fbcd787e2d1d34cc8739ce3f3c7c5861ed392b01023d2ffe5e7"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 10,
+      "ocrCharacters": 457,
+      "flags": [],
+      "ocrTextSha256": "c67e46b87142d6f6546576e94f16d385ed30e2d05093c58f98b0b6740588bda7"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 20,
+      "ocrCharacters": 506,
+      "flags": [],
+      "ocrTextSha256": "22d0c392bc4c1c6a9a3721972e28c6b9048f638adb476c19da7b33a680ee2302"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 30,
+      "ocrCharacters": 752,
+      "flags": [],
+      "ocrTextSha256": "a42e327aad0aacf5fb3db512eb01776530db132d76dd64d3f15228e6b6c0a627"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 40,
+      "ocrCharacters": 513,
+      "flags": [],
+      "ocrTextSha256": "ac730c3ac26cc59693399728356e42c800096408d76a92cc3d0541c5c41b62b4"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 50,
+      "ocrCharacters": 688,
+      "flags": [],
+      "ocrTextSha256": "820a9eea6470c5f682041eb3c0e4f75dbd46593eaaa6355d2d950bbcdae42cc3"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 60,
+      "ocrCharacters": 699,
+      "flags": [],
+      "ocrTextSha256": "410b9ff6d401ba4a8d88a75098b568730904f979275389b44507e07c7571eed4"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 70,
+      "ocrCharacters": 1067,
+      "flags": [],
+      "ocrTextSha256": "9a25af32fffb35c8bb760d0be59c2dd53d958a72b6899ab62b5bea3fb24a59db"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 80,
+      "ocrCharacters": 574,
+      "flags": [],
+      "ocrTextSha256": "0a88ce432819d8fd62551566d3a547b05a0de40c0c37596b29ff27539207427c"
+    },
+    {
+      "blob": "170b4279ddf0f4e89c1119fca3d38e6040dd48c3",
+      "path": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+      "sampleSecond": 90,
+      "ocrCharacters": 623,
+      "flags": [],
+      "ocrTextSha256": "66dc3871f9a016c2ef8c54b0e767f2c29242072a7e82a81d637a1008622c07fc"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 0,
+      "ocrCharacters": 87,
+      "flags": [],
+      "ocrTextSha256": "7b99cc2da7951fbcd787e2d1d34cc8739ce3f3c7c5861ed392b01023d2ffe5e7"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 10,
+      "ocrCharacters": 437,
+      "flags": [],
+      "ocrTextSha256": "b64b7f4d819195aac60dc5ae3be2e5507b8e6d173a4cc89addc0f764f3e37dda"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 20,
+      "ocrCharacters": 493,
+      "flags": [],
+      "ocrTextSha256": "4d5c87f98c72ccbfdfcc49c73283d5844dca7c2226d0e33407c81e503bf60f21"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 30,
+      "ocrCharacters": 611,
+      "flags": [],
+      "ocrTextSha256": "ccfad0a67da656224078d5538610556127aeec82081e4e80eec582020fa3afd4"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 40,
+      "ocrCharacters": 480,
+      "flags": [],
+      "ocrTextSha256": "f2dacaf99eaf50b700db04991874123bd9f75bf1d5d7495f69c6f082b21f0313"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 50,
+      "ocrCharacters": 573,
+      "flags": [],
+      "ocrTextSha256": "04c63cdf64e229c6325bade2850f3561fdb2754d8b162275dcb08681cf4b796c"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 60,
+      "ocrCharacters": 1067,
+      "flags": [],
+      "ocrTextSha256": "ad4c526e6299687298adb033a121692d99254a9e605461825fce6fac52facebb"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 70,
+      "ocrCharacters": 662,
+      "flags": [],
+      "ocrTextSha256": "ac27ddafb6f9a4ddb87f15cf7edc6c205b00ce58c67485c3fdab8d5cbb3924a3"
+    },
+    {
+      "blob": "9285aab7de59cef22e92e2e6c03e2798ab83edc8",
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "sampleSecond": 80,
+      "ocrCharacters": 656,
+      "flags": [],
+      "ocrTextSha256": "e5d53aca0221a39dcedb91dda216fb695c3cf95b5fb0cc1e7355e79f9b14cd2c"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 0,
+      "ocrCharacters": 48,
+      "flags": [],
+      "ocrTextSha256": "a24ff284854bf10a074a1c94ebe04905c63659ee94532fd81980805f6d203eb6"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 10,
+      "ocrCharacters": 464,
+      "flags": [],
+      "ocrTextSha256": "3469da8ec1a2521c95e6c77132921585ce205caa5777a769f081baa6ba544c6e"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 20,
+      "ocrCharacters": 400,
+      "flags": [],
+      "ocrTextSha256": "a832a89771177ca75b6daa5a52fe28a5e7fcc21a59c9a97c37d4f50eae719b23"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 30,
+      "ocrCharacters": 446,
+      "flags": [],
+      "ocrTextSha256": "d54f6369f7c3df2163b7bfe72210308c7a5fd30d231856b21d10e10e5c1c6e12"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 40,
+      "ocrCharacters": 406,
+      "flags": [],
+      "ocrTextSha256": "57cdcd8beffc97d60abbced695b0cd248e9ce33624e12e96a8326ad76d933cfa"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 50,
+      "ocrCharacters": 535,
+      "flags": [],
+      "ocrTextSha256": "3424fe92d8ce70ade404ae153ee53e985442c8d104ec7090c98e1a846d06327b"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 60,
+      "ocrCharacters": 516,
+      "flags": [],
+      "ocrTextSha256": "77e11ba664566c3c1a7d5e51836c6efcf49b5fe91dcbb74e31219da5181117b8"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 70,
+      "ocrCharacters": 224,
+      "flags": [],
+      "ocrTextSha256": "9f29f609faef408efe1d093016ed88b5014746261b7db978e2c2d662a9f70da1"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 80,
+      "ocrCharacters": 256,
+      "flags": [],
+      "ocrTextSha256": "608ebeae011f60bb1e4013784370d3f7e0fdf8c3ceb180758696c3f34ff0825c"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 90,
+      "ocrCharacters": 406,
+      "flags": [],
+      "ocrTextSha256": "722cce69840a9b7528ac78e0a24e2c50ee8eb79c26a10f011478c1f1039536cf"
+    },
+    {
+      "blob": "b61196df60029cb8aa641131849981f6372b707b",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 100,
+      "ocrCharacters": 740,
+      "flags": [],
+      "ocrTextSha256": "463542e012df4d3d190d19328ba02590abca9df2051f23d606744a9bba379e17"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 0,
+      "ocrCharacters": 87,
+      "flags": [],
+      "ocrTextSha256": "7b99cc2da7951fbcd787e2d1d34cc8739ce3f3c7c5861ed392b01023d2ffe5e7"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 10,
+      "ocrCharacters": 442,
+      "flags": [],
+      "ocrTextSha256": "26f1af94f42a614abfcdf2c75b0a06c23e75b913649f03c4ca07d5172b776c45"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 20,
+      "ocrCharacters": 495,
+      "flags": [],
+      "ocrTextSha256": "77ccd2b5e102404bbaf4ca29413115b314bfbdc15d803c0d8b383238620a81b6"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 30,
+      "ocrCharacters": 637,
+      "flags": [],
+      "ocrTextSha256": "cedc64f0a7522ce951f478c7c0353724b2ecad6cec44c9b11968ba05d6e914d1"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 40,
+      "ocrCharacters": 735,
+      "flags": [],
+      "ocrTextSha256": "b32975e578b6c85dea96db7f3e148e79494f437d7e0b8a532369ac578d89f5d7"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 50,
+      "ocrCharacters": 540,
+      "flags": [],
+      "ocrTextSha256": "32b2528796247dabe597f8ef2a34122cf202887e85f90dd71679e6e9137df289"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 60,
+      "ocrCharacters": 1017,
+      "flags": [],
+      "ocrTextSha256": "d07553cb543efbd97dca4872d6dbd09620d38f4a4be5c52bc9fef1857ee91881"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 70,
+      "ocrCharacters": 569,
+      "flags": [],
+      "ocrTextSha256": "1639c75241a06b3b879adab409bdc2f7d1c891eee8a7d3ae72f2763c2aa6a84d"
+    },
+    {
+      "blob": "d5815bf925ffff28c496d3894ff05eb9ac2b4d23",
+      "path": "docs/demo/waylatch-pre-quality-preview.mp4",
+      "sampleSecond": 80,
+      "ocrCharacters": 689,
+      "flags": [],
+      "ocrTextSha256": "182bdaf521a9c290e49781a925834401f764e016abc6d19073f849c39eee57ee"
+    },
+    {
+      "blob": "81dbf6d3f67c776780f5a11e1a6a51dfd63dd043",
+      "path": "docs/evidence/audit-paypal-completed.png",
+      "sampleSecond": null,
+      "ocrCharacters": 764,
+      "flags": [],
+      "ocrTextSha256": "28d8fd6c69cfb032690219ef836187527f78709e4601f5a45677389842f6b95e"
+    },
+    {
+      "blob": "50611391e323abcc15a9b5fcea991cbdb6d9d470",
+      "path": "docs/evidence/audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1290,
+      "flags": [],
+      "ocrTextSha256": "d078468930c11ad4bf0279a1db45f547f03b526cf4b4125e336cf7edb3c85929"
+    },
+    {
+      "blob": "6fa186108639ebe3085175ba2b17ae133d65c67e",
+      "path": "docs/evidence/competitive-before-interface-1440.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1173,
+      "flags": [],
+      "ocrTextSha256": "83313fdb02901b78406cf0d31261376f6f981f198087c79621abce871464fd83"
+    },
+    {
+      "blob": "65909229bda09df2f503454f4056945f49ab554e",
+      "path": "docs/evidence/competitive-before-interface-390.png",
+      "sampleSecond": null,
+      "ocrCharacters": 883,
+      "flags": [],
+      "ocrTextSha256": "adc7359c71eaafacbcce5f4ca67b3d1272ca30cafacd968e93e875b61e837010"
+    },
+    {
+      "blob": "348bec248bfbf5ed98003c98ac58835c5e867dd7",
+      "path": "docs/evidence/competitive-comparison-desktop.png",
+      "sampleSecond": null,
+      "ocrCharacters": 5126,
+      "flags": [],
+      "ocrTextSha256": "d4bbd62464978b05c5e881f02436bfb2a1c9669f2957951626bf7ef56b96e62d"
+    },
+    {
+      "blob": "36e7d1f03740d2d8eafc62bf94464f786d685d02",
+      "path": "docs/evidence/competitive-comparison-mobile.png",
+      "sampleSecond": null,
+      "ocrCharacters": 3579,
+      "flags": [],
+      "ocrTextSha256": "c0ef3fbfaa526931423519363ece147e2a835370aa730bb6ee8225fbd5bf966f"
+    },
+    {
+      "blob": "60c381ab58461dc9874daa022096415071606418",
+      "path": "docs/evidence/competitive-proof-1440.png",
+      "sampleSecond": null,
+      "ocrCharacters": 6426,
+      "flags": [],
+      "ocrTextSha256": "abc93e34321418c42921a321fd4af2b7eaa05e47f7b13e27ceb9ece08e9d686e"
+    },
+    {
+      "blob": "61a4a6ecab092d96fbddc6495a2df287d785ff06",
+      "path": "docs/evidence/competitive-proof-390.png",
+      "sampleSecond": null,
+      "ocrCharacters": 6399,
+      "flags": [],
+      "ocrTextSha256": "7d640e67b3285a42d32719135e69ee6b35647dd4b4780e67b4bc27b1e0529c15"
+    },
+    {
+      "blob": "8b9c207ede8c23c3b44df0aef882368d8bd9456a",
+      "path": "docs/evidence/competitive-qr-recovery.png",
+      "sampleSecond": null,
+      "ocrCharacters": 2935,
+      "flags": [],
+      "ocrTextSha256": "c48daf01744587f9f99a1733e2afc39b8d95831babe47e075eebae25271f6e6f"
+    },
+    {
+      "blob": "f317bfe6f82c0304335de76bf704297841d57161",
+      "path": "docs/evidence/competitive-regression-interface-1440.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1261,
+      "flags": [],
+      "ocrTextSha256": "45c32c5eb8d32418f4315373dc56253791ec72fb53931ba054d05e8a596b60da"
+    },
+    {
+      "blob": "1cdfacf042ce08eda5ee7da15edb2c902137528e",
+      "path": "docs/evidence/competitive-regression-interface-390.png",
+      "sampleSecond": null,
+      "ocrCharacters": 868,
+      "flags": [],
+      "ocrTextSha256": "e214aafb3644542f3acd1adfad2eea96b337aaebdecfa47c86289d342e2a095f"
+    },
+    {
+      "blob": "c32a8c5c65001ae6eb3fb4cdb2ad355c10e616af",
+      "path": "docs/evidence/finalization-competitive-comparison-desktop.png",
+      "sampleSecond": null,
+      "ocrCharacters": 5127,
+      "flags": [],
+      "ocrTextSha256": "fe17fbc1a7dc76a008b4c8e76b0fea2bedb87669e6f027cb96823372cd57db04"
+    },
+    {
+      "blob": "ddd5d857bad63499a976e5104f22034dd47b4794",
+      "path": "docs/evidence/finalization-competitive-comparison-mobile.png",
+      "sampleSecond": null,
+      "ocrCharacters": 3579,
+      "flags": [],
+      "ocrTextSha256": "f052ceeb9780aa6aff3f5703b0dde70495e999daf4850adc3d431e40f7bf4ac7"
+    },
+    {
+      "blob": "4913c0740e89fc9fac415d1154d2adad1033d23d",
+      "path": "docs/evidence/finalization-competitive-qr-recovery.png",
+      "sampleSecond": null,
+      "ocrCharacters": 2817,
+      "flags": [],
+      "ocrTextSha256": "b9f7ae8fb377568fae49a34fc8cb1e79e169dabee6104e3f9bc689388b288edc"
+    },
+    {
+      "blob": "48c75fb2d6cc789ebf29a6943670beb28357841e",
+      "path": "docs/evidence/payment-completed.png",
+      "sampleSecond": null,
+      "ocrCharacters": 750,
+      "flags": [],
+      "ocrTextSha256": "3adadd96fefe0889e3174f5445c351dd91def5fc4c6e2008c91fbacbdc82130e"
+    },
+    {
+      "blob": "3c9bf2d57f6449e761ffe6f6a13ed1078dbbcbed",
+      "path": "docs/evidence/quality-audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1392,
+      "flags": [],
+      "ocrTextSha256": "f482e0ea97d77c2c189cd3b4440ec15b93fec99238e0c2fe278e969d78700f69"
+    },
+    {
+      "blob": "c2216ced6c1f8f73e00e942377990206421b444d",
+      "path": "docs/evidence/quality-comparison-desktop.png",
+      "sampleSecond": null,
+      "ocrCharacters": 5428,
+      "flags": [],
+      "ocrTextSha256": "01848274a4c0ba7b9828fdddeb9ec25c66b430b5ea9bce1b491264e3f7339f96"
+    },
+    {
+      "blob": "9c1f8e39569aa2624b1682b43e73fa38a5ea4297",
+      "path": "docs/evidence/quality-comparison-mobile.png",
+      "sampleSecond": null,
+      "ocrCharacters": 4022,
+      "flags": [],
+      "ocrTextSha256": "0648c2b32fa79a49f1019fd0813dc9db3dff6ba30de9d0eaba8066e260741d49"
+    },
+    {
+      "blob": "980522342f901118262472f7b5a02f8b69b91793",
+      "path": "docs/evidence/quality-demo-group-frame.png",
+      "sampleSecond": null,
+      "ocrCharacters": 732,
+      "flags": [],
+      "ocrTextSha256": "a4aad2a3cb0d87d65b718257200c1fa3b254e2801f5b3b851c41fc6789652a08"
+    },
+    {
+      "blob": "11b809860a463d078a4579716e72bad7647e3937",
+      "path": "docs/evidence/quality-demo-review-frame.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1647,
+      "flags": [],
+      "ocrTextSha256": "a5bedf634644d22b55144309c6d011675d633e679085b288eb38dd55ce495798"
+    },
+    {
+      "blob": "ad5b6d983d4d71c7ee97a374a0b75db084c00a1c",
+      "path": "docs/evidence/quality-proof-1440.png",
+      "sampleSecond": null,
+      "ocrCharacters": 6473,
+      "flags": [],
+      "ocrTextSha256": "ac21f6992b73f5645429cd2a7c1f381c960906545cac9649460e84939e23b22b"
+    },
+    {
+      "blob": "d4289a41e463466730ac230398635f301841c538",
+      "path": "docs/evidence/quality-proof-390.png",
+      "sampleSecond": null,
+      "ocrCharacters": 6235,
+      "flags": [],
+      "ocrTextSha256": "0a5121a69354350024a9082adbeae6e8111d9fd47475199f2e9dee0ae89e80a1"
+    },
+    {
+      "blob": "11f6e5a07a7dd00adc609ed9890eb932494ec15c",
+      "path": "docs/evidence/quality-qr-recovery.png",
+      "sampleSecond": null,
+      "ocrCharacters": 2768,
+      "flags": [],
+      "ocrTextSha256": "54bd4cdcc705074a91ec4a92dc30b04b3f98d2811abda3c28084ce7ede2aa0ac"
+    },
+    {
+      "blob": "5cda1395869808096ccc131be7d93f398817c4bf",
+      "path": "docs/evidence/quality-review-ai.png",
+      "sampleSecond": null,
+      "ocrCharacters": 4355,
+      "flags": [],
+      "ocrTextSha256": "f64471c91b6a37607f3efec88f61ee10dd247cf198bb3afcd70cf72acca7d9fa"
+    },
+    {
+      "blob": "df702c6bf9f5f49ce567cdde9588d256d7078926",
+      "path": "docs/evidence/review-ai.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1611,
+      "flags": [],
+      "ocrTextSha256": "c959cd4822c4f9e68a919877f1cb7a9768cbab0c3b02a71bfd1f7ffa29fc919f"
+    },
+    {
+      "blob": "d8bbc277009c5b4d0ffa40d82fa09dd8bb56ca2d",
+      "path": "docs/evidence/semantic-audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1399,
+      "flags": [],
+      "ocrTextSha256": "a63150fbe4c0fd21785ea1b4ec42686c920673e2a1de739087f58920caa6b442"
+    },
+    {
+      "blob": "5bd83235cec464aa85b184778863642b0422f536",
+      "path": "docs/evidence/semantic-competitive-comparison-desktop.png",
+      "sampleSecond": null,
+      "ocrCharacters": 5163,
+      "flags": [],
+      "ocrTextSha256": "f421cd7abd0a9492f421e31959967e6fd3f668693f78b50985c1836b23410473"
+    },
+    {
+      "blob": "d69b547c9f03b33011bb1cf36566c874c9c85755",
+      "path": "docs/evidence/semantic-competitive-comparison-mobile.png",
+      "sampleSecond": null,
+      "ocrCharacters": 3475,
+      "flags": [],
+      "ocrTextSha256": "aaf340eefc4e8971dd2a585f9351db093e5cb31701ca06f1a1916dc6598ac927"
+    },
+    {
+      "blob": "4ba68d656f123fa6f501ac2f7545caae734d6b7f",
+      "path": "docs/evidence/semantic-competitive-qr-recovery.png",
+      "sampleSecond": null,
+      "ocrCharacters": 2768,
+      "flags": [],
+      "ocrTextSha256": "54bd4cdcc705074a91ec4a92dc30b04b3f98d2811abda3c28084ce7ede2aa0ac"
+    },
+    {
+      "blob": "dd7323b7bdc0042ece93442607f91e81b811e0be",
+      "path": "docs/evidence/semantic-review-ai.png",
+      "sampleSecond": null,
+      "ocrCharacters": 3831,
+      "flags": [],
+      "ocrTextSha256": "77f7289ff5dc447cfc2446333e39e97b762cb7a491a8ac80b41b9d08dc1749b4"
+    },
+    {
+      "blob": "4d524eece68a6c8ef79e077280921ef30549d9fa",
+      "path": "docs/evidence/semantic-video-comparison.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1429,
+      "flags": [],
+      "ocrTextSha256": "52cf81f60f9611311d5e8d16052b8dc4752fd4d0362aac64dbebf78fb97a3dce"
+    },
+    {
+      "blob": "df975be2ca4d5dbdb6180a777e95425b30befc3b",
+      "path": "docs/evidence/semantic-video-provider.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1038,
+      "flags": [],
+      "ocrTextSha256": "19d68f6e467930c4ef4cdad769a03754b43779ed536c1c17d26eeaffec252c21"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 0,
+      "ocrCharacters": 53,
+      "flags": [],
+      "ocrTextSha256": "9c61a678f14d49554a71107a5afe02bede14b28f0e20f6694ce75e91de9d23b5"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 10,
+      "ocrCharacters": 473,
+      "flags": [],
+      "ocrTextSha256": "a3e9f3f14577bd12c80d733c30b9b0dac4324bb84e6b31aa21350f84b442d570"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 20,
+      "ocrCharacters": 417,
+      "flags": [],
+      "ocrTextSha256": "afccb4694e352c05079843af6c3e2f9826ccb17797baf17c9e491234dfa6edda"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 30,
+      "ocrCharacters": 454,
+      "flags": [],
+      "ocrTextSha256": "a3636032e66a56b7c9d593b4d1c6d87b9d47781a09f2be9fd25493c40b9c11f6"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 40,
+      "ocrCharacters": 516,
+      "flags": [],
+      "ocrTextSha256": "25311003b1206b3c848fdfce896ded2dee5f9da2ab698a7335684015a5fb323b"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 50,
+      "ocrCharacters": 535,
+      "flags": [],
+      "ocrTextSha256": "07e059e355ec0dca6253c4d19420dba07a4a6e3c7ffe8d018522f23b31633a7d"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 60,
+      "ocrCharacters": 496,
+      "flags": [],
+      "ocrTextSha256": "48230074cedf59eb324e2c40aeea215d32e135491d4a13e47e3afd79af7a5c1d"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 70,
+      "ocrCharacters": 238,
+      "flags": [],
+      "ocrTextSha256": "b09ede4c5fb46b9a57ab038a8edd28212b3b3d2b9c9de2a1e3f2e3dbb2ead0a8"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 80,
+      "ocrCharacters": 267,
+      "flags": [],
+      "ocrTextSha256": "1c28352f76803576cb5e159be93ced0493f5ca413a52ecea5d93df2e07406778"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 90,
+      "ocrCharacters": 553,
+      "flags": [],
+      "ocrTextSha256": "1868cb5306fe8ee42848b0dc0d1fbeea9e608f4419a8c0f71a4e3f07203fa6ff"
+    },
+    {
+      "blob": "8e2320ad87e42f24e113e7b7b0e1f5a30adcb2c4",
+      "path": "docs/demo/waylatch-engineering-preview.mp4",
+      "sampleSecond": 100,
+      "ocrCharacters": 564,
+      "flags": [],
+      "ocrTextSha256": "ac260e1bf5628364d0ab720ac8bc7d14afec4a49413b7d7c11f97d4b9576837f"
+    },
+    {
+      "blob": "08d64a029ade7bff60447bab7a4f30355da8ad6d",
+      "path": "docs/evidence/audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1307,
+      "flags": [],
+      "ocrTextSha256": "338f7247f1ac39e433baa26d87baf6b684b590202d24f4718289343b4280c243"
+    },
+    {
+      "blob": "387c435957207b4be84466ce8f720da2ce58ffc8",
+      "path": "docs/evidence/audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1290,
+      "flags": [],
+      "ocrTextSha256": "a1e3a6f812b468f2bf829042ae003b492a33cb2d78a2df39fb4c443bc7c1c962"
+    },
+    {
+      "blob": "259fc8674a3c87aed30a00fe94a222e607a6913a",
+      "path": "docs/evidence/audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1425,
+      "flags": [],
+      "ocrTextSha256": "ab624693c5ea3add0f14d3b78af1a8a9d301c9676cbeb38dfff9b5bdec1ec68e"
+    },
+    {
+      "blob": "68c62e791f2bd4bc6706fb0ec6275207260deefc",
+      "path": "docs/evidence/audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1423,
+      "flags": [],
+      "ocrTextSha256": "b7a75f533ddc894d9ea741ec748b812641994d1f2bcc7f415e88e6f189ad05f4"
+    },
+    {
+      "blob": "3751e10c3f9549a5d8100e3bc1c9b3bb7f4c2dbb",
+      "path": "docs/evidence/audit.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1384,
+      "flags": [],
+      "ocrTextSha256": "45ebb576915f976ee8636864d8d2b5c1a479de2a2af8c3d5c745560f85d6fa4b"
+    },
+    {
+      "blob": "b58b1903fbe8c0b16d32e561cca7e54bb0212f0f",
+      "path": "docs/evidence/interface-1440.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1195,
+      "flags": [],
+      "ocrTextSha256": "f4b0368f65d41b337340ff5e2e0582cd6807973660b4a04f5d23599f01067d21"
+    },
+    {
+      "blob": "7f730132b8d47d335708e7f002308bcc061da13d",
+      "path": "docs/evidence/interface-390.png",
+      "sampleSecond": null,
+      "ocrCharacters": 939,
+      "flags": [],
+      "ocrTextSha256": "22a6b32c5377424d844825b09d7979af4d0e6db82be09abf5fb90b61f2097b88"
+    },
+    {
+      "blob": "c2ccd544cd48219e92719eb7412c234a791c81ae",
+      "path": "docs/evidence/review-ai.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1638,
+      "flags": [],
+      "ocrTextSha256": "c601fa3f74ace314a5804b2266f2281d2da12721fc4787ce30eafd5cbdd34fab"
+    },
+    {
+      "blob": "cb6b4c542e9359684e9153e3a9a78d01bbe89be3",
+      "path": "docs/evidence/interface-1440.png",
+      "sampleSecond": null,
+      "ocrCharacters": 1195,
+      "flags": [],
+      "ocrTextSha256": "226cf35f349baf01b5811d613c251aa2e2c539708544d0c789df1250157b544a"
+    },
+    {
+      "blob": "e4aa7b197ae6af28bd0ee9bfde2c1af1456934a7",
+      "path": "docs/evidence/interface-390.png",
+      "sampleSecond": null,
+      "ocrCharacters": 957,
+      "flags": [],
+      "ocrTextSha256": "637e7834f3d2b9300e3fd38d867e56e7c464024ae12b78646127ed5895df6721"
+    }
+  ],
+  "flaggedSamples": 0,
+  "audioStreams": 0,
+  "rawOcrTextCommitted": false,
+  "temporaryAssetsRemoved": true
+}

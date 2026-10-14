@@ -4,23 +4,23 @@
 
 From field need to verified action. Formerly RescueLedger; original history and compatibility identifiers are retained.
 
-Waylatch preserves emergency resource requests offline, moves them between devices through bounded QR packets, assists a coordinator with real local semantic review, and gates PayPal Sandbox purchases behind human review and explicit authorization. A reconciled capture is linked to its approved request and a tamper-evident event history.
+Waylatch preserves emergency resource requests offline, moves them between devices through bounded QR packets, assists a coordinator with local semantic retrieval and advisory comparison, and gates PayPal Sandbox purchases behind human review and explicit authorization. A reconciled capture is linked to its approved request and a tamper-evident event history.
 
 Built by Colby Weiss / LeftSock Labs for the PayPal AI Hackathon 2026. All incident, organization, identity and expense examples are fictional. This prototype has not been tested in real emergencies. No lending, credit, deferred repayment, real-money transactions or autonomous AI authorization.
 
 **Verified genuine Sandbox purchase:** the user-authorized USD 1.00 simulated purchase completed with PayPal order `2W330508JA572391V` and capture `8WY07860808872629`; Waylatch reconciled `PAID`. Independent authorized Orders and Capture GET requests both returned HTTP 200 / `COMPLETED`, matching the exact amount and references. Seven persisted audit events validate. **Real spending: $0.** [Actual evidence](docs/evidence/paypal-real-sandbox.json), [independent verification](docs/evidence/paypal-independent-verification.json). Real local AI, offline reload and QR transfer are evidenced separately. Genuine webhook delivery remains unverified; Payouts transfer is unimplemented. See [verification](docs/VERIFICATION.md).
 
-![Desktop command workspace](docs/evidence/interface-1440.png)
+![Desktop command workspace](docs/evidence/submission-interface-1440.png)
 
 ## Competitive review and judge access
 
-The private competitive branch preserves the existing application and adds explainable advisory comparisons, revision-bound dispositions, grouped candidate summaries, a source-labeled Proof Trail and an isolated judge workspace.
+The private competitive branch preserves the existing application and adds explainable advisory comparisons, revision-bound dispositions, grouped candidate summaries, a source-labeled Proof Trail and an isolated judge workspace. Start with the [judge quickstart](docs/JUDGE_QUICKSTART.md): six concrete steps, exact model/bundle paths and the honest missing-model fallback. [Final submission readiness](docs/SUBMISSION_READINESS.md) is the current release checkpoint.
 
 ```bash
 npm run judge
 ```
 
-With Node24+, npm and Python3, this prepares the locked application and verifies existing pinned model assets (or downloads missing pins where available), then serves **http://127.0.0.1:4173**. Use **Start judge demo**. No PayPal merchant secrets or existing coordinator password are required. Financial mutations/provider operations are blocked. Ctrl+C removes temporary server records; browser-local records remain on that origin.
+With Node 24+, npm and Python 3, this prepares the locked application and verifies existing pinned model assets (or downloads missing pins where available), then serves **http://127.0.0.1:4173**. Use **Start judge demo**. No PayPal merchant secrets or existing coordinator password are required. Financial mutations/provider operations are blocked. Ctrl+C removes temporary server records; browser-local records remain on that origin.
 
 The owner's verified seven-file model bundle already enables real local AI in this workspace; no redownload occurred. Preserve `models/Xenova/all-MiniLM-L6-v2/` or set `RESCUELEDGER_MODEL_PATH` to an authorized model root. Model binaries remain out of Git. A clean source copy installed dependencies, built and passed full default semantic judge acceptance using those local assets.
 
@@ -30,7 +30,7 @@ npm run test:e2e:competitive     # includes genuine AI, offline/QR, Proof Trail 
 npm run test:ai                 # historical 12-case real-model smoke benchmark
 ```
 
-**AI limitations are material.** Semantic similarity retrieves potentially related records; structured evidence controls advisory attention tiers. Original held-out combined falsely flagged70/72 distinct pairs. On a genuinely new frozen test, attention FP fell77→30, but precision fell.384→.250 and recall.889→.185; fixed-budget ranking also worsened. Predetermined scientific targets failed. Zero strong alerts do not establish strong-tier precision. [Both evaluations and all limitations](docs/AI_REVIEW_QUALITY_V2.md). The separate v2 held-out receipt is complete; never rerun or retune either exposed held-out dataset as independent evidence.
+**AI limitations are material.** Semantic similarity retrieves potentially related records; structured evidence controls advisory attention tiers. Original held-out combined falsely flagged 70/72 distinct pairs. On a genuinely new frozen test, attention FP fell 77→30, but precision fell .384→.250 and recall .889→.185; fixed-budget ranking also worsened. Predetermined scientific targets failed. Zero strong alerts do not establish strong-tier precision; the interface labels this tier unvalidated. [Both evaluations and all limitations](docs/AI_REVIEW_QUALITY_V2.md). The separate v2 held-out receipt is complete; never rerun or retune either exposed held-out dataset as independent evidence.
 
 [Current readiness](docs/COMPETITIVE_READINESS.md), [measured resilience](docs/RESILIENCE_COMPETITIVE.md), [87.76-second private preview](docs/demo/waylatch-competitive-preview.mp4), [exact media hash/provenance](docs/evidence/competitive-demo-video.json). Prior previews are preserved separately. Root license, public repository/video, legal terms and submission remain owner decisions. No publication or real spending occurred.
 

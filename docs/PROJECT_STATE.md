@@ -1,3 +1,9 @@
+# Final submission-preparation checkpoint
+
+Current objective and acceptance are in [SUBMISSION_READINESS.md](SUBMISSION_READINESS.md), starting from `868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3` on private `feat/waylatch-competitive`. Only tier qualification and presentation/setup docs changed; all scoring, labels, frozen results/receipts, model/dependencies and historical payment/media evidence are preserved. The remaining gates are explicit owner licensing/publication/default-branch/account/legal/submission decisions in [RELEASE_APPROVALS.md](RELEASE_APPROVALS.md). Main/release stay `3580d35a7176afd93abf52fbde391061a4ff30d6`. No real spending or public/financial action. Earlier checkpoints below are historical.
+
+---
+
 # Current review-quality checkpoint — 14 October 2026
 
 [REVIEW_QUALITY_FINAL_REPORT.md](REVIEW_QUALITY_FINAL_REPORT.md) and [AI_REVIEW_QUALITY_V2.md](AI_REVIEW_QUALITY_V2.md) are current. Continued from `caf6d655aa6f30b275fc1d0bc66933bd7122acbc` on private `feat/waylatch-competitive`; main/release remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. Genuine model works; no download/dependency/payment change. Conservative tiers/grouping reduce warnings but the new once-only held-out test fails predefined targets and worsens precision/recall/budgeted ranking. Original unfavorable results and both receipts remain intact; no retest/tuning authorization.

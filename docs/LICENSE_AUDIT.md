@@ -1,3 +1,9 @@
+# Final source-only release review
+
+The current lockfile has 365 non-root entries, all with declared licenses. [Fresh rights/asset inventory](evidence/submission-rights-assets.json) and [history privacy review](evidence/submission-history-audit.json) supplement the retained evidence below. Proposed MIT text is reviewed but unadopted; source-only distribution avoids bundling model/native/tool binaries. Same-owner CrisisCodec provenance and all third-party attribution obligations remain preserved. This is an engineering inventory, not legal clearance.
+
+---
+
 # Current inference-stack notice update — 14 October 2026
 
 The supported Transformers.js 4.3.1 / ONNX Runtime 1.30.0 / sharp 0.35.5 upgrade is reflected in [compatibility metadata](evidence/inference-stack-compatibility.json) and [current native versions/notice hashes](evidence/semantic-native-components.json). Installed notices remain intact. The older package counts and native versions below are historical. The original model pins/license are unchanged, and uploaded model weights/native libraries remain excluded from Git. No root source license was adopted, upstream source was not edited and no binary distribution was authorized.

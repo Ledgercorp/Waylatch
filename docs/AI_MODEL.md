@@ -1,4 +1,6 @@
-# Current real-model verification — 14 October 2026
+# Local semantic retrieval — final submission preparation
+
+Use the [judge quickstart](JUDGE_QUICKSTART.md) for normal upstream acquisition or the verified local-bundle workflow. [Both completed scientific evaluations](AI_REVIEW_QUALITY_V2.md) remain unchanged; the revised strategy failed its predefined targets. Local MiniLM retrieves language relationships and does not provide validated duplicate detection. Strong matching-facts tiers are explicitly unvalidated.
 
 All seven original pinned assets were supplied in an owner upload and independently size/SHA-256 verified; no model redownload occurred. Runtime is now Transformers.js 4.3.1 with ONNX Runtime 1.30.0. [Current calibration and frozen once-only held-out results](AI_EVALUATION_COMPETITIVE.md), [bundle verification](evidence/ai-bundle-verification.json), [runtime compatibility](evidence/inference-stack-compatibility.json). The substantive false-positive limitations are part of the result. Historical twelve-case timings below describe the earlier release; [original report](evidence/ai-benchmark-historical-prebundle.json) is preserved separately from the refreshed real benchmark.
 

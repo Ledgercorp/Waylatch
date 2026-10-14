@@ -1,0 +1,24 @@
+{
+  "category": "actual-local-browser-unvalidated-tier-presentation-check",
+  "checkedAt": "2026-10-14T12:32:23.048Z",
+  "scope": "Fictional UI fixture exercises the existing strong tier; not an evaluation dataset, annotation or accuracy measurement.",
+  "providerCalls": 0,
+  "realSpending": 0,
+  "views": [
+    {
+      "width": 1440,
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "strongQualificationVisible": true
+    },
+    {
+      "width": 390,
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "strongQualificationVisible": true
+    }
+  ],
+  "paymentRecords": 0,
+  "realLocalInference": true,
+  "success": true
+}

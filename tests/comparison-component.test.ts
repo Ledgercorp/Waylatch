@@ -95,3 +95,26 @@ test('existing review integrates snapshot comparisons without changing human rev
   expect(html).toContain('Mark reviewed');
   expect(html).toContain('Record pair disposition');
 });
+
+test('strong matching facts disclose that the advisory tier is unvalidated', () => {
+  const html = renderToStaticMarkup(
+    createElement(PairComparison, {
+      ...props,
+      mode: 'semantic-local',
+      assessment: {
+        id: candidate.id,
+        similarity: 0.91,
+        reasons: ['Exact receipt digest match', 'Repeated transaction reference'],
+        reviewRecommended: true,
+        tier: 'strong-duplicate-evidence',
+        priority: 305,
+        contradictions: [],
+        missing: [],
+      },
+    }),
+  );
+  expect(html).toContain('Strong duplicate evidence · unvalidated advisory tier');
+  expect(html).toContain('does not prove the same transaction');
+  expect(html).toContain('not proof of duplication');
+  expect(html).not.toContain('Validated duplicate');
+});

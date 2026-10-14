@@ -1,0 +1,103 @@
+{
+  "category": "actual-chromium-application-checks",
+  "executedAt": "2026-10-14T12:34:57.605Z",
+  "evidenceOnly": true,
+  "realAIValidated": false,
+  "financialProviderCalls": 0,
+  "realSpending": 0,
+  "checks": [
+    {
+      "scene": "offline QR receiver",
+      "violations": [],
+      "passes": 20
+    },
+    {
+      "scene": "offline/reload/QR/reconnect",
+      "elapsedMilliseconds": 3276.2930969999998,
+      "packetCount": 14,
+      "duplicateCount": 1,
+      "restoredPartialPackets": 1,
+      "reconnectServerMutations": 0
+    },
+    {
+      "scene": "calibration hard-negative review",
+      "violations": [],
+      "passes": 47
+    },
+    {
+      "scene": "normal review page resource sample",
+      "metrics": {
+        "Documents": 1,
+        "Nodes": 1595,
+        "JSHeapUsedSize": 13979208,
+        "JSHeapTotalSize": 58335232
+      },
+      "scope": "One Chromium CDP sample; no isolated peak-memory or mobile-hardware claim."
+    },
+    {
+      "scene": "calibration comparison 390px",
+      "violations": [],
+      "passes": 49
+    },
+    {
+      "scene": "fictional Proof Trail",
+      "violations": [],
+      "passes": 39
+    },
+    {
+      "scene": "calibration hard-negative comparison",
+      "caseId": "pair-01-18",
+      "mode": "deterministic-only",
+      "financialRoutesBlocked": 3,
+      "paymentRecords": 0
+    },
+    {
+      "scene": "historical Proof Trail 1440px",
+      "violations": [],
+      "passes": 38
+    },
+    {
+      "scene": "historical export 1440px",
+      "originalChainValid": true,
+      "originalEvents": 7,
+      "sanitizedReportRedacted": true,
+      "horizontalPageOverflow": false,
+      "keyboardFocusedControl": true
+    },
+    {
+      "scene": "archive to local request recovery",
+      "historicalBadgeCleared": true
+    },
+    {
+      "scene": "historical Proof Trail 390px",
+      "violations": [],
+      "passes": 38
+    },
+    {
+      "scene": "historical export 390px",
+      "originalChainValid": true,
+      "originalEvents": 7,
+      "sanitizedReportRedacted": true,
+      "horizontalPageOverflow": false,
+      "keyboardFocusedControl": true
+    },
+    {
+      "scene": "snapshot conflict recovery and stale assessment",
+      "violations": [],
+      "passes": 45
+    },
+    {
+      "scene": "snapshot attribution",
+      "conflictingQRBlocked": true,
+      "originalServerBodyPreserved": true,
+      "authoritativeAssessmentRevisions": true,
+      "staleCandidateSummaryHidden": true,
+      "paymentRecords": 0
+    }
+  ],
+  "limitations": [
+    "Browser offline/network conditions are simulated locally.",
+    "Axe automated checks do not replace a full assistive-technology or human usability audit.",
+    "Real model inference and model-dependent browser regression are blocked by missing pinned assets."
+  ]
+}

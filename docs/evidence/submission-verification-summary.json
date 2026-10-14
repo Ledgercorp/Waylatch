@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-14T12:45:32.805227+00:00",
+  "startingCommit": "868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3",
+  "branch": "feat/waylatch-competitive",
+  "unitTests": {
+    "passed": 164,
+    "files": 32
+  },
+  "browser": {
+    "originalFullPassed": 9,
+    "competitiveFullPassed": 5,
+    "sameCompetitiveMissingModelPassed": 5,
+    "separateUnvalidatedTierProbe": "Passed real-model desktop/mobile at1440/390px; zero axe/overflow; no payment records",
+    "initialFallbackHarnessMismatch": "Asset-present evidence-only test incorrectly expected deterministic mode; preserved failure log; actual app honest. Empty-model-root rerun passed."
+  },
+  "cleanJudge": "Clean source, exact seven assets extracted from verified bundle, npm install/build, real inference, financial403, historical archive isolated; missing-model fallback and both shutdowns pass",
+  "buildAndTypecheck": "passed",
+  "format": "passed",
+  "dependencyFindings": 0,
+  "sourceFrontendFindings": 0,
+  "auditChain": {
+    "valid": true,
+    "events": 7
+  },
+  "evaluationRunsThisPhase": 0,
+  "scoringChanges": false,
+  "modelDownloadThisPhase": false,
+  "frozenScientificAndPaymentMediaPreservedFiles": 85,
+  "video": {
+    "seconds": 87.76,
+    "sha256": "96d6025a229905376f38b42ed75640caf1c85123b5dee7d27fece64de5557b6d",
+    "changed": false
+  },
+  "history": "All inherited reachable commits/blobs and all5 advertised branch heads inspected; no confirmed credential/private-buyer leak within bounded scans/OCR",
+  "ownerGates": [
+    "MIT/source/public-history approval",
+    "Competitive default-branch and public-visibility approval",
+    "Exact YouTube video publication and actual URL",
+    "Actual account/eligibility/team/representation and legal consent",
+    "Actual mandatory fields and explicitly authorized Devpost submission with live receipt"
+  ],
+  "realSpending": 0,
+  "providerCalls": 0,
+  "newPurchases": 0,
+  "publicActions": false
+}

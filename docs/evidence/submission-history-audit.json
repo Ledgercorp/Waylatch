@@ -1,0 +1,151 @@
+{
+  "checkedAt": "2026-10-14T12:27:14.398587+00:00",
+  "candidate": "868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3",
+  "scope": "All reachable refs/commits and every unique Git blob, configured credential exact-match plus specific secret patterns. Text buyer-field/email triage. Binary metadata and known-credential scanning do not replace visual artifact inspection; not comprehensive secret detection. No credential values copied into this report.",
+  "commits": 21,
+  "uniqueBlobs": 738,
+  "textBlobs": 691,
+  "binaryBlobs": 47,
+  "bytesScanned": 32855835,
+  "configuredCredentialBindingsCompared": 3,
+  "credentialPatternCandidates": [
+    {
+      "kind": "secret-assignment",
+      "blob": "9ab884cb3e6d4dfd5db7032358af8c8158971f1a",
+      "path": "playwright.config.ts",
+      "line": 18,
+      "matchedSha256": "3b1a6a560a9ab0618cf21abf70637262556b225d74ee3b4c565beef7628451a4",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Explicit isolated browser fixture passphrase; provider credentials cleared in current configuration"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "9d4c2c86ce00ffec6c172d49630f67184667b5e4",
+      "path": "scripts/record-demo.ts",
+      "line": 15,
+      "matchedSha256": "995eea50ab23818b93dfbd44b8639ee375251250eacd440979f8cd7691f0e684",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Fictional loopback recording fixture; provider credentials empty"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "abf5cab3256a49f254a17e312223da11007158f3",
+      "path": "tests/release-alias.test.ts",
+      "line": 30,
+      "matchedSha256": "3f892aa8ded1afa01e2ff3dd5e878c7f779963ae5fbdb8c67aea494e1f25e690",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Synthetic secret string for configuration precedence testing"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "4799691c545466d2197f55e1b201f17eac571419",
+      "path": "tests/sandbox-cli.test.ts",
+      "line": 46,
+      "matchedSha256": "6b810074896f9cd45650f4c23e001e290c788ee56c91bd27b62ba6dc98fb22fd",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Synthetic CLI authentication and provider fixture strings"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "78db862140d91c3ffd08d97bc73f2b41c0b24896",
+      "path": "playwright.config.ts",
+      "line": 17,
+      "matchedSha256": "3b1a6a560a9ab0618cf21abf70637262556b225d74ee3b4c565beef7628451a4",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Explicit isolated browser fixture passphrase; provider credentials cleared in current configuration"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "257276454d53c27ed3223fe2ab2c808f6bff0779",
+      "path": "playwright.config.ts",
+      "line": 8,
+      "matchedSha256": "3b1a6a560a9ab0618cf21abf70637262556b225d74ee3b4c565beef7628451a4",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Explicit isolated browser fixture passphrase; provider credentials cleared in current configuration"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "e6a81e3f4f3d762a5772ba24e1dd6c7e7af661b6",
+      "path": "playwright.config.ts",
+      "line": 8,
+      "matchedSha256": "3b1a6a560a9ab0618cf21abf70637262556b225d74ee3b4c565beef7628451a4",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Explicit isolated browser fixture passphrase; provider credentials cleared in current configuration"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "bff4416fd5ac177a787615a2971a03b9c1ed044d",
+      "path": "scripts/record-demo.ts",
+      "line": 15,
+      "matchedSha256": "995eea50ab23818b93dfbd44b8639ee375251250eacd440979f8cd7691f0e684",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Fictional loopback recording fixture; provider credentials empty"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "bcc1f68cbec97173771bf1c91c72b16fe6e646c2",
+      "path": "tests/sandbox-cli.test.ts",
+      "line": 45,
+      "matchedSha256": "6b810074896f9cd45650f4c23e001e290c788ee56c91bd27b62ba6dc98fb22fd",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Synthetic CLI authentication and provider fixture strings"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "d5662a165ffb9a39f0baaae819170cccad6b8c9c",
+      "path": "tests/sandbox-cli.test.ts",
+      "line": 45,
+      "matchedSha256": "6b810074896f9cd45650f4c23e001e290c788ee56c91bd27b62ba6dc98fb22fd",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Synthetic CLI authentication and provider fixture strings"
+    },
+    {
+      "kind": "secret-assignment",
+      "blob": "504bd0fb4f69a6e08fd85db9b284067e8ea5350d",
+      "path": "playwright.config.ts",
+      "line": 2,
+      "matchedSha256": "3b1a6a560a9ab0618cf21abf70637262556b225d74ee3b4c565beef7628451a4",
+      "disposition": "confirmed-test-fixture",
+      "reason": "Explicit isolated browser fixture passphrase; provider credentials cleared in current configuration"
+    }
+  ],
+  "sensitiveHistoricalPaths": [],
+  "nonFixtureEmailCandidates": [],
+  "buyerFieldCandidates": [],
+  "gitIdentityEmailHashes": [
+    "20177b13f56da9bd268ad2962fd80036478b39586cf3ef8d4161cb87646b2b0c"
+  ],
+  "realSpending": 0,
+  "historyRewritten": false,
+  "confirmedCredentialLeaks": 0,
+  "confirmedBuyerDataFindings": 0,
+  "triage": "All eleven pattern matches inspected at exact historical blobs: intentional isolated demo/test literals, not actual account credentials. Historical provider order-token URLs are completed order references, not OAuth access tokens. Git author/committer identities remain present as original provenance and require the owner's public-history approval.",
+  "advertisedRemoteHeads": [
+    {
+      "ref": "refs/heads/feat/rescueledger-mvp",
+      "sha": "ee1488bde39347347d5a40e6bd766072fad7f16f",
+      "coveredByAuditedAncestry": true
+    },
+    {
+      "ref": "refs/heads/feat/waylatch-competitive",
+      "sha": "868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3",
+      "coveredByAuditedAncestry": true
+    },
+    {
+      "ref": "refs/heads/feat/waylatch-rebrand",
+      "sha": "1cca55994f22252d7875ebe9d5025b428c3e179e",
+      "coveredByAuditedAncestry": true
+    },
+    {
+      "ref": "refs/heads/feat/waylatch-release-candidate",
+      "sha": "3580d35a7176afd93abf52fbde391061a4ff30d6",
+      "coveredByAuditedAncestry": true
+    },
+    {
+      "ref": "refs/heads/main",
+      "sha": "3580d35a7176afd93abf52fbde391061a4ff30d6",
+      "coveredByAuditedAncestry": true
+    }
+  ],
+  "shallowRepository": false
+}

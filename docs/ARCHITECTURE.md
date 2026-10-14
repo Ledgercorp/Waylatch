@@ -20,7 +20,9 @@ AI does not authorize, reject or capture payments. Claims retain a separate revi
 
 The pinned model remains Xenova/all-MiniLM-L6-v2, revision `751bff37182d3f1213fa05d7196b954e230abad9`, q8 ONNX, CPU, 384-dimensional embeddings. Seven asset sizes/hashes remain in `src/risk/model-assets.ts`. Transformers.js uses local verified files; descriptions do not go to an external inference API. Existing request/model bounds remain. Field-browser offline preservation does not require model inference.
 
-The original 12-pair calibration is retained. The new 240 fictional scenarios and model-blind AI annotations support separate 80-case calibration and 160-case held-out evaluation by supply family. `scripts/evaluate-ai.ts` implements calibration → freeze → held-out fingerprints, three baselines, confusion metrics, latency and uncertainty. New calibration is blocked by missing pinned files and proxy CONNECT 403; metrics are null, freeze/held-out have not executed and no performance gain is claimed. Labels are independent AI-review annotations, not human-expert or field truth.
+The original threshold-selected 12-pair benchmark and both completed synthetic evaluations remain unchanged. The first frozen combined review falsely flagged 70 of 72 labeled distinct pairs. A separate v2 test reduced attention volume but worsened precision, recall, F1 and fixed-budget ranking; predefined targets failed. Both completion receipts must remain intact. See [scientific reports](AI_REVIEW_QUALITY_V2.md). Nonexpert AI annotations, scenario-only facts and synthetic family templates do not establish field effectiveness.
+
+`src/risk/review-quality.ts` wraps the preserved baseline with informational retrieval and structured advisory tiers, forwarding existing optional location, expenseAt and amountKind without schema changes. MiniLM contributes description retrieval/cosine; receipt/reference/exact amount/time rules govern attention and matching-facts tiers. A high cosine is not transaction identity. Strong-tier labels explicitly say unvalidated; matching recorded facts are not proof. The UI ranks assessed candidates, groups summaries, preserves informational access, displays contradictions/missing facts and collapses revision-bound unrelated dispositions. The existing API takes at most 100 storage-ordered candidates before ranking that subset. No full-database retrieval claim.
 
 ## Isolated judge workspace
 
@@ -49,7 +51,7 @@ flowchart LR
 
 ## Verification and limitations
 
-Controlled provider doubles verify interrupted responses and store reopen recovery without external calls. New bounded store/codec measurements retain raw samples and memory-backed filesystem limitations in `docs/RESILIENCE_COMPETITIVE.md`. New real Chromium evidence-only checks cover offline reload, receiver persistence, comparison, responsive Proof Trail and exports. These do not establish new genuine model inference, real callback delivery, physical-disk power-loss durability or accessibility certification.
+Controlled provider doubles verify interrupted responses and store reopen recovery without external calls. New bounded store/codec measurements retain raw samples and memory-backed filesystem limitations in `docs/RESILIENCE_COMPETITIVE.md`. Current real Chromium checks in full semantic and evidence-only modes cover offline reload, receiver persistence, comparison, responsive Proof Trail and exports. Full-mode checks execute genuine local server inference; evidence-only checks preserve honest unavailable-model states. Neither establishes real callback delivery, physical-disk power-loss durability or accessibility certification.
 
 The original actual Sandbox purchase and seven-event audit remain unchanged. Hash links detect alteration relative to known hashes but cannot prevent complete administrator rewrites or reveal deletion of an unanchored tail. This is not a blockchain.
 

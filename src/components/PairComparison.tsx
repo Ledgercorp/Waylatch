@@ -93,10 +93,20 @@ export function PairComparison({
         {assessment && (
           <p className="small">
             {assessment.tier
-              ? TIER_LABELS[assessment.tier]
+              ? TIER_LABELS[assessment.tier] +
+                (assessment.tier === 'strong-duplicate-evidence'
+                  ? ' · unvalidated advisory tier'
+                  : '')
               : assessment.reviewRecommended
                 ? 'Historical binary review recommendation.'
                 : 'No review recommendation from this assessment; this does not establish that records are unrelated.'}
+          </p>
+        )}
+        {assessment?.tier === 'strong-duplicate-evidence' && (
+          <p className="notice small">
+            This tier groups matching recorded facts; it does not prove the same transaction.
+            Duplicate-detection accuracy for this tier has not been established. Verify the source
+            records yourself.
           </p>
         )}
         {assessment?.tier && (

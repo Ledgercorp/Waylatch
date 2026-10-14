@@ -1,0 +1,18 @@
+
+> waylatch@0.1.0 test:e2e:competitive
+> playwright test --config playwright.competitive.config.ts
+
+[WebServer] (node:28301) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:28318) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/competitive/judge.spec.ts:54:1 › guided offline preservation, interrupted QR recovery and reconnect never pay (3.5s)
+  ✓  2 tests/competitive/judge.spec.ts:114:1 › difficult calibration pair can be compared and disposition audited without financial authority (5.4s)
+  ✓  3 tests/competitive/judge.spec.ts:235:3 › historical archive, exports and accessibility at 1440px (3.1s)
+  ✓  4 tests/competitive/judge.spec.ts:235:3 › historical archive, exports and accessibility at 390px (2.6s)
+  ✓  5 tests/competitive/judge.spec.ts:286:1 › conflicting QR snapshots and revised candidates cannot inherit coordinator review evidence (3.1s)
+
+  5 passed (19.7s)
