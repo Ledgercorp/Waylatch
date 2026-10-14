@@ -14,7 +14,7 @@ Built by Colby Weiss / LeftSock Labs for the PayPal AI Hackathon 2026. All incid
 
 ## Competitive review and judge access
 
-The private competitive branch preserves the existing application and adds explainable advisory comparisons, revision-bound dispositions, grouped candidate summaries, a source-labeled Proof Trail and an isolated judge workspace. Start with the [judge quickstart](docs/JUDGE_QUICKSTART.md): six concrete steps, exact model/bundle paths and the honest missing-model fallback. [Final submission readiness](docs/SUBMISSION_READINESS.md) is the current release checkpoint.
+The public default branch, `feat/waylatch-competitive`, preserves the existing application and adds explainable advisory comparisons, revision-bound dispositions, grouped candidate summaries, a source-labeled Proof Trail and an isolated judge workspace. Start with the [judge quickstart](docs/JUDGE_QUICKSTART.md): six concrete steps, exact model/bundle paths and the honest missing-model fallback. [Publication status](docs/PUBLICATION_STATUS.md) records current public links; [final submission readiness](docs/SUBMISSION_READINESS.md) preserves the reviewed engineering checkpoint.
 
 ```bash
 npm run judge
@@ -22,7 +22,7 @@ npm run judge
 
 With Node 24+, npm and Python 3, this prepares the locked application and verifies existing pinned model assets (or downloads missing pins where available), then serves **http://127.0.0.1:4173**. Use **Start judge demo**. No PayPal merchant secrets or existing coordinator password are required. Financial mutations/provider operations are blocked. Ctrl+C removes temporary server records; browser-local records remain on that origin.
 
-The owner's verified seven-file model bundle already enables real local AI in this workspace; no redownload occurred. Preserve `models/Xenova/all-MiniLM-L6-v2/` or set `RESCUELEDGER_MODEL_PATH` to an authorized model root. Model binaries remain out of Git. A clean source copy installed dependencies, built and passed full default semantic judge acceptance using those local assets.
+The reviewed acceptance used the owner's verified seven-file model bundle; model binaries remain out of Git and are not included in a clone. Provision the pinned assets through the normal downloader or the exact local-bundle layout in the judge quickstart. Preserve `models/Xenova/all-MiniLM-L6-v2/` or set `RESCUELEDGER_MODEL_PATH` to an authorized model root. A clean source copy installed dependencies, built and passed full default semantic judge acceptance using those separately supplied local assets.
 
 ```bash
 npm run judge -- --evidence-only  # explicitly limited when assets are unavailable
@@ -32,14 +32,14 @@ npm run test:ai                 # historical 12-case real-model smoke benchmark
 
 **AI limitations are material.** Semantic similarity retrieves potentially related records; structured evidence controls advisory attention tiers. Original held-out combined falsely flagged 70/72 distinct pairs. On a genuinely new frozen test, attention FP fell 77→30, but precision fell .384→.250 and recall .889→.185; fixed-budget ranking also worsened. Predetermined scientific targets failed. Zero strong alerts do not establish strong-tier precision; the interface labels this tier unvalidated. [Both evaluations and all limitations](docs/AI_REVIEW_QUALITY_V2.md). The separate v2 held-out receipt is complete; never rerun or retune either exposed held-out dataset as independent evidence.
 
-[Current readiness](docs/COMPETITIVE_READINESS.md), [measured resilience](docs/RESILIENCE_COMPETITIVE.md), [87.76-second private preview](docs/demo/waylatch-competitive-preview.mp4), [exact media hash/provenance](docs/evidence/competitive-demo-video.json). Prior previews are preserved separately. Root license, public repository/video, legal terms and submission remain owner decisions. No publication or real spending occurred.
+[Current readiness](docs/COMPETITIVE_READINESS.md), [measured resilience](docs/RESILIENCE_COMPETITIVE.md), [download the approved 87.76-second video](https://raw.githubusercontent.com/Ledgercorp/Waylatch/61cc31e4d0f47b758b19d938e7876823b30ba39d/docs/demo/waylatch-competitive-preview.mp4), [exact media hash/provenance](docs/evidence/competitive-demo-video.json). Prior previews are preserved separately. The owner approved public source publication and MIT adoption. YouTube and Devpost status are recorded separately in [publication status](docs/PUBLICATION_STATUS.md). Real spending remains $0.
 
 ## Run locally, at no cost
 
 Requires Node.js **24+**, npm, Python 3 (for the model downloader and optional media tooling), and a modern Chromium browser. Node's built-in SQLite stores durable server records without an external database.
 
 ```bash
-# Unpack the supplied source archive (or clone a future authorized private repository).
+git clone --branch feat/waylatch-competitive https://github.com/Ledgercorp/Waylatch.git
 cd Waylatch
 ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm ci
 cp .env.example .env
@@ -113,15 +113,15 @@ Subscribe a **Sandbox** app to `PAYMENT.CAPTURE.COMPLETED` and configure a publi
 - [Official hackathon requirements](docs/HACKATHON_REQUIREMENTS.md), [CrisisCodec adaptation](docs/CRISISCODEC_REUSE.md)
 - [Demo script](docs/DEMO_SCRIPT.md), [submission text](docs/DEVPOST_DRAFT.md), [release checklist](docs/RELEASE_CHECKLIST.md)
 
-The authentic implementation history is synchronized to the private repository https://github.com/Ledgercorp/Waylatch. The original `feat/rescueledger-mvp` branch and recovery archives remain preserved. Public visibility is not authorized.
+The authentic implementation history is synchronized to the public repository https://github.com/Ledgercorp/Waylatch. The original `feat/rescueledger-mvp`, `main` and release-candidate branches and recovery archives remain preserved. No source history was rewritten.
 
-Root license adoption is **pending owner approval**. `docs/LICENSE-MIT-PROPOSAL.txt` is a proposal and does not license this private repository. CrisisCodec code was selectively adapted with the owner's authorization; its original source also has no adopted root license. Dependencies/models retain their own notices. Do not change visibility or submit until ownership, license, public release and final submission approvals are complete.
+Owner-approved [MIT licensing](LICENSE), copyright 2026 Colby Weiss / LeftSock Labs, was adopted in commit `61cc31e4d0f47b758b19d938e7876823b30ba39d`. CrisisCodec code was selectively adapted with the same owner's authorization. Dependencies/models retain their independent licenses and notices; the application MIT does not replace them. Historical approval packets below remain preserved as preparation records.
 
-## Private release preparation
+## Historical release preparation
 
 The [1:50 captioned demo](docs/demo/waylatch-engineering-preview.mp4) retains the actual offline/QR/local-AI footage and now shows the genuine completed USD 1.00 Sandbox payment and its seven-event audit in the existing UI. A closing evidence panel cites independently verified provider results. Original nonfinancial automated fixtures remain labeled; the USD 1.00 purchase is a separate human-authorized fixture. Checkout login, buyer approval and capture actions were not screen-recorded or reenacted. [Media provenance](docs/evidence/demo-video.json).
 
-The [submission package](docs/submission/SUBMISSION_PACKAGE.md) includes prepared Devpost fields, technology tags, an exportable architecture SVG, screenshot captions, narration/editing instructions and release gates. No Devpost project, YouTube upload, public repository, root license adoption or final submission has been performed. Naming remains AMBER. See [license audit](docs/LICENSE_AUDIT.md) before redistribution.
+The [submission package](docs/submission/SUBMISSION_PACKAGE.md) includes prepared Devpost fields, technology tags, an exportable architecture SVG, screenshot captions, narration/editing instructions and release gates. Its private/pending statements describe the preparation checkpoint; see [publication status](docs/PUBLICATION_STATUS.md) for current outcomes. Naming remains AMBER. See [license audit](docs/LICENSE_AUDIT.md) before redistribution.
 
 For secure callback testing, start the existing coordinator backend locally and run `npm run webhook:gateway`. Any approved free tunnel must target **127.0.0.1:4180**, never the coordinator port. Only POST /api/webhooks/paypal is forwarded; official Sandbox verification still runs on the backend. The attempted Quick Tunnel failed with a TCP connection refusal and produced no public endpoint or real callback. This receiver is a narrow prototype test boundary, not a production ingress service.
 
