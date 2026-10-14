@@ -41,6 +41,17 @@ async function start(host: ReturnType<typeof setup>, ip = '192.0.2.1', cookie?: 
   return { cookie: response.headers['set-cookie']?.[0]?.split(';')[0] ?? cookie!, response };
 }
 describe('public judge trust boundary', () => {
+  it('ignores forged forwarded prefixes and ignores all forwarded addresses without the Render opt-in', async () => {
+    for (const renderEdge of [true, false]) {
+      const host = setup({ origin, renderEdge });
+      await start(host, '192.0.2.11, 203.0.113.90');
+      await start(host, '198.51.100.12, 203.0.113.90');
+      await call(host, 'post', '/api/demo/session')
+        .set('X-Forwarded-For', '192.0.2.13, 203.0.113.90')
+        .send({})
+        .expect(429);
+    }
+  });
   it('uses fixed-lifetime secure anonymous sessions and refuses login or foreign/missing origins', async () => {
     const host = setup();
     const a = await start(host);

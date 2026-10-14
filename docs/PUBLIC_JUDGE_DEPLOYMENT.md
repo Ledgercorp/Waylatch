@@ -40,9 +40,10 @@ fails promptly with a retry response. Global request/session-start limits and bo
 remain effective independently of forwarded IP headers. Aborted assessment remains reserved
 through audit append; reset and cleanup cannot close a store while work remains active.
 
-Render deployments opt into its edge-supplied first X-Forwarded-For client address only when
+Render deployments opt into its appended final X-Forwarded-For address only when
 `RENDER=true`. Other deployments ignore forwarded addresses. This assumes Render's public edge
-and its Free service's lack of private ingress; hosted spoofing checks must verify this boundary.
+and its Free service's lack of private ingress; hosted spoofing checks verify this boundary.
+The initial first-address assumption failed live testing and was corrected before linking the demo.
 
 ## Free hosting and recovery
 

@@ -66,12 +66,13 @@ export function createPublicJudge({
   let inferences = 0;
   const app = express();
   app.disable('x-powered-by');
-  // Render supplies the first verified X-Forwarded-For address. This opt-in is only for
+  // Render appends its edge address after any caller-supplied X-Forwarded-For entries.
+  // Trust only the final hop, never a visitor-supplied first address. This opt-in is only for
   // its edge-only Free web service; direct/local deployments ignore forwarded headers.
   // Forwarded host/protocol never grant authority. Global caps do not depend on IP.
   const clientIp = (req: express.Request) => {
-    const first = renderEdge ? req.get('X-Forwarded-For')?.split(',')[0]?.trim() : undefined;
-    return hash(first && isIP(first) ? first : (req.socket.remoteAddress ?? 'unknown'));
+    const edge = renderEdge ? req.get('X-Forwarded-For')?.split(',').at(-1)?.trim() : undefined;
+    return hash(edge && isIP(edge) ? edge : (req.socket.remoteAddress ?? 'unknown'));
   };
   const blocked = async (): Promise<never> => {
     throw new Error('Public demo provider disabled');

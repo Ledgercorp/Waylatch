@@ -1,7 +1,7 @@
 {
   "category": "local-public-mode-browser-acceptance",
   "url": "http://localhost:10000",
-  "executedAt": "2026-10-14T14:08:01.880Z",
+  "executedAt": "2026-10-14T14:08:57.409Z",
   "passed": true,
   "status": "passed",
   "errors": [],
@@ -17,14 +17,14 @@
     },
     {
       "scene": "offline request/reload/real QR decode/reconstruction/reconnect",
-      "startupMilliseconds": 154.26754200000005,
+      "startupMilliseconds": 226.89158399999997,
       "packetCount": 14,
       "restoredPartialPackets": 1,
       "serverMutationsOnReconnect": 0
     },
     {
       "scene": "genuine server CPU inference",
-      "inferenceMilliseconds": 106.61591700000008,
+      "inferenceMilliseconds": 63.240082999999686,
       "mode": "semantic-local",
       "healthBefore": {
         "environment": "sandbox",
@@ -35,10 +35,10 @@
         "inferences": 0,
         "model": "Xenova/all-MiniLM-L6-v2",
         "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
-        "successfulInferenceBatches": 1,
+        "successfulInferenceBatches": 2,
         "loadMilliseconds": 642.208833,
-        "rssBytes": 48709632,
-        "uptimeSeconds": 142
+        "rssBytes": 50511872,
+        "uptimeSeconds": 198
       },
       "healthAfter": {
         "environment": "sandbox",
@@ -49,45 +49,45 @@
         "inferences": 0,
         "model": "Xenova/all-MiniLM-L6-v2",
         "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
-        "successfulInferenceBatches": 2,
+        "successfulInferenceBatches": 3,
         "loadMilliseconds": 642.208833,
-        "rssBytes": 76218368,
-        "uptimeSeconds": 142
+        "rssBytes": 74579968,
+        "uptimeSeconds": 198
       },
       "candidates": [
         {
           "id": "RL-JUDGE-CLAIM-A",
-          "similarity": 0.739665878990421,
+          "similarity": 0.7493849613504702,
           "tier": "potentially-related"
         },
         {
           "id": "RL-JUDGE-OTHER",
-          "similarity": 0.6591302083430384,
+          "similarity": 0.6575119012652232,
           "tier": "potentially-related"
         },
         {
           "id": "RL-JUDGE-WATER-A",
-          "similarity": 0.6591302083430384,
+          "similarity": 0.6575119012652232,
           "tier": "potentially-related"
         },
         {
           "id": "RL-JUDGE-WATER-B",
-          "similarity": 0.5966943507475193,
+          "similarity": 0.5889192233367303,
           "tier": "none"
         },
         {
           "id": "RL-JUDGE-CLAIM-B",
-          "similarity": 0.417164807639054,
+          "similarity": 0.42147441196188806,
           "tier": "none"
         },
         {
           "id": "RL-JUDGE-WATER-C",
-          "similarity": 0.4068298767572425,
+          "similarity": 0.3971948163756844,
           "tier": "none"
         },
         {
           "id": "RL-JUDGE-RADIOS",
-          "similarity": 0.1620191062902181,
+          "similarity": 0.168109717727487,
           "tier": "none"
         }
       ]
