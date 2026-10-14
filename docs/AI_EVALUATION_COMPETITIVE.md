@@ -1,3 +1,9 @@
+# Original v1 evaluation retained; new v2 result available
+
+The original frozen report below and its artifacts/receipt remain unchanged. It is now development-visible and cannot independently validate subsequent changes. [Genuinely new review-quality v2 evaluation](AI_REVIEW_QUALITY_V2.md) preserves its separate failed result: fewer attention alerts, worse precision/recall and budgeted ranking. No independent improvement claim. Both completion receipts must remain intact.
+
+---
+
 # Competitive AI evaluation — genuine frozen held-out results
 
 The owner-uploaded original MiniLM bundle independently matches all seven files in `src/risk/model-assets.ts`. No model redownload, substitution, asset-pin change or label change occurred. [Bundle verification](evidence/ai-bundle-verification.json). Real local q8 CPU inference completed on the Node server; descriptions were not sent to an inference service.

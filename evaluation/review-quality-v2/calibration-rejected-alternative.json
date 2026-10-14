@@ -1,0 +1,85 @@
+{
+  "assessedAt": "2026-10-14T11:47:15.553122+00:00",
+  "scope": "Calibration-only alternative investigated after initial genuine-vector calibration; never run on heldout",
+  "proposal": "Add attention for matching reference plus identical recorded numeric amount, accepting unknown amount certainty and different receipt digests when no other structured contradiction",
+  "counts": {
+    "tp": 15,
+    "fp": 17,
+    "fn": 14,
+    "tn": 19
+  },
+  "changes": [
+    {
+      "caseId": "v2-02-08",
+      "label": "distinct",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-02-15",
+      "label": "duplicate",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-04-16",
+      "label": "duplicate",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-03-15",
+      "label": "duplicate",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-02-14",
+      "label": "distinct",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-04-08",
+      "label": "duplicate",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-04-01",
+      "label": "distinct",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-01-08",
+      "label": "duplicate",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-01-20",
+      "label": "distinct",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-03-06",
+      "label": "distinct",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-01-06",
+      "label": "distinct",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-04-14",
+      "label": "distinct",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-03-17",
+      "label": "duplicate",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    },
+    {
+      "caseId": "v2-02-07",
+      "label": "duplicate",
+      "reason": "Matching reference and recorded numeric amount, accepting unknown exactness and rescan variation; no other structured contradiction"
+    }
+  ],
+  "selected": false,
+  "reason": "Would increase the already excessive distinct attention burden. Unknown reference namespace and shared invoice references cannot safely separate transactions; no scenario-only facts or text-specific exception added."
+}

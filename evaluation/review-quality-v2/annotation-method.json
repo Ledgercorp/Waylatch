@@ -1,0 +1,47 @@
+{
+  "method": "Two fresh independent model-blind nonexpert AI judgments per case; blind to scoring, predictions, split/family/category and author target answers. Any identity disagreement merges to ambiguous; any tier disagreement merges to ambiguous. No prediction-based adjudication. Raw judgments retained.",
+  "datasetSha256": "643b3dc8400a94eb43c846b21d25a94cfdea6f8179cd7bcf33798d9d14913177",
+  "packetShuffleSeeds": [
+    448172,
+    103749
+  ],
+  "packets": [
+    {
+      "file": "evaluation/review-quality-v2/annotation-packets/r1-p1.json",
+      "round": 1,
+      "cases": 80,
+      "sha256": "cc7d2bd6c6147e9d741a3350da008bfe613f0d6e5937cd7b70de62bc8ba9f43b"
+    },
+    {
+      "file": "evaluation/review-quality-v2/annotation-packets/r1-p2.json",
+      "round": 1,
+      "cases": 80,
+      "sha256": "d1cf587ff828052b40f3684481091ba78882d682345242f6d88ff44214e8d555"
+    },
+    {
+      "file": "evaluation/review-quality-v2/annotation-packets/r1-p3.json",
+      "round": 1,
+      "cases": 80,
+      "sha256": "32b06d3fc975131695d040c17fab442846fa8f17b681939bb7ae24f85066a053"
+    },
+    {
+      "file": "evaluation/review-quality-v2/annotation-packets/r2-p1.json",
+      "round": 2,
+      "cases": 80,
+      "sha256": "80aba97c173f4935eb6725f7243f9f2c433e255f94332977571104fe6a105740"
+    },
+    {
+      "file": "evaluation/review-quality-v2/annotation-packets/r2-p2.json",
+      "round": 2,
+      "cases": 80,
+      "sha256": "5c7587f5cd9b2878a8c69ae9d22d6a749451fd18d7e10d7356adee228842fc3a"
+    },
+    {
+      "file": "evaluation/review-quality-v2/annotation-packets/r2-p3.json",
+      "round": 2,
+      "cases": 80,
+      "sha256": "d3f2ce9df5e41f8b2be1c512d9122abf8684460b01f9cf731d8b773c6cdd87a6"
+    }
+  ],
+  "exactOldRecordOrDescriptionOverlap": false
+}

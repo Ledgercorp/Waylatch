@@ -1,14 +1,10 @@
-# Current final competitive script — 87.68 seconds
+# Current private competitive script — 87.76 seconds
 
-Use [demo/COMPETITIVE_SCRIPT.md](demo/COMPETITIVE_SCRIPT.md) for the new actual semantic recording, captions, exact times and hash. The previous 97.52-second fallback and original 110.04-second preview are preserved separately. Historical payment evidence is unchanged; no buyer/capture reenactment or public upload occurred.
-
----
-
-# Current competitive preview — 97.52 seconds
-
-The current competitive script, exact scene timings, source boundaries and unchanged video hash are in [demo/COMPETITIVE_SCRIPT.md](demo/COMPETITIVE_SCRIPT.md). It accurately shows deterministic fallback and labeled historical MiniLM, pending genuine new model access. The 110.04-second release-preview script below remains historical; no buyer/capture reenactment or new purchase is authorized.
+[Final script, timings and source provenance](demo/COMPETITIVE_SCRIPT.md) bind the newly recorded tiered review. [Video metadata](evidence/competitive-demo-video.json) supplies exact SHA-256. The prior87.68-second candidate is preserved separately, alongside the97.52-second fallback and original110.04-second preview. No new payment or public upload. Scientific targets failed; see [v2 report](AI_REVIEW_QUALITY_V2.md).
 
 ---
+
+The following110.04-second script is historical.
 
 # Final private demonstration — 1:50.04
 

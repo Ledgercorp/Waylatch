@@ -1,13 +1,15 @@
 import { useId, useState } from 'react';
-import { AlertTriangle, Sparkles, Check } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import type { ResourceRequest } from '../requests/schema';
 import type { StoredRecord } from '../../server/store';
-import type { ReviewAssessment } from '../risk/review';
+import type { QualityAssessment } from '../risk/review-quality';
+import { TIER_LABELS, type ReviewTier } from '../risk/review-tiers';
+import { latestPairDisposition } from '../risk/comparison';
 import type { AuditEvent } from '../audit/chain';
 import { api } from './api';
 import { PairComparison } from './PairComparison';
 import { sameRequestSnapshot } from '../requests/snapshot';
-type RiskEvidence = ReviewAssessment & { assessedRevisions?: Record<string, number> };
+type RiskEvidence = QualityAssessment & { assessedRevisions?: Record<string, number> };
 export function ReviewPanel({
   record,
   remote,
@@ -31,7 +33,7 @@ export function ReviewPanel({
 }) {
   const selectorId = useId();
   const [note, setNote] = useState('');
-  const [risk, setRisk] = useState<ReviewAssessment | null>(null);
+  const [risk, setRisk] = useState<QualityAssessment | null>(null);
   const [riskRevision, setRiskRevision] = useState<number | null>(null);
   const [assessedRevisions, setAssessedRevisions] = useState<Record<string, number>>({});
   const [selectedCandidate, setSelectedCandidate] = useState('');
@@ -41,8 +43,6 @@ export function ReviewPanel({
       saved: 'record' in source,
     }))
     .filter((snapshot) => snapshot.record.id !== record.id);
-  const activeSnapshot =
-    snapshots.find((snapshot) => snapshot.record.id === selectedCandidate) ?? snapshots[0];
   const matchesCoordinator = !!remote && sameRequestSnapshot(record, remote.record);
   const currentRisk = matchesCoordinator && riskRevision === record.revision ? risk : null;
   const currentCandidates =
@@ -50,6 +50,26 @@ export function ReviewPanel({
       const snapshot = snapshots.find((entry) => entry.record.id === candidate.id);
       return snapshot && assessedRevisions[candidate.id] === snapshot.record.revision;
     }) ?? [];
+  const dismissed = new Set(
+    currentCandidates
+      .filter((candidate) => {
+        const snapshot = snapshots.find((entry) => entry.record.id === candidate.id);
+        const latest =
+          snapshot && latestPairDisposition(relationshipEvents, record, snapshot.record);
+        return latest?.currentRevisions && latest.disposition === 'unrelated';
+      })
+      .map((candidate) => candidate.id),
+  );
+  const rankedSnapshots = [...snapshots].sort((a, b) => {
+    const ai = currentCandidates.findIndex((c) => c.id === a.record.id);
+    const bi = currentCandidates.findIndex((c) => c.id === b.record.id);
+    return (
+      (dismissed.has(a.record.id) ? 1 : 0) - (dismissed.has(b.record.id) ? 1 : 0) ||
+      (ai < 0 ? 1000 : ai) - (bi < 0 ? 1000 : bi)
+    );
+  });
+  const activeSnapshot =
+    snapshots.find((snapshot) => snapshot.record.id === selectedCandidate) ?? rankedSnapshots[0];
   const activeAssessment =
     activeSnapshot && assessedRevisions[activeSnapshot.record.id] === activeSnapshot.record.revision
       ? currentRisk?.candidates.find((candidate) => candidate.id === activeSnapshot.record.id)
@@ -144,7 +164,7 @@ export function ReviewPanel({
                 disabled={busy}
                 onChange={(event) => setSelectedCandidate(event.target.value)}
               >
-                {snapshots.map((snapshot) => (
+                {rankedSnapshots.map((snapshot) => (
                   <option key={snapshot.record.id} value={snapshot.record.id}>
                     {snapshot.record.id} · {snapshot.record.resources[0]?.description}
                   </option>
@@ -182,46 +202,75 @@ export function ReviewPanel({
               {currentCandidates.length === 0 && (
                 <p>No comparison records available. Add a second synthetic request or claim.</p>
               )}
+              <p className="notice" role="status">
+                Assessment attention: {currentCandidates.filter((c) => c.reviewRecommended).length}{' '}
+                · strong evidence:{' '}
+                {currentCandidates.filter((c) => c.tier === 'strong-duplicate-evidence').length} ·
+                informational:{' '}
+                {currentCandidates.filter((c) => c.tier === 'potentially-related').length} ·
+                dismissed as unrelated: {dismissed.size}. No financial action follows a tier or
+                dismissal.
+              </p>
               <details className="comparison-candidate-summaries">
                 <summary>Candidate summaries · {currentCandidates.length} current records</summary>
-                {currentCandidates.map((candidate) => (
-                  <article className="risk-pair" key={candidate.id}>
-                    <div>
-                      {snapshots.some((snapshot) => snapshot.record.id === candidate.id) ? (
-                        <button
-                          className="secondary"
-                          aria-pressed={activeSnapshot?.record.id === candidate.id}
-                          onClick={() => setSelectedCandidate(candidate.id)}
-                        >
-                          Compare {candidate.id}
-                        </button>
-                      ) : (
-                        <strong>{candidate.id}</strong>
-                      )}
-                      <span className={candidate.reviewRecommended ? 'review-flag' : 'safe-flag'}>
-                        {candidate.reviewRecommended ? (
-                          <AlertTriangle size={14} />
-                        ) : (
-                          <Check size={14} />
-                        )}{' '}
-                        {candidate.reviewRecommended
-                          ? 'Review recommended'
-                          : 'No review recommendation'}
-                      </span>
-                    </div>
-                    {currentRisk.mode === 'semantic-local' && candidate.similarity !== null && (
-                      <p className="small mono">
-                        Semantic cosine {candidate.similarity.toFixed(3)} · not a fraud probability
-                      </p>
-                    )}
-                    <ul>
-                      {candidate.reasons.map((reason) => (
-                        <li key={reason}>{reason}</li>
+                {(
+                  [
+                    'strong-duplicate-evidence',
+                    'needs-verification',
+                    'potentially-related',
+                    'none',
+                    'dismissed',
+                  ] as const
+                ).map((group) => {
+                  const members = currentCandidates.filter((c) =>
+                    group === 'dismissed'
+                      ? dismissed.has(c.id)
+                      : !dismissed.has(c.id) && c.tier === group,
+                  );
+                  if (!members.length) return null;
+                  return (
+                    <details
+                      key={group}
+                      open={group === 'strong-duplicate-evidence' || group === 'needs-verification'}
+                    >
+                      <summary>
+                        {group === 'dismissed'
+                          ? 'Dismissed for current revisions'
+                          : TIER_LABELS[group as ReviewTier]}{' '}
+                        · {members.length}
+                      </summary>
+                      {members.map((candidate) => (
+                        <article className="risk-pair" key={candidate.id}>
+                          <button
+                            className="secondary"
+                            aria-pressed={activeSnapshot?.record.id === candidate.id}
+                            onClick={() => setSelectedCandidate(candidate.id)}
+                          >
+                            Compare {candidate.id}
+                          </button>
+                          <span
+                            className={
+                              candidate.tier === 'strong-duplicate-evidence'
+                                ? 'review-flag'
+                                : 'safe-flag'
+                            }
+                          >
+                            {TIER_LABELS[candidate.tier]}
+                          </span>
+                          {candidate.similarity !== null && (
+                            <p className="small mono">
+                              Semantic cosine {candidate.similarity.toFixed(3)} · not a fraud
+                              probability
+                            </p>
+                          )}
+                          {!!candidate.contradictions.length && (
+                            <p className="small">{candidate.contradictions.join('; ')}</p>
+                          )}
+                        </article>
                       ))}
-                    </ul>
-                    <p className="small">No payment action taken.</p>
-                  </article>
-                ))}
+                    </details>
+                  );
+                })}
               </details>
             </div>
           )}

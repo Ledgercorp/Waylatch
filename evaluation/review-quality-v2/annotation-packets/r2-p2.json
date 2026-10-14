@@ -1,0 +1,1809 @@
+{
+  "datasetId": "waylatch-review-quality-v2",
+  "cases": [
+    {
+      "id": "v2-07-05",
+      "scenario": "The advance was deducted from the final bill, but the word final may mean the entire invoice total or only the remaining amount in the second app entry. The receipt has not been recovered.",
+      "left": {
+        "id": "rv2-125-l",
+        "incident": "fictional-operation-07",
+        "description": "Millet flour processing advance.",
+        "amountCents": 30000,
+        "receiptDigest": null,
+        "transactionReference": "ML-55",
+        "createdAt": "2026-09-28T22:27:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-125-r",
+        "incident": "fictional-operation-07",
+        "description": "Millet flour processing final payment.",
+        "amountCents": 75000,
+        "receiptDigest": null,
+        "transactionReference": "ML-55",
+        "createdAt": "2026-09-28T08:27:00Z",
+        "amountKind": "unknown"
+      }
+    },
+    {
+      "id": "v2-08-03",
+      "scenario": "The first payment failed at the terminal; a second payment succeeded. The failed authorisation slip and settled receipt were each submitted as if paid.",
+      "left": {
+        "id": "rv2-143-l",
+        "incident": "fictional-operation-08",
+        "description": "Cold store charge, pallet batch 9.",
+        "amountCents": 95300,
+        "receiptDigest": "4b4c983b4f4cc29b974c7ffb83b17719a33293183769b92bb1523a197b2c8fa3",
+        "transactionReference": "AUTH-4410",
+        "createdAt": "2026-09-03T06:29:00Z"
+      },
+      "right": {
+        "id": "rv2-143-r",
+        "incident": "fictional-operation-08",
+        "description": "Cold store charge, pallet batch 9.",
+        "amountCents": 95300,
+        "receiptDigest": "2406320d2fcac9bfd9738d8f0e399b73de488310cedcd0a1934abbb9d20c3c86",
+        "transactionReference": "PAY-4417",
+        "createdAt": "2026-09-03T20:29:00Z"
+      }
+    },
+    {
+      "id": "v2-08-05",
+      "scenario": "The monthly account may include the fish freezer rental, but the account summary has no itemised periods. The purchaser cannot establish whether the freezer was paid separately in cash.",
+      "left": {
+        "id": "rv2-145-l",
+        "incident": "fictional-operation-08",
+        "description": "Refrigerated storage monthly account.",
+        "amountCents": 394000,
+        "receiptDigest": "07209dd8d64ed539e8a3a9fd819c9154a798102b2de39339ccc63ac4cf43a8f1",
+        "transactionReference": "ACCT-20",
+        "createdAt": "2026-09-08T05:32:00Z"
+      },
+      "right": {
+        "id": "rv2-145-r",
+        "incident": "fictional-operation-08",
+        "description": "Temporary fish freezer rental.",
+        "amountCents": 104000,
+        "receiptDigest": "29fb39a8ef9e99c0e30e4de7ae58ed6f5415c5e0fe0404acc7beca526c22c35d",
+        "transactionReference": "FISH-28",
+        "createdAt": "2026-09-08T03:57:00Z"
+      }
+    },
+    {
+      "id": "v2-03-07",
+      "scenario": "The supervisor submitted the till slip and the storekeeper submitted its emailed image for the same six-pair collection.",
+      "left": {
+        "id": "rv2-047-l",
+        "incident": "fictional-operation-03",
+        "description": "Six pairs steel-toe boots, mixed sizes, stores.",
+        "amountCents": 75600,
+        "receiptDigest": "5265dec3fc549679c952e446dc9b8042c18b327ba20a23e33922597039356a2c",
+        "transactionReference": "BOOT-221",
+        "createdAt": "2026-09-20T01:47:00Z"
+      },
+      "right": {
+        "id": "rv2-047-r",
+        "incident": "fictional-operation-03",
+        "description": "Safety boots for six unloading staff.",
+        "amountCents": 75600,
+        "receiptDigest": "5265dec3fc549679c952e446dc9b8042c18b327ba20a23e33922597039356a2c",
+        "transactionReference": "BOOT-221",
+        "createdAt": "2026-09-20T01:47:00Z"
+      }
+    },
+    {
+      "id": "v2-10-09",
+      "scenario": "The mechanic\u2019s estimate became one repair job. The final price was lower because the existing axle could be retained; the estimate and paid job share the work number.",
+      "left": {
+        "id": "rv2-189-l",
+        "incident": "fictional-operation-10",
+        "description": "Wheelbarrow repair estimate.",
+        "amountCents": 25200,
+        "receiptDigest": "b889b3a54790473a4c0fa26b070fc072294a1012b009aed3470ae9c010022f51",
+        "transactionReference": "WB-137",
+        "createdAt": "2026-09-19T01:24:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-189-r",
+        "incident": "fictional-operation-10",
+        "description": "Wheelbarrow axle and bearing repair.",
+        "amountCents": 18600,
+        "receiptDigest": "95b748faaa4fe0d093b5a97bb44414c9e761755a5efffb9f95f24f9a33d4e817",
+        "transactionReference": "WB-137",
+        "createdAt": "2026-09-19T01:24:00Z",
+        "amountKind": "exact"
+      }
+    },
+    {
+      "id": "v2-04-12",
+      "scenario": "The badge manager remembers one job, but one record says 60 badges in an archived note and the other says 90. Neither current record preserves the quantities or a receipt.",
+      "left": {
+        "id": "rv2-072-l",
+        "incident": "fictional-operation-04",
+        "description": "Printing charge for access badges.",
+        "amountCents": 15000,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-21T08:49:00Z"
+      },
+      "right": {
+        "id": "rv2-072-r",
+        "incident": "fictional-operation-04",
+        "description": "Access badge print charge.",
+        "amountCents": 22500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-21T08:49:00Z"
+      }
+    },
+    {
+      "id": "v2-03-06",
+      "scenario": "The initial issue was charged on one invoice. The replenishment arrived two weeks later under another invoice; its app reference accidentally repeats the first invoice number.",
+      "left": {
+        "id": "rv2-046-l",
+        "incident": "fictional-operation-03",
+        "description": "Steel-toe boots, twelve pairs, initial issue.",
+        "amountCents": 151200,
+        "receiptDigest": "df76ebb76eb8d017c38121cc58f1e32e7b9e7d5c0a41e43741a78ff6880ebdf0",
+        "transactionReference": "B-971",
+        "createdAt": "2026-09-21T17:46:00Z"
+      },
+      "right": {
+        "id": "rv2-046-r",
+        "incident": "fictional-operation-03",
+        "description": "Boots, twelve pairs, replenishment stock.",
+        "amountCents": 151200,
+        "receiptDigest": "5a4b49406b3584a825dda713f6422019efa9151d1aae506f94b796863ad91a08",
+        "transactionReference": "B-971",
+        "createdAt": "2026-09-21T17:46:00Z"
+      }
+    },
+    {
+      "id": "v2-08-18",
+      "scenario": "The depot manager uploaded the booking receipt and finance entered the emailed duplicate of that receipt. There was one C7 rental period.",
+      "left": {
+        "id": "rv2-158-l",
+        "incident": "fictional-operation-08",
+        "description": "Refrigerated locker rental, unit C7, five days.",
+        "amountCents": 75000,
+        "receiptDigest": "8da632cbd66e9fb27a14dbc40edd41610a65e5a7f5bc227ea1a6e836d3a4be2d",
+        "transactionReference": "C7-806",
+        "createdAt": "2026-10-03T01:34:00Z"
+      },
+      "right": {
+        "id": "rv2-158-r",
+        "incident": "fictional-operation-08",
+        "description": "Five-day chiller locker hire, C7.",
+        "amountCents": 75000,
+        "receiptDigest": "8da632cbd66e9fb27a14dbc40edd41610a65e5a7f5bc227ea1a6e836d3a4be2d",
+        "transactionReference": "C7-806",
+        "createdAt": "2026-10-03T01:30:00Z"
+      }
+    },
+    {
+      "id": "v2-09-17",
+      "scenario": "The first cutting batch failed during transport. The nursery supplied a replacement without charge; both delivery notes list the full value, which was entered as an expense twice.",
+      "left": {
+        "id": "rv2-177-l",
+        "incident": "fictional-operation-09",
+        "description": "Willow cuttings, restoration batch.",
+        "amountCents": 52800,
+        "receiptDigest": "532c57b51d91c25383f242e2078492252a564969fcff10e916a49b9de9c2df36",
+        "transactionReference": "WIL-44",
+        "createdAt": "2026-09-28T09:11:00Z"
+      },
+      "right": {
+        "id": "rv2-177-r",
+        "incident": "fictional-operation-09",
+        "description": "Willow cuttings, restoration batch.",
+        "amountCents": 52800,
+        "receiptDigest": "8430a2319b25a1ed6928e44034b5c4c662cfc3a93fca8e5908769fbe119ce678",
+        "transactionReference": "WIL-44R",
+        "createdAt": "2026-09-28T09:11:00Z"
+      }
+    },
+    {
+      "id": "v2-01-20",
+      "scenario": "The order was fulfilled in two instalments of equal size. The balance collection was a new charge against the original order reference; both records show the order reference.",
+      "left": {
+        "id": "rv2-020-l",
+        "incident": "fictional-operation-01",
+        "description": "Temporary orange line tape for diversion.",
+        "amountCents": 55400,
+        "receiptDigest": "7b31f1d107fc1c289d4ce2e6e61cb08f0b2e02a1d4c10cbc2f49bc42742c66e7",
+        "transactionReference": "DIV-101",
+        "createdAt": "2026-09-24T09:04:00Z"
+      },
+      "right": {
+        "id": "rv2-020-r",
+        "incident": "fictional-operation-01",
+        "description": "Orange diversion tape, remaining order balance.",
+        "amountCents": 55400,
+        "receiptDigest": "75474c662cb04487110fbae48364ad7ae5c9d48ac767d78f94ec4d427cddf35d",
+        "transactionReference": "DIV-101",
+        "createdAt": "2026-09-24T09:00:00Z"
+      }
+    },
+    {
+      "id": "v2-07-09",
+      "scenario": "The mill\u2019s intake ticket and paid invoice describe the same grain batch, weighed once and collected once. Both carry batch M-247.",
+      "left": {
+        "id": "rv2-129-l",
+        "incident": "fictional-operation-07",
+        "description": "Maize milling, 800 kg delivered grain.",
+        "amountCents": 64000,
+        "receiptDigest": "9e4a86cbd02210cd61f8c0ab8764833e240e09f3d3f478ce61ca26c0895b8948",
+        "transactionReference": "M-247",
+        "createdAt": "2026-10-01T01:45:00Z"
+      },
+      "right": {
+        "id": "rv2-129-r",
+        "incident": "fictional-operation-07",
+        "description": "Grinding customer maize, eight 100-kg sacks.",
+        "amountCents": 64000,
+        "receiptDigest": "c39fd18aec344917cb3c69dd980a944172ad696a21a2dd9de13a904584d068bf",
+        "transactionReference": "M-247",
+        "createdAt": "2026-10-01T15:45:00Z"
+      }
+    },
+    {
+      "id": "v2-06-09",
+      "scenario": "Transport and landfill acceptance were separate charges for the same load. The combined broker invoice contains both line amounts and was attached twice.",
+      "left": {
+        "id": "rv2-109-l",
+        "incident": "fictional-operation-06",
+        "description": "Disposal charge, masonry load.",
+        "amountCents": 48000,
+        "receiptDigest": "e95c97a3c771cc38769aebec0069042ff70942df72a329943146760dd4337e75",
+        "transactionReference": "BROKER-12",
+        "createdAt": "2026-09-14T07:31:00Z"
+      },
+      "right": {
+        "id": "rv2-109-r",
+        "incident": "fictional-operation-06",
+        "description": "Truck transport, masonry load.",
+        "amountCents": 66000,
+        "receiptDigest": "e95c97a3c771cc38769aebec0069042ff70942df72a329943146760dd4337e75",
+        "transactionReference": "BROKER-12",
+        "createdAt": "2026-09-14T08:08:00Z"
+      }
+    },
+    {
+      "id": "v2-04-15",
+      "scenario": "The paper log shows 900 pages on one day and another 900 two days later. The app has neither service dates nor receipt numbers, and both jobs were entered at week end.",
+      "left": {
+        "id": "rv2-075-l",
+        "incident": "fictional-operation-04",
+        "description": "Copying of intake forms, 900 pages.",
+        "amountCents": 8100,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-12T01:37:00Z"
+      },
+      "right": {
+        "id": "rv2-075-r",
+        "incident": "fictional-operation-04",
+        "description": "Copying of intake forms, 900 pages.",
+        "amountCents": 8100,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-12T01:37:00Z"
+      }
+    },
+    {
+      "id": "v2-01-17",
+      "scenario": "One purchase was for the station island and one for the market island. The work diaries establish this, but neither location was copied into the app.",
+      "left": {
+        "id": "rv2-017-l",
+        "incident": "fictional-operation-01",
+        "description": "Traffic-island kerb paint, eight litres.",
+        "amountCents": 7600,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-10T18:30:00Z"
+      },
+      "right": {
+        "id": "rv2-017-r",
+        "incident": "fictional-operation-01",
+        "description": "Traffic-island kerb paint, eight litres.",
+        "amountCents": 7600,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-08T18:30:00Z"
+      }
+    },
+    {
+      "id": "v2-08-12",
+      "scenario": "The estimate assumed five nights; one night was removed before the booking was confirmed. The warehouse used a single room and made one payment.",
+      "left": {
+        "id": "rv2-152-l",
+        "incident": "fictional-operation-08",
+        "description": "Temporary cold room booking estimate.",
+        "amountCents": 175000,
+        "receiptDigest": "69423d836fbc4161422795957701107c06a4fb1fdf025290252284f248f97bc1",
+        "transactionReference": "ROOM-88",
+        "createdAt": "2026-09-13T23:14:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-152-r",
+        "incident": "fictional-operation-08",
+        "description": "Chiller room hire, four nights.",
+        "amountCents": 140000,
+        "receiptDigest": "af85634e77620b51b97b1a4140fcc5e23046310ba0dcd6cf02c97309d33cb379",
+        "transactionReference": "ROOM-88",
+        "createdAt": "2026-09-14T13:14:00Z",
+        "amountKind": "exact"
+      }
+    },
+    {
+      "id": "v2-02-12",
+      "scenario": "The hire agreement requires a refundable deposit and a separate rental charge of the same amount. Both were collected on the agreement date and use its number.",
+      "left": {
+        "id": "rv2-032-l",
+        "incident": "fictional-operation-02",
+        "description": "Total station hire balance.",
+        "amountCents": 100000,
+        "receiptDigest": "dac0062efba275bd59825469e79c6191ad04970b67d16bc7edec5966a84a73f8",
+        "transactionReference": "AGR-380",
+        "createdAt": "2026-09-07T21:29:00Z"
+      },
+      "right": {
+        "id": "rv2-032-r",
+        "incident": "fictional-operation-02",
+        "description": "Total station hire deposit.",
+        "amountCents": 100000,
+        "receiptDigest": "dac0062efba275bd59825469e79c6191ad04970b67d16bc7edec5966a84a73f8",
+        "transactionReference": "AGR-380",
+        "createdAt": "2026-09-07T07:29:00Z"
+      }
+    },
+    {
+      "id": "v2-04-20",
+      "scenario": "The print shop charged copying and binding as separate lines. These records refer to the copying charge and the binding charge, though the left description does not specify its line.",
+      "left": {
+        "id": "rv2-080-l",
+        "incident": "fictional-operation-04",
+        "description": "Bound engineering report, six copies.",
+        "amountCents": 16800,
+        "receiptDigest": "9ca0edc52c6fc840c3fd72d0b6b831fe672e5a954276efff986018caae929502",
+        "transactionReference": "ENG-118",
+        "createdAt": "2026-09-26T11:51:00Z"
+      },
+      "right": {
+        "id": "rv2-080-r",
+        "incident": "fictional-operation-04",
+        "description": "Engineering report spiral binding, six sets.",
+        "amountCents": 5400,
+        "receiptDigest": "9ca0edc52c6fc840c3fd72d0b6b831fe672e5a954276efff986018caae929502",
+        "transactionReference": "ENG-118",
+        "createdAt": "2026-09-26T11:47:00Z"
+      }
+    },
+    {
+      "id": "v2-07-06",
+      "scenario": "Husk disposal and bran bagging were separately ordered services. A carbon sheet includes both, but each record represents a different line and different amount.",
+      "left": {
+        "id": "rv2-126-l",
+        "incident": "fictional-operation-07",
+        "description": "Husk disposal after rice processing.",
+        "amountCents": 12400,
+        "receiptDigest": "dda2de02974a7ffce0f89237d8da28c98d05d6f2f332bbac3d4a9946c5aa6b09",
+        "transactionReference": "BYPROD-11",
+        "createdAt": "2026-09-25T04:00:00Z"
+      },
+      "right": {
+        "id": "rv2-126-r",
+        "incident": "fictional-operation-07",
+        "description": "Rice bran bagging after milling.",
+        "amountCents": 18600,
+        "receiptDigest": "dda2de02974a7ffce0f89237d8da28c98d05d6f2f332bbac3d4a9946c5aa6b09",
+        "transactionReference": "BYPROD-11",
+        "createdAt": "2026-09-25T04:00:00Z"
+      }
+    },
+    {
+      "id": "v2-08-17",
+      "scenario": "Two laboratories used the same commercial room but rented separate allocated shelves. Their expense locations name the receiving laboratories, and one combined statement was attached.",
+      "left": {
+        "id": "rv2-157-l",
+        "incident": "fictional-operation-08",
+        "description": "Frozen storage for sample boxes.",
+        "amountCents": 38400,
+        "receiptDigest": "8f9b770715c14f79d5eb816bcac51a69487624e7f5244671bccd83aaafdda154",
+        "transactionReference": "LAB-STMT-8",
+        "createdAt": "2026-09-27T10:53:00Z",
+        "location": "Juniper testing laboratory"
+      },
+      "right": {
+        "id": "rv2-157-r",
+        "incident": "fictional-operation-08",
+        "description": "Frozen storage for sample boxes.",
+        "amountCents": 38400,
+        "receiptDigest": "8f9b770715c14f79d5eb816bcac51a69487624e7f5244671bccd83aaafdda154",
+        "transactionReference": "LAB-STMT-8",
+        "createdAt": "2026-09-27T10:57:00Z",
+        "location": "Beacon testing laboratory"
+      }
+    },
+    {
+      "id": "v2-03-09",
+      "scenario": "The gate teams each received twenty pairs from two separately paid deliveries. The deliveries used a shared requisition number.",
+      "left": {
+        "id": "rv2-049-l",
+        "incident": "fictional-operation-03",
+        "description": "Rubber overshoes, twenty pairs, north gate.",
+        "amountCents": 44000,
+        "receiptDigest": "a37a71900a3f9a7792cbc6f17f1d83d50ec1acea242ae5cc3a15005c9953c228",
+        "transactionReference": "REQ-209",
+        "createdAt": "2026-09-24T20:47:00Z",
+        "location": "North gate"
+      },
+      "right": {
+        "id": "rv2-049-r",
+        "incident": "fictional-operation-03",
+        "description": "Twenty rubber safety overshoes for south gate.",
+        "amountCents": 44000,
+        "receiptDigest": "bf7d7abb95885f5066fc76a8789ce430e8a51cfa39f108a1979061b100be8789",
+        "transactionReference": "REQ-209",
+        "createdAt": "2026-09-24T20:43:00Z",
+        "location": "South gate"
+      }
+    },
+    {
+      "id": "v2-08-07",
+      "scenario": "Two separately invoiced 12-pallet consignments occupied different aisles simultaneously. The app descriptions omit consignment identity.",
+      "left": {
+        "id": "rv2-147-l",
+        "incident": "fictional-operation-08",
+        "description": "Chilled pallet space, 12 pallets.",
+        "amountCents": 86400,
+        "receiptDigest": "d4d161c4645a2ee9e6e55866948c96420973840bc4f917c8b6f19a23078b7f9a",
+        "transactionReference": "CH-201",
+        "createdAt": "2026-09-29T17:07:00Z"
+      },
+      "right": {
+        "id": "rv2-147-r",
+        "incident": "fictional-operation-08",
+        "description": "Chilled pallet space, 12 pallets.",
+        "amountCents": 86400,
+        "receiptDigest": "cb57c822e1499846c1a928238c580fc436596c0cc669dcc8ff0c78487d943904",
+        "transactionReference": "CH-202",
+        "createdAt": "2026-09-22T17:07:00Z"
+      }
+    },
+    {
+      "id": "v2-01-15",
+      "scenario": "The descriptions concern different tools. They appear on adjacent lines of the same hardware invoice, each with its own amount.",
+      "left": {
+        "id": "rv2-015-l",
+        "incident": "fictional-operation-01",
+        "description": "Road marking layout chalk and cord bundle.",
+        "amountCents": 4200,
+        "receiptDigest": "adb2413865841e7ede6e05f8ece48ccaf2429671f9b4201a411e49be13152017",
+        "transactionReference": "HW-200",
+        "createdAt": "2026-10-05T22:49:00Z"
+      },
+      "right": {
+        "id": "rv2-015-r",
+        "incident": "fictional-operation-01",
+        "description": "Reflective bead dispenser funnel.",
+        "amountCents": 8900,
+        "receiptDigest": "adb2413865841e7ede6e05f8ece48ccaf2429671f9b4201a411e49be13152017",
+        "transactionReference": "HW-200",
+        "createdAt": "2026-10-07T22:49:00Z"
+      }
+    },
+    {
+      "id": "v2-09-06",
+      "scenario": "The trainers and guards are separate nursery accessories bought on different days. A reused photograph accidentally attached the trainers receipt to the guards entry.",
+      "left": {
+        "id": "rv2-166-l",
+        "incident": "fictional-operation-09",
+        "description": "Root trainers, 400 cells.",
+        "amountCents": 19800,
+        "receiptDigest": "fa8edcd6fd4fe68b799850eb7433f7d47a660cb5238062fc4bf8f26575e62efd",
+        "transactionReference": "RT-99",
+        "createdAt": "2026-09-02T18:23:00Z"
+      },
+      "right": {
+        "id": "rv2-166-r",
+        "incident": "fictional-operation-09",
+        "description": "Tree guards, pack 100.",
+        "amountCents": 36000,
+        "receiptDigest": "fa8edcd6fd4fe68b799850eb7433f7d47a660cb5238062fc4bf8f26575e62efd",
+        "transactionReference": "GUARD-108",
+        "createdAt": "2026-09-02T18:23:00Z"
+      }
+    },
+    {
+      "id": "v2-06-12",
+      "scenario": "The final load receipt was entered once from a phone image and once from the contractor\u2019s monthly statement. The statement line quotes the load ticket printed on the receipt.",
+      "left": {
+        "id": "rv2-112-l",
+        "incident": "fictional-operation-06",
+        "description": "Demolition cleanup, final truck.",
+        "amountCents": 110400,
+        "receiptDigest": "0516857f8b1707ae8ea5bff8ede2e0ebf91d96920023ad2d1b03b65d1d398a3c",
+        "transactionReference": "LOAD-790",
+        "createdAt": "2026-09-27T07:13:00Z"
+      },
+      "right": {
+        "id": "rv2-112-r",
+        "incident": "fictional-operation-06",
+        "description": "Last truck of demolition rubble.",
+        "amountCents": 110400,
+        "receiptDigest": "c5bcf5857ab0db712eae17ed65d77ad65fa52fb9e493849b8de01d4205669652",
+        "transactionReference": "LOAD-790",
+        "createdAt": "2026-09-27T07:50:00Z"
+      }
+    },
+    {
+      "id": "v2-06-11",
+      "scenario": "The site manager and driver each submitted the same skip exchange docket. The gate book records one loaded skip leaving at 10:45.",
+      "left": {
+        "id": "rv2-111-l",
+        "incident": "fictional-operation-06",
+        "description": "Mixed rubble removal, one 8-yard skip.",
+        "amountCents": 119000,
+        "receiptDigest": "9ccd34c51355b3b3e8f4fcec6b9ec70f48d2ab6c58d2435e6d7fc9b0c7cdd531",
+        "transactionReference": "SK-602",
+        "createdAt": "2026-09-24T05:05:00Z"
+      },
+      "right": {
+        "id": "rv2-111-r",
+        "incident": "fictional-operation-06",
+        "description": "Eight-yard rubble skip exchange and disposal.",
+        "amountCents": 119000,
+        "receiptDigest": "9ccd34c51355b3b3e8f4fcec6b9ec70f48d2ab6c58d2435e6d7fc9b0c7cdd531",
+        "transactionReference": "SK-602",
+        "createdAt": "2026-09-17T05:05:00Z"
+      }
+    },
+    {
+      "id": "v2-05-17",
+      "scenario": "The specialist and ordinary loads were collected on the same route. Their service dockets and amounts differ; the depot submitted them under one incident.",
+      "left": {
+        "id": "rv2-097-l",
+        "incident": "fictional-operation-05",
+        "description": "Wash of contaminated overalls, specialist cycle.",
+        "amountCents": 64800,
+        "receiptDigest": "382bf3718c31ecfd9352906bea95a73224508b13e6479bdab3522d44e4f45670",
+        "transactionReference": "SP-51",
+        "createdAt": "2026-09-28T00:14:00Z"
+      },
+      "right": {
+        "id": "rv2-097-r",
+        "incident": "fictional-operation-05",
+        "description": "Standard workwear laundering, same depot.",
+        "amountCents": 21600,
+        "receiptDigest": "e4e9bbe812ea8ca3b651572101fadcaf53fd6a77b6f3cb92be0b52fe9cd25c5b",
+        "transactionReference": "STD-51",
+        "createdAt": "2026-09-28T00:18:00Z"
+      }
+    },
+    {
+      "id": "v2-11-19",
+      "scenario": "The two monthly access fees were separately charged. The account reference is reused and the provider\u2019s invoice layout is unchanged between months.",
+      "left": {
+        "id": "rv2-219-l",
+        "incident": "fictional-operation-11",
+        "description": "Telephone interpretation subscription, July.",
+        "amountCents": 65000,
+        "receiptDigest": "676f088df1a12fce2271f1224f52adbf6bf1d08d5286161bfa2b7f1177b33b45",
+        "transactionReference": "TEL-ACCT-19",
+        "createdAt": "2026-09-28T04:25:00Z",
+        "expenseAt": "2026-07-01T00:00:00Z"
+      },
+      "right": {
+        "id": "rv2-219-r",
+        "incident": "fictional-operation-11",
+        "description": "Telephone interpretation subscription, August.",
+        "amountCents": 65000,
+        "receiptDigest": "dce4b1aeac1513db94786df6b0c70a844f1c821ab2371aaac9b2c6525bd2a829",
+        "transactionReference": "TEL-ACCT-19",
+        "createdAt": "2026-09-28T02:50:00Z",
+        "expenseAt": "2026-08-01T00:00:00Z"
+      }
+    },
+    {
+      "id": "v2-07-13",
+      "scenario": "Each depot ordered its own processing run, invoiced separately at the agreed rate. The mill\u2019s monthly summary was uploaded to both records.",
+      "left": {
+        "id": "rv2-133-l",
+        "incident": "fictional-operation-07",
+        "description": "Oat rolling, 900 kg, north depot.",
+        "amountCents": 99000,
+        "receiptDigest": "f009b86c746ee1d19922b949d527ac13f7f7dfa4c9ca1bec3baf0026f6ce72c3",
+        "transactionReference": "OAT-N-12",
+        "createdAt": "2026-09-28T12:58:00Z",
+        "location": "North grain depot"
+      },
+      "right": {
+        "id": "rv2-133-r",
+        "incident": "fictional-operation-07",
+        "description": "Oat rolling, 900 kg, river depot.",
+        "amountCents": 99000,
+        "receiptDigest": "f009b86c746ee1d19922b949d527ac13f7f7dfa4c9ca1bec3baf0026f6ce72c3",
+        "transactionReference": "OAT-R-12",
+        "createdAt": "2026-09-28T13:35:00Z",
+        "location": "River grain depot"
+      }
+    },
+    {
+      "id": "v2-11-08",
+      "scenario": "Two calls were billed as distinct minimum-duration sessions during one case review. A consolidated receipt covers both calls and the records each claim one line amount.",
+      "left": {
+        "id": "rv2-208-l",
+        "incident": "fictional-operation-11",
+        "description": "Telephone language support, case review.",
+        "amountCents": 14500,
+        "receiptDigest": "9fa7a5a62036ddd2e894c103c93f20075f7b9ebbe78d51b8ce5866d7cb8fa208",
+        "transactionReference": "CALL-DAY-42",
+        "createdAt": "2026-09-06T18:42:00Z"
+      },
+      "right": {
+        "id": "rv2-208-r",
+        "incident": "fictional-operation-11",
+        "description": "Telephone language support, case review.",
+        "amountCents": 14500,
+        "receiptDigest": "9fa7a5a62036ddd2e894c103c93f20075f7b9ebbe78d51b8ce5866d7cb8fa208",
+        "transactionReference": "CALL-DAY-42",
+        "createdAt": "2026-09-06T18:42:00Z"
+      }
+    },
+    {
+      "id": "v2-03-02",
+      "scenario": "The cobbler processed three pairs in June and another three in July. The app was updated late, so both records were created in August; service dates are retained.",
+      "left": {
+        "id": "rv2-042-l",
+        "incident": "fictional-operation-03",
+        "description": "Boot resoling service, three pairs.",
+        "amountCents": 18900,
+        "receiptDigest": "f1f7045b8d80e9481323ac8402b75d402c58402412659579cafa42cdddfcf6a8",
+        "transactionReference": "RESOLE",
+        "createdAt": "2026-09-14T04:15:00Z",
+        "expenseAt": "2026-06-19T12:00:00Z"
+      },
+      "right": {
+        "id": "rv2-042-r",
+        "incident": "fictional-operation-03",
+        "description": "Boot resoling service, three pairs.",
+        "amountCents": 18900,
+        "receiptDigest": "9911fdcbc49d06d974439182643625cc5776cd01151a5d7ba6dcdd16bb8d69e1",
+        "transactionReference": "RESOLE",
+        "createdAt": "2026-09-13T14:15:00Z",
+        "expenseAt": "2026-07-24T12:00:00Z"
+      }
+    },
+    {
+      "id": "v2-11-04",
+      "scenario": "The pending entry lacks an amount and session date. The reimbursement may settle it, but two sessions were provisionally booked and neither booking had a reference.",
+      "left": {
+        "id": "rv2-204-l",
+        "incident": "fictional-operation-11",
+        "description": "Interpreting charge pending timesheet.",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-01T00:16:00Z",
+        "amountKind": "unknown"
+      },
+      "right": {
+        "id": "rv2-204-r",
+        "incident": "fictional-operation-11",
+        "description": "Language access session reimbursement.",
+        "amountCents": 31500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-08T00:16:00Z",
+        "amountKind": "exact"
+      }
+    },
+    {
+      "id": "v2-12-01",
+      "scenario": "The two capacities were purchased for separate workstations. They cost different amounts and appear as separate lines on one consolidated receipt.",
+      "left": {
+        "id": "rv2-221-l",
+        "incident": "fictional-operation-12",
+        "description": "Measuring jugs, dozen one-litre.",
+        "amountCents": 9600,
+        "receiptDigest": "7a1a47b27e98d0c5213176832677ddc5b13beb5fa19a1a0525e9ffaac5cf4de9",
+        "transactionReference": "JUG-51",
+        "createdAt": "2026-09-12T21:31:00Z"
+      },
+      "right": {
+        "id": "rv2-221-r",
+        "incident": "fictional-operation-12",
+        "description": "Measuring jugs, dozen two-litre.",
+        "amountCents": 14400,
+        "receiptDigest": "7a1a47b27e98d0c5213176832677ddc5b13beb5fa19a1a0525e9ffaac5cf4de9",
+        "transactionReference": "JUG-51",
+        "createdAt": "2026-09-05T21:31:00Z"
+      }
+    },
+    {
+      "id": "v2-08-20",
+      "scenario": "A power outage triggered a service credit, reducing the one chamber bill. The revised bill and original bill were both submitted, without a refund entry.",
+      "left": {
+        "id": "rv2-160-l",
+        "incident": "fictional-operation-08",
+        "description": "Chamber rental adjustment after outage.",
+        "amountCents": 93600,
+        "receiptDigest": "0b377a7d1a782f713c322b788a32cebed7ca82c89ad09291a6ebd63b4331219a",
+        "transactionReference": "OUT-37R",
+        "createdAt": "2026-09-27T03:07:00Z"
+      },
+      "right": {
+        "id": "rv2-160-r",
+        "incident": "fictional-operation-08",
+        "description": "Temperature-controlled chamber hire.",
+        "amountCents": 117000,
+        "receiptDigest": "a12b7fbc21bf21247c4734d54affa4499fcbd6b623b3fb67eb69e020c33b094a",
+        "transactionReference": "OUT-37",
+        "createdAt": "2026-09-26T13:07:00Z"
+      }
+    },
+    {
+      "id": "v2-07-08",
+      "scenario": "One charge was entered from a weigh slip and again from the milling receipt. The processing clerk confirms the words beans and pulses refer to the same consignment.",
+      "left": {
+        "id": "rv2-128-l",
+        "incident": "fictional-operation-07",
+        "description": "Bean splitting, two tonnes.",
+        "amountCents": 224000,
+        "receiptDigest": "174759f34f6acb8b775df6702ca8a266d4eed64c0bcbf18cc78605d7af502233",
+        "transactionReference": "PULSE-40",
+        "createdAt": "2026-09-30T09:21:00Z"
+      },
+      "right": {
+        "id": "rv2-128-r",
+        "incident": "fictional-operation-07",
+        "description": "Pulses split and polished, 2,000 kg.",
+        "amountCents": 224000,
+        "receiptDigest": "f8843b3422ac0ca6d6b441e60cecc50428a2fc5043b2b0f90e47d6dc9601b3b0",
+        "transactionReference": "PULSE-40",
+        "createdAt": "2026-09-30T07:46:00Z"
+      }
+    },
+    {
+      "id": "v2-11-07",
+      "scenario": "Each desk had its own interpreter for the same afternoon. The agency used one programme reference, but the desk locations remain in the app.",
+      "left": {
+        "id": "rv2-207-l",
+        "incident": "fictional-operation-11",
+        "description": "Language support, clinic reception desk.",
+        "amountCents": 42000,
+        "receiptDigest": "5e5432726ad67fec388f15d4eac21f301b4b386aae8094984993faee4fafc703",
+        "transactionReference": "PROGRAM-66",
+        "createdAt": "2026-10-06T06:30:00Z",
+        "location": "Clinic reception desk"
+      },
+      "right": {
+        "id": "rv2-207-r",
+        "incident": "fictional-operation-11",
+        "description": "Language support, legal advice desk.",
+        "amountCents": 42000,
+        "receiptDigest": "34c4549dfa64825d38e4d65b9003a85d88f7e5ab82c5f071bab7babdc9e0cd98",
+        "transactionReference": "PROGRAM-66",
+        "createdAt": "2026-10-04T06:30:00Z",
+        "location": "Legal advice desk"
+      }
+    },
+    {
+      "id": "v2-06-10",
+      "scenario": "The driver\u2019s cash receipt was entered first. An office record from the card terminal report appears later, but the driver says cash was returned when the card payment succeeded.",
+      "left": {
+        "id": "rv2-110-l",
+        "incident": "fictional-operation-06",
+        "description": "Timber offcuts removed from workshop.",
+        "amountCents": 26300,
+        "receiptDigest": "60c886b0391f66905857d83f515bbaa7f763221b119d34a45dfaa3c5ab2dd83e",
+        "transactionReference": "TIP-58",
+        "createdAt": "2026-09-16T06:16:00Z"
+      },
+      "right": {
+        "id": "rv2-110-r",
+        "incident": "fictional-operation-06",
+        "description": "Workshop wood waste tip run.",
+        "amountCents": 26300,
+        "receiptDigest": "73716161bb96e06bea6572af007c84bda7ac649649bfcbcad7357d5dc5ce1804",
+        "transactionReference": "TERM-720",
+        "createdAt": "2026-09-14T06:16:00Z"
+      }
+    },
+    {
+      "id": "v2-09-18",
+      "scenario": "The nursery remembers two visits but only one payment, while the driver recalls paying at both visits. The handwritten slips carry no quantities, dates or serials.",
+      "left": {
+        "id": "rv2-178-l",
+        "incident": "fictional-operation-09",
+        "description": "Mixed native seedlings, pickup.",
+        "amountCents": 35000,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-13T11:34:00Z"
+      },
+      "right": {
+        "id": "rv2-178-r",
+        "incident": "fictional-operation-09",
+        "description": "Mixed native seedlings, pickup.",
+        "amountCents": 35000,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-13T12:11:00Z"
+      }
+    },
+    {
+      "id": "v2-01-06",
+      "scenario": "Ten rolls were delivered on Tuesday and ten more on Thursday under separate dispatch notes. A clerk copied Tuesday\u2019s ticket number onto Thursday\u2019s entry.",
+      "left": {
+        "id": "rv2-006-l",
+        "incident": "fictional-operation-01",
+        "description": "Pedestrian crossing tape, 10 rolls.",
+        "amountCents": 46100,
+        "receiptDigest": "2e43718d411a3f6ff11ed82e3d59319b8dafebbb86216a715914045410d21ad8",
+        "transactionReference": "CT-511",
+        "createdAt": "2026-09-21T21:32:00Z"
+      },
+      "right": {
+        "id": "rv2-006-r",
+        "incident": "fictional-operation-01",
+        "description": "Crossing tape refill, ten rolls.",
+        "amountCents": 46100,
+        "receiptDigest": "0452fb1c7b6f5819096d17e297aa6801ce4edd473a18b47ea97948463d07639c",
+        "transactionReference": "CT-511",
+        "createdAt": "2026-09-28T21:32:00Z"
+      }
+    },
+    {
+      "id": "v2-05-18",
+      "scenario": "The laundry collected separate loads from the two halls and charged each load equally. Its driver combined both service lines on one day sheet.",
+      "left": {
+        "id": "rv2-098-l",
+        "incident": "fictional-operation-05",
+        "description": "Blanket cleaning, reception hall.",
+        "amountCents": 49200,
+        "receiptDigest": "3cd11445381e518eebbaeb98b3c1273655288a8f32f1884bd92bb161a9096c74",
+        "transactionReference": "DAY-18",
+        "createdAt": "2026-09-20T10:49:00Z",
+        "location": "Reception hall"
+      },
+      "right": {
+        "id": "rv2-098-r",
+        "incident": "fictional-operation-05",
+        "description": "Blanket cleaning, sports hall.",
+        "amountCents": 49200,
+        "receiptDigest": "3cd11445381e518eebbaeb98b3c1273655288a8f32f1884bd92bb161a9096c74",
+        "transactionReference": "DAY-18",
+        "createdAt": "2026-09-27T10:49:00Z",
+        "location": "Sports hall"
+      }
+    },
+    {
+      "id": "v2-08-15",
+      "scenario": "Separate depots each paid for a locker. The booking agency put both reservations on one confirmation document, attached to both entries.",
+      "left": {
+        "id": "rv2-155-l",
+        "incident": "fictional-operation-08",
+        "description": "Frozen produce locker, depot east.",
+        "amountCents": 62000,
+        "receiptDigest": "e0a69abd9b3db000017868618075e0cb38f5ae515ab82ddca65e9c725938ba73",
+        "transactionReference": "MULTI-55",
+        "createdAt": "2026-09-24T12:06:00Z",
+        "location": "East produce depot"
+      },
+      "right": {
+        "id": "rv2-155-r",
+        "incident": "fictional-operation-08",
+        "description": "Frozen produce locker, depot west.",
+        "amountCents": 62000,
+        "receiptDigest": "e0a69abd9b3db000017868618075e0cb38f5ae515ab82ddca65e9c725938ba73",
+        "transactionReference": "MULTI-55",
+        "createdAt": "2026-09-26T12:06:00Z",
+        "location": "West produce depot"
+      }
+    },
+    {
+      "id": "v2-09-09",
+      "scenario": "Two height grades were ordered as separate lines on one nursery bill. The bill was attached in full to both entries.",
+      "left": {
+        "id": "rv2-169-l",
+        "incident": "fictional-operation-09",
+        "description": "Oak whips, 60 cm, pack 50.",
+        "amountCents": 38750,
+        "receiptDigest": "0bfdffda88cb8f27f8e4812572fc88da13d64381f8945fcf61a93e71f753c817",
+        "transactionReference": "OAK-381",
+        "createdAt": "2026-09-07T20:32:00Z"
+      },
+      "right": {
+        "id": "rv2-169-r",
+        "incident": "fictional-operation-09",
+        "description": "Oak whips, 90 cm, pack 50.",
+        "amountCents": 46250,
+        "receiptDigest": "0bfdffda88cb8f27f8e4812572fc88da13d64381f8945fcf61a93e71f753c817",
+        "transactionReference": "OAK-381",
+        "createdAt": "2026-09-08T10:32:00Z"
+      }
+    },
+    {
+      "id": "v2-07-07",
+      "scenario": "The store sends a fixed-size batch every fortnight. These entries refer to consecutive batches; the mill reuses the account code as the reference.",
+      "left": {
+        "id": "rv2-127-l",
+        "incident": "fictional-operation-07",
+        "description": "Grinding charge, community grain store.",
+        "amountCents": 51600,
+        "receiptDigest": "afbb52a328066b52a01c66b29318350d3ae11dc51062a1d4dd9c89bb278a5551",
+        "transactionReference": "STORE-17",
+        "createdAt": "2026-09-29T00:48:00Z",
+        "expenseAt": "2026-07-03T15:00:00Z"
+      },
+      "right": {
+        "id": "rv2-127-r",
+        "incident": "fictional-operation-07",
+        "description": "Grinding charge, community grain store.",
+        "amountCents": 51600,
+        "receiptDigest": "1e618c632ccbc960baf2ea76f72b6df39e434cce3a34327bb9495204d65a3996",
+        "transactionReference": "STORE-17",
+        "createdAt": "2026-09-29T00:52:00Z",
+        "expenseAt": "2026-07-17T15:00:00Z"
+      }
+    },
+    {
+      "id": "v2-12-18",
+      "scenario": "The pot-lid and complete-pot purchases were made separately. The buyer mistakenly attached the pot-lid receipt to the complete-pot entry, while their payment references differ.",
+      "left": {
+        "id": "rv2-238-l",
+        "incident": "fictional-operation-12",
+        "description": "Replacement pot lids, six assorted.",
+        "amountCents": 17400,
+        "receiptDigest": "ec11adc51c8674241a60d87a8eb5c3e317832421a9d4ca3485697f760c081bf9",
+        "transactionReference": "LID-32",
+        "createdAt": "2026-09-02T03:07:00Z"
+      },
+      "right": {
+        "id": "rv2-238-r",
+        "incident": "fictional-operation-12",
+        "description": "Replacement pots, six assorted.",
+        "amountCents": 108000,
+        "receiptDigest": "ec11adc51c8674241a60d87a8eb5c3e317832421a9d4ca3485697f760c081bf9",
+        "transactionReference": "POT-91",
+        "createdAt": "2026-09-02T02:30:00Z"
+      }
+    },
+    {
+      "id": "v2-07-11",
+      "scenario": "The roasting job and crushing job were separate batches for different end uses. Similar weights made their charges equal; neither has a receipt in the app.",
+      "left": {
+        "id": "rv2-131-l",
+        "incident": "fictional-operation-07",
+        "description": "Grain roasting, breakfast flour mix.",
+        "amountCents": 30400,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-24T14:15:00Z"
+      },
+      "right": {
+        "id": "rv2-131-r",
+        "incident": "fictional-operation-07",
+        "description": "Grain crushing, animal feed mix.",
+        "amountCents": 30400,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-25T04:15:00Z"
+      }
+    },
+    {
+      "id": "v2-02-07",
+      "scenario": "A clerk scanned the receipt before it was stamped paid. The later scan shows the paid stamp; both refer to the pack collected at 14:20 on docket NB-51.",
+      "left": {
+        "id": "rv2-027-l",
+        "incident": "fictional-operation-02",
+        "description": "Surveyor field notebook pack, waterproof.",
+        "amountCents": 6800,
+        "receiptDigest": "c12f6d77ee14bcb6a7f5488af2d47a04960a9f3c71b36da15935ac6ad7d285e1",
+        "transactionReference": "NB-51",
+        "createdAt": "2026-09-17T07:53:00Z"
+      },
+      "right": {
+        "id": "rv2-027-r",
+        "incident": "fictional-operation-02",
+        "description": "Waterproof field notebook pack for chainage crew.",
+        "amountCents": 6800,
+        "receiptDigest": "108156ea6440a947786a4d79580d12ae4bd23471de1e324fd002e9554d2fb056",
+        "transactionReference": "NB-51",
+        "createdAt": "2026-09-24T07:53:00Z"
+      }
+    },
+    {
+      "id": "v2-02-14",
+      "scenario": "Each monthly licence activates a new period. The supplier reuses the subscription number as the transaction reference, while the invoice files differ.",
+      "left": {
+        "id": "rv2-034-l",
+        "incident": "fictional-operation-02",
+        "description": "Survey software field licence, July.",
+        "amountCents": 15300,
+        "receiptDigest": "288c426c135a75e15c1b171e0a823d95a2d19aeda22bdd7c582c6a7ef87c0fec",
+        "transactionReference": "SUB-144",
+        "createdAt": "2026-09-21T08:31:00Z"
+      },
+      "right": {
+        "id": "rv2-034-r",
+        "incident": "fictional-operation-02",
+        "description": "Survey software field licence, August.",
+        "amountCents": 15300,
+        "receiptDigest": "9e3bf3f55d89da2db0227fbc5e7b83117c5986072c46edc2860ed4dd4039fc12",
+        "transactionReference": "SUB-144",
+        "createdAt": "2026-09-21T08:35:00Z"
+      }
+    },
+    {
+      "id": "v2-11-15",
+      "scenario": "The booking estimate assumed eight hours, but the workshop ended early. One interpreter invoice replaced the estimate and carried the same booking number.",
+      "left": {
+        "id": "rv2-215-l",
+        "incident": "fictional-operation-11",
+        "description": "Interpretation estimate, full-day workshop.",
+        "amountCents": 128000,
+        "receiptDigest": "4dda52153b175d34e37d753a8d2cc52f904bb518f2e56a22e8fff47ba0dabffa",
+        "transactionReference": "WS-703",
+        "createdAt": "2026-09-02T03:28:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-215-r",
+        "incident": "fictional-operation-11",
+        "description": "Workshop interpretation, six billable hours.",
+        "amountCents": 96000,
+        "receiptDigest": "07acf6b5ead9bb4714aa0ce4d6e610291db78b132252ab71c7836bdf3cd959b4",
+        "transactionReference": "WS-703",
+        "createdAt": "2026-09-02T05:03:00Z",
+        "amountKind": "exact"
+      }
+    },
+    {
+      "id": "v2-01-18",
+      "scenario": "One stencil kit was purchased. Its order acknowledgement and final invoice use different descriptions; the acknowledgement total excluded the delivery charge later added.",
+      "left": {
+        "id": "rv2-018-l",
+        "incident": "fictional-operation-01",
+        "description": "Stencil set: slow, school, arrows.",
+        "amountCents": 58900,
+        "receiptDigest": "fc9945442237a3cbe4d10615802c79203cfa79db115e4917eff85baf5cd883cc",
+        "transactionReference": "ST-204",
+        "createdAt": "2026-09-16T00:53:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-018-r",
+        "incident": "fictional-operation-01",
+        "description": "Reusable school-zone lettering and directional stencil kit.",
+        "amountCents": 61400,
+        "receiptDigest": "9c32bcc21585a60b1a8fe7f12c76446e6916b1076550f1880ca41335f57066f9",
+        "transactionReference": "ST-204",
+        "createdAt": "2026-09-14T00:53:00Z",
+        "amountKind": "exact"
+      }
+    },
+    {
+      "id": "v2-10-17",
+      "scenario": "A cracked batch was exchanged without a new payment. The original invoice and the exchange docket were both entered at the merchandise value.",
+      "left": {
+        "id": "rv2-197-l",
+        "incident": "fictional-operation-10",
+        "description": "Replacement crowbars, three.",
+        "amountCents": 18300,
+        "receiptDigest": "d215def332d4e96a34330b7d93c886ae6b8cb3526b33aa6cdb6bd1e0e5e55a34",
+        "transactionReference": "BAR-15",
+        "createdAt": "2026-09-26T12:58:00Z"
+      },
+      "right": {
+        "id": "rv2-197-r",
+        "incident": "fictional-operation-10",
+        "description": "Replacement crowbars, three.",
+        "amountCents": 18300,
+        "receiptDigest": "05e413b50eab4ba5b5e7ec0eaf3127b0c96c63898f209e77298081eed7745627",
+        "transactionReference": "EX-BAR-15",
+        "createdAt": "2026-09-26T12:58:00Z"
+      }
+    },
+    {
+      "id": "v2-04-04",
+      "scenario": "The designer\u2019s note and printer\u2019s note describe one batch of 300 cards. The designer\u2019s estimate excludes trimming, which appears in the paid amount.",
+      "left": {
+        "id": "rv2-064-l",
+        "incident": "fictional-operation-04",
+        "description": "Interpreter prompt cards, pocket size.",
+        "amountCents": 23700,
+        "receiptDigest": "658ae9d28de646e5e2b46350565e2c2ec17e5f8bc5959b28ce3fe8312771fc99",
+        "transactionReference": "PC-63",
+        "createdAt": "2026-09-18T14:58:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-064-r",
+        "incident": "fictional-operation-04",
+        "description": "Pocket communication cards, multilingual.",
+        "amountCents": 25200,
+        "receiptDigest": "2aabba8c73220a09e9955260e7ca7364747bf45528582ec791201cf439cab2f8",
+        "transactionReference": "PC-63",
+        "createdAt": "2026-09-18T14:58:00Z",
+        "amountKind": "exact"
+      }
+    },
+    {
+      "id": "v2-11-20",
+      "scenario": "The agency accepted one payment but issued a new receipt when the terminal\u2019s first print was unreadable. Both entries quote the payment ID, and the workshop had one contracted language service.",
+      "left": {
+        "id": "rv2-220-l",
+        "incident": "fictional-operation-11",
+        "description": "Simultaneous interpretation, planning workshop.",
+        "amountCents": 164000,
+        "receiptDigest": "5ecb207a5352e6b81e4c7f915d023d5ac7db0af41aba4a4b726282e1fa52188d",
+        "transactionReference": "PAY-778",
+        "createdAt": "2026-09-08T00:09:00Z"
+      },
+      "right": {
+        "id": "rv2-220-r",
+        "incident": "fictional-operation-11",
+        "description": "Planning workshop bilingual facilitation.",
+        "amountCents": 164000,
+        "receiptDigest": "41d23261a39f497a606cc7a2693f2acae26d10408d493e9433f1b52e09052fea",
+        "transactionReference": "PAY-778",
+        "createdAt": "2026-09-08T01:44:00Z"
+      }
+    },
+    {
+      "id": "v2-12-10",
+      "scenario": "The store has two probes but no purchase dates. One could be a warranty replacement or both could have been bought; the submitted slips show no readable serial or date.",
+      "left": {
+        "id": "rv2-230-l",
+        "incident": "fictional-operation-12",
+        "description": "Thermometer probe, digital, kitchen.",
+        "amountCents": 12900,
+        "receiptDigest": "b522d4f732359eb66963cca8bd14a9210888816920d364e3b074b30eaff1087b",
+        "transactionReference": null,
+        "createdAt": "2026-09-05T22:14:00Z"
+      },
+      "right": {
+        "id": "rv2-230-r",
+        "incident": "fictional-operation-12",
+        "description": "Thermometer probe, digital, kitchen.",
+        "amountCents": 12900,
+        "receiptDigest": "a67ff05aa1c08930cfb78cb8e642f0258ba1ab194ba647d4f87cf3d5b9c15b5d",
+        "transactionReference": null,
+        "createdAt": "2026-09-05T22:18:00Z"
+      }
+    },
+    {
+      "id": "v2-02-05",
+      "scenario": "The delivery was entered at the field office and again when the same tripod reached the central store. The transfer note is not a second purchase.",
+      "left": {
+        "id": "rv2-025-l",
+        "incident": "fictional-operation-02",
+        "description": "Survey tripod, heavy aluminium.",
+        "amountCents": 31200,
+        "receiptDigest": "820be979936bc4ddf4caa3f103b69d8d79471fffc44defd2edc2526fe20c0935",
+        "transactionReference": "TRI-141",
+        "createdAt": "2026-10-03T19:29:00Z",
+        "location": "Lower canal field office"
+      },
+      "right": {
+        "id": "rv2-025-r",
+        "incident": "fictional-operation-02",
+        "description": "Heavy aluminium tripod for survey instrument.",
+        "amountCents": 31200,
+        "receiptDigest": "fb5ed3107e021fb11c2186e5c9ce0f7ab94797998e6635668f526b23670a6ea0",
+        "transactionReference": "TRI-141",
+        "createdAt": "2026-10-01T19:29:00Z",
+        "location": "Central survey store"
+      }
+    },
+    {
+      "id": "v2-12-13",
+      "scenario": "A volunteer\u2019s note lists a can opener and peeler. Another note lists a can opener, peeler and whisk; neither states whether it is a combined summary or a separate purchase.",
+      "left": {
+        "id": "rv2-233-l",
+        "incident": "fictional-operation-12",
+        "description": "Kitchenware reimbursement, volunteer purchase.",
+        "amountCents": 5200,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-01T09:02:00Z"
+      },
+      "right": {
+        "id": "rv2-233-r",
+        "incident": "fictional-operation-12",
+        "description": "Catering small equipment, cash.",
+        "amountCents": 7100,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-01T08:25:00Z"
+      }
+    },
+    {
+      "id": "v2-05-09",
+      "scenario": "The receipt was photographed flat and later folded, producing different file digests. Both photographs show the same service ticket and payment stamp for the only blanket collection that month.",
+      "left": {
+        "id": "rv2-089-l",
+        "incident": "fictional-operation-05",
+        "description": "Dry cleaning wool blankets, 24.",
+        "amountCents": 81600,
+        "receiptDigest": "298ce517901d37017c6370e89f7eef20ca803496fce3b16c799a79dc1b8e4b2c",
+        "transactionReference": "WOOL-96",
+        "createdAt": "2026-10-05T09:48:00Z"
+      },
+      "right": {
+        "id": "rv2-089-r",
+        "incident": "fictional-operation-05",
+        "description": "Wool blanket clean, two dozen.",
+        "amountCents": 81600,
+        "receiptDigest": "0693186313ccd8438b079ec5bb6d4e2c01265833e8ed55a3dd8c922b100a15ac",
+        "transactionReference": "WOOL-96",
+        "createdAt": "2026-10-04T19:48:00Z"
+      }
+    },
+    {
+      "id": "v2-03-11",
+      "scenario": "The buyer cancelled the first order and placed it again after the first card authorisation expired. The bank statement confirms only one settled charge.",
+      "left": {
+        "id": "rv2-051-l",
+        "incident": "fictional-operation-03",
+        "description": "Heat-resistant foundry boots, three pairs.",
+        "amountCents": 89100,
+        "receiptDigest": "24677c97247ef8032927ffea5ee560c7336895164708c2c3546ea487b5437563",
+        "transactionReference": "ORDER-71",
+        "createdAt": "2026-09-29T07:56:00Z"
+      },
+      "right": {
+        "id": "rv2-051-r",
+        "incident": "fictional-operation-03",
+        "description": "Heat-resistant foundry boots, three pairs.",
+        "amountCents": 89100,
+        "receiptDigest": "493454346359f5a5c8119c9765f5f013fc0f30315b6f2f493ba2a8fa420c8056",
+        "transactionReference": "ORDER-74",
+        "createdAt": "2026-09-29T07:19:00Z"
+      }
+    },
+    {
+      "id": "v2-11-06",
+      "scenario": "The coordinator initially entered the agency\u2019s confirmation code; accounts later entered the payment receipt number for the same night session. The attendance log has one agency interpreter.",
+      "left": {
+        "id": "rv2-206-l",
+        "incident": "fictional-operation-11",
+        "description": "Emergency interpretation, night shift.",
+        "amountCents": 78400,
+        "receiptDigest": "0db6f5448ad8c95b90a4429ac2ef2c621728f571fd70dfb6f3320781b4c93b2a",
+        "transactionReference": "CONF-908",
+        "createdAt": "2026-09-13T13:43:00Z"
+      },
+      "right": {
+        "id": "rv2-206-r",
+        "incident": "fictional-operation-11",
+        "description": "Out-of-hours language assistance.",
+        "amountCents": 78400,
+        "receiptDigest": "338544abd2eb48b656f017a80aa1b703f5db440bc9548a35efffdf83fd895d12",
+        "transactionReference": "PAY-6621",
+        "createdAt": "2026-09-12T23:43:00Z"
+      }
+    },
+    {
+      "id": "v2-09-02",
+      "scenario": "The same fifty-bag purchase was first described as replacement material and later by the bag label. The store\u2019s signed receipt number matches on both records.",
+      "left": {
+        "id": "rv2-162-l",
+        "incident": "fictional-operation-09",
+        "description": "Replacement peat-free growing mix.",
+        "amountCents": 72600,
+        "receiptDigest": "6b5794b21f42330325de0ecbf00ea461899f9cc986fda906b9077fdb447f206b",
+        "transactionReference": "MIX-118",
+        "createdAt": "2026-09-29T00:26:00Z"
+      },
+      "right": {
+        "id": "rv2-162-r",
+        "incident": "fictional-operation-09",
+        "description": "Potting blend for damaged seedlings.",
+        "amountCents": 72600,
+        "receiptDigest": "6b5794b21f42330325de0ecbf00ea461899f9cc986fda906b9077fdb447f206b",
+        "transactionReference": "MIX-118",
+        "createdAt": "2026-09-27T00:26:00Z"
+      }
+    },
+    {
+      "id": "v2-07-19",
+      "scenario": "The village coordinator entered the visit fee and the treasurer entered the same fee from the signed cashbook. There was one mobile mill visit, with one payment voucher.",
+      "left": {
+        "id": "rv2-139-l",
+        "incident": "fictional-operation-07",
+        "description": "Stone-ground maize, mobile mill fee.",
+        "amountCents": 45000,
+        "receiptDigest": "29410588a70891e2128a175a10b7e04d7bfce9bd02b6815843fa7597b2c27077",
+        "transactionReference": "VIS-27",
+        "createdAt": "2026-09-01T09:28:00Z"
+      },
+      "right": {
+        "id": "rv2-139-r",
+        "incident": "fictional-operation-07",
+        "description": "Mobile mill visit for maize grinding.",
+        "amountCents": 45000,
+        "receiptDigest": "29410588a70891e2128a175a10b7e04d7bfce9bd02b6815843fa7597b2c27077",
+        "transactionReference": "VIS-27",
+        "createdAt": "2026-09-01T11:03:00Z"
+      }
+    },
+    {
+      "id": "v2-02-04",
+      "scenario": "Two replacement poles were bought from separate shops after both teams broke theirs. The wording and prices happen to match; the paper receipts stayed with the teams.",
+      "left": {
+        "id": "rv2-024-l",
+        "incident": "fictional-operation-02",
+        "description": "Survey prism pole, two metre.",
+        "amountCents": 18200,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-10T00:01:00Z"
+      },
+      "right": {
+        "id": "rv2-024-r",
+        "incident": "fictional-operation-02",
+        "description": "Survey prism pole, two metre.",
+        "amountCents": 18200,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-10T01:36:00Z"
+      }
+    },
+    {
+      "id": "v2-03-16",
+      "scenario": "The dining crew and bakery crew each made a separate six-pair purchase. Their locations are known from issue logs but are absent from both expense records.",
+      "left": {
+        "id": "rv2-056-l",
+        "incident": "fictional-operation-03",
+        "description": "Non-slip kitchen shoes, six pairs.",
+        "amountCents": 59400,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-14T05:53:00Z"
+      },
+      "right": {
+        "id": "rv2-056-r",
+        "incident": "fictional-operation-03",
+        "description": "Non-slip kitchen shoes, six pairs.",
+        "amountCents": 59400,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-21T05:53:00Z"
+      }
+    },
+    {
+      "id": "v2-03-14",
+      "scenario": "The two sizes were separate invoice lines for two workers. Both expense entries attach the entire two-line invoice.",
+      "left": {
+        "id": "rv2-054-l",
+        "incident": "fictional-operation-03",
+        "description": "Cut-resistant forestry boots, size 42.",
+        "amountCents": 28900,
+        "receiptDigest": "24f353a6478c3f9b96ef33db78fbf1c3ce975653b251b481bd7caa80c2fac027",
+        "transactionReference": "FOR-67",
+        "createdAt": "2026-09-23T15:25:00Z"
+      },
+      "right": {
+        "id": "rv2-054-r",
+        "incident": "fictional-operation-03",
+        "description": "Cut-resistant forestry boots, size 44.",
+        "amountCents": 28900,
+        "receiptDigest": "24f353a6478c3f9b96ef33db78fbf1c3ce975653b251b481bd7caa80c2fac027",
+        "transactionReference": "FOR-67",
+        "createdAt": "2026-09-23T16:02:00Z"
+      }
+    },
+    {
+      "id": "v2-10-14",
+      "scenario": "The emailed invoice was reissued after the buyer name was corrected. One charge and one four-saw collection appear in the tool register.",
+      "left": {
+        "id": "rv2-194-l",
+        "incident": "fictional-operation-10",
+        "description": "Pruning saws, four folding.",
+        "amountCents": 21600,
+        "receiptDigest": "14de194bbb0ff90a34203110333564ebc3a92820f8274de6384ffe0b4b03de1c",
+        "transactionReference": "SAW-94",
+        "createdAt": "2026-09-24T15:42:00Z"
+      },
+      "right": {
+        "id": "rv2-194-r",
+        "incident": "fictional-operation-10",
+        "description": "Four folding pruning saws.",
+        "amountCents": 21600,
+        "receiptDigest": "6446a15360a4a1a1314ba35446d6936b5c1a92b15b26bd0965389410f83414fe",
+        "transactionReference": "SAW-94R",
+        "createdAt": "2026-09-22T15:42:00Z"
+      }
+    },
+    {
+      "id": "v2-04-01",
+      "scenario": "The subscription invoice number is reused in the office shorthand. These are two separate editions and two settled payments, with edition names retained in descriptions.",
+      "left": {
+        "id": "rv2-061-l",
+        "incident": "fictional-operation-04",
+        "description": "Monthly newsletter, September edition.",
+        "amountCents": 58200,
+        "receiptDigest": "5d4b388cbc07b5343d2217ae73a39fea463680478a8641978b9d25f6ca6489e5",
+        "transactionReference": "NEWS-22",
+        "createdAt": "2026-09-11T06:08:00Z"
+      },
+      "right": {
+        "id": "rv2-061-r",
+        "incident": "fictional-operation-04",
+        "description": "Monthly newsletter, October edition.",
+        "amountCents": 58200,
+        "receiptDigest": "8e1ba14bc8738426e2c4c1fb483619b174f8b5d8f43289a505a2d397ec7497a4",
+        "transactionReference": "NEWS-22",
+        "createdAt": "2026-09-13T06:08:00Z"
+      }
+    },
+    {
+      "id": "v2-01-02",
+      "scenario": "The warehouse clerk entered the collection from loading bay 3; the accounts assistant later entered the signed collection sheet. The sheet carries ticket RM-741.",
+      "left": {
+        "id": "rv2-002-l",
+        "incident": "fictional-operation-01",
+        "description": "White thermoplastic compound, 24 sacks, junction repaint.",
+        "amountCents": 184800,
+        "receiptDigest": "c4603d4de214a42f4e27966341045bbd1a97edee61bcbc24b0c464963a058fa7",
+        "transactionReference": "RM-741",
+        "createdAt": "2026-10-01T18:32:00Z"
+      },
+      "right": {
+        "id": "rv2-002-r",
+        "incident": "fictional-operation-01",
+        "description": "Twenty-four bags of white road stripe mix for the junction.",
+        "amountCents": 184800,
+        "receiptDigest": "c4603d4de214a42f4e27966341045bbd1a97edee61bcbc24b0c464963a058fa7",
+        "transactionReference": "RM-741",
+        "createdAt": "2026-10-01T19:09:00Z"
+      }
+    },
+    {
+      "id": "v2-06-18",
+      "scenario": "The same truck served both trenches, carrying one separately paid load from each. One daily receipt summarises the two loads.",
+      "left": {
+        "id": "rv2-118-l",
+        "incident": "fictional-operation-06",
+        "description": "Spoil haul from west trench.",
+        "amountCents": 54800,
+        "receiptDigest": "bc63ad964cd935124b62f381529b9c89edcb666a61c37511fe32a15a02bd34f8",
+        "transactionReference": "DAY-91",
+        "createdAt": "2026-09-16T18:42:00Z",
+        "location": "West trench"
+      },
+      "right": {
+        "id": "rv2-118-r",
+        "incident": "fictional-operation-06",
+        "description": "Spoil haul from east trench.",
+        "amountCents": 54800,
+        "receiptDigest": "bc63ad964cd935124b62f381529b9c89edcb666a61c37511fe32a15a02bd34f8",
+        "transactionReference": "DAY-91",
+        "createdAt": "2026-09-14T18:42:00Z",
+        "location": "East trench"
+      }
+    },
+    {
+      "id": "v2-07-12",
+      "scenario": "The morning batch was spoiled after processing and the afternoon batch replaced it. The mill charged for each because the spoilage occurred in the customer\u2019s store.",
+      "left": {
+        "id": "rv2-132-l",
+        "incident": "fictional-operation-07",
+        "description": "Maize milling, afternoon batch.",
+        "amountCents": 33200,
+        "receiptDigest": "7c9f0e542498ea25dbe4906301a9213aba9094a0396198f316597189942b54fb",
+        "transactionReference": "AF-29",
+        "createdAt": "2026-09-13T01:59:00Z"
+      },
+      "right": {
+        "id": "rv2-132-r",
+        "incident": "fictional-operation-07",
+        "description": "Maize milling, morning batch.",
+        "amountCents": 33200,
+        "receiptDigest": "9da867f86655f2fbc7d7c355272c9b8e0bb30f5c353fc4528a60d58fad7eb217",
+        "transactionReference": "AM-29",
+        "createdAt": "2026-09-13T01:59:00Z"
+      }
+    },
+    {
+      "id": "v2-04-10",
+      "scenario": "A print job was rejected for a wrong meeting time. The shop reprinted it without charge. Both intake forms show the original price; one form refers to the rejected stack.",
+      "left": {
+        "id": "rv2-070-l",
+        "incident": "fictional-operation-04",
+        "description": "Community meeting notice run.",
+        "amountCents": 12300,
+        "receiptDigest": "bab780a15bc935fc4c6798a86578db44bd11c8d61736891f39ae09e3bb79c0c7",
+        "transactionReference": "MEET-6",
+        "createdAt": "2026-09-25T19:02:00Z"
+      },
+      "right": {
+        "id": "rv2-070-r",
+        "incident": "fictional-operation-04",
+        "description": "Community meeting notice run.",
+        "amountCents": 12300,
+        "receiptDigest": "9271865bf8e3c02675572963c686a7d8f0604e85757a0f26072de1b4ae268496",
+        "transactionReference": "MEET-6R",
+        "createdAt": "2026-09-25T19:39:00Z"
+      }
+    },
+    {
+      "id": "v2-06-01",
+      "scenario": "A second lorry was ordered after the first filled up. Each lorry was billed separately at the same fixed rate; the app descriptions omit the vehicle identifiers.",
+      "left": {
+        "id": "rv2-101-l",
+        "incident": "fictional-operation-06",
+        "description": "Furniture removal, hall clearance.",
+        "amountCents": 82500,
+        "receiptDigest": "e9099a3278ddb82afd57861bf2f8b7e7ddeb842e929b8f634e2e8012ec5388ba",
+        "transactionReference": null,
+        "createdAt": "2026-10-01T06:41:00Z"
+      },
+      "right": {
+        "id": "rv2-101-r",
+        "incident": "fictional-operation-06",
+        "description": "Furniture removal, hall clearance.",
+        "amountCents": 82500,
+        "receiptDigest": "4bf5773a466f1be98469bf966d4311f7ce5b7ad9c9efa467270830523a0058e0",
+        "transactionReference": null,
+        "createdAt": "2026-10-01T06:37:00Z"
+      }
+    },
+    {
+      "id": "v2-04-06",
+      "scenario": "The Tuesday and Wednesday briefs used the same cover wording and cost the same. They were printed and paid on separate days.",
+      "left": {
+        "id": "rv2-066-l",
+        "incident": "fictional-operation-04",
+        "description": "Daily situation brief, 150 copies.",
+        "amountCents": 6300,
+        "receiptDigest": "73ad74600a8fc75a7c96902fdbae714766e99abc3a4246b447c2d3ff438a18a1",
+        "transactionReference": null,
+        "createdAt": "2026-09-11T18:31:00Z",
+        "expenseAt": "2026-09-08T07:00:00Z"
+      },
+      "right": {
+        "id": "rv2-066-r",
+        "incident": "fictional-operation-04",
+        "description": "Daily situation brief, 150 copies.",
+        "amountCents": 6300,
+        "receiptDigest": "b22ab8dd5e1273e33cec3bac46638d6a89b0ca444dd3f98a22b42e34bb11f0b2",
+        "transactionReference": null,
+        "createdAt": "2026-09-11T18:31:00Z",
+        "expenseAt": "2026-09-09T07:00:00Z"
+      }
+    },
+    {
+      "id": "v2-11-03",
+      "scenario": "The weekly resident meetings used the same interpreter and fixed fee. These entries cover meetings seven days apart; their expense dates distinguish the services.",
+      "left": {
+        "id": "rv2-203-l",
+        "incident": "fictional-operation-11",
+        "description": "Interpretation for resident meeting.",
+        "amountCents": 28800,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-30T23:22:00Z",
+        "expenseAt": "2026-09-03T18:00:00Z"
+      },
+      "right": {
+        "id": "rv2-203-r",
+        "incident": "fictional-operation-11",
+        "description": "Interpretation for resident meeting.",
+        "amountCents": 28800,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-09-30T23:59:00Z",
+        "expenseAt": "2026-09-10T18:00:00Z"
+      }
+    },
+    {
+      "id": "v2-12-19",
+      "scenario": "The shop charged once, then reprinted the receipt after the thermal paper jammed. The receipt copies have different file hashes but the same transaction reference.",
+      "left": {
+        "id": "rv2-239-l",
+        "incident": "fictional-operation-12",
+        "description": "Stainless mixing bowls, set of eight.",
+        "amountCents": 23800,
+        "receiptDigest": "d1d09a5e39108f5445ccd4d9fb7bf64906b056812076a49a8d07dd26dd087de5",
+        "transactionReference": "BOWL-115",
+        "createdAt": "2026-09-22T17:55:00Z"
+      },
+      "right": {
+        "id": "rv2-239-r",
+        "incident": "fictional-operation-12",
+        "description": "Stainless mixing bowls, set of eight.",
+        "amountCents": 23800,
+        "receiptDigest": "2f412377153bdde12e884fa7d5519a0e8efdb0152f880ede636d1df41791b61f",
+        "transactionReference": "BOWL-115",
+        "createdAt": "2026-09-15T17:55:00Z"
+      }
+    },
+    {
+      "id": "v2-12-09",
+      "scenario": "The catering lead and store clerk both entered one three-pot purchase. Each used the same invoice number and scan; the receiving ledger records three pots total.",
+      "left": {
+        "id": "rv2-229-l",
+        "incident": "fictional-operation-12",
+        "description": "Stainless stockpots, three 30-litre pots.",
+        "amountCents": 117000,
+        "receiptDigest": "e8262d3436f17f2e24ee49b427d6e05fa1ebb063bfda9b13994c2c9fd5ab0673",
+        "transactionReference": "POT-604",
+        "createdAt": "2026-10-07T11:35:00Z"
+      },
+      "right": {
+        "id": "rv2-229-r",
+        "incident": "fictional-operation-12",
+        "description": "Three large stainless cooking pots, 30 L.",
+        "amountCents": 117000,
+        "receiptDigest": "e8262d3436f17f2e24ee49b427d6e05fa1ebb063bfda9b13994c2c9fd5ab0673",
+        "transactionReference": "POT-604",
+        "createdAt": "2026-09-30T11:35:00Z"
+      }
+    },
+    {
+      "id": "v2-05-10",
+      "scenario": "Two cages were rented concurrently at different buildings. Each was billed a separate weekly fee, although the rental contract number is shared.",
+      "left": {
+        "id": "rv2-090-l",
+        "incident": "fictional-operation-05",
+        "description": "Laundry cage rental, weekly.",
+        "amountCents": 9900,
+        "receiptDigest": "2bc0d82536156684b478805fd4a3f0074996634a6bc5a7d961cfd99adec24998",
+        "transactionReference": "CAGE-40",
+        "createdAt": "2026-09-11T15:08:00Z",
+        "location": "Moor House"
+      },
+      "right": {
+        "id": "rv2-090-r",
+        "incident": "fictional-operation-05",
+        "description": "Laundry cage rental, weekly.",
+        "amountCents": 9900,
+        "receiptDigest": "a8d574ee12d9a68f9c07d6436f8f92a9542b51281dd1ddecca971156cc55ca3f",
+        "transactionReference": "CAGE-40",
+        "createdAt": "2026-09-18T15:08:00Z",
+        "location": "Harbour House"
+      }
+    },
+    {
+      "id": "v2-04-13",
+      "scenario": "One repair order was reissued after a discount for delayed collection. The records preserve the original and discounted amounts, and the printer\u2019s revised note names the original repair job.",
+      "left": {
+        "id": "rv2-073-l",
+        "incident": "fictional-operation-04",
+        "description": "Binding repairs for field manuals.",
+        "amountCents": 22100,
+        "receiptDigest": "925597def0373d096a7e13a664592f1c785b3ac35ff9b592ccafaaaca9225f25",
+        "transactionReference": "BIND-53",
+        "createdAt": "2026-09-26T13:35:00Z"
+      },
+      "right": {
+        "id": "rv2-073-r",
+        "incident": "fictional-operation-04",
+        "description": "Manual spine repairs and new covers.",
+        "amountCents": 19890,
+        "receiptDigest": "1e45340651f8682460445472c2e19826a7ed7251c6b34661adecb0976227566d",
+        "transactionReference": "BIND-53R",
+        "createdAt": "2026-09-26T13:39:00Z"
+      }
+    },
+    {
+      "id": "v2-12-12",
+      "scenario": "The packing note uses catering terms and the accounts record uses retail terms for the same assortment. Both show order SC-82 and one settled total.",
+      "left": {
+        "id": "rv2-232-l",
+        "incident": "fictional-operation-12",
+        "description": "Sieves and colanders, kitchen replacement.",
+        "amountCents": 32900,
+        "receiptDigest": "d8a25de17b39881550e26e6d4969d7d02447d405732a59c9eee1ea8afcdd47af",
+        "transactionReference": "SC-82",
+        "createdAt": "2026-09-02T22:09:00Z"
+      },
+      "right": {
+        "id": "rv2-232-r",
+        "incident": "fictional-operation-12",
+        "description": "Draining baskets and fine mesh strainers.",
+        "amountCents": 32900,
+        "receiptDigest": "607fccf59a9ffb40e578d394a3d908dd70a4b23b65c5f802f1c3810340f51c03",
+        "transactionReference": "SC-82",
+        "createdAt": "2026-09-02T23:44:00Z"
+      }
+    },
+    {
+      "id": "v2-05-16",
+      "scenario": "The first entry is the administrator\u2019s provisional cost before weighing the linen. The second is the single completed service invoice, with the same booking number.",
+      "left": {
+        "id": "rv2-096-l",
+        "incident": "fictional-operation-05",
+        "description": "Laundry service advance for dormitory linen.",
+        "amountCents": 60000,
+        "receiptDigest": "fd663a9020dd713678d9539d7b12796e2eb6ca5ee738d7d253a444a73a22f83b",
+        "transactionReference": "DORM-73",
+        "createdAt": "2026-10-02T13:06:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-096-r",
+        "incident": "fictional-operation-05",
+        "description": "Dormitory sheets, wash and press, 180 pieces.",
+        "amountCents": 56700,
+        "receiptDigest": "99522faf2c681b664ea5c5da504070848ae7bbd75be8469712029ae8a7e6da53",
+        "transactionReference": "DORM-73",
+        "createdAt": "2026-09-30T13:06:00Z",
+        "amountKind": "exact"
+      }
+    },
+    {
+      "id": "v2-04-16",
+      "scenario": "The first entry abbreviates the printer\u2019s job description. The second came from a scanned copy of the same paid collection docket; both name job MAP-902.",
+      "left": {
+        "id": "rv2-076-l",
+        "incident": "fictional-operation-04",
+        "description": "Large-format site map, laminated.",
+        "amountCents": 9800,
+        "receiptDigest": "4b34cef280bf8f5e43953a6ae03df553bdf43adf73f4361df0641c274da401ca",
+        "transactionReference": "MAP-902",
+        "createdAt": "2026-09-28T09:24:00Z"
+      },
+      "right": {
+        "id": "rv2-076-r",
+        "incident": "fictional-operation-04",
+        "description": "Laminated A0 site plan for operations room.",
+        "amountCents": 9800,
+        "receiptDigest": "4a7c2cbad71d0d9c50b2a60c79ed5697439e22991ead7c0db47fe6a6e878bea9",
+        "transactionReference": "MAP-902",
+        "createdAt": "2026-09-28T09:24:00Z"
+      }
+    },
+    {
+      "id": "v2-11-10",
+      "scenario": "The written translation and spoken discussion were separate services ordered for the same consultation. Their distinct descriptions and separate references remain in the records.",
+      "left": {
+        "id": "rv2-210-l",
+        "incident": "fictional-operation-11",
+        "description": "Written consent form translation, 800 words.",
+        "amountCents": 26400,
+        "receiptDigest": "dc2b7204a14378ad17c07353730289bf1dd182e8c4231ad2d514256db28b06f0",
+        "transactionReference": "WR-300",
+        "createdAt": "2026-09-15T18:00:00Z"
+      },
+      "right": {
+        "id": "rv2-210-r",
+        "incident": "fictional-operation-11",
+        "description": "Spoken interpretation, consent discussion.",
+        "amountCents": 35200,
+        "receiptDigest": "9f0a09e3ea158e579eb898f28a80bb1e4c6a2bceff2706204b019c393f17ebbc",
+        "transactionReference": "SP-318",
+        "createdAt": "2026-09-15T16:25:00Z"
+      }
+    },
+    {
+      "id": "v2-04-17",
+      "scenario": "The intake office and mobile unit each ordered forty copies. The receipts have different job numbers even though the uploaded descriptions match exactly.",
+      "left": {
+        "id": "rv2-077-l",
+        "incident": "fictional-operation-04",
+        "description": "Incident posters, 40 colour copies.",
+        "amountCents": 18400,
+        "receiptDigest": "7ad43762d29a50739a966ff29d2d1b0f89113de999332213cd0b0fa0503b4eb5",
+        "transactionReference": "POST-47",
+        "createdAt": "2026-09-28T18:24:00Z"
+      },
+      "right": {
+        "id": "rv2-077-r",
+        "incident": "fictional-operation-04",
+        "description": "Incident posters, 40 colour copies.",
+        "amountCents": 18400,
+        "receiptDigest": "a6e88b94554eadcee8c1334c03f11801e7cff10f21b0e0f725d69e1b831f05fd",
+        "transactionReference": "POST-52",
+        "createdAt": "2026-09-29T08:24:00Z"
+      }
+    }
+  ]
+}

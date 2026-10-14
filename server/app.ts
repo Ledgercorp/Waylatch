@@ -352,11 +352,14 @@ export function createApp({
     z.strictObject({}).parse(req.body);
     const row = store.record(req.params.id);
     if (!row) throw new Conflict('Unknown request');
-    const { assessPairs } = await import('../src/risk/review');
+    const { assessReviewQuality } = await import('../src/risk/review-quality');
     const map = (r: typeof row) => ({
       id: r.record.id,
       incident: r.record.incident,
       description: description(r.record),
+      location: r.record.location,
+      expenseAt: r.record.expenseAt,
+      amountKind: r.record.amountKind,
       amountCents: r.record.amountCents,
       receiptDigest: r.record.receiptDigest,
       transactionReference: r.record.transactionReference,
@@ -366,7 +369,7 @@ export function createApp({
       .records()
       .filter((r) => r.record.id !== row.record.id)
       .slice(0, 100);
-    const result = await assessPairs(map(row), candidates.map(map));
+    const result = await assessReviewQuality(map(row), candidates.map(map));
     const evidence = {
       ...result,
       revision: row.record.revision,

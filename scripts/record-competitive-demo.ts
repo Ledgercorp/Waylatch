@@ -131,16 +131,18 @@ try {
     'comparison',
     evidenceOnly
       ? 'New side-by-side comparison: terms, amounts, incident and receipt evidence. This recording uses deterministic fallback; model access is blocked.'
-      : 'Real local MiniLM inference plus side-by-side context. Semantic cosine is evidence, never a fraud probability.',
+      : 'Real local MiniLM retrieves related wording. The advisory tier separates similarity from transaction identity; contradictions stay visible.',
     9000,
   );
   await receiver
     .getByRole('region', { name: 'Scrollable recorded comparison evidence' })
     .scrollIntoViewIfNeeded();
+  await receiver.getByText(/Candidate summaries ·/).click();
+  await receiver.getByText(/Candidate summaries ·/).scrollIntoViewIfNeeded();
   await scene(
     receiver,
     'context',
-    'Related, unrelated or investigate: an advisory disposition never approves either record or executes payment.',
+    'Grouped attention and informational comparisons reduce repeated warnings. Related, unrelated or investigate never approves a purchase.',
     6500,
   );
   await click(receiver, 'Pay');

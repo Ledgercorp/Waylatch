@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "waylatch-review-quality-v2",
+  "method": "Fresh model-blind nonexpert AI review; no predictions or code",
+  "annotations": [
+    {
+      "caseId": "v2-07-05",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "The advance was applied to the bill, but the second entry could represent either the inclusive invoice or only its remaining balance. Without the receipt or a known final amount, the extent of overlap is unresolved.",
+      "tierRationale": "The shared ML-55 reference and millet-processing advance/final-payment descriptions link the records to an order. However, the final amount is unknown, the advance is marked as an estimate, and neither record has a receipt, so their payment allocation requires verification.",
+      "confidence": "medium"
+    }
+  ]
+}

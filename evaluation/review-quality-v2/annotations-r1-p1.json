@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "waylatch-review-quality-v2",
+  "method": "Fresh model-blind nonexpert AI review; no predictions or code",
+  "annotations": [
+    {
+      "caseId": "v2-08-05",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The monthly account might include the rental, but itemisation and independent payment evidence are missing.",
+      "tierRationale": "Storage context is related, but the amounts, references and receipt digests differ; the records do not establish inclusion.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-05-15",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The scenario identifies separate dated mat exchanges, consistent with the two expense dates.",
+      "tierRationale": "The same service and amount recur on different expense dates with different receipt digests; ACCT-602 appears account-level rather than sale-specific.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-02",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Both descriptions represent the same fifty-bag purchase and signed receipt.",
+      "tierRationale": "The receipt digest, transaction reference and amount match, and the descriptions are compatible growing materials.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-20",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The scenario specifies separately charged instalments, including a new balance collection.",
+      "tierRationale": "The reference and amount match, but the balance wording and different receipt digests require allocation inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-11",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two submitters recorded one skip exchange, corroborated by the gate book.",
+      "tierRationale": "The matching receipt digest, reference, amount and eight-yard skip descriptions corroborate one charge.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-17",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Specialist and standard laundry loads had separate dockets and prices.",
+      "tierRationale": "Descriptions distinguish service types, while amounts, references and receipt digests differ.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-08-07",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Separate consignments were invoiced for simultaneous storage in different aisles.",
+      "tierRationale": "Equal quantities and amounts link the service type, but references and receipt digests differ and no consignment identity is recorded.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-16",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two farmer groups separately paid for their own 500 kg batches.",
+      "tierRationale": "Only the service, quantity and amount match; receipt digests differ and there is no transaction reference.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-15",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The driver reports one delivery, and the image difference is a photocopy of the same docket.",
+      "tierRationale": "The transaction reference, amount and specific five-metre telescopic staff descriptions match; different image digests alone do not contradict that match.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-20",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The equipment and finance records describe the single winch delivery under WN-50.",
+      "tierRationale": "Matching receipt digest, reference and amount corroborate compatible descriptions of a manual pulling tool.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-01",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "September and October editions were separately paid despite reused shorthand.",
+      "tierRationale": "Matching reference and price link the records, but different edition names and receipt digests materially distinguish the charges.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-07",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The receipt contains two separate cutter lines with different jaw lengths.",
+      "tierRationale": "The shared digest and reference require checking receipt lines because cutter lengths and amounts differ.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-19",
+      "decision": "duplicate",
+      "evidenceTier": "potentially-related",
+      "rationale": "The collection payment and statement entry record the same charge using different identifier systems.",
+      "tierRationale": "The amount and arrival-team laundry context match, but different references and receipt digests provide no direct transaction match.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-09",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Amber and white marker boxes were separate priced lines on one receipt.",
+      "tierRationale": "The digest, reference and amount match, but the different colours may identify separate receipt lines.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-03",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "These entries allocate payment to two truckloads specified by one contract.",
+      "tierRationale": "Matching digest, reference and price link the documents, but truck 2 wording raises a separate-load allocation requiring inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-19",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Roots and pavement were disposed of on separate runs; the repeated upload was an error.",
+      "tierRationale": "The same digest conflicts with different waste types, amounts and references, so the attachment needs inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-06",
+      "decision": "duplicate",
+      "evidenceTier": "potentially-related",
+      "rationale": "Confirmation and payment records concern one night session with one interpreter.",
+      "tierRationale": "Equal amounts and compatible out-of-hours language descriptions relate the records, but neither the reference nor receipt digest matches.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-14",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The two boot sizes were separate invoice lines for different workers.",
+      "tierRationale": "Shared digest, reference and price link an invoice, but size 42 and size 44 distinguish possible line allocations.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-08-11",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The facility cannot distinguish a copied payment from two consignments, and crate identities are lost.",
+      "tierRationale": "The description, quantity and amount match, but neither receipt nor transaction reference is present; close creation times do not establish expense identity.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-06-02",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The first and second truck trips were independently weighed and billed.",
+      "tierRationale": "Descriptions and amounts match, but weight references and receipt digests differ; creation dates do not identify the haul dates.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-19",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "Unverified recollections disagree about a purchase versus a repair, without itemised vouchers.",
+      "tierRationale": "The same amount and broad survey-equipment context are the only links; receipts and references are absent.",
+      "confidence": "low"
+    },
+    {
+      "caseId": "v2-11-18",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Separate participants received different interpretation services listed on one monthly invoice.",
+      "tierRationale": "The shared digest and reference link a document, but remote sign-language and on-site spoken services have different amounts.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-18",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The acknowledgement and delivered invoice concern one kit; delivery explains the revised total.",
+      "tierRationale": "The same reference and related stencil descriptions link the records, but estimate versus exact amounts and differing digests need reconciliation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-16",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "One asset underwent two separately paid calibrations months apart.",
+      "tierRationale": "The reference is labelled as an asset, while expense dates and receipt digests differ; matching service and fee do not identify one transaction.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-10",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The workshop reissued one calibration charge to correct the instrument serial.",
+      "tierRationale": "The same stated asset, amount and related CAL-89/CAL-89R references suggest a linked revision, but different identifiers and digests require inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-03",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The meetings and interpreter services occurred a week apart.",
+      "tierRationale": "Different expense dates distinguish recurring services; description and price match without receipts or transaction references.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-04",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The reimbursement could settle either of two provisional sessions; the pending record lacks identifying details.",
+      "tierRationale": "Only broad language-service context links the entries; one amount is unknown and both lack dates, references and receipts.",
+      "confidence": "low"
+    },
+    {
+      "caseId": "v2-09-09",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Two height grades were separately priced nursery bill lines.",
+      "tierRationale": "The shared digest and reference link a bill, but heights and amounts differ, requiring a line-level check.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-07",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Thirty-coverall washes took place on separate Fridays under different tickets.",
+      "tierRationale": "Identical descriptions and amounts are accompanied by different transaction references and receipt digests; equal creation times are not service dates.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-11",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two volunteers each purchased and receipted one hammer.",
+      "tierRationale": "The catalogue description and price match, but receipt digests differ and no transaction reference identifies a shared sale.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-02",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Blue and red boards were separate equal-price receipt lines.",
+      "tierRationale": "Matching digest, reference and amount link a receipt, but differing colours identify potentially separate lines.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-08",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The carbon copy and paid receipt document one ten-pad order with the same job number and collection time.",
+      "tierRationale": "The transaction reference, amount, quantity and compatible delivery-book descriptions match without a material recorded contradiction.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-20",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "Different drum counts and site codes could be corrections or a separate consignment; lost dispatch records prevent resolution.",
+      "tierRationale": "The reference and ash-drum service match, but amounts and receipt digests differ, requiring verification of the linked charge.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-09-10",
+      "decision": "duplicate",
+      "evidenceTier": "potentially-related",
+      "rationale": "The volunteer and accountant entered the same nursery purchase using purchase and bank payment documents.",
+      "tierRationale": "The amount and fifteen-tray reed descriptions match, but references and receipt digests differ without an explicit recorded cross-link.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-19",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "July and August access fees were separately charged.",
+      "tierRationale": "Month descriptions and expense dates differ, with different digests; the reused reference is account-level.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-06",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Husk disposal and bran bagging were separate service lines.",
+      "tierRationale": "Shared digest and reference link a document, but different services and amounts require checking its allocation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-08-14",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "An additional shelf incurred its own fee while retaining the original booking number.",
+      "tierRationale": "The same reference and price link the entries, but initial versus additional shelf wording and different digests support separate charges needing confirmation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-14",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The counter confirms the terminal suffix and cleaner scan belong to the same paint sale.",
+      "tierRationale": "Equal amounts and compatible paint descriptions plus P-882/P-882-02 suggest a linked transaction, but the suffix and different digests require inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-16",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Separate shoreline plots received independently purchased trays.",
+      "tierRationale": "Matching quantity, description and price are contextual only; digests differ and references are absent.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-16",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "It is unknown whether the purchase total includes the deposit or represents a separate balance.",
+      "tierRationale": "The shared order reference and deposit/purchase wording directly link the records, but different amounts and digests leave allocation unresolved.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-02-06",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The hire charges cover successive weeks shown by expense dates.",
+      "tierRationale": "The WEEKLY-RF reference and price recur, but expense dates and digests differ, indicating separate rental periods.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-04",
+      "decision": "distinct",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The invoice charges labour separately for two batches, though the app omits their identities.",
+      "tierRationale": "The descriptions, amount, reference and receipt digest match without a recorded batch distinction or other material contradiction.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-08",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The extension was a separately charged seven-day period linked to the original booking.",
+      "tierRationale": "Matching reference and price connect the booking, but extension versus initial period descriptions and different digests require period verification.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-03",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Blue and green card stocks were two separately billed intake lines.",
+      "tierRationale": "The shared digest, reference and amount link a receipt, but differing stock colours may distinguish lines.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-15",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "A collected stamp produced another scan of the same seven-sack job.",
+      "tierRationale": "The same reference, amount, grain type and quantity corroborate one charge; different digests alone do not establish separate transactions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-15",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "A corrected buyer address produced a replacement receipt for one 600-plant order.",
+      "tierRationale": "The reference, amount and specific quantity of acacia tube stock match; different digests do not materially contradict that match.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-13",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "A refundable damage deposit and a removal/disposal service fee are separate obligations.",
+      "tierRationale": "The same contract reference and amount link the records, but deposit and disposal descriptions distinguish charge types and the receipt digests differ.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-13",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The buyer and storekeeper entered the one six-spade purchase and delivery.",
+      "tierRationale": "Matching digest, reference, amount and six-spade quantity provide multiple corroborating transaction indicators.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-16",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The crew cannot determine whether one or two trucks were hired, and the image supplies no readable evidence.",
+      "tierRationale": "The description and amount match, but no reference matches and the available digest does not match a second receipt; creation time is not haul time.",
+      "confidence": "low"
+    },
+    {
+      "caseId": "v2-05-13",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Both coordinators filed the one Monday pickup invoice and settled charge.",
+      "tierRationale": "The receipt digest, reference, amount and forty-two-bag quantity match with compatible linen-cleaning wording.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-10",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The original and photocopy show one collection, with a crease causing the MT-89 transcription.",
+      "tierRationale": "Equal amounts and equivalent two-dozen trowel descriptions relate the records, while the similar but differing references and digests need inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-08",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The seven-pair total does not establish how the four-pair and seven-pair claims overlap or who paid.",
+      "tierRationale": "Descriptions concern similar footwear, but amounts differ and no references or receipts provide an allocation link.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-08-01",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The renter paid for a renewed week in addition to the original week.",
+      "tierRationale": "The same reference and amount link the agreement, but week labels, expense dates and different digests distinguish periods requiring checking.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-15",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The paper log identifies two 900-page jobs on different days.",
+      "tierRationale": "Only identical description and price link the records; no expense dates, receipts or references distinguish or identify the jobs.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-04",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The second entry might be a cancellation or a new request; neither refund nor entry purpose is established.",
+      "tierRationale": "Descriptions match, but one amount is unknown and there is no shared reference or receipt; nearby creation times do not resolve identity.",
+      "confidence": "low"
+    },
+    {
+      "caseId": "v2-12-10",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two probes could reflect two purchases or a warranty replacement, and the slips cannot establish dates or serials.",
+      "tierRationale": "Description and amount match, but receipt digests differ and no transaction reference or expense date identifies the purchase.",
+      "confidence": "low"
+    },
+    {
+      "caseId": "v2-04-13",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "One repair job was reissued with a delayed-collection discount.",
+      "tierRationale": "Related repair descriptions and BIND-53/BIND-53R suggest a revision, but different amounts and digests need confirmation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-09",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The quote and paid invoice represent one kit purchase revised to add the target card.",
+      "tierRationale": "The reference and related kit descriptions match, but estimate/exact amounts and differing digests require reconciling the final scope.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-10",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The 300 kg delivery and 75 kg top-up were separate supplies despite the copied amount error.",
+      "tierRationale": "The descriptions distinguish an initial quantity and a top-up, and references and digests differ; equal amounts alone do not identify the same delivery.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-04",
+      "decision": "duplicate",
+      "evidenceTier": "potentially-related",
+      "rationale": "The voided booking and replacement concern one fulfilled skip requirement, with only the replacement paid.",
+      "tierRationale": "Identical descriptions and amounts relate the entries, but different references and digests do not establish a replacement relationship in the records.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-03-18",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The allowance and reimbursement may overlap, but an unrecorded reversal could remove the apparent duplicate payment.",
+      "tierRationale": "Both descriptions concern footwear reimbursement, but amounts and references differ with no receipts or worker identity establishing one obligation.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-01-11",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "The advance covered several receipts and remains unreconciled, leaving the overlap with this material charge unknown.",
+      "tierRationale": "Related restoration-material context and advance wording suggest possible linkage, but references and amounts differ and the estimate has no receipt digest.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-03-01",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Consumables and visitor toe caps were separately purchased; the common receipt is a filing mistake.",
+      "tierRationale": "A matching digest needs inspection because descriptions, amounts and card references identify different goods and charges.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-14",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Initial and second sifting passes incurred separate fees despite a shared batch number.",
+      "tierRationale": "The matching batch reference and amount link the work, but initial versus second pass wording and different digests distinguish service stages.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-11",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Dispatch and reimbursement records both charge for one collection of 300 alder plants.",
+      "tierRationale": "The transaction reference, amount, quantity and equivalent bare-root alder descriptions match without a material recorded contradiction.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-05",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The utensils were rented and separately paid for on successive weekends.",
+      "tierRationale": "The reference is account-labelled, while expense dates and digests differ; identical description and fee fit recurring rentals.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-20",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The scenario separates copying and binding charges on the report job.",
+      "tierRationale": "The shared digest and reference link a job, but the differing amounts and possibly inclusive bound-report wording leave line allocation to inspect.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-06",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Root trainers and tree guards were separate purchases; the repeated photograph was accidental.",
+      "tierRationale": "The matching digest conflicts with different products, quantities, amounts and references, requiring attachment verification.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-14",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "Conflicting memories of one versus two laundry visits lack dated records to resolve them.",
+      "tierRationale": "The equal amount and laundry context are the only links; there are no receipt digests, transaction references or expense dates.",
+      "confidence": "low"
+    },
+    {
+      "caseId": "v2-05-04",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "The dispatch book identifies separate pickups from two hostels.",
+      "tierRationale": "The quantity and price match, but TWL-STANDING appears to identify a standing booking and there are no receipt or expense-date transaction indicators.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-19",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two desks entered the same invoice for one collected print run.",
+      "tierRationale": "Matching digest, reference, amount, A5 format and two-thousand-copy quantity corroborate one transaction.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-09",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two interpreters provided simultaneous but independently paid services in different rooms.",
+      "tierRationale": "Matching descriptions, duration and price lack names, rooms or transaction references; different digests do not establish one charge.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-07",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The quote and invoice cover one print job reduced from 100 to 80 copies.",
+      "tierRationale": "The job reference and handbook context match, but the estimate and exact amounts differ and receipt digests differ, requiring final-job reconciliation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-05",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Curtains were separately cleaned in April and August.",
+      "tierRationale": "The expense dates are months apart despite identical creation timestamps, descriptions and prices; receipts and references are absent.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-10",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "A free replacement print run adds no new charge, so both price-bearing entries concern one paid obligation.",
+      "tierRationale": "Identical descriptions and amounts plus related MEET-6/MEET-6R references suggest linked jobs, but different references and digests require checking.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-06",
+      "decision": "distinct",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two separate deliveries occurred; the matching ticket reference was copied in error.",
+      "tierRationale": "The same reference, amount and ten-roll crossing-tape descriptions corroborate a shared transaction without a material recorded contradiction; creation dates are not delivery dates.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-14",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "July and August licences activate separately charged periods.",
+      "tierRationale": "The same reference and amount link the subscription, but explicit different months and different receipt digests distinguish periods needing verification.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-05",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "The deposit was partly applied, but the final record could be an inclusive invoice or a balance.",
+      "tierRationale": "The shared reference and deposit/final-invoice descriptions link the order, but different amounts and digests do not resolve allocation.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-11-13",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "One recalled appointment conflicts with different appointment numbers and languages, without confirmation of replacement.",
+      "tierRationale": "The equal amount and related mediation descriptions are contextual links; different references and receipt digests supply no clear shared transaction identifier.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-03-15",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The offline phone produced two entries of one order with blurred and clear images of the same card receipt.",
+      "tierRationale": "Matching reference, amount, description and ten-pair quantity corroborate one purchase; differing digests alone do not materially contradict it.",
+      "confidence": "high"
+    }
+  ]
+}

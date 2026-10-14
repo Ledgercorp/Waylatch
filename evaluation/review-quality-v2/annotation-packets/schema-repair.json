@@ -1,0 +1,29 @@
+{
+  "datasetId": "waylatch-review-quality-v2",
+  "cases": [
+    {
+      "id": "v2-07-05",
+      "scenario": "The advance was deducted from the final bill, but the word final may mean the entire invoice total or only the remaining amount in the second app entry. The receipt has not been recovered.",
+      "left": {
+        "id": "rv2-125-l",
+        "incident": "fictional-operation-07",
+        "description": "Millet flour processing advance.",
+        "amountCents": 30000,
+        "receiptDigest": null,
+        "transactionReference": "ML-55",
+        "createdAt": "2026-09-28T22:27:00Z",
+        "amountKind": "estimate"
+      },
+      "right": {
+        "id": "rv2-125-r",
+        "incident": "fictional-operation-07",
+        "description": "Millet flour processing final payment.",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": "ML-55",
+        "createdAt": "2026-09-28T08:27:00Z",
+        "amountKind": "unknown"
+      }
+    }
+  ]
+}

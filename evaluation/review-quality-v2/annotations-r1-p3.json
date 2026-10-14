@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "waylatch-review-quality-v2",
+  "method": "Fresh model-blind nonexpert AI review; no predictions or code",
+  "annotations": [
+    {
+      "caseId": "v2-09-18",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "Conflicting memories leave one payment versus two unresolved.",
+      "tierRationale": "Identical descriptions and amounts show similarity, but no receipt or reference links a transaction.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-10-18",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Handles and heads are separately purchased lines.",
+      "tierRationale": "Shared document and reference connect the records, but handles and heads describe different components.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-09",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Both documents concern the one weighed grain batch.",
+      "tierRationale": "M-247, equal amounts and equivalent 800-kg milling descriptions corroborate identity; different file digests do not contradict it.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-11",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Roasting and crushing are separate batches for different uses.",
+      "tierRationale": "Equal amounts and a grain context are weak similarities; the services and end products differ, with no transaction link.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-17",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The corrected receipt replaces the erroneous full amount for one job.",
+      "tierRationale": "Original/revised wording and related references link a revision, but the tenfold amount difference needs inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-19",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "The missing final bill prevents resolving substitution versus additional purchase.",
+      "tierRationale": "AXE-64 and equal amounts link the records, but loose components versus axes need reconciliation.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-06-12",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The receipt and statement reproduce one final load charge.",
+      "tierRationale": "LOAD-790, equal amounts and matching final-truck descriptions provide corroborating indicators.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-02",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The compass set and tripod feet are separate purchases with a misattached receipt.",
+      "tierRationale": "A shared document merits inspection, but different goods, totals and references contradict identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-01",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two lorries were separately ordered and billed.",
+      "tierRationale": "Matching wording and totals lack a transaction identifier; different digests alone cannot establish either identity or separation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-08",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Both entries represent the same consignment processing charge.",
+      "tierRationale": "PULSE-40, equal totals and equivalent two-tonne quantities corroborate the closely related processing descriptions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-14",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "A possible reference correction conflicts with the different delivery information and lacks confirmation.",
+      "tierRationale": "Similar utensil descriptions and equal totals accompany transposed-looking CK-31 and CK-13 references that require inspection.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-11-08",
+      "decision": "distinct",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The scenario specifies two separately billed calls on the consolidated receipt.",
+      "tierRationale": "The records share description, amount, document and reference without any recorded distinction between calls.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-19",
+      "decision": "distinct",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two groups separately purchased two bundles under a common manifest.",
+      "tierRationale": "Matching quantities, totals, descriptions, reference and document provide multiple identity indicators; creation dates do not identify expense dates.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-19",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two officers entered the one mobile mill visit fee.",
+      "tierRationale": "The same visit reference, document and amount corroborate equivalent service descriptions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-12",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "One recorded issue and two unlocated slips cannot establish how many relevant purchases occurred.",
+      "tierRationale": "Identical wording, amounts and creation times lack transaction-specific evidence.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-08-15",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "East and west depots paid for separate lockers.",
+      "tierRationale": "The document and MULTI-55 reference link the entries, while their explicitly different depots require allocation checks.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-05",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The second entry records a transfer of the same purchased tripod.",
+      "tierRationale": "TRI-141, equivalent goods and equal totals link the entries, but different recorded locations need reconciliation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-16",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Both entries reproduce the same paid printing job.",
+      "tierRationale": "MAP-902 and equal totals corroborate the equivalent laminated large-map descriptions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-05",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "It is unclear whether the final amount includes the advance or is an additional balance.",
+      "tierRationale": "ML-55 links advance and final-payment wording, but differing totals and uncertain amount kinds leave overlap unresolved.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-10-17",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The exchange added no payment, so both full values represent one expense.",
+      "tierRationale": "Matching goods and amounts plus BAR-15 within EX-BAR-15 suggest a related exchange, but separate references require inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-09",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two photographs document the one blanket cleaning payment.",
+      "tierRationale": "WOOL-96, equal totals and equivalent quantities of 24 blankets corroborate identity despite different file digests.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-17",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The replacement was free and both entries repeat the full expense value.",
+      "tierRationale": "Matching goods and totals with WIL-44/WIL-44R suggest revision or replacement, requiring confirmation of charge treatment.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-07",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "These are separately charged consecutive fortnightly batches.",
+      "tierRationale": "STORE-17 and matching charges link the records, but expense dates two weeks apart materially distinguish the services.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-19",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "A reprint and original receipt record one shop charge.",
+      "tierRationale": "BOWL-115, matching goods, quantities and totals corroborate identity; different creation dates and digests do not establish separate purchases.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-08",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "Both entries concern one wash before and after compensation, although the recorded amounts and labels are inconsistent.",
+      "tierRationale": "LIN-712 links the records, but an offset description and differing totals need inspection to determine how amounts relate.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-05-10",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Two cages at different buildings incurred separate fees.",
+      "tierRationale": "Matching CAGE-40 and fees connect the entries, but different recorded buildings contradict unqualified identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-18",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Separate hall loads were individually charged.",
+      "tierRationale": "Shared DAY-18 and document merit inspection, while hall descriptions and locations distinguish the services.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-17",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "Unnamed, undated vouchers do not establish whose payment each concerns.",
+      "tierRationale": "Similar reimbursement wording and equal amounts provide context only, without a document or reference match.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-09-07",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The discounted replacement receipt supersedes the original for one batch.",
+      "tierRationale": "Related JUN-25/JUN-25R references and price-status descriptions suggest revision, but different amounts require reconciliation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-08-10",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The confirmed booking replaced the reservation with full credit and no extra charge.",
+      "tierRationale": "Equal totals and RES-709/CONF-709 suggest a linked booking transition, but the distinct references and stages require inspection.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-18",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Bags and processing labour are separately payable items.",
+      "tierRationale": "Shared MILL-66 and document link the records, but goods versus labour and different amounts indicate separate lines.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-14",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The allowance and weighed invoice describe one dispatched load.",
+      "tierRationale": "CON-77 links similar cartage descriptions; estimate versus exact labels explain a possible amount change but require checking.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-05-20",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "An unitemised statement and undated envelope cannot establish whether the service overlaps.",
+      "tierRationale": "Equivalent wash-and-mending descriptions and equal totals lack a shared transaction reference or matched document.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-03-11",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "Only one charge settled after cancellation and reordering.",
+      "tierRationale": "Matching goods and totals connect the entries, but ORDER-71 versus ORDER-74 requires checking whether they are separate orders.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-17",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Both descriptions refer to the same two integrated waders under one order.",
+      "tierRationale": "WAD-18 and equal totals corroborate compatible descriptions of protective wading footwear.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-01",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "The two crew issues are not linked to the available receipt, leaving the purchases unresolved.",
+      "tierRationale": "Matching document, goods and total warrant inspection, but a shared receipt without a transaction reference cannot establish how many purchases it covers.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-11-11",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The corrected billing address did not create a second service charge.",
+      "tierRationale": "TECH-47, equal amounts and equivalent 90-minute technical-briefing descriptions corroborate identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-12",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Morning and afternoon processing were separate paid batches.",
+      "tierRationale": "Morning/afternoon wording and AM-29/AF-29 references distinguish charges despite equal amounts.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-02",
+      "decision": "ambiguous",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "A cropped receipt and possibly shared batch number cannot resolve which job each entry represents.",
+      "tierRationale": "The recorded descriptions, totals and TERM-18 references match without a recorded transaction distinction; different digests do not contradict identity.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-06-18",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Separate paid loads originated from the two trenches.",
+      "tierRationale": "Shared DAY-91 and document connect the entries, but west and east trench locations distinguish potential allocations.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-08-06",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The tax-detail correction reprinted one paid receipt.",
+      "tierRationale": "CHILL-61 and equal totals corroborate explicit original/revised receipt descriptions for the same chiller booking.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-12",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The refundable deposit and rental charge are separate required payments.",
+      "tierRationale": "Shared AGR-380, document and amount link the entries, but deposit versus balance wording requires checking their separate payment roles.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-12",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "Different remembered quantities conflict with the recollection of one job and no receipt resolves this.",
+      "tierRationale": "Similar badge-printing wording with different totals provides context, but no reference or document links a specific job.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-09-01",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Reserve and installation stock were separately ordered and invoiced.",
+      "tierRationale": "Purpose-specific descriptions and RESERVE-8/INSTALL-8 references distinguish the orders despite matching goods and totals.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-12",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Different terminology describes one assortment and settled order.",
+      "tierRationale": "SC-82, equal totals and compatible sieve/strainer and colander/basket descriptions corroborate identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-06",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two settlements funded separate clearances.",
+      "tierRationale": "Identical four-tonne descriptions and amounts lack a reference or receipt linking a transaction.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-01",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Both entries correspond to the same weighed aggregate delivery.",
+      "tierRationale": "AG-62, shared document, equal totals and compatible aggregate/apron descriptions corroborate identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-08-03",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "A failed authorisation and successful payment refer to the same underlying charge.",
+      "tierRationale": "Matching pallet-batch descriptions and totals link the records, but AUTH-4410/PAY-4417 need settlement verification.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-05",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Separate test patches received distinct paid allocations.",
+      "tierRationale": "Shared TEST-16, document and amounts link the entries, but areas A and B are explicit location distinctions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-07",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The estimate and revised invoice concern the single kit order.",
+      "tierRationale": "KIT-508 links estimate and revised-content descriptions, while different totals and estimate/exact labels require checking the final amount.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-02-13",
+      "decision": "ambiguous",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two kits could represent either a free replacement or two purchases.",
+      "tierRationale": "Matching goods and totals show similarity, but the second record lacks a receipt and reference to connect it to CASE-8.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-06-08",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Before- and after-festival trips were separately paid.",
+      "tierRationale": "Equal descriptions and amounts are offset by different expense dates; no transaction-specific identifier links the trips.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-18",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Lids and complete pots were separate purchases with a misattached receipt.",
+      "tierRationale": "The shared document requires inspection, while different goods, amounts and LID-32/POT-91 references contradict identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-07",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The till slip and emailed image document one six-pair collection.",
+      "tierRationale": "BOOT-221, shared document, equal totals and matching six-person/six-pair safety-boot descriptions corroborate identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-01-13",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "Unreadable receipt marks and uncertain paper identity leave the transactions unresolved.",
+      "tierRationale": "Matching goods and totals accompany differing E-418/E-478 references that may need document inspection.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-01-15",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The invoice contains two separately priced tools.",
+      "tierRationale": "HW-200 and shared document link the records, but chalk/cord versus a funnel and differing amounts distinguish line items.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-04",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Spring and autumn orders were independently invoiced.",
+      "tierRationale": "SEASON-CONTRACT links matching totals, but season descriptions and expense dates six months apart distinguish the transactions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-15",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The reclassified ticket replaces the original for one disposal trip.",
+      "tierRationale": "Equivalent plasterboard/gypsum descriptions and GY-63/GY-63R suggest revision, but changed totals require verification.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-03",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The exchanged batch and original are full totals for one replacement obligation with a price adjustment.",
+      "tierRationale": "Original/replacement wording, twenty-unit quantities and PEEL-65/PEEL-65R link the records, but differing totals require reconciliation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-08",
+      "decision": "distinct",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two lots were separately charged although the receipts share the order number.",
+      "tierRationale": "HAZ-63, identical descriptions and equal totals provide corroborating indicators without any recorded lot distinction; different digests alone do not establish separate transactions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-13",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Each depot independently ordered its own processing run.",
+      "tierRationale": "A shared document links the records, but OAT-N-12/OAT-R-12 references and different depot locations distinguish services.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-06",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Sharpening occurred for two separate courses on different dates.",
+      "tierRationale": "WOOD-ACCT and matching eight-chisel charges connect the entries, but expense dates more than a month apart materially distinguish visits.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-01",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Different-capacity jugs are separate purchased lines.",
+      "tierRationale": "JUG-51 and shared document link the records, but one-litre/two-litre specifications and differing totals distinguish goods.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-04-04",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "One card batch appears as an estimate and final amount including trimming.",
+      "tierRationale": "PC-63 links compatible card descriptions, while estimate/exact status and differing totals require reconciliation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-13",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two employees received separately purchased identical pairs.",
+      "tierRationale": "Matching boot description and amount lack a transaction reference; distinct digests do not independently establish the purchases.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-09",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Transport and landfill acceptance are separate payable charges.",
+      "tierRationale": "BROKER-12 and shared document link the entries, but transport versus disposal and different totals indicate separate line items.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-19",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Two purchases supplied separate inspections on different expense dates.",
+      "tierRationale": "Matching wording and amounts provide similarity, while distinct expense dates support separate occurrences with no shared transaction identifier.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-06-07",
+      "decision": "ambiguous",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "The shared number might cover one load or a whole day with multiple collections.",
+      "tierRationale": "Z4-7, identical descriptions and equal totals corroborate identity without any recorded load or time-of-service distinction.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-11-12",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The reissued full invoice overlaps the original full session total.",
+      "tierRationale": "LS-81/LS-81R and adjustment wording link the records, but differing hours and totals require checking whether the amount is incremental or replacement.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-07-02",
+      "decision": "ambiguous",
+      "evidenceTier": "needs-verification",
+      "rationale": "The unallocated settlement may include the batches, but overlap cannot be established.",
+      "tierRationale": "An account settlement and a specific milling charge suggest possible aggregate overlap, but separate references and totals provide no allocation.",
+      "confidence": "medium"
+    },
+    {
+      "caseId": "v2-11-01",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "The deposit and balance are two required instalments.",
+      "tierRationale": "COURT-83 and equal totals link the records, but explicit deposit/balance wording and different documents require verifying separate instalments.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-02",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Empty and fully equipped chests were separately purchased.",
+      "tierRationale": "Different contents, amounts and EMPTY-42/FULL-57 references distinguish the related products.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-09-13",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Transport and plant stock are separately charged lines.",
+      "tierRationale": "RIDGE-17 and shared document connect the entries, but transport versus goods and different totals distinguish their charges.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-05",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two descriptions document the same four-pair warehouse order.",
+      "tierRationale": "CT-62, shared document and equal totals corroborate compatible warehouse safety-footwear descriptions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-10-12",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Inspection and rental are separately payable fees.",
+      "tierRationale": "HOIST-22 and shared document connect the entries, but inspection versus rental and differing totals distinguish charge roles.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-02",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "Morning and afternoon sessions were separately billable.",
+      "tierRationale": "DAY-213 and shared document link equal totals, but morning/afternoon descriptions explicitly distinguish sessions.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-11-16",
+      "decision": "duplicate",
+      "evidenceTier": "strong-duplicate-evidence",
+      "rationale": "Two officers entered one interpreter invoice for the same session.",
+      "tierRationale": "INT-401, shared document, equal totals and equivalent two-hour/120-minute intake descriptions corroborate identity.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-02",
+      "decision": "distinct",
+      "evidenceTier": "needs-verification",
+      "rationale": "June and July resoling services were separate jobs; the scenario misstated creation month without changing their service dates.",
+      "tierRationale": "RESOLE and identical three-pair totals link the entries, but expense dates over a month apart distinguish service occurrences.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-12-04",
+      "decision": "duplicate",
+      "evidenceTier": "needs-verification",
+      "rationale": "The diary estimate and final welder receipt concern one repair ticket.",
+      "tierRationale": "WELD-47 links compatible pan-handle welding descriptions; estimate/exact labels and different totals require reconciliation.",
+      "confidence": "high"
+    },
+    {
+      "caseId": "v2-03-16",
+      "decision": "distinct",
+      "evidenceTier": "potentially-related",
+      "rationale": "Different crews made separate six-pair purchases.",
+      "tierRationale": "Identical descriptions and amounts lack a receipt, reference or expense date linking a particular transaction; creation spacing does not prove separation.",
+      "confidence": "high"
+    }
+  ]
+}

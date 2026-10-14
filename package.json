@@ -32,7 +32,8 @@
     "demo:update-payment": "python3 scripts/update-demo-payment.py",
     "webhook:gateway": "tsx scripts/webhook-gateway.ts",
     "demo:record": "tsx scripts/record-demo.ts",
-    "demo:render": "python3 scripts/render-demo.py"
+    "demo:render": "python3 scripts/render-demo.py",
+    "ai:evaluate:quality": "tsx scripts/evaluate-review-quality.ts"
   },
   "dependencies": {
     "@huggingface/transformers": "4.3.1",

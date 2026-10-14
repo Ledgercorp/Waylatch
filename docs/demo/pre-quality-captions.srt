@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:05,002
+Waylatch: keep a request moving; keep authority human. Fictional walkthrough, real application.
+
+2
+00:00:05,002 --> 00:00:09,960
+Network loss simulated. Preserve the request locally; no server submission or financial action.
+
+3
+00:00:09,960 --> 00:00:16,165
+Actual offline browser reload: the request survives in IndexedDB. Browser observations are local evidence.
+
+4
+00:00:16,165 --> 00:00:22,612
+Bounded QR packets carry request data across disconnection. They carry no payment authority.
+
+5
+00:00:22,612 --> 00:00:30,222
+A second offline browser decodes an actual QR image and reconstructs the packets. Import stays untrusted.
+
+6
+00:00:30,222 --> 00:00:39,238
+Real local MiniLM inference plus side-by-side context. Semantic cosine is evidence, never a fraud probability.
+
+7
+00:00:39,238 --> 00:00:45,839
+Related, unrelated or investigate: an advisory disposition never approves either record or executes payment.
+
+8
+00:00:45,839 --> 00:00:52,599
+Human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE remain required. Judge financial controls are disabled.
+
+9
+00:00:52,599 --> 00:01:00,137
+Separate historical purchase: USD 1.00 simulated funds, completed capture, USD 0.00 real spending. No checkout is reenacted.
+
+10
+00:01:00,137 --> 00:01:07,170
+Proof Trail names browser, organization and provider sources. Original seven-event audit links validate; missing earlier events stay visible.
+
+11
+00:01:07,170 --> 00:01:14,287
+Saved independent PayPal inspection confirms COMPLETED. Viewing this archive makes no provider call and no new purchase.
+
+12
+00:01:14,287 --> 00:01:27,680
+Download a sanitized report or independently validate the original SHA-256 chain. An administrator can rewrite a full database.

@@ -1,0 +1,74 @@
+{
+  "verifiedAt": "2026-10-14T11:52:37.842157+00:00",
+  "originalV1Checks": [
+    {
+      "path": "evaluation/frozen-manifest.json",
+      "unchanged": true,
+      "sha256": "db15eb539d75189d245f76b775cbe2dad269c2a2d775b5476cd2e9f479314f41"
+    },
+    {
+      "path": "evaluation/frozen-manifest.json.completed.json",
+      "unchanged": true,
+      "sha256": "b4ee5140541d3c725d01f78f24f8553dda50ce600ba57abfbd8c309cbe6b0b33"
+    },
+    {
+      "path": "docs/evidence/ai-evaluation-calibration.json",
+      "unchanged": true,
+      "sha256": "e9f7a7ee60d7241bc4671bd2574440197334a19e022b579ae5453fc5b3b8eb79"
+    },
+    {
+      "path": "docs/evidence/ai-evaluation-heldout.json",
+      "unchanged": true,
+      "sha256": "fe2d5ebcc00a890b3863de37e30e8d289d8e051ed4837b697e776a785b3b68d7"
+    },
+    {
+      "path": "evaluation/cases-unlabeled.json",
+      "unchanged": true,
+      "sha256": "c5a43bab001eb529f5ab07f95c8371741841c304be451852f397de9f1ca0873c"
+    },
+    {
+      "path": "evaluation/independent-annotations.json",
+      "unchanged": true,
+      "sha256": "40644fb7cf486c873508e00b781231de14af63f2f8c87ca21c48ad3c2c009356"
+    },
+    {
+      "path": "src/risk/review.ts",
+      "unchanged": true,
+      "sha256": "a16debd0ce07975785ac3122fd3aeb59dfe9d69054d0a95899530f48c48fe68f"
+    },
+    {
+      "path": "src/risk/evaluation.ts",
+      "unchanged": true,
+      "sha256": "a97f5ff13d416ae74446a4c51c6f5a9112860318216a51e757fd319b820d5fcb"
+    },
+    {
+      "path": "src/risk/model.ts",
+      "unchanged": true,
+      "sha256": "ab185263617a79d23e309a6699f503cf7ca81c5f26e5248464b90a7662d990fd"
+    },
+    {
+      "path": "src/risk/model-assets.ts",
+      "unchanged": true,
+      "sha256": "2651954cd895196cae2173badf46b5a879453b5eaa97aa3d8d8bc32f627dcea1"
+    },
+    {
+      "path": "scripts/evaluate-ai.ts",
+      "unchanged": true,
+      "sha256": "cf0ecd1d7d1e8afdb104d40ca80d1c9c7399e80cb872d70fd11c06e2aec30965"
+    },
+    {
+      "path": "package-lock.json",
+      "unchanged": true,
+      "sha256": "25e023dda07447a279f61479b3ad27fd6d527cdfce17c19999298ca4edf80aa2"
+    }
+  ],
+  "v2ManifestSha256": "4533afa55a73ac247fa0466fa742ed516aaf9254381f646ad9f558e20bab3ce4",
+  "v2HeldoutReportSha256": "2cea95f45d05a81e6d68bb176faf0eb6d27e52e8e17dc4d5cd923a0371262e91",
+  "v2ReceiptSha256": "f366d2366843701c07f115168fa5a447cb01d71abd9978f7ba3d08dcacbcb52c",
+  "v2CalibrationSha256": "11f8edd98b00513f37d55bf02a7b956f6b729668a3237fa6ac303b31d03ace50",
+  "v2ScoringFingerprintMatchesCurrentSource": true,
+  "v2ReceiptMatchesActualOutput": true,
+  "frozenBeforeHeldout": true,
+  "confusionCountsIndependentlyRecomputed": true,
+  "noEvaluationRerunPerformed": true
+}

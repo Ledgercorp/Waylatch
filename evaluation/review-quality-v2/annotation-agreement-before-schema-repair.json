@@ -1,0 +1,352 @@
+{
+  "cases": 240,
+  "judgments": 480,
+  "identityDisagreements": 1,
+  "tierDisagreements": 22,
+  "decisions": {
+    "duplicate": 83,
+    "distinct": 116,
+    "ambiguous": 41
+  },
+  "tiers": {
+    "strong-duplicate-evidence": 44,
+    "potentially-related": 69,
+    "needs-verification": 104,
+    "ambiguous": 22,
+    "none": 1
+  },
+  "disagreements": [
+    {
+      "caseId": "v2-01-06",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "strong-duplicate-evidence",
+        "needs-verification"
+      ]
+    },
+    {
+      "caseId": "v2-01-07",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    },
+    {
+      "caseId": "v2-01-16",
+      "identityAgrees": false,
+      "tierAgrees": true,
+      "identityJudgments": [
+        "ambiguous",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "needs-verification"
+      ]
+    },
+    {
+      "caseId": "v2-02-09",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-02-11",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "ambiguous",
+        "ambiguous"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-03-11",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    },
+    {
+      "caseId": "v2-03-17",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "strong-duplicate-evidence",
+        "needs-verification"
+      ]
+    },
+    {
+      "caseId": "v2-03-20",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-04-07",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-05-04",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "potentially-related",
+        "needs-verification"
+      ]
+    },
+    {
+      "caseId": "v2-06-14",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-06-17",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    },
+    {
+      "caseId": "v2-07-02",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "ambiguous",
+        "ambiguous"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    },
+    {
+      "caseId": "v2-07-03",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-08-01",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    },
+    {
+      "caseId": "v2-09-04",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    },
+    {
+      "caseId": "v2-10-01",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "ambiguous",
+        "ambiguous"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-10-06",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    },
+    {
+      "caseId": "v2-11-13",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "ambiguous",
+        "ambiguous"
+      ],
+      "tierJudgments": [
+        "potentially-related",
+        "needs-verification"
+      ]
+    },
+    {
+      "caseId": "v2-11-19",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "potentially-related",
+        "needs-verification"
+      ]
+    },
+    {
+      "caseId": "v2-12-04",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-12-07",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "duplicate",
+        "duplicate"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "strong-duplicate-evidence"
+      ]
+    },
+    {
+      "caseId": "v2-12-20",
+      "identityAgrees": true,
+      "tierAgrees": false,
+      "identityJudgments": [
+        "distinct",
+        "distinct"
+      ],
+      "tierJudgments": [
+        "needs-verification",
+        "potentially-related"
+      ]
+    }
+  ],
+  "rawSources": [
+    {
+      "file": "annotations-r1-p1.json",
+      "sha256": "edc7cecf9153a76529d74453d5b708115c4713b41d6d9ee26b2950f77db89da8",
+      "count": 80
+    },
+    {
+      "file": "annotations-r1-p2.json",
+      "sha256": "d8c7eeae4ffe5b855a8895308eff72aa6422ccc6b802690116794c98be067ab5",
+      "count": 80
+    },
+    {
+      "file": "annotations-r1-p3.json",
+      "sha256": "fe811493781a0963b6b96c3f1911dd7b42a7ea629480ddb481b8890101e4c192",
+      "count": 80
+    },
+    {
+      "file": "annotations-r2-p1.json",
+      "sha256": "c7bbfbe0c0c27bb68e31d39a9139c93730ace6078e890919e5cc10ae88dbfe49",
+      "count": 80
+    },
+    {
+      "file": "annotations-r2-p2.json",
+      "sha256": "9d9c04b77c3b8b6afc097c42f6e9ea33cb672bc62831e3efecca0dc27217d732",
+      "count": 80
+    },
+    {
+      "file": "annotations-r2-p3.json",
+      "sha256": "fcc6250d7b66b4e8960473fe03abf0a46875ad65a574e097f8a33add50ad28e0",
+      "count": 80
+    }
+  ],
+  "annotationsSha256": "d6d7507b636307ab3c823dc2a62e1dfda8eb81c42600357b438f3621b119ce97"
+}

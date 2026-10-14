@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-14T11:16:44.872582+00:00",
+  "generatedAt": "2026-10-14T11:43:07.485230+00:00",
   "category": "authentic-current-application-with-genuine-local-inference",
   "file": "docs/demo/waylatch-competitive-preview.mp4",
-  "sha256": "cd673e2d243117181db3bf9e0910ffd70087b55823b90ebaaf9bc4c45b480c1c",
-  "durationSeconds": 87.68,
-  "bytes": 2375870,
+  "sha256": "96d6025a229905376f38b42ed75640caf1c85123b5dee7d27fece64de5557b6d",
+  "durationSeconds": 87.76,
+  "bytes": 2422695,
   "codec": "h264",
   "width": 1600,
   "height": 900,
@@ -27,47 +27,47 @@
       "caption": "Waylatch: keep a request moving; keep authority human. Fictional walkthrough, real application."
     },
     {
-      "seconds": 5.00241064,
+      "seconds": 4.963340305000002,
       "caption": "Network loss simulated. Preserve the request locally; no server submission or financial action."
     },
     {
-      "seconds": 9.959689025000001,
+      "seconds": 9.800354068000003,
       "caption": "Actual offline browser reload: the request survives in IndexedDB. Browser observations are local evidence."
     },
     {
-      "seconds": 16.165255300000002,
+      "seconds": 16.07606944,
       "caption": "Bounded QR packets carry request data across disconnection. They carry no payment authority."
     },
     {
-      "seconds": 22.612444519,
+      "seconds": 22.529262996,
       "caption": "A second offline browser decodes an actual QR image and reconstructs the packets. Import stays untrusted."
     },
     {
-      "seconds": 30.221684152,
-      "caption": "Real local MiniLM inference plus side-by-side context. Semantic cosine is evidence, never a fraud probability."
+      "seconds": 30.303200717,
+      "caption": "Real local MiniLM retrieves related wording. The advisory tier separates similarity from transaction identity; contradictions stay visible."
     },
     {
-      "seconds": 39.237950164,
-      "caption": "Related, unrelated or investigate: an advisory disposition never approves either record or executes payment."
+      "seconds": 39.421365096,
+      "caption": "Grouped attention and informational comparisons reduce repeated warnings. Related, unrelated or investigate never approves a purchase."
     },
     {
-      "seconds": 45.838690833,
+      "seconds": 46.030830208,
       "caption": "Human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE remain required. Judge financial controls are disabled."
     },
     {
-      "seconds": 52.59944730000001,
+      "seconds": 52.812685946,
       "caption": "Separate historical purchase: USD 1.00 simulated funds, completed capture, USD 0.00 real spending. No checkout is reenacted."
     },
     {
-      "seconds": 60.137349174,
+      "seconds": 60.33481517599999,
       "caption": "Proof Trail names browser, organization and provider sources. Original seven-event audit links validate; missing earlier events stay visible."
     },
     {
-      "seconds": 67.169924126,
+      "seconds": 67.36925386,
       "caption": "Saved independent PayPal inspection confirms COMPLETED. Viewing this archive makes no provider call and no new purchase."
     },
     {
-      "seconds": 74.28726441999999,
+      "seconds": 74.467969685,
       "caption": "Download a sanitized report or independently validate the original SHA-256 chain. An administrator can rewrite a full database."
     }
   ],

@@ -1,107 +1,81 @@
-# Title
+# Devpost project draft — private competitive work
 
-Waylatch
+## Project name and pitch
 
-### ⏳ Not submitted yet
+Waylatch — Offline-ready emergency procurement and accountable payments.
 
-Nothing has been sent to Devpost.
+From field need to verified action. Preserve a request without connectivity, hand it off by QR, compare review evidence and follow the recorded decisions through a Proof Trail.
 
-Private draft prepared 2026-10-13. This file organizes the existing project; it does not create a Devpost project or accept rules. The local `.devpost-hackathon-state.json` is absent; workflow initialization is intentionally deferred under the owner's continuation instruction.
+## Problem and audience
 
-## One-line Summary
+Field responders, volunteer coordinators and nonprofit teams may need supplies before reliable connectivity returns. Lost requests, repeated descriptions and uncertain expense records make later authorization and reconciliation harder. Waylatch connects preservation, handoff, advisory review and human payment authority in one workflow.
 
-Offline-ready emergency procurement and accountable payments. From field need to verified action.
+## What it does
 
-## Problem
+A fictional field request survives offline reload in IndexedDB. Bounded MessagePack QR packets reconstruct it on another browser, with explicit partial-transfer, duplicate-packet and revision-conflict states. Reconnection does not submit a request or execute a payment automatically.
 
-Field responders and nonprofit coordinators need to preserve supply requests while networks are unreliable, then review possible duplicate expenses and account for purchases. Lost drafts and disconnected handoffs make review and reconciliation harder.
+The coordinator compares descriptions side by side, sees matching and differing terms, checks receipts, transaction references, amounts, incident and timing context, and records a related, unrelated or investigate disposition. The interface distinguishes deterministic findings from semantic evidence and reports when inference is unavailable. Potential duplication remains a question for a person; similarity is never a probability of fraud.
 
-## Solution
+The new Proof Trail connects available request metadata, browser provenance, server audit events and saved provider evidence. It exposes missing events rather than manufacturing a complete story. A sanitized JSON report supports sharing; the separate original organization event chain supports independent SHA-256 validation. Local metadata does not prove an offline action occurred. Hash links do not prevent an administrator rewriting a complete database.
 
-Waylatch preserves requests in IndexedDB through offline reloads and transfers bounded RL1 QR packets between disconnected browsers. Imported information retains untrusted provenance and missing fields. A coordinator explicitly uploads, reviews and authorizes an exact revision and amount. PayPal Sandbox handles buyer approval and capture; authoritative inspection reconciles the completed purchase. A SHA-256-linked audit ties the decisions to transaction references. Separate incurred-expense claim review does not imply a reimbursement transfer.
+## Genuine payment evidence
 
-## Why This Matters
+The previously completed purchase is request **RL-REAL-20261013-201748**, revision **1**, order **2W330508JA572391V**, capture **8WY07860808872629**: **USD 1.00 simulated Sandbox funds; USD 0.00 real spending; COMPLETED / PAID**. Actual human REVIEW and AUTHORIZE, genuine buyer approval and a separate human CAPTURE decision preceded settlement. Saved independent read-only provider GETs confirmed the order, capture, amount, reference and single final capture. Seven original audit events validate.
 
-A single workflow connects field continuity with human accountability. Unknown or similar information cannot silently acquire payment authority. The potential benefit is fewer lost requests and clearer procurement review; no customer deployment, operational emergency result or field suitability is claimed.
+The judge archive displays that historical evidence separately from fictional walkthrough requests. It does not initiate another purchase, inspect PayPal live during playback or imply that the historical transaction occurs during an automated demo. The buyer's mobile loopback return page failed; authoritative provider inspection established approval and capture. See [saved provider evidence](evidence/paypal-real-sandbox.json), [independent verification](evidence/paypal-independent-verification.json) and [original event chain](evidence/paypal-sandbox-audit.json).
 
-## How We Used AI
+## How we built it
 
-The coordinator's local Node server runs pinned q8 Xenova/all-MiniLM-L6-v2 through Transformers.js and CPU ONNX. Actual 384-dimensional embeddings support explainable possible-duplicate review alongside receipt, amount, incident and time indicators. AI cannot approve, reject or execute payments. Initial model download needs connectivity; field phones do not run offline embeddings. TP5/FP0/FN1/TN6 on 12 synthetic calibration pairs is a tuning-set result, not held-out accuracy, fraud detection or emergency validation. See [AI model evidence](docs/AI_MODEL.md).
+React, TypeScript and Vite provide Request → Review → Pay → Proof → Audit within the existing visual identity. IndexedDB and a production service worker preserve field continuity. Strict Zod validation and bounded MessagePack/CRC32 packets treat imports as untrusted. Node 24, Express and built-in SQLite preserve review, authorization, reservations and audit events. Official PayPal Sandbox Orders v2 provides order creation, buyer approval, capture and reconciliation. Uncertain outcomes use persisted idempotency keys and explicit recovery.
 
-## How We Used Codex
+The existing pinned Apache-2.0 Xenova/all-MiniLM-L6-v2 q8 ONNX model runs through Transformers.js on local CPU after separately verified asset provisioning. It produces 384-dimensional embeddings without sending descriptions to an external inference service. Financial authority stays behind authenticated server gates; AI and relationship dispositions cannot approve or capture payments.
 
-Codex assisted the existing implementation, debugging and verification of offline/QR continuity, guarded Sandbox Orders, local semantic review and audit validation, as well as preserving historical data/protocol identities during the RescueLedger-to-Waylatch rebrand. It prepared browser evidence, license/source provenance review and the captioned demo. Existing logs substantiate the engineering work. Actual user REVIEW/AUTHORIZE, genuine Sandbox buyer checkout and separate CAPTURE supplied financial consent. This finalization updates documentation/media without rebuilding the application or rerunning completed work.
+## Genuine AI evaluation and limitations
 
-## Key Features
+The original 12-case threshold-selected benchmark remains TP5/FP0/FN1/TN6; it is not an independent accuracy estimate. The exact uploaded pinned MiniLM assets verify, and Transformers.js 4.3.1/ONNX 1.30.0 perform genuine local CPU inference. No model substitution, download or external inference service was used for this phase.
 
-- Offline persistence and explicit transfer/upload, with bounded packet reconstruction and revision conflicts.
-- Real local semantic review with supporting indicators and an explicit deterministic fallback.
-- Human approval of an exact request revision/amount and Sandbox-only authoritative purchase reconciliation.
-- Independent exported audit-chain validation and stable payment operation references.
-- Separate incurred-expense review, responsive field/coordinator views and tested keyboard dialogs.
+Original frozen held-out result (152 nonambiguous synthetic pairs): deterministic TP32/FP16/FN48/TN56, precision .667, recall .400, F1 .500; semantic TP62/FP70/FN18/TN2, precision .470, recall .775, F1 .585; combined TP57/FP70/FN23/TN2, precision .449, recall .713, F1 .551. Combined incorrectly flagged 70 of 72 distinct pairs. These measured failures remain unchanged.
 
-The genuine reference purchase is **RL-REAL-20261013-201748 revision 1**, exact **USD 1.00 simulated**, order **2W330508JA572391V**, capture **8WY07860808872629**, PayPal **COMPLETED**, Waylatch **PAID**. Seven audit events validate. [New independent provider GETs](docs/evidence/paypal-independent-verification.json) returned HTTP200/COMPLETED for the order and capture and matched exact amount/reference/single final capture. **Real spending: USD 0.00.** [Provider evidence](docs/evidence/paypal-real-sandbox.json); [human decision and cleanup provenance](docs/PAYPAL_AUTHENTICATED_CONTINUATION.md).
+We then separated informational semantic retrieval from structured needs-verification and strong-evidence tiers, grouped repeated candidate summaries and emphasized contradicting/missing facts. Similar language or an invoice document alone cannot establish transaction identity. Already stored optional location, expense time and amount certainty add context; supplier identity, line allocation and authoritative fulfillment facts are often absent.
 
-## Architecture
+A genuinely new protocol defined targets before predictions: 240 new fictional pairs, 80 calibration/160 held-out across disjoint supply families. Two fresh blinded nonexpert AI judgments per case preserve ambiguity and disagreement; they are not expert-human or field truth. Final held-out had 54 duplicate, 80 distinct and 26 ambiguous pairs. Code, settings, original model, data and labels were frozen before the once-only run.
 
-React/TypeScript/Vite and a service worker provide the browser UI; IndexedDB/idb persists field records. MessagePack/CRC32, qrcode and jsQR support bounded untrusted handoff. Zod validates input. Node.js 24/Express and built-in SQLite own coordinator sessions, approved amounts, payment reservations and event history. The fixed official PayPal Sandbox REST client performs OAuth and Orders v2 creation/details/capture; real webhook delivery is unverified. Transformers.js/ONNX runs pinned local CPU embeddings. [Architecture](docs/ARCHITECTURE.md); [original SVG](docs/submission/architecture.svg).
+On the same 134 binary pairs, preserved v1 combined had TP48/FP77/FN6/TN3 (precision .384, recall .889, F1 .536). Revised attention had TP10/FP30/FN44/TN50 (precision .250, recall .185, F1 .213). False attention per 100 distinct fell 96.25→37.50, but precision/recall worsened and the predefined targets failed. Zero strong predictions means undefined strong precision, not perfect accuracy. At a fixed 26-pair review budget, duplicates retrieved fell 6→4. Records-only tier agreement was 59/146 (.404), with 14 ambiguous tiers excluded. No improved detection, ranking, human workload effectiveness or field reliability is claimed. The interface is a quieter advisory comparison prototype; a person must inspect the actual records.
 
-Python supplies the pinned model downloader and video editing/rendering tooling; FFmpeg/FFprobe produce the silent captioned MP4. These media tools and their binaries are not bundled in the source release.
+[Full v2 scientific report](AI_REVIEW_QUALITY_V2.md) includes original and new results, every failure, family/category breakdowns, exploratory grouped-bootstrap intervals and frozen receipts. Held-out model load was about 534 ms, shared inference about 363 ms across 273 unique texts, peak process RSS about 391 MiB on one Linux CPU worker. These are bounded host observations, not phone/browser inference or operational performance guarantees. Neither exposed test may be reused as independent validation.
 
-Built-with tags: paypal, react, typescript, vite, node.js, express, sqlite, indexeddb, service-workers, zod, messagepack, qrcode, jsqr, transformers.js, onnx, minilm, sha-256, vitest, playwright, axe-core, github.
+## Judge access
 
-## Testing Instructions
+With Node.js 24+, npm and Python 3, run `npm run judge`. The bootstrap installs dependencies when needed, compiles the changed application when needed, verifies or downloads the same pinned model and starts an isolated loopback workspace. No merchant credentials or existing coordinator password are required. Model access is required for genuine local AI review.
 
-Follow [README.md](README.md) with Node.js 24+, npm, Python 3 and Chromium. Install locked dependencies in CPU mode, create local settings from `.env.example`, set a local coordinator passphrase, download the pinned free model assets, build and start the loopback production app. No application credentials are distributed. Use Sandbox-only credentials when exercising purchasing.
+Full default judge access has now passed from a clean source tree using the verified local model assets, with no merchant credentials. The optional `npm run judge -- --evidence-only` permits setup without requiring model assets; the interface must report its actual inference mode. The guide labels fictional records and the separate historical archive. Judge mode blocks financial authorization and provider operations; it never substitutes an automated financial decision for human approval.
 
-1. Create a fictional request, simulate disconnection, reload and verify the IndexedDB request survives.
-2. Export RL1 QR packets; import into a second disconnected browser and inspect reconstruction/provenance.
-3. Reconnect and explicitly upload. Run local semantic review and inspect reasons rather than treating similarity as fraud certainty.
-4. Inspect purchase approval gates. A new Sandbox transaction needs actual human REVIEW/AUTHORIZE, genuine buyer approval and separate CAPTURE. Do not repeat the already completed reference purchase.
-5. Independently validate `docs/evidence/paypal-sandbox-audit.json` with `npm run audit:validate -- docs/evidence/paypal-sandbox-audit.json`; compare record/revision/amount/order/capture references.
+Follow the in-app guide: preserve a fictional request offline → reload → transfer packets → reconnect and submit explicitly → compare evidence → inspect human authority boundaries → inspect the separate completed Sandbox archive → export its Proof Trail and original chain. Validate the original archive with `npm run audit:validate -- docs/evidence/paypal-sandbox-audit.json`.
 
-The audit CLI accepts validated raw arrays or `envelope.events`, rejects invalid shapes and validates the chain without trusting claimed metadata. Judge-command review exposed the previous unchecked-envelope path. Four new targeted checks passed for the genuine envelope, raw array, tampered event and missing events; [targeted log](docs/evidence/release-audit-cli-green.log), [genuine seven-event command result](docs/evidence/release-audit-envelope-green.log). No earlier whole suite was repeated.
+## Measured engineering evidence
 
-Existing reported checks: 69 local tests and nine browser tests at the alias-compatibility checkpoint; earlier real local inference/calibration and clean-install evidence remain in [VERIFICATION.md](docs/VERIFICATION.md). These are prior executed checks, not new finalization runs. Provider doubles, network emulation and automated UI decisions remain labeled simulations.
+[Current real-AI Chromium observations](evidence/quality-browser.json) record actual offline reload, interrupted QR recovery, repeated/malformed packet handling, explicit reconnection with zero server mutations, a development-visible consolidated-receipt hard-negative comparison, fictional and historical Proof Trails, sanitized export and original seven-event validation. At 390px and 1440px, historical Proof Trail checks reported no horizontal page overflow, keyboard-focused controls and no axe violations in inspected states. All nine original and five competitive browser checks now pass with genuine local inference; seven targeted competitive axe states have zero violations. Automated checks do not certify accessibility or replace assistive-technology testing.
 
-## Public Demo Link
+[Controlled resilience measurements](RESILIENCE_COMPETITIVE.md) cover 60-packet interrupted transfer, persisted revision conflicts, simulated lost provider responses, three store reopen cycles, transaction rollback and audit modification detection. At 1,000 records, median full-chain validation was 2.126 ms and read-all was 3.312 ms in this worker. Temporary SQLite files were memory-backed; these are bounded harness observations, not physical-disk durability, multi-user capacity or normal model performance. No provider network calls were made. Preserve raw samples and limitations in [the report](evidence/competitive-resilience-final.json).
 
-**PENDING publication approval.** No hosted deployment proposed. Judges should run the repository locally; no paid hosting is needed. Mobile buyer return to cloud loopback failed in the real transaction; provider inspection proved approval independently. That return-page defect is disclosed.
+## New work and reuse
 
-## Public Repository Link
+Waylatch continues the original RescueLedger source history. CrisisCodec is another unfinished project owned by Colby Weiss, not an outside commercial product licensed to Waylatch. Waylatch selectively adapted owner-controlled encoding and reconstruction primitives. Review of recorded affected-file history found no independently attributed contributors; metadata cannot rule out undisclosed copied material. Required dependency/model notices remain. Missing adoption of MIT in CrisisCodec does not block this private development. Root application MIT adoption is a separate owner decision. See [reuse provenance](CRISISCODEC_REUSE.md) and [license audit](LICENSE_AUDIT.md).
 
-https://github.com/Ledgercorp/Waylatch — **currently private; visibility change and source license await owner approval**. Proposed release is source/lockfile/docs and sanitized evidence, excluding secrets, SQLite databases, model/native binaries, recording caches and node_modules.
+## Technology list
 
-## Demo Video
+PayPal Sandbox Orders v2; React; TypeScript; Vite; Node.js 24; Express; SQLite; IndexedDB; Service Worker API; Zod; MessagePack; qrcode; jsQR; Transformers.js; ONNX Runtime CPU; pinned MiniLM q8; SHA-256; Vitest; Playwright; axe-core; Git/GitHub; Python; FFmpeg/FFprobe. No paid inference, live PayPal, lending or autonomous spending.
 
-Private asset: [docs/demo/waylatch-engineering-preview.mp4](docs/demo/waylatch-engineering-preview.mp4), under three minutes. Actual nonfinancial app footage and labeled automated fixtures are retained. The real completed payment is shown in newly recorded actual settled PAID UI and seven-event audit, followed by an explicitly identified independent provider-evidence insert; buyer checkout/capture was not screen-recorded. [Narration](docs/demo/NARRATION.md), [script](docs/DEMO_SCRIPT.md), [final hash/duration](docs/evidence/demo-video.json).
+## Screenshots and private demo
 
-**Public YouTube URL: PENDING approved upload.** No public video is available yet.
+New authentic application screenshots: [difficult comparison](evidence/quality-comparison-desktop.png), [QR recovery](evidence/quality-qr-recovery.png), [Proof Trail desktop](evidence/quality-proof-1440.png) and [Proof Trail mobile](evidence/quality-proof-390.png). The current comparison screenshot shows genuine semantic inference, an informational tier and contradictory transaction context.
 
-## Screenshot Shot List
+The original [110.04-second engineering preview](demo/waylatch-engineering-preview.mp4) remains unchanged with authentic historical paid UI/audit evidence. The [current private competitive preview](demo/waylatch-competitive-preview.mp4) is **87.76 seconds**, with newly recorded genuine MiniLM, tiered/grouped comparison, offline/QR handoff, disabled financial boundaries and separately labeled historical Sandbox proof. SHA-256 `96d6025a229905376f38b42ed75640caf1c85123b5dee7d27fece64de5557b6d`. The previous 87.68-second candidate and 97.52-second fallback are preserved separately. [Media provenance](evidence/competitive-demo-video.json), [current script/captions](demo/COMPETITIVE_SCRIPT.md). No checkout/capture reenactment or public upload occurred.
 
-- [Desktop](docs/evidence/interface-1440.png): fictional Ember incident and four operational stages.
-- [Mobile](docs/evidence/interface-390.png): responsive field ledger and offline controls.
-- [Local AI review](docs/evidence/review-ai.png): actual local semantic inference and supporting indicators.
-- [Audit](docs/evidence/audit.png): original local UI fixture audit; do not label it as the genuine transaction.
-- [Genuine completed payment](docs/evidence/payment-completed.png): actual PAID screen with order/capture references, exact USD1.00 simulated and disabled create/capture controls.
-- [Genuine purchase audit](docs/evidence/audit-paypal-completed.png): actual seven-event audit whose browser export matches SQLite.
-- Actual settled PAID UI and seven-event audit in the revised video: exact simulated amount, order/capture IDs and seven-event audit; source JSON provenance is retained.
+## Remaining decisions and limitations
 
-## Submission Readiness Notes
+The new evaluation failed its predefined targets. Fewer visible alerts did not improve identity precision, recall or fixed-budget ranking, and tier labels have poor agreement. Human usefulness remains unmeasured. Synthetic scenarios, nonexpert AI labels, shared author conventions and few family clusters do not establish real-world effectiveness or fraud probability.
 
-Known-field copy and local assets are prepared. [SUBMISSION_PACKAGE.md](docs/submission/SUBMISSION_PACKAGE.md) indexes the review packet and [RELEASE_APPROVALS.md](docs/RELEASE_APPROVALS.md) consolidates the final owner decisions. Devpost whoami, registration listing, requirements, judging and dates each returned internal error -32603 during this finalization. No official custom fields or account/registration facts are inferred. No registration, agreement acceptance, repository visibility change, license adoption, public upload or Devpost project/submission write occurred.
+Engineering acceptance passes: 163 unit/integration tests, all 14 browser tests including real AI, targeted mobile/desktop axe checks, clean default semantic judge setup and original audit validation. Dependency audit has zero findings; all six prior findings remain resolved without changes this phase. Scans and automated accessibility checks have bounded scope. Actual signed webhook delivery and reimbursement transfer remain unverified outside the successful purchasing demonstration.
 
-Existing source provenance dates the original RescueLedger work to October 13, 2026. Two CrisisCodec packet/reconstruction primitives were selectively adapted from commit 8ca845cb19a5cdd29897171c61b1ec95b5c1ba7f under private owner authorization; public rights and contributor ownership still require confirmation. [Reuse ledger](docs/CRISISCODEC_REUSE.md), [license audit](docs/LICENSE_AUDIT.md), [notices](docs/THIRD_PARTY_NOTICES.md). Waylatch branding remains AMBER with incomplete registry searches, not legal clearance.
-
-## Known Limitations
-
-Payout transfer is unimplemented/entitlement unverified. Actual webhook subscription, callback delivery and official signature verification were not demonstrated. The mobile Sandbox return page failed at loopback. SQLite serves a single prototype instance. Audit history is tamper-evident, not immutable against an administrator rewriting the database. AI uses a small synthetic English calibration, with no held-out or representative field validation. Accessibility scans covered selected states, not universal assistive-technology certification. No deployment, production readiness or live funds are claimed.
-
-[Fresh webhook diagnostic](docs/WEBHOOK_RELEASE_STATUS.md): real registration/event GETs returned HTTP200 with zero results. Three unsigned/synthetic callbacks were rejected HTTP400 without changing copied PAID state or its seven-event audit. This is fail-closed rejection evidence, not a genuine signed callback.
-
-## TODO Official Form Fields
-
-**Exact live form fields unavailable.** Obtain account identity and the event's registered relationship; retrieve official requirements, required custom question IDs/labels/options and upload rules before any Devpost mutation. Collect any missing participant/team, eligibility and representation answers without invention. Present the actual rules/terms/eligibility agreements in the consolidated approval; never mark them accepted from draft preparation.
-
-Public repository/license and YouTube URL await approval/publication. Devpost project/submission URL and receipt await the approved action. Only if the live form explicitly asks for a Codex session ID should a candidate identifier/timestamp be shown for owner confirmation; none has been read or inferred here. Exact form-specific fields stay pending until available.
+Public GitHub/video release, root license adoption, eligibility/representation, registration/legal terms and final Devpost submission require separate explicit owner approval of the final artifacts. Official account/custom fields and upload access are unverified; no public URL is invented. [Current private package](submission/SUBMISSION_PACKAGE.md), [owner approval packet](RELEASE_APPROVALS.md). Nothing was published/submitted, and real spending is $0.

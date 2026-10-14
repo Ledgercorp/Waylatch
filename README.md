@@ -12,33 +12,27 @@ Built by Colby Weiss / LeftSock Labs for the PayPal AI Hackathon 2026. All incid
 
 ![Desktop command workspace](docs/evidence/interface-1440.png)
 
-## Competitive development and judge access
+## Competitive review and judge access
 
-The private competitive branch adds side-by-side advisory review, durable pair dispositions, a source-labeled Proof Trail with exports, and an isolated guided judge workspace. No existing credentials or accounts are changed. A fresh private passphrase and temporary fictional database are generated internally; financial approvals and every provider operation are disabled in judge mode.
+The private competitive branch preserves the existing application and adds explainable advisory comparisons, revision-bound dispositions, grouped candidate summaries, a source-labeled Proof Trail and an isolated judge workspace.
 
 ```bash
 npm run judge
 ```
 
-With Node 24+, npm and Python 3 installed, this command installs the locked dependencies if needed, compiles the existing source when needed, verifies/downloads the pinned CPU model, and starts **http://127.0.0.1:4173**. Click **Start judge demo**. No merchant credentials or coordinator password are required. Full local AI requires access to the existing pinned Hugging Face assets. Stop with Ctrl+C; the temporary server database is removed. Browser-local records remain in the browser profile.
+With Node24+, npm and Python3, this prepares the locked application and verifies existing pinned model assets (or downloads missing pins where available), then serves **http://127.0.0.1:4173**. Use **Start judge demo**. No PayPal merchant secrets or existing coordinator password are required. Financial mutations/provider operations are blocked. Ctrl+C removes temporary server records; browser-local records remain on that origin.
 
-This managed worker still blocks `huggingface.co` and `cas-bridge.xethub.hf.co` with CONNECT 403. The explicitly limited, verified fallback is:
-
-```bash
-npm run judge -- --evidence-only
-```
-
-It supports offline/reload/QR, deterministic comparison, advisory dispositions and the separate historical completed-payment archive. It does **not** establish new genuine inference. The 240 fictional scenarios now have independent model-blind AI annotations; calibration produced a blocked report with null metrics. No threshold tuning, freeze or held-out evaluation has occurred. The original benchmark is preserved.
-
-[Competitive verification and remaining blockers](docs/COMPETITIVE_READINESS.md), [AI evaluation status](docs/AI_EVALUATION_COMPETITIVE.md), [measured resilience](docs/RESILIENCE_COMPETITIVE.md). The updated authentic [97.52-second private preview](docs/demo/waylatch-competitive-preview.mp4) shows the new interface and Proof Trail plus a clearly labeled historical genuine MiniLM excerpt. [Source boundaries and SHA-256](docs/evidence/competitive-demo-video.json). The original verified release and preview remain preserved.
+The owner's verified seven-file model bundle already enables real local AI in this workspace; no redownload occurred. Preserve `models/Xenova/all-MiniLM-L6-v2/` or set `RESCUELEDGER_MODEL_PATH` to an authorized model root. Model binaries remain out of Git. A clean source copy installed dependencies, built and passed full default semantic judge acceptance using those local assets.
 
 ```bash
-npm run test:e2e:competitive                 # full judge checks; pinned model required
-WAYLATCH_EVIDENCE_ONLY=1 npm run test:e2e:competitive # explicitly limited checks
-npm run resilience:measure
+npm run judge -- --evidence-only  # explicitly limited when assets are unavailable
+npm run test:e2e:competitive     # includes genuine AI, offline/QR, Proof Trail and axe
+npm run test:ai                 # historical 12-case real-model smoke benchmark
 ```
 
-Public release remains pending. Current dependency audit findings and the missing-model validation gate are documented; this is not a completed six-phase release.
+**AI limitations are material.** Semantic similarity retrieves potentially related records; structured evidence controls advisory attention tiers. Original held-out combined falsely flagged70/72 distinct pairs. On a genuinely new frozen test, attention FP fell77→30, but precision fell.384→.250 and recall.889→.185; fixed-budget ranking also worsened. Predetermined scientific targets failed. Zero strong alerts do not establish strong-tier precision. [Both evaluations and all limitations](docs/AI_REVIEW_QUALITY_V2.md). The separate v2 held-out receipt is complete; never rerun or retune either exposed held-out dataset as independent evidence.
+
+[Current readiness](docs/COMPETITIVE_READINESS.md), [measured resilience](docs/RESILIENCE_COMPETITIVE.md), [87.76-second private preview](docs/demo/waylatch-competitive-preview.mp4), [exact media hash/provenance](docs/evidence/competitive-demo-video.json). Prior previews are preserved separately. Root license, public repository/video, legal terms and submission remain owner decisions. No publication or real spending occurred.
 
 ## Run locally, at no cost
 
@@ -76,7 +70,7 @@ The CPU install flag avoids unnecessary CUDA downloads. If behind a proxy, keep 
 3. After the app has loaded online once, disable browser networking. Preserve a request and fully reload; it survives. A first-ever visit cannot load an uncached web app.
 4. **QR handoff** generates RL1 packets at most 600 raw bytes each. On a second preloaded browser/device, choose **Receive handoff** and import QR photos/screenshots (or packet text/file). Scan every packet to finish; missing fields and duplicate counts remain visible. Partial receiver state survives reload. Reset starts a separate request session. There is no live camera streaming scanner; mobile image input can use the camera.
 5. Sign in on the coordinator, reconnect, and explicitly **Send to coordinator review**. Reconnection does not upload or purchase automatically. QR provenance is retained; every import is unreviewed on the server.
-6. Upload a comparison request/claim and click **Run local semantic review**. The panel says **Real local AI inference** only after embeddings execute. Reasons include incident, amount, receipt digest, temporal proximity and semantic similarity. Cosine is not a fraud probability. Without local model assets/runtime, the panel explicitly says **Deterministic indicators only**.
+6. Upload a comparison request/claim and click **Run local semantic review**. The panel says **Real local AI inference** only after embeddings execute. Potentially related, needs verification and strong evidence are separate advisory tiers. Contradictions/missing facts remain visible; cosine alone never proves transaction identity or fraud. Without local model assets/runtime, the panel explicitly says **Deterministic indicators only**.
 7. Record a review note and human disposition. In **Pay**, explicitly authorize the exact request revision/amount. Unknown quantities, incident or estimated amount block authorization. To revise a local draft, create a new request; wire-level revision support exists but an edit/revision UI is not implemented yet.
 8. With Sandbox credentials configured, create the order, open its PayPal **Sandbox** buyer approval link, sign in as a Sandbox **personal buyer** distinct from the merchant, return, and explicitly confirm capture. The server inspects authoritative approval, order reference, currency and amount. Order creation remains unpaid. Interrupted capture is reconciled before any retry.
 9. **Audit** validates the SHA-256 chain and exposes event/transaction references. Export JSON and independently validate it with `npm run audit:validate -- path/to/export.json`.
@@ -98,7 +92,7 @@ npm run paypal:probe     # one Sandbox Payouts entitlement probe; blocked exit2 
 npm run paypal:integration
 ```
 
-`paypal:integration` requires the app running with the same secure configuration. It goes through authenticated server upload/review/approval, prompts for explicit `REVIEW` before recording human review, then explicit `AUTHORIZE`, creates an actual Sandbox order, prints its approval URL, and prompts for explicit `CAPTURE` after browser buyer approval. Success requires authoritative COMPLETED order + capture references, then writes sanitized `docs/evidence/paypal-real-sandbox.json`. **No such success file exists yet.** This harness is loopback-only; do not substitute a provider double for real evidence.
+`paypal:integration` requires the app running with the same secure configuration. It goes through authenticated server upload/review/approval, prompts for explicit `REVIEW` before recording human review, then explicit `AUTHORIZE`, creates an actual Sandbox order, prints its approval URL, and prompts for explicit `CAPTURE` after browser buyer approval. Success requires authoritative COMPLETED order + capture references, then writes sanitized `docs/evidence/paypal-real-sandbox.json`. The genuine completed purchase is already preserved; do not rerun this harness merely to recreate evidence. This harness is loopback-only; do not substitute a provider double for real evidence.
 
 `paypal:probe` posts a one-cent **Sandbox-only** payout to a fictional `example.com` receiver with a fixed sender batch ID. Run once per configured account to test entitlement, inspect actual response and retain evidence. No real money is involved. A successful probe alone does not implement a reimbursement flow. Prioritize Orders capture before unlocking Payouts.
 

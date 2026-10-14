@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "category": "quality-v2-frozen-before-heldout-inference",
+  "datasetId": "waylatch-review-quality-v2",
+  "frozenAt": "2026-10-14T11:47:43.076Z",
+  "fingerprint": {
+    "datasetSha256": "0438f5a0fb5980a61fc788f180147d8288927fe9301784f980c32f1017bfed8e",
+    "annotationsSha256": "4cdc858b721f5b3a81aa571454c8b8e7fa81e5700b648489c3d1b4018ce2db3a",
+    "scoringSources": [
+      {
+        "path": "scripts/evaluate-review-quality.ts",
+        "sha256": "01115ea3ac6b78b77178184a26d27213e7b5ac2b586fa696e3cc3af24f5b1815"
+      },
+      {
+        "path": "src/risk/quality-evaluation.ts",
+        "sha256": "71fb00706b18c165384fd54202eb658c5a5c022894996506046b0f2aa3cc8704"
+      },
+      {
+        "path": "src/risk/review-quality.ts",
+        "sha256": "3339c8a6e93f9b802ab71ba03c6116afbbe1a74a57e9b9cb0f3f41d826f15d07"
+      },
+      {
+        "path": "src/risk/review-tiers.ts",
+        "sha256": "b92a4ddf284747c0b34b325002dce7f114efa01c980bdf23441943e0efb2890a"
+      },
+      {
+        "path": "src/risk/review.ts",
+        "sha256": "a16debd0ce07975785ac3122fd3aeb59dfe9d69054d0a95899530f48c48fe68f"
+      },
+      {
+        "path": "src/risk/evaluation.ts",
+        "sha256": "a97f5ff13d416ae74446a4c51c6f5a9112860318216a51e757fd319b820d5fcb"
+      },
+      {
+        "path": "src/risk/model.ts",
+        "sha256": "ab185263617a79d23e309a6699f503cf7ca81c5f26e5248464b90a7662d990fd"
+      },
+      {
+        "path": "src/risk/model-assets.ts",
+        "sha256": "2651954cd895196cae2173badf46b5a879453b5eaa97aa3d8d8bc32f627dcea1"
+      },
+      {
+        "path": "package.json",
+        "sha256": "08ac4e756a6b37e410cf1930b74a3becb2009c08eb8442965a521b1122eb8404"
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "25e023dda07447a279f61479b3ad27fd6d527cdfce17c19999298ca4edf80aa2"
+      },
+      {
+        "path": "evaluation/review-quality-v2/PROTOCOL.md",
+        "sha256": "29eae8b0399876332bd81304c655686576b477b851791446224c887c74a81714"
+      }
+    ],
+    "settings": {
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+      "dtype": "q8",
+      "device": "cpu",
+      "embeddingDimensions": 384,
+      "maximumTextsPerEmbeddingCall": 100,
+      "remoteModelsAllowed": false,
+      "intraOpThreads": 2,
+      "interOpThreads": 1,
+      "assets": [
+        {
+          "file": "config.json",
+          "bytes": 650,
+          "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 711661,
+          "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 366,
+          "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "file": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        },
+        {
+          "file": "README.md",
+          "bytes": 1767,
+          "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02"
+        },
+        {
+          "file": "onnx/model_quantized.onnx",
+          "bytes": 22972370,
+          "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+        }
+      ],
+      "quality": {
+        "version": 2,
+        "semanticRetrievalThreshold": 0.6,
+        "attentionTiers": [
+          "needs-verification",
+          "strong-duplicate-evidence"
+        ],
+        "highPriorityTier": "strong-duplicate-evidence",
+        "strongRule": "receipt+reference+exact-amount+expense-time match; no recorded contradiction",
+        "verificationRule": "two identity clues, or one identity clue plus exact amount; contradictions prevent promotion except two matching identity clues require inspection",
+        "ranking": "tier, supporting recorded matches, cosine, lexical record ID"
+      },
+      "methods": [
+        "v1Combined",
+        "revisedAttention",
+        "revisedStrong"
+      ],
+      "budgetFraction": 0.2,
+      "bootstrap": {
+        "seed": 20261013,
+        "iterations": 10000,
+        "unit": "supplyFamily"
+      },
+      "success": {
+        "minimumFPRReduction": 0.5,
+        "maximumAttentionAlertsPer100Distinct": 10,
+        "minimumDuplicateRecall": 0.5,
+        "strongPrecisionTarget": 0.8
+      }
+    }
+  },
+  "calibrationEvidenceSha256": "11f8edd98b00513f37d55bf02a7b956f6b729668a3237fa6ac303b31d03ace50",
+  "selection": "Final revised tier strategy and predetermined protocol targets frozen before heldout predictions.",
+  "limitations": [
+    "New fictional synthetic pairs with nonexpert model-blind AI annotations, subjective confidence and retained ambiguity; not real-field or human-adjudicated truth.",
+    "Binary transaction identity and independently annotated records-only evidence tiers are different targets. Scenario-only facts are unavailable to either predictor.",
+    "Few supply-family clusters and common author templates make paired bootstrap intervals exploratory. Case-level Wilson intervals ignore cluster dependence.",
+    "Balanced synthetic sampling does not estimate real prevalence, operational workload or fraud probability. All tiers remain advisory; no approval, rejection or payment action occurs.",
+    "The fixed 20% global pair budget is a bounded surrogate, not a multi-candidate retrieval benchmark; no MAP/NDCG claim. Workload counts are not human minutes.",
+    "Application risk API supplies at most 100 candidates, currently truncates stored candidates in storage order before revised tier ranking. This pairwise evaluator supplies one candidate and has no candidate truncation; global ranking has deterministic case-ID ties.",
+    "Methods share genuine pinned local CPU embeddings. Per-method scoring excludes shared model work. Host timing does not establish browser/mobile performance."
+  ]
+}

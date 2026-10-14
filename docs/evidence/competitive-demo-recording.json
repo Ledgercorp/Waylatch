@@ -1,82 +1,82 @@
 {
-  "recordedAt": "2026-10-14T11:15:04.505Z",
+  "recordedAt": "2026-10-14T11:41:50.515Z",
   "category": "actual-application-footage",
   "evidenceOnly": false,
   "sourceVideos": {
-    "field.webm": "c919d21688c8c700d9fcdb904249e6e63c6a5195e822c231b5f08f6d533a6301",
-    "coordinator.webm": "1257600ca5223a27559a36df312b06333fb083c2a1036a496df22dac7bdb8074",
+    "field.webm": "319d87b63ef7ebe3fc8605195c67a8308b34e240b7b2fd48a65c7435cdf5ebaf",
+    "coordinator.webm": "4be51ac2598ccdd043c66cdccd76cb3761d784c57ae2cf3907b357dae4837f12",
     "historical-chain.json": "8ebb71a85e7c1a47eaba5351c69986bceb2385c24a4a48d812da075309a615bf"
   },
   "scenes": [
     {
       "segment": 0,
-      "seconds": 0.344850451,
+      "seconds": 0.307037561000001,
       "kind": "introduction",
       "caption": "Waylatch: keep a request moving; keep authority human. Fictional walkthrough, real application."
     },
     {
       "segment": 0,
-      "seconds": 5.00241064,
+      "seconds": 4.963340305000002,
       "kind": "offline-form",
       "caption": "Network loss simulated. Preserve the request locally; no server submission or financial action."
     },
     {
       "segment": 0,
-      "seconds": 9.959689025000001,
+      "seconds": 9.800354068000003,
       "kind": "offline-reload",
       "caption": "Actual offline browser reload: the request survives in IndexedDB. Browser observations are local evidence."
     },
     {
       "segment": 0,
-      "seconds": 16.165255300000002,
+      "seconds": 16.07606944,
       "kind": "qr-sender",
       "caption": "Bounded QR packets carry request data across disconnection. They carry no payment authority."
     },
     {
       "segment": 1,
-      "seconds": 1.0124445190000007,
+      "seconds": 1.0092629960000012,
       "kind": "qr-receiver",
       "caption": "A second offline browser decodes an actual QR image and reconstructs the packets. Import stays untrusted."
     },
     {
       "segment": 1,
-      "seconds": 8.621684152000002,
+      "seconds": 8.783200717,
       "kind": "comparison",
-      "caption": "Real local MiniLM inference plus side-by-side context. Semantic cosine is evidence, never a fraud probability."
+      "caption": "Real local MiniLM retrieves related wording. The advisory tier separates similarity from transaction identity; contradictions stay visible."
     },
     {
       "segment": 1,
-      "seconds": 17.637950164,
+      "seconds": 17.901365096000003,
       "kind": "context",
-      "caption": "Related, unrelated or investigate: an advisory disposition never approves either record or executes payment."
+      "caption": "Grouped attention and informational comparisons reduce repeated warnings. Related, unrelated or investigate never approves a purchase."
     },
     {
       "segment": 1,
-      "seconds": 24.238690832999996,
+      "seconds": 24.510830207999998,
       "kind": "human-boundary",
       "caption": "Human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE remain required. Judge financial controls are disabled."
     },
     {
       "segment": 1,
-      "seconds": 30.999447300000003,
+      "seconds": 31.292685946,
       "kind": "historical-payment",
       "caption": "Separate historical purchase: USD 1.00 simulated funds, completed capture, USD 0.00 real spending. No checkout is reenacted."
     },
     {
       "segment": 1,
-      "seconds": 38.537349174,
+      "seconds": 38.814815175999996,
       "kind": "audit-scope",
       "caption": "Proof Trail names browser, organization and provider sources. Original seven-event audit links validate; missing earlier events stay visible."
     },
     {
       "segment": 1,
-      "seconds": 45.569924126,
+      "seconds": 45.849253860000005,
       "kind": "provider-proof",
       "caption": "Saved independent PayPal inspection confirms COMPLETED. Viewing this archive makes no provider call and no new purchase."
     },
     {
       "segment": 1,
-      "seconds": 52.68726441999999,
+      "seconds": 52.947969685,
       "kind": "exports",
       "caption": "Download a sanitized report or independently validate the original SHA-256 chain. An administrator can rewrite a full database."
     }

@@ -1,3 +1,11 @@
+# Current review-quality checkpoint — 14 October 2026
+
+[REVIEW_QUALITY_FINAL_REPORT.md](REVIEW_QUALITY_FINAL_REPORT.md) and [AI_REVIEW_QUALITY_V2.md](AI_REVIEW_QUALITY_V2.md) are current. Continued from `caf6d655aa6f30b275fc1d0bc66933bd7122acbc` on private `feat/waylatch-competitive`; main/release remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. Genuine model works; no download/dependency/payment change. Conservative tiers/grouping reduce warnings but the new once-only held-out test fails predefined targets and worsens precision/recall/budgeted ranking. Original unfavorable results and both receipts remain intact; no retest/tuning authorization.
+
+Engineering:163 tests,14 real-AI browser checks, clean semantic judge acceptance and zero dependency findings. Current authentic private preview87.76seconds; prior87.68seconds preserved separately. No public/legal/financial release action; $0 real spending. [Current owner packet](RELEASE_APPROVALS.md). All checkpoints below are historical and superseded, including their former model-access blockers.
+
+---
+
 # Model blocker resolved by verified owner upload — 14 October 2026
 
 The seven uploaded original assets match every source size/SHA-256 pin. No model redownload occurred. Genuine calibration, freeze, once-only held-out and default semantic judge acceptance completed; six dependency findings are resolved with verified supported upgrades. [Current report and limitations](AI_RESUMPTION_REPORT.md). The earlier cloud CDN denial remains historical evidence, not a current prerequisite for inference with these local assets. Scientific false-positive burden, actual signed webhook/Payouts limits and owner licensing/publication/legal/submission decisions remain disclosed. Do not repeat the historic purchase.

@@ -8,6 +8,8 @@ import {
   type PairDisposition,
 } from '../risk/comparison';
 import type { ReviewAssessment } from '../risk/review';
+import type { QualityCandidate } from '../risk/review-quality';
+import { TIER_LABELS } from '../risk/review-tiers';
 import { api } from './api';
 
 export function PairComparison({
@@ -24,7 +26,7 @@ export function PairComparison({
 }: {
   record: ResourceRequest;
   candidate: ResourceRequest;
-  assessment?: ReviewAssessment['candidates'][number];
+  assessment?: ReviewAssessment['candidates'][number] & Partial<QualityCandidate>;
   mode?: ReviewAssessment['mode'];
   relationshipEvents?: AuditEvent[];
   authenticated: boolean;
@@ -90,10 +92,40 @@ export function PairComparison({
         )}
         {assessment && (
           <p className="small">
-            {assessment.reviewRecommended
-              ? 'Review recommended by the recorded assessment.'
-              : 'No review recommendation from this assessment; this does not establish that records are unrelated.'}
+            {assessment.tier
+              ? TIER_LABELS[assessment.tier]
+              : assessment.reviewRecommended
+                ? 'Historical binary review recommendation.'
+                : 'No review recommendation from this assessment; this does not establish that records are unrelated.'}
           </p>
+        )}
+        {assessment?.tier && (
+          <p className="small">
+            Text similarity retrieves related records; it does not establish the same purchase.
+            Identical descriptions can describe separate deliveries. All recorded identifiers are
+            unverified and one receipt can cover multiple purchases. Supplier identity and receipt
+            line allocation are not available to this scorer.
+          </p>
+        )}
+        {!!assessment?.contradictions?.length && (
+          <aside className="notice" aria-label="Contradicting recorded evidence">
+            <strong>Contradicting recorded evidence</strong>
+            <ul>
+              {assessment.contradictions.map((reason) => (
+                <li key={reason}>{reason}</li>
+              ))}
+            </ul>
+          </aside>
+        )}
+        {!!assessment?.missing?.length && (
+          <details>
+            <summary>Missing corroboration · {assessment.missing.length}</summary>
+            <ul>
+              {assessment.missing.map((reason) => (
+                <li key={reason}>{reason}</li>
+              ))}
+            </ul>
+          </details>
         )}
         {!!assessment?.reasons.length && (
           <ul>

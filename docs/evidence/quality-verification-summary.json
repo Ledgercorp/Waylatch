@@ -1,0 +1,52 @@
+{
+  "verifiedAt": "2026-10-14T12:01:07.199607+00:00",
+  "startingCommit": "caf6d655aa6f30b275fc1d0bc66933bd7122acbc",
+  "branch": "feat/waylatch-competitive",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "architecture": "x64",
+    "modelAssets": "Existing exact verified owner-uploaded bundle; no download this phase"
+  },
+  "unitIntegration": {
+    "files": 32,
+    "passed": 163,
+    "failed": 0
+  },
+  "browser": {
+    "originalPassed": 9,
+    "competitivePassed": 5,
+    "failed": 0,
+    "actualLocalInference": true,
+    "competitiveAxeStates": 7,
+    "axeViolations": 0,
+    "scope": "Chromium browser emulation at390/1440px and automated axe, not field/human assistive-technology validation"
+  },
+  "typescriptAndProductionBuild": "passed",
+  "nonfatalBuildWarning": "Main frontend chunk above500kB",
+  "cleanInstallAndDefaultJudge": "passed with separately provisioned original model root, no merchant credentials, financial403 and isolated server-data cleanup",
+  "auditChain": {
+    "valid": true,
+    "events": 7,
+    "independentlyValidated": true
+  },
+  "dependencyAdvisories": 0,
+  "sourceAndFrontendFindings": 0,
+  "format": "passed",
+  "v2ScoringFingerprintMatchesFreeze": true,
+  "originalPaymentAndVideosUnchanged": [
+    "docs/evidence/paypal-real-sandbox.json",
+    "docs/evidence/paypal-independent-verification.json",
+    "docs/evidence/paypal-sandbox-audit.json",
+    "docs/evidence/paypal-sandbox-audit-validation.json",
+    "docs/demo/waylatch-engineering-preview.mp4",
+    "docs/demo/waylatch-competitive-fallback-preview.mp4"
+  ],
+  "prior8768VideoPreserved": true,
+  "v2TargetsPassed": false,
+  "releaseRecommendation": "Owner review as advisory prototype with failed precision/recall/ranking targets disclosed; no improved detection claim",
+  "realSpending": 0,
+  "providerCalls": 0,
+  "newPurchases": 0,
+  "publicActions": false
+}

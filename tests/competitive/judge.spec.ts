@@ -149,6 +149,10 @@ test('difficult calibration pair can be compared and disposition audited without
       exact: true,
     }),
   ).toBeVisible();
+  await expect(page.getByText('Potentially related', { exact: true }).first()).toBeVisible();
+  await expect(
+    page.getByRole('complementary', { name: 'Contradicting recorded evidence' }),
+  ).toBeVisible();
   await page.getByLabel('Relationship judgment').selectOption('investigate');
   await page
     .getByLabel('Pair disposition note')
@@ -188,6 +192,17 @@ test('difficult calibration pair can be compared and disposition audited without
     path: 'docs/evidence/competitive-comparison-mobile.png',
     fullPage: true,
   });
+  await page.getByLabel('Relationship judgment').selectOption('unrelated');
+  await page
+    .getByLabel('Pair disposition note')
+    .fill('Automated workload test: separate purchases; dismissal is advisory only.');
+  await page.getByRole('button', { name: 'Record pair disposition' }).click();
+  await expect(page.getByText('Latest saved pair disposition: unrelated')).toBeVisible();
+  await page.getByText(/Candidate summaries ·/).click();
+  await expect(page.getByText(/Dismissed for current revisions · 1/)).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Compare RL-BROWSER-HARD-1', exact: true }),
+  ).toBeHidden();
   const state = await (await page.request.get('/api/state')).json();
   expect(state.payments).toEqual([]);
   expect(state.events.some((e: any) => e.type === 'pair_disposition_recorded')).toBe(true);

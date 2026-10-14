@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-10-14T11:36:11.607100+00:00",
+  "sourceCommit": "caf6d655aa6f30b275fc1d0bc66933bd7122acbc",
+  "files": [
+    {
+      "path": "evaluation/frozen-manifest.json",
+      "sha256": "db15eb539d75189d245f76b775cbe2dad269c2a2d775b5476cd2e9f479314f41"
+    },
+    {
+      "path": "evaluation/frozen-manifest.json.completed.json",
+      "sha256": "b4ee5140541d3c725d01f78f24f8553dda50ce600ba57abfbd8c309cbe6b0b33"
+    },
+    {
+      "path": "docs/evidence/ai-evaluation-calibration.json",
+      "sha256": "e9f7a7ee60d7241bc4671bd2574440197334a19e022b579ae5453fc5b3b8eb79"
+    },
+    {
+      "path": "docs/evidence/ai-evaluation-heldout.json",
+      "sha256": "fe2d5ebcc00a890b3863de37e30e8d289d8e051ed4837b697e776a785b3b68d7"
+    },
+    {
+      "path": "evaluation/cases-unlabeled.json",
+      "sha256": "c5a43bab001eb529f5ab07f95c8371741841c304be451852f397de9f1ca0873c"
+    },
+    {
+      "path": "evaluation/independent-annotations.json",
+      "sha256": "40644fb7cf486c873508e00b781231de14af63f2f8c87ca21c48ad3c2c009356"
+    },
+    {
+      "path": "src/risk/review.ts",
+      "sha256": "a16debd0ce07975785ac3122fd3aeb59dfe9d69054d0a95899530f48c48fe68f"
+    },
+    {
+      "path": "src/risk/evaluation.ts",
+      "sha256": "a97f5ff13d416ae74446a4c51c6f5a9112860318216a51e757fd319b820d5fcb"
+    },
+    {
+      "path": "src/risk/model.ts",
+      "sha256": "ab185263617a79d23e309a6699f503cf7ca81c5f26e5248464b90a7662d990fd"
+    },
+    {
+      "path": "src/risk/model-assets.ts",
+      "sha256": "2651954cd895196cae2173badf46b5a879453b5eaa97aa3d8d8bc32f627dcea1"
+    },
+    {
+      "path": "scripts/evaluate-ai.ts",
+      "sha256": "cf0ecd1d7d1e8afdb104d40ca80d1c9c7399e80cb872d70fd11c06e2aec30965"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "25e023dda07447a279f61479b3ad27fd6d527cdfce17c19999298ca4edf80aa2"
+    }
+  ],
+  "note": "Original v1 code, inputs, results, manifest and completion receipt preserved. V2 uses separate artifacts and a new implementation."
+}
