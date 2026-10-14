@@ -74,6 +74,34 @@ export function createPublicJudge({
     const edge = renderEdge ? req.get('X-Forwarded-For')?.split(',').at(-1)?.trim() : undefined;
     return hash(edge && isIP(edge) ? edge : (req.socket.remoteAddress ?? 'unknown'));
   };
+  // Temporary, nonce-selected hosted diagnosis. Never logs raw addresses or cookies.
+  const diagnosticSalt = randomBytes(32).toString('hex');
+  app.use((req, _res, next) => {
+    if (
+      req.path === '/api/health' &&
+      req.get('X-Waylatch-Proxy-Check') === 'cloud-resume-20261014-1529'
+    ) {
+      const opaque = (value: string) => hash(diagnosticSalt + value).slice(0, 16);
+      const chain =
+        req
+          .get('X-Forwarded-For')
+          ?.split(',')
+          .map((s) => s.trim()) ?? [];
+      console.info(
+        JSON.stringify({
+          proxyDiagnostic: true,
+          probe: req.get('X-Waylatch-Probe'),
+          socket: opaque(req.socket.remoteAddress ?? 'unknown'),
+          forwarded: chain.map(opaque),
+          documentationAddresses: chain.map((s) =>
+            /^(192\.0\.2\.|198\.51\.100\.|203\.0\.113\.)/.test(s),
+          ),
+          cloudflare: opaque(req.get('CF-Connecting-IP') ?? 'missing'),
+        }),
+      );
+    }
+    next();
+  });
   const blocked = async (): Promise<never> => {
     throw new Error('Public demo provider disabled');
   };
