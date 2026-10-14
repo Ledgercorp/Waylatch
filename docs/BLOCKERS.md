@@ -1,3 +1,9 @@
+# Current finalization blocker — 14 October 2026
+
+Hugging Face is reachable and six pinned assets verify. The exact original weight redirects to **us.aws.cdn.hf.co**, absent from this task’s restricted policy and denied CONNECT 403. Custom metadata lists cas-bridge.xethub.hf.com rather than .co; the latter is also denied. Source/observed revision 2 and published version are recorded in [the single current technical report](COMPETITIVE_FINALIZATION.md). No supported tool exposes the newest saved configuration for comparison. No new environment is demonstrated necessary, no authorized trusted artifact was found and no bypass/retry loop was attempted. Genuine inference, calibration/freeze/held-out, default semantic judge and new semantic footage remain blocked. Six dependency risks are [individually documented](DEPENDENCY_REVIEW_FINALIZATION.md). The genuine historical Sandbox purchase is complete and must not be repeated. Earlier blocker snapshots follow for history.
+
+---
+
 # Current competitive-development blocker — 2026-10-13
 
 **Pinned local model access remains blocked.** The existing MiniLM asset files are missing; the authorized Hugging Face and official weight-download hosts still return proxy CONNECT 403 in this worker. The model identity, pinned revision, sizes and hashes have not changed. No alternate model or fabricated embeddings were substituted. New calibration records null metrics and does not complete; freeze and held-out evaluation have not executed. Three fresh blinded AI reviewers completed the 240 fictional annotations (120 duplicate, 108 distinct, 12 ambiguous), without author labels or model predictions. These labels are not expert-human or field data. See [blocked calibration evidence](evidence/ai-evaluation-calibration.json) and [continuation](COMPETITIVE_CONTINUATION.md).

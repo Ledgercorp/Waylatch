@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-14T10:57:23.000590+00:00",
+  "assets": [
+    {
+      "file": "config.json",
+      "expectedBytes": 650,
+      "expectedSha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7",
+      "actualBytes": 650,
+      "actualSha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7",
+      "verified": true
+    },
+    {
+      "file": "tokenizer.json",
+      "expectedBytes": 711661,
+      "expectedSha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0",
+      "actualBytes": 711661,
+      "actualSha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0",
+      "verified": true
+    },
+    {
+      "file": "tokenizer_config.json",
+      "expectedBytes": 366,
+      "expectedSha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+      "actualBytes": 366,
+      "actualSha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+      "verified": true
+    },
+    {
+      "file": "special_tokens_map.json",
+      "expectedBytes": 125,
+      "expectedSha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "actualBytes": 125,
+      "actualSha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "verified": true
+    },
+    {
+      "file": "vocab.txt",
+      "expectedBytes": 231508,
+      "expectedSha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "actualBytes": 231508,
+      "actualSha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "verified": true
+    },
+    {
+      "file": "README.md",
+      "expectedBytes": 1767,
+      "expectedSha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02",
+      "actualBytes": 1767,
+      "actualSha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02",
+      "verified": true
+    },
+    {
+      "file": "onnx/model_quantized.onnx",
+      "expectedBytes": 22972370,
+      "expectedSha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+      "actualBytes": null,
+      "actualSha256": null,
+      "verified": false
+    }
+  ],
+  "ready": false,
+  "modelIdentityChanged": false
+}

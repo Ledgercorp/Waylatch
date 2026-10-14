@@ -1,3 +1,9 @@
+# Latest AI execution — 14 October 2026
+
+[Fresh calibration](evidence/finalization-ai-calibration.json) validated 80 cases but produced zero vectors and null metrics because the pinned ONNX weight is missing. Six other files independently verify. Hugging Face now works; its weight redirects to policy-denied `us.aws.cdn.hf.co`. No model/label/scoring/lock change, threshold tuning, freeze or held-out evaluation. [Current runtime evidence and limits](COMPETITIVE_FINALIZATION.md). The original blocked report and twelve-case historical benchmark below are preserved.
+
+---
+
 # Competitive AI evaluation: independently annotated, inference blocked
 
 The frozen 240-scenario dataset has independently produced model-blind annotations. This worker cannot obtain the existing pinned MiniLM assets: both huggingface.co and cas-bridge.xethub.hf.co returned proxy CONNECT 403, and current enforced policy excludes them. No model identity, asset hashes, scoring rules or thresholds were changed. No new comparative-performance or generalization claim is supported.

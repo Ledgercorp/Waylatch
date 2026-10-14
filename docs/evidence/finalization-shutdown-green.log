@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /workspace/Waylatch
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  10:59:08
+   Duration  828ms (transform 30ms, setup 0ms, import 41ms, tests 664ms, environment 0ms)
+

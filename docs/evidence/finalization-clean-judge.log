@@ -1,0 +1,42 @@
+
+> waylatch@0.1.0 judge
+> node scripts/judge-start.mjs --evidence-only
+
+Installing the existing locked project dependencies for local judge access.
+npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+added 304 packages in 5s
+Compiling the existing Waylatch application for judge access.
+
+> waylatch@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+node_modules/zod/v4/core/regexes.js (74:0): A comment
+
+"/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+ * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+ * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+
+in "node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+node_modules/zod/v4/core/util.js (400:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+✓ 1763 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.81 kB │ gzip:   0.44 kB
+dist/assets/index-HMebHxzF.css   28.84 kB │ gzip:   6.80 kB
+dist/assets/index-DTGKai_E.js   575.93 kB │ gzip: 184.03 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.54s
+Waylatch judge demo: http://127.0.0.1:4180
+EVIDENCE-ONLY MODE: AI assets are not required. Review reports its actual inference mode; no genuine AI success is claimed. Financial operations are blocked.
+Use the on-screen Start judge demo button. No coordinator passphrase is printed or persisted.

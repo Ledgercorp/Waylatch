@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 export default defineConfig({
   testDir: 'tests',
   testMatch: '**/product.spec.ts',
+  outputDir: 'test-results/product',
   fullyParallel: false,
   use: {
     baseURL: 'http://127.0.0.1:4173',

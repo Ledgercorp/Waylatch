@@ -1,0 +1,20 @@
+
+> waylatch@0.1.0 test:ai
+> tsx scripts/benchmark-ai.ts
+
+node:internal/fs/promises:697
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open '/workspace/Waylatch/models/Xenova/all-MiniLM-L6-v2/onnx/model_quantized.onnx'
+    at async open (node:internal/fs/promises:697:25)
+    at async readFile (node:internal/fs/promises:1348:14)
+    at async loadModel (/workspace/Waylatch/src/risk/model.ts:18:19)
+    at async <anonymous> (/workspace/Waylatch/src/risk/model.ts:51:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspace/Waylatch/models/Xenova/all-MiniLM-L6-v2/onnx/model_quantized.onnx'
+}
+
+Node.js v24.19.0

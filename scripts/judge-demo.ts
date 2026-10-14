@@ -106,9 +106,14 @@ server.once('error', () => {
     process.exitCode = 1;
   });
 });
+let shutdownRequested = false;
 for (const signal of ['SIGINT', 'SIGTERM'] as const)
-  process.once(signal, () =>
+  process.on(signal, () => {
+    // A process-group signal can also be forwarded by the bootstrap parent.
+    // Keep the listeners installed while draining requests and deleting the temporary store.
+    if (shutdownRequested) return;
+    shutdownRequested = true;
     server.close(() => {
       void cleanup().finally(() => process.exit(0));
-    }),
-  );
+    });
+  });

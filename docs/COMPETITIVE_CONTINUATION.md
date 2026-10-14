@@ -1,3 +1,9 @@
+# Latest continuation — 14 October 2026
+
+Resume the same competitive branch; this task started at `887d20eaf8964aba20cd04baee178d7683dfd3a3`. Read [COMPETITIVE_FINALIZATION.md](COMPETITIVE_FINALIZATION.md) first. Six pinned files now verify; only the original weight is absent. Its actual redirect is `us.aws.cdn.hf.co`, denied by the applied policy. Current custom policy also contains `cas-bridge.xethub.hf.com`, distinct from the requested .co host. No repeat credential/domain-setup loop or payment work is warranted. Published source/observed revision 2 is known; newest saved editor version is not inspectable. No freeze or held-out receipt exists. Two cleanup/isolation defects are fixed and verified; dependency remediation and genuine semantic acceptance remain blocked.
+
+---
+
 # Competitive continuation after integrated private development
 
 Resume the existing private `feat/waylatch-competitive` branch, never restart from main. The exact synchronized commit is supplied in the completion response; `git rev-parse HEAD` identifies the checked-out source. Original verified main/release candidate remains `3580d35a7176afd93abf52fbde391061a4ff30d6`. This phase began at `68c6d2797b9d32741df30ee86e288093d60fdcc8`.

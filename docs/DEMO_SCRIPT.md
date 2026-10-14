@@ -1,3 +1,9 @@
+# Current competitive preview — 97.52 seconds
+
+The current competitive script, exact scene timings, source boundaries and unchanged video hash are in [demo/COMPETITIVE_SCRIPT.md](demo/COMPETITIVE_SCRIPT.md). It accurately shows deterministic fallback and labeled historical MiniLM, pending genuine new model access. The 110.04-second release-preview script below remains historical; no buyer/capture reenactment or new purchase is authorized.
+
+---
+
 # Final private demonstration — 1:50.04
 
 Existing app footage is retained; no application rebuild or completed test rerun is needed. The financial scene records the actual settled PAID screen and seven-event audit of the completed Sandbox purchase, followed by sanitized independent provider evidence. Buyer checkout and capture were not screen-recorded. Original nonfinancial automated UI fixtures remain clearly labeled. The exact final caption timings and video hash/encoding are in [demo/captions.srt](demo/captions.srt) and [evidence/demo-video.json](evidence/demo-video.json).

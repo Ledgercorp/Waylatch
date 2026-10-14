@@ -1,3 +1,9 @@
+# Finalization addendum — 14 October 2026
+
+The current private candidate remains **blocked**, not ready for submission. [Finalization report](../COMPETITIVE_FINALIZATION.md) records actual CDN policy evidence, 139 passing local tests, five passing evidence-only competitive browser checks, the unavailable real-AI check, clean judge bootstrap/shutdown and individual dependency risks. The unchanged 97.52-second preview and [current script](../demo/COMPETITIVE_SCRIPT.md) retain fallback/historical labels. No public or legal/submission action occurred. The package below remains a private draft.
+
+---
+
 # Waylatch submission package — private competitive review copy
 
 This package continues the verified `3580d35` application and preserved genuine Sandbox purchase on private branch `feat/waylatch-competitive`. The competitive work is partial: new AI measurement remains blocked. No registration, publication, terms acceptance, root license adoption or Devpost write is authorized by this phase.

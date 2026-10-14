@@ -1,3 +1,9 @@
+# Finalization checkpoint — 14 October 2026
+
+Current result: **blocked on the pinned model weight**, with two verified judge/test-isolation fixes. Fresh verification: 139 unit/integration tests passed, five evidence-only competitive browser checks passed, eight original browser checks passed and the real-AI check failed on unavailable assets. Six dependency findings remain individually investigated. The unchanged 97.52-second preview remains honest fallback/historical footage. [Full current report](COMPETITIVE_FINALIZATION.md). The earlier checkpoint below is preserved as history.
+
+---
+
 # Waylatch competitive development: verified internal work, genuine model blocker
 
 Continued from private competitive commit `68c6d2797b9d32741df30ee86e288093d60fdcc8`, preserving `3580d35a7176afd93abf52fbde391061a4ff30d6` on main and the release-candidate branch. This is a verified private development increment, **not completion of all six phases or authorization to release**.

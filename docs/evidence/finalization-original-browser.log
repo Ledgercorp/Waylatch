@@ -1,0 +1,62 @@
+
+> waylatch@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:3130) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:3142) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:3255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/product.spec.ts:4:1 › field request survives real offline reload (2.2s)
+  ✓  2 tests/product.spec.ts:24:1 › packets cross two disconnected browser contexts and reject corruption (3.7s)
+  ✓  3 tests/product.spec.ts:51:1 › coordinator explicitly reviews and approves, missing credentials stay honest (3.1s)
+  ✓  4 tests/product.spec.ts:73:3 › accessible command interface 1440px (2.7s)
+  ✓  5 tests/product.spec.ts:73:3 › accessible command interface 390px (2.4s)
+  ✘  6 tests/product.spec.ts:96:1 › real local AI and separate claim approval are usable through the interface (7.3s)
+(node:3824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 tests/product.spec.ts:137:1 › mobile capture and QR dialogs have accessible controls (4.3s)
+  ✓  8 tests/product.spec.ts:154:1 › Waylatch metadata and legacy IndexedDB survive offline reload (1.0s)
+  ✓  9 tests/product.spec.ts:196:1 › constrained network preserves local work and reconnection does not submit or pay (11.6s)
+
+
+  1) tests/product.spec.ts:96:1 › real local AI and separate claim approval are usable through the interface 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Real local AI inference')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Real local AI inference') with timeout 5000ms
+      - waiting for getByText('Real local AI inference')
+
+
+      108 |   await page.getByRole('button', { name: 'Send to coordinator review' }).click();
+      109 |   await page.getByRole('button', { name: 'Run local semantic review' }).click();
+    > 110 |   await expect(page.getByText('Real local AI inference')).toBeVisible();
+          |                                                           ^
+      111 |   await expect(page.getByText('Semantically similar expense description').first()).toBeVisible();
+      112 |   await expect(page.getByText('No payment action taken.').first()).toBeVisible();
+      113 |   let results = await new AxeBuilder({ page }).analyze();
+        at /workspace/Waylatch/tests/product.spec.ts:110:59
+
+    Error Context: test-results/product/product-real-local-AI-and--b3a35-sable-through-the-interface/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/product/product-real-local-AI-and--b3a35-sable-through-the-interface/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/product/product-real-local-AI-and--b3a35-sable-through-the-interface/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/product.spec.ts:96:1 › real local AI and separate claim approval are usable through the interface 
+  8 passed (43.0s)

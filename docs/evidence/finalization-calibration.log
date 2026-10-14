@@ -1,0 +1,51 @@
+
+> waylatch@0.1.0 ai:evaluate
+> tsx scripts/evaluate-ai.ts --mode calibration --output docs/evidence/finalization-ai-calibration.json
+
+{
+  "category": "blocked-local-model-unavailable",
+  "split": "calibration",
+  "sampleComposition": {
+    "cases": 80,
+    "familyCount": 4,
+    "families": {
+      "potable-water": 20,
+      "batteries-lighting": 20,
+      "medical-dressings": 20,
+      "generator-fuel": 20
+    },
+    "categories": {
+      "exact-description": 8,
+      "natural-paraphrase": 4,
+      "equivalent-terminology": 4,
+      "abbreviated-description": 4,
+      "typing-errors": 4,
+      "receipt-file-variation": 4,
+      "conflicting-amounts": 4,
+      "incomplete-structured-fields": 4,
+      "incident-allocation-change": 4,
+      "shared-incident": 4,
+      "equal-price": 4,
+      "overlapping-purpose-terms": 4,
+      "neighboring-product-specifications": 4,
+      "repeated-service-or-replenishment": 4,
+      "receipt-and-order-conflicts": 4,
+      "missing-attachments": 4,
+      "consolidated-document": 4,
+      "recording-time-gap": 4,
+      "insufficient-procurement-facts": 4
+    },
+    "decisions": {
+      "duplicate": 40,
+      "distinct": 36,
+      "ambiguous": 4
+    }
+  },
+  "metrics": null,
+  "runtime": {
+    "elapsedMilliseconds": 4.221263999999991,
+    "sharedEmbeddingCallsCompleted": 0,
+    "completedEmbeddingVectors": 0
+  },
+  "failure": "ENOENT: no such file or directory, open '/workspace/Waylatch/models/Xenova/all-MiniLM-L6-v2/onnx/model_quantized.onnx'"
+}

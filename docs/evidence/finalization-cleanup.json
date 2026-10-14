@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-14T11:01:14.986012+00:00",
+  "preFixTestDirectoriesRemoved": [
+    "waylatch-judge-EN6YAh",
+    "waylatch-judge-rtYrBv"
+  ],
+  "postFixBrowserJudgeDirectoriesRemaining": [],
+  "scope": "Only two directories observed being created by this task before the shutdown fix were manually removed; corrected launches cleaned themselves."
+}

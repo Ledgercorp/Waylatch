@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 const evidenceOnly = process.env.WAYLATCH_EVIDENCE_ONLY === '1';
 export default defineConfig({
   testDir: 'tests/competitive',
+  outputDir: 'test-results/competitive',
   fullyParallel: false,
   workers: 1,
   use: {
@@ -19,6 +20,7 @@ export default defineConfig({
     command: `PORT=4174 npm run judge${evidenceOnly ? ' -- --evidence-only' : ''}`,
     url: 'http://127.0.0.1:4174/api/health',
     reuseExistingServer: false,
+    gracefulShutdown: { signal: 'SIGTERM', timeout: 5000 },
     timeout: 120000,
   },
   reporter: [['list']],

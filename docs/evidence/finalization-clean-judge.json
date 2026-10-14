@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-14T11:00:16.961650+00:00",
+  "category": "clean-source-one-command-evidence-only-judge-acceptance",
+  "node": "v24.19.0",
+  "initialNodeModulesPresent": false,
+  "initialBuildPresent": false,
+  "sourceFingerprints": {
+    "scripts/judge-start.mjs": "70ac315fa4f1f576bb9d556ab1acbc0723ef75fa268bd7673e427d1959834ffc",
+    "scripts/judge-demo.ts": "947e45544b5712656aa2ede42aaf9b974b1560565b799723b605e9d2b4daefab",
+    "server/judge-demo.ts": "8fea05220324762d45423d95a636267307776fed06e1e20044fdd0f2316b1e89",
+    "package.json": "217b2d6ebd1757c9ab27e2039fabe267f999ac99b0fcb9f4e41c0c695984091e",
+    "package-lock.json": "581565da266de7c74443f3a491244eb2d86c5cee435df4f11356ef864edd49d8"
+  },
+  "realAIValidated": false,
+  "financialProviderCalls": 0,
+  "realSpending": 0,
+  "health": {
+    "environment": "sandbox",
+    "paypalConfigured": false,
+    "payouts": "blocked-unverified",
+    "ai": "local-assets-required"
+  },
+  "htmlStatus": 200,
+  "archive": {
+    "historical": true,
+    "readonly": true,
+    "currentProviderInspection": false,
+    "orderId": "2W330508JA572391V",
+    "captureId": "8WY07860808872629",
+    "chain": {
+      "valid": true,
+      "brokenAt": null,
+      "count": 7
+    }
+  },
+  "fictionalRecords": 7,
+  "payments": 0,
+  "financialRouteStatuses": {
+    "/api/requests/RL-JUDGE-WATER-A/approve": 403,
+    "/api/payments/RL-JUDGE-WATER-A/order": 403,
+    "/api/payments/RL-JUDGE-WATER-A/capture": 403
+  },
+  "temporaryJudgeDirectoriesDuringRun": [
+    "waylatch-judge-cQ9tnG"
+  ],
+  "temporaryJudgeDirectoriesAfterShutdown": [],
+  "success": true,
+  "cleanSourceRemoved": true
+}
