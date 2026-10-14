@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { demoRequest, unknownFields, type ResourceRequest } from '../requests/schema';
 import { sameRequestSnapshot } from '../requests/snapshot';
-import { getOutbox, saveRequest, type OutboxEntry } from '../offline';
+import { clearDemoStorage, getOutbox, saveRequest, type OutboxEntry } from '../offline';
 import type { StoredRecord, Payment } from '../../server/store';
 import type { AuditEvent } from '../audit/chain';
 import { api, money } from './api';
@@ -27,7 +27,23 @@ import { ReviewPanel } from './ReviewPanel';
 import { PayPanel } from './PayPanel';
 import { AuditPanel } from './AuditPanel';
 import { ProofTrail } from './ProofTrail';
-import { GuidedDemo, type JudgeDemoInfo } from './GuidedDemo';
+import { GuidedDemo, PublicDemoIntro, type JudgeDemoInfo } from './GuidedDemo';
+const demoExpiryKey = 'waylatch-public-demo-expires';
+function savedDemoExpiry() {
+  try {
+    return Number(localStorage.getItem(demoExpiryKey)) || 0;
+  } catch {
+    return 0;
+  }
+}
+function rememberDemoExpiry(expiresAt: number) {
+  try {
+    if (expiresAt) localStorage.setItem(demoExpiryKey, String(expiresAt));
+    else localStorage.removeItem(demoExpiryKey);
+  } catch {
+    /* Session still works when optional browser storage is unavailable. */
+  }
+}
 const stages = ['Request', 'Review', 'Pay', 'Audit', 'Proof Trail'] as const;
 type Stage = (typeof stages)[number];
 type State = {
@@ -77,6 +93,8 @@ export function App() {
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState('');
   const [judge, setJudge] = useState<JudgeDemoInfo | null>(null);
+  const [demoBooting, setDemoBooting] = useState(true);
+  const [demoExpiresAt, setDemoExpiresAt] = useState(0);
   const [showArchive, setShowArchive] = useState(false);
   const [snapshotSource, setSnapshotSource] = useState<'local' | 'server'>('local');
   const localRecords = outbox.map((x) => x.request);
@@ -106,22 +124,65 @@ export function App() {
   async function loadLocal() {
     setOutbox(await getOutbox());
   }
+  function clearWorkspace() {
+    setAuthenticated(false);
+    setDemoExpiresAt(0);
+    setOutbox([]);
+    setState({
+      records: [],
+      payments: [],
+      events: [],
+      chain: { valid: true, count: 0, brokenAt: null },
+    });
+    setDialog(null);
+    setStage('Request');
+    setSelected(demoRequest.id);
+    setShowArchive(false);
+    setSnapshotSource('local');
+  }
+  async function startDemo() {
+    const session = await api<{ expiresAt?: number }>('/demo/session', {});
+    if (judge?.publicDemo) {
+      // A new server visitor must never inherit an expired visitor's browser records.
+      if (!session.expiresAt || savedDemoExpiry() !== session.expiresAt) await clearDemoStorage();
+      rememberDemoExpiry(session.expiresAt ?? 0);
+      setDemoExpiresAt(session.expiresAt ?? 0);
+      await loadLocal();
+    }
+    await refresh();
+    setNotice('Isolated judge review session ready. Financial operations remain blocked.');
+  }
   useEffect(() => {
     loadLocal().catch((e) => setError(e.message));
     api<{ paypalConfigured: boolean }>('/health')
       .then((r) => setConfigured(r.paypalConfigured))
       .catch(() => {});
-    refresh().catch(() => setAuthenticated(false));
+    const sessionReady = refresh()
+      .then(() => true)
+      .catch(() => {
+        setAuthenticated(false);
+        return false;
+      });
     // Safe read-only demo metadata survives an offline reload; it grants no server authority.
+    let cachedJudge = false;
     try {
       const cached = JSON.parse(sessionStorage.getItem('waylatch-judge-metadata') ?? 'null');
-      if (cached?.mode === 'judge' && cached.archive?.readonly === true) setJudge(cached);
+      if (cached?.mode === 'judge' && cached.archive?.readonly === true) {
+        cachedJudge = true;
+        setJudge(cached);
+        if (cached.publicDemo && !navigator.onLine && savedDemoExpiry() > Date.now()) {
+          setDemoExpiresAt(savedDemoExpiry());
+        }
+      }
     } catch {
       /* Storage may be unavailable; the normal application still works. */
     }
     api<JudgeDemoInfo>('/demo')
-      .then((demo) => {
+      .then(async (demo) => {
         setJudge(demo);
+        if (demo.publicDemo && (await sessionReady) && savedDemoExpiry() > Date.now()) {
+          setDemoExpiresAt(savedDemoExpiry());
+        }
         try {
           sessionStorage.setItem('waylatch-judge-metadata', JSON.stringify(demo));
         } catch {
@@ -129,7 +190,7 @@ export function App() {
         }
       })
       .catch(() => {
-        if (navigator.onLine) {
+        if (navigator.onLine && !cachedJudge) {
           setJudge(null);
           try {
             sessionStorage.removeItem('waylatch-judge-metadata');
@@ -137,7 +198,8 @@ export function App() {
             /* Optional cache. */
           }
         }
-      });
+      })
+      .finally(() => setDemoBooting(false));
     const changed = () => setOnline(navigator.onLine);
     window.addEventListener('online', changed);
     window.addEventListener('offline', changed);
@@ -146,6 +208,26 @@ export function App() {
       window.removeEventListener('offline', changed);
     };
   }, []);
+  useEffect(() => {
+    if (!judge?.publicDemo || !demoExpiresAt) return;
+    const expired = () => {
+      rememberDemoExpiry(0);
+      clearWorkspace();
+      setNotice('Your fictional demo session expired. Start a new demo to continue.');
+    };
+    const timeout = window.setTimeout(expired, Math.max(0, demoExpiresAt - Date.now()));
+    const storageChanged = (event: StorageEvent) => {
+      if (event.key === demoExpiryKey && Number(event.newValue) !== demoExpiresAt) {
+        clearWorkspace();
+        setNotice('The demo session changed in another tab. Start the demo to continue.');
+      }
+    };
+    window.addEventListener('storage', storageChanged);
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener('storage', storageChanged);
+    };
+  }, [judge?.publicDemo, demoExpiresAt]);
   function act(fn: () => Promise<void>) {
     setBusy(true);
     setError('');
@@ -184,9 +266,29 @@ export function App() {
         <div className="header-actions">
           <span className="sandbox-label">
             <Lock size={12} />
-            SANDBOX ONLY
+            {judge?.publicDemo ? 'PAYMENTS BLOCKED' : 'SANDBOX ONLY'}
           </span>
-          {authenticated ? (
+          {judge?.publicDemo ? (
+            demoExpiresAt > 0 && (
+              <button
+                className="header-button"
+                disabled={busy || !online}
+                onClick={() =>
+                  act(async () => {
+                    await api('/demo/session', undefined, 'DELETE');
+                    rememberDemoExpiry(0);
+                    clearWorkspace();
+                    await clearDemoStorage();
+                    setNotice(
+                      'Demo reset. Your fictional records and QR receiver progress were cleared.',
+                    );
+                  })
+                }
+              >
+                <LogOut size={15} aria-hidden="true" /> Reset demo
+              </button>
+            )
+          ) : authenticated ? (
             <button
               className="header-button"
               onClick={() =>
@@ -210,10 +312,12 @@ export function App() {
               Judge guide <ArrowUpRight size={15} />
             </a>
           ) : (
-            <button className="header-button" onClick={() => setDialog('login')}>
-              Coordinator sign in
-              <ArrowUpRight size={15} />
-            </button>
+            !demoBooting && (
+              <button className="header-button" onClick={() => setDialog('login')}>
+                Coordinator sign in
+                <ArrowUpRight size={15} />
+              </button>
+            )
           )}
         </div>
       </header>
@@ -229,129 +333,6 @@ export function App() {
         </span>
       </div>
       <main id="main">
-        {judge && (
-          <p className="judge-mode-banner" role="status">
-            ISOLATED JUDGE MODE · Fictional requests and read-only historical payment evidence.
-            Financial operations disabled.
-          </p>
-        )}
-        <section className="hero">
-          <div>
-            <p className="eyebrow">EMERGENCY PROCUREMENT / CONTINUITY BY DESIGN</p>
-            <h1>
-              From field need
-              <br />
-              <span>to verified action.</span>
-            </h1>
-            <p className="hero-description">
-              Keep urgent supply requests moving through a network failure.
-              <br className="desktop-br" /> Reconnect with evidence, human authorization and PayPal.
-            </p>
-          </div>
-          <div
-            className="incident-map"
-            aria-label="Schematic of fictional Ember flood-response incident"
-          >
-            <svg viewBox="0 0 310 160" aria-hidden="true">
-              <defs>
-                <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-                  <path d="M 25 0 L 0 0 0 25" fill="none" stroke="currentColor" strokeWidth=".5" />
-                </pattern>
-              </defs>
-              <rect width="310" height="160" fill="url(#grid)" />
-              <path
-                d="M70 -10 C100 45,210 10,175 85 S240 105,280 175"
-                stroke="#aec5c6"
-                strokeWidth="17"
-                fill="none"
-              />
-              <path
-                d="M0 130 L85 110 L120 140 L185 120 L260 60 L310 80 M25 0 L45 55 L120 50 L150 0"
-                stroke="#9daea9"
-                strokeWidth="1"
-                fill="none"
-              />
-              <circle
-                cx="108"
-                cy="85"
-                r="24"
-                fill="#c9654120"
-                stroke="#ba5837"
-                strokeDasharray="3 4"
-              />
-              <circle cx="108" cy="85" r="5" fill="#b85231" />
-              <path d="M113 85h27" stroke="#b85231" />
-              <text x="147" y="88" fontSize="10" fontFamily="monospace" fill="#18323b">
-                EMBER SHELTER
-              </text>
-            </svg>
-            <div className="map-caption">
-              <span>
-                <span className="status-dot" />
-                FLOOD-EMBER-26
-              </span>
-              <span>FICTIONAL INCIDENT</span>
-            </div>
-          </div>
-        </section>
-        {judge && (
-          <GuidedDemo
-            authenticated={authenticated}
-            busy={busy}
-            online={online}
-            localCount={outbox.length}
-            evidenceOnly={judge.evidenceOnly}
-            onStart={() =>
-              act(async () => {
-                await api('/demo/session', {});
-                await refresh();
-                setNotice(
-                  'Isolated judge review session ready. Financial operations remain blocked.',
-                );
-              })
-            }
-            onRequest={() => setDialog('form')}
-            onHandoff={() => setDialog('handoff')}
-            onReceive={() => setDialog('receive')}
-            onReview={() => {
-              setShowArchive(false);
-              setStage('Review');
-            }}
-            onProof={() => {
-              setShowArchive(false);
-              setStage('Proof Trail');
-            }}
-            onArchive={() => {
-              setShowArchive(true);
-              setStage('Proof Trail');
-            }}
-          />
-        )}
-        <div className="workspace-toolbar">
-          <nav aria-label="Procurement stages">
-            {stages.map((s, i) => (
-              <button
-                key={s}
-                aria-label={s}
-                className={s === stage ? 'active' : ''}
-                aria-current={s === stage ? 'step' : undefined}
-                onClick={() => {
-                  setStage(s);
-                  setShowArchive(false);
-                  setError('');
-                }}
-              >
-                <span>{String(i + 1).padStart(2, '0')}</span>
-                {s}
-                {i < stages.length - 1 && <ChevronRight size={14} />}
-              </button>
-            ))}
-          </nav>
-          <button className="text-button receive-button" onClick={() => setDialog('receive')}>
-            <ScanLine size={16} />
-            Receive handoff
-          </button>
-        </div>
         {error && (
           <div role="alert" className="error global-message">
             {error}
@@ -369,289 +350,427 @@ export function App() {
             </button>
           </div>
         )}
-        <div className="workspace">
-          <aside className="request-rail" aria-label="Incident requests">
-            <div className="rail-heading">
+        {demoBooting ? (
+          <p className="notice demo-loading" role="status">
+            Opening Waylatch…
+          </p>
+        ) : judge?.publicDemo && !demoExpiresAt ? (
+          <PublicDemoIntro busy={busy} online={online} onStart={() => act(startDemo)} />
+        ) : (
+          <>
+            {judge && (
+              <p className="judge-mode-banner" role="status">
+                ISOLATED JUDGE MODE · Fictional requests and read-only historical payment evidence.
+                Financial operations disabled.
+              </p>
+            )}
+            <section className="hero">
               <div>
-                <span className="eyebrow">EMBER RESPONSE</span>
-                <h2>
-                  Resource ledger <span>{displayed.length.toString().padStart(2, '0')}</span>
-                </h2>
+                <p className="eyebrow">EMERGENCY PROCUREMENT / CONTINUITY BY DESIGN</p>
+                <h1>
+                  From field need
+                  <br />
+                  <span>to verified action.</span>
+                </h1>
+                <p className="hero-description">
+                  Keep urgent supply requests moving through a network failure.
+                  <br className="desktop-br" /> Reconnect with evidence, human authorization and
+                  PayPal.
+                </p>
               </div>
-              <button
-                className="add-button"
-                aria-label="New field request"
-                onClick={() => setDialog('form')}
+              <div
+                className="incident-map"
+                aria-label="Schematic of fictional Ember flood-response incident"
               >
-                <Plus size={19} />
-              </button>
-            </div>
-            <div className="request-list">
-              {displayed.map((r) => {
-                const row = state.records.find((x) => x.record.id === r.id);
-                const qr =
-                  outbox.find((x) => x.request.id === r.id)?.provenance.source === 'qr-import';
-                return (
+                <svg viewBox="0 0 310 160" aria-hidden="true">
+                  <defs>
+                    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+                      <path
+                        d="M 25 0 L 0 0 0 25"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth=".5"
+                      />
+                    </pattern>
+                  </defs>
+                  <rect width="310" height="160" fill="url(#grid)" />
+                  <path
+                    d="M70 -10 C100 45,210 10,175 85 S240 105,280 175"
+                    stroke="#aec5c6"
+                    strokeWidth="17"
+                    fill="none"
+                  />
+                  <path
+                    d="M0 130 L85 110 L120 140 L185 120 L260 60 L310 80 M25 0 L45 55 L120 50 L150 0"
+                    stroke="#9daea9"
+                    strokeWidth="1"
+                    fill="none"
+                  />
+                  <circle
+                    cx="108"
+                    cy="85"
+                    r="24"
+                    fill="#c9654120"
+                    stroke="#ba5837"
+                    strokeDasharray="3 4"
+                  />
+                  <circle cx="108" cy="85" r="5" fill="#b85231" />
+                  <path d="M113 85h27" stroke="#b85231" />
+                  <text x="147" y="88" fontSize="10" fontFamily="monospace" fill="#18323b">
+                    EMBER SHELTER
+                  </text>
+                </svg>
+                <div className="map-caption">
+                  <span>
+                    <span className="status-dot" />
+                    FLOOD-EMBER-26
+                  </span>
+                  <span>FICTIONAL INCIDENT</span>
+                </div>
+              </div>
+            </section>
+            {judge && (
+              <GuidedDemo
+                authenticated={authenticated}
+                busy={busy}
+                online={online}
+                localCount={outbox.length}
+                evidenceOnly={judge.evidenceOnly}
+                publicDemo={judge.publicDemo}
+                onStart={() => act(startDemo)}
+                onRequest={() => setDialog('form')}
+                onHandoff={() => setDialog('handoff')}
+                onReceive={() => setDialog('receive')}
+                onReview={() => {
+                  setShowArchive(false);
+                  setStage('Review');
+                }}
+                onProof={() => {
+                  setShowArchive(false);
+                  setStage('Proof Trail');
+                }}
+                onArchive={() => {
+                  setShowArchive(true);
+                  setStage('Proof Trail');
+                }}
+              />
+            )}
+            <div className="workspace-toolbar">
+              <nav aria-label="Procurement stages">
+                {stages.map((s, i) => (
                   <button
-                    className={r.id === record.id ? 'request-item selected' : 'request-item'}
-                    key={r.id}
+                    key={s}
+                    aria-label={s}
+                    className={s === stage ? 'active' : ''}
+                    aria-current={s === stage ? 'step' : undefined}
                     onClick={() => {
-                      setSelected(r.id);
-                      setSnapshotSource('local');
+                      setStage(s);
                       setShowArchive(false);
-                      setNotice('');
                       setError('');
                     }}
                   >
-                    <div className="request-item-top">
-                      <span className="mono">{r.id}</span>
-                      <span
-                        className={
-                          r.urgency === 'urgent' || r.urgency === 'critical'
-                            ? 'urgency urgent'
-                            : 'urgency'
-                        }
+                    <span>{String(i + 1).padStart(2, '0')}</span>
+                    {s}
+                    {i < stages.length - 1 && <ChevronRight size={14} />}
+                  </button>
+                ))}
+              </nav>
+              <button className="text-button receive-button" onClick={() => setDialog('receive')}>
+                <ScanLine size={16} />
+                Receive handoff
+              </button>
+            </div>
+            <div className="workspace">
+              <aside className="request-rail" aria-label="Incident requests">
+                <div className="rail-heading">
+                  <div>
+                    <span className="eyebrow">EMBER RESPONSE</span>
+                    <h2>
+                      Resource ledger <span>{displayed.length.toString().padStart(2, '0')}</span>
+                    </h2>
+                  </div>
+                  <button
+                    className="add-button"
+                    aria-label="New field request"
+                    onClick={() => setDialog('form')}
+                  >
+                    <Plus size={19} />
+                  </button>
+                </div>
+                <div className="request-list">
+                  {displayed.map((r) => {
+                    const row = state.records.find((x) => x.record.id === r.id);
+                    const qr =
+                      outbox.find((x) => x.request.id === r.id)?.provenance.source === 'qr-import';
+                    return (
+                      <button
+                        className={r.id === record.id ? 'request-item selected' : 'request-item'}
+                        key={r.id}
+                        onClick={() => {
+                          setSelected(r.id);
+                          setSnapshotSource('local');
+                          setShowArchive(false);
+                          setNotice('');
+                          setError('');
+                        }}
                       >
-                        {r.kind === 'claim' ? 'CLAIM' : r.urgency.toUpperCase()}
-                      </span>
-                    </div>
-                    <strong>{r.resources[0].description}</strong>
-                    <div className="request-item-bottom">
-                      <span>
-                        {row && !sameRequestSnapshot(row.record, r)
-                          ? 'Local / server conflict'
-                          : qr
-                            ? 'QR import · untrusted'
-                            : (row?.status ??
-                              (outbox.some((x) => x.request.id === r.id)
-                                ? 'Locally preserved'
-                                : 'Synthetic fixture'))}
-                      </span>
-                      <span>{money(r.amountCents)}</span>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-            <div className="rail-foot">
-              <Radio size={20} />
-              <div>
-                <strong>Built for the gap.</strong>
-                <p>
-                  Local records survive reload.
-                  <br />
-                  QR packets bridge disconnection.
-                </p>
-              </div>
-            </div>
-            <button
-              className="text-button seed-button"
-              disabled={busy}
-              onClick={() =>
-                act(async () => {
-                  for (const r of [demoRequest, duplicate, claim]) await saveRequest(r);
-                  await loadLocal();
-                  setNotice('Three fictional demo records loaded. No payment executed.');
-                })
-              }
-            >
-              Load synthetic demo records <ArrowRight size={14} />
-            </button>
-          </aside>
-          <article className="record-panel">
-            <div className="record-heading">
-              <div>
-                <span className="eyebrow">
-                  {record.kind === 'claim' ? 'EXPENSE CLAIM' : 'SUPPLY REQUEST'} / {record.id}
-                </span>
-                <h2>
-                  {record.kind === 'claim'
-                    ? 'Documented expense'
-                    : record.id.startsWith('RL-DEMO')
-                      ? 'Ember shelter resupply'
-                      : record.resources[0].description}
-                </h2>
-                <p className="small">
-                  {record.incident ?? 'Incident unknown'} <span>·</span> revision {record.revision}{' '}
-                  <span>·</span> {record.origin}
-                </p>
-              </div>
-              <span className={payment?.state === 'PAID' ? 'tag confirmed' : 'tag'}>
-                {showArchive && stage === 'Proof Trail' && judge
-                  ? 'Historical Sandbox · read only'
-                  : snapshotConflict
-                    ? 'Snapshot conflict'
-                    : payment?.state === 'PAID'
-                      ? 'Sandbox paid'
-                      : remote?.status === 'approved'
-                        ? 'Purchase authorized'
-                        : (remote?.status ??
-                          (provenance?.source === 'qr-import'
-                            ? 'QR import · untrusted'
-                            : provenance
-                              ? 'Locally preserved'
-                              : 'Synthetic fixture'))}
-              </span>
-            </div>
-            {snapshotConflict && (
-              <div className="notice" role="alert">
-                <strong>Local and coordinator snapshots differ</strong>
-                <p>
-                  The displayed local record is not the coordinator’s authoritative version. Review
-                  scores and payment controls are blocked for this snapshot; neither record is
-                  overwritten.
-                </p>
-                <button className="secondary" onClick={() => setSnapshotSource('server')}>
-                  View coordinator snapshot
+                        <div className="request-item-top">
+                          <span className="mono">{r.id}</span>
+                          <span
+                            className={
+                              r.urgency === 'urgent' || r.urgency === 'critical'
+                                ? 'urgency urgent'
+                                : 'urgency'
+                            }
+                          >
+                            {r.kind === 'claim' ? 'CLAIM' : r.urgency.toUpperCase()}
+                          </span>
+                        </div>
+                        <strong>{r.resources[0].description}</strong>
+                        <div className="request-item-bottom">
+                          <span>
+                            {row && !sameRequestSnapshot(row.record, r)
+                              ? 'Local / server conflict'
+                              : qr
+                                ? 'QR import · untrusted'
+                                : (row?.status ??
+                                  (outbox.some((x) => x.request.id === r.id)
+                                    ? 'Locally preserved'
+                                    : 'Synthetic fixture'))}
+                          </span>
+                          <span>{money(r.amountCents)}</span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="rail-foot">
+                  <Radio size={20} />
+                  <div>
+                    <strong>Built for the gap.</strong>
+                    <p>
+                      Local records survive reload.
+                      <br />
+                      QR packets bridge disconnection.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  className="text-button seed-button"
+                  disabled={busy}
+                  onClick={() =>
+                    act(async () => {
+                      for (const r of [demoRequest, duplicate, claim]) await saveRequest(r);
+                      await loadLocal();
+                      setNotice('Three fictional demo records loaded. No payment executed.');
+                    })
+                  }
+                >
+                  Load synthetic demo records <ArrowRight size={14} />
                 </button>
-              </div>
-            )}
-            {stage === 'Request' && (
-              <section className="stage-content">
-                <div className="section-heading">
+              </aside>
+              <article className="record-panel">
+                <div className="record-heading">
                   <div>
-                    <span className="eyebrow">01 / PRESERVE THE NEED</span>
-                    <h2>Supplies needed. Connection optional.</h2>
-                  </div>
-                  <Package size={25} />
-                </div>
-                <div className="resource-table">
-                  <div className="table-heading">
-                    <span>RESOURCE</span>
-                    <span>QUANTITY</span>
-                  </div>
-                  {record.resources.map((r, i) => (
-                    <div className="resource-row" key={i}>
-                      <span>
-                        <span className="resource-number">{String(i + 1).padStart(2, '0')}</span>
-                        <strong>{r.description}</strong>
-                      </span>
-                      <span className="mono">{r.quantity ?? 'Unknown'}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="record-facts">
-                  <div>
-                    <span>Requested amount</span>
-                    <strong>{money(record.amountCents)}</strong>
-                    <span className="small">
-                      {record.amountKind === 'exact'
-                        ? 'Exact · subject to human approval'
-                        : record.amountKind}
+                    <span className="eyebrow">
+                      {record.kind === 'claim' ? 'EXPENSE CLAIM' : 'SUPPLY REQUEST'} / {record.id}
                     </span>
-                  </div>
-                  <div>
-                    <span>Operational location</span>
-                    <strong>{record.location ?? 'Explicitly unknown'}</strong>
-                    <span className="small">Non-sensitive fictional label</span>
-                  </div>
-                </div>
-                <div className="preservation-note">
-                  <CheckCircle size={20} />
-                  <div>
-                    <strong>
-                      {provenance
-                        ? 'Preserved in IndexedDB'
-                        : 'Synthetic fixture · ready to preserve'}
-                    </strong>
-                    <p>
-                      {provenance?.source === 'qr-import'
-                        ? 'QR import · untrusted. Import provenance retained.'
-                        : 'No financial authority travels with this record.'}{' '}
-                      Created {new Date(record.createdAt).toLocaleString()}.
+                    <h2>
+                      {record.kind === 'claim'
+                        ? 'Documented expense'
+                        : record.id.startsWith('RL-DEMO')
+                          ? 'Ember shelter resupply'
+                          : record.resources[0].description}
+                    </h2>
+                    <p className="small">
+                      {record.incident ?? 'Incident unknown'} <span>·</span> revision{' '}
+                      {record.revision} <span>·</span> {record.origin}
                     </p>
                   </div>
+                  <span className={payment?.state === 'PAID' ? 'tag confirmed' : 'tag'}>
+                    {showArchive && stage === 'Proof Trail' && judge
+                      ? 'Historical Sandbox · read only'
+                      : snapshotConflict
+                        ? 'Snapshot conflict'
+                        : payment?.state === 'PAID'
+                          ? 'Sandbox paid'
+                          : remote?.status === 'approved'
+                            ? 'Purchase authorized'
+                            : (remote?.status ??
+                              (provenance?.source === 'qr-import'
+                                ? 'QR import · untrusted'
+                                : provenance
+                                  ? 'Locally preserved'
+                                  : 'Synthetic fixture'))}
+                  </span>
                 </div>
-                {unknownFields(record).length > 0 && (
-                  <p className="notice small">
-                    Unknown information: {unknownFields(record).join(', ')}. Incomplete fields may
-                    block authorization.
-                  </p>
+                {snapshotConflict && (
+                  <div className="notice" role="alert">
+                    <strong>Local and coordinator snapshots differ</strong>
+                    <p>
+                      The displayed local record is not the coordinator’s authoritative version.
+                      Review scores and payment controls are blocked for this snapshot; neither
+                      record is overwritten.
+                    </p>
+                    <button className="secondary" onClick={() => setSnapshotSource('server')}>
+                      View coordinator snapshot
+                    </button>
+                  </div>
                 )}
-                <div className="request-actions">
-                  <button className="secondary" onClick={() => setDialog('handoff')}>
-                    <ScanLine size={17} />
-                    QR handoff
-                  </button>
-                  <button className="primary" onClick={() => setStage('Review')}>
-                    Continue to review <ArrowRight size={17} />
-                  </button>
-                </div>
-              </section>
-            )}
-            {stage === 'Review' && (
-              <ReviewPanel
-                key={record.id}
-                record={record}
-                remote={remote}
-                provenance={provenance?.source}
-                authenticated={authenticated}
-                busy={busy}
-                act={act}
-                refresh={refresh}
-                comparisonRecords={state.records}
-                relationshipEvents={state.events}
-              />
-            )}
-            {stage === 'Pay' && (
-              <PayPanel
-                key={record.id}
-                record={record}
-                remote={remote}
-                payment={payment}
-                configured={configured}
-                financialActionsBlocked={judge !== null}
-                busy={busy}
-                act={act}
-                refresh={refresh}
-              />
-            )}
-            {stage === 'Audit' && (
-              <AuditPanel events={state.events} chain={state.chain} authenticated={authenticated} />
-            )}
-            {stage === 'Proof Trail' &&
-              (showArchive && judge ? (
-                <>
-                  <div className="notice">
-                    <strong>Separate historical payment record</strong>
-                    <p>
-                      This purchase was completed before this walkthrough. These are saved
-                      authoritative Sandbox observations, not a new checkout or current live
-                      provider request.
-                    </p>
-                  </div>
-                  <ProofTrail {...judge.archive} />
-                </>
-              ) : snapshotConflict ? (
-                <section className="stage-content notice">
-                  <strong>Coordinator proof withheld for conflicting snapshot</strong>
-                  <p>
-                    This local body does not match the server request. Its server review, approval
-                    and payment events cannot be attributed to this content. View the coordinator
-                    snapshot to inspect its actual Proof Trail; the original organization chain
-                    remains available in Audit.
-                  </p>
-                </section>
-              ) : (
-                <ProofTrail
-                  record={record}
-                  provenance={localEntry}
-                  payment={payment}
-                  events={state.events}
-                  chain={authenticated ? state.chain : undefined}
-                />
-              ))}
-          </article>
-        </div>
-        <footer>
-          <span>
-            WAYLATCH <span className="footer-slash">/</span> LeftSock Labs
-          </span>
-          <p>
-            Fictional requests. PayPal Sandbox uses simulated funds. Historical evidence is labeled;
-            viewing it creates no payment.
-          </p>
-        </footer>
+                {stage === 'Request' && (
+                  <section className="stage-content">
+                    <div className="section-heading">
+                      <div>
+                        <span className="eyebrow">01 / PRESERVE THE NEED</span>
+                        <h2>Supplies needed. Connection optional.</h2>
+                      </div>
+                      <Package size={25} />
+                    </div>
+                    <div className="resource-table">
+                      <div className="table-heading">
+                        <span>RESOURCE</span>
+                        <span>QUANTITY</span>
+                      </div>
+                      {record.resources.map((r, i) => (
+                        <div className="resource-row" key={i}>
+                          <span>
+                            <span className="resource-number">
+                              {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <strong>{r.description}</strong>
+                          </span>
+                          <span className="mono">{r.quantity ?? 'Unknown'}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="record-facts">
+                      <div>
+                        <span>Requested amount</span>
+                        <strong>{money(record.amountCents)}</strong>
+                        <span className="small">
+                          {record.amountKind === 'exact'
+                            ? 'Exact · subject to human approval'
+                            : record.amountKind}
+                        </span>
+                      </div>
+                      <div>
+                        <span>Operational location</span>
+                        <strong>{record.location ?? 'Explicitly unknown'}</strong>
+                        <span className="small">Non-sensitive fictional label</span>
+                      </div>
+                    </div>
+                    <div className="preservation-note">
+                      <CheckCircle size={20} />
+                      <div>
+                        <strong>
+                          {provenance
+                            ? 'Preserved in IndexedDB'
+                            : 'Synthetic fixture · ready to preserve'}
+                        </strong>
+                        <p>
+                          {provenance?.source === 'qr-import'
+                            ? 'QR import · untrusted. Import provenance retained.'
+                            : 'No financial authority travels with this record.'}{' '}
+                          Created {new Date(record.createdAt).toLocaleString()}.
+                        </p>
+                      </div>
+                    </div>
+                    {unknownFields(record).length > 0 && (
+                      <p className="notice small">
+                        Unknown information: {unknownFields(record).join(', ')}. Incomplete fields
+                        may block authorization.
+                      </p>
+                    )}
+                    <div className="request-actions">
+                      <button className="secondary" onClick={() => setDialog('handoff')}>
+                        <ScanLine size={17} />
+                        QR handoff
+                      </button>
+                      <button className="primary" onClick={() => setStage('Review')}>
+                        Continue to review <ArrowRight size={17} />
+                      </button>
+                    </div>
+                  </section>
+                )}
+                {stage === 'Review' && (
+                  <ReviewPanel
+                    key={record.id}
+                    record={record}
+                    remote={remote}
+                    provenance={provenance?.source}
+                    authenticated={authenticated}
+                    busy={busy}
+                    act={act}
+                    refresh={refresh}
+                    comparisonRecords={state.records}
+                    relationshipEvents={state.events}
+                  />
+                )}
+                {stage === 'Pay' && (
+                  <PayPanel
+                    key={record.id}
+                    record={record}
+                    remote={remote}
+                    payment={payment}
+                    configured={configured}
+                    financialActionsBlocked={judge !== null}
+                    busy={busy}
+                    act={act}
+                    refresh={refresh}
+                  />
+                )}
+                {stage === 'Audit' && (
+                  <AuditPanel
+                    events={state.events}
+                    chain={state.chain}
+                    authenticated={authenticated}
+                  />
+                )}
+                {stage === 'Proof Trail' &&
+                  (showArchive && judge ? (
+                    <>
+                      <div className="notice">
+                        <strong>Separate historical payment record</strong>
+                        <p>
+                          This purchase was completed before this walkthrough. These are saved
+                          authoritative Sandbox observations, not a new checkout or current live
+                          provider request.
+                        </p>
+                      </div>
+                      <ProofTrail {...judge.archive} />
+                    </>
+                  ) : snapshotConflict ? (
+                    <section className="stage-content notice">
+                      <strong>Coordinator proof withheld for conflicting snapshot</strong>
+                      <p>
+                        This local body does not match the server request. Its server review,
+                        approval and payment events cannot be attributed to this content. View the
+                        coordinator snapshot to inspect its actual Proof Trail; the original
+                        organization chain remains available in Audit.
+                      </p>
+                    </section>
+                  ) : (
+                    <ProofTrail
+                      record={record}
+                      provenance={localEntry}
+                      payment={payment}
+                      events={state.events}
+                      chain={authenticated ? state.chain : undefined}
+                    />
+                  ))}
+              </article>
+            </div>
+            <footer>
+              <span>
+                WAYLATCH <span className="footer-slash">/</span> LeftSock Labs
+              </span>
+              <p>
+                Fictional requests. PayPal Sandbox uses simulated funds. Historical evidence is
+                labeled; viewing it creates no payment.
+              </p>
+            </footer>
+          </>
+        )}
       </main>
       {dialog === 'form' && <RequestForm onSave={preserve} onClose={() => setDialog(null)} />}
       {dialog === 'handoff' && <Handoff request={record} onClose={() => setDialog(null)} />}

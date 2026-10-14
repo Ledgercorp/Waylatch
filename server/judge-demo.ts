@@ -221,10 +221,7 @@ export function isLoopbackHost(host: string | undefined) {
 }
 
 /** Separate demonstration examples; never imports the held-out evaluation corpus. */
-export function createJudgeRuntime(directory: string) {
-  const archive = loadJudgeArchive();
-  const password = newJudgePassphrase();
-  const store = new Store(join(directory, 'judge.sqlite'));
+export function seedJudgeStore(store: Store) {
   const make = (
     id: string,
     text: string,
@@ -276,9 +273,16 @@ export function createJudgeRuntime(directory: string) {
         });
       }
     });
-    return { store, password, archive };
+    return store;
   } catch (error) {
     store.close();
     throw error;
   }
+}
+
+export function createJudgeRuntime(directory: string) {
+  const archive = loadJudgeArchive();
+  const password = newJudgePassphrase();
+  const store = seedJudgeStore(new Store(join(directory, 'judge.sqlite')));
+  return { store, password, archive };
 }

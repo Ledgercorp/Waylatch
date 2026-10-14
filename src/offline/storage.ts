@@ -84,6 +84,20 @@ export async function getOutbox(): Promise<OutboxEntry[]> {
 export async function getRequests(): Promise<ResourceRequest[]> {
   return (await getOutbox()).map((entry) => RequestSchema.parse(entry.request));
 }
+/** Clear only this origin's fictional browser records and QR reconstruction progress. */
+export async function clearDemoStorage(): Promise<void> {
+  const db = await database();
+  try {
+    const transaction = db.transaction(['requests', 'receiver'], 'readwrite');
+    await Promise.all([
+      transaction.objectStore('requests').clear(),
+      transaction.objectStore('receiver').clear(),
+    ]);
+    await transaction.done;
+  } finally {
+    db.close();
+  }
+}
 export async function saveReceiver(state: Receiver, session = 'default'): Promise<void> {
   const packets = Object.values(state.seen);
   // Reparse complete envelopes and reconstruct before persisting caller-supplied state.

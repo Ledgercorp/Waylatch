@@ -22,6 +22,8 @@ export function createApp({
   judgeMode = false,
   judgeArchive,
   judgeEvidenceOnly = false,
+  publicJudge = false,
+  riskAssessment,
 }: {
   store: Store;
   paypal: PayPalProvider;
@@ -30,13 +32,17 @@ export function createApp({
   judgeMode?: boolean;
   judgeArchive?: JudgeArchive;
   judgeEvidenceOnly?: boolean;
+  publicJudge?: boolean;
+  riskAssessment?: typeof import('../src/risk/review-quality').assessReviewQuality;
 }) {
   if (password.length < 12)
     throw new Error('COORDINATOR_PASSWORD must have at least 12 characters');
   const url = new URL(origin);
   if (!['http:', 'https:'].includes(url.protocol) || url.pathname !== '/')
     throw new Error('APP_ORIGIN must be an origin');
-  if (judgeMode && !isLoopbackHost(url.host))
+  if (publicJudge && (!judgeMode || (url.protocol !== 'https:' && !isLoopbackHost(url.host))))
+    throw new Error('Public judge requires judge isolation and HTTPS');
+  if (judgeMode && !publicJudge && !isLoopbackHost(url.host))
     throw new Error('Judge demo requires a loopback origin');
   const app = express();
   app.disable('x-powered-by');
@@ -352,7 +358,8 @@ export function createApp({
     z.strictObject({}).parse(req.body);
     const row = store.record(req.params.id);
     if (!row) throw new Conflict('Unknown request');
-    const { assessReviewQuality } = await import('../src/risk/review-quality');
+    const assessReviewQuality =
+      riskAssessment ?? (await import('../src/risk/review-quality')).assessReviewQuality;
     const map = (r: typeof row) => ({
       id: r.record.id,
       incident: r.record.incident,

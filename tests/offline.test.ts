@@ -11,6 +11,7 @@ import {
 } from '../src/offline/reconstruction';
 import {
   getOutbox,
+  clearDemoStorage,
   getRequests,
   loadReceiver,
   saveReceiver,
@@ -144,5 +145,23 @@ describe('disconnected handoff, local execution only', () => {
   });
   it('creates an actual QR PNG for bounded packet text', async () => {
     expect(await packetQrDataUri(buildPackets(demoRequest)[0])).toMatch(/^data:image\/png;base64,/);
+  });
+  it('resets fictional outbox and every QR receiver without deleting unrelated origin data', async () => {
+    await saveRequest(demoRequest);
+    const partial = receive(emptyReceiver(), buildPackets(demoRequest)[0]);
+    await saveReceiver(partial);
+    await saveReceiver(partial, 'second-receiver');
+    const unrelated = indexedDB.open('unrelated-app', 1);
+    await new Promise<void>((resolve) => {
+      unrelated.onsuccess = () => {
+        unrelated.result.close();
+        resolve();
+      };
+    });
+    await clearDemoStorage();
+    expect(await getOutbox()).toEqual([]);
+    expect(await loadReceiver()).toEqual(emptyReceiver());
+    expect(await loadReceiver('second-receiver')).toEqual(emptyReceiver());
+    expect((await indexedDB.databases()).some((db) => db.name === 'unrelated-app')).toBe(true);
   });
 });

@@ -1,7 +1,32 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { expect, test } from 'vitest';
-import { GuidedDemo } from '../src/components/GuidedDemo';
+import { GuidedDemo, PublicDemoIntro } from '../src/components/GuidedDemo';
+
+test('public introduction leads with interactive access and honest resource boundaries', () => {
+  const html = renderToStaticMarkup(
+    createElement(PublicDemoIntro, { busy: false, online: true, onStart() {} }),
+  );
+  expect(html).toContain('Start Interactive Demo');
+  expect(html).toContain('https://www.youtube.com/watch?v=G1qlgEfOQE8');
+  expect(html).toContain('https://github.com/Ledgercorp/Waylatch');
+  expect(html).toContain('No account or credentials needed');
+  expect(html).toContain('AI runs on the server CPU');
+  expect(html).toContain('after one hour');
+  expect(html).toContain('documented false positives');
+  expect(html).toContain('Financial actions blocked');
+  expect(html).not.toContain('passphrase');
+});
+
+test('starting a fresh public session requires connection and avoids duplicate requests while busy', () => {
+  for (const status of [
+    { online: false, busy: false },
+    { online: true, busy: true },
+  ]) {
+    const html = renderToStaticMarkup(createElement(PublicDemoIntro, { ...status, onStart() {} }));
+    expect(html).toContain('disabled=""');
+  }
+});
 
 test('judge guide separates fictional actions, human boundaries and historical payment', () => {
   const html = renderToStaticMarkup(

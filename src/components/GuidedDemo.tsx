@@ -3,6 +3,8 @@ import type { ProofTrailInput } from '../proof/trail';
 
 export type JudgeDemoInfo = {
   mode: 'judge';
+  publicDemo?: boolean;
+  sessionTtlSeconds?: number;
   evidenceOnly?: boolean;
   archive: ProofTrailInput & { readonly: true; historical: true; currentProviderInspection: false };
 };
@@ -12,6 +14,7 @@ type Props = {
   online: boolean;
   localCount: number;
   evidenceOnly?: boolean;
+  publicDemo?: boolean;
   onStart: () => void;
   onRequest: () => void;
   onHandoff: () => void;
@@ -21,15 +24,95 @@ type Props = {
   onArchive: () => void;
 };
 
+export function PublicDemoIntro({
+  busy,
+  online,
+  onStart,
+}: {
+  busy: boolean;
+  online: boolean;
+  onStart: () => void;
+}) {
+  return (
+    <section className="public-demo-intro" aria-labelledby="demo-title">
+      <p className="eyebrow">LEFTSOCK LABS / INTERACTIVE JUDGE EXPERIENCE</p>
+      <h1 id="demo-title">Waylatch</h1>
+      <h2>From field need to verified action.</h2>
+      <p className="public-demo-description">
+        Experience an offline-ready procurement workflow with QR handoff, local AI-assisted review,
+        human financial controls and a verifiable Proof Trail.
+      </p>
+      <div className="public-demo-actions">
+        <button className="primary" disabled={busy || !online} onClick={onStart}>
+          {busy ? 'Starting your demo…' : 'Start Interactive Demo'}
+          <ArrowRight size={18} aria-hidden="true" />
+        </button>
+        <a
+          className="secondary"
+          href="https://www.youtube.com/watch?v=G1qlgEfOQE8"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Watch the project video
+        </a>
+        <a
+          className="text-button"
+          href="https://github.com/Ledgercorp/Waylatch"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View source code
+        </a>
+      </div>
+      {!online && (
+        <p className="notice" role="status">
+          Reconnect to start a new demo session.
+        </p>
+      )}
+      <div className="public-demo-facts">
+        <div>
+          <h3>Your fictional workspace</h3>
+          <p>
+            No account or credentials needed. Use fictional information only. Your server session
+            expires after one hour; reset clears its records and this browser’s demo data.
+          </p>
+        </div>
+        <div>
+          <h3>Real workflow, human decisions</h3>
+          <p>
+            Browser records and QR handoff work offline after loading. AI runs on the server CPU and
+            needs a connection. Similarity is advisory, with documented false positives.
+          </p>
+        </div>
+        <div>
+          <h3>Financial actions blocked</h3>
+          <p>
+            No orders, capture or payouts. Explore separately labeled historical Sandbox evidence
+            without creating a transaction.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function GuidedDemo(props: Props) {
   return (
-    <details id="judge-guide" className="judge-guide" open={!props.authenticated}>
+    <details
+      id="judge-guide"
+      className="judge-guide"
+      open={props.publicDemo || !props.authenticated}
+    >
       <summary>Guided judge demonstration · fictional records</summary>
       <div className="judge-guide-header">
         <div>
           <p className="eyebrow">GUIDED DEMONSTRATION / FICTIONAL REQUESTS</p>
           <h2>Keep a request moving. Keep authority human.</h2>
-          <p className="muted">Explore the existing product in an isolated local workspace.</p>
+          <p className="muted">
+            {props.publicDemo
+              ? 'Your isolated fictional workspace lasts one hour. Keep browser records through refresh; reset starts fresh.'
+              : 'Explore the existing product in an isolated local workspace.'}
+          </p>
         </div>
         {!props.authenticated && (
           <button
@@ -87,6 +170,8 @@ export function GuidedDemo(props: Props) {
           <p>
             Reconnect, submit the local request explicitly, and run review. Compare descriptions,
             receipts and context; read the reported inference mode. Similarity is advisory.
+            {props.publicDemo &&
+              ' AI runs on this server’s CPU, not offline inside your browser. The frozen evaluations did not establish improved duplicate detection or real-world effectiveness.'}
           </p>
           <button className="secondary" disabled={!props.authenticated} onClick={props.onReview}>
             Open coordinator review
