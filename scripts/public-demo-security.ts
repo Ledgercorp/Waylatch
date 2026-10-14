@@ -35,7 +35,11 @@ try {
       { 'X-Forwarded-For': address },
     );
     assert.equal(response.status, 200);
-    cookies.push(response.headers.get('set-cookie')!.split(';')[0]);
+    const setCookie = response.headers.get('set-cookie')!;
+    assert.match(setCookie, /^__Host-waylatch_demo=[a-f0-9]{64};/);
+    for (const attribute of ['HttpOnly', 'Secure', 'SameSite=Strict', 'Path=/', 'Max-Age=3600'])
+      assert(setCookie.includes(attribute));
+    cookies.push(setCookie.split(';')[0]);
   }
   const spoof = await call(
     '/api/demo/session',
@@ -50,6 +54,75 @@ try {
     scene: 'Render edge forwarded-IP spoofing',
     independentSessions: 2,
     forgedThirdSessionStatus: spoof.status,
+  });
+  for (const forwarded of ['192.0.2.9, 198.51.100.8', '::1', 'unknown', '']) {
+    const result = await call(
+      '/api/demo/session',
+      'POST',
+      '',
+      {},
+      {
+        'X-Forwarded-For': forwarded,
+        'X-Real-IP': `192.0.2.${10 + checks.length}`,
+        Forwarded: 'for=203.0.113.99;host=foreign.example;proto=http',
+        'X-Forwarded-Host': 'foreign.example',
+        'X-Forwarded-Proto': 'http',
+      },
+    );
+    if (result.status === 200) cookies.push(result.headers.get('set-cookie')!.split(';')[0]);
+    assert.equal(result.status, 429);
+  }
+  const forgedClientHeader = await call(
+    '/api/demo/session',
+    'POST',
+    '',
+    {},
+    {
+      'CF-Connecting-IP': '203.0.113.77',
+    },
+  );
+  assert.equal(forgedClientHeader.status, 403);
+  assert.equal((await call('/api/state')).status, 401);
+  assert.equal(
+    (await call('/api/state', 'GET', '__Host-waylatch_demo=' + 'a'.repeat(64))).status,
+    401,
+  );
+  const missingOrigin = await call('/api/requests', 'POST', cookies[0], {}, { Origin: '' });
+  const crossSite = await call('/api/state', 'GET', cookies[0], undefined, {
+    'Sec-Fetch-Site': 'cross-site',
+  });
+  assert.equal(missingOrigin.status, 403);
+  assert.equal(crossSite.status, 403);
+  checks.push({
+    scene: 'Hosted cookie, authentication and forwarded-header boundaries',
+    secureHostOnlyCookie: true,
+    forwardedHeaderVariantsRejected: 4,
+    forgedCloudflareClientHeader: forgedClientHeader.status,
+    missingOrigin: missingOrigin.status,
+    crossSite: crossSite.status,
+    unauthenticatedState: 401,
+    forgedCookie: 401,
+  });
+  const financialPaths = [
+    '/api/session',
+    '/api/requests/RL-JUDGE-WATER-A/approve',
+    '/api/claims/RL-JUDGE-WATER-A/approve',
+    '/api/payments/RL-JUDGE-WATER-A/order',
+    '/api/payments/RL-JUDGE-WATER-A/capture',
+    '/api/payments/RL-JUDGE-WATER-A',
+    '/api/webhooks/paypal',
+    '/api/Payments/RL-JUDGE-WATER-A/order',
+    '/api/payments%2FRL-JUDGE-WATER-A%2Fcapture',
+    '/api/requests/RL-JUDGE-WATER-A/approve/',
+  ];
+  for (const cookie of ['', cookies[0]])
+    for (const path of financialPaths)
+      assert.equal((await call(path, 'POST', cookie, { confirm: true })).status, 403);
+  assert.equal((await call('/api/payments/RL-JUDGE-WATER-A', 'GET', cookies[0])).status, 403);
+  checks.push({
+    scene: 'Hosted financial/provider deny boundary before authentication',
+    deniedRequests: financialPaths.length * 2 + 1,
+    financialOperationsExecuted: 0,
   });
   const foreign = await call(
     '/api/requests',
@@ -67,11 +140,19 @@ try {
   });
   assert.equal(invalid.status, 400);
   assert(!JSON.stringify(await invalid.json()).includes('stack'));
+  for (const path of [
+    '/.env',
+    '/Dockerfile',
+    '/server/public-judge.ts',
+    '/models/Xenova/all-MiniLM-L6-v2/config.json',
+  ])
+    assert.equal((await call(path)).status, 404);
   checks.push({
     scene: 'Hosted origin, body and validation boundaries',
     foreignOrigin: foreign.status,
     oversizedBody: oversized.status,
     invalidRecord: invalid.status,
+    privateServerOrModelFilesExposed: 0,
   });
   for (let index = 0; index < 9; index++) {
     const result = await call('/api/requests', 'POST', cookies[0], {
@@ -113,6 +194,7 @@ try {
     JSON.stringify(
       {
         url: origin,
+        deployedGitCommit: process.env.WAYLATCH_DEPLOYED_COMMIT ?? null,
         executedAt: new Date().toISOString(),
         passed: true,
         checks,
@@ -130,6 +212,7 @@ try {
     JSON.stringify(
       {
         url: origin,
+        deployedGitCommit: process.env.WAYLATCH_DEPLOYED_COMMIT ?? null,
         executedAt: new Date().toISOString(),
         passed: false,
         checks,

@@ -36,11 +36,54 @@ function call(
 async function start(host: ReturnType<typeof setup>, ip = '192.0.2.1', cookie?: string) {
   const response = await call(host, 'post', '/api/demo/session', cookie)
     .set('X-Forwarded-For', ip)
+    .set('CF-Connecting-IP', ip.split(',').at(-1)!.trim())
     .send({})
     .expect(200);
   return { cookie: response.headers['set-cookie']?.[0]?.split(';')[0] ?? cookie!, response };
 }
 describe('public judge trust boundary', () => {
+  it('keeps one source bucket across rotating Render proxy hops and forged forwarded prefixes', async () => {
+    const host = setup();
+    for (const [index, expected] of [
+      [1, 200],
+      [2, 200],
+      [3, 429],
+    ] as const)
+      await call(host, 'post', '/api/demo/session')
+        .set('CF-Connecting-IP', '203.0.113.90')
+        .set('X-Forwarded-For', `192.0.2.${index}, 203.0.113.90, 10.0.0.${index}, 10.1.0.${index}`)
+        .set('X-Real-IP', `198.51.100.${index}`)
+        .set('Forwarded', `for=192.0.2.${index}`)
+        .send({})
+        .expect(expected);
+  });
+  it('does not trust XFF when the Render client header is missing or invalid', async () => {
+    for (const clientHeader of ['', 'unknown', '192.0.2.1, 192.0.2.2']) {
+      const host = setup();
+      for (const [index, expected] of [
+        [1, 200],
+        [2, 200],
+        [3, 429],
+      ] as const)
+        await call(host, 'post', '/api/demo/session')
+          .set('CF-Connecting-IP', clientHeader)
+          .set('X-Forwarded-For', `192.0.2.${index}`)
+          .send({})
+          .expect(expected);
+    }
+  });
+  it('keeps the request rate bucket stable while forwarded prefixes and proxy hops change', async () => {
+    const host = setup({ origin, renderEdge: true, limits: { requestsPerMinute: 2 } });
+    for (const [index, expected] of [
+      [1, 200],
+      [2, 200],
+      [3, 429],
+    ] as const)
+      await call(host, 'get', '/api/health')
+        .set('CF-Connecting-IP', '203.0.113.90')
+        .set('X-Forwarded-For', `192.0.2.${index}, 203.0.113.90, 10.0.0.${index}`)
+        .expect(expected);
+  });
   it('ignores forged forwarded prefixes and ignores all forwarded addresses without the Render opt-in', async () => {
     for (const renderEdge of [true, false]) {
       const host = setup({ origin, renderEdge });
@@ -48,6 +91,7 @@ describe('public judge trust boundary', () => {
       await start(host, '198.51.100.12, 203.0.113.90');
       await call(host, 'post', '/api/demo/session')
         .set('X-Forwarded-For', '192.0.2.13, 203.0.113.90')
+        .set('CF-Connecting-IP', '203.0.113.90')
         .send({})
         .expect(429);
     }
@@ -136,6 +180,7 @@ describe('public judge trust boundary', () => {
     await start(host, '192.0.2.2');
     await call(host, 'post', '/api/demo/session')
       .set('X-Forwarded-For', '192.0.2.3')
+      .set('CF-Connecting-IP', '192.0.2.3')
       .send({})
       .expect(503);
     await call(host, 'post', '/api/requests', a.cookie)
@@ -175,6 +220,7 @@ describe('public judge trust boundary', () => {
     await start(host, '192.0.2.1');
     await call(host, 'post', '/api/demo/session')
       .set('X-Forwarded-For', '192.0.2.1')
+      .set('CF-Connecting-IP', '192.0.2.1')
       .send({})
       .expect(429);
     clock += 3600001;

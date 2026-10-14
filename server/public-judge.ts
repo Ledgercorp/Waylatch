@@ -66,42 +66,16 @@ export function createPublicJudge({
   let inferences = 0;
   const app = express();
   app.disable('x-powered-by');
-  // Render appends its edge address after any caller-supplied X-Forwarded-For entries.
-  // Trust only the final hop, never a visitor-supplied first address. This opt-in is only for
-  // its edge-only Free web service; direct/local deployments ignore forwarded headers.
+  // Render's public ingress passes through Cloudflare, which supplies CF-Connecting-IP.
+  // X-Forwarded-For includes caller prefixes and rotating internal proxy hops; no position
+  // in that chain is a stable source identity. Trust the edge-owned header only on Render's
+  // edge-only Free web service. Missing/invalid values fall back to the socket, never XFF.
+  // Direct/local deployments ignore every forwarded header.
   // Forwarded host/protocol never grant authority. Global caps do not depend on IP.
   const clientIp = (req: express.Request) => {
-    const edge = renderEdge ? req.get('X-Forwarded-For')?.split(',').at(-1)?.trim() : undefined;
+    const edge = renderEdge ? req.get('CF-Connecting-IP')?.trim() : undefined;
     return hash(edge && isIP(edge) ? edge : (req.socket.remoteAddress ?? 'unknown'));
   };
-  // Temporary, nonce-selected hosted diagnosis. Never logs raw addresses or cookies.
-  const diagnosticSalt = randomBytes(32).toString('hex');
-  app.use((req, _res, next) => {
-    if (
-      req.path === '/api/health' &&
-      req.get('X-Waylatch-Proxy-Check') === 'cloud-resume-20261014-1529'
-    ) {
-      const opaque = (value: string) => hash(diagnosticSalt + value).slice(0, 16);
-      const chain =
-        req
-          .get('X-Forwarded-For')
-          ?.split(',')
-          .map((s) => s.trim()) ?? [];
-      console.info(
-        JSON.stringify({
-          proxyDiagnostic: true,
-          probe: req.get('X-Waylatch-Probe'),
-          socket: opaque(req.socket.remoteAddress ?? 'unknown'),
-          forwarded: chain.map(opaque),
-          documentationAddresses: chain.map((s) =>
-            /^(192\.0\.2\.|198\.51\.100\.|203\.0\.113\.)/.test(s),
-          ),
-          cloudflare: opaque(req.get('CF-Connecting-IP') ?? 'missing'),
-        }),
-      );
-    }
-    next();
-  });
   const blocked = async (): Promise<never> => {
     throw new Error('Public demo provider disabled');
   };

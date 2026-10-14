@@ -40,10 +40,19 @@ fails promptly with a retry response. Global request/session-start limits and bo
 remain effective independently of forwarded IP headers. Aborted assessment remains reserved
 through audit append; reset and cleanup cannot close a store while work remains active.
 
-Render deployments opt into its appended final X-Forwarded-For address only when
-`RENDER=true`. Other deployments ignore forwarded addresses. This assumes Render's public edge
-and its Free service's lack of private ingress; hosted spoofing checks verify this boundary.
-The initial first-address assumption failed live testing and was corrected before linking the demo.
+Render deployments opt into Cloudflare's edge-owned `CF-Connecting-IP` only when
+`RENDER=true`. Other deployments ignore forwarded headers. Missing/invalid client-IP headers
+fall back to the socket address; `X-Forwarded-For`, `Forwarded` and `X-Real-IP` never select a
+rate bucket. This trust is specific to Render's Cloudflare public ingress and this Free service's
+lack of private ingress. It must be reconsidered before using another host or enabling private
+ingress. Hosted tests exercise that boundary.
+
+Both the initial first-address assumption and commit `18909a8`'s final-address assumption
+failed live testing. Cloud resumption observed caller prefixes followed by the stable Cloudflare
+client identity and two proxy hops, including a rotating final internal address. The final-address
+key admitted a third same-source session. An isolated regression reproduces that failure;
+the correction uses the stable edge-owned identity and removes temporary opaque diagnostic logs.
+No raw addresses or session cookies were recorded by those diagnostics.
 
 ## Free hosting and recovery
 
@@ -69,4 +78,5 @@ Sources checked October 14, 2026:
 [Render free compute](https://render.com/docs/free),
 [pricing](https://render.com/pricing),
 [edge and IP handling](https://render.com/articles/how-render-handles-ddos-attacks),
+[Cloudflare request headers](https://developers.cloudflare.com/fundamentals/reference/http-request-headers/),
 [health checks](https://render.com/docs/health-checks).

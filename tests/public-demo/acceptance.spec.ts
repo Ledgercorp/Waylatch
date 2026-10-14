@@ -27,6 +27,7 @@ test.afterEach(async ({ page, context }, info) => {
             ? 'observed-public-https-browser-acceptance'
             : 'local-public-mode-browser-acceptance',
         url: baseURL,
+        deployedGitCommit: process.env.WAYLATCH_DEPLOYED_COMMIT ?? null,
         executedAt: new Date().toISOString(),
         passed: info.status === 'passed',
         status: info.status,
@@ -150,7 +151,13 @@ test('public guided workflow, genuine AI, proof, independent visitors and safe r
     (entry: any) => entry.record.resources[0].description === marker,
   ).record;
 
-  const independent = await browser.newContext({ baseURL, viewport: { width: 390, height: 844 } });
+  const independent = await browser.newContext({
+    baseURL,
+    viewport: { width: 390, height: 844 },
+    proxy: process.env.WAYLATCH_TEST_PROXY
+      ? { server: process.env.WAYLATCH_TEST_PROXY }
+      : undefined,
+  });
   const other = await independent.newPage();
   try {
     await start(other);
