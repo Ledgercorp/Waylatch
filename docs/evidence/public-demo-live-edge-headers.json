@@ -1,0 +1,18 @@
+{
+  "url": "https://waylatch-judge.onrender.com",
+  "deployedGitCommit": "10a46fb48c190cd92d3a18240cc8b45524c1f7af",
+  "executedAt": "2026-10-14T15:50:59.166Z",
+  "passed": true,
+  "checks": [
+    {
+      "forgedAddressFamily": "IPv4",
+      "status": 403
+    },
+    {
+      "forgedAddressFamily": "IPv6",
+      "status": 403
+    }
+  ],
+  "spendingUsd": 0,
+  "providerOperations": 0
+}

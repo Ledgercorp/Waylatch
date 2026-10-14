@@ -2,7 +2,54 @@
 
 The deployment uses the existing Waylatch React application, guided workflow, QR protocol,
 review engine and Proof Trail. It is a fictional demonstration, not a production service.
-Public-host verification and the final URL will be recorded after acceptance succeeds.
+Live HTTPS acceptance completed in Codex Cloud on October 14, 2026.
+
+**Interactive demo:** https://waylatch-judge.onrender.com
+
+**Exact deployed application commit:** `10a46fb48c190cd92d3a18240cc8b45524c1f7af`.
+Render deployment `dep-db7q33jbc2fs7383c12g` became live at 15:38:07 UTC on the existing
+service `srv-db7oqufavr4c73919bp0`. The later README/evidence commit preserves this application
+source; manual deployment remains enabled and the accepted application is not redeployed for
+documentation alone.
+
+## Hosted acceptance results
+
+[Browser acceptance](evidence/public-demo-live.json) passed at 15:50:33 UTC against the deployed
+commit, using Chromium at desktop 1440×1000 and mobile 390×844 layouts. The run preserved an
+offline request across reload, decoded an actual QR image, restored partial receiver state,
+reconstructed 14 packets, ignored duplicates and verified that reconnect alone did not upload.
+Explicit coordinator transfer, real CPU MiniLM inference, a human pair disposition, valid
+fictional/historical chains, sanitized exports and isolated reset all passed. Inference batches
+increased from 12 to 13; the review returned `semantic-local`. Five accessibility scenes had
+zero axe violations and no page overflow. Browser network emulation and automated accessibility
+are bounded checks; prolonged uptime and physical mobile devices were not evaluated.
+
+[Hosted security acceptance](evidence/public-demo-live-security.json) passed. A third session
+with a forged forwarded address returned 429; four additional forwarded-header variants stayed
+blocked. The cookie flags, unauthenticated/forged-cookie rejection, exact Origin/cross-site checks,
+48 KB body boundary, generic validation errors and private source/model file protection passed.
+All 21 authenticated/unauthenticated financial/provider route probes returned 403, including
+encoded and case variants. Storage stopped at 16 fictional records with zero payments. A bounded
+six-request CPU burst observed 503 while busy and genuine local inference on successful replies.
+Two client requests can arrive sequentially and both succeed; the retained
+[exploratory overlap probe](evidence/public-demo-live-concurrency-probe.json) records that
+inconclusive attempt without presenting it as a failed concurrency guard.
+
+[Rotating-header rate test](evidence/public-demo-live-rate-limit.json): 130 distinct forged
+header sets in one minute produced exactly 120 HTTP 200 replies and ten HTTP 429 replies with
+Retry-After. [Additional edge-header probes](evidence/public-demo-live-edge-headers.json) rejected
+forged public IPv4 and IPv6 Cloudflare client addresses with 403. The
+[original hosted failure](evidence/public-demo-live-security-before-fix.json) remains separate.
+The regression failed before the correction; all 39 focused local tests and the production
+TypeScript/Vite build passed after it.
+
+Two independent browser contexts could not read/export or modify each other's records. Resetting
+one left the other unchanged; reset credentials returned 401. Fixed-lifetime expiry is covered by
+the focused local tests. The original seven-event
+Sandbox archive and capture `8WY07860808872629` were displayed and validated without a provider
+inspection, purchase or capture. MIT, the submitted project/story, YouTube/video assets and frozen
+scientific evidence remain unchanged. No AI evaluation or payment operation was rerun. Devpost
+was not edited. The URL is suitable to link as this fictional interactive judge demo.
 
 ## Reproduce
 
@@ -17,6 +64,15 @@ Apache-2.0 model attribution and dependency licenses remain independent of the r
 Run `npm test` and `npm run build`. Public browser acceptance uses
 `WAYLATCH_DEMO_URL=<origin> npx playwright test --config playwright.public-demo.config.ts`.
 These checks write new public-demo evidence; they do not overwrite frozen evaluation receipts.
+
+The cloud continuation used the focused security/persistence/proof suite (39 tests), not an AI
+evaluation or payment run. Hosted API checks use `NODE_USE_ENV_PROXY=1 WAYLATCH_DEMO_URL=<origin>
+node --import tsx scripts/public-demo-security.ts` followed separately by
+`scripts/public-demo-rate-limit.ts`. Set `WAYLATCH_DEPLOYED_COMMIT` from Render's confirmed live
+deployment to bind receipts. In proxy-based cloud environments, set `WAYLATCH_TEST_PROXY` to the
+inherited HTTPS proxy and `PLAYWRIGHT_CHROMIUM_EXECUTABLE` to the installed Chromium path. Run
+rate saturation separately, then wait for the next minute before browser acceptance. Each run
+releases only its own fictional sessions.
 
 ## Boundaries
 
@@ -56,7 +112,7 @@ No raw addresses or session cookies were recorded by those diagnostics.
 
 ## Free hosting and recovery
 
-Candidate configuration: Render Hobby workspace, Free Docker Web Service, Virginia,
+Existing service: Render Hobby workspace, Free Docker Web Service, Virginia,
 0.1 CPU / 512 MB, one instance, no disk, no database and no payment method.
 The authenticated workspace confirmed 750 instance hours, 5 GB outbound bandwidth and 500
 pipeline minutes per month. No card and no pending charges were present before provisioning.
@@ -70,7 +126,9 @@ attach paid storage or enable paid services to resolve capacity issues.
 
 The existing competitive release remains the rollback baseline. Deployment changes are prepared
 on `feat/waylatch-public-judge`; the public default branch is updated only after live acceptance.
-Render supports rollback to its two previous deployments. Before a first successful deployment,
+Render supports rollback to its two previous deployments. The immediately previous diagnostic
+deployment retains the incorrect final-hop assumption and must not be used as an accepted demo.
+Before a first successful deployment,
 stop/suspend the failed service and retain the original local `npm run judge` instructions.
 Never publish a failed or fallback-only deployment as a verified full AI demonstration.
 

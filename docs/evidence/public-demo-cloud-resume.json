@@ -1,0 +1,99 @@
+{
+  "category": "cloud-resume-public-demo-completion",
+  "url": "https://waylatch-judge.onrender.com",
+  "verifiedAt": "2026-10-14T15:53:21.928760+00:00",
+  "passed": true,
+  "recoveredCommit": "18909a8c67520a649d3538645927d2f259a15f8d",
+  "deployedGitCommit": "10a46fb48c190cd92d3a18240cc8b45524c1f7af",
+  "renderServiceId": "srv-db7oqufavr4c73919bp0",
+  "renderDeploymentId": "dep-db7q33jbc2fs7383c12g",
+  "renderPlan": "free",
+  "renderInstances": 1,
+  "renderAutoDeploy": "off",
+  "renderDeploymentLiveAt": "2026-10-14T15:38:07.063101Z",
+  "localVerification": {
+    "focusedTestsPassed": 39,
+    "productionBuildPassed": true,
+    "regressionFailedBeforeFix": true,
+    "regressionPassedAfterFix": true
+  },
+  "browserVerification": {
+    "exitCode": 0,
+    "desktopViewport": [
+      1440,
+      1000
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ]
+  },
+  "preservation": {
+    "baselineCommit": "18909a8c67520a649d3538645927d2f259a15f8d",
+    "protectedExistingFilesMatched": 569,
+    "submittedProjectVideoLicenseScienceAndSandboxArtifactsUnchanged": true
+  },
+  "finalHealth": {
+    "environment": "sandbox",
+    "paypalConfigured": false,
+    "publicDemo": true,
+    "providerCallsAllowed": false,
+    "sessions": 0,
+    "inferences": 0,
+    "model": "Xenova/all-MiniLM-L6-v2",
+    "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+    "successfulInferenceBatches": 13,
+    "loadMilliseconds": 7896.883352000001,
+    "rssBytes": 301314048,
+    "uptimeSeconds": 810
+  },
+  "artifacts": {
+    "docs/evidence/public-demo-live.json": {
+      "sha256": "1c54c51dcc412aab8916ed5aeadd87d4db185aadd46dc7f9cc4a21f45feb9c09",
+      "passed": true
+    },
+    "docs/evidence/public-demo-live-security.json": {
+      "sha256": "44be526eb81ac1d57f8c27881ab902e6f3d0919e2715b3a48478a68f37316130",
+      "passed": true
+    },
+    "docs/evidence/public-demo-live-rate-limit.json": {
+      "sha256": "6f2a0a593f4bc5649d5a4555bd14e3c234947702865accd0cd68b77e7f5fcd5a",
+      "passed": true
+    },
+    "docs/evidence/public-demo-live-edge-headers.json": {
+      "sha256": "64499e8c2fff3971a8f330433b6eb5827e7185868fcc9f2cc460468e6de2fbe2",
+      "passed": true
+    },
+    "docs/evidence/public-demo-live-intro.png": {
+      "sha256": "22470016a78a598f248c090da7f7b08c3f71f6a631765576d9e5ba75bb024e3d"
+    },
+    "docs/evidence/public-demo-live-mobile.png": {
+      "sha256": "7851871f5ca50b5c8dc3f46774d558e85efe1951bda3b16c7c0c4cc4eaae288e"
+    },
+    "docs/evidence/public-demo-live-proof.png": {
+      "sha256": "aab621ace2bf7a06efb90a845de69f4f8b1c1a61a52052bd051ce9b00ba93d5d"
+    },
+    "docs/evidence/public-demo-live-qr.png": {
+      "sha256": "497486f395dc6e3485fc01f80721403a35a0874bc1ea18c979b1a2a63d5cd4b5"
+    },
+    "docs/evidence/public-demo-live-review.png": {
+      "sha256": "bd6c9ee59d35debba5ec63f757e05db4d4e46cf3cd0d9805969e31e03ce36613"
+    },
+    "docs/evidence/public-demo-live-browser.log": {
+      "sha256": "ae2e74f5d313c09a46634a5294ed063895b17b9ce4c5d24fdaf099db85ecb1b8",
+      "exitCode": 0
+    }
+  },
+  "newPaymentOperations": 0,
+  "newAiEvaluations": 0,
+  "newRenderServices": 0,
+  "realSpendingUsd": 0,
+  "devpostEdited": false,
+  "suitableToLinkAsFictionalJudgeDemo": true,
+  "limitations": [
+    "Free hosting can sleep, restart or suspend at quota limits.",
+    "Server sessions are ephemeral and expire after one hour.",
+    "Desktop/mobile checks used Chromium viewport and offline emulation.",
+    "No prolonged uptime or physical-device claim."
+  ]
+}

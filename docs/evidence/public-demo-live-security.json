@@ -1,0 +1,54 @@
+{
+  "url": "https://waylatch-judge.onrender.com",
+  "deployedGitCommit": "10a46fb48c190cd92d3a18240cc8b45524c1f7af",
+  "executedAt": "2026-10-14T15:44:06.716Z",
+  "passed": true,
+  "checks": [
+    {
+      "scene": "Render edge forwarded-IP spoofing",
+      "independentSessions": 2,
+      "forgedThirdSessionStatus": 429
+    },
+    {
+      "scene": "Hosted cookie, authentication and forwarded-header boundaries",
+      "secureHostOnlyCookie": true,
+      "forwardedHeaderVariantsRejected": 4,
+      "forgedCloudflareClientHeader": 403,
+      "missingOrigin": 403,
+      "crossSite": 403,
+      "unauthenticatedState": 401,
+      "forgedCookie": 401
+    },
+    {
+      "scene": "Hosted financial/provider deny boundary before authentication",
+      "deniedRequests": 21,
+      "financialOperationsExecuted": 0
+    },
+    {
+      "scene": "Hosted origin, body and validation boundaries",
+      "foreignOrigin": 403,
+      "oversizedBody": 413,
+      "invalidRecord": 400,
+      "privateServerOrModelFilesExposed": 0
+    },
+    {
+      "scene": "Hosted bounded fictional storage",
+      "records": 16,
+      "extraRecordStatus": 429
+    },
+    {
+      "scene": "Hosted concurrent CPU admission",
+      "statuses": [
+        200,
+        200,
+        503,
+        200,
+        200,
+        200
+      ],
+      "mode": "semantic-local"
+    }
+  ],
+  "spendingUsd": 0,
+  "providerOperations": 0
+}

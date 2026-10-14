@@ -1,0 +1,45 @@
+{
+  "url": "https://waylatch-judge.onrender.com",
+  "deployedGitCommit": "10a46fb48c190cd92d3a18240cc8b45524c1f7af",
+  "executedAt": "2026-10-14T15:42:50.515Z",
+  "passed": false,
+  "checks": [
+    {
+      "scene": "Render edge forwarded-IP spoofing",
+      "independentSessions": 2,
+      "forgedThirdSessionStatus": 429
+    },
+    {
+      "scene": "Hosted cookie, authentication and forwarded-header boundaries",
+      "secureHostOnlyCookie": true,
+      "forwardedHeaderVariantsRejected": 4,
+      "forgedCloudflareClientHeader": 403,
+      "missingOrigin": 403,
+      "crossSite": 403,
+      "unauthenticatedState": 401,
+      "forgedCookie": 401
+    },
+    {
+      "scene": "Hosted financial/provider deny boundary before authentication",
+      "deniedRequests": 21,
+      "financialOperationsExecuted": 0
+    },
+    {
+      "scene": "Hosted origin, body and validation boundaries",
+      "foreignOrigin": 403,
+      "oversizedBody": 413,
+      "invalidRecord": 400,
+      "privateServerOrModelFilesExposed": 0
+    },
+    {
+      "scene": "Hosted bounded fictional storage",
+      "records": 16,
+      "extraRecordStatus": 429
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    200,\n+   200\n-   503\n  ]\n",
+  "spendingUsd": 0,
+  "providerOperations": 0,
+  "category": "inconclusive-two-request-overlap-probe",
+  "interpretation": "Both requests succeeded; simultaneous client launch did not guarantee overlapping server admission. The final six-request bounded burst observed HTTP 503 and passed."
+}

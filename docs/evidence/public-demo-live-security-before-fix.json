@@ -1,0 +1,11 @@
+{
+  "url": "https://waylatch-judge.onrender.com",
+  "executedAt": "2026-10-14T15:28:16.501Z",
+  "passed": false,
+  "checks": [],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n200 !== 429\n",
+  "spendingUsd": 0,
+  "providerOperations": 0,
+  "deployedGitCommit": "18909a8c67520a649d3538645927d2f259a15f8d",
+  "interpretation": "Final X-Forwarded-For hop rotated across Render internal proxies, admitting a third same-source session."
+}

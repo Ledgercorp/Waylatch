@@ -1,0 +1,133 @@
+{
+  "category": "observed-public-https-browser-acceptance",
+  "url": "https://waylatch-judge.onrender.com",
+  "deployedGitCommit": "10a46fb48c190cd92d3a18240cc8b45524c1f7af",
+  "executedAt": "2026-10-14T15:50:33.847Z",
+  "passed": true,
+  "status": "passed",
+  "errors": [],
+  "realAIObserved": true,
+  "checks": [
+    {
+      "scene": "public introduction desktop",
+      "accessibilityViolations": []
+    },
+    {
+      "scene": "offline QR reconstruction",
+      "accessibilityViolations": []
+    },
+    {
+      "scene": "offline request/reload/real QR decode/reconstruction/reconnect",
+      "startupMilliseconds": 2957.581727,
+      "packetCount": 14,
+      "restoredPartialPackets": 1,
+      "serverMutationsOnReconnect": 0
+    },
+    {
+      "scene": "genuine server CPU inference",
+      "inferenceMilliseconds": 2380.531661999994,
+      "mode": "semantic-local",
+      "healthBefore": {
+        "environment": "sandbox",
+        "paypalConfigured": false,
+        "publicDemo": true,
+        "providerCallsAllowed": false,
+        "sessions": 2,
+        "inferences": 0,
+        "model": "Xenova/all-MiniLM-L6-v2",
+        "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+        "successfulInferenceBatches": 12,
+        "loadMilliseconds": 7896.883352000001,
+        "rssBytes": 301051904,
+        "uptimeSeconds": 727
+      },
+      "healthAfter": {
+        "environment": "sandbox",
+        "paypalConfigured": false,
+        "publicDemo": true,
+        "providerCallsAllowed": false,
+        "sessions": 2,
+        "inferences": 0,
+        "model": "Xenova/all-MiniLM-L6-v2",
+        "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+        "successfulInferenceBatches": 13,
+        "loadMilliseconds": 7896.883352000001,
+        "rssBytes": 301051904,
+        "uptimeSeconds": 730
+      },
+      "candidates": [
+        {
+          "id": "RL-JUDGE-CLAIM-A",
+          "similarity": 0.7215146250235498,
+          "tier": "potentially-related"
+        },
+        {
+          "id": "RL-JUDGE-OTHER",
+          "similarity": 0.6104713525408401,
+          "tier": "potentially-related"
+        },
+        {
+          "id": "RL-JUDGE-WATER-A",
+          "similarity": 0.6104713525408401,
+          "tier": "potentially-related"
+        },
+        {
+          "id": "RL-JUDGE-WATER-B",
+          "similarity": 0.5264224233213961,
+          "tier": "none"
+        },
+        {
+          "id": "RL-JUDGE-CLAIM-B",
+          "similarity": 0.3937371428340473,
+          "tier": "none"
+        },
+        {
+          "id": "RL-JUDGE-WATER-C",
+          "similarity": 0.3785971556755208,
+          "tier": "none"
+        },
+        {
+          "id": "RL-JUDGE-RADIOS",
+          "similarity": 0.16329580477414735,
+          "tier": "none"
+        }
+      ]
+    },
+    {
+      "scene": "genuine advisory review desktop",
+      "accessibilityViolations": []
+    },
+    {
+      "scene": "genuine advisory review mobile",
+      "accessibilityViolations": []
+    },
+    {
+      "scene": "historical archived proof mobile",
+      "accessibilityViolations": []
+    },
+    {
+      "scene": "human disposition/fictional proof/historical evidence/exports",
+      "fictionalChainValid": true,
+      "originalHistoricalEvents": 7,
+      "historicalCapture": "8WY07860808872629",
+      "sanitizedReportRedacted": true,
+      "financialMutationRoutesBlocked": 3,
+      "fictionalPayments": 0
+    },
+    {
+      "scene": "two concurrent independent visitors and reset",
+      "isolatedRead": true,
+      "crossVisitorWritesBlocked": 2,
+      "isolatedExport": true,
+      "resetOtherVisitorUnchanged": true,
+      "resetLocalOutbox": 0,
+      "resetReceiver": 0,
+      "priorSessionRejected": true
+    }
+  ],
+  "limitations": [
+    "Offline conditions use Chromium browser network emulation.",
+    "Automated accessibility checks do not replace assistive-technology or human usability evaluation.",
+    "This run does not establish provider sleep/resume behavior or prolonged uptime."
+  ]
+}

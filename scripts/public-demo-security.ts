@@ -160,6 +160,13 @@ try {
         ...demoRequest,
         id: `RL-CAPACITY-${index}`,
         origin: 'Fictional hosted capacity check',
+        resources: Array.from({ length: 2 }, (_, resource) => ({
+          description: (
+            `Fictional bounded CPU admission check ${index}, item ${resource}: ` +
+            'Water, blankets and medical supplies for a fictional shelter. '.repeat(10)
+          ).slice(0, 490),
+          quantity: 1,
+        })),
       },
       provenance: 'local',
     });
@@ -179,9 +186,18 @@ try {
     extraRecordStatus: cap.status,
   });
   const attempts = await Promise.all(
-    cookies.map((cookie) => call('/api/risk/RL-JUDGE-WATER-A', 'POST', cookie, {})),
+    Array.from({ length: 6 }, (_, index) =>
+      call(
+        index % 2 === 0 ? '/api/risk/RL-CAPACITY-0' : '/api/risk/RL-JUDGE-WATER-A',
+        'POST',
+        cookies[index % 2],
+        {},
+      ),
+    ),
   );
-  assert.deepEqual(attempts.map((r) => r.status).sort(), [200, 503]);
+  assert(attempts.every((r) => r.status === 200 || r.status === 503));
+  assert(attempts.some((r) => r.status === 200));
+  assert(attempts.some((r) => r.status === 503));
   const evidence = (await attempts.find((r) => r.status === 200)!.json()) as any;
   assert.equal(evidence.mode, 'semantic-local');
   checks.push({

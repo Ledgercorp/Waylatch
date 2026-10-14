@@ -14,6 +14,10 @@ Built by Colby Weiss / LeftSock Labs for the PayPal AI Hackathon 2026. All incid
 
 ## Competitive review and judge access
 
+**[Open the verified interactive demo](https://waylatch-judge.onrender.com)** — no installation or account required. Live HTTPS acceptance on October 14, 2026 verified real local MiniLM inference, offline request persistence, QR reconstruction, advisory review, Proof Trail, isolated visitors and desktop/mobile layouts. Financial approvals and all provider operations are blocked.
+
+Use fictional information only. The Free Render host may take about a minute to wake; server sessions are ephemeral and expire after one hour. [Hosted verification and security results](docs/PUBLIC_JUDGE_DEPLOYMENT.md).
+
 The public default branch, `feat/waylatch-competitive`, preserves the existing application and adds explainable advisory comparisons, revision-bound dispositions, grouped candidate summaries, a source-labeled Proof Trail and an isolated judge workspace. Start with the [judge quickstart](docs/JUDGE_QUICKSTART.md): six concrete steps, exact model/bundle paths and the honest missing-model fallback. [Publication status](docs/PUBLICATION_STATUS.md) records current public links; [final submission readiness](docs/SUBMISSION_READINESS.md) preserves the reviewed engineering checkpoint.
 
 ```bash
