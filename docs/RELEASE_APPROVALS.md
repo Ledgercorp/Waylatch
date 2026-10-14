@@ -2,7 +2,7 @@
 
 Prepared for owner review only. **No approval is presumed or requested during this engineering phase.** Repository remains private, root application license unadopted, video unpublished, terms unaccepted and Devpost unsent. Real spending remains **USD 0.00**.
 
-Source candidate commit: **SOURCE_BINDING_AFTER_VERIFICATION** on `feat/waylatch-competitive`, continuing `caf6d655aa6f30b275fc1d0bc66933bd7122acbc`. Main and `feat/waylatch-release-candidate` remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. The final completion report supplies the delivered documentation commit and independently read-back private remote SHA. [Artifact manifest](evidence/quality-release-artifacts.json) binds the concrete source/media/evidence bytes; [phase report](REVIEW_QUALITY_FINAL_REPORT.md) describes all checks and limits.
+Source candidate commit: **35681acdc43f55dd64e016d2edbd6e2dc6d2e250** on `feat/waylatch-competitive`, continuing `caf6d655aa6f30b275fc1d0bc66933bd7122acbc`. Main and `feat/waylatch-release-candidate` remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. The final completion report supplies the delivered documentation commit and independently read-back private remote SHA. [Artifact manifest](evidence/quality-release-artifacts.json) binds the concrete source/media/evidence bytes; [phase report](REVIEW_QUALITY_FINAL_REPORT.md) describes all checks and limits.
 
 ## Recommendation and material scientific limitation
 

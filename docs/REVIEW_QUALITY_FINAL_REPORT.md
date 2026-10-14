@@ -1,6 +1,6 @@
 # Review-quality phase: engineering complete, scientific targets unmet
 
-Private branch `feat/waylatch-competitive`, starting `caf6d655aa6f30b275fc1d0bc66933bd7122acbc`. Source candidate **SOURCE_BINDING_AFTER_VERIFICATION**; final delivered Git/remote SHA is supplied in the completion message. Main/release remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. [Concrete owner packet](RELEASE_APPROVALS.md), [artifact hashes](evidence/quality-release-artifacts.json).
+Private branch `feat/waylatch-competitive`, starting `caf6d655aa6f30b275fc1d0bc66933bd7122acbc`. Source candidate **35681acdc43f55dd64e016d2edbd6e2dc6d2e250**; final delivered Git/remote SHA is supplied in the completion message. Main/release remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. [Concrete owner packet](RELEASE_APPROVALS.md), [artifact hashes](evidence/quality-release-artifacts.json).
 
 ## Result and recommendation
 
