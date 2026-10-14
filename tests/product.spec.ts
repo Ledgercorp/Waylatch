@@ -106,10 +106,14 @@ test('real local AI and separate claim approval are usable through the interface
   await page.getByRole('button', { name: 'Send to coordinator review' }).click();
   await page.getByRole('button', { name: /RL-CLAIM01 CLAIM/ }).click();
   await page.getByRole('button', { name: 'Send to coordinator review' }).click();
+  const beforeAssessment = await (await page.request.get('/api/state')).json();
   await page.getByRole('button', { name: 'Run local semantic review' }).click();
   await expect(page.getByText('Real local AI inference')).toBeVisible();
   await expect(page.getByText('Semantically similar expense description').first()).toBeVisible();
-  await expect(page.getByText('No payment action taken.').first()).toBeVisible();
+  await expect(page.getByText(/AI cannot authorize, reject or execute a payment/)).toBeVisible();
+  const afterAssessment = await (await page.request.get('/api/state')).json();
+  expect(afterAssessment.records).toEqual(beforeAssessment.records);
+  expect(afterAssessment.payments).toEqual(beforeAssessment.payments);
   let results = await new AxeBuilder({ page }).analyze();
   writeFileSync('docs/evidence/axe-review.json', JSON.stringify(results.violations, null, 2));
   expect(results.violations.map((x) => x.id)).toEqual([]);

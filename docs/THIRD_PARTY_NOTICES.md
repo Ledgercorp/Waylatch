@@ -5,7 +5,7 @@ Declared direct packages and installed versions/licenses; full packages retain t
 | Package                   | Installed version | Declared license |
 | ------------------------- | ----------------- | ---------------- |
 | @axe-core/playwright      | 4.13.0            | MPL-2.0          |
-| @huggingface/transformers | 3.8.1             | Apache-2.0       |
+| @huggingface/transformers | 4.3.1             | Apache-2.0       |
 | @msgpack/msgpack          | 3.1.3             | ISC              |
 | @playwright/test          | 1.64.0            | Apache-2.0       |
 | @types/express            | 5.0.6             | MIT              |
@@ -30,10 +30,10 @@ Declared direct packages and installed versions/licenses; full packages retain t
 | tsx                       | 4.23.15           | MIT              |
 | typescript                | 5.9.3             | Apache-2.0       |
 | vite                      | 7.3.7             | MIT              |
-| vitest                    | 3.2.7             | MIT              |
+| vitest                    | 4.1.11            | MIT              |
 | zod                       | 4.6.7             | MIT              |
 
-Model: Xenova/all-MiniLM-L6-v2, pinned 751bff37182d3f1213fa05d7196b954e230abad9, Apache-2.0. Upstream sentence-transformers/all-MiniLM-L6-v2 is Apache-2.0. Model assets are downloaded separately, not committed. Model card/license evidence and asset hashes are in AI_MODEL.md.
+Model: Xenova/all-MiniLM-L6-v2, pinned 751bff37182d3f1213fa05d7196b954e230abad9, Apache-2.0. Upstream sentence-transformers/all-MiniLM-L6-v2 is Apache-2.0. Model assets are provisioned separately (verified owner upload in this execution), not committed. Model card/license evidence and asset hashes are in AI_MODEL.md.
 
 ## Owner-controlled source provenance
 

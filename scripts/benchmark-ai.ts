@@ -8,6 +8,7 @@ import {
   MODEL_ID,
   MODEL_REVISION,
   modelMetrics,
+  modelRuntime,
 } from '../src/risk/model';
 import { MODEL_ASSETS } from '../src/risk/model-assets';
 
@@ -66,7 +67,7 @@ try {
       platform: platform(),
       architecture: arch(),
       cpu: cpus()[0]?.model,
-      transformers: '3.8.1',
+      transformers: modelRuntime.transformersVersion,
       threads: 2,
       remoteModelsAllowed: false,
     },

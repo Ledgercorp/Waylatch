@@ -1,3 +1,15 @@
+# Current private submission package — genuine AI verified
+
+Recommendation: ready with documented limitations for owner review. [Current report](../AI_RESUMPTION_REPORT.md), [complete scientific evidence](../AI_EVALUATION_COMPETITIVE.md), [current unsent narrative](../DEVPOST_DRAFT.md). Full semantic judge access, 139 unit/integration tests, nine original and five competitive browser tests pass; six previous dependency findings are resolved with real-model verification. The substantial held-out false-positive burden remains explicit: combined F1 0.551 versus deterministic 0.500, FP70 versus FP16; semantic-only F1 0.585. No retuning of the completed held-out test.
+
+Run `npm run judge` with Node 24+, npm and separately provisioned pinned model assets. The clean acceptance used the owner's verified local bundle with `RESCUELEDGER_MODEL_PATH` set to the local model root; it made no model download. Other networks may use the existing pinned downloader, but this execution does not claim its earlier cloud CDN restriction changed. No PayPal merchant secrets are required; fictional records and historical provider proof remain separate and financial mutations stay blocked.
+
+Final private MP4: `docs/demo/waylatch-competitive-preview.mp4`, **87.68 seconds**, SHA-256 `cd673e2d243117181db3bf9e0910ffd70087b55823b90ebaaf9bc4c45b480c1c`. [Captions and final script](../demo/COMPETITIVE_SCRIPT.md) describe newly recorded genuine semantic evidence and accurately labeled historical Sandbox proof. Both earlier previews remain preserved. The genuine order/capture, original audit events and human authorization provenance are unchanged; no new payment occurred.
+
+`project-fields.json` mirrors the refreshed narrative and remains an unsent draft; no public video URL was invented. Official requirements, registration/custom fields, root source license, branding/eligibility, public source/video and final submission remain owner-controlled gates. No terms acceptance, root MIT adoption or publishing occurred. Real spending $0. The prior package below is retained as a historical draft and its model-blocked statements are superseded by this checkpoint.
+
+---
+
 # Finalization addendum — 14 October 2026
 
 The current private candidate remains **blocked**, not ready for submission. [Finalization report](../COMPETITIVE_FINALIZATION.md) records actual CDN policy evidence, 139 passing local tests, five passing evidence-only competitive browser checks, the unavailable real-AI check, clean judge bootstrap/shutdown and individual dependency risks. The unchanged 97.52-second preview and [current script](../demo/COMPETITIVE_SCRIPT.md) retain fallback/historical labels. No public or legal/submission action occurred. The package below remains a private draft.

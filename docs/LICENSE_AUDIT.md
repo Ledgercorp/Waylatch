@@ -1,3 +1,9 @@
+# Current inference-stack notice update — 14 October 2026
+
+The supported Transformers.js 4.3.1 / ONNX Runtime 1.30.0 / sharp 0.35.5 upgrade is reflected in [compatibility metadata](evidence/inference-stack-compatibility.json) and [current native versions/notice hashes](evidence/semantic-native-components.json). Installed notices remain intact. The older package counts and native versions below are historical. The original model pins/license are unchanged, and uploaded model weights/native libraries remain excluded from Git. No root source license was adopted, upstream source was not edited and no binary distribution was authorized.
+
+---
+
 # Release provenance and license audit
 
 Private release review, 2026-10-13. This is an engineering inventory, not legal clearance. No root license has been adopted.

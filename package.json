@@ -35,7 +35,7 @@
     "demo:render": "python3 scripts/render-demo.py"
   },
   "dependencies": {
-    "@huggingface/transformers": "^3.8.1",
+    "@huggingface/transformers": "4.3.1",
     "@msgpack/msgpack": "^3.1.0",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",

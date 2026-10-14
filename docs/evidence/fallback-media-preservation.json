@@ -1,0 +1,7 @@
+{
+  "originalPath": "docs/demo/waylatch-competitive-preview.mp4",
+  "preservedPath": "docs/demo/waylatch-competitive-fallback-preview.mp4",
+  "sha256": "1a4e0542c1c7a734df8c87c09e3ddc6bf7264b632b27de06c4a853d08fc9cb8d",
+  "durationSeconds": 97.52,
+  "notes": "Exact prior fallback preview and metadata preserved before replacement; historic metadata retains its original path."
+}

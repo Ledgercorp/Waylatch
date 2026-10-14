@@ -1,3 +1,9 @@
+# Model blocker resolved by verified owner upload — 14 October 2026
+
+The seven uploaded original assets match every source size/SHA-256 pin. No model redownload occurred. Genuine calibration, freeze, once-only held-out and default semantic judge acceptance completed; six dependency findings are resolved with verified supported upgrades. [Current report and limitations](AI_RESUMPTION_REPORT.md). The earlier cloud CDN denial remains historical evidence, not a current prerequisite for inference with these local assets. Scientific false-positive burden, actual signed webhook/Payouts limits and owner licensing/publication/legal/submission decisions remain disclosed. Do not repeat the historic purchase.
+
+---
+
 # Current finalization blocker — 14 October 2026
 
 Hugging Face is reachable and six pinned assets verify. The exact original weight redirects to **us.aws.cdn.hf.co**, absent from this task’s restricted policy and denied CONNECT 403. Custom metadata lists cas-bridge.xethub.hf.com rather than .co; the latter is also denied. Source/observed revision 2 and published version are recorded in [the single current technical report](COMPETITIVE_FINALIZATION.md). No supported tool exposes the newest saved configuration for comparison. No new environment is demonstrated necessary, no authorized trusted artifact was found and no bypass/retry loop was attempted. Genuine inference, calibration/freeze/held-out, default semantic judge and new semantic footage remain blocked. Six dependency risks are [individually documented](DEPENDENCY_REVIEW_FINALIZATION.md). The genuine historical Sandbox purchase is complete and must not be repeated. Earlier blocker snapshots follow for history.

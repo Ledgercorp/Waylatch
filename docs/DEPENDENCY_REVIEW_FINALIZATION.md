@@ -1,3 +1,20 @@
+# Verified dependency remediation — 14 October 2026
+
+All six previously recorded package findings are resolved by the supported **Transformers.js 4.3.1** upgrade, verified with the exact uploaded pinned MiniLM assets and genuine local CPU inference. [Compatibility evidence](evidence/inference-stack-compatibility.json), [fresh zero-finding audit](evidence/semantic-dependency-audit.json). No model weight/hash, scoring rule or label change. Zero audit findings is a bounded advisory-database result, not a complete security certification.
+
+| Previous package / version              | Remediation                                            | Verification                                                                                  |
+| --------------------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Transformers.js 3.8.1, inherited high   | Pinned 4.3.1; supported sharp/ONNX dependencies        | Real twelve-case benchmark, 80 calibration decisions unchanged, full app semantic tests       |
+| sharp 0.34.5, three high advisories     | 0.35.5; libvips 8.18.7, libheif 1.23.5, librsvg 2.63.2 | Versions exceed all recorded patch floors; zero current audit finding; real model integration |
+| ONNX Runtime 1.21.0, inherited moderate | 1.30.0 through supported upstream package              | Genuine unchanged-model CPU inference, not just native import                                 |
+| global-agent 3.0.0, inherited moderate  | 4.1.3, removes vulnerable logging dependency           | Resolved tree and clean CPU-only install                                                      |
+| roarr 2.15.4, inherited moderate        | Removed from dependency tree                           | No installed/locked roarr path                                                                |
+| sprintf-js 1.1.3, direct moderate       | Removed from dependency tree                           | No installed/locked sprintf-js path                                                           |
+
+The former vulnerable behaviors, route exposure investigation and exact advisories are preserved below as historical evidence. The upgrade was evaluated before final freeze. Cosines change slightly (maximum 0.0134842 on calibration); decisions/metrics do not. New runtime startup and memory differ, so no speed or memory improvement is claimed. The benchmark/evaluator now report the actual installed version. Runtime remains text-only/local-only; server payment authorization was not modified. Root source licensing and binary redistribution decisions remain with the owner.
+
+---
+
 # Dependency review — 14 October 2026
 
 The fresh locked install still reports **six vulnerable package findings: two high and four moderate**, representing three sharp advisories and one sprintf-js advisory propagated through their dependency chains. No critical findings. No dependency or inference-stack change was made: a compatible patched stack cannot be verified without the pinned model weight. These findings remain release risks, not accepted or erased risks.

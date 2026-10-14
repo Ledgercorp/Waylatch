@@ -1,3 +1,9 @@
+# Model-dependent continuation completed — 14 October 2026
+
+The owner-uploaded pinned model resolved the local asset blocker. Genuine inference/calibration/freeze/held-out, supported dependency remediation, semantic browser/default judge acceptance and current demo are recorded in [AI_RESUMPTION_REPORT.md](AI_RESUMPTION_REPORT.md). The former blocked report below is historical; its runtime policy observations and exact preserved artifact hashes remain valid for that checkpoint.
+
+---
+
 # Competitive finalization — blocked on original model weight
 
 Continued from `887d20eaf8964aba20cd04baee178d7683dfd3a3` on private `feat/waylatch-competitive`. Fetch confirmed that exact remote baseline; no later remote work was discarded. Main and `feat/waylatch-release-candidate` remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. The final synchronized commit is reported in the completion response; artifact/source digests are in [the finalization manifest](evidence/finalization-manifest.json).

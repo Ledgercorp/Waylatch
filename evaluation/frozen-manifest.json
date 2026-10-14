@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "category": "frozen-before-heldout-inference",
+  "frozenAt": "2026-10-14T11:11:27.944Z",
+  "datasetId": "waylatch-fictional-purchase-pairs-v1",
+  "fingerprint": {
+    "datasetSha256": "c5a43bab001eb529f5ab07f95c8371741841c304be451852f397de9f1ca0873c",
+    "annotationsSha256": "40644fb7cf486c873508e00b781231de14af63f2f8c87ca21c48ad3c2c009356",
+    "scoringSources": [
+      {
+        "path": "scripts/evaluate-ai.ts",
+        "sha256": "cf0ecd1d7d1e8afdb104d40ca80d1c9c7399e80cb872d70fd11c06e2aec30965"
+      },
+      {
+        "path": "src/risk/evaluation.ts",
+        "sha256": "a97f5ff13d416ae74446a4c51c6f5a9112860318216a51e757fd319b820d5fcb"
+      },
+      {
+        "path": "src/risk/review.ts",
+        "sha256": "a16debd0ce07975785ac3122fd3aeb59dfe9d69054d0a95899530f48c48fe68f"
+      },
+      {
+        "path": "src/risk/model.ts",
+        "sha256": "ab185263617a79d23e309a6699f503cf7ca81c5f26e5248464b90a7662d990fd"
+      },
+      {
+        "path": "src/risk/model-assets.ts",
+        "sha256": "2651954cd895196cae2173badf46b5a879453b5eaa97aa3d8d8bc32f627dcea1"
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "25e023dda07447a279f61479b3ad27fd6d527cdfce17c19999298ca4edf80aa2"
+      }
+    ],
+    "settings": {
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+      "dtype": "q8",
+      "device": "cpu",
+      "embeddingDimensions": 384,
+      "semanticThreshold": 0.6,
+      "combinedThreshold": 0.6,
+      "methods": [
+        "deterministic",
+        "semantic",
+        "combined"
+      ],
+      "bootstrap": {
+        "seed": 20261013,
+        "iterations": 10000,
+        "unit": "supplyFamily"
+      },
+      "remoteModelsAllowed": false,
+      "intraOpThreads": 2,
+      "interOpThreads": 1,
+      "assets": [
+        {
+          "file": "config.json",
+          "bytes": 650,
+          "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 711661,
+          "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 366,
+          "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "file": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        },
+        {
+          "file": "README.md",
+          "bytes": 1767,
+          "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02"
+        },
+        {
+          "file": "onnx/model_quantized.onnx",
+          "bytes": 22972370,
+          "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+        }
+      ]
+    }
+  },
+  "calibrationEvidenceSha256": "e9f7a7ee60d7241bc4671bd2574440197334a19e022b579ae5453fc5b3b8eb79",
+  "selection": "Existing review logic retained. Semantic cosine and combined review thresholds fixed at 0.60 before heldout inference.",
+  "limitations": [
+    "Synthetic scenarios with independent model-blind AI annotations; no human-adjudicated or real-field ground truth.",
+    "Review recommendations indicate possible duplicate expenses and never establish fraud or a fraud probability.",
+    "Wilson precision/recall intervals are case-level descriptive binomial intervals and ignore within-family dependence; paired family bootstrap intervals account for grouped resampling.",
+    "Only four calibration and eight heldout families are planned; bootstrap intervals with so few groups are exploratory and do not establish generalization to a population.",
+    "Shared embeddings support all semantic comparisons. Scoring times exclude shared model work; these are not three independent end-to-end pipeline benchmarks.",
+    "Local CPU timings and memory describe this host only; they do not establish browser/mobile performance.",
+    "Ambiguous annotations are excluded from binary metrics and bootstrap F1; their predictions remain visible.",
+    "The old 12-case benchmark is calibration evidence only and is preserved separately."
+  ]
+}

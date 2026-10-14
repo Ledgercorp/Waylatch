@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-10-14T11:16:45.006988+00:00",
+  "category": "installed-native-component-and-notice-inventory",
+  "sharpVersions": {
+    "aom": "3.15.1",
+    "archive": "3.8.9",
+    "cairo": "1.18.6",
+    "cgif": "0.5.4",
+    "exif": "0.6.26",
+    "expat": "2.8.5",
+    "ffi": "3.8.0",
+    "fontconfig": "2.18.3",
+    "freetype": "2.14.3",
+    "fribidi": "1.0.17",
+    "glib": "2.90.0",
+    "harfbuzz": "14.5.0",
+    "heif": "1.23.5",
+    "highway": "1.4.0",
+    "imagequant": "2.4.1",
+    "lcms": "2.19.1",
+    "mozjpeg": "0826579",
+    "pango": "1.58.2",
+    "pixman": "0.46.4",
+    "png": "1.6.58",
+    "proxy-libintl": "0.5",
+    "rsvg": "2.63.2",
+    "tiff": "4.7.2",
+    "uhdr": "2.0.2",
+    "vips": "8.18.7",
+    "webp": "1.6.0",
+    "xml2": "2.15.4",
+    "zlib-ng": "2.3.3",
+    "sharp": "0.35.5"
+  },
+  "noticeFiles": [
+    {
+      "path": "node_modules/@huggingface/transformers/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "node_modules/@huggingface/transformers/README.md",
+      "sha256": "66f60c2040f4505eec4ceaf17528d248880e0134955fb1c48beedf44ef2410b4"
+    },
+    {
+      "path": "node_modules/@huggingface/tokenizers/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "node_modules/@huggingface/tokenizers/README.md",
+      "sha256": "41ac4a2ef81dbbe1308d4e86a3e87e7a45a78b4f26dcebb6f36c4d235fb2615c"
+    },
+    {
+      "path": "node_modules/onnxruntime-node/README.md",
+      "sha256": "c2b487948c9aed0a5ca8ef7717d78cbc81cfb65e5697d2ad6e2b7bd6fa8bc91b"
+    },
+    {
+      "path": "node_modules/sharp/LICENSE",
+      "sha256": "73ba74dfaa520b49a401b5d21459a8523a146f3b7518a833eea5efa85130bf68"
+    },
+    {
+      "path": "node_modules/sharp/README.md",
+      "sha256": "89772961fcf195b976573874555f2902bfe04a3e57be61af261ac65ce9348735"
+    },
+    {
+      "path": "node_modules/@img/sharp-libvips-linux-x64/README.md",
+      "sha256": "b4fb1a9f5909cfd58edb4177c2028ce3033cf8651aef740a554c1dc58b3c5ee3"
+    }
+  ],
+  "scope": "Installed package notices retained; no native binaries or weights committed or redistributed."
+}

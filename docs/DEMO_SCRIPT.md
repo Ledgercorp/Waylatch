@@ -1,3 +1,9 @@
+# Current final competitive script — 87.68 seconds
+
+Use [demo/COMPETITIVE_SCRIPT.md](demo/COMPETITIVE_SCRIPT.md) for the new actual semantic recording, captions, exact times and hash. The previous 97.52-second fallback and original 110.04-second preview are preserved separately. Historical payment evidence is unchanged; no buyer/capture reenactment or public upload occurred.
+
+---
+
 # Current competitive preview — 97.52 seconds
 
 The current competitive script, exact scene timings, source boundaries and unchanged video hash are in [demo/COMPETITIVE_SCRIPT.md](demo/COMPETITIVE_SCRIPT.md). It accurately shows deterministic fallback and labeled historical MiniLM, pending genuine new model access. The 110.04-second release-preview script below remains historical; no buyer/capture reenactment or new purchase is authorized.

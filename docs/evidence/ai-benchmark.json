@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-10-13T15:15:05.445Z",
+  "executedAt": "2026-10-14T11:08:49.960Z",
   "category": "executed-real-local-ai-inference",
   "model": "Xenova/all-MiniLM-L6-v2",
   "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
@@ -13,8 +13,8 @@
     "node": "v24.19.0",
     "platform": "linux",
     "architecture": "x64",
-    "cpu": "AMD EPYC 9V74 80-Core Processor",
-    "transformers": "3.8.1",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "transformers": "4.3.1",
     "threads": 2,
     "remoteModelsAllowed": false
   },
@@ -25,14 +25,14 @@
     "trueNegatives": 6,
     "precision": 1,
     "recall": 0.8333333333333334,
-    "loadMilliseconds": 4126.323638,
-    "inferenceMilliseconds": 413.2596459999986,
+    "loadMilliseconds": 1035.284897,
+    "inferenceMilliseconds": 68.2622289999997,
     "inferenceBatches": 13,
-    "totalMilliseconds": 4548.455496,
-    "baselineRssBytes": 42467328,
-    "finalRssBytes": 183672832,
-    "rssIncreaseBytes": 141205504,
-    "processPeakRssBytes": 209854464
+    "totalMilliseconds": 1108.8790649999999,
+    "baselineRssBytes": 62750720,
+    "finalRssBytes": 361123840,
+    "rssIncreaseBytes": 298373120,
+    "processPeakRssBytes": 361517056
   },
   "assets": [
     {
@@ -77,7 +77,7 @@
       "duplicate": true,
       "left": "Twenty cases of bottled drinking water for the flood shelter",
       "right": "20 cartons of bottled water for people staying at the flood evacuation shelter",
-      "similarity": 0.7613763540138553,
+      "similarity": 0.7613763231327819,
       "reviewRecommended": true,
       "reasons": [
         "Same incident",
@@ -85,14 +85,14 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 17.951837999999952
+      "milliseconds": 8.932722000000012
     },
     {
       "id": "battery-paraphrase",
       "duplicate": true,
       "left": "AA batteries for responder headlamps during shelter night shifts",
       "right": "Double A replacement batteries for emergency team head torches at night",
-      "similarity": 0.6314452551452492,
+      "similarity": 0.6314452630634024,
       "reviewRecommended": true,
       "reasons": [
         "Same incident",
@@ -100,28 +100,28 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 45.21850699999959
+      "milliseconds": 8.14086599999996
     },
     {
       "id": "medical-paraphrase",
       "duplicate": true,
       "left": "First aid kits with bandages and antiseptic for evacuees",
       "right": "Emergency medical supply packs containing dressings and disinfectant for displaced families",
-      "similarity": 0.5897200902884364,
+      "similarity": 0.5897193080325913,
       "reviewRecommended": false,
       "reasons": [
         "Same incident",
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 16.45165900000029
+      "milliseconds": 7.1656920000000355
     },
     {
       "id": "fuel-paraphrase",
       "duplicate": true,
       "left": "Diesel fuel to refill the shelter backup generator",
       "right": "Purchase diesel for refueling the emergency accommodation power generator",
-      "similarity": 0.7123538057902058,
+      "similarity": 0.7123538013610641,
       "reviewRecommended": true,
       "reasons": [
         "Same incident",
@@ -129,14 +129,14 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 13.010576000000583
+      "milliseconds": 5.169545999999855
     },
     {
       "id": "beds-paraphrase",
       "duplicate": true,
       "left": "Thirty folding cots for overnight shelter accommodation",
       "right": "30 portable folding camp beds for evacuees sleeping at the shelter",
-      "similarity": 0.750113806701278,
+      "similarity": 0.7501137885461447,
       "reviewRecommended": true,
       "reasons": [
         "Same incident",
@@ -144,14 +144,14 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 14.299997999999505
+      "milliseconds": 5.50004100000001
     },
     {
       "id": "blankets-paraphrase",
       "duplicate": true,
       "left": "Warm blankets for flood evacuees at the temporary shelter",
       "right": "Thermal bedding blankets for displaced residents in emergency accommodation",
-      "similarity": 0.6820319813164846,
+      "similarity": 0.6820319962277073,
       "reviewRecommended": true,
       "reasons": [
         "Same incident",
@@ -159,91 +159,91 @@
         "Created within 72 hours",
         "Semantically similar expense description"
       ],
-      "milliseconds": 47.18723200000022
+      "milliseconds": 4.280692000000045
     },
     {
       "id": "water-vs-bus",
       "duplicate": false,
       "left": "Bottled drinking water for the flood shelter",
       "right": "Bus rental to transport evacuees from the flood zone",
-      "similarity": 0.3393803297169197,
+      "similarity": 0.3393803183010073,
       "reviewRecommended": false,
       "reasons": [
         "Same incident",
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 23.669600000000173
+      "milliseconds": 3.889112999999952
     },
     {
       "id": "battery-vs-food",
       "duplicate": false,
       "left": "AA batteries for responder headlamps",
       "right": "Rice and canned beans for shelter meals",
-      "similarity": 0.054200823723587296,
+      "similarity": 0.05420077587696774,
       "reviewRecommended": false,
       "reasons": [
         "Same incident",
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 16.72151600000052
+      "milliseconds": 4.126009000000067
     },
     {
       "id": "medical-vs-fuel",
       "duplicate": false,
       "left": "First aid kits with bandages and antiseptic",
       "right": "Diesel fuel for the backup generator",
-      "similarity": 0.0359525646220617,
+      "similarity": 0.0359525654874591,
       "reviewRecommended": false,
       "reasons": [
         "Same incident",
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 68.5561570000009
+      "milliseconds": 4.359061999999994
     },
     {
       "id": "beds-vs-radio",
       "duplicate": false,
       "left": "Folding cots for overnight accommodation",
       "right": "Two-way radios for coordinating volunteer teams",
-      "similarity": 0.1911369631837325,
+      "similarity": 0.19586048379914137,
       "reviewRecommended": false,
       "reasons": [
         "Same incident",
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 19.252371999999923
+      "milliseconds": 3.880590000000211
     },
     {
       "id": "blankets-vs-pump",
       "duplicate": false,
       "left": "Warm bedding blankets for flood evacuees",
       "right": "Submersible pumps to remove flood water from buildings",
-      "similarity": 0.3611710973711798,
+      "similarity": 0.3611710945300901,
       "reviewRecommended": false,
       "reasons": [
         "Same incident",
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 68.00158199999987
+      "milliseconds": 4.333456000000069
     },
     {
       "id": "near-domain-distinct",
       "duplicate": false,
       "left": "Bottled drinking water for shelter residents",
       "right": "Waterproof storage containers for keeping medical supplies dry",
-      "similarity": 0.38690188902116346,
+      "similarity": 0.38690190120988405,
       "reviewRecommended": false,
       "reasons": [
         "Same incident",
         "Identical amount",
         "Created within 72 hours"
       ],
-      "milliseconds": 48.4119869999995
+      "milliseconds": 4.0816359999998895
     }
   ],
   "limitations": [

@@ -1,0 +1,137 @@
+
+> waylatch@0.1.0 ai:evaluate
+> tsx scripts/evaluate-ai.ts --mode heldout
+
+{
+  "category": "executed-real-local-ai-comparison",
+  "split": "heldout",
+  "sampleComposition": {
+    "cases": 160,
+    "familyCount": 8,
+    "families": {
+      "sanitation-hygiene": 20,
+      "infant-feeding": 20,
+      "radio-communications": 20,
+      "shelter-structures": 20,
+      "bulk-meals": 20,
+      "flood-pumps": 20,
+      "passenger-transport": 20,
+      "power-distribution": 20
+    },
+    "categories": {
+      "exact-description": 16,
+      "natural-paraphrase": 8,
+      "equivalent-terminology": 8,
+      "abbreviated-description": 8,
+      "typing-errors": 8,
+      "receipt-file-variation": 8,
+      "conflicting-amounts": 8,
+      "incomplete-structured-fields": 8,
+      "incident-allocation-change": 8,
+      "shared-incident": 8,
+      "equal-price": 8,
+      "overlapping-purpose-terms": 8,
+      "neighboring-product-specifications": 8,
+      "repeated-service-or-replenishment": 8,
+      "receipt-and-order-conflicts": 8,
+      "missing-attachments": 8,
+      "consolidated-document": 8,
+      "recording-time-gap": 8,
+      "insufficient-procurement-facts": 8
+    },
+    "decisions": {
+      "duplicate": 80,
+      "distinct": 72,
+      "ambiguous": 8
+    }
+  },
+  "metrics": {
+    "deterministic": {
+      "truePositives": 32,
+      "falsePositives": 16,
+      "falseNegatives": 48,
+      "trueNegatives": 56,
+      "ambiguousExcluded": 8,
+      "evaluated": 152,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5,
+      "precision95": [
+        0.5254010970594798,
+        0.7832321930518142
+      ],
+      "recall95": [
+        0.2996182759587093,
+        0.509545349948396
+      ]
+    },
+    "semantic": {
+      "truePositives": 62,
+      "falsePositives": 70,
+      "falseNegatives": 18,
+      "trueNegatives": 2,
+      "ambiguousExcluded": 8,
+      "evaluated": 152,
+      "precision": 0.4696969696969697,
+      "recall": 0.775,
+      "f1": 0.5849056603773585,
+      "precision95": [
+        0.38662231037538475,
+        0.5544855070063492
+      ],
+      "recall95": [
+        0.6721321021639265,
+        0.8526679265915337
+      ]
+    },
+    "combined": {
+      "truePositives": 57,
+      "falsePositives": 70,
+      "falseNegatives": 23,
+      "trueNegatives": 2,
+      "ambiguousExcluded": 8,
+      "evaluated": 152,
+      "precision": 0.44881889763779526,
+      "recall": 0.7125,
+      "f1": 0.5507246376811594,
+      "precision95": [
+        0.3650850529495865,
+        0.5355580603482004
+      ],
+      "recall95": [
+        0.6053965378701002,
+        0.8001307570773007
+      ]
+    }
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "architecture": "x64",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "transformers": "4.3.1",
+    "device": "cpu",
+    "threads": 2,
+    "coldStartupAndFirstBatchMilliseconds": 746.593078,
+    "modelLoadMilliseconds": 555.331379,
+    "sharedEmbeddingMilliseconds": 1079.717835,
+    "sharedModelInferenceMilliseconds": 522.6338060000002,
+    "sharedEmbeddingCalls": 4,
+    "embeddedTexts": 320,
+    "sharedEmbeddingsReusedBy": [
+      "semantic",
+      "combined"
+    ],
+    "perMethodScoringMilliseconds": {
+      "deterministic": 3.8379970000000867,
+      "semantic": 2.338407999998026,
+      "combined": 4.095898999998553
+    },
+    "statisticsMilliseconds": 274.275402,
+    "endToEndMilliseconds": 1365.988233,
+    "timingScope": "Dataset validation and manifest verification precede timing; end-to-end includes model loading, embedding, method scoring and statistics, excludes report writing and model disposal.",
+    "baselineRssBytes": 46067712,
+    "finalRssBytes": 405594112,
+    "processPeakRssBytes": 405594112
+  }
+}

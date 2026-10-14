@@ -1,0 +1,7 @@
+
+> waylatch@0.1.0 ai:evaluate
+> tsx scripts/evaluate-ai.ts --mode freeze
+
+{
+  "category": "frozen-before-heldout-inference"
+}

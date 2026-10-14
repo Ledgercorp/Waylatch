@@ -1,0 +1,13 @@
+
+> waylatch@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /workspace/Waylatch
+
+
+ Test Files  30 passed (30)
+      Tests  139 passed (139)
+   Start at  11:09:00
+   Duration  15.27s (transform 1.44s, setup 0ms, import 8.22s, tests 12.93s, environment 4ms)
+

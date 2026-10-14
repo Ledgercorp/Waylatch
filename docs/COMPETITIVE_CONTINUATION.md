@@ -1,3 +1,9 @@
+# Current continuation after genuine AI — 14 October 2026
+
+Read [AI_RESUMPTION_REPORT.md](AI_RESUMPTION_REPORT.md) and the measured [scientific report](AI_EVALUATION_COMPETITIVE.md). The original uploaded model is fully verified locally and remains out of Git. Transformers.js 4.3.1 is pinned; current audit is zero. **Freeze and held-out evaluation have completed once. Preserve `evaluation/frozen-manifest.json.completed.json`; do not rerun, regenerate a manifest or retune on these held-out groups.** Future scoring evaluation needs new independently annotated held-out groups. Main/release candidate are unchanged; private branch contains the current artifacts. No payment, model download or publication is needed to repeat ordinary acceptance checks.
+
+---
+
 # Latest continuation — 14 October 2026
 
 Resume the same competitive branch; this task started at `887d20eaf8964aba20cd04baee178d7683dfd3a3`. Read [COMPETITIVE_FINALIZATION.md](COMPETITIVE_FINALIZATION.md) first. Six pinned files now verify; only the original weight is absent. Its actual redirect is `us.aws.cdn.hf.co`, denied by the applied policy. Current custom policy also contains `cas-bridge.xethub.hf.com`, distinct from the requested .co host. No repeat credential/domain-setup loop or payment work is warranted. Published source/observed revision 2 is known; newest saved editor version is not inspectable. No freeze or held-out receipt exists. Two cleanup/isolation defects are fixed and verified; dependency remediation and genuine semantic acceptance remain blocked.

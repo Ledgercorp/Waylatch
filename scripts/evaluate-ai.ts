@@ -10,6 +10,7 @@ import {
   MODEL_ID,
   MODEL_REVISION,
   modelMetrics,
+  modelRuntime,
 } from '../src/risk/model';
 import { MODEL_ASSETS } from '../src/risk/model-assets';
 import {
@@ -399,7 +400,7 @@ export async function runEvaluation(options: EvaluationOptions): Promise<Record<
         platform: platform(),
         architecture: arch(),
         cpu: cpus()[0]?.model,
-        transformers: '3.8.1',
+        transformers: modelRuntime.transformersVersion,
         device: 'cpu',
         threads: 2,
         coldStartupAndFirstBatchMilliseconds,

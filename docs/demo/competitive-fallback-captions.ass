@@ -1,0 +1,22 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1600
+PlayResY: 900
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Caption,DejaVu Sans,27,&H00FFFFFF,&H00FFFFFF,&H00182409,&H00182409,0,0,0,0,100,100,0,0,1,0,0,2,45,45,20,1
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.00,0:00:04.76,Caption,,0,0,0,,Waylatch: keep a request moving; keep authority human. Fictional walkthrough, real application.
+Dialogue: 0,0:00:04.76,0:00:09.61,Caption,,0,0,0,,Network loss simulated. Preserve the request locally; no server submission or financial action.
+Dialogue: 0,0:00:09.61,0:00:15.75,Caption,,0,0,0,,Actual offline browser reload: the request survives in IndexedDB. Browser observations are local\Nevidence.
+Dialogue: 0,0:00:15.75,0:00:21.85,Caption,,0,0,0,,Bounded QR packets carry request data across disconnection. They carry no payment authority.
+Dialogue: 0,0:00:21.85,0:00:28.46,Caption,,0,0,0,,A second offline browser decodes an actual QR image and reconstructs the packets. Import stays\Nuntrusted.
+Dialogue: 0,0:00:28.46,0:00:37.49,Caption,,0,0,0,,New side-by-side comparison: terms, amounts, incident and receipt evidence. This recording uses\Ndeterministic fallback; model access is blocked.
+Dialogue: 0,0:00:37.49,0:00:44.04,Caption,,0,0,0,,Related, unrelated or investigate: an advisory disposition never approves either record or executes\Npayment.
+Dialogue: 0,0:00:44.04,0:00:55.57,Caption,,0,0,0,,Historical genuine local MiniLM inference from the verified demo. This is not a new evaluation run;\Nheld-out metrics remain unavailable.
+Dialogue: 0,0:00:55.57,0:01:02.35,Caption,,0,0,0,,Human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE remain required. Judge financial\Ncontrols are disabled.
+Dialogue: 0,0:01:02.35,0:01:09.87,Caption,,0,0,0,,Separate historical purchase: USD 1.00 simulated funds, completed capture, USD 0.00 real spending.\NNo checkout is reenacted.
+Dialogue: 0,0:01:09.87,0:01:16.91,Caption,,0,0,0,,Proof Trail names browser, organization and provider sources. Original seven-event audit links\Nvalidate; missing earlier events stay visible.
+Dialogue: 0,0:01:16.91,0:01:24.09,Caption,,0,0,0,,Saved independent PayPal inspection confirms COMPLETED. Viewing this archive makes no provider call\Nand no new purchase.
+Dialogue: 0,0:01:24.09,0:01:37.52,Caption,,0,0,0,,Download a sanitized report or independently validate the original SHA-256 chain. An administrator\Ncan rewrite a full database.

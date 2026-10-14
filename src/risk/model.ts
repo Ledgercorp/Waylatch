@@ -10,6 +10,7 @@ type Extractor = FeatureExtractionPipeline;
 let extractor: Promise<Extractor> | undefined;
 let queued: Promise<unknown> = Promise.resolve();
 export const modelMetrics = { loadMilliseconds: 0, inferenceMilliseconds: 0, inferenceBatches: 0 };
+export const modelRuntime = { transformersVersion: null as string | null };
 
 async function loadModel(): Promise<Extractor> {
   const started = performance.now();
@@ -23,6 +24,7 @@ async function loadModel(): Promise<Extractor> {
       throw new Error('Local model asset integrity check failed');
   }
   const { env, pipeline } = await import('@huggingface/transformers');
+  modelRuntime.transformersVersion = env.version;
   env.allowRemoteModels = false;
   env.allowLocalModels = true;
   env.localModelPath = `${modelPath}/`;

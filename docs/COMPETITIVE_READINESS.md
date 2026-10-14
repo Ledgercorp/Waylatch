@@ -1,3 +1,9 @@
+# Genuine AI and judge acceptance completed — 14 October 2026
+
+Current recommendation: **ready with documented limitations for owner release review**. The verified owner-uploaded model enabled calibration, freeze and once-only held-out inference. Combined held-out F1 0.5507 versus deterministic 0.5000, but FP70 versus FP16 and semantic-only F1 0.5849; no unqualified accuracy claim. All six dependency findings resolved with real-model compatibility checks. 139 unit/integration tests, nine original and five real-AI competitive browser tests pass. New genuine private preview: 87.68 seconds. [Current complete report](AI_RESUMPTION_REPORT.md). Earlier blocked checkpoints below are historical.
+
+---
+
 # Finalization checkpoint — 14 October 2026
 
 Current result: **blocked on the pinned model weight**, with two verified judge/test-isolation fixes. Fresh verification: 139 unit/integration tests passed, five evidence-only competitive browser checks passed, eight original browser checks passed and the real-AI check failed on unavailable assets. Six dependency findings remain individually investigated. The unchanged 97.52-second preview remains honest fallback/historical footage. [Full current report](COMPETITIVE_FINALIZATION.md). The earlier checkpoint below is preserved as history.

@@ -1,0 +1,9 @@
+{
+  "selectedAt": "2026-10-14T11:11:27.692608+00:00",
+  "decision": "Retain existing scoring and both 0.60 thresholds; no calibration-specific rules or relabeling",
+  "heldoutInferenceHasRun": false,
+  "calibrationReportSha256": "e9f7a7ee60d7241bc4671bd2574440197334a19e022b579ae5453fc5b3b8eb79",
+  "decisionDocumentSha256": "d68cc3afbab9e1f7052387d1221ccd64f0b55c5c39078bf68989add72718d978",
+  "transformers": "4.3.1",
+  "baselineComparison": "Calibration predictions identical to 3.8.1; maximum absolute cosine drift 0.013484159011491914"
+}

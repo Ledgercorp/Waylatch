@@ -1,3 +1,9 @@
+# Latest private semantic checkpoint — 14 October 2026
+
+[AI_RESUMPTION_REPORT.md](AI_RESUMPTION_REPORT.md) is the current authoritative report. Continued from competitive `3ef69d1`; verified original uploaded model, supported dependency remediation, frozen once-only held-out results, real semantic judge/browser acceptance and new 87.68-second private demo are complete. Substantial false-positive limitations remain explicit. Models stay ignored. No redownload, payment, real spending or public release occurred. Older states below remain history.
+
+---
+
 # Latest competitive checkpoint — 14 October 2026
 
 Private `feat/waylatch-competitive` continued from `887d20eaf8964aba20cd04baee178d7683dfd3a3`; main/release candidate remain `3580d35a7176afd93abf52fbde391061a4ff30d6`. [Current finalization report](COMPETITIVE_FINALIZATION.md) supersedes the historical statuses below. Pinned metadata/tokenizers verify but the weight is denied at the current official CDN. Genuine AI evaluation/default semantic judge/video replacement remain blocked. Judge repeated-signal cleanup and browser trace isolation fixed; 139 local tests and five evidence-only competitive browser checks passed. Six dependency findings remain. No new payment, cost or publication.
