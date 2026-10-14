@@ -1,0 +1,21 @@
+[WebServer] (node:2427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:2458) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/product.spec.ts:4:1 › field request survives real offline reload (2.0s)
+  ✓  2 tests/product.spec.ts:24:1 › packets cross two disconnected browser contexts and reject corruption (3.2s)
+  ✓  3 tests/product.spec.ts:51:1 › coordinator explicitly reviews and approves, missing credentials stay honest (2.9s)
+  ✓  4 tests/product.spec.ts:73:3 › accessible command interface 1440px (3.0s)
+  ✓  5 tests/product.spec.ts:73:3 › accessible command interface 390px (2.7s)
+  ✓  6 tests/product.spec.ts:137:1 › mobile capture and QR dialogs have accessible controls (4.6s)
+  ✓  7 tests/product.spec.ts:154:1 › Waylatch metadata and legacy IndexedDB survive offline reload (2.0s)
+  ✓  8 tests/product.spec.ts:196:1 › constrained network preserves local work and reconnection does not submit or pay (11.7s)
+
+  8 passed (35.6s)

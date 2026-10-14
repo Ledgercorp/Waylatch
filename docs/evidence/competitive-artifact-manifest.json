@@ -1,0 +1,483 @@
+{
+  "category": "verified-private-competitive-increment-with-explicit-model-blocker",
+  "generatedAt": "2026-10-14T10:38:02.933124+00:00",
+  "sourceParentCommit": "68c6d2797b9d32741df30ee86e288093d60fdcc8",
+  "protectedVerifiedRelease": "3580d35a7176afd93abf52fbde391061a4ff30d6",
+  "publicReleaseAuthorized": false,
+  "rootLicenseAdopted": false,
+  "realSpending": 0,
+  "newProviderCalls": 0,
+  "unchangedHistoricalAndPinnedSources": [
+    "src/risk/review.ts",
+    "src/risk/model.ts",
+    "src/risk/model-assets.ts",
+    "src/risk/benchmark-fixtures.ts",
+    "evaluation/cases-unlabeled.json",
+    "evaluation/author-scenario-key.json",
+    "scripts/build-evaluation-cases.py",
+    "docs/evidence/paypal-real-sandbox.json",
+    "docs/evidence/paypal-independent-verification.json",
+    "docs/evidence/paypal-sandbox-audit.json",
+    "docs/demo/waylatch-engineering-preview.mp4"
+  ],
+  "unitTestsPassed": 138,
+  "competitiveBrowserTestsPassed": 5,
+  "originalRunnableBrowserTestsPassed": 8,
+  "originalModelBrowserTestsBlocked": 1,
+  "cleanUnitTestsPassed": 138,
+  "newAIMetricsAvailable": false,
+  "remainingDependencyAudit": {
+    "highPackageFindings": 2,
+    "moderatePackageFindings": 4,
+    "critical": 0
+  },
+  "excluded": [
+    "credentials",
+    "databases",
+    "models",
+    "node_modules",
+    "raw caches"
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 17975,
+      "sha256": "fd97719121d542ce005dcf3023c1d19398d0c76471cce3c5a2bc77f19c663114"
+    },
+    {
+      "path": "docs/AI_EVALUATION_COMPETITIVE.md",
+      "bytes": 4767,
+      "sha256": "9d845ed686c8bc70dfde5edf38a9e54e58e683d3517540aca283a9c8f0dc4417"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 7414,
+      "sha256": "0173984caae8811d842995a826c370d3dc430ad2ee102366c50c5eebd81a09cd"
+    },
+    {
+      "path": "docs/BLOCKERS.md",
+      "bytes": 10648,
+      "sha256": "7ed145bca70d68f4efe1594bd20db3122c0b77ae27170bf79bf197e087ee44a4"
+    },
+    {
+      "path": "docs/COMPETITIVE_CONTINUATION.md",
+      "bytes": 6352,
+      "sha256": "27c97524f3dd389f0aacaa8c5efd0fcc61dc0437d4f8d7e54a61b54ef7ad310a"
+    },
+    {
+      "path": "docs/COMPETITIVE_READINESS.md",
+      "bytes": 13668,
+      "sha256": "f444b8b5db42c16ad7d34324b9204155189fa067d5c8576c0476d07544dfa89d"
+    },
+    {
+      "path": "docs/DEVPOST_DRAFT.md",
+      "bytes": 11545,
+      "sha256": "499a0a5d65d9bcffea317eafe4585c20aa5aaee21cab624fb58b7593e609dd8a"
+    },
+    {
+      "path": "docs/RELEASE_APPROVALS.md",
+      "bytes": 12808,
+      "sha256": "f30b84495377c5be40300e5b73df123c2961f7af5620e25f890bdb97566b417c"
+    },
+    {
+      "path": "docs/RESILIENCE_COMPETITIVE.md",
+      "bytes": 9555,
+      "sha256": "fdb2798f8104b4f083d64dc1268e4af053e98b7fe3c85bfd3832408f6041854a"
+    },
+    {
+      "path": "docs/demo/competitive-captions.ass",
+      "bytes": 2666,
+      "sha256": "8b6578654ecb8e2da7b71809f537ab7f3adcfa50328f68d5404c7a645606db93"
+    },
+    {
+      "path": "docs/demo/competitive-captions.srt",
+      "bytes": 1954,
+      "sha256": "83abe3cdd1e94c9f41724969977018156f112ed35fabf7f1bcb7149b3d2d78bf"
+    },
+    {
+      "path": "docs/demo/waylatch-competitive-preview.mp4",
+      "bytes": 2555959,
+      "sha256": "1a4e0542c1c7a734df8c87c09e3ddc6bf7264b632b27de06c4a853d08fc9cb8d"
+    },
+    {
+      "path": "docs/evidence/ai-evaluation-calibration-blocked-20261013.json",
+      "bytes": 6520,
+      "sha256": "cc84311844757d13bd3b275f79d4faffe721a31a3add04b8f55533a667461900"
+    },
+    {
+      "path": "docs/evidence/ai-evaluation-calibration.json",
+      "bytes": 6520,
+      "sha256": "cc84311844757d13bd3b275f79d4faffe721a31a3add04b8f55533a667461900"
+    },
+    {
+      "path": "docs/evidence/competitive-before-constrained-network.json",
+      "bytes": 415,
+      "sha256": "efac33b4997344e3d3e9770e6f4e81a55878e99b817f32451d25e51771f3f147"
+    },
+    {
+      "path": "docs/evidence/competitive-before-interface-1440.png",
+      "bytes": 149623,
+      "sha256": "7ce9b1b35eb77d992475b7556740f5b3593cc61cb252d1fa8c04205588e6a388"
+    },
+    {
+      "path": "docs/evidence/competitive-before-interface-390.png",
+      "bytes": 90783,
+      "sha256": "68087e56bace194dc661c37e04584fa1ccdbbcc22a055dbf07dd217198f0beef"
+    },
+    {
+      "path": "docs/evidence/competitive-browser-export-validation.log",
+      "bytes": 153,
+      "sha256": "6562512f8729cdbc2c3930e3b242907605be20422a907b3458a76ced48a19c75"
+    },
+    {
+      "path": "docs/evidence/competitive-browser-tests.log",
+      "bytes": 2810,
+      "sha256": "ad368d8673eaedab3c3d5e34549430ab504732eed627156784313b3a3a695ec8"
+    },
+    {
+      "path": "docs/evidence/competitive-browser.json",
+      "bytes": 2784,
+      "sha256": "e0d8a30f5fe38f370b757221e09a5b8e45e81ade8b48d73978fbeb8b45e579db"
+    },
+    {
+      "path": "docs/evidence/competitive-calibration-attempt.log",
+      "bytes": 1434,
+      "sha256": "601ebfe6d31559eedb5b7966a7311a3a3959c72b2406af442682dc5bc5afad8a"
+    },
+    {
+      "path": "docs/evidence/competitive-clean-build.log",
+      "bytes": 1659,
+      "sha256": "560d371c529fb66016427eb9e09308e29776eb87e060f21e86b73b646a63bacd"
+    },
+    {
+      "path": "docs/evidence/competitive-clean-install.log",
+      "bytes": 154,
+      "sha256": "f3fdec28fc4cefa926cdca5b35b160101ad0a339b407923a0a8f9b80749c4e22"
+    },
+    {
+      "path": "docs/evidence/competitive-clean-judge-verification.json",
+      "bytes": 665,
+      "sha256": "af84b6920eec7f6ba7ceff08dcde809e8179e56b600b99eb10a68c33ca480366"
+    },
+    {
+      "path": "docs/evidence/competitive-clean-judge.log",
+      "bytes": 367,
+      "sha256": "299b1f6b0b4d1c5afcb92184e618063c093bc8ae90b179f7c22b26e6d9e0853e"
+    },
+    {
+      "path": "docs/evidence/competitive-clean-native-check.log",
+      "bytes": 69,
+      "sha256": "ffbac02d892e912ecfaa55c433a5e266bfe2d9d2c0f287427a649e1f3e7088a9"
+    },
+    {
+      "path": "docs/evidence/competitive-clean-source.json",
+      "bytes": 965,
+      "sha256": "0caa86c48ae2d149d1106e8266de36ee1db3ad4894ff5b58e12b85f5a533b06c"
+    },
+    {
+      "path": "docs/evidence/competitive-clean-unit-tests.log",
+      "bytes": 288,
+      "sha256": "1ec81f23d80475b7fcac8b8e9da70d99da8e88ff27ae51673bf59f0893dc539b"
+    },
+    {
+      "path": "docs/evidence/competitive-comparison-desktop.png",
+      "bytes": 430282,
+      "sha256": "e033f7ff67b67d05607002c6ddc7e784b641159274aca5cb06940cabef729070"
+    },
+    {
+      "path": "docs/evidence/competitive-comparison-mobile.png",
+      "bytes": 261155,
+      "sha256": "b59233bbb6ae78e0df1a9e336f2e296669dd0c4bfcced223b2de4b5d2124f580"
+    },
+    {
+      "path": "docs/evidence/competitive-demo-recording.json",
+      "bytes": 3328,
+      "sha256": "24559b8b6cf4e38e6ce5c1fbce7c9b3e9a9953c1c1948209daab4d8c39ff457d"
+    },
+    {
+      "path": "docs/evidence/competitive-demo-recording.log",
+      "bytes": 1385,
+      "sha256": "16ce7ce7a1ef644cb4fb2a4d1fe1ff5ed333a28a6b8499a755fa612787c2363b"
+    },
+    {
+      "path": "docs/evidence/competitive-demo-rendering.log",
+      "bytes": 3649,
+      "sha256": "1df8f85c8c7576efeb66dc38125ffbba756b403596253a0e97a292fc0e71e45f"
+    },
+    {
+      "path": "docs/evidence/competitive-demo-video.json",
+      "bytes": 3921,
+      "sha256": "7b87c45043f261a9edcca445889d488ced66103ca389ce0470a2c3755416c4bb"
+    },
+    {
+      "path": "docs/evidence/competitive-dependency-audit-final.json",
+      "bytes": 5016,
+      "sha256": "5d3c4f78d4414537ee0198fa2ebed10b82b5d4e425969727cf2c60248a61416b"
+    },
+    {
+      "path": "docs/evidence/competitive-dependency-audit.json",
+      "bytes": 8282,
+      "sha256": "c56e36a0fd93477a3c0e2530dde2842e2ff4c07fb7e2fbe1fccfd122af8146bd"
+    },
+    {
+      "path": "docs/evidence/competitive-dev-security-update.log",
+      "bytes": 70,
+      "sha256": "8751978e610e2e413dc6eac6ccb83de21a7a900e14f4963bff12f0ae7b1f4d54"
+    },
+    {
+      "path": "docs/evidence/competitive-final-format.log",
+      "bytes": 461,
+      "sha256": "33572ab1cf86cea2c211df4646750ba8bc7ed2407a47ce20065c021dcb8bc8f4"
+    },
+    {
+      "path": "docs/evidence/competitive-final-typecheck.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/competitive-final-unit-tests.log",
+      "bytes": 248,
+      "sha256": "bd0437c53b9c592988b5a92f167bcba8c6e4ea077f6149bd24cd140247a84cb2"
+    },
+    {
+      "path": "docs/evidence/competitive-model-host-check.json",
+      "bytes": 547,
+      "sha256": "3e36e9ba7d824afdd67a438f9e3bac70a34a26d4d031290c49a3a4d40c914af3"
+    },
+    {
+      "path": "docs/evidence/competitive-original-browser-tests.log",
+      "bytes": 1615,
+      "sha256": "d2b52e4ff6f75591c8706473f5cadf4ecb4d2bf675cc2ee716a83e12b2d16542"
+    },
+    {
+      "path": "docs/evidence/competitive-proof-1440.png",
+      "bytes": 561635,
+      "sha256": "cd0b05835537e965123ad5020011af70cb976af915d051cbd727c255943d167c"
+    },
+    {
+      "path": "docs/evidence/competitive-proof-390.png",
+      "bytes": 491544,
+      "sha256": "d89e39b3a37550b14ab215f5162b8246b28e9a6eda7c812ad133b3854fce1d1b"
+    },
+    {
+      "path": "docs/evidence/competitive-qr-recovery.png",
+      "bytes": 336989,
+      "sha256": "cd893a37358f068699a7a03ec394b30164cc90235de825915b0873dc374b9bbb"
+    },
+    {
+      "path": "docs/evidence/competitive-regression-constrained-network.json",
+      "bytes": 421,
+      "sha256": "821b7da58d1b7b35fc1de9d284029687d0642a6802f925d8bd479d8e2ed25128"
+    },
+    {
+      "path": "docs/evidence/competitive-regression-interface-1440.png",
+      "bytes": 152841,
+      "sha256": "e1e5fda1536fdab33476efd131c34c96d7980ecefb6af15749fa224c6df54e5c"
+    },
+    {
+      "path": "docs/evidence/competitive-regression-interface-390.png",
+      "bytes": 93206,
+      "sha256": "d8cfcb3fba7902ba97d774e93aaf98e40903333dd7a55291cfb0f985fe097b02"
+    },
+    {
+      "path": "docs/evidence/competitive-release-check.log",
+      "bytes": 301,
+      "sha256": "becc5f0a295dea18324efc87a07516ebda4486d3892e5ae45631cfd155997dbb"
+    },
+    {
+      "path": "docs/evidence/competitive-resilience-final.json",
+      "bytes": 11470,
+      "sha256": "dd9d3c9779f6e460ce1d75a5c9c3db3138fcfd0438c39b8c03d20965a9a37348"
+    },
+    {
+      "path": "docs/evidence/competitive-resilience-final.log",
+      "bytes": 1996,
+      "sha256": "6d5ec83c61e8238cec2df68badd92706026a60d12d79f87ce9c697050b6ddb64"
+    },
+    {
+      "path": "docs/evidence/competitive-resilience.json",
+      "bytes": 11499,
+      "sha256": "6da19389ad8e9df4c4b2e57dec12a0c69afc2ae3ea13ba724a60cad4b08c8bab"
+    },
+    {
+      "path": "docs/submission/SUBMISSION_PACKAGE.md",
+      "bytes": 9588,
+      "sha256": "726a437f81941d9d2cac91101a6822432932fc744cb6dbe2b2e96888be438bf8"
+    },
+    {
+      "path": "docs/submission/project-fields.json",
+      "bytes": 14540,
+      "sha256": "9d2cc9bf3ddd57ee7cb80afa31eeeb46817a91d64fe335b2d72b402d1ea83577"
+    },
+    {
+      "path": "evaluation/blinded-review/annotations-1.json",
+      "bytes": 18622,
+      "sha256": "0f29363d0095c026406735afa9c9220bcdacc1942e54aada2e039352697cf3e1"
+    },
+    {
+      "path": "evaluation/blinded-review/annotations-2.json",
+      "bytes": 19608,
+      "sha256": "26e62f77664ba818de9beafe6e3ff3c9a25001fbf7a7a01c406841dc50b33f52"
+    },
+    {
+      "path": "evaluation/blinded-review/annotations-3.json",
+      "bytes": 19082,
+      "sha256": "0b64c221afc17bf21690982ddf3fc208236c7923c54acc35785da09f5a941557"
+    },
+    {
+      "path": "evaluation/blinded-review/packet-1.json",
+      "bytes": 78255,
+      "sha256": "06114842f9748311a1686fe3ad88c473ab80d0a0990444536e22980335a2a5a8"
+    },
+    {
+      "path": "evaluation/blinded-review/packet-2.json",
+      "bytes": 77792,
+      "sha256": "2ec43360d78934c69688c77540f6ee7fec25bb2faf6b6fa85fa3bf7d4af3c267"
+    },
+    {
+      "path": "evaluation/blinded-review/packet-3.json",
+      "bytes": 78025,
+      "sha256": "87bd8518ad3745f3fb46e5be2fb81e3117e6a503bc3f0e2645247cc2591c1ab6"
+    },
+    {
+      "path": "evaluation/independent-annotations.json",
+      "bytes": 57093,
+      "sha256": "40644fb7cf486c873508e00b781231de14af63f2f8c87ca21c48ad3c2c009356"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 177577,
+      "sha256": "581565da266de7c74443f3a491244eb2d86c5cee435df4f11356ef864edd49d8"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2833,
+      "sha256": "217b2d6ebd1757c9ab27e2039fabe267f999ac99b0fcb9f4e41c0c695984091e"
+    },
+    {
+      "path": "playwright.competitive.config.ts",
+      "bytes": 777,
+      "sha256": "28516d4b48aee6bfa918bf196ab3902ceb3b6a643b874b2ecdff26604ea8f5ef"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 832,
+      "sha256": "9c3e0c2059497eb9111c2fc4655c4a694a112976b64d526baa4308f5162aaf9b"
+    },
+    {
+      "path": "scripts/judge-demo.ts",
+      "bytes": 4120,
+      "sha256": "0b2d08df11cd05e45cd9a7ede6ba20e60abe981b1d489c45311e6490e8be5583"
+    },
+    {
+      "path": "scripts/judge-start.mjs",
+      "bytes": 4405,
+      "sha256": "70ac315fa4f1f576bb9d556ab1acbc0723ef75fa268bd7673e427d1959834ffc"
+    },
+    {
+      "path": "scripts/measure-resilience.ts",
+      "bytes": 19847,
+      "sha256": "c914a12c510c4b54eb2b14757a619b4cbb886d841bb4cc49bc0535ff61d1dffd"
+    },
+    {
+      "path": "scripts/record-competitive-demo.ts",
+      "bytes": 9488,
+      "sha256": "0af2779708f74162cfab15d32db2b71480920185763f63a4ad11c60dbd1b1ae5"
+    },
+    {
+      "path": "scripts/render-competitive-demo.py",
+      "bytes": 7392,
+      "sha256": "d710d21e91c84384da9d5b31c731d18c1021102e34a618ab9225be2e80c53042"
+    },
+    {
+      "path": "server/app.ts",
+      "bytes": 14210,
+      "sha256": "7cc1e1aba8bb98589acb90fc23f9f4ce4b78375e866789f15dffc406a1bcc231"
+    },
+    {
+      "path": "src/components/App.tsx",
+      "bytes": 26816,
+      "sha256": "1603f1e2ea3a00b284ef21b565c783b711a801d1b2b1825178ec603faa043644"
+    },
+    {
+      "path": "src/components/GuidedDemo.tsx",
+      "bytes": 5388,
+      "sha256": "0d4745b0780732e610e0071d416a933baef2b80d9484a977152e0b2c95ec3a3d"
+    },
+    {
+      "path": "src/components/PairComparison.tsx",
+      "bytes": 9501,
+      "sha256": "55f6b66694d728e2229286ee63ebace29fcd2ac5a4bdd508913c4070d0b32c65"
+    },
+    {
+      "path": "src/components/PayPanel.tsx",
+      "bytes": 9529,
+      "sha256": "b96bd58ac03e8278ad2862d83e2b566c02be0d0f14c32e0c69858e39fcb9fb48"
+    },
+    {
+      "path": "src/components/ReviewPanel.tsx",
+      "bytes": 11827,
+      "sha256": "91686a5097dc31688adc2125722bd1e82249d59b0c5e369be77cdbcc45460d7f"
+    },
+    {
+      "path": "src/offline/storage.ts",
+      "bytes": 3975,
+      "sha256": "faa9244321e5b921795b85c71f8ca0e081b67bf77df7c4887e96b5b779621067"
+    },
+    {
+      "path": "src/proof/trail.ts",
+      "bytes": 17252,
+      "sha256": "9f6babd1b7a7585137eb2ed80ed819011eab726bf03b9a4e282542d5036bd577"
+    },
+    {
+      "path": "src/requests/snapshot.ts",
+      "bytes": 695,
+      "sha256": "1c5461c468acb7a2ed0aca097d8a95b0bf92547ce6ab5804b08149f4cf0caafe"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 36610,
+      "sha256": "f0c6aebecd6c59e3d15bd34f09b685e3bb080edf02faa01311d4f477e0d6294f"
+    },
+    {
+      "path": "tests/browser-provenance.test.ts",
+      "bytes": 1352,
+      "sha256": "4b604d9691a87940a51a5199a55f5248f2669e447f9bf46a63f119545b4fd801"
+    },
+    {
+      "path": "tests/competitive/judge.spec.ts",
+      "bytes": 16661,
+      "sha256": "1e8cd0b380443130fc690924580942ed5bb52f9d366688275281ab4be9e389e9"
+    },
+    {
+      "path": "tests/guided-demo.test.ts",
+      "bytes": 1607,
+      "sha256": "a58e1418edb0191289b7edda9babe833963b2aaffea9a9d4489e534a6413b71e"
+    },
+    {
+      "path": "tests/judge-demo-launcher.test.ts",
+      "bytes": 2694,
+      "sha256": "04f1e67d2017726f1ce0cd00fdc726976abf8bfb8422b89c3cbba4d808a9bac4"
+    },
+    {
+      "path": "tests/judge-payment-ui.test.ts",
+      "bytes": 857,
+      "sha256": "ec178ebf79b4354511acc5d3c9b22f009a822ac96fc49bf499d06ce7952aa997"
+    },
+    {
+      "path": "tests/resilience-competitive.test.ts",
+      "bytes": 4115,
+      "sha256": "0027a6b9f6fa996d46d5b41a52011906b92cae45228416f809a0e27539ff8b7b"
+    },
+    {
+      "path": "tests/snapshot-boundary.test.ts",
+      "bytes": 2460,
+      "sha256": "cb6671ef97742f3f83fd105debbc9202e832964c9d7fbd0a66cf93800e54bbf7"
+    },
+    {
+      "path": "docs/evidence/competitive-release-check-final.log",
+      "bytes": 301,
+      "sha256": "2e80f9ce0ee8c62130dab16d4504c99e98af929d16b648e0ff30b5c2db1837d9"
+    }
+  ]
+}

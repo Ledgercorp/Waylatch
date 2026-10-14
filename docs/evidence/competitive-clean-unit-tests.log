@@ -1,0 +1,13 @@
+
+> waylatch@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /workspace/Waylatch/.cache/competitive-clean-final-hb2e4m2l
+
+
+ Test Files  29 passed (29)
+      Tests  138 passed (138)
+   Start at  10:33:53
+   Duration  12.89s (transform 1.57s, setup 0ms, import 8.01s, tests 9.97s, environment 7ms)
+

@@ -8,6 +8,11 @@ export function requireNode24(version = process.versions.node) {
   if (!(Number(version.split('.')[0]) >= 24))
     throw new Error('The judge demo requires Node 24 or newer.');
 }
+export function judgeArguments(args) {
+  if (args.some((arg) => arg !== '--evidence-only') || args.length > 1)
+    throw new Error('Unknown judge option. Supported: --evidence-only');
+  return args;
+}
 export function judgeEnvironment(environment = process.env) {
   const clean = { ...environment };
   for (const key of [
@@ -93,6 +98,7 @@ async function run(command, args, root, environment) {
 }
 async function main() {
   requireNode24();
+  const args = judgeArguments(process.argv.slice(2));
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
   const environment = judgeEnvironment();
   if (
@@ -100,14 +106,22 @@ async function main() {
     !existsSync(join(root, 'node_modules/vite/package.json'))
   ) {
     console.log('Installing the existing locked project dependencies for local judge access.');
-    await run('npm', ['ci', '--no-audit', '--no-fund'], root, environment);
+    await run('npm', ['ci', '--no-audit', '--no-fund'], root, {
+      ...environment,
+      ONNXRUNTIME_NODE_INSTALL_CUDA: 'skip',
+    });
   }
   if (productionBuildNeeded(root)) {
     console.log('Compiling the existing Waylatch application for judge access.');
     await run('npm', ['run', 'build'], root, environment);
   }
   stampProductionBuild(root);
-  await run(process.execPath, ['--import', 'tsx', 'scripts/judge-demo.ts'], root, environment);
+  await run(
+    process.execPath,
+    ['--import', 'tsx', 'scripts/judge-demo.ts', ...args],
+    root,
+    environment,
+  );
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   main().catch((error) => {

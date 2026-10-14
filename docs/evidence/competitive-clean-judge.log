@@ -1,0 +1,7 @@
+
+> waylatch@0.1.0 judge
+> node scripts/judge-start.mjs --evidence-only
+
+Waylatch judge demo: http://127.0.0.1:4188
+EVIDENCE-ONLY MODE: AI assets are not required. Review reports its actual inference mode; no genuine AI success is claimed. Financial operations are blocked.
+Use the on-screen Start judge demo button. No coordinator passphrase is printed or persisted.

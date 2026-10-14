@@ -8,6 +8,8 @@ export type ImportProvenance = {
   recordedAt: string;
   origin: string;
   untrusted: boolean;
+  /** Browser observation at preservation, not authenticated offline proof. Legacy entries omit it. */
+  connectivity?: 'offline' | 'online';
 };
 export type OutboxEntry = {
   request: ResourceRequest;
@@ -58,6 +60,9 @@ export async function saveRequest(
         recordedAt: new Date().toISOString(),
         origin: request.origin,
         untrusted: source === 'qr-import',
+        ...(typeof navigator !== 'undefined' && typeof navigator.onLine === 'boolean'
+          ? { connectivity: navigator.onLine ? ('online' as const) : ('offline' as const) }
+          : {}),
       },
       syncStatus: 'pending',
     };

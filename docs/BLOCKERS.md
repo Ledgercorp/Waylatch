@@ -1,3 +1,19 @@
+# Current competitive-development blocker — 2026-10-13
+
+**Pinned local model access remains blocked.** The existing MiniLM asset files are missing; the authorized Hugging Face and official weight-download hosts still return proxy CONNECT 403 in this worker. The model identity, pinned revision, sizes and hashes have not changed. No alternate model or fabricated embeddings were substituted. New calibration records null metrics and does not complete; freeze and held-out evaluation have not executed. Three fresh blinded AI reviewers completed the 240 fictional annotations (120 duplicate, 108 distinct, 12 ambiguous), without author labels or model predictions. These labels are not expert-human or field data. See [blocked calibration evidence](evidence/ai-evaluation-calibration.json) and [continuation](COMPETITIVE_CONTINUATION.md).
+
+**Independent implementation progressed:** explainable comparisons and audited pair dispositions, source-labeled Proof Trail with sanitized/original export distinction, guided isolated judge mode, controlled resilience measurements and real evidence-only Chromium checks. `npm run judge` requires genuine pinned model setup; `npm run judge -- --evidence-only` explicitly permits limited offline/QR/deterministic-review/archive inspection. Neither fallback nor old AI footage establishes new model inference or held-out performance. Competitive development remains partial.
+
+**The genuine Sandbox purchase is complete and is not a blocker.** Order **2W330508JA572391V**, capture **8WY07860808872629**, **USD1.00 simulated**, **COMPLETED / PAID**, independently verified and unchanged. The historical 110.04-second preview already contains authentic settled UI and audit evidence. No new purchases or credential setup are required. The new competitive preview's actual metadata belongs in the final recording evidence once produced.
+
+**Release/account requirements remain separate:** public GitHub/video authorization, root application license decision, eligibility/representation, registration/legal terms, Devpost custom fields/account status and final submission. CrisisCodec is the same owner's earlier project; absent MIT adoption there does not block private development. Retain attribution and third-party notices. Actual signed webhook delivery and reimbursement transfer remain unverified outside the purchasing claim. No root MIT adoption, terms acceptance, public release or submission has occurred. **$0 real spending.**
+
+---
+
+# Historical blocker ledger — superseded entries retained
+
+The entries below record earlier worker/credential states. They are not current instructions to redo credential setup, authentication, purchases or completed tests. The opening historical claim that payment footage was still missing is also superseded by the preserved settled-payment preview. Current verified state is described above.
+
 # Current remaining gates after genuine Sandbox capture — 2026-10-13
 
 **Resolved for this isolated demonstration:** credential availability, genuine HTTP 200 OAuth, normal coordinator authentication using a user-authorized private temporary passphrase, actual human REVIEW/AUTHORIZE, real order creation, genuine personal-buyer approval and separately authorized capture. Order **2W330508JA572391V COMPLETED**, capture **8WY07860808872629**, application **PAID**, exact USD 1.00 in simulated funds. [Evidence](evidence/paypal-real-sandbox.json). Seven valid audit events; existing accounts/records untouched; loopback instance stopped and session revoked.

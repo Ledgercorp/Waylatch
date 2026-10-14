@@ -1,0 +1,22 @@
+{
+  "category": "actual-clean-install-evidence-only-judge-launch",
+  "checkedAt": "2026-10-14T10:35:53.988080+00:00",
+  "healthReached": true,
+  "applicationHTMLReached": true,
+  "merchantConfigured": false,
+  "financialMutationsAllowed": false,
+  "providerCallsAllowed": false,
+  "evidenceOnly": true,
+  "archiveReadOnly": true,
+  "originalEvents": 7,
+  "reportedChain": {
+    "valid": true,
+    "brokenAt": null,
+    "count": 7
+  },
+  "savedProviderEvidenceSha256": "3164e8c7310a3b358b8371bea270b6bbdbc592acc789354d8d5e8bc78c74a34b",
+  "realSpending": 0,
+  "limitations": [
+    "Evidence-only launch; no new genuine local AI inference or provider request."
+  ]
+}

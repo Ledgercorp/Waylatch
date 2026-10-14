@@ -1,0 +1,5 @@
+
+> waylatch@0.1.0 audit:validate
+> tsx scripts/validate-audit.ts .cache/competitive-demo/historical-chain.json
+
+{"valid":true,"brokenAt":null,"count":7}

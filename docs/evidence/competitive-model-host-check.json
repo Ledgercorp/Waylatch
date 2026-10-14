@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-14T10:20:57Z",
+  "category": "actual-post-refresh-model-access-check",
+  "specRevision": "46",
+  "observationsCurrent": true,
+  "reportedPolicyState": "unknown",
+  "startupSnapshotModelHosts": [],
+  "requests": [
+    {
+      "host": "huggingface.co",
+      "proxyConnectStatus": 403,
+      "curlExitCode": 56
+    },
+    {
+      "host": "cas-bridge.xethub.hf.co",
+      "proxyConnectStatus": 403,
+      "curlExitCode": 56
+    }
+  ],
+  "pinnedModelChanged": false,
+  "downloadBypassAttempted": false,
+  "realSpending": 0
+}

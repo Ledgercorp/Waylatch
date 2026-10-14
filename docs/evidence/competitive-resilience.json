@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-13T22:11:23.583Z",
+  "completedAt": "2026-10-13T22:11:24.087Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "kernel": "6.18.44",
+    "architecture": "x64",
+    "cpuModel": "AMD EPYC 9V45 96-Core Processor",
+    "logicalCpusVisible": 3,
+    "systemMemoryBytesVisible": 10452496384,
+    "temporaryFilesystemTypeHex": "0x1021994",
+    "temporaryFilesystem": "tmpfs (memory-backed)"
+  },
+  "sourceSha256": {
+    "scripts/measure-resilience.ts": "c914a12c510c4b54eb2b14757a619b4cbb886d841bb4cc49bc0535ff61d1dffd",
+    "server/store.ts": "9f99a404ca81f8e69683d6e2c3c49b10e7566a285413db23b78b0ca97b2d1158",
+    "server/payments.ts": "53a72db5e5f35ead0f2ba89e98c4064fbe0ab1189c7afe1dfcc970ca3f850f47",
+    "src/offline/codec.ts": "91a8d777d8a693a1333860605a8ddd538e44898814ac51e867f0df674ba13f68",
+    "src/offline/reconstruction.ts": "1f7c51c1515df1de1791ae3209bf72710e94a500dbc8cd9f2bd908107e8692b5",
+    "src/offline/storage.ts": "2dfd282c7e0d1d795a3696438bd925321c217d3bb5b7ba41ad27785864201bdd",
+    "src/audit/chain.ts": "daa3248a09fdf21bdf48cacc8fdac068b47f7b021a0f8d858c226dd6b4ed2a0d"
+  },
+  "scope": "Free local controlled synthetic requests, fake IndexedDB and isolated temporary SQLite. No PayPal API calls or real purchases.",
+  "faults": {
+    "transfer": {
+      "simulatedStorage": "fake-indexeddb; connection close/reopen, not a real browser reload",
+      "packetBudgetBytes": 256,
+      "packets": 60,
+      "rawBytes": 12351,
+      "checkpoints": 11,
+      "duplicatePacketsIgnored": 59,
+      "malformedRejectedWithoutMutation": true,
+      "missingFieldBeforeCompletion": "resources",
+      "equalRevisionConflictRejected": true,
+      "staleRevisionRejectedAfterCheckpoint": true,
+      "finalOutboxRevision": 2
+    },
+    "payment": {
+      "simulation": "in-process provider double; no network calls",
+      "logicalOrders": 1,
+      "logicalCaptures": 1,
+      "createCalls": 2,
+      "captureCalls": 1,
+      "inspectCalls": 2,
+      "restarts": 3,
+      "preservedCreateKey": true,
+      "startupProviderCalls": 0,
+      "finalState": "PAID",
+      "auditEvents": 8,
+      "auditValid": true,
+      "repeatOperationsCreatedNoNewPurchase": true
+    },
+    "reservedRecovery": {
+      "simulation": "reserved database states simulate crash boundary; clean SQLite reopen",
+      "recoveredStates": [
+        "CREATE_UNCERTAIN",
+        "CAPTURE_UNCERTAIN"
+      ],
+      "providerCalls": 0,
+      "auditEvents": 2,
+      "recoveryIsIdempotent": true
+    },
+    "transactionAndAudit": {
+      "simulation": "forced transaction exception and direct SQLite event-body edit",
+      "uncommittedRequestAndAuditRolledBack": true,
+      "changedBodyDetectedAfterReopen": true,
+      "deletedPrefixDetected": true,
+      "reorderedEventsDetected": true,
+      "elapsedMs": 0.4278500000000065,
+      "limitation": "Hash chains detect alteration relative to recorded hashes; a database administrator can rewrite an entire chain, and deleting an unanchored tail cannot be detected from the remaining valid prefix."
+    }
+  },
+  "storeMeasurements": [
+    {
+      "count": 100,
+      "databaseFileBytesAfterClose": 143360,
+      "writeRecordsAndAudit": {
+        "samples": 7,
+        "minMs": 1.9099170000000072,
+        "medianMs": 2.110067000000015,
+        "p95Ms": 3.516640999999993,
+        "maxMs": 3.516640999999993,
+        "rawMs": [
+          2.321011999999996,
+          2.110067000000015,
+          3.516640999999993,
+          2.0235870000000205,
+          1.9099170000000072,
+          1.958580000000012,
+          2.527511000000004
+        ]
+      },
+      "readAllRecordsAndEvents": {
+        "samples": 7,
+        "minMs": 0.2668290000000013,
+        "medianMs": 0.27804599999998914,
+        "p95Ms": 0.36323400000003403,
+        "maxMs": 0.36323400000003403,
+        "rawMs": [
+          0.33243799999999624,
+          0.28260300000002303,
+          0.2757530000000088,
+          0.2668290000000013,
+          0.27804599999998914,
+          0.2766239999999982,
+          0.36323400000003403
+        ]
+      },
+      "validateCompleteChain": {
+        "samples": 7,
+        "minMs": 0.22831200000001672,
+        "medianMs": 0.2831339999999898,
+        "p95Ms": 1.570229999999981,
+        "maxMs": 1.570229999999981,
+        "rawMs": [
+          0.45858599999999683,
+          0.38689899999999966,
+          0.22831200000001672,
+          0.24562699999998472,
+          0.2831339999999898,
+          0.22950299999999402,
+          1.570229999999981
+        ]
+      },
+      "reopenAndReadRecords": {
+        "samples": 7,
+        "minMs": 0.27954800000000546,
+        "medianMs": 0.3309849999999983,
+        "p95Ms": 0.4711749999999597,
+        "maxMs": 0.4711749999999597,
+        "rawMs": [
+          0.3309849999999983,
+          0.38750900000002275,
+          0.43356799999997975,
+          0.2914159999999981,
+          0.29676399999999603,
+          0.27954800000000546,
+          0.4711749999999597
+        ]
+      }
+    },
+    {
+      "count": 500,
+      "databaseFileBytesAfterClose": 557056,
+      "writeRecordsAndAudit": {
+        "samples": 7,
+        "minMs": 8.48487399999999,
+        "medianMs": 8.994124999999997,
+        "p95Ms": 9.729264999999998,
+        "maxMs": 9.729264999999998,
+        "rawMs": [
+          9.729264999999998,
+          8.745993999999996,
+          8.48487399999999,
+          8.493786999999998,
+          9.313182999999981,
+          8.994124999999997,
+          9.613402000000008
+        ]
+      },
+      "readAllRecordsAndEvents": {
+        "samples": 7,
+        "minMs": 1.1682880000000182,
+        "medianMs": 1.329609000000005,
+        "p95Ms": 1.4580409999999802,
+        "maxMs": 1.4580409999999802,
+        "rawMs": [
+          1.303540000000055,
+          1.329609000000005,
+          1.1682880000000182,
+          1.19297499999999,
+          1.4293480000000045,
+          1.4084980000000087,
+          1.4580409999999802
+        ]
+      },
+      "validateCompleteChain": {
+        "samples": 7,
+        "minMs": 1.2564289999999687,
+        "medianMs": 2.436784999999986,
+        "p95Ms": 3.1687199999999507,
+        "maxMs": 3.1687199999999507,
+        "rawMs": [
+          1.3331640000000107,
+          2.436784999999986,
+          2.673129000000017,
+          1.2564289999999687,
+          2.781532000000027,
+          1.316519000000028,
+          3.1687199999999507
+        ]
+      },
+      "reopenAndReadRecords": {
+        "samples": 7,
+        "minMs": 1.0087889999999788,
+        "medianMs": 1.1206760000000031,
+        "p95Ms": 1.7818960000000175,
+        "maxMs": 1.7818960000000175,
+        "rawMs": [
+          1.7818960000000175,
+          1.0823289999999588,
+          1.0087889999999788,
+          1.1762499999999818,
+          1.1206760000000031,
+          1.2890789999999583,
+          1.088559000000032
+        ]
+      }
+    },
+    {
+      "count": 1000,
+      "databaseFileBytesAfterClose": 1069056,
+      "writeRecordsAndAudit": {
+        "samples": 7,
+        "minMs": 18.038575999999978,
+        "medianMs": 18.981486000000018,
+        "p95Ms": 45.98914000000002,
+        "maxMs": 45.98914000000002,
+        "rawMs": [
+          18.038575999999978,
+          19.075026000000037,
+          18.355259999999987,
+          18.981486000000018,
+          18.33353699999998,
+          19.71089799999993,
+          45.98914000000002
+        ]
+      },
+      "readAllRecordsAndEvents": {
+        "samples": 7,
+        "minMs": 2.5387179999999603,
+        "medianMs": 2.7175060000000144,
+        "p95Ms": 4.6311379999999644,
+        "maxMs": 4.6311379999999644,
+        "rawMs": [
+          2.5387179999999603,
+          2.8994480000000067,
+          2.657344999999964,
+          2.7175060000000144,
+          2.5649680000000217,
+          4.6311379999999644,
+          3.5825399999999945
+        ]
+      },
+      "validateCompleteChain": {
+        "samples": 7,
+        "minMs": 2.3712770000000205,
+        "medianMs": 5.991914000000008,
+        "p95Ms": 13.534006999999974,
+        "maxMs": 13.534006999999974,
+        "rawMs": [
+          2.3712770000000205,
+          6.327926999999988,
+          5.810631999999998,
+          5.991914000000008,
+          5.434570000000008,
+          13.534006999999974,
+          6.611592000000087
+        ]
+      },
+      "reopenAndReadRecords": {
+        "samples": 7,
+        "minMs": 2.0514290000000415,
+        "medianMs": 2.1286039999999957,
+        "p95Ms": 5.112878000000023,
+        "maxMs": 5.112878000000023,
+        "rawMs": [
+          3.3299219999999536,
+          2.087742999999989,
+          2.0514290000000415,
+          2.134832999999958,
+          2.06088299999999,
+          5.112878000000023,
+          2.1286039999999957
+        ]
+      }
+    }
+  ],
+  "qr": {
+    "description": "20 resources, each 500 characters; raw packet budget 256 bytes; reverse-order delivery",
+    "packetsPerRequest": 60,
+    "encodeAndReconstruct": {
+      "samples": 25,
+      "minMs": 1.4746659999999565,
+      "medianMs": 1.6972990000000436,
+      "p95Ms": 2.9286420000000817,
+      "maxMs": 4.18878600000005,
+      "rawMs": [
+        2.5788780000000315,
+        1.9324509999999009,
+        1.764850000000024,
+        1.8213849999999638,
+        2.9286420000000817,
+        1.6876250000000255,
+        1.6190330000000586,
+        1.7975689999999531,
+        1.6972990000000436,
+        1.5818460000000414,
+        2.185038000000077,
+        2.4248479999999972,
+        1.6680959999999914,
+        1.6076450000000477,
+        1.7235180000000128,
+        1.638200999999981,
+        1.4922330000000557,
+        2.5050469999999905,
+        1.5274749999999813,
+        1.554224999999974,
+        1.6963980000000447,
+        1.4746659999999565,
+        1.5233989999999267,
+        2.4229349999999386,
+        4.18878600000005
+      ]
+    }
+  },
+  "processResources": {
+    "totalWallMs": 503.77848199999994,
+    "cpuMicroseconds": {
+      "user": 519272,
+      "system": 75506
+    },
+    "memoryBeforeBytes": {
+      "rss": 76177408,
+      "heapTotal": 30806016,
+      "heapUsed": 15916832,
+      "external": 3807930,
+      "arrayBuffers": 1323787
+    },
+    "memoryAfterBytes": {
+      "rss": 121458688,
+      "heapTotal": 55447552,
+      "heapUsed": 24789120,
+      "external": 4265813,
+      "arrayBuffers": 1618303
+    },
+    "lifetimeMaximumResidentSetKilobytes": 119448
+  },
+  "limitations": [
+    "Single worker, one run; timing samples share process/cache and are not independent deployment trials.",
+    "Seven samples per store size; reported p95 is the largest observation, not a stable tail estimate.",
+    "Memory is sampled before/after; lifetime maxRSS includes imports and is not isolated scenario peak memory.",
+    "Synchronous SQLite measurements are single-writer; no multi-user concurrency or network latency simulated.",
+    "Temporary SQLite files in this run use the worker temporary filesystem (identified in metadata). These timings do not establish physical-disk durability or end-user device performance.",
+    "Maximum-size QR payload tests raw packet encoding/reconstruction, not camera scanning or visual QR readability.",
+    "fake-indexeddb verifies persistence across connections, not actual browser reload or power-loss durability.",
+    "Provider acceptance/response loss and persisted crash-boundary states are controlled simulations; no actual PayPal fault was induced.",
+    "No model-startup or inference-performance claim is included in these measurements."
+  ]
+}

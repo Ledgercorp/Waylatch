@@ -15,6 +15,7 @@ import {
   Package,
 } from 'lucide-react';
 import { demoRequest, unknownFields, type ResourceRequest } from '../requests/schema';
+import { sameRequestSnapshot } from '../requests/snapshot';
 import { getOutbox, saveRequest, type OutboxEntry } from '../offline';
 import type { StoredRecord, Payment } from '../../server/store';
 import type { AuditEvent } from '../audit/chain';
@@ -25,7 +26,9 @@ import { Dialog } from './Dialog';
 import { ReviewPanel } from './ReviewPanel';
 import { PayPanel } from './PayPanel';
 import { AuditPanel } from './AuditPanel';
-const stages = ['Request', 'Review', 'Pay', 'Audit'] as const;
+import { ProofTrail } from './ProofTrail';
+import { GuidedDemo, type JudgeDemoInfo } from './GuidedDemo';
+const stages = ['Request', 'Review', 'Pay', 'Audit', 'Proof Trail'] as const;
 type Stage = (typeof stages)[number];
 type State = {
   records: StoredRecord[];
@@ -73,16 +76,29 @@ export function App() {
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState('');
+  const [judge, setJudge] = useState<JudgeDemoInfo | null>(null);
+  const [showArchive, setShowArchive] = useState(false);
+  const [snapshotSource, setSnapshotSource] = useState<'local' | 'server'>('local');
   const localRecords = outbox.map((x) => x.request);
   const records = [
     ...localRecords,
     ...state.records.map((x) => x.record).filter((r) => !localRecords.some((x) => x.id === r.id)),
   ];
   const displayed = records.length ? records : [demoRequest];
-  const record = displayed.find((r) => r.id === selected) ?? displayed[0];
+  const coordinatorSelection = state.records.find((entry) => entry.record.id === selected);
+  const record =
+    showArchive && stage === 'Proof Trail' && judge
+      ? judge.archive.record
+      : snapshotSource === 'server' && coordinatorSelection
+        ? coordinatorSelection.record
+        : (displayed.find((r) => r.id === selected) ?? displayed[0]);
   const remote = state.records.find((x) => x.record.id === record.id);
-  const payment = state.payments.find((p) => p.recordId === record.id);
-  const provenance = outbox.find((x) => x.request.id === record.id)?.provenance;
+  const snapshotConflict = !!remote && !sameRequestSnapshot(record, remote.record);
+  const payment = snapshotConflict
+    ? undefined
+    : state.payments.find((p) => p.recordId === record.id && p.revision === record.revision);
+  const localEntry = outbox.find((x) => sameRequestSnapshot(x.request, record));
+  const provenance = localEntry?.provenance;
   async function refresh() {
     setState(await api<State>('/state'));
     setAuthenticated(true);
@@ -96,6 +112,32 @@ export function App() {
       .then((r) => setConfigured(r.paypalConfigured))
       .catch(() => {});
     refresh().catch(() => setAuthenticated(false));
+    // Safe read-only demo metadata survives an offline reload; it grants no server authority.
+    try {
+      const cached = JSON.parse(sessionStorage.getItem('waylatch-judge-metadata') ?? 'null');
+      if (cached?.mode === 'judge' && cached.archive?.readonly === true) setJudge(cached);
+    } catch {
+      /* Storage may be unavailable; the normal application still works. */
+    }
+    api<JudgeDemoInfo>('/demo')
+      .then((demo) => {
+        setJudge(demo);
+        try {
+          sessionStorage.setItem('waylatch-judge-metadata', JSON.stringify(demo));
+        } catch {
+          /* Optional cache. */
+        }
+      })
+      .catch(() => {
+        if (navigator.onLine) {
+          setJudge(null);
+          try {
+            sessionStorage.removeItem('waylatch-judge-metadata');
+          } catch {
+            /* Optional cache. */
+          }
+        }
+      });
     const changed = () => setOnline(navigator.onLine);
     window.addEventListener('online', changed);
     window.addEventListener('offline', changed);
@@ -115,6 +157,8 @@ export function App() {
     await saveRequest(r, source);
     await loadLocal();
     setSelected(r.id);
+    setSnapshotSource('local');
+    setShowArchive(false);
     setStage('Request');
     setNotice(
       source === 'qr-import'
@@ -161,6 +205,10 @@ export function App() {
               <LogOut size={15} />
               Sign out
             </button>
+          ) : judge ? (
+            <a className="header-button" href="#judge-guide">
+              Judge guide <ArrowUpRight size={15} />
+            </a>
           ) : (
             <button className="header-button" onClick={() => setDialog('login')}>
               Coordinator sign in
@@ -181,6 +229,12 @@ export function App() {
         </span>
       </div>
       <main id="main">
+        {judge && (
+          <p className="judge-mode-banner" role="status">
+            ISOLATED JUDGE MODE · Fictional requests and read-only historical payment evidence.
+            Financial operations disabled.
+          </p>
+        )}
         <section className="hero">
           <div>
             <p className="eyebrow">EMERGENCY PROCUREMENT / CONTINUITY BY DESIGN</p>
@@ -240,6 +294,39 @@ export function App() {
             </div>
           </div>
         </section>
+        {judge && (
+          <GuidedDemo
+            authenticated={authenticated}
+            busy={busy}
+            online={online}
+            localCount={outbox.length}
+            evidenceOnly={judge.evidenceOnly}
+            onStart={() =>
+              act(async () => {
+                await api('/demo/session', {});
+                await refresh();
+                setNotice(
+                  'Isolated judge review session ready. Financial operations remain blocked.',
+                );
+              })
+            }
+            onRequest={() => setDialog('form')}
+            onHandoff={() => setDialog('handoff')}
+            onReceive={() => setDialog('receive')}
+            onReview={() => {
+              setShowArchive(false);
+              setStage('Review');
+            }}
+            onProof={() => {
+              setShowArchive(false);
+              setStage('Proof Trail');
+            }}
+            onArchive={() => {
+              setShowArchive(true);
+              setStage('Proof Trail');
+            }}
+          />
+        )}
         <div className="workspace-toolbar">
           <nav aria-label="Procurement stages">
             {stages.map((s, i) => (
@@ -250,12 +337,13 @@ export function App() {
                 aria-current={s === stage ? 'step' : undefined}
                 onClick={() => {
                   setStage(s);
+                  setShowArchive(false);
                   setError('');
                 }}
               >
                 <span>{String(i + 1).padStart(2, '0')}</span>
                 {s}
-                {i < 3 && <ChevronRight size={14} />}
+                {i < stages.length - 1 && <ChevronRight size={14} />}
               </button>
             ))}
           </nav>
@@ -309,6 +397,8 @@ export function App() {
                     key={r.id}
                     onClick={() => {
                       setSelected(r.id);
+                      setSnapshotSource('local');
+                      setShowArchive(false);
                       setNotice('');
                       setError('');
                     }}
@@ -328,12 +418,14 @@ export function App() {
                     <strong>{r.resources[0].description}</strong>
                     <div className="request-item-bottom">
                       <span>
-                        {qr
-                          ? 'QR import · untrusted'
-                          : (row?.status ??
-                            (outbox.some((x) => x.request.id === r.id)
-                              ? 'Locally preserved'
-                              : 'Synthetic fixture'))}
+                        {row && !sameRequestSnapshot(row.record, r)
+                          ? 'Local / server conflict'
+                          : qr
+                            ? 'QR import · untrusted'
+                            : (row?.status ??
+                              (outbox.some((x) => x.request.id === r.id)
+                                ? 'Locally preserved'
+                                : 'Synthetic fixture'))}
                       </span>
                       <span>{money(r.amountCents)}</span>
                     </div>
@@ -385,18 +477,35 @@ export function App() {
                 </p>
               </div>
               <span className={payment?.state === 'PAID' ? 'tag confirmed' : 'tag'}>
-                {payment?.state === 'PAID'
-                  ? 'Sandbox paid'
-                  : remote?.status === 'approved'
-                    ? 'Purchase authorized'
-                    : (remote?.status ??
-                      (provenance?.source === 'qr-import'
-                        ? 'QR import · untrusted'
-                        : provenance
-                          ? 'Locally preserved'
-                          : 'Synthetic fixture'))}
+                {showArchive && stage === 'Proof Trail' && judge
+                  ? 'Historical Sandbox · read only'
+                  : snapshotConflict
+                    ? 'Snapshot conflict'
+                    : payment?.state === 'PAID'
+                      ? 'Sandbox paid'
+                      : remote?.status === 'approved'
+                        ? 'Purchase authorized'
+                        : (remote?.status ??
+                          (provenance?.source === 'qr-import'
+                            ? 'QR import · untrusted'
+                            : provenance
+                              ? 'Locally preserved'
+                              : 'Synthetic fixture'))}
               </span>
             </div>
+            {snapshotConflict && (
+              <div className="notice" role="alert">
+                <strong>Local and coordinator snapshots differ</strong>
+                <p>
+                  The displayed local record is not the coordinator’s authoritative version. Review
+                  scores and payment controls are blocked for this snapshot; neither record is
+                  overwritten.
+                </p>
+                <button className="secondary" onClick={() => setSnapshotSource('server')}>
+                  View coordinator snapshot
+                </button>
+              </div>
+            )}
             {stage === 'Request' && (
               <section className="stage-content">
                 <div className="section-heading">
@@ -480,6 +589,8 @@ export function App() {
                 busy={busy}
                 act={act}
                 refresh={refresh}
+                comparisonRecords={state.records}
+                relationshipEvents={state.events}
               />
             )}
             {stage === 'Pay' && (
@@ -489,6 +600,7 @@ export function App() {
                 remote={remote}
                 payment={payment}
                 configured={configured}
+                financialActionsBlocked={judge !== null}
                 busy={busy}
                 act={act}
                 refresh={refresh}
@@ -497,6 +609,38 @@ export function App() {
             {stage === 'Audit' && (
               <AuditPanel events={state.events} chain={state.chain} authenticated={authenticated} />
             )}
+            {stage === 'Proof Trail' &&
+              (showArchive && judge ? (
+                <>
+                  <div className="notice">
+                    <strong>Separate historical payment record</strong>
+                    <p>
+                      This purchase was completed before this walkthrough. These are saved
+                      authoritative Sandbox observations, not a new checkout or current live
+                      provider request.
+                    </p>
+                  </div>
+                  <ProofTrail {...judge.archive} />
+                </>
+              ) : snapshotConflict ? (
+                <section className="stage-content notice">
+                  <strong>Coordinator proof withheld for conflicting snapshot</strong>
+                  <p>
+                    This local body does not match the server request. Its server review, approval
+                    and payment events cannot be attributed to this content. View the coordinator
+                    snapshot to inspect its actual Proof Trail; the original organization chain
+                    remains available in Audit.
+                  </p>
+                </section>
+              ) : (
+                <ProofTrail
+                  record={record}
+                  provenance={localEntry}
+                  payment={payment}
+                  events={state.events}
+                  chain={authenticated ? state.chain : undefined}
+                />
+              ))}
           </article>
         </div>
         <footer>
@@ -504,7 +648,8 @@ export function App() {
             WAYLATCH <span className="footer-slash">/</span> LeftSock Labs
           </span>
           <p>
-            Synthetic demonstration. No real emergencies, identities or funds. PayPal Sandbox only.
+            Fictional requests. PayPal Sandbox uses simulated funds. Historical evidence is labeled;
+            viewing it creates no payment.
           </p>
         </footer>
       </main>

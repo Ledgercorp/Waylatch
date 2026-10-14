@@ -12,6 +12,34 @@ Built by Colby Weiss / LeftSock Labs for the PayPal AI Hackathon 2026. All incid
 
 ![Desktop command workspace](docs/evidence/interface-1440.png)
 
+## Competitive development and judge access
+
+The private competitive branch adds side-by-side advisory review, durable pair dispositions, a source-labeled Proof Trail with exports, and an isolated guided judge workspace. No existing credentials or accounts are changed. A fresh private passphrase and temporary fictional database are generated internally; financial approvals and every provider operation are disabled in judge mode.
+
+```bash
+npm run judge
+```
+
+With Node 24+, npm and Python 3 installed, this command installs the locked dependencies if needed, compiles the existing source when needed, verifies/downloads the pinned CPU model, and starts **http://127.0.0.1:4173**. Click **Start judge demo**. No merchant credentials or coordinator password are required. Full local AI requires access to the existing pinned Hugging Face assets. Stop with Ctrl+C; the temporary server database is removed. Browser-local records remain in the browser profile.
+
+This managed worker still blocks `huggingface.co` and `cas-bridge.xethub.hf.co` with CONNECT 403. The explicitly limited, verified fallback is:
+
+```bash
+npm run judge -- --evidence-only
+```
+
+It supports offline/reload/QR, deterministic comparison, advisory dispositions and the separate historical completed-payment archive. It does **not** establish new genuine inference. The 240 fictional scenarios now have independent model-blind AI annotations; calibration produced a blocked report with null metrics. No threshold tuning, freeze or held-out evaluation has occurred. The original benchmark is preserved.
+
+[Competitive verification and remaining blockers](docs/COMPETITIVE_READINESS.md), [AI evaluation status](docs/AI_EVALUATION_COMPETITIVE.md), [measured resilience](docs/RESILIENCE_COMPETITIVE.md). The updated authentic [97.52-second private preview](docs/demo/waylatch-competitive-preview.mp4) shows the new interface and Proof Trail plus a clearly labeled historical genuine MiniLM excerpt. [Source boundaries and SHA-256](docs/evidence/competitive-demo-video.json). The original verified release and preview remain preserved.
+
+```bash
+npm run test:e2e:competitive                 # full judge checks; pinned model required
+WAYLATCH_EVIDENCE_ONLY=1 npm run test:e2e:competitive # explicitly limited checks
+npm run resilience:measure
+```
+
+Public release remains pending. Current dependency audit findings and the missing-model validation gate are documented; this is not a completed six-phase release.
+
 ## Run locally, at no cost
 
 Requires Node.js **24+**, npm, Python 3 (for the model downloader and optional media tooling), and a modern Chromium browser. Node's built-in SQLite stores durable server records without an external database.

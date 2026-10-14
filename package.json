@@ -12,6 +12,8 @@
     "start": "NODE_USE_ENV_PROXY=1 tsx server/index.ts",
     "test": "vitest run",
     "test:e2e": "playwright test",
+    "test:e2e:competitive": "playwright test --config playwright.competitive.config.ts",
+    "resilience:measure": "tsx scripts/measure-resilience.ts docs/evidence/competitive-resilience.json",
     "test:ai": "tsx scripts/benchmark-ai.ts",
     "ai:evaluate": "tsx scripts/evaluate-ai.ts",
     "judge": "node scripts/judge-start.mjs",
@@ -35,15 +37,15 @@
   "dependencies": {
     "@huggingface/transformers": "^3.8.1",
     "@msgpack/msgpack": "^3.1.0",
+    "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "idb": "^8.0.3",
     "jsqr": "^1.4.0",
+    "lucide-react": "^0.468.0",
     "qrcode": "^1.5.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "lucide-react": "^0.468.0",
-    "zod": "^4.1.0",
-    "dotenv": "^17.2.0"
+    "zod": "^4.1.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
@@ -53,16 +55,16 @@
     "@types/qrcode": "^1.5.5",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "@types/supertest": "^6.0.0",
     "@vitejs/plugin-react": "^5.0.0",
     "concurrently": "^9.2.0",
+    "fake-indexeddb": "^6.2.0",
     "prettier": "^3.9.10",
+    "supertest": "^7.1.0",
     "tsx": "^4.20.0",
     "typescript": "^5.9.0",
     "vite": "^7.1.0",
-    "vitest": "^3.2.0",
-    "supertest": "^7.1.0",
-    "@types/supertest": "^6.0.0",
-    "fake-indexeddb": "^6.2.0"
+    "vitest": "^4.1.11"
   },
   "description": "Offline-ready emergency procurement and accountable payments. From field need to verified action."
 }

@@ -2,6 +2,8 @@
 
 **Prepared for one final owner decision. No approval is recorded; no public action is authorized by this document.** Existing engineering/doc/media preparation and read-only verification are already authorized. Real spending stays **USD 0.00**.
 
+**Competitive branch boundary:** the proposal and original artifact bindings below describe the earlier verified candidate. They do not authorize the newer private `feat/waylatch-competitive` work or its 97.52-second preview. [Current internal readiness](COMPETITIVE_READINESS.md) records the integrated features and genuine model/dependency blockers. Finish those checks before refreshing all bindings and presenting one final consolidated public/licensing/video/submission request. No approval is requested or presumed during this development phase.
+
 ## Concrete proposal
 
 Publish the existing Waylatch source candidate from **Ledgercorp/Waylatch**, retaining authentic RescueLedger ancestry and compatibility identifiers. Change that existing repository from **private to public** only after the owner approves this packet. Do not create another repository or rewrite history. Proposed judge access is local installation from the public source repository; no hosted deployment, domain, paid resource or live payment is proposed.

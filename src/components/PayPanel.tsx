@@ -4,6 +4,7 @@ import type { ResourceRequest } from '../requests/schema';
 import type { StoredRecord, Payment } from '../../server/store';
 import { api, money } from './api';
 import { Dialog } from './Dialog';
+import { sameRequestSnapshot } from '../requests/snapshot';
 export function PayPanel({
   record,
   remote,
@@ -12,6 +13,7 @@ export function PayPanel({
   busy,
   act,
   refresh,
+  financialActionsBlocked = false,
 }: {
   record: ResourceRequest;
   remote?: StoredRecord;
@@ -20,9 +22,12 @@ export function PayPanel({
   busy: boolean;
   act: (fn: () => Promise<void>) => void;
   refresh: () => Promise<void>;
+  financialActionsBlocked?: boolean;
 }) {
   const [confirm, setConfirm] = useState<'authorize' | 'capture' | 'claim' | null>(null);
   const claim = record.kind === 'claim';
+  const snapshotMatches = !!remote && sameRequestSnapshot(record, remote.record);
+  financialActionsBlocked ||= !snapshotMatches;
   return (
     <section className="stage-content">
       <div className="section-heading">
@@ -41,6 +46,22 @@ export function PayPanel({
           {record.id} / revision {record.revision} / USD
         </span>
       </div>
+      {remote && !snapshotMatches && (
+        <p className="notice" role="alert">
+          <strong>Coordinator snapshot mismatch</strong>
+          <br />
+          View the coordinator’s actual content before considering authorization. The local or QR
+          body cannot authorize a different stored request.
+        </p>
+      )}
+      {financialActionsBlocked && snapshotMatches && (
+        <p className="notice">
+          <strong>Judge mode · financial operations disabled</strong>
+          <br />
+          Inspect these human authorization boundaries without approving or executing a payment.
+          View the separate historical Sandbox Proof Trail for the completed purchase.
+        </p>
+      )}
       {claim ? (
         <>
           <div className="notice">
@@ -52,7 +73,7 @@ export function PayPanel({
           </div>
           <button
             className="primary"
-            disabled={busy || remote?.status !== 'reviewed'}
+            disabled={financialActionsBlocked || busy || remote?.status !== 'reviewed'}
             onClick={() => setConfirm('claim')}
           >
             Authorize reimbursement review
@@ -74,7 +95,12 @@ export function PayPanel({
               {remote?.status !== 'approved' && (
                 <button
                   className="secondary"
-                  disabled={busy || remote?.status !== 'reviewed' || record.amountKind !== 'exact'}
+                  disabled={
+                    financialActionsBlocked ||
+                    busy ||
+                    remote?.status !== 'reviewed' ||
+                    record.amountKind !== 'exact'
+                  }
                   onClick={() => setConfirm('authorize')}
                 >
                   Authorize purchase
@@ -90,7 +116,11 @@ export function PayPanel({
               <button
                 className="primary"
                 disabled={
-                  busy || !configured || remote?.status !== 'approved' || !!payment?.orderId
+                  financialActionsBlocked ||
+                  busy ||
+                  !configured ||
+                  remote?.status !== 'approved' ||
+                  !!payment?.orderId
                 }
                 onClick={() =>
                   act(async () => {
@@ -102,7 +132,7 @@ export function PayPanel({
                 Create Sandbox order
               </button>
             </div>
-            {payment?.approvalUrl && payment.state !== 'PAID' && (
+            {!financialActionsBlocked && payment?.approvalUrl && payment.state !== 'PAID' && (
               <a
                 className="approval-link"
                 href={payment.approvalUrl}
@@ -122,14 +152,16 @@ export function PayPanel({
               </div>
               <button
                 className="secondary"
-                disabled={busy || !payment?.orderId || payment.state === 'PAID'}
+                disabled={
+                  financialActionsBlocked || busy || !payment?.orderId || payment.state === 'PAID'
+                }
                 onClick={() => setConfirm('capture')}
               >
                 Confirm Sandbox capture
               </button>
             </div>
           </div>
-          {!configured && (
+          {!configured && !financialActionsBlocked && (
             <p className="notice small">
               Sandbox credentials are not configured. Real checkout is blocked; no simulated payment
               is displayed.
@@ -155,7 +187,7 @@ export function PayPanel({
               {payment.orderId && (
                 <button
                   className="text-button"
-                  disabled={busy}
+                  disabled={financialActionsBlocked || busy}
                   onClick={() =>
                     act(async () => {
                       await api(`/payments/${record.id}`);
@@ -194,7 +226,7 @@ export function PayPanel({
             </button>
             <button
               className="primary"
-              disabled={busy}
+              disabled={financialActionsBlocked || busy}
               onClick={() => {
                 act(async () => {
                   if (confirm === 'authorize')

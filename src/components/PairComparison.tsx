@@ -123,7 +123,12 @@ export function PairComparison({
         Shared exact terms:{' '}
         {comparison.sharedTerms.length ? comparison.sharedTerms.join(', ') : 'None'}
       </p>
-      <div className="comparison-evidence">
+      <div
+        className="comparison-evidence"
+        tabIndex={0}
+        role="region"
+        aria-label="Scrollable recorded comparison evidence"
+      >
         <table>
           <caption>Recorded context · deterministic evidence</caption>
           <thead>

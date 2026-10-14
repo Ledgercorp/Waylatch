@@ -12,6 +12,7 @@ import { MODEL_ID, disposeModel } from '../src/risk/model';
 
 // No dotenv import: this launcher deliberately ignores normal passwords, databases and provider configuration.
 clearPayPalEnvironment();
+const evidenceOnly = process.argv.includes('--evidence-only');
 async function modelReady() {
   try {
     for (const asset of MODEL_ASSETS) {
@@ -29,7 +30,7 @@ async function modelReady() {
     return false;
   }
 }
-if (!(await modelReady())) {
+if (!evidenceOnly && !(await modelReady())) {
   console.log(
     'The pinned local CPU model is missing or failed integrity checks. Running the existing verified downloader.',
   );
@@ -69,6 +70,7 @@ const app = createApp({
   origin,
   judgeMode: true,
   judgeArchive: runtime.archive,
+  judgeEvidenceOnly: evidenceOnly,
 });
 app.use(
   express.static(resolve('dist'), {
@@ -80,7 +82,9 @@ app.get('/', (_req, res) => res.sendFile(resolve('dist/index.html')));
 const server = app.listen(port, '127.0.0.1', () => {
   console.log(`Waylatch judge demo: ${origin}`);
   console.log(
-    'Fictional requests · real local CPU AI · separate saved historical Sandbox proof. Financial approvals and provider operations are blocked.',
+    evidenceOnly
+      ? 'EVIDENCE-ONLY MODE: AI assets are not required. Review reports its actual inference mode; no genuine AI success is claimed. Financial operations are blocked.'
+      : 'Fictional requests · real local CPU AI · separate saved historical Sandbox proof. Financial approvals and provider operations are blocked.',
   );
   console.log(
     'Use the on-screen Start judge demo button. No coordinator passphrase is printed or persisted.',

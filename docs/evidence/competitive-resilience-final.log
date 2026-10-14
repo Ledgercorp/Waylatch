@@ -1,0 +1,59 @@
+{
+  "output": "docs/evidence/competitive-resilience-final.json",
+  "completedAt": "2026-10-13T22:22:06.768Z",
+  "elapsedMs": 836.3969999999999,
+  "storeCounts": [
+    100,
+    500,
+    1000
+  ],
+  "faults": {
+    "transfer": {
+      "simulatedStorage": "fake-indexeddb; connection close/reopen, not a real browser reload",
+      "packetBudgetBytes": 256,
+      "packets": 60,
+      "rawBytes": 12351,
+      "checkpoints": 11,
+      "duplicatePacketsIgnored": 59,
+      "malformedRejectedWithoutMutation": true,
+      "missingFieldBeforeCompletion": "resources",
+      "equalRevisionConflictRejected": true,
+      "staleRevisionRejectedAfterCheckpoint": true,
+      "finalOutboxRevision": 2
+    },
+    "payment": {
+      "simulation": "in-process provider double; no network calls",
+      "logicalOrders": 1,
+      "logicalCaptures": 1,
+      "createCalls": 2,
+      "captureCalls": 1,
+      "inspectCalls": 2,
+      "restarts": 3,
+      "preservedCreateKey": true,
+      "startupProviderCalls": 0,
+      "finalState": "PAID",
+      "auditEvents": 8,
+      "auditValid": true,
+      "repeatOperationsCreatedNoNewPurchase": true
+    },
+    "reservedRecovery": {
+      "simulation": "reserved database states simulate crash boundary; clean SQLite reopen",
+      "recoveredStates": [
+        "CREATE_UNCERTAIN",
+        "CAPTURE_UNCERTAIN"
+      ],
+      "providerCalls": 0,
+      "auditEvents": 2,
+      "recoveryIsIdempotent": true
+    },
+    "transactionAndAudit": {
+      "simulation": "forced transaction exception and direct SQLite event-body edit",
+      "uncommittedRequestAndAuditRolledBack": true,
+      "changedBodyDetectedAfterReopen": true,
+      "deletedPrefixDetected": true,
+      "reorderedEventsDetected": true,
+      "elapsedMs": 0.3699129999999968,
+      "limitation": "Hash chains detect alteration relative to recorded hashes; a database administrator can rewrite an entire chain, and deleting an unanchored tail cannot be detected from the remaining valid prefix."
+    }
+  }
+}

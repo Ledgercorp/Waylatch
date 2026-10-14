@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "waylatch-fictional-purchase-pairs-v1",
+  "method": "Independent model-blind AI reviewer; no author key or predictions; not expert-human/field labels",
+  "annotations": [
+    {
+      "caseId": "pair-11-19",
+      "decision": "duplicate",
+      "rationale": "SV-41 was a single completed journey, and the later form was an offline synchronization with no second trip.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-03-14",
+      "decision": "distinct",
+      "rationale": "AZ-9 sterile patient pads and AZ-10 teaching gauze were separate orders received by the nurse and educator.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-05-14",
+      "decision": "distinct",
+      "rationale": "PW-2 toilet rolls and PW-3 dispenser hand towels were independently ordered and delivered for different fixtures.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-02",
+      "decision": "duplicate",
+      "rationale": "The tanker log records only one 800-litre fill under BT-63, described differently by the volunteer and finance clerk.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-09",
+      "decision": "duplicate",
+      "rationale": "Both reimbursements refer to the ST-11 invoice for the same transferred radio set, with no second delivery.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-16",
+      "decision": "distinct",
+      "rationale": "RS-12 and RS-13 document different bottle quantities and sizes, each with its own pickup signature.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-09-08",
+      "decision": "duplicate",
+      "rationale": "The signed receiving sheet establishes DB-5 as one delivery, and both forms reference that sale despite missing fields.",
+      "confidence": 0.98
+    },
+    {
+      "caseId": "pair-06-17",
+      "decision": "distinct",
+      "rationale": "The retained vendor sales book identifies SPN-6 and SPN-7 as separately collected packs for two teams.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-02-05",
+      "decision": "duplicate",
+      "rationale": "Both the misspelled form and transcription refer to the same two serial-numbered KS-6 cells, with no other pair purchased.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-06-03",
+      "decision": "duplicate",
+      "rationale": "TP-22 identifies a single delivered pack of twelve teats, also called bottle nipples, using the same product code.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-16",
+      "decision": "distinct",
+      "rationale": "SN-1 sand anchors and SN-2 ground stakes have separate receipts and deployment sheets establishing two purchases.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-04",
+      "decision": "duplicate",
+      "rationale": "PL-S4 is one two-sheet sale, with the longer description expanding the invoice dimensions and polyethylene specification.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-11-04",
+      "decision": "duplicate",
+      "rationale": "The dispatch log identifies RG-9 as the sole sixteen-seat booking, and the expanded note comes from its invoice.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-02-17",
+      "decision": "distinct",
+      "rationale": "A signed stock sheet records SL-3 and SL-4 as distinct purchases on different dates with separate pack counts.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-11-12",
+      "decision": "distinct",
+      "rationale": "ML-T1 is a completed passenger run while ML-T2 is a separately fulfilled printed-leaflet order, despite equal costs.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-06",
+      "decision": "duplicate",
+      "rationale": "ST-P19 rents one unit, and the differently hashed contract and issue sheet identify the same machine serial and rental dates.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-06-02",
+      "decision": "duplicate",
+      "rationale": "Both forms refer to the single JP-14 formula case with matching carton count, batch code, and delivery signature.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-09-13",
+      "decision": "distinct",
+      "rationale": "ME-21 prepared meals and ME-22 empty packaging were separate orders with distinct receiving records.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-12-02",
+      "decision": "duplicate",
+      "rationale": "Both forms identify the same BC-14 pair of boards by equipment serials, order, and intake signature.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-09-19",
+      "decision": "duplicate",
+      "rationale": "ST-M9 supplied two sacks once, and the later entry captured the paper ledger without any new delivery.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-10",
+      "decision": "distinct",
+      "rationale": "FR-21 and FR-22 cover Monday and Friday hires supported by separate contracts, periods, and return signatures.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-20",
+      "decision": "ambiguous",
+      "rationale": "Neither note identifies an acquired cover, and missing order, hire, receipt, and installation records cannot resolve whether one or several purchases occurred.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-06-06",
+      "decision": "duplicate",
+      "rationale": "The photograph and electronic receipt both document the single SA-40 tablet-box sale and its batch despite differing bytes.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-15",
+      "decision": "distinct",
+      "rationale": "ER-5 pays for days one through three and the signed ER-6 extension pays only for days four through six.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-04-20",
+      "decision": "ambiguous",
+      "rationale": "Missing supplier, volume, machine, order, and receipt details plus incomplete logs for several generators leave the number of fuel supplies unknown.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-12-12",
+      "decision": "distinct",
+      "rationale": "WF-P1 reels and WF-P2 ramped cable covers are separately delivered orders even though their prices match.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-03",
+      "decision": "duplicate",
+      "rationale": "EF-12 supplied one ten-line pack that the supplier and crew describe respectively as guy ropes and guy lines.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-18",
+      "decision": "distinct",
+      "rationale": "The shared RH-7 invoice covers two independent rentals, and each request claims its own unit serial and contract charge.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-01",
+      "decision": "duplicate",
+      "rationale": "Both entries claim the same BK-4 contractor invoice for pump P-441 rented for one weekend.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-06-14",
+      "decision": "distinct",
+      "rationale": "AG-4 and AG-5 supply separately approved formula products for different ages, supported by separate batches and delivered tin counts.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-15",
+      "decision": "distinct",
+      "rationale": "HW-2 and separately authorized HW-3 bill non-overlapping initial and extension periods.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-10",
+      "decision": "distinct",
+      "rationale": "MD-P11 and MD-P12 rent different units for an initial weekend and a later storm, with distinct dates, serials, and return sheets.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-03-18",
+      "decision": "distinct",
+      "rationale": "The consolidated JS-4 receipt includes independent JA-1 and JA-2 orders, and each claim covers only its own clinic line.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-02-13",
+      "decision": "distinct",
+      "rationale": "MT-30 delivers new battery packs while separate MT-31 pays for collecting spent cells.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-12-10",
+      "decision": "distinct",
+      "rationale": "NT-30 supplies the first room and NT-31 supplies extra cables after expansion, with distinct paid deliveries and installed reel numbers.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-11-03",
+      "decision": "duplicate",
+      "rationale": "Both forms cite the same MS-T2 booking and passenger list for one accessible vehicle described by different names.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-05-06",
+      "decision": "duplicate",
+      "rationale": "IRN-25 was one cleaning visit documented in both the emailed PDF and photographed signed job sheet.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-12",
+      "decision": "distinct",
+      "rationale": "GB-1 buys weather sheets while separately fulfilled GB-2 pays a crew to erect previously owned tents.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-06-04",
+      "decision": "duplicate",
+      "rationale": "The expanded ready-to-feed description comes from the sole OP-3 receipt and pickup signature underlying the abbreviated note.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-17",
+      "decision": "distinct",
+      "rationale": "The supplier ledger records separate AL-7 and AL-8 cash collections with different stock quantities despite missing form amounts and receipts.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-06",
+      "decision": "duplicate",
+      "rationale": "SK-18 hires one frame marquee, and both contract representations identify the same structure number and term.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-04-06",
+      "decision": "duplicate",
+      "rationale": "Both receipt representations record the single DK-61 tanker visit and the same meter reading.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-03-10",
+      "decision": "distinct",
+      "rationale": "HT-60 and HT-61 are separate replenishments after different treatment sessions, each supported by a newly delivered box.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-05-07",
+      "decision": "duplicate",
+      "rationale": "Both claims derive from ALU-18 for one hire, with the gross amount including the collection fee and the other repeating the hire charge.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-05",
+      "decision": "duplicate",
+      "rationale": "The pickup book lists only OW-77 for thirty bottles, and both the rushed note and transcription cite that collection.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-05-02",
+      "decision": "duplicate",
+      "rationale": "The contractor log establishes TN-14 as one visit and one tank-emptying service described by both officers.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-19",
+      "decision": "duplicate",
+      "rationale": "DS-15 arrived once on 3 April, and the second form is a delayed synchronization with no second shipment.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-05",
+      "decision": "duplicate",
+      "rationale": "The original and corrected entries both refer to LX-2, the single delivered pack of six earpieces.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-09-14",
+      "decision": "distinct",
+      "rationale": "OR-7 and OR-8 are separate pasta products for different diets supported by two orders, ingredient labels, and delivery quantities.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-16",
+      "decision": "distinct",
+      "rationale": "MR-1 and MR-2 have separate receipts for different connectors supplied to different radio fleets.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-09-20",
+      "decision": "ambiguous",
+      "rationale": "Missing item lists, quantities, suppliers, orders, receipts, and receiving sheets prevent resolving acquisitions for the multiple kitchen shifts.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-07",
+      "decision": "duplicate",
+      "rationale": "Both SW-S2 forms claim the same erected canopy period, with one amount repeating the rental subtotal of the larger invoice.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-19",
+      "decision": "duplicate",
+      "rationale": "WR-P31 supplied one hose coil, and the later request came from a restored phone backup without a further shipment.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-18",
+      "decision": "distinct",
+      "rationale": "DS-R2 combines two independently contracted team rentals, and the claims cover disjoint serial sets and their own rental periods.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-12-07",
+      "decision": "duplicate",
+      "rationale": "Both RS-P6 requests concern the same cut cable and connectors, with one omitting the fitting charge from the shared order.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-09-01",
+      "decision": "duplicate",
+      "rationale": "AK-17 supplied two twenty-kilogram sacks once, and both forms submit that same paid delivery.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-14",
+      "decision": "distinct",
+      "rationale": "RM-9 and RM-10 rent differently rated pumps for separate tasks, with separate serials and installation issue sheets.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-07",
+      "decision": "duplicate",
+      "rationale": "Both RP-7 claims cover the same pump and rental period, with the lower amount excluding transport from the full bill.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-05-13",
+      "decision": "distinct",
+      "rationale": "BR-30 supplies brushes and detergent while independently booked BR-31 provides an inspection evidenced by a signed report.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-11-09",
+      "decision": "duplicate",
+      "rationale": "The operator performed and billed only FH-15 once, despite the destination change and transfer between incident allocations.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-03-09",
+      "decision": "duplicate",
+      "rationale": "The transfer register moves the same unopened CH-18 box between budgets, and both holders submit its original supplier invoice.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-05-11",
+      "decision": "distinct",
+      "rationale": "BE-3 and BW-4 are independently authorized hires for separate numbered cubicles with different camp placement records.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-12-05",
+      "decision": "duplicate",
+      "rationale": "The misspelled and checked entries cite the same HT-P3 order and reel number for one delivered cable reel.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-07",
+      "decision": "duplicate",
+      "rationale": "WL-22 issued one bill, and both requests repeat its goods charge with one additionally including the bottle deposit.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-11",
+      "decision": "distinct",
+      "rationale": "TL-3 and TR-4 rent distinct serial-numbered pumps under separate contracts for simultaneous work at two culverts.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-10-16",
+      "decision": "distinct",
+      "rationale": "OB-5 two-inch and OB-6 three-inch couplings have distinct receipts and installation logs for different outlet hoses.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-01",
+      "decision": "duplicate",
+      "rationale": "Both officers entered BG-4, the same contract renting six serial-numbered radios for one three-day period.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-12-14",
+      "decision": "distinct",
+      "rationale": "SA-P9 and SA-P10 provide differently rated packs for separate locations, supported by product markings and separate delivery notes.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-09",
+      "decision": "duplicate",
+      "rationale": "FW-31 covers one paid carton consignment redirected from Fir to Spruce, with both teams submitting that same bill.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-03-03",
+      "decision": "duplicate",
+      "rationale": "LA-24 supplies one ten-pad pack, and the product sheet and clinic use different terms for those same pads.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-14",
+      "decision": "distinct",
+      "rationale": "SB-10 and SB-11 buy different-band sets for incompatible team systems, with separate serial inventories and approvals.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-02-02",
+      "decision": "duplicate",
+      "rationale": "Both requests cite the HER-28 four-cell kit that the equipment log records fitted in one repair session.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-02-18",
+      "decision": "distinct",
+      "rationale": "OWL-2 combines separately authorized team orders, and each claim covers only its own non-overlapping multipack line.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-03-17",
+      "decision": "distinct",
+      "rationale": "Signed pharmacy slips establish MG-31 and MG-32 as two paid collections for separate kits.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-05-01",
+      "decision": "duplicate",
+      "rationale": "Both forms claim CC-9, the same four numbered cubicles hired for one weekend.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-01-20",
+      "decision": "ambiguous",
+      "rationale": "The unsigned notes have no quantities, orders, receipts, references, delivery dates, or surviving fulfillment record to distinguish a reentry from a second top-up.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-04-17",
+      "decision": "distinct",
+      "rationale": "The depot statement records SD-5 and SD-6 as separate paid collections with different vehicle pickup times.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-08-17",
+      "decision": "distinct",
+      "rationale": "The signed store book records PV-S2 and PV-S3 as separate paid cord coils issued to different construction teams.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-07-13",
+      "decision": "distinct",
+      "rationale": "MT-R4 rents the mast while MT-R5 separately pays an appointed inspector who issued a safety report.",
+      "confidence": 0.99
+    },
+    {
+      "caseId": "pair-12-08",
+      "decision": "duplicate",
+      "rationale": "The commissioning sheet ties both descriptions to the sole SG-11 socket box purchase despite one form missing receipt and amount.",
+      "confidence": 0.99
+    }
+  ]
+}

@@ -1,0 +1,1766 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "waylatch-fictional-purchase-pairs-v1",
+  "cases": [
+    {
+      "id": "pair-11-19",
+      "scenario": "SV-41 was one completed journey. The travel lead's offline form synchronized thirteen days after the dispatcher entry, with no second trip under that booking.",
+      "left": {
+        "id": "pair-11-19-a",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Summitview passenger run SV-41, dispatcher form",
+        "amountCents": 24200,
+        "receiptDigest": "c553875914d5e780c19b727a417108f9f820ff762de2d1bd996a694ee46844e6",
+        "transactionReference": "fictional-sale-pair-11-19",
+        "createdAt": "2026-06-30T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-11-19-b",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Summitview passenger run SV-41, delayed travel form",
+        "amountCents": 24200,
+        "receiptDigest": "c553875914d5e780c19b727a417108f9f820ff762de2d1bd996a694ee46844e6",
+        "transactionReference": "fictional-sale-pair-11-19",
+        "createdAt": "2026-07-13T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-03-14",
+      "scenario": "AZ-9 supplies sterile pads for patients; AZ-10 supplies teaching gauze for mannequin practice. The educator and clinic nurse each received their distinct order.",
+      "left": {
+        "id": "pair-03-14-a",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Sterile wound pads for Azalea treatment room",
+        "amountCents": 9600,
+        "receiptDigest": "3db35b6fb434b62ffe298ccc0a19b77e54f0f7f96ef96ae07c034206dd1fc413",
+        "transactionReference": "fictional-sale-pair-03-14-a",
+        "createdAt": "2026-04-30T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-03-14-b",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Non-sterile gauze for Azalea demonstration class",
+        "amountCents": 9600,
+        "receiptDigest": "d1db2107acc38bca440453f3f5988d52f18d68a466731a5113673039d5c4d2ca",
+        "transactionReference": "fictional-sale-pair-03-14-b",
+        "createdAt": "2026-04-30T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-05-14",
+      "scenario": "PW-2 supplies toilet rolls and PW-3 supplies dispenser hand towels. Each fits a different fixture and was independently ordered and delivered.",
+      "left": {
+        "id": "pair-05-14-a",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Paper toilet rolls for Pewter dormitory",
+        "amountCents": 13000,
+        "receiptDigest": "c3a1d65f62ca702116ec031c16805bc867901429bb7aadf663537dd524383645",
+        "transactionReference": "fictional-sale-pair-05-14-a",
+        "createdAt": "2026-05-14T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-05-14-b",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Paper hand-drying rolls for Pewter dormitory",
+        "amountCents": 13000,
+        "receiptDigest": "db84a2732ee41969c30bb6d79bfe4a13e52b1fa2660373a85d3579245df30f6b",
+        "transactionReference": "fictional-sale-pair-05-14-b",
+        "createdAt": "2026-05-14T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-02",
+      "scenario": "Birch's tanker log lists one 800-litre fill under hire order BT-63. The volunteer called it a tank refill; the finance clerk used the tanker invoice wording.",
+      "left": {
+        "id": "pair-01-02-a",
+        "incident": "fictional-potable-water-response",
+        "description": "Refill the drinking-water tank beside the Birch registration tent",
+        "amountCents": 3800,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-04T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-02-b",
+        "incident": "fictional-potable-water-response",
+        "description": "Potable tanker delivery for the registration point at Birch",
+        "amountCents": 3800,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-04T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-09",
+      "scenario": "The same purchased radio set was transferred between incident allocations. Both teams later requested reimbursement for the ST-11 supplier invoice; no second set was delivered.",
+      "left": {
+        "id": "pair-07-09-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Stoat radios ST-11 assigned to search command",
+        "amountCents": 15400,
+        "receiptDigest": "cbca43707579257c69ee05c2d093b0994006b190bfdfaacd53202193c9fa1b77",
+        "transactionReference": "fictional-sale-pair-07-09",
+        "createdAt": "2026-05-23T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-09-b",
+        "incident": "fictional-radio-communications-recovery",
+        "description": "ST-11 radios reassigned to recovery command",
+        "amountCents": 15400,
+        "receiptDigest": "cbca43707579257c69ee05c2d093b0994006b190bfdfaacd53202193c9fa1b77",
+        "transactionReference": "fictional-sale-pair-07-09",
+        "createdAt": "2026-05-23T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-16",
+      "scenario": "Receipts RS-12 and RS-13 list separate purchases: one for 36 small bottles and one for 18 large bottles. Both are supported by independent pickup signatures.",
+      "left": {
+        "id": "pair-01-16-a",
+        "incident": "fictional-potable-water-response",
+        "description": "Rose shelter drinking-water bottle order RS-12",
+        "amountCents": 6600,
+        "receiptDigest": "8f2c557389171809fd7d96568ea15e6d1a723b44254fd3e0eb92957e6c4640a6",
+        "transactionReference": "fictional-sale-pair-01-16-a",
+        "createdAt": "2026-04-18T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-16-b",
+        "incident": "fictional-potable-water-response",
+        "description": "Rose shelter drinking-water bottle order RS-13",
+        "amountCents": 7700,
+        "receiptDigest": "dab72dc39b63e23e37b1039365ab4990285b13ee7a10759aec8e358b28b81238",
+        "transactionReference": "fictional-sale-pair-01-16-b",
+        "createdAt": "2026-04-18T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-09-08",
+      "scenario": "The cook's entry omits amount and receipt. The kitchen's signed receiving sheet identifies DB-5 as one delivery, and both forms reference its sale number.",
+      "left": {
+        "id": "pair-09-08-a",
+        "incident": null,
+        "description": "Beans for Daybreak kitchen, delivery DB-5",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-05T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-09-08-b",
+        "incident": "fictional-bulk-meals-response",
+        "description": "DB-5 canned beans for Daybreak meals",
+        "amountCents": 18600,
+        "receiptDigest": "efd3bbdd95828d34be87b628e78351d2619c74ebca111243df631f26531dccb1",
+        "transactionReference": null,
+        "createdAt": "2026-06-05T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-06-17",
+      "scenario": "The forms lack amounts and attachments. The vendor's retained sales book distinguishes SPN-6 and SPN-7 as separate collected packs for two outreach teams.",
+      "left": {
+        "id": "pair-06-17-a",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Infant cup purchase for Spinel desk SPN-6",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-24T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-06-17-b",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Infant cup purchase for Spinel desk SPN-7",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-30T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-02-05",
+      "scenario": "The misspelled mobile form and cleaned transcription both attach to the two serial-numbered cells on KS-6. No other pair was bought.",
+      "left": {
+        "id": "pair-02-05-a",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Rechargble torch batery pair Kestrel KS-6",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-14T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-02-05-b",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Pair of rechargeable flashlight batteries for Kestrel, KS-6",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-14T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-06-03",
+      "scenario": "TP-22 lists twelve silicone teats, also sold as bottle nipples. Both descriptions cite the same supplier product code and single delivered pack.",
+      "left": {
+        "id": "pair-06-03-a",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Infant feeding teats for Topaz family station",
+        "amountCents": 12500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-10T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-06-03-b",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Replacement baby-bottle nipples for Topaz station",
+        "amountCents": 12500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-10T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-16",
+      "scenario": "SN-1 supplies sand anchors and SN-2 supplies ground stakes for different soil conditions. Separate receipts and deployment sheets document both purchases.",
+      "left": {
+        "id": "pair-08-16-a",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Tent anchor purchase for Snipe SN-1",
+        "amountCents": 18500,
+        "receiptDigest": "d27e47058a043858e760932ad7b2f143eb6a7b72867b622ade21e0ba804abd37",
+        "transactionReference": "fictional-sale-pair-08-16-a",
+        "createdAt": "2026-06-06T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-16-b",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Tent anchor purchase for Snipe SN-2",
+        "amountCents": 19600,
+        "receiptDigest": "a93daac54a2d888794a7b7cf3bdacbd04c7e654ad3bd241cdfaf029107553ae1",
+        "transactionReference": "fictional-sale-pair-08-16-b",
+        "createdAt": "2026-06-06T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-04",
+      "scenario": "PL-S4 is the one two-sheet sale. The foreman's abbreviation is expanded using its invoice dimensions and material specification.",
+      "left": {
+        "id": "pair-08-04-a",
+        "incident": "fictional-shelter-structures-response",
+        "description": "PE tarp 6x8m x2, Pelican yard, PL-S4",
+        "amountCents": 16100,
+        "receiptDigest": null,
+        "transactionReference": "fictional-sale-pair-08-04",
+        "createdAt": "2026-05-25T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-04-b",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Two six-by-eight-metre polyethylene tarpaulins for Pelican yard, PL-S4",
+        "amountCents": 16100,
+        "receiptDigest": null,
+        "transactionReference": "fictional-sale-pair-08-04",
+        "createdAt": "2026-05-25T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-11-04",
+      "scenario": "RG-9 is the only sixteen-seat booking in the dispatch log. The coordinator expands the abbreviated passenger note from that trip's invoice.",
+      "left": {
+        "id": "pair-11-04-a",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Pax shuttle 16 seats, Ridge, RG-9",
+        "amountCents": 21200,
+        "receiptDigest": null,
+        "transactionReference": "fictional-sale-pair-11-04",
+        "createdAt": "2026-06-15T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-11-04-b",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Sixteen-seat passenger shuttle for Ridge relocation, RG-9",
+        "amountCents": 21200,
+        "receiptDigest": null,
+        "transactionReference": "fictional-sale-pair-11-04",
+        "createdAt": "2026-06-15T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-02-17",
+      "scenario": "Receipt files and transaction fields are absent. A signed stock sheet lists distinct purchases SL-3 and SL-4 on different dates with separate pack counts.",
+      "left": {
+        "id": "pair-02-17-a",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Replacement torch cells for Skylark locker SL-3",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-26T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-02-17-b",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Replacement torch cells for Skylark locker SL-4",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-02T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-11-12",
+      "scenario": "ML-T1 buys a completed passenger run and ML-T2 buys printed route leaflets. Each independently fulfilled order costs 6,400 cents.",
+      "left": {
+        "id": "pair-11-12-a",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Minibus transfer for Midland group, ML-T1",
+        "amountCents": 6400,
+        "receiptDigest": "ff79f66f8c01a7b1225ebf996c118ae29e7904713863ef02f436973047a7e71a",
+        "transactionReference": "fictional-sale-pair-11-12-a",
+        "createdAt": "2026-06-23T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-11-12-b",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Printed transport route maps for Midland, ML-T2",
+        "amountCents": 6400,
+        "receiptDigest": "36ff971010a06d41e7688ba9d5ed2184ffbd1d1ff00f385f47005d79d02aa2d7",
+        "transactionReference": "fictional-sale-pair-11-12-b",
+        "createdAt": "2026-06-23T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-06",
+      "scenario": "ST-P19 rents one unit. The contractor's PDF contract and the crew's scanned signed issue sheet have different hashes but retain the same machine serial and dates.",
+      "left": {
+        "id": "pair-10-06-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump hire for Stream culvert",
+        "amountCents": 19900,
+        "receiptDigest": "ca40802aba6a87dc33362c8f1076952f885252614452076f5ec33fc8758ecfa8",
+        "transactionReference": null,
+        "createdAt": "2026-06-10T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-06-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Stream floodwater pump rental",
+        "amountCents": 19900,
+        "receiptDigest": "dfd2d9c85bd4cec5b6fce3340cf6b566fe4db2f3c9cd4473622f6606ac8c67fc",
+        "transactionReference": null,
+        "createdAt": "2026-06-10T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-06-02",
+      "scenario": "JP-14 supplies one case of ready-to-feed formula. Both applicants refer to its same carton count, batch code, and family-room delivery signature.",
+      "left": {
+        "id": "pair-06-02-a",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Ready-to-use formula cartons for Jasper's infant care desk",
+        "amountCents": 12300,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-09T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-06-02-b",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Premixed infant milk feeds for babies at Jasper desk",
+        "amountCents": 12300,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-09T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-09-13",
+      "scenario": "ME-21 buys meals already portioned into trays. ME-22 separately buys empty packaging for the kitchen's later cooking run. Both orders have distinct receiving records.",
+      "left": {
+        "id": "pair-09-13-a",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Prepared meal trays for Meteor shift",
+        "amountCents": 19600,
+        "receiptDigest": "9ec089764ce641a4bd6e4c242e54a662305352bc4801eb0214df19fc326b136f",
+        "transactionReference": "fictional-sale-pair-09-13-a",
+        "createdAt": "2026-06-10T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-09-13-b",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Empty meal trays for Meteor packing team",
+        "amountCents": 20700,
+        "receiptDigest": "8c6986b25807f4792e44fce469c917120b20011bf77332c2a8a015cdf41d9270",
+        "transactionReference": "fictional-sale-pair-09-13-b",
+        "createdAt": "2026-06-10T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-12-02",
+      "scenario": "BC-14 supplies one pair of portable boards. Both forms refer to the same equipment serials, order, and electrician's intake signature.",
+      "left": {
+        "id": "pair-12-02-a",
+        "incident": "fictional-power-distribution-response",
+        "description": "Portable outlet boxes to distribute power at Bracken desk",
+        "amountCents": 22500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-20T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-12-02-b",
+        "incident": "fictional-power-distribution-response",
+        "description": "Temporary mains distribution boards for Bracken operations",
+        "amountCents": 22500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-20T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-09-19",
+      "scenario": "ST-M9 delivered two sacks once. The cook's paper ledger was captured sixteen days after purchasing's entry; no new goods arrived under ST-M9.",
+      "left": {
+        "id": "pair-09-19-a",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Rice sacks for Satellite kitchen ST-M9, first request",
+        "amountCents": 20800,
+        "receiptDigest": "8e762890b9a131c15dab3f319d585a71880b1f4ebac6bca65b9916408910305e",
+        "transactionReference": "fictional-sale-pair-09-19",
+        "createdAt": "2026-06-16T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-09-19-b",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Satellite rice sacks ST-M9, delayed ledger capture",
+        "amountCents": 20800,
+        "receiptDigest": "8e762890b9a131c15dab3f319d585a71880b1f4ebac6bca65b9916408910305e",
+        "transactionReference": "fictional-sale-pair-09-19",
+        "createdAt": "2026-07-02T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-10",
+      "scenario": "FR-21 hired units for a Monday exercise and FR-22 hired units for a Friday deployment. Separate contracts, hire periods, and return signatures support both.",
+      "left": {
+        "id": "pair-07-10-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Handheld-radio hire for Ferret site",
+        "amountCents": 15600,
+        "receiptDigest": "88b6727e78eec19fe9a16e10178e4ad71a8d2f082473e8f5458037907ab1b4f6",
+        "transactionReference": "fictional-sale-pair-07-10-a",
+        "createdAt": "2026-05-24T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-10-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "Handheld-radio hire for Ferret site",
+        "amountCents": 15600,
+        "receiptDigest": "da185e8b9e4216765d77257389792da0c8a812fbbf9388c74942c87fae58ea6c",
+        "transactionReference": "fictional-sale-pair-07-10-b",
+        "createdAt": "2026-05-24T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-20",
+      "scenario": "Two notes lack size, contractor, order reference, hire period, receipt, and installation record. Multiple covers were discussed but the site log does not show what was actually acquired.",
+      "left": {
+        "id": "pair-08-20-a",
+        "incident": null,
+        "description": "Temporary cover for Dotterel yard",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-10T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-20-b",
+        "incident": null,
+        "description": "Shelter canopy for Dotterel yard",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-10T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-06-06",
+      "scenario": "SA-40 is one tablet box sale. The tablet receipt photographed under room lighting and the supplier's electronic duplicate differ in bytes but share SA-40 and its product batch.",
+      "left": {
+        "id": "pair-06-06-a",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Sterilizing tablets for Sapphire feeding room",
+        "amountCents": 13100,
+        "receiptDigest": "c65a9da8c9733a3f0da21ec551ba7726dd1caf91b2fd2543f225497f2ce9efcb",
+        "transactionReference": null,
+        "createdAt": "2026-05-13T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-06-06-b",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Sapphire infant-bottle sterilization tablet supply",
+        "amountCents": 13100,
+        "receiptDigest": "21a2f91d0dd29245b4602ccfe0319f9af0bcd1e4018699945cc9db32802e46fc",
+        "transactionReference": null,
+        "createdAt": "2026-05-13T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-15",
+      "scenario": "ER-5 covered days one to three. A separately signed extension ER-6 pays for days four to six after the original hire term, with no overlapping days claimed.",
+      "left": {
+        "id": "pair-07-15-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Initial repeater rental for Ermine ridge",
+        "amountCents": 16600,
+        "receiptDigest": "33abb9fcec4bdb67d0d71809c93d1bc29558eff35ee5f4b95c23bea7fe3bda99",
+        "transactionReference": "fictional-sale-pair-07-15-a",
+        "createdAt": "2026-05-29T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-15-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "Renewed repeater rental for Ermine ridge",
+        "amountCents": 16600,
+        "receiptDigest": "d03060c0baf97dad9f25716f3ff5e0beac76674d9a96901fdaf36bd618335830",
+        "transactionReference": "fictional-sale-pair-07-15-b",
+        "createdAt": "2026-06-02T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-04-20",
+      "scenario": "Both entries omit litres, supplier, machine number, order reference, and receipt. Bay operated several generators and the incomplete shift logs do not establish how many supplies occurred.",
+      "left": {
+        "id": "pair-04-20-a",
+        "incident": null,
+        "description": "Fuel for Bay generator",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-13T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-04-20-b",
+        "incident": null,
+        "description": "Generator diesel for Bay site",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-13T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-12-12",
+      "scenario": "WF-P1 buys reels and WF-P2 buys ramped cable covers. Each separately delivered order costs 10,000 cents.",
+      "left": {
+        "id": "pair-12-12-a",
+        "incident": "fictional-power-distribution-response",
+        "description": "Cable reels for Willowfield store, WF-P1",
+        "amountCents": 10000,
+        "receiptDigest": "8651479234b5aa596fe9da4a1ff7e1b6cc1e078d36abd6628fdf75ff92ac0930",
+        "transactionReference": "fictional-sale-pair-12-12-a",
+        "createdAt": "2026-06-30T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-12-12-b",
+        "incident": "fictional-power-distribution-response",
+        "description": "Cable floor protectors for Willowfield store, WF-P2",
+        "amountCents": 10000,
+        "receiptDigest": "61113808c76fce3db8abb632e7f937e40aeeeea0ac1078957e6fa59868bf9bd0",
+        "transactionReference": "fictional-sale-pair-12-12-b",
+        "createdAt": "2026-06-30T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-03",
+      "scenario": "EF-12 supplies one ten-line pack. The supplier calls them guy ropes and the assembly crew calls those same tension lines guy lines.",
+      "left": {
+        "id": "pair-08-03-a",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Guy ropes for Eaglefield shelter tents",
+        "amountCents": 15900,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-24T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-03-b",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Tent guy lines for Eaglefield temporary shelters",
+        "amountCents": 15900,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-24T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-18",
+      "scenario": "RH-7 groups two independent rentals for different buildings. Each request identifies only its own serial-numbered unit and contract charge.",
+      "left": {
+        "id": "pair-10-18-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Reservoir pump hire RV-P1 on invoice RH-7",
+        "amountCents": 22300,
+        "receiptDigest": "94efb33323be408c620b1847ea18251350d068998759f47c960987ef354074e6",
+        "transactionReference": "fictional-sale-pair-10-18-a",
+        "createdAt": "2026-06-22T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-18-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Reservoir pump hire RV-P2 on invoice RH-7",
+        "amountCents": 23600,
+        "receiptDigest": "94efb33323be408c620b1847ea18251350d068998759f47c960987ef354074e6",
+        "transactionReference": "fictional-sale-pair-10-18-b",
+        "createdAt": "2026-06-22T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-01",
+      "scenario": "BK-4 rents pump serial P-441 for one weekend. The cellar lead and site dispatcher both entered its same contractor invoice.",
+      "left": {
+        "id": "pair-10-01-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "One submersible pump hired for Brook cellar, BK-4",
+        "amountCents": 18900,
+        "receiptDigest": "7916cb9455d25bdff0ca32596343641b0ffa1e18979c904e26b571cd3bf7a15b",
+        "transactionReference": "fictional-sale-pair-10-01",
+        "createdAt": "2026-06-05T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-01-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "One submersible pump hired for Brook cellar, BK-4",
+        "amountCents": 18900,
+        "receiptDigest": "7916cb9455d25bdff0ca32596343641b0ffa1e18979c904e26b571cd3bf7a15b",
+        "transactionReference": "fictional-sale-pair-10-01",
+        "createdAt": "2026-06-05T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-06-14",
+      "scenario": "AG-4 and AG-5 are independently approved products for different eligible age groups. Separate batch records and delivered tin counts support both.",
+      "left": {
+        "id": "pair-06-14-a",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Stage-one infant formula for Agate intake desk",
+        "amountCents": 14700,
+        "receiptDigest": "8041f0e44316bc6f13050ce78fd5dfaaa8baff25bd24e1a7749e22a8062c00c4",
+        "transactionReference": "fictional-sale-pair-06-14-a",
+        "createdAt": "2026-05-21T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-06-14-b",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Stage-two follow-on formula for Agate intake desk",
+        "amountCents": 14700,
+        "receiptDigest": "fdf7e3dd1bf8493ad82c61f24f97efb1a679294d6b7684d8b3fcd1a432107b21",
+        "transactionReference": "fictional-sale-pair-06-14-b",
+        "createdAt": "2026-05-21T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-15",
+      "scenario": "HW-2 pays the initial period and HW-3 pays a separately authorized extension. Neither claim includes days from the other's period, and the contractor separately bills both services.",
+      "left": {
+        "id": "pair-10-15-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump hire at Headwater for days one to two",
+        "amountCents": 21700,
+        "receiptDigest": "d8a8bbeeff081257a3b6aac74d10b9b112ff722322ff72b3c18478432a5e0f0a",
+        "transactionReference": "fictional-sale-pair-10-15-a",
+        "createdAt": "2026-06-19T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-15-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump hire extension at Headwater for days three to four",
+        "amountCents": 21700,
+        "receiptDigest": "5e5df22e52063afba68553f0aa51a11b4506a482aeef75c6826d0eea8a548707",
+        "transactionReference": "fictional-sale-pair-10-15-b",
+        "createdAt": "2026-06-23T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-10",
+      "scenario": "MD-P11 hires a pump for an initial weekend. MD-P12 independently hires another unit after a later storm; distinct dates, serials, and return sheets support both.",
+      "left": {
+        "id": "pair-10-10-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump rental for Meander cellar",
+        "amountCents": 20700,
+        "receiptDigest": "48b659b0e9ecfa1a65c0bf5b8cd3807a6b28e4d579fc8ed384fdcb196f30fea1",
+        "transactionReference": "fictional-sale-pair-10-10-a",
+        "createdAt": "2026-06-14T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-10-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump rental for Meander cellar",
+        "amountCents": 20700,
+        "receiptDigest": "93dcb26f6a2f5686ada5c6a3898a2df88cf1d68bac9dc83f47dfcf26eaef4cf7",
+        "transactionReference": "fictional-sale-pair-10-10-b",
+        "createdAt": "2026-06-14T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-03-18",
+      "scenario": "JS-4 contains two independently ordered items, JA-1 for the walk-in clinic and JA-2 for the mobile clinic. Each reimbursement claim covers its own line only.",
+      "left": {
+        "id": "pair-03-18-a",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Jasmine dressing order JA-1, consolidated receipt JS-4",
+        "amountCents": 10400,
+        "receiptDigest": "0c0093b2c73dfd9441da68f64bb49d2c02d9bb0a113b14ae1a5d6edcf1d8a317",
+        "transactionReference": "fictional-sale-pair-03-18-a",
+        "createdAt": "2026-05-04T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-03-18-b",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Jasmine dressing order JA-2, consolidated receipt JS-4",
+        "amountCents": 11700,
+        "receiptDigest": "0c0093b2c73dfd9441da68f64bb49d2c02d9bb0a113b14ae1a5d6edcf1d8a317",
+        "transactionReference": "fictional-sale-pair-03-18-b",
+        "createdAt": "2026-05-04T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-02-13",
+      "scenario": "MT-30 delivers new packs. MT-31 pays a recycler to remove spent cells the following day. The two services have separate orders.",
+      "left": {
+        "id": "pair-02-13-a",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Lighting battery packs for Martin tunnel team",
+        "amountCents": 7700,
+        "receiptDigest": "37139a95714b84ff7e31bab6236466f2d622c24de23584ba896ea08a653386de",
+        "transactionReference": "fictional-sale-pair-02-13-a",
+        "createdAt": "2026-04-22T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-02-13-b",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Battery recycling collection from Martin tunnel team",
+        "amountCents": 8800,
+        "receiptDigest": "fe916db01bed3bff308a7142050cadb1d751a5bff48e85e113624c6f18410050",
+        "transactionReference": "fictional-sale-pair-02-13-b",
+        "createdAt": "2026-04-22T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-12-10",
+      "scenario": "NT-30 supplies cables for the first room and NT-31 supplies additional cables after expansion. Distinct paid deliveries and installed reel numbers support both.",
+      "left": {
+        "id": "pair-12-10-a",
+        "incident": "fictional-power-distribution-response",
+        "description": "Extension cables for Nettles command",
+        "amountCents": 24100,
+        "receiptDigest": "3144a227ca170d9105ff74acaaefbdd912a4ec8430db6bbef3e241ea5e679c79",
+        "transactionReference": "fictional-sale-pair-12-10-a",
+        "createdAt": "2026-06-28T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-12-10-b",
+        "incident": "fictional-power-distribution-response",
+        "description": "Extension cables for Nettles command",
+        "amountCents": 24100,
+        "receiptDigest": "c81bc1ae3d98cd1078e2f050b8ca6a6edb91b87c0e1681ad23d062de5f08f3ef",
+        "transactionReference": "fictional-sale-pair-12-10-b",
+        "createdAt": "2026-06-28T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-11-03",
+      "scenario": "MS-T2 books one accessible vehicle whose supplier calls it a lift-equipped passenger van. Both forms cite its same passenger list and booking.",
+      "left": {
+        "id": "pair-11-03-a",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Wheelchair-accessible minibus for Mesa transfer",
+        "amountCents": 21000,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-14T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-11-03-b",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Lift-equipped passenger van for Mesa relocation trip",
+        "amountCents": 21000,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-14T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-05-06",
+      "scenario": "Cleaning job IRN-25 was performed once. The contractor emailed a PDF and the caretaker photographed the signed job sheet; both identify the same visit despite different file hashes.",
+      "left": {
+        "id": "pair-05-06-a",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Portable toilet cleaning at Iron camp",
+        "amountCents": 11400,
+        "receiptDigest": "699c1ce07c3efaa591768e501ac90a416ac92147f2bc4c19dd5e48389429f6d1",
+        "transactionReference": null,
+        "createdAt": "2026-05-06T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-05-06-b",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Iron temporary latrine cleaning service",
+        "amountCents": 11400,
+        "receiptDigest": "b1bed64d1a05ce266059b34c3151cf5b927c71426bb443a91065cb0f8807b234",
+        "transactionReference": null,
+        "createdAt": "2026-05-06T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-12",
+      "scenario": "GB-1 buys weather sheets; GB-2 pays a separate crew to erect previously owned tents. Each fulfilled order costs 12,000 cents.",
+      "left": {
+        "id": "pair-08-12-a",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Tarpaulin sheets for Grebe camp, GB-1",
+        "amountCents": 12000,
+        "receiptDigest": "1600a11a43d11117190684ab32f5e5c1f950478e709a0762e49cc93264097414",
+        "transactionReference": "fictional-sale-pair-08-12-a",
+        "createdAt": "2026-06-02T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-12-b",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Shelter assembly labor for Grebe camp, GB-2",
+        "amountCents": 12000,
+        "receiptDigest": "bb4aa798ef2a1e71b07189bc8dcc34fbb7da5abeec35aa00233d7042833b859a",
+        "transactionReference": "fictional-sale-pair-08-12-b",
+        "createdAt": "2026-06-02T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-06-04",
+      "scenario": "The family worker abbreviates ready-to-feed as RTF. The coordinator expands that note from the sole OP-3 receipt and pickup signature.",
+      "left": {
+        "id": "pair-06-04-a",
+        "incident": "fictional-infant-feeding-response",
+        "description": "RTF formula 12 x 200ml, Opal room, OP-3",
+        "amountCents": 12700,
+        "receiptDigest": null,
+        "transactionReference": "fictional-sale-pair-06-04",
+        "createdAt": "2026-05-11T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-06-04-b",
+        "incident": "fictional-infant-feeding-response",
+        "description": "Twelve 200-millilitre ready-to-feed infant formula cartons, Opal room, OP-3",
+        "amountCents": 12700,
+        "receiptDigest": null,
+        "transactionReference": "fictional-sale-pair-06-04",
+        "createdAt": "2026-05-11T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-17",
+      "scenario": "Both forms omit receipt files and amounts. Alder's supplier ledger records two separate cash collections under AL-7 and AL-8, with different stock quantities.",
+      "left": {
+        "id": "pair-01-17-a",
+        "incident": "fictional-potable-water-response",
+        "description": "Potable water picked up for Alder site, order AL-7",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-19T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-17-b",
+        "incident": "fictional-potable-water-response",
+        "description": "Potable water picked up for Alder site, order AL-8",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-25T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-06",
+      "scenario": "SK-18 provides one frame marquee. Its phone-photographed hire contract and contractor PDF have different file digests but the same structure number and term.",
+      "left": {
+        "id": "pair-08-06-a",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Marquee hire for Stork reception area",
+        "amountCents": 16500,
+        "receiptDigest": "01824c41d0728d40007fbde2a4555b86933f35ff26557109fb60a5bebd9c3652",
+        "transactionReference": null,
+        "createdAt": "2026-05-27T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-06-b",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Stork covered reception marquee rental",
+        "amountCents": 16500,
+        "receiptDigest": "f6d1eb29db5fd2e07a18139779634cdc6b924832480ff4cab642eae2e00fc273",
+        "transactionReference": null,
+        "createdAt": "2026-05-27T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-04-06",
+      "scenario": "DK-61 is one tanker visit. The delivery driver's thermal receipt photo and finance's invoice scan differ in digest but carry DK-61 and the same meter reading.",
+      "left": {
+        "id": "pair-04-06-a",
+        "incident": "fictional-generator-fuel-response",
+        "description": "Diesel tanker top-up for Dock emergency power",
+        "amountCents": 9700,
+        "receiptDigest": "309a1c2198686adbc1058c0f3ea1643554341ee64764960078028a1f1e042bd5",
+        "transactionReference": null,
+        "createdAt": "2026-04-29T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-04-06-b",
+        "incident": "fictional-generator-fuel-response",
+        "description": "Dock generator tank diesel refill",
+        "amountCents": 9700,
+        "receiptDigest": "224d72c28e58ac5e6e363d9bd715d74116e4a3af3c2f3109d2ebd6d9694f0ca0",
+        "transactionReference": null,
+        "createdAt": "2026-04-29T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-03-10",
+      "scenario": "HT-60 and HT-61 are separate replenishments after two treatment sessions. Each receipt covers a new delivered box, though both forms use identical text.",
+      "left": {
+        "id": "pair-03-10-a",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Sterile dressings for Hawthorn station",
+        "amountCents": 8800,
+        "receiptDigest": "f11606ad8668b31710a0a4de878e94c1ebfd36598019274a940e14aca7a47dd4",
+        "transactionReference": "fictional-sale-pair-03-10-a",
+        "createdAt": "2026-04-26T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-03-10-b",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Sterile dressings for Hawthorn station",
+        "amountCents": 8800,
+        "receiptDigest": "6506311525a16e8c7cf94c49590be61b10c7c5d6b0d6fbbedb67db63170de97c",
+        "transactionReference": "fictional-sale-pair-03-10-b",
+        "createdAt": "2026-04-26T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-05-07",
+      "scenario": "ALU-18 covers one hire at 24,000 cents plus a 3,000-cent collection fee. The two requesters entered gross and hire-only amounts from that same contract.",
+      "left": {
+        "id": "pair-05-07-a",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Aluminium camp washroom hire, invoice total",
+        "amountCents": 27000,
+        "receiptDigest": "e1fe2c4b01813f7440fd4f5c694ccdcadc7f29fdb3cc3dd0ee945d0d16d2a7b3",
+        "transactionReference": null,
+        "createdAt": "2026-05-07T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-05-07-b",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Washroom hire at Aluminium camp, hire charge only",
+        "amountCents": 24000,
+        "receiptDigest": "a960cd671410775c6ffe99b40913f4639a70e5191742d36ec48357a693ae50fb",
+        "transactionReference": null,
+        "createdAt": "2026-05-07T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-05",
+      "scenario": "Oak's pickup book has only collection OW-77 for this quantity. A rushed phone entry and the coordinator's transcription cite that collection.",
+      "left": {
+        "id": "pair-01-05-a",
+        "incident": "fictional-potable-water-response",
+        "description": "Drnking wter 30 botles for Oak volunteers; collect OW-77",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-07T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-05-b",
+        "incident": "fictional-potable-water-response",
+        "description": "Drinking water, thirty bottles collected for the Oak volunteer station, OW-77",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-07T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-05-02",
+      "scenario": "The sanitation contractor's log records one visit, job TN-14. The camp coordinator and waste officer each described its single tank-emptying service.",
+      "left": {
+        "id": "pair-05-02-a",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Empty the waste tanks under Tin camp's portable toilets",
+        "amountCents": 10600,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-02T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-05-02-b",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Pump-out service for Tin's temporary latrine tanks",
+        "amountCents": 10600,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-02T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-19",
+      "scenario": "The consignment DS-15 arrived once on 3 April. A damaged tablet synchronized its form eleven days after the paper entry, with no second supplier shipment.",
+      "left": {
+        "id": "pair-01-19-a",
+        "incident": "fictional-potable-water-response",
+        "description": "Sealed drinking-water shipment DS-15 for Dogwood shelter",
+        "amountCents": 7200,
+        "receiptDigest": "ed73c57b4aa2149c2fe244497d1ea2e41f077995b732bb06a9aae00a4249b244",
+        "transactionReference": "fictional-sale-pair-01-19",
+        "createdAt": "2026-04-21T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-19-b",
+        "incident": "fictional-potable-water-response",
+        "description": "Dogwood water cartons DS-15, delayed offline entry",
+        "amountCents": 7200,
+        "receiptDigest": "ed73c57b4aa2149c2fe244497d1ea2e41f077995b732bb06a9aae00a4249b244",
+        "transactionReference": "fictional-sale-pair-01-19",
+        "createdAt": "2026-05-02T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-05",
+      "scenario": "LX-2 delivered one pack of six earpieces. The hurried handset entry and corrected coordinator version both reference that pack.",
+      "left": {
+        "id": "pair-07-05-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Walkie talky earpeices for Lynx team LX-2",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-19T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-05-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "Walkie-talkie earpieces for Lynx team, LX-2",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-19T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-09-14",
+      "scenario": "OR-7 and OR-8 are separate products ordered for different diet groups. Ingredient labels, delivered quantities, and two supplier orders support both purchases.",
+      "left": {
+        "id": "pair-09-14-a",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Gluten-free pasta for Orbit special-diet meals",
+        "amountCents": 19800,
+        "receiptDigest": "48cdf53a81c8ade757c1649eff83283c8eb504f587204b4ef238817e46eb636d",
+        "transactionReference": "fictional-sale-pair-09-14-a",
+        "createdAt": "2026-06-11T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-09-14-b",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Wheat pasta for Orbit general meals",
+        "amountCents": 19800,
+        "receiptDigest": "d492366aff2148083915564e8c7fb6a342e816ddee0a82cadcdd9664de4ca26e",
+        "transactionReference": "fictional-sale-pair-09-14-b",
+        "createdAt": "2026-06-11T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-16",
+      "scenario": "MR-1 and MR-2 are separate receipts for different connector types. The store and fitting sheets show each order supplied a different radio fleet.",
+      "left": {
+        "id": "pair-07-16-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Radio earpiece order for Muskrat MR-1",
+        "amountCents": 16800,
+        "receiptDigest": "2035e546fe555e129d1d9e30fb4ca502856bb8501c7ed08d9f94d75494732ce7",
+        "transactionReference": "fictional-sale-pair-07-16-a",
+        "createdAt": "2026-05-30T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-16-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "Radio earpiece order for Muskrat MR-2",
+        "amountCents": 17900,
+        "receiptDigest": "fc3f39476ddbc33a993b156fd7fb7f5534ad3a5ea61d4f48d52a550c283fe9d5",
+        "transactionReference": "fictional-sale-pair-07-16-b",
+        "createdAt": "2026-05-30T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-09-20",
+      "scenario": "Both entries omit item lists, quantities, supplier identity, order numbers, and receipts. The kitchen served multiple shifts and its receiving sheets are missing.",
+      "left": {
+        "id": "pair-09-20-a",
+        "incident": null,
+        "description": "Food stock for Asteroid kitchen",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-17T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-09-20-b",
+        "incident": null,
+        "description": "Meal ingredients for Asteroid kitchen",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-17T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-07",
+      "scenario": "SW-S2 bills 30,000 cents rental and 8,000 cents erection. One form excludes erection from its amount though both claim the same erected canopy period.",
+      "left": {
+        "id": "pair-08-07-a",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Swan canopy hire SW-S2, invoice including erection",
+        "amountCents": 38000,
+        "receiptDigest": "1f003d17e7f8f932f630e3b93c9fce0104b351c418975fddbb2205c30f246297",
+        "transactionReference": null,
+        "createdAt": "2026-05-28T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-07-b",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Canopy rental for Swan, SW-S2, equipment charge",
+        "amountCents": 30000,
+        "receiptDigest": "39e1f721e3649a48836612e3d346734c5ca72c14038af371b74226c7237c4fd5",
+        "transactionReference": null,
+        "createdAt": "2026-05-28T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-19",
+      "scenario": "WR-P31 supplied one hose coil. A restored phone backup uploaded its request eighteen days after the portal entry, without another coil shipment.",
+      "left": {
+        "id": "pair-10-19-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Flood outlet hose for Weir WR-P31, original form",
+        "amountCents": 22500,
+        "receiptDigest": "8a275e694be742d49ca05775c7591da33abb36be7ea52cae918040a5ed4bbdb6",
+        "transactionReference": "fictional-sale-pair-10-19",
+        "createdAt": "2026-06-23T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-19-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Weir outlet hose WR-P31, restored offline form",
+        "amountCents": 22500,
+        "receiptDigest": "8a275e694be742d49ca05775c7591da33abb36be7ea52cae918040a5ed4bbdb6",
+        "transactionReference": "fictional-sale-pair-10-19",
+        "createdAt": "2026-07-11T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-18",
+      "scenario": "DS-R2 combines independently contracted radios for two teams. Each request claims only its own units and rental period; the serial sets are disjoint.",
+      "left": {
+        "id": "pair-07-18-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Dormouse radio hire order DM-1 on statement DS-R2",
+        "amountCents": 17200,
+        "receiptDigest": "7fd0a84591ee56237ddf2a2f6956a300a511ba6c08193e5f4bb1f093a5fdeb2a",
+        "transactionReference": "fictional-sale-pair-07-18-a",
+        "createdAt": "2026-06-01T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-18-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "Dormouse radio hire order DM-2 on statement DS-R2",
+        "amountCents": 18500,
+        "receiptDigest": "7fd0a84591ee56237ddf2a2f6956a300a511ba6c08193e5f4bb1f093a5fdeb2a",
+        "transactionReference": "fictional-sale-pair-07-18-b",
+        "createdAt": "2026-06-01T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-12-07",
+      "scenario": "RS-P6 bills 17,000 cents cable and 3,000 cents connector fitting. One request excludes fitting, although both concern the same cut length and supplied connectors.",
+      "left": {
+        "id": "pair-12-07-a",
+        "incident": "fictional-power-distribution-response",
+        "description": "Rush cable order RS-P6 with connector fitting",
+        "amountCents": 20000,
+        "receiptDigest": "852dfd158343816456325341df02d6207b1eac1f2a442f9f7a7cb2dd74247385",
+        "transactionReference": null,
+        "createdAt": "2026-06-25T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-12-07-b",
+        "incident": "fictional-power-distribution-response",
+        "description": "Cable for Rush RS-P6, cable charge only",
+        "amountCents": 17000,
+        "receiptDigest": "7e5a5abe9ab45c00998fe7b22bcd6b3a54a7ea86eb5c5b910ea2adc4fe8d40b8",
+        "transactionReference": null,
+        "createdAt": "2026-06-25T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-09-01",
+      "scenario": "AK-17 supplied two twenty-kilogram sacks once. The cook entered a form after the purchaser had already submitted the same paid kitchen delivery.",
+      "left": {
+        "id": "pair-09-01-a",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Forty kilograms of rice for Aurora kitchen, AK-17",
+        "amountCents": 17200,
+        "receiptDigest": "fe37b6da51c23251f284ac3e4b3640e4bb4d45aa3892ed8759a5731d4e3b334a",
+        "transactionReference": "fictional-sale-pair-09-01",
+        "createdAt": "2026-05-29T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-09-01-b",
+        "incident": "fictional-bulk-meals-response",
+        "description": "Forty kilograms of rice for Aurora kitchen, AK-17",
+        "amountCents": 17200,
+        "receiptDigest": "fe37b6da51c23251f284ac3e4b3640e4bb4d45aa3892ed8759a5731d4e3b334a",
+        "transactionReference": "fictional-sale-pair-09-01",
+        "createdAt": "2026-05-29T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-14",
+      "scenario": "RM-9 and RM-10 rent differently rated units for separate tasks. Separate serials and contractor issue sheets record each machine's installation.",
+      "left": {
+        "id": "pair-10-14-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Clean-water transfer pump for Rivermouth store",
+        "amountCents": 21500,
+        "receiptDigest": "aaefaf3d0883be7e66adcd7c6316b5a4538721e0e5f3fe18a68d2dcaf8ebe921",
+        "transactionReference": "fictional-sale-pair-10-14-a",
+        "createdAt": "2026-06-18T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-14-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Dirty-water solids pump for Rivermouth cellar",
+        "amountCents": 21500,
+        "receiptDigest": "317a488d0fce2966dc3e1e75472a8c90b07027947155aa25747aad3a6a8ae41a",
+        "transactionReference": "fictional-sale-pair-10-14-b",
+        "createdAt": "2026-06-18T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-07",
+      "scenario": "RP-7 bills 22,000 cents hire and 4,000 cents transport. One request excludes transport although both cover the same unit and rental period.",
+      "left": {
+        "id": "pair-10-07-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Rapids pump RP-7, rental with delivery",
+        "amountCents": 26000,
+        "receiptDigest": "782a89929ade269c517d62c57565b998e4a691b68dc4e47af3dffac4a65eb859",
+        "transactionReference": null,
+        "createdAt": "2026-06-11T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-07-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Flood pump rental for Rapids RP-7, hire subtotal",
+        "amountCents": 22000,
+        "receiptDigest": "2fce21e7578742cb2445b68b9a4bd4162e546a4915d5f72e479174e88b023580",
+        "transactionReference": null,
+        "createdAt": "2026-06-11T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-05-13",
+      "scenario": "BR-30 buys brushes and detergent. BR-31 pays a separately booked inspection of the contractor's cleaning standard, with a signed report and no supplied materials.",
+      "left": {
+        "id": "pair-05-13-a",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Washroom cleaning supplies for Bronze camp",
+        "amountCents": 12800,
+        "receiptDigest": "5c67f3fd7938e282f1641b07b28f2e29a4e96f5b10ce3bdec413e5171defbd2a",
+        "transactionReference": "fictional-sale-pair-05-13-a",
+        "createdAt": "2026-05-13T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-05-13-b",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Washroom cleaning inspection for Bronze camp",
+        "amountCents": 13900,
+        "receiptDigest": "f1b7786e5fffa6349641d5f19f891e5000d5b4752818bf15831bb7a400c4b4a7",
+        "transactionReference": "fictional-sale-pair-05-13-b",
+        "createdAt": "2026-05-13T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-11-09",
+      "scenario": "Before departure the booking's destination changed and the trip moved to a new incident allocation. The operator still performed and billed only booking FH-15, entered by both teams.",
+      "left": {
+        "id": "pair-11-09-a",
+        "incident": "fictional-passenger-transport-response",
+        "description": "Foothill coach FH-15 assigned to evacuation incident",
+        "amountCents": 22200,
+        "receiptDigest": "ef864e2ddb07f04cf2247444ce277f2eb0a5a27e3c91716adb856b7335679c39",
+        "transactionReference": "fictional-sale-pair-11-09",
+        "createdAt": "2026-06-20T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-11-09-b",
+        "incident": "fictional-passenger-transport-recovery",
+        "description": "FH-15 coach reassigned to return-home incident",
+        "amountCents": 22200,
+        "receiptDigest": "ef864e2ddb07f04cf2247444ce277f2eb0a5a27e3c91716adb856b7335679c39",
+        "transactionReference": "fictional-sale-pair-11-09",
+        "createdAt": "2026-06-20T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-03-09",
+      "scenario": "The clinic transfer register moves the same unopened CH-18 tape box between incident budgets. Each budget holder submitted the original supplier invoice.",
+      "left": {
+        "id": "pair-03-09-a",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Chestnut wound-tape purchase CH-18 for intake clinic",
+        "amountCents": 8600,
+        "receiptDigest": "c623e24cc3b75279949d4c8d93fe0d307864c7d3c8fa362d7adbaeaaf0e77024",
+        "transactionReference": "fictional-sale-pair-03-09",
+        "createdAt": "2026-04-25T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-03-09-b",
+        "incident": "fictional-medical-dressings-recovery",
+        "description": "CH-18 medical adhesive tape moved to recovery clinic",
+        "amountCents": 8600,
+        "receiptDigest": "c623e24cc3b75279949d4c8d93fe0d307864c7d3c8fa362d7adbaeaaf0e77024",
+        "transactionReference": "fictional-sale-pair-03-09",
+        "createdAt": "2026-04-25T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-05-11",
+      "scenario": "The Brass incident hired separate numbered cubicles for opposite sides of camp. BE-3 and BW-4 are independently authorized contracts with separate placement records.",
+      "left": {
+        "id": "pair-05-11-a",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Toilet hire for Brass camp east, BE-3",
+        "amountCents": 12400,
+        "receiptDigest": "fad8e763e507d4791423da5d9e8bdf1e264b5f5b5a46130f0179119eea7c235e",
+        "transactionReference": "fictional-sale-pair-05-11-a",
+        "createdAt": "2026-05-11T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-05-11-b",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Toilet hire for Brass camp west, BW-4",
+        "amountCents": 12400,
+        "receiptDigest": "1b70adb5272c776a2ea2aab299beba9918f368041da606bad567c5d9191153e6",
+        "transactionReference": "fictional-sale-pair-05-11-b",
+        "createdAt": "2026-05-11T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-12-05",
+      "scenario": "HT-P3 delivered one serialized cable reel. The misspelled field entry and checked version both cite its same reel number and order.",
+      "left": {
+        "id": "pair-12-05-a",
+        "incident": "fictional-power-distribution-response",
+        "description": "Electrc cable drum for Heather HT-P3",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-23T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-12-05-b",
+        "incident": "fictional-power-distribution-response",
+        "description": "Electric cable drum for Heather station, HT-P3",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-23T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-07",
+      "scenario": "Supplier WL-22 issued one bill: goods 9,600 cents plus 1,200 cents bottle deposit. One requester entered 10,800 and the other entered 9,600 from that bill.",
+      "left": {
+        "id": "pair-01-07-a",
+        "incident": "fictional-potable-water-response",
+        "description": "120 litres of bottled water for Willow hall, total including deposit",
+        "amountCents": 10800,
+        "receiptDigest": "47db97aa710b48b979efece7363406b18e78a0476f3a15ed7ca523d7f519f633",
+        "transactionReference": null,
+        "createdAt": "2026-04-09T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-07-b",
+        "incident": "fictional-potable-water-response",
+        "description": "Drinking-water bottles for Willow; goods subtotal only",
+        "amountCents": 9600,
+        "receiptDigest": "faa3c85e6e15bfbb78f94578b67258b2e8ca31443bbb6a8db29d47286bce6144",
+        "transactionReference": null,
+        "createdAt": "2026-04-09T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-11",
+      "scenario": "The same incident requires simultaneous pumping at two culverts. TL-3 and TR-4 rent distinct serial-numbered units under separately authorized contracts.",
+      "left": {
+        "id": "pair-10-11-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump for left culvert at Tributary, TL-3",
+        "amountCents": 20900,
+        "receiptDigest": "b218cab2af752d74658224858b67c0dd25734a13dffbc6329dabff09471cced4",
+        "transactionReference": "fictional-sale-pair-10-11-a",
+        "createdAt": "2026-06-15T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-11-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump for right culvert at Tributary, TR-4",
+        "amountCents": 20900,
+        "receiptDigest": "0da5cb5fb8bc0bae2686cb977e13b8bc6d96385ca2922cb960a38f3e9ea4af0b",
+        "transactionReference": "fictional-sale-pair-10-11-b",
+        "createdAt": "2026-06-15T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-10-16",
+      "scenario": "OB-5 supplies two-inch couplings and OB-6 supplies three-inch couplings for different outlet hoses. Distinct receipts and installed-part logs support both orders.",
+      "left": {
+        "id": "pair-10-16-a",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump couplings for Oxbow OB-5",
+        "amountCents": 21900,
+        "receiptDigest": "ef0f454424a9685baee737692dd7e2e90b0caa44fbadc31b4cf802a52e6ff939",
+        "transactionReference": "fictional-sale-pair-10-16-a",
+        "createdAt": "2026-06-20T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-10-16-b",
+        "incident": "fictional-flood-pumps-response",
+        "description": "Pump couplings for Oxbow OB-6",
+        "amountCents": 23000,
+        "receiptDigest": "0512472960b6e6f1bd7d30fa46b8c0c41ce67461bf443d284abb53c8e60dd160",
+        "transactionReference": "fictional-sale-pair-10-16-b",
+        "createdAt": "2026-06-20T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-01",
+      "scenario": "BG-4 rents six serial-numbered radios for one three-day period. The logistics lead and radio officer each entered that same contract.",
+      "left": {
+        "id": "pair-07-01-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Six VHF handheld radios hired for Badger coordination, BG-4",
+        "amountCents": 13800,
+        "receiptDigest": "5742786213b234731beee6d13c1756b3306c9add6380e40db44a711a95e89378",
+        "transactionReference": "fictional-sale-pair-07-01",
+        "createdAt": "2026-05-15T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-01-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "Six VHF handheld radios hired for Badger coordination, BG-4",
+        "amountCents": 13800,
+        "receiptDigest": "5742786213b234731beee6d13c1756b3306c9add6380e40db44a711a95e89378",
+        "transactionReference": "fictional-sale-pair-07-01",
+        "createdAt": "2026-05-15T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-12-14",
+      "scenario": "SA-P9 and SA-P10 buy differently rated packs installed in different locations. The product markings and separate supplier delivery notes support both.",
+      "left": {
+        "id": "pair-12-14-a",
+        "incident": "fictional-power-distribution-response",
+        "description": "Indoor extension lead pack for Sage office",
+        "amountCents": 24900,
+        "receiptDigest": "79d3038f27eb5bd44ac1393e4d8276b0cd3033bd77159e1271cf62cf320c602a",
+        "transactionReference": "fictional-sale-pair-12-14-a",
+        "createdAt": "2026-07-02T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-12-14-b",
+        "incident": "fictional-power-distribution-response",
+        "description": "Outdoor-rated extension lead pack for Sage yard",
+        "amountCents": 24900,
+        "receiptDigest": "bd48bff17e81bab3423168e26b7862884d68f2f3a74665e39200f57a65c809fd",
+        "transactionReference": "fictional-sale-pair-12-14-b",
+        "createdAt": "2026-07-02T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-09",
+      "scenario": "One paid carton consignment on FW-31 was redirected from Fir's incident allocation to Spruce before distribution. The two teams each submitted that supplier bill.",
+      "left": {
+        "id": "pair-01-09-a",
+        "incident": "fictional-potable-water-response",
+        "description": "Invoice FW-31, sealed cups of water for Fir west wing",
+        "amountCents": 5200,
+        "receiptDigest": "a98c4c441c3e114f954484272f55a69483e79bd21c7c7fe6b104f095e48696f8",
+        "transactionReference": "fictional-sale-pair-01-09",
+        "createdAt": "2026-04-11T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-09-b",
+        "incident": "fictional-potable-water-recovery",
+        "description": "Sealed water cups, FW-31, transferred from Fir to Spruce",
+        "amountCents": 5200,
+        "receiptDigest": "a98c4c441c3e114f954484272f55a69483e79bd21c7c7fe6b104f095e48696f8",
+        "transactionReference": "fictional-sale-pair-01-09",
+        "createdAt": "2026-04-11T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-03-03",
+      "scenario": "LA-24 supplies one pack of ten pads. The product sheet calls them non-adherent wound pads; the clinic calls those same pads low-adherence dressings.",
+      "left": {
+        "id": "pair-03-03-a",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Ten non-adherent wound pads for Laurel clinic",
+        "amountCents": 7400,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-19T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-03-03-b",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Ten low-adherence dressings for Laurel treatment desk",
+        "amountCents": 7400,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-19T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-14",
+      "scenario": "SB-10 and SB-11 buy different-band radio sets for teams with incompatible systems. Separate serial inventories and approvals support both orders.",
+      "left": {
+        "id": "pair-07-14-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "VHF radios for Sable marine scouts",
+        "amountCents": 16400,
+        "receiptDigest": "307c19d13584c51f5f2849bc94d67d3d18e262314f3af479e13e38fcee33c7df",
+        "transactionReference": "fictional-sale-pair-07-14-a",
+        "createdAt": "2026-05-28T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-14-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "UHF radios for Sable indoor marshals",
+        "amountCents": 16400,
+        "receiptDigest": "d85e0c7e9117514aa8fe8134ec78b34edaf1ac9708423abedf373c9076cec3a8",
+        "transactionReference": "fictional-sale-pair-07-14-b",
+        "createdAt": "2026-05-28T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-02-02",
+      "scenario": "Both requests cite the four-cell replacement kit on HER-28. Heron's equipment log records those four cells fitted to the lamps in one repair session.",
+      "left": {
+        "id": "pair-02-02-a",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Replace the rechargeable cells in Heron search lights",
+        "amountCents": 5500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-11T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-02-02-b",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Spare power cells for the Heron team's handheld inspection lamps",
+        "amountCents": 5500,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-11T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-02-18",
+      "scenario": "The supplier combined two separately authorized team orders on OWL-2. Each request claims only its own multipack invoice line and team order, with no overlap.",
+      "left": {
+        "id": "pair-02-18-a",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Owl battery multipack invoice OWL-2, order A",
+        "amountCents": 8700,
+        "receiptDigest": "173c37b9811a40978f22067ca5ac0de478f52fd8364d78d2112270b2e94d8581",
+        "transactionReference": "fictional-sale-pair-02-18-a",
+        "createdAt": "2026-04-27T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-02-18-b",
+        "incident": "fictional-batteries-lighting-response",
+        "description": "Owl battery multipack invoice OWL-2, order B",
+        "amountCents": 10000,
+        "receiptDigest": "173c37b9811a40978f22067ca5ac0de478f52fd8364d78d2112270b2e94d8581",
+        "transactionReference": "fictional-sale-pair-02-18-b",
+        "createdAt": "2026-04-27T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-03-17",
+      "scenario": "Both entries lack scanned receipts and amounts. Signed pharmacy slips distinguish MG-31 and MG-32 as two paid collections for separate kits.",
+      "left": {
+        "id": "pair-03-17-a",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Marigold dressing pack collected on MG-31",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-03T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-03-17-b",
+        "incident": "fictional-medical-dressings-response",
+        "description": "Marigold dressing pack collected on MG-32",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-09T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-05-01",
+      "scenario": "Hire CC-9 supplied four numbered cubicles for one weekend. The camp lead's form and the contractor liaison's form both claim that hire period.",
+      "left": {
+        "id": "pair-05-01-a",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Four toilet cubicles hired for Copper camp, hire CC-9",
+        "amountCents": 10400,
+        "receiptDigest": "e13630cd93411024897bb62516b06939479a2121ac31d10b2a10c487c9a1dd8d",
+        "transactionReference": "fictional-sale-pair-05-01",
+        "createdAt": "2026-05-01T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-05-01-b",
+        "incident": "fictional-sanitation-hygiene-response",
+        "description": "Four toilet cubicles hired for Copper camp, hire CC-9",
+        "amountCents": 10400,
+        "receiptDigest": "e13630cd93411024897bb62516b06939479a2121ac31d10b2a10c487c9a1dd8d",
+        "transactionReference": "fictional-sale-pair-05-01",
+        "createdAt": "2026-05-01T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-01-20",
+      "scenario": "Two unsigned notes mention water for Beech but carry no quantities, supplier orders, receipt files, transaction references, or delivery dates. The site could have needed a second top-up; no fulfillment record survives.",
+      "left": {
+        "id": "pair-01-20-a",
+        "incident": null,
+        "description": "Drinking-water top-up for Beech reception",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-22T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-01-20-b",
+        "incident": null,
+        "description": "Additional drinking water for Beech reception",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-04-22T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-04-17",
+      "scenario": "Scanned receipts and amounts are missing. The depot statement records SD-5 and SD-6 as separate paid collections with different vehicle pickup times.",
+      "left": {
+        "id": "pair-04-17-a",
+        "incident": "fictional-generator-fuel-response",
+        "description": "Sound power-unit diesel, depot order SD-5",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-10T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-04-17-b",
+        "incident": "fictional-generator-fuel-response",
+        "description": "Sound power-unit diesel, depot order SD-6",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-05-16T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-08-17",
+      "scenario": "Both entries lack amounts and receipt files. The signed store book records separate paid coils PV-S2 and PV-S3 issued to different construction teams.",
+      "left": {
+        "id": "pair-08-17-a",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Shelter cord for Plover yard PV-S2",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-07T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-08-17-b",
+        "incident": "fictional-shelter-structures-response",
+        "description": "Shelter cord for Plover yard PV-S3",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-13T09:00:00Z"
+      }
+    },
+    {
+      "id": "pair-07-13",
+      "scenario": "MT-R4 rents the temporary mast. MT-R5 pays a separately appointed inspector who checked the erected mast and issued a report.",
+      "left": {
+        "id": "pair-07-13-a",
+        "incident": "fictional-radio-communications-response",
+        "description": "Radio mast hire for Marten command",
+        "amountCents": 16200,
+        "receiptDigest": "cba8f68856f4036ba0fea19f43ba47ac5345823872e09ed1fb69e660c14c06c6",
+        "transactionReference": "fictional-sale-pair-07-13-a",
+        "createdAt": "2026-05-27T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-07-13-b",
+        "incident": "fictional-radio-communications-response",
+        "description": "Radio mast safety inspection for Marten command",
+        "amountCents": 17300,
+        "receiptDigest": "0a7b15d5a2b2be228dae6c281fa350cc74fd86263b5b636b73c1b1b70e42e08f",
+        "transactionReference": "fictional-sale-pair-07-13-b",
+        "createdAt": "2026-05-27T11:00:00Z"
+      }
+    },
+    {
+      "id": "pair-12-08",
+      "scenario": "One form lacks receipt and amount fields. The electrician's commissioning sheet ties both descriptions to the sole socket box purchased under SG-11.",
+      "left": {
+        "id": "pair-12-08-a",
+        "incident": null,
+        "description": "Outdoor socket box for Sedge, SG-11",
+        "amountCents": null,
+        "receiptDigest": null,
+        "transactionReference": null,
+        "createdAt": "2026-06-26T09:00:00Z"
+      },
+      "right": {
+        "id": "pair-12-08-b",
+        "incident": "fictional-power-distribution-response",
+        "description": "SG-11 weatherproof electrical outlet box for Sedge",
+        "amountCents": 23700,
+        "receiptDigest": "bfee48c63c9591a674c59f3006a09b74c657313810a4aaf851ea329f43181910",
+        "transactionReference": null,
+        "createdAt": "2026-06-26T11:00:00Z"
+      }
+    }
+  ]
+}

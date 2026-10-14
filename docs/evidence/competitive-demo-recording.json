@@ -1,0 +1,88 @@
+{
+  "recordedAt": "2026-10-13T22:23:30.726Z",
+  "category": "actual-application-footage",
+  "evidenceOnly": true,
+  "sourceVideos": {
+    "field.webm": "dae053191aedd95bcaadeef62e0e26b23ed82642f47a2e8413cfb296bf0adbfb",
+    "coordinator.webm": "abae6ddb322039cf08f96aa79bed232facbcae10eb8c7677effecb030f2f0d42",
+    "historical-chain.json": "8ebb71a85e7c1a47eaba5351c69986bceb2385c24a4a48d812da075309a615bf"
+  },
+  "scenes": [
+    {
+      "segment": 0,
+      "seconds": 0.12082315400000061,
+      "kind": "introduction",
+      "caption": "Waylatch: keep a request moving; keep authority human. Fictional walkthrough, real application."
+    },
+    {
+      "segment": 0,
+      "seconds": 4.762934318,
+      "kind": "offline-form",
+      "caption": "Network loss simulated. Preserve the request locally; no server submission or financial action."
+    },
+    {
+      "segment": 0,
+      "seconds": 9.609797214000002,
+      "kind": "offline-reload",
+      "caption": "Actual offline browser reload: the request survives in IndexedDB. Browser observations are local evidence."
+    },
+    {
+      "segment": 0,
+      "seconds": 15.749304409,
+      "kind": "qr-sender",
+      "caption": "Bounded QR packets carry request data across disconnection. They carry no payment authority."
+    },
+    {
+      "segment": 1,
+      "seconds": 0.6926607030000014,
+      "kind": "qr-receiver",
+      "caption": "A second offline browser decodes an actual QR image and reconstructs the packets. Import stays untrusted."
+    },
+    {
+      "segment": 1,
+      "seconds": 7.299492798999999,
+      "kind": "comparison",
+      "caption": "New side-by-side comparison: terms, amounts, incident and receipt evidence. This recording uses deterministic fallback; model access is blocked."
+    },
+    {
+      "segment": 1,
+      "seconds": 16.326291163,
+      "kind": "context",
+      "caption": "Related, unrelated or investigate: an advisory disposition never approves either record or executes payment."
+    },
+    {
+      "segment": 1,
+      "seconds": 22.894975958000003,
+      "kind": "human-boundary",
+      "caption": "Human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE remain required. Judge financial controls are disabled."
+    },
+    {
+      "segment": 1,
+      "seconds": 29.670954914000003,
+      "kind": "historical-payment",
+      "caption": "Separate historical purchase: USD 1.00 simulated funds, completed capture, USD 0.00 real spending. No checkout is reenacted."
+    },
+    {
+      "segment": 1,
+      "seconds": 37.191248615999996,
+      "kind": "audit-scope",
+      "caption": "Proof Trail names browser, organization and provider sources. Original seven-event audit links validate; missing earlier events stay visible."
+    },
+    {
+      "segment": 1,
+      "seconds": 44.22510724999999,
+      "kind": "provider-proof",
+      "caption": "Saved independent PayPal inspection confirms COMPLETED. Viewing this archive makes no provider call and no new purchase."
+    },
+    {
+      "segment": 1,
+      "seconds": 51.407686708,
+      "kind": "exports",
+      "caption": "Download a sanitized report or independently validate the original SHA-256 chain. An administrator can rewrite a full database."
+    }
+  ],
+  "financialProviderCalls": 0,
+  "paymentRecords": 0,
+  "historicalPurchaseReenacted": false,
+  "realSpending": 0
+}

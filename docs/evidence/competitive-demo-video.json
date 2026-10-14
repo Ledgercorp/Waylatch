@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-10-13T22:24:29.258439+00:00",
+  "category": "authentic-current-application-and-labeled-historical-inference",
+  "file": "docs/demo/waylatch-competitive-preview.mp4",
+  "sha256": "1a4e0542c1c7a734df8c87c09e3ddc6bf7264b632b27de06c4a853d08fc9cb8d",
+  "durationSeconds": 97.52,
+  "bytes": 2555959,
+  "codec": "h264",
+  "width": 1600,
+  "height": 900,
+  "audio": false,
+  "publiclyPublished": false,
+  "realSpending": 0,
+  "newLocalAIValidated": false,
+  "genuineHistoricalAIShown": true,
+  "historicalAIStartSeconds": 44.04,
+  "historicalAIEndSeconds": 55.56,
+  "historicalSourceVideoSha256": "2c7bf7c0bc9f936f855b712b2f273dffead34023330ab62f6ae10080f7e43d58",
+  "actualCurrentRecording": "docs/evidence/competitive-demo-recording.json",
+  "paymentEvidence": "docs/evidence/paypal-real-sandbox.json",
+  "orderId": "2W330508JA572391V",
+  "captureId": "8WY07860808872629",
+  "historicalPurchaseReenacted": false,
+  "captions": [
+    {
+      "seconds": 0,
+      "caption": "Waylatch: keep a request moving; keep authority human. Fictional walkthrough, real application."
+    },
+    {
+      "seconds": 4.762934318,
+      "caption": "Network loss simulated. Preserve the request locally; no server submission or financial action."
+    },
+    {
+      "seconds": 9.609797214000002,
+      "caption": "Actual offline browser reload: the request survives in IndexedDB. Browser observations are local evidence."
+    },
+    {
+      "seconds": 15.749304409,
+      "caption": "Bounded QR packets carry request data across disconnection. They carry no payment authority."
+    },
+    {
+      "seconds": 21.852660703,
+      "caption": "A second offline browser decodes an actual QR image and reconstructs the packets. Import stays untrusted."
+    },
+    {
+      "seconds": 28.459492799,
+      "caption": "New side-by-side comparison: terms, amounts, incident and receipt evidence. This recording uses deterministic fallback; model access is blocked."
+    },
+    {
+      "seconds": 37.486291163000004,
+      "caption": "Related, unrelated or investigate: an advisory disposition never approves either record or executes payment."
+    },
+    {
+      "seconds": 44.04,
+      "caption": "Historical genuine local MiniLM inference from the verified demo. This is not a new evaluation run; held-out metrics remain unavailable."
+    },
+    {
+      "seconds": 55.574975957999996,
+      "caption": "Human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE remain required. Judge financial controls are disabled."
+    },
+    {
+      "seconds": 62.350954914,
+      "caption": "Separate historical purchase: USD 1.00 simulated funds, completed capture, USD 0.00 real spending. No checkout is reenacted."
+    },
+    {
+      "seconds": 69.87124861599999,
+      "caption": "Proof Trail names browser, organization and provider sources. Original seven-event audit links validate; missing earlier events stay visible."
+    },
+    {
+      "seconds": 76.90510724999999,
+      "caption": "Saved independent PayPal inspection confirms COMPLETED. Viewing this archive makes no provider call and no new purchase."
+    },
+    {
+      "seconds": 84.08768670799999,
+      "caption": "Download a sanitized report or independently validate the original SHA-256 chain. An administrator can rewrite a full database."
+    }
+  ],
+  "limitations": [
+    "New comparison footage uses explicit deterministic fallback while pinned model access is blocked.",
+    "Genuine MiniLM inference appears only in a clearly labeled historical excerpt from the verified video.",
+    "Synthetic requests and browser disconnection simulation; not field data.",
+    "Human financial controls are shown disabled in judge mode, never automated or impersonated.",
+    "The previously human-authorized USD 1.00 Sandbox capture is read-only archived evidence, not a new checkout.",
+    "Silent with captions; no narration/music. No public upload or submission."
+  ]
+}

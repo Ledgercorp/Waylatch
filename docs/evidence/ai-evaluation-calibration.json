@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "waylatch-fictional-purchase-pairs-v1",
+  "split": "calibration",
+  "executedAt": "2026-10-13T22:11:30.461Z",
+  "fingerprint": {
+    "datasetSha256": "c5a43bab001eb529f5ab07f95c8371741841c304be451852f397de9f1ca0873c",
+    "annotationsSha256": "40644fb7cf486c873508e00b781231de14af63f2f8c87ca21c48ad3c2c009356",
+    "scoringSources": [
+      {
+        "path": "scripts/evaluate-ai.ts",
+        "sha256": "03f805be1240a25ff9f9cfd7e0379213309046e6a9cf4b4b8d0b2d6e6b79404c"
+      },
+      {
+        "path": "src/risk/evaluation.ts",
+        "sha256": "a97f5ff13d416ae74446a4c51c6f5a9112860318216a51e757fd319b820d5fcb"
+      },
+      {
+        "path": "src/risk/review.ts",
+        "sha256": "a16debd0ce07975785ac3122fd3aeb59dfe9d69054d0a95899530f48c48fe68f"
+      },
+      {
+        "path": "src/risk/model.ts",
+        "sha256": "eb06a3c28d02d974d95376c883459c08dfaba878d630f2b12f159e8a92b40c6f"
+      },
+      {
+        "path": "src/risk/model-assets.ts",
+        "sha256": "2651954cd895196cae2173badf46b5a879453b5eaa97aa3d8d8bc32f627dcea1"
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "85dcd162aa8b9dc6dee2017c8948497319eb13eb7cc3b8091dfd530d8e9414c7"
+      }
+    ],
+    "settings": {
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+      "dtype": "q8",
+      "device": "cpu",
+      "embeddingDimensions": 384,
+      "semanticThreshold": 0.6,
+      "combinedThreshold": 0.6,
+      "methods": [
+        "deterministic",
+        "semantic",
+        "combined"
+      ],
+      "bootstrap": {
+        "seed": 20261013,
+        "iterations": 10000,
+        "unit": "supplyFamily"
+      },
+      "remoteModelsAllowed": false,
+      "intraOpThreads": 2,
+      "interOpThreads": 1,
+      "assets": [
+        {
+          "file": "config.json",
+          "bytes": 650,
+          "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 711661,
+          "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 366,
+          "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "file": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        },
+        {
+          "file": "README.md",
+          "bytes": 1767,
+          "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02"
+        },
+        {
+          "file": "onnx/model_quantized.onnx",
+          "bytes": 22972370,
+          "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "kind": "fictional-synthetic",
+    "language": "English",
+    "author": "AI coding agent",
+    "modelBlind": true,
+    "humanLabeled": false,
+    "realFieldData": false,
+    "constructionKeyIsIndependentAnnotation": false
+  },
+  "annotationMethod": "Three fresh independent model-blind AI reviewers, each judging 80 deterministically shuffled cases from packets containing only id, scenario, left and right. No author key, generator, category, split, thresholds or predictions were supplied. Single reviewer per case; not expert-human adjudication or field labels. Confidence is subjective and uncalibrated.",
+  "splitPolicy": {
+    "unit": "entire-supply-family",
+    "calibrationFamilies": 4,
+    "heldoutFamilies": 8,
+    "calibrationCases": 80,
+    "heldoutCases": 160,
+    "frozen": true,
+    "heldoutTuningAllowed": false
+  },
+  "sampleComposition": {
+    "cases": 80,
+    "familyCount": 4,
+    "families": {
+      "potable-water": 20,
+      "batteries-lighting": 20,
+      "medical-dressings": 20,
+      "generator-fuel": 20
+    },
+    "categories": {
+      "exact-description": 8,
+      "natural-paraphrase": 4,
+      "equivalent-terminology": 4,
+      "abbreviated-description": 4,
+      "typing-errors": 4,
+      "receipt-file-variation": 4,
+      "conflicting-amounts": 4,
+      "incomplete-structured-fields": 4,
+      "incident-allocation-change": 4,
+      "shared-incident": 4,
+      "equal-price": 4,
+      "overlapping-purpose-terms": 4,
+      "neighboring-product-specifications": 4,
+      "repeated-service-or-replenishment": 4,
+      "receipt-and-order-conflicts": 4,
+      "missing-attachments": 4,
+      "consolidated-document": 4,
+      "recording-time-gap": 4,
+      "insufficient-procurement-facts": 4
+    },
+    "decisions": {
+      "duplicate": 40,
+      "distinct": 36,
+      "ambiguous": 4
+    }
+  },
+  "frozenManifestSha256": null,
+  "metricsInterpretation": "Calibration only; cannot estimate heldout performance.",
+  "limitations": [
+    "Synthetic scenarios with independent model-blind AI annotations; no human-adjudicated or real-field ground truth.",
+    "Review recommendations indicate possible duplicate expenses and never establish fraud or a fraud probability.",
+    "Wilson precision/recall intervals are case-level descriptive binomial intervals and ignore within-family dependence; paired family bootstrap intervals account for grouped resampling.",
+    "Only four calibration and eight heldout families are planned; bootstrap intervals with so few groups are exploratory and do not establish generalization to a population.",
+    "Shared embeddings support all semantic comparisons. Scoring times exclude shared model work; these are not three independent end-to-end pipeline benchmarks.",
+    "Local CPU timings and memory describe this host only; they do not establish browser/mobile performance.",
+    "Ambiguous annotations are excluded from binary metrics and bootstrap F1; their predictions remain visible.",
+    "The old 12-case benchmark is calibration evidence only and is preserved separately."
+  ],
+  "category": "blocked-local-model-unavailable",
+  "realInferenceCompleted": false,
+  "failure": "ENOENT: no such file or directory, open '/workspace/Waylatch/models/Xenova/all-MiniLM-L6-v2/config.json'",
+  "metrics": null,
+  "pairedComparisons": null,
+  "results": [],
+  "runtime": {
+    "elapsedMilliseconds": 4.232101999999998,
+    "sharedEmbeddingCallsCompleted": 0,
+    "completedEmbeddingVectors": 0
+  }
+}

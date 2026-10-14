@@ -1,0 +1,11 @@
+{
+  "category": "executed-browser-with-simulated-network",
+  "latencyMilliseconds": 150,
+  "downloadBytesPerSecond": 65536,
+  "uploadBytesPerSecond": 16384,
+  "coldLoadMilliseconds": 9165.793671,
+  "offlineReloadPreserved": true,
+  "reconnectSubmittedRecords": 0,
+  "reconnectFinancialOperations": 0,
+  "limitation": "Chromium CDP emulation on this host, not emergency field or real mobile network measurements."
+}

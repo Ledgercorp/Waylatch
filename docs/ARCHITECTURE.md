@@ -1,40 +1,60 @@
 # Waylatch engineering specification
 
-Purpose: preserve disconnected emergency supply requests and make immediate human-authorized Sandbox purchases accountable. Synthetic demonstration only; no emergency deployment claim. No credit, lending, advances, autonomous financial authorization, live PayPal, or paid infrastructure.
+Waylatch preserves disconnected supply requests and connects advisory review to explicit human-authorized Sandbox purchases and recorded accountability. It continues the existing RescueLedger history and storage identities. The application is a synthetic prototype; no emergency deployment, credit, lending, autonomous authorization, live PayPal or paid infrastructure is claimed.
 
-React/TypeScript/Vite supports Request → Review → Pay → Audit. Field records and receiver fragments persist in IndexedDB. A service worker caches the shell. Explicit upload on reconnection never purchases automatically. MessagePack/CRC32 QR packets are untrusted transport, not authentication. All reconstructed records require new server-side human review.
+## Existing workflow and competitive additions
 
-Node 24 / Express uses built-in SQLite for durable requests, approvals, payment attempts, sessions and hash-linked audit events. Same-origin HttpOnly sessions with coordinator passphrase protect reads and mutations; financial operations require explicit review and purchase approval for the frozen record revision and exact USD cents. Return URLs are configured server-side. Sandbox-only PayPal REST OAuth → Orders v2 → browser approval redirect → authoritative inspect/capture. Stable PayPal-Request-Id values persist across retries. Uncertain operations reconcile before retry; no order-created state becomes paid. Official verification API gates webhook state changes.
+React/TypeScript/Vite now presents Request → Review → Pay → Proof → Audit. IndexedDB retains field requests, import provenance and partial receiver fragments. A service worker caches the production shell. Reconnection does not upload or purchase automatically. RL1 MessagePack/CRC32 packets remain bounded, untrusted transport; CRC checks are not sender authentication. Unknown fields and original wire/storage identities remain compatible.
 
-AI: pinned Apache-2.0 MiniLM ONNX weights, Transformers.js CPU inference local to server after predownload; evidence reasons combine semantic cosine similarity with deterministic signals. No probabilities or accusations. Offline field capture does not depend on the model. Claims have a separate review workflow; payouts stay disabled until entitlement evidence and implementation exist.
+The explainable comparison layer renders two descriptions, exact matching/differing terms and receipt/reference, amount, incident, timing and missing/conflicting context. Semantic cosine evidence is distinguished from deterministic findings. `src/risk/comparison.ts` derives presentation evidence without changing model scores or payment state. Authenticated `POST /api/requests/:id/relationships` checks both revisions and records `pair_disposition_recorded`; related/unrelated/investigate outcomes remain advisory.
 
-Boundaries: src/requests/schema.ts shared strict request types; src/offline packet/reconstruction/storage; src/risk semantic evidence; server/paypal.ts provider; server/store.ts SQLite and atomic audit; server/payments.ts state machine; server/app.ts auth and routes; src/components UI stages. Optional research cannot affect payments.
+`src/proof/trail.ts` assembles recorded request metadata, local browser provenance, server audit events and optional archived provider evidence. `ProofTrail.tsx` renders chronology, sources, statuses, evidence gaps and export controls. It never invents missing offline, QR or buyer events. The browser reports supplied server validation; it does not recompute event hashes. Sanitized report summaries omit private audit content and are not original hash preimages. A separate original complete organization chain preserves event bodies, ordering and SHA-256 links for independent CLI validation, with a privacy warning. Filtering interleaved organization events by request would break chain scope and is not presented as independent chain proof.
 
-Verification: schema/packet corruption and revision cases; API authorization/amount tampering/concurrency/restart; audit corruption; real model benchmark; browser offline reload, QR across contexts, mobile/desktop accessibility. Real PayPal capture and public webhooks need credentials/HTTPS and cannot be claimed from stubs.
+## Server and financial authority
 
-## Request to verified action
+Node 24 / Express and built-in SQLite persist requests, approvals, reservations, sessions and audit events. HttpOnly same-origin coordinator sessions protect operational reads and mutations. Financial operations require human review and purchase approval for a frozen revision and exact USD cents. Return URLs belong to server configuration. Orders v2 creation, buyer approval, authoritative inspection and capture remain Sandbox-only. Stable PayPal-Request-Id values survive retries; uncertain outcomes reconcile before new action. Order creation alone never means PAID. Official signature verification gates webhook state changes.
+
+AI does not authorize, reject or capture payments. Claims retain a separate review workflow; actual reimbursement transfer is unimplemented and Payouts entitlement is unverified.
+
+## Local AI and evaluation boundary
+
+The pinned model remains Xenova/all-MiniLM-L6-v2, revision `751bff37182d3f1213fa05d7196b954e230abad9`, q8 ONNX, CPU, 384-dimensional embeddings. Seven asset sizes/hashes remain in `src/risk/model-assets.ts`. Transformers.js uses local verified files; descriptions do not go to an external inference API. Existing request/model bounds remain. Field-browser offline preservation does not require model inference.
+
+The original 12-pair calibration is retained. The new 240 fictional scenarios and model-blind AI annotations support separate 80-case calibration and 160-case held-out evaluation by supply family. `scripts/evaluate-ai.ts` implements calibration → freeze → held-out fingerprints, three baselines, confusion metrics, latency and uncertainty. New calibration is blocked by missing pinned files and proxy CONNECT 403; metrics are null, freeze/held-out have not executed and no performance gain is claimed. Labels are independent AI-review annotations, not human-expert or field truth.
+
+## Isolated judge workspace
+
+`npm run judge` invokes `scripts/judge-start.mjs`: Node-version check, dependency/bootstrap compilation as needed, then `scripts/judge-demo.ts`. It verifies/downloads the unchanged pinned model and uses a fresh temporary database, random private coordinator passphrase, fictional records and a blocked provider. Existing accounts and historical payment database are not opened or changed. Merchant credentials are stripped. The loopback judge-session endpoint checks exact host/origin; normal authentication gates remain unchanged outside judge mode.
+
+`npm run judge -- --evidence-only` is an explicit limited option that skips model setup and labels deterministic-only review. It is not an AI simulation. `GuidedDemo.tsx` explains offline reload, QR handoff, review, human authority, the separate historical archive and Proof Trail. Judge mode blocks financial approval, order/capture, provider inspection and webhook operations.
+
+`server/judge-demo.ts` validates and whitelists the saved provider/archive inputs. The original seven-event chain and independent saved provider checks establish the historical USD1.00 simulated purchase; the archive is read-only and does not make a new provider request. Actual historical REVIEW/AUTHORIZE/buyer/CAPTURE decisions remain separate from walkthrough data.
 
 ```mermaid
 flowchart LR
-  Field[Field request] --> Local[IndexedDB + offline shell]
-  Local --> QR[RL1 packets / untrusted handoff]
-  QR --> Review[Coordinator review]
-  Model[Local MiniLM + deterministic evidence] --> Review
-  Review --> Human[Explicit human approval]
+  Field[Field request] --> Local[IndexedDB / offline shell]
+  Local --> QR[Untrusted RL1 packet handoff]
+  QR --> Review[Explainable coordinator comparison]
+  Model[Local MiniLM / deterministic findings] --> Review
+  Review --> Human[Explicit human review and approval]
   Human --> Server[Authenticated server / SQLite reservation]
-  Server --> Sandbox[PayPal Sandbox Orders / buyer approval / capture]
-  Sandbox --> Inspect[Authoritative amount + reference reconciliation]
-  Inspect --> Audit[SHA-256 event chain / independent validation]
+  Server --> Sandbox[Sandbox buyer approval and capture]
+  Sandbox --> Inspect[Authoritative reconciliation]
+  Local --> Proof[Source-labeled Proof Trail]
+  Review --> Audit[Recorded SHA-256 event chain]
+  Inspect --> Audit
+  Audit --> Proof
+  Archive[Saved genuine Sandbox archive] --> Proof
 ```
 
-Waylatch continues the original RescueLedger architecture. Browser branding does not migrate wire/storage/event identities. Model data never goes to an external inference API. Current actual account integration depends on secure runtime credential bindings; diagrams describe the implemented workflow, not completed real-provider evidence.
+## Verification and limitations
 
-## Callback-only ingress and release tooling
+Controlled provider doubles verify interrupted responses and store reopen recovery without external calls. New bounded store/codec measurements retain raw samples and memory-backed filesystem limitations in `docs/RESILIENCE_COMPETITIVE.md`. New real Chromium evidence-only checks cover offline reload, receiver persistence, comparison, responsive Proof Trail and exports. These do not establish new genuine model inference, real callback delivery, physical-disk power-loss durability or accessibility certification.
 
-`server/webhook-gateway.ts` and `scripts/webhook-gateway.ts` provide a separate loopback test listener exposing only POST /api/webhooks/paypal. It forwards bounded raw JSON and PayPal signature headers to the existing backend, never coordinator cookies or authorization. No additional financial authority, state store or mock-provider production mode is introduced. Signature verification, persistent deduplication and authoritative reconciliation remain in app/payments/store. The optional tunnel targets this listener; tunnel provisioning is currently blocked.
+The original actual Sandbox purchase and seven-event audit remain unchanged. Hash links detect alteration relative to known hashes but cannot prevent complete administrator rewrites or reveal deletion of an unanchored tail. This is not a blockchain.
 
-`demo:record` starts an isolated loopback application with a unique SQLite database, disabled PayPal credentials and labeled automated local fixtures. `demo:render` converts actual recordings to captioned H.264 and verifies duration. The original diagram export is submission/architecture.svg. None of this changes RL1, IndexedDB identities, historical event hashes, model configuration or the payment state machine.
+## Callback ingress and credential compatibility
 
-## Server credential compatibility
+The separate callback-only gateway exposes bounded POST `/api/webhooks/paypal` and forwards raw JSON/signature headers without coordinator cookies. Existing verification/reconciliation/deduplication remains authoritative. Genuine delivery remains unverified.
 
-server/paypal-config.ts is the shared server-only environment resolver used by startup and all provider scripts. It prefers nonempty PAYPAL_CLIENT_SECRET and otherwise accepts PAYPAL_SECRET_KEY. It does not mutate process state, alter the payment provider host, expose values to the frontend or confer authorization. Existing API, packet, storage, payment reservation and audit contracts are unchanged.
+`server/paypal-config.ts` prefers nonempty PAYPAL_CLIENT_SECRET and accepts PAYPAL_SECRET_KEY as fallback. It stays server-only and does not modify credentials, host or approval requirements. This phase makes no PayPal purchase or credential change.

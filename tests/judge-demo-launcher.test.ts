@@ -10,6 +10,12 @@ afterEach(() => {
 });
 const launcher = () => import(new URL('../scripts/judge-start.mjs', import.meta.url).href);
 describe('one-command judge bootstrap', () => {
+  it('permits only the explicit evidence-only fallback and rejects unexpected arguments', async () => {
+    const { judgeArguments } = await launcher();
+    expect(judgeArguments([])).toEqual([]);
+    expect(judgeArguments(['--evidence-only'])).toEqual(['--evidence-only']);
+    expect(() => judgeArguments(['--live'])).toThrow(/Unknown judge option/);
+  });
   it('rejects unsupported Node versions before setup', async () => {
     const { requireNode24 } = await launcher();
     expect(() => requireNode24('22.16.0')).toThrow(/Node 24/);

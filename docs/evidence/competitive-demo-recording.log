@@ -1,0 +1,12 @@
+Waylatch: keep a request moving; keep authority human. Fictional walkthrough, real application.
+Network loss simulated. Preserve the request locally; no server submission or financial action.
+Actual offline browser reload: the request survives in IndexedDB. Browser observations are local evidence.
+Bounded QR packets carry request data across disconnection. They carry no payment authority.
+A second offline browser decodes an actual QR image and reconstructs the packets. Import stays untrusted.
+New side-by-side comparison: terms, amounts, incident and receipt evidence. This recording uses deterministic fallback; model access is blocked.
+Related, unrelated or investigate: an advisory disposition never approves either record or executes payment.
+Human REVIEW, AUTHORIZE, buyer approval and separate CAPTURE remain required. Judge financial controls are disabled.
+Separate historical purchase: USD 1.00 simulated funds, completed capture, USD 0.00 real spending. No checkout is reenacted.
+Proof Trail names browser, organization and provider sources. Original seven-event audit links validate; missing earlier events stay visible.
+Saved independent PayPal inspection confirms COMPLETED. Viewing this archive makes no provider call and no new purchase.
+Download a sanitized report or independently validate the original SHA-256 chain. An administrator can rewrite a full database.

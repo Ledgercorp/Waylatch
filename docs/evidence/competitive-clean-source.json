@@ -1,0 +1,21 @@
+{
+  "category": "isolated-git-tree-source-snapshot",
+  "gitTree": "915e2a9621e287c88e44b2a77d1316a6dffe91b3",
+  "excluded": [
+    "credentials",
+    "existing databases",
+    "model files",
+    "node_modules",
+    "runtime caches"
+  ],
+  "sourceSha256": {
+    "package-lock.json": "581565da266de7c74443f3a491244eb2d86c5cee435df4f11356ef864edd49d8",
+    "server/app.ts": "7cc1e1aba8bb98589acb90fc23f9f4ce4b78375e866789f15dffc406a1bcc231",
+    "src/components/App.tsx": "1603f1e2ea3a00b284ef21b565c783b711a801d1b2b1825178ec603faa043644",
+    "src/components/ReviewPanel.tsx": "91686a5097dc31688adc2125722bd1e82249d59b0c5e369be77cdbcc45460d7f",
+    "src/components/PayPanel.tsx": "b96bd58ac03e8278ad2862d83e2b566c02be0d0f14c32e0c69858e39fcb9fb48",
+    "src/proof/trail.ts": "9f6babd1b7a7585137eb2ed80ed819011eab726bf03b9a4e282542d5036bd577",
+    "src/requests/snapshot.ts": "1c5461c468acb7a2ed0aca097d8a95b0bf92547ce6ab5804b08149f4cf0caafe"
+  },
+  "realSpending": 0
+}

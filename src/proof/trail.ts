@@ -1,6 +1,7 @@
 import type { AuditEvent } from '../audit/chain';
 import type { ImportProvenance, OutboxEntry } from '../offline/storage';
 import type { ResourceRequest } from '../requests/schema';
+import { sameRequestSnapshot } from '../requests/snapshot';
 
 export type ChainResult = { valid: boolean; count: number; brokenAt: number | null };
 export type ArchivedProviderEvidence = {
@@ -272,14 +273,11 @@ export function buildProofTrail(input: ProofTrailInput): ProofTrail {
   const notes = [...limitations];
   let provenance: ImportProvenance | undefined;
   if (input.provenance && 'request' in input.provenance) {
-    if (
-      input.provenance.request.id === record.id &&
-      input.provenance.request.revision === record.revision
-    )
+    if (sameRequestSnapshot(input.provenance.request, record))
       provenance = input.provenance.provenance;
     else
       gaps.push(
-        'Browser provenance belongs to a different request or revision and was not attached.',
+        'Browser provenance belongs to a different request snapshot or revision and was not attached.',
       );
   } else provenance = input.provenance;
   if (provenance)
@@ -294,7 +292,9 @@ export function buildProofTrail(input: ProofTrailInput): ProofTrail {
       summary:
         provenance.source === 'qr-import'
           ? 'Browser provenance records an untrusted QR import. It establishes local preservation, without proving the sender or authorizing a payment.'
-          : 'Browser provenance records local preservation. It does not establish that connectivity was unavailable.',
+          : provenance.connectivity === 'offline'
+            ? 'The browser reported offline when this request was preserved. This is a local observation, not cryptographic proof of network loss or an authenticated external event.'
+            : 'Browser provenance records local preservation. It does not establish that connectivity was unavailable.',
       source: 'browser-local',
     });
   entries.push(...events.filter((event) => event.recordId === record.id).map(auditEntry));
