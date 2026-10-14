@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-14T12:27:14.398587+00:00",
-  "candidate": "868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3",
+  "checkedAt": "2026-10-14T12:46:41.067640+00:00",
+  "candidate": "3cab13308a870d109cafcdb81e28c891ef90e1ab",
   "scope": "All reachable refs/commits and every unique Git blob, configured credential exact-match plus specific secret patterns. Text buyer-field/email triage. Binary metadata and known-credential scanning do not replace visual artifact inspection; not comprehensive secret detection. No credential values copied into this report.",
-  "commits": 21,
-  "uniqueBlobs": 738,
-  "textBlobs": 691,
-  "binaryBlobs": 47,
-  "bytesScanned": 32855835,
+  "commits": 22,
+  "uniqueBlobs": 788,
+  "textBlobs": 734,
+  "binaryBlobs": 54,
+  "bytesScanned": 35559003,
   "configuredCredentialBindingsCompared": 3,
   "credentialPatternCandidates": [
     {
@@ -147,5 +147,13 @@
       "coveredByAuditedAncestry": true
     }
   ],
-  "shallowRepository": false
+  "shallowRepository": false,
+  "inheritedBaseline": {
+    "commit": "868bcee6d94c94cccd6eb3b8bb0c82b4dd9d8ed3",
+    "commits": 21,
+    "uniqueBlobs": 738,
+    "textBlobs": 691,
+    "binaryBlobs": 47,
+    "initialAuditSha256": "a0061b1737564feed6a9afd0ac35a6aa5641998f43e8dbd9d65507f76a9ed84f"
+  }
 }
